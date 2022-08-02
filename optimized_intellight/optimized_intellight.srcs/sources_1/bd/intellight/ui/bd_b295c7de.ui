@@ -1,0 +1,106 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.923192",
+   "Default View_TopLeft":"402,1443",
+   "ExpandedHierarchyInLayout":"/Action_RAM/RAM1|/Action_RAM/RAM0|/Action_RAM/RAM3|/Action_RAM/RAM2",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
+preplace port port-id_rst -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace portBus READ_ADDR -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace portBus D0 -pg 1 -lvl 3 -x 1470 -y 130 -defaultsOSRD
+preplace portBus wen0 -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace portBus WRITE_ADDR -pg 1 -lvl 0 -x 0 -y 420 -defaultsOSRD
+preplace portBus Q -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace portBus D1 -pg 1 -lvl 3 -x 1470 -y 360 -defaultsOSRD
+preplace portBus web -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
+preplace portBus D2 -pg 1 -lvl 3 -x 1470 -y 1200 -defaultsOSRD
+preplace portBus web1 -pg 1 -lvl 0 -x 0 -y 1140 -defaultsOSRD
+preplace portBus D3 -pg 1 -lvl 3 -x 1470 -y 590 -defaultsOSRD
+preplace portBus web2 -pg 1 -lvl 0 -x 0 -y 620 -defaultsOSRD
+preplace inst const_1 -pg 1 -lvl 1 -x 100 -y 680 -defaultsOSRD
+preplace inst cons_0000 -pg 1 -lvl 1 -x 100 -y 780 -defaultsOSRD
+preplace inst RAM1 -pg 1 -lvl 2 -x 510 -y 676 -defaultsOSRD
+preplace inst RAM0 -pg 1 -lvl 2 -x 510 -y 124 -defaultsOSRD
+preplace inst RAM3 -pg 1 -lvl 2 -x 510 -y 1228 -defaultsOSRD
+preplace inst RAM2 -pg 1 -lvl 2 -x 510 -y 1778 -defaultsOSRD
+preplace inst RAM3|axi_bram_ctrl_0 -pg 1 -lvl 1 -x 580 -y 1208 -defaultsOSRD
+preplace inst RAM3|Action_RAM3 -pg 1 -lvl 3 -x 1170 -y 1408 -defaultsOSRD
+preplace inst RAM3|PL_RAM3 -pg 1 -lvl 2 -x 880 -y 1278 -defaultsOSRD
+preplace inst RAM2|axi_bram_ctrl_0 -pg 1 -lvl 1 -x 580 -y 1758 -defaultsOSRD
+preplace inst RAM2|PL_RAM2 -pg 1 -lvl 2 -x 900 -y 1828 -defaultsOSRD
+preplace inst RAM2|Action_RAM2 -pg 1 -lvl 3 -x 1190 -y 1958 -defaultsOSRD
+preplace inst RAM1|PL_RAM1 -pg 1 -lvl 2 -x 880 -y 726 -defaultsOSRD
+preplace inst RAM1|Action_RAM1 -pg 1 -lvl 3 -x 1170 -y 856 -defaultsOSRD
+preplace inst RAM1|axi_bram_ctrl_0 -pg 1 -lvl 1 -x 580 -y 656 -defaultsOSRD
+preplace inst RAM0|axi_bram_ctrl_0 -pg 1 -lvl 1 -x 580 -y 104 -defaultsOSRD
+preplace inst RAM0|PL_RAM0 -pg 1 -lvl 2 -x 880 -y 174 -defaultsOSRD
+preplace inst RAM0|Action_RAM0 -pg 1 -lvl 3 -x 1170 -y 304 -defaultsOSRD
+preplace netloc MII_0_READ_ADDR 1 0 2 NJ 290 210
+preplace netloc MII_0_WRITE_ADDR 1 0 2 NJ 420 190
+preplace netloc MII_0_wen0 1 0 2 20J 152 280J
+preplace netloc MII_0_wen1 1 0 2 NJ 390 240J
+preplace netloc MII_0_wen2 1 0 2 NJ 1140 180J
+preplace netloc MII_0_wen3 1 0 2 NJ 620 230J
+preplace netloc RAM1_douta 1 2 1 1430J 360n
+preplace netloc RAM2_douta 1 2 1 1450J 1200n
+preplace netloc RAM3_douta 1 2 1 1440J 590n
+preplace netloc blk_mem_gen_0_douta 1 2 1 1420J 130n
+preplace netloc clka_0_1 1 0 2 NJ 230 250
+preplace netloc const_1_dout 1 1 1 270 244n
+preplace netloc dinb_0_1 1 0 2 NJ 200 200
+preplace netloc rsta_0_1 1 0 2 NJ 260 260
+preplace netloc xlconstant_0_dout 1 1 1 220 444n
+preplace netloc RAM3|clka_0_1 1 0 3 NJ 1288 710 1138 1030
+preplace netloc RAM3|rsta_0_1 1 0 3 NJ 1328 730 1148 1000
+preplace netloc RAM3|const_1_dout 1 0 3 NJ 1348 750 1408 1040
+preplace netloc RAM3|xlconstant_0_dout 1 0 3 NJ 1418 NJ 1418 1020
+preplace netloc RAM3|MII_0_READ_ADDR 1 0 3 NJ 1528 NJ 1528 1010
+preplace netloc RAM3|RAM3_douta 1 2 2 1050 1598 NJ
+preplace netloc RAM3|MII_0_wen3 1 0 3 NJ 1548 760 1538 NJ
+preplace netloc RAM3|MII_0_WRITE_ADDR 1 0 3 440J 1508 720 1438 NJ
+preplace netloc RAM3|dinb_0_1 1 0 3 450J 1518 740 1478 NJ
+preplace netloc RAM3|axi_bram_ctrl_0_BRAM_PORTA 1 1 1 NJ 1208
+preplace netloc RAM2|clka_0_1 1 0 3 NJ 1918 720J 1698 1020
+preplace netloc RAM2|rsta_0_1 1 0 3 NJ 1938 760J 1968 1040
+preplace netloc RAM2|const_1_dout 1 0 3 NJ 1958 750J 1958 1030
+preplace netloc RAM2|xlconstant_0_dout 1 0 3 NJ 1978 NJ 1978 1050
+preplace netloc RAM2|MII_0_READ_ADDR 1 0 3 440J 1908 710J 1688 1060
+preplace netloc RAM2|RAM2_douta 1 2 2 1060 2148 NJ
+preplace netloc RAM2|MII_0_wen2 1 0 3 NJ 2038 770J 2088 N
+preplace netloc RAM2|MII_0_WRITE_ADDR 1 0 3 440J 2018 730 1988 NJ
+preplace netloc RAM2|dinb_0_1 1 0 3 450J 2028 740J 2028 N
+preplace netloc RAM2|axi_bram_ctrl_0_BRAM_PORTA 1 1 1 NJ 1758
+preplace netloc RAM1|clka_0_1 1 0 3 NJ 736 720 856 1020
+preplace netloc RAM1|rsta_0_1 1 0 3 NJ 776 730 876 1040
+preplace netloc RAM1|const_1_dout 1 0 3 NJ 796 750 866 1030
+preplace netloc RAM1|xlconstant_0_dout 1 0 3 NJ 996 NJ 996 1010
+preplace netloc RAM1|MII_0_READ_ADDR 1 0 3 NJ 1016 NJ 1016 1000
+preplace netloc RAM1|RAM1_douta 1 2 2 1050 1046 NJ
+preplace netloc RAM1|MII_0_wen1 1 0 3 NJ 1036 760 986 NJ
+preplace netloc RAM1|MII_0_WRITE_ADDR 1 0 3 NJ 1056 710 886 NJ
+preplace netloc RAM1|dinb_0_1 1 0 3 NJ 1076 740 926 NJ
+preplace netloc RAM1|axi_bram_ctrl_0_BRAM_PORTA 1 1 1 NJ 656
+preplace netloc RAM0|clka_0_1 1 0 3 NJ 184 720 304 1020
+preplace netloc RAM0|rsta_0_1 1 0 3 NJ 224 730 324 1040
+preplace netloc RAM0|const_1_dout 1 0 3 NJ 244 750 314 1030
+preplace netloc RAM0|xlconstant_0_dout 1 0 3 NJ 444 NJ 444 1010
+preplace netloc RAM0|MII_0_READ_ADDR 1 0 3 NJ 464 NJ 464 1000
+preplace netloc RAM0|blk_mem_gen_0_douta 1 2 2 1050 494 NJ
+preplace netloc RAM0|MII_0_wen0 1 0 3 NJ 484 760 434 NJ
+preplace netloc RAM0|MII_0_WRITE_ADDR 1 0 3 NJ 504 710 334 NJ
+preplace netloc RAM0|dinb_0_1 1 0 3 NJ 524 740 374 NJ
+preplace netloc RAM0|axi_bram_ctrl_0_BRAM_PORTA 1 1 1 NJ 104
+levelinfo -pg 1 0 100 510 1470
+levelinfo -hier RAM1 * 580 880 1170 *
+levelinfo -hier RAM0 * 580 880 1170 *
+levelinfo -hier RAM3 * 580 880 1170 *
+levelinfo -hier RAM2 * 580 900 1190 *
+pagesize -pg 1 -db -bbox -sgen -170 -10 1580 2180
+pagesize -hier RAM1 -db -bbox -sgen 420 576 1320 1086
+pagesize -hier RAM0 -db -bbox -sgen 420 24 1320 534
+pagesize -hier RAM3 -db -bbox -sgen 410 1128 1320 1608
+pagesize -hier RAM2 -db -bbox -sgen 410 1678 1340 2158
+"
+}
+0

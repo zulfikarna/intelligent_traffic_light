@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1659339008">
+  <File Type="PA-TCL" Name="intellight_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="intellight_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="intellight_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="intellight_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="intellight_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="intellight_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="intellight_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="intellight_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="intellight_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/file_reg.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RD.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/file_max.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PG.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/file_arith.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/file_mux.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/QA.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SD.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MII.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/CU.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/intellight/intellight.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/intellight/hdl/intellight_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/simulate/simulate.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/simulate/hdl/simulate_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/file_ena.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="intellight_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/board_file/PYNQ-Z1_C.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_RAM1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_RAM0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_axi_intc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_RAM0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_axi_bram_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_RAM2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_RAM1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_RAM2_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_RAM3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_axi_bram_ctrl_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_axi_bram_ctrl_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_axi_bram_ctrl_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_rst_clk_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_RD_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_PG_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="simulate_QA_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_intellight_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_MII_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_CU_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_SD_0_0"/>
+</GenRun>

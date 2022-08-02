@@ -1,0 +1,9 @@
+Time resolution is 1 ps
+Block Memory Generator module simulate_tb.dut.simulate_i.Action_RAM.Action_RAM0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module simulate_tb.dut.simulate_i.Action_RAM.Action_RAM1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module simulate_tb.dut.simulate_i.Action_RAM.Action_RAM2.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module simulate_tb.dut.simulate_i.Action_RAM.Action_RAM3.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module simulate_tb.dut.simulate_i.PL_RAM.RAM0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module simulate_tb.dut.simulate_i.PL_RAM.RAM1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module simulate_tb.dut.simulate_i.PL_RAM.RAM2.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module simulate_tb.dut.simulate_i.PL_RAM.RAM3.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.

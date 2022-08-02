@@ -1,0 +1,229 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:33 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 14804
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Jul 20 10:52:24 ICT 2022
+Time zone: 	Indochina Time (Asia/Bangkok)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+Scale size: 19
+
+Java version: 	11.0.2 64-bit
+Java home: 	C:/Xilinx/Vivado/2021.1/tps/win64/jre11.0.2
+Java executable: 	C:/Xilinx/Vivado/2021.1/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Acer
+User home directory: C:/Users/Acer
+User working directory: F:/Intelligent Traffic Light/optimized_intellight
+User country: 	ID
+User language: 	en
+User locale: 	en_ID
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2021.1
+RDI_DATADIR: C:/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: C:/Users/Acer/AppData/Roaming/Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: C:/Users/Acer/AppData/Roaming/Xilinx/Vivado/2021.1/
+Vivado layouts directory: C:/Users/Acer/AppData/Roaming/Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	C:/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	F:/Intelligent Traffic Light/optimized_intellight/vivado.log
+Vivado journal file: 	F:/Intelligent Traffic Light/optimized_intellight/vivado.jou
+Engine tmp dir: 	F:/Intelligent Traffic Light/optimized_intellight/.Xil/Vivado-14804-DESKTOP-LNFBGQQ
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2021.1
+XILINX_SDK: C:/Xilinx/Vitis/2021.1
+XILINX_VITIS: C:/Xilinx/Vitis/2021.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2021.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,285 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 114 MB (+116576kb) [00:00:16]
+// [Engine Memory]: 1,285 MB (+1195899kb) [00:00:16]
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: F:\Intelligent Traffic Light\optimized_intellight\optimized_intellight.xpr. Version: Vivado v2021.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project {F:/Intelligent Traffic Light/optimized_intellight/optimized_intellight.xpr} 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,285 MB. GUI used memory: 61 MB. Current time: 7/20/22, 10:52:25 AM ICT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,285 MB. GUI used memory: 60 MB. Current time: 7/20/22, 10:52:52 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,285 MB. GUI used memory: 60 MB. Current time: 7/20/22, 10:53:22 AM ICT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,285 MB. GUI used memory: 60 MB. Current time: 7/20/22, 10:53:53 AM ICT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {F:/Intelligent Traffic Light/optimized_intellight/optimized_intellight.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/Intelligent Traffic Light/ip_repo/intellight_ip_1.0'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 128 MB (+9214kb) [00:02:03]
+// WARNING: HEventQueue.dispatchEvent() is taking  13551 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2774 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1236 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:01:00 ; elapsed = 00:01:50 . Memory (MB): peak = 1324.230 ; gain = 0.000 
+// Project name: optimized_intellight; location: F:/Intelligent Traffic Light/optimized_intellight; part: xc7z020clg400-1
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2052 ms. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2971 ms. Increasing delay to 8913 ms.
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [GUI Memory]: 136 MB (+1602kb) [00:02:49]
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 564ms to process. Increasing delay to 3000 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 158 MB (+15549kb) [00:03:28]
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 178 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, CU (CU.v)]", 7); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, CU (CU.v)]", 7); // D
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aK
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // g: FALSE
+// WARNING: HEventQueue.dispatchEvent() is taking  1089 ms.
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, true); // g: TRUE
+// WARNING: HEventQueue.dispatchEvent() is taking  1195 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1459 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1160 ms.
+// Elapsed time: 22 seconds
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g: FALSE

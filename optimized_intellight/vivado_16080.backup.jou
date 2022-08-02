@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jul 20 10:52:07 2022
+# Process ID: 16080
+# Current directory: F:/Intelligent Traffic Light/optimized_intellight
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3400 F:\Intelligent Traffic Light\optimized_intellight\optimized_intellight.xpr
+# Log file: F:/Intelligent Traffic Light/optimized_intellight/vivado.log
+# Journal file: F:/Intelligent Traffic Light/optimized_intellight\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {F:/Intelligent Traffic Light/optimized_intellight/optimized_intellight.xpr}
+
+update_compile_order -fileset sources_1

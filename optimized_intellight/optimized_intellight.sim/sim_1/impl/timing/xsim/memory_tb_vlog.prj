@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../optimized_intellight.gen/sources_1/bd/intellight/ipshared/ec67/hdl" --include "../../../../../optimized_intellight.gen/sources_1/bd/intellight/ipshared/f42d/hdl" --include "../../../../../optimized_intellight.gen/sources_1/bd/intellight/ipshared/80cc/hdl/verilog" --include "../../../../../optimized_intellight.gen/sources_1/bd/intellight/ipshared/22b9/hdl/verilog" --include "C:/Xilinx/Vivado/2021.1/data/xilinx_vip/include" \
+"memory_tb_time_impl.v" \
+"../../../../../optimized_intellight.srcs/sim_1/new/memory_tb.v" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Jul 18 14:30:51 2022
+# Process ID: 8208
+# Current directory: F:/Intelligent Traffic Light/optimized_intellight
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1436 F:\Intelligent Traffic Light\optimized_intellight\optimized_intellight.xpr
+# Log file: F:/Intelligent Traffic Light/optimized_intellight/vivado.log
+# Journal file: F:/Intelligent Traffic Light/optimized_intellight\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {F:/Intelligent Traffic Light/optimized_intellight/optimized_intellight.xpr}
+update_compile_order -fileset sources_1
+open_bd_design {F:/Intelligent Traffic Light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:intellight_ip:1.0 intellight_ip_0
+endgroup
+connect_bd_net [get_bd_pins intellight_ip_0/start] [get_bd_pins CU_0/start]
+connect_bd_net [get_bd_pins intellight_ip_0/max_step] [get_bd_pins CU_0/max_step]
+connect_bd_net [get_bd_pins intellight_ip_0/max_episode] [get_bd_pins CU_0/max_episode]
+connect_bd_net [get_bd_pins intellight_ip_0/seed_16bit] [get_bd_pins CU_0/seed]
+connect_bd_net [get_bd_pins intellight_ip_0/alpha] [get_bd_pins QA_0/alpha]
+connect_bd_net [get_bd_pins intellight_ip_0/gamma] [get_bd_pins QA_0/gamma]
+connect_bd_net [get_bd_pins intellight_ip_0/R0] [get_bd_pins RD_0/R0]
+connect_bd_net [get_bd_pins intellight_ip_0/R1] [get_bd_pins RD_0/R1]
+connect_bd_net [get_bd_pins intellight_ip_0/R2] [get_bd_pins RD_0/R2]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/intellight_ip_0/S00_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins intellight_ip_0/S00_AXI]
+save_bd_design

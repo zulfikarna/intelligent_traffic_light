@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="intellight_RD_0_0_synth_1" LaunchDir="F:/Intelligent Traffic Light/optimized_intellight/optimized_intellight.runs/intellight_RD_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="intellight_axi_smc_0_synth_1" LaunchDir="F:/Intelligent Traffic Light/optimized_intellight/optimized_intellight.runs/intellight_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="intellight_SD_0_0_synth_1" LaunchDir="F:/Intelligent Traffic Light/optimized_intellight/optimized_intellight.runs/intellight_SD_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="intellight_PG_0_0_synth_1" LaunchDir="F:/Intelligent Traffic Light/optimized_intellight/optimized_intellight.runs/intellight_PG_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="intellight_intellight_ip_0_0_synth_1" LaunchDir="F:/Intelligent Traffic Light/optimized_intellight/optimized_intellight.runs/intellight_intellight_ip_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="intellight_QA_0_0_synth_1" LaunchDir="F:/Intelligent Traffic Light/optimized_intellight/optimized_intellight.runs/intellight_QA_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
