@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Fri Jul 22 01:56:31 2022
+// Date        : Thu Aug 11 03:29:53 2022
 // Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_PG_0_0/intellight_PG_0_0_sim_netlist.v
@@ -21,14 +21,16 @@ module intellight_PG_0_0
     S,
     Arand,
     Asel,
+    active,
     Amax,
     Amin,
     A);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input rst;
   input [11:0]S;
   input [1:0]Arand;
   input Asel;
+  input active;
   output [1:0]Amax;
   output [1:0]Amin;
   output [1:0]A;
@@ -39,6 +41,7 @@ module intellight_PG_0_0
   wire [1:0]Arand;
   wire Asel;
   wire [11:0]S;
+  wire active;
   wire clk;
   wire rst;
 
@@ -49,6 +52,7 @@ module intellight_PG_0_0
         .Arand(Arand),
         .Asel(Asel),
         .S(S),
+        .active(active),
         .clk(clk),
         .rst(rst));
 endmodule
@@ -56,21 +60,23 @@ endmodule
 (* ORIG_REF_NAME = "PG" *) 
 module intellight_PG_0_0_PG
    (Amax,
-    A,
     Amin,
-    Asel,
-    Arand,
+    A,
     rst,
     S,
-    clk);
+    clk,
+    Asel,
+    Arand,
+    active);
   output [1:0]Amax;
-  output [1:0]A;
   output [1:0]Amin;
-  input Asel;
-  input [1:0]Arand;
+  output [1:0]A;
   input rst;
   input [11:0]S;
   input clk;
+  input Asel;
+  input [1:0]Arand;
+  input active;
 
   wire [1:0]A;
   wire [1:0]Agreed;
@@ -83,7 +89,9 @@ module intellight_PG_0_0_PG
   wire Amin2__4;
   wire Amin3__4;
   wire [1:0]Arand;
+  wire [1:0]Arand_reg;
   wire Asel;
+  wire Asel_reg;
   wire [2:0]Max;
   wire \Max[2]_i_2_n_0 ;
   wire \Max[2]_i_4_n_0 ;
@@ -101,27 +109,28 @@ module intellight_PG_0_0_PG
   wire \Stest_reg_n_0_[6] ;
   wire \Stest_reg_n_0_[7] ;
   wire \Stest_reg_n_0_[8] ;
+  wire active;
   wire clk;
   wire [2:0]\max0/w0__2 ;
   wire [2:0]\min0/w0__2 ;
   wire [2:0]p_0_in0_in;
   wire rst;
 
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT4 #(
+    .INIT(16'hFE02)) 
     \A[0]_INST_0 
        (.I0(Agreed[0]),
-        .I1(Asel),
-        .I2(Arand[0]),
+        .I1(Asel_reg),
+        .I2(active),
+        .I3(Arand_reg[0]),
         .O(A[0]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT4 #(
+    .INIT(16'hFE02)) 
     \A[1]_INST_0 
        (.I0(Agreed[1]),
-        .I1(Asel),
-        .I2(Arand[1]),
+        .I1(Asel_reg),
+        .I2(active),
+        .I3(Arand_reg[1]),
         .O(A[1]));
   FDRE \Agreed_reg[0] 
        (.C(clk),
@@ -135,7 +144,7 @@ module intellight_PG_0_0_PG
         .D(Amax[1]),
         .Q(Agreed[1]),
         .R(rst));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'h0D)) 
     \Amax[0]_INST_0 
@@ -153,7 +162,7 @@ module intellight_PG_0_0_PG
         .I4(\Stest_reg_n_0_[7] ),
         .I5(Max[1]),
         .O(Amax3__4));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \Amax[1]_INST_0 
@@ -180,7 +189,7 @@ module intellight_PG_0_0_PG
         .I4(p_0_in0_in[1]),
         .I5(Max[1]),
         .O(Amax2__4));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'h45)) 
     \Amin[0]_INST_0 
@@ -198,7 +207,7 @@ module intellight_PG_0_0_PG
         .I4(\Stest_reg_n_0_[7] ),
         .I5(Min[1]),
         .O(Amin3__4));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \Amin[1]_INST_0 
@@ -225,6 +234,24 @@ module intellight_PG_0_0_PG
         .I4(\Stest_reg_n_0_[1] ),
         .I5(Min[1]),
         .O(Amin1__4));
+  FDRE \Arand_reg_reg[0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(Arand[0]),
+        .Q(Arand_reg[0]),
+        .R(1'b0));
+  FDRE \Arand_reg_reg[1] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(Arand[1]),
+        .Q(Arand_reg[1]),
+        .R(1'b0));
+  FDRE Asel_reg_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(Asel),
+        .Q(Asel_reg),
+        .R(1'b0));
   LUT6 #(
     .INIT(64'hFFCCE4E400CCE4E4)) 
     \Max[0]_i_1 
@@ -284,7 +311,7 @@ module intellight_PG_0_0_PG
         .I4(\max0/w0__2 [1]),
         .I5(S[10]),
         .O(\Max[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \Max[2]_i_3 
@@ -388,7 +415,7 @@ module intellight_PG_0_0_PG
         .I4(S[10]),
         .I5(\min0/w0__2 [1]),
         .O(\Min[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Min[2]_i_3 

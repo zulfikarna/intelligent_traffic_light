@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Mon Jul 25 23:06:27 2022
+-- Date        : Mon Aug  8 13:43:24 2022
 -- Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_bram_ctrl_1_0/intellight_axi_bram_ctrl_1_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top intellight_axi_bram_ctrl_1_0 -prefix
+--               intellight_axi_bram_ctrl_1_0_ intellight_axi_bram_ctrl_1_0_stub.vhdl
 -- Design      : intellight_axi_bram_ctrl_1_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

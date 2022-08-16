@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Thu Jul 28 14:59:34 2022
+-- Date        : Tue Aug 16 14:17:29 2022
 -- Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_CU_0_0/intellight_CU_0_0_stub.vhdl
@@ -29,10 +29,13 @@ entity intellight_CU_0_0 is
     RD : out STD_LOGIC;
     wire_sc : out STD_LOGIC_VECTOR ( 15 downto 0 );
     wire_ec : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    wire_cs : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    wire_ns : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    wire_cs : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    wire_ns : out STD_LOGIC_VECTOR ( 4 downto 0 );
     wire_epsilon : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    finish : out STD_LOGIC
+    finish : out STD_LOGIC;
+    wen : out STD_LOGIC;
+    idle : out STD_LOGIC;
+    active : in STD_LOGIC
   );
 
 end intellight_CU_0_0;
@@ -41,7 +44,7 @@ architecture stub of intellight_CU_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,rst,start,max_step[15:0],max_episode[15:0],seed[15:0],Asel,Arand[1:0],S0[11:0],PG,QA,SD,RD,wire_sc[15:0],wire_ec[15:0],wire_cs[3:0],wire_ns[3:0],wire_epsilon[15:0],finish";
+attribute black_box_pad_pin of stub : architecture is "clk,rst,start,max_step[15:0],max_episode[15:0],seed[15:0],Asel,Arand[1:0],S0[11:0],PG,QA,SD,RD,wire_sc[15:0],wire_ec[15:0],wire_cs[4:0],wire_ns[4:0],wire_epsilon[15:0],finish,wen,idle,active";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "CU,Vivado 2021.1";
 begin

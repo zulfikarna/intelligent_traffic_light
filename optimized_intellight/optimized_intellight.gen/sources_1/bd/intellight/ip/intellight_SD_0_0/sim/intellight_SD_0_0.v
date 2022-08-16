@@ -57,7 +57,7 @@
 module intellight_SD_0_0 (
   clk,
   rst,
-  finish,
+  active,
   A,
   S0,
   traffic,
@@ -72,13 +72,13 @@ module intellight_SD_0_0 (
   L3
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
 input wire rst;
-input wire finish;
+input wire active;
 input wire [1 : 0] A;
 input wire [11 : 0] S0;
 input wire [11 : 0] traffic;
@@ -95,7 +95,7 @@ output wire [2 : 0] L3;
   SD inst (
     .clk(clk),
     .rst(rst),
-    .finish(finish),
+    .active(active),
     .A(A),
     .S0(S0),
     .traffic(traffic),

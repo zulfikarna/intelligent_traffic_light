@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Aug 16 12:51:25 2022
+# Process ID: 10028
+# Current directory: F:/intelligent_traffic_light/ip_repo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10512 F:\intelligent_traffic_light\ip_repo\edit_intellight_v1_0.xpr
+# Log file: F:/intelligent_traffic_light/ip_repo/vivado.log
+# Journal file: F:/intelligent_traffic_light/ip_repo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/intelligent_traffic_light/ip_repo/edit_intellight_v1_0.xpr
+update_compile_order -fileset sources_1

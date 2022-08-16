@@ -16,9 +16,9 @@ module CU(
     input wire [15:0] max_episode,
     input wire [15:0] seed,
     // Output for Policy Generator 
-    output wire Asel,
-    output wire [1:0] Arand,
-    output wire [11:0] S0,
+    output reg Asel,
+    output reg [1:0] Arand,
+    output reg [11:0] S0,
     // Control Signal
     output wire PG,
     output wire QA,
@@ -27,40 +27,43 @@ module CU(
         // for debugging 
     output wire [15:0] wire_sc,
     output wire [15:0] wire_ec,
-    output wire [3:0] wire_cs,
-    output wire [3:0] wire_ns,
+    output wire [4:0] wire_cs,
+    output wire [4:0] wire_ns,
     output wire [15:0] wire_epsilon,
     output reg finish,
-    output reg active
+    output reg wen,
+    output reg idle,
+    input wire active
     );
     
     // State variable for FSM implementation 
     localparam
         // Preprocessing states
-        S_IDLE  = 5'hF,
-        S_INIT  = 5'hE,
-        S_ACTIVE = 5'h10,
+        S_IDLE  = 5'd15,
+        S_INIT  = 5'd16,
         // Learning states
-        S_L0    = 5'h0,
-        S_L1    = 5'h1,
-        S_L2    = 5'h2,
-        S_L3    = 5'h3,
-        S_L4    = 5'h4,
-        S_L5    = 5'h5,
-        S_L6    = 5'h6,
-        S_L7    = 5'h7,
-        S_L8    = 5'h8,
-        S_L9    = 5'h9,
-        S_L10    = 5'hA,
-        S_L11    = 5'hB,
-        S_L12    = 5'hC,
-        S_DONE   = 5'hD;
+        S_L0    = 5'd0,
+        S_L1    = 5'd1,
+        S_L2    = 5'd2,
+        S_L3    = 5'd3,
+        S_L4    = 5'd4,
+        S_L5    = 5'd5,
+        S_L6    = 5'd6,
+        S_L7    = 5'd7,
+        S_L8    = 5'd8,
+        S_L9    = 5'd9,
+        S_L10    = 5'd10,
+        S_L11    = 5'd11,
+        S_L12    = 5'd12,
+        S_L13    = 5'd13,
+        S_L14    = 5'd14,
+        S_DONE   = 5'd17;
         
     // Counter variabel 
     reg [15:0] sc; // step counter
     reg [15:0] ec; // episode counter
-    reg [3:0] ns;
-    reg [3:0] cs;
+    reg [4:0] ns;
+    reg [4:0] cs;
     reg [15:0] epsilon;
     // Variables for generating random number 
     reg  [15:0] i_lsfr;
@@ -86,16 +89,25 @@ module CU(
         end
     end
     
+    always @(posedge clk) begin 
+        if (cs == S_IDLE) begin
+            idle = 1'b1;
+        end else begin
+            idle = 1'b0;
+        end
+    end
+    
     // FSM State Controller
     always@(*) begin
         case (cs)
             S_IDLE :
-                if (start)
+                if ((start)&(!active)) begin
                     ns <= S_INIT;
-                else if (active)
+                end else if ((!start)&(active)) begin
                     ns <= S_L0;
-                else
+                end else begin
                     ns <= S_IDLE;
+                end
             S_INIT :
                 if (ec < max_episode)
                     ns <= S_L0;
@@ -112,24 +124,16 @@ module CU(
             S_L4 :
                 ns <= S_L5;
             S_L5 :
-                if (start)
-                    ns <= S_L6;
-                else 
-                    ns <= S_ACTIVE;
+                ns <= S_L6;
             S_L6 :
-                if(sc > max_step)
-                    ns <= S_L7;
-                else 
-                    ns <= S_L6;
-            S_ACTIVE :
-                if (sc > max_step)
-                    ns <= S_L7;
-                else 
-                    ns <= S_ACTIVE;
+                ns <= S_L7;
             S_L7 :
                 ns <= S_L8;
             S_L8 :
-                ns <= S_L9;
+                if(sc > max_step)
+                    ns <= S_L9;
+                else 
+                    ns <= S_L8;
             S_L9 :
                 ns <= S_L10;
             S_L10 :
@@ -137,7 +141,11 @@ module CU(
             S_L11 :
                 ns <= S_L12;
             S_L12 :
-                if (start)
+                ns <= S_L13;
+            S_L13 :
+                ns <= S_L14;
+            S_L14 :
+                if ((start)|(!active))
                     ns <= S_INIT;
                 else 
                     ns <= S_DONE;
@@ -151,22 +159,23 @@ module CU(
          endcase
     end
     
-    always @(posedge clk) begin
-        if (S_IDLE) begin
-            active <= 0;
-        end else begin
-            active <= 1'b;
-        end
-    end
-    
     // Step Counter Machine 
     always@(posedge clk) begin
-        if ((cs == S_INIT)|(cs == S_IDLE)) begin
+        if ((cs == S_INIT)|(cs == S_L0)) begin
             sc = 16'd0;
-        end else if(cs == S_L6) begin
+        end else if(cs == S_L8) begin
             sc = sc + 1'b1;
         end else begin
             sc = sc;
+        end
+    end
+    
+    // Memory Handling 
+    always @(*) begin
+        if ((cs == S_L13)|(cs == S_L14)|(cs == S_L8)|(cs == S_L9)|(cs == S_L10)|(cs == S_L11)|(cs == S_L12)) begin 
+            wen = 1'b1;
+        end else begin 
+            wen = 1'b0;
         end
     end
     
@@ -174,7 +183,7 @@ module CU(
     always @(posedge clk) begin
         if(cs == S_IDLE) begin
             ec = 16'd0;
-        end else if (cs == S_L12) begin
+        end else if (cs == S_L14) begin
             ec = ec + 16'd1;
         end else begin
             ec = ec;
@@ -185,7 +194,7 @@ module CU(
     always @(posedge clk) begin
         if (cs == S_IDLE) begin 
             epsilon = 16'd0;
-        end else if (cs == S_L12) begin
+        end else if (cs == S_L14) begin
             epsilon = max_episode - ec;
         end else begin
             epsilon = epsilon;
@@ -230,7 +239,7 @@ module CU(
     
     // Finish signal generator 
     always @(posedge clk) begin
-        if (cs==S_DONE) begin
+        if (ns==S_DONE) begin
             finish = 1'b1;
         end else begin
             finish = 1'b0;
@@ -238,9 +247,12 @@ module CU(
     end
     
     // Random numbers for Policy Generator 
-    assign Asel = ((epsilon < o_lsfr[15:0])&(!finish))? 1'b1 : 1'b0;
-    assign Arand = o_lsfr[1:0];
-    assign S0 = o_lsfr[12:1];
+    always @(posedge clk) begin
+        Asel <= (epsilon < o_lsfr[15:0])? 1'b1 : 1'b0;
+        Arand <= o_lsfr[1:0];
+        S0 <= o_lsfr[12:1];
+    end
+  
     
     // Control signal decoder
     assign SD = ctrl_sig[3];

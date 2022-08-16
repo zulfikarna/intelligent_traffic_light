@@ -61,12 +61,13 @@ module intellight_PG_0_0 (
   S,
   Arand,
   Asel,
+  active,
   Amax,
   Amin,
   A
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
@@ -75,6 +76,7 @@ input wire rst;
 input wire [11 : 0] S;
 input wire [1 : 0] Arand;
 input wire Asel;
+input wire active;
 output wire [1 : 0] Amax;
 output wire [1 : 0] Amin;
 output wire [1 : 0] A;
@@ -85,6 +87,7 @@ output wire [1 : 0] A;
     .S(S),
     .Arand(Arand),
     .Asel(Asel),
+    .active(active),
     .Amax(Amax),
     .Amin(Amin),
     .A(A)

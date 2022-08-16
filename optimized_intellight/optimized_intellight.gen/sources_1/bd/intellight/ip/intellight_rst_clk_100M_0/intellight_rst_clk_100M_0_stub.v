@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Mon Jul 25 23:06:21 2022
+// Date        : Mon Aug  8 13:43:15 2022
 // Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_rst_clk_100M_0/intellight_rst_clk_100M_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top intellight_rst_clk_100M_0 -prefix
+//               intellight_rst_clk_100M_0_ intellight_rst_clk_100M_0_stub.v
 // Design      : intellight_rst_clk_100M_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

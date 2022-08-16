@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Thu Jul 28 14:59:33 2022
+-- Date        : Tue Aug 16 13:53:22 2022
 -- Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_SD_0_0/intellight_SD_0_0_sim_netlist.vhdl
@@ -29,7 +29,7 @@ entity intellight_SD_0_0_SD is
     clk : in STD_LOGIC;
     A : in STD_LOGIC_VECTOR ( 1 downto 0 );
     traffic : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    finish : in STD_LOGIC
+    active : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of intellight_SD_0_0_SD : entity is "SD";
@@ -176,7 +176,7 @@ begin
     )
         port map (
       I0 => traffic(0),
-      I1 => finish,
+      I1 => active,
       I2 => \^l0_reg[2]_0\(0),
       O => S(0)
     );
@@ -186,7 +186,7 @@ begin
     )
         port map (
       I0 => traffic(10),
-      I1 => finish,
+      I1 => active,
       I2 => \^l3_reg[2]_0\(1),
       O => S(10)
     );
@@ -196,7 +196,7 @@ begin
     )
         port map (
       I0 => traffic(11),
-      I1 => finish,
+      I1 => active,
       I2 => \^l3_reg[2]_0\(2),
       O => S(11)
     );
@@ -206,7 +206,7 @@ begin
     )
         port map (
       I0 => traffic(1),
-      I1 => finish,
+      I1 => active,
       I2 => \^l0_reg[2]_0\(1),
       O => S(1)
     );
@@ -216,7 +216,7 @@ begin
     )
         port map (
       I0 => traffic(2),
-      I1 => finish,
+      I1 => active,
       I2 => \^l0_reg[2]_0\(2),
       O => S(2)
     );
@@ -226,7 +226,7 @@ begin
     )
         port map (
       I0 => traffic(3),
-      I1 => finish,
+      I1 => active,
       I2 => \^q\(0),
       O => S(3)
     );
@@ -236,7 +236,7 @@ begin
     )
         port map (
       I0 => traffic(4),
-      I1 => finish,
+      I1 => active,
       I2 => \^q\(1),
       O => S(4)
     );
@@ -246,7 +246,7 @@ begin
     )
         port map (
       I0 => traffic(5),
-      I1 => finish,
+      I1 => active,
       I2 => \^q\(2),
       O => S(5)
     );
@@ -256,7 +256,7 @@ begin
     )
         port map (
       I0 => traffic(6),
-      I1 => finish,
+      I1 => active,
       I2 => \^l2_reg[2]_0\(0),
       O => S(6)
     );
@@ -266,7 +266,7 @@ begin
     )
         port map (
       I0 => traffic(7),
-      I1 => finish,
+      I1 => active,
       I2 => \^l2_reg[2]_0\(1),
       O => S(7)
     );
@@ -276,7 +276,7 @@ begin
     )
         port map (
       I0 => traffic(8),
-      I1 => finish,
+      I1 => active,
       I2 => \^l2_reg[2]_0\(2),
       O => S(8)
     );
@@ -286,7 +286,7 @@ begin
     )
         port map (
       I0 => traffic(9),
-      I1 => finish,
+      I1 => active,
       I2 => \^l3_reg[2]_0\(0),
       O => S(9)
     );
@@ -443,7 +443,7 @@ entity intellight_SD_0_0 is
   port (
     clk : in STD_LOGIC;
     rst : in STD_LOGIC;
-    finish : in STD_LOGIC;
+    active : in STD_LOGIC;
     A : in STD_LOGIC_VECTOR ( 1 downto 0 );
     S0 : in STD_LOGIC_VECTOR ( 11 downto 0 );
     traffic : in STD_LOGIC_VECTOR ( 11 downto 0 );
@@ -473,7 +473,7 @@ architecture STRUCTURE of intellight_SD_0_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
   attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
 begin
@@ -485,8 +485,8 @@ inst: entity work.intellight_SD_0_0_SD
       \L3_reg[2]_0\(2 downto 0) => L3(2 downto 0),
       Q(2 downto 0) => L1(2 downto 0),
       S(11 downto 0) => S(11 downto 0),
+      active => active,
       clk => clk,
-      finish => finish,
       level0(2 downto 0) => level0(2 downto 0),
       level1(2 downto 0) => level1(2 downto 0),
       level2(2 downto 0) => level2(2 downto 0),

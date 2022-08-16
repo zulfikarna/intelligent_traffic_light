@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Thu Jul 28 14:59:33 2022
+// Date        : Tue Aug 16 13:53:22 2022
 // Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_SD_0_0/intellight_SD_0_0_stub.v
@@ -14,12 +14,12 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "SD,Vivado 2021.1" *)
-module intellight_SD_0_0(clk, rst, finish, A, S0, traffic, S, level0, level1, 
+module intellight_SD_0_0(clk, rst, active, A, S0, traffic, S, level0, level1, 
   level2, level3, L0, L1, L2, L3)
-/* synthesis syn_black_box black_box_pad_pin="clk,rst,finish,A[1:0],S0[11:0],traffic[11:0],S[11:0],level0[2:0],level1[2:0],level2[2:0],level3[2:0],L0[2:0],L1[2:0],L2[2:0],L3[2:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="clk,rst,active,A[1:0],S0[11:0],traffic[11:0],S[11:0],level0[2:0],level1[2:0],level2[2:0],level3[2:0],L0[2:0],L1[2:0],L2[2:0],L3[2:0]" */;
   input clk;
   input rst;
-  input finish;
+  input active;
   input [1:0]A;
   input [11:0]S0;
   input [11:0]traffic;

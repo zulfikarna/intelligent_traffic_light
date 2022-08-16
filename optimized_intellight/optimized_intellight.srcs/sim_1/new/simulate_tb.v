@@ -20,20 +20,24 @@ module simulate_tb();
     reg [15:0]max_step;
     reg [15:0]seed;
     reg [31:0] R0, R1, R2;
-    wire [31:0] R, Qnew;
+    wire Asel;
+    wire [31:0] R, Qnew, Rtemp;
     wire [11:0] S;
-    wire [1:0] A;
-    wire [1:0] Arand;
+    wire [1:0] A, Amin, Amax;
+    wire [1:0] Arand, Amax_reg0, Amin_reg0;
     wire [31:0]D0;
     wire [31:0]D1;
     wire [31:0]D2;
     wire [31:0]D3;
     wire finish;
+    reg active;
     wire [15:0] wire_epsilon;
     wire [15:0] wire_ec;
     wire [15:0] wire_sc;
-    wire [3:0] wire_cs;
-    wire [3:0] wire_ns;
+    wire [4:0] wire_cs;
+    wire [4:0] wire_ns;
+    wire wen;
+    wire [3:0] wen0, wen1, wen2, wen3;
     
     simulate_wrapper dut(
         .clk(clk),
@@ -48,22 +52,36 @@ module simulate_tb();
         .R0(R0),
         .R1(R1),
         .R2(R2),
+        .Asel(Asel),
         .D0(D0),
         .D1(D1),
         .D2(D2),
         .D3(D3),
         .finish(finish),
+        .active(active),
         .A(A),
+        .Amin(Amin),
+        .Amax(Amax),
         .Arand(Arand),
+        .Amax_reg0(Amax_reg0),
+        .Amin_reg0(Amin_reg0),
         .R(R),
         .S(S),
         .Qnew(Qnew),
+        .Rtemp(Rtemp),
         .wire_epsilon(wire_epsilon),
         .wire_ec(wire_ec),
         .wire_sc(wire_sc),
         .wire_ns(wire_ns),
-        .wire_cs(wire_cs)
+        .wire_cs(wire_cs),
+        .wen(wen),
+        .wen0(wen0),
+        .wen1(wen1),
+        .wen2(wen2),
+        .wen3(wen3)
         );
+        
+    reg [7:0] counter;
     
     always begin 
         clk = 1'b0;
@@ -77,13 +95,15 @@ module simulate_tb();
         start = 1'b0;
         alpha = 3'b101;
         gamma = 3'b010;
-        max_episode = 16'd100;
+        max_episode = 16'd200;
         max_step = 16'd20;
         seed = 16'd10;
         R0 = 32'd0;
         R1 = 32'd50;
         R2 = 32'd100;
         traffic = 12'd0;
+        active = 1'b0;
+        counter = 8'd0;
         #100;
         rst = 1'b0;
         #100;
@@ -91,12 +111,29 @@ module simulate_tb();
     end
     
     always @(posedge clk) begin 
-        if (traffic==12'd4095) begin
-            traffic = 12'd0;
+        if (wire_cs == 5'h0) begin
+            if (traffic==12'd4095) begin
+                traffic = 12'd0;
+            end else begin 
+                traffic = traffic + 12'd1;
+            end
         end else begin 
-            traffic = traffic + 12'd1;
+            traffic = traffic;
         end
-        #1000;
+    end
+    
+    always @(posedge clk) begin
+        counter = counter + 1'b1;
+        if (counter==8'd100) begin
+            counter = 8'd0;
+            active = !active;
+        end
+    end
+    
+    always @(posedge clk) begin
+        if (wire_ns==5'hD) begin
+            start = 1'b0;
+        end
     end
 
 endmodule

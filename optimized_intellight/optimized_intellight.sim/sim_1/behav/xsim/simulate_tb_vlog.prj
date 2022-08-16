@@ -1,14 +1,13 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "../../../../optimized_intellight.gen/sources_1/bd/intellight/ipshared/ec67/hdl" --include "../../../../optimized_intellight.gen/sources_1/bd/intellight/ipshared/f42d/hdl" --include "../../../../optimized_intellight.gen/sources_1/bd/intellight/ipshared/80cc/hdl/verilog" --include "../../../../optimized_intellight.gen/sources_1/bd/intellight/ipshared/22b9/hdl/verilog" --include "C:/Xilinx/Vivado/2021.1/data/xilinx_vip/include" \
-"../../../../optimized_intellight.srcs/sources_1/new/file_max.v" \
-"../../../../optimized_intellight.srcs/sources_1/new/PG.v" \
-"../../../../optimized_intellight.srcs/sources_1/new/file_arith.v" \
-"../../../../optimized_intellight.srcs/sources_1/new/file_mux.v" \
-"../../../../optimized_intellight.srcs/sources_1/new/file_reg.v" \
-"../../../../optimized_intellight.srcs/sources_1/new/QA.v" \
 "../../../../optimized_intellight.srcs/sources_1/new/RD.v" \
 "../../../../optimized_intellight.srcs/sources_1/new/SD.v" \
+"../../../../optimized_intellight.srcs/sources_1/new/file_max.v" \
+"../../../../optimized_intellight.srcs/sources_1/new/PG.v" \
 "../../../../optimized_intellight.srcs/sources_1/new/MII.v" \
+"../../../../optimized_intellight.srcs/sources_1/new/file_arith.v" \
+"../../../../optimized_intellight.srcs/sources_1/new/file_mux.v" \
+"../../../../optimized_intellight.srcs/sources_1/new/QA.v" \
 "../../../../optimized_intellight.srcs/sources_1/new/CU.v" \
 "../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_const_1_4/sim/simulate_const_1_4.v" \
 "../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_cons_0000_2/sim/simulate_cons_0000_2.v" \
@@ -16,16 +15,16 @@ verilog xil_defaultlib  --include "../../../../optimized_intellight.gen/sources_
 "../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_Action_RAM1_2/sim/simulate_Action_RAM1_2.v" \
 "../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_Action_RAM2_2/sim/simulate_Action_RAM2_2.v" \
 "../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_Action_RAM3_2/sim/simulate_Action_RAM3_2.v" \
-"../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_PG_0_2/sim/simulate_PG_0_2.v" \
 "../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_const_1_5/sim/simulate_const_1_5.v" \
 "../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_RAM0_2/sim/simulate_RAM0_2.v" \
 "../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_RAM1_2/sim/simulate_RAM1_2.v" \
 "../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_RAM2_2/sim/simulate_RAM2_2.v" \
 "../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_RAM3_2/sim/simulate_RAM3_2.v" \
-"../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_QA_0_2/sim/simulate_QA_0_2.v" \
 "../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_RD_0_2/sim/simulate_RD_0_2.v" \
 "../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_SD_0_2/sim/simulate_SD_0_2.v" \
+"../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_PG_0_2/sim/simulate_PG_0_2.v" \
 "../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_MII_0_2/sim/simulate_MII_0_2.v" \
+"../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_QA_0_2/sim/simulate_QA_0_2.v" \
 "../../../../optimized_intellight.ip_user_files/bd/simulate/ip/simulate_CU_0_1/sim/simulate_CU_0_1.v" \
 "../../../../optimized_intellight.ip_user_files/bd/simulate/sim/simulate.v" \
 "../../../../optimized_intellight.gen/sources_1/bd/simulate/hdl/simulate_wrapper.v" \

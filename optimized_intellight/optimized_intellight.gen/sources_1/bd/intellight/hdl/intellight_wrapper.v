@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Thu Jul 28 14:56:44 2022
+//Date        : Tue Aug 16 14:15:56 2022
 //Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 //Command     : generate_target intellight_wrapper.bd
 //Design      : intellight_wrapper
@@ -31,7 +31,10 @@ module intellight_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    finish);
+    active,
+    finish,
+    idle,
+    start);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -53,7 +56,10 @@ module intellight_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  output active;
   output finish;
+  output idle;
+  output start;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -76,7 +82,10 @@ module intellight_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire active;
   wire finish;
+  wire idle;
+  wire start;
 
   intellight intellight_i
        (.DDR_addr(DDR_addr),
@@ -100,5 +109,8 @@ module intellight_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .finish(finish));
+        .active(active),
+        .finish(finish),
+        .idle(idle),
+        .start(start));
 endmodule

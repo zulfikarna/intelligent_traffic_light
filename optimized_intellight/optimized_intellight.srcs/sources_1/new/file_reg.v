@@ -9,6 +9,22 @@
 // Description: Array Registers Logics
 //////////////////////////////////////////////////////////////////////////////////
 
+module latch_32bit(
+    input wire clk, active,
+    input wire [31:0] in0, in1, in2, in3,
+    output reg [31:0] out0, out1, out2, out3
+    );
+    always @(posedge clk) begin 
+        if (active) begin
+            out0 <= in0;
+            out1 <= in1;
+            out2 <= in2;
+            out3 <= in3;
+        end
+    end
+    
+endmodule
+
 module reg_32bit(
     input wire clk, rst,
     input wire [31:0] in0,
@@ -20,6 +36,19 @@ module reg_32bit(
         end else begin
             out0 <= in0;
         end
+    end
+endmodule
+
+module reg4_32bit(
+    input wire clk,
+    input wire [31:0] in0, in1, in2, in3,
+    output reg [31:0] out0, out1, out2, out3
+    );
+    always@(posedge clk) begin
+        out0 <= in0;
+        out1 <= in1;
+        out2 <= in2;
+        out3 <= in3;
     end
 endmodule
 

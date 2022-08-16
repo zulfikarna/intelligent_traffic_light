@@ -607,7 +607,10 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
+  set active [ create_bd_port -dir O active ]
   set finish [ create_bd_port -dir O finish ]
+  set idle [ create_bd_port -dir O idle ]
+  set start [ create_bd_port -dir O start ]
 
   # Create instance: Action_RAM
   create_hier_cell_Action_RAM [current_bd_instance .] Action_RAM
@@ -694,7 +697,7 @@ proc create_root_design { parentCell } {
   # Create instance: axi_smc, and set properties
   set axi_smc [ create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 axi_smc ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {10} \
+   CONFIG.NUM_MI {6} \
    CONFIG.NUM_SI {1} \
  ] $axi_smc
 
@@ -711,13 +714,13 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_ACT_DCI_PERIPHERAL_FREQMHZ {10.096154} \
    CONFIG.PCW_ACT_ENET0_PERIPHERAL_FREQMHZ {125.000000} \
    CONFIG.PCW_ACT_ENET1_PERIPHERAL_FREQMHZ {10.000000} \
-   CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {125.000000} \
+   CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {150.000000} \
    CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_I2C_PERIPHERAL_FREQMHZ {50} \
-   CONFIG.PCW_ACT_PCAP_PERIPHERAL_FREQMHZ {200.000000} \
-   CONFIG.PCW_ACT_QSPI_PERIPHERAL_FREQMHZ {200.000000} \
+   CONFIG.PCW_ACT_PCAP_PERIPHERAL_FREQMHZ {187.500000} \
+   CONFIG.PCW_ACT_QSPI_PERIPHERAL_FREQMHZ {187.500000} \
    CONFIG.PCW_ACT_SDIO_PERIPHERAL_FREQMHZ {50.000000} \
    CONFIG.PCW_ACT_SMC_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_SPI_PERIPHERAL_FREQMHZ {10.000000} \
@@ -749,7 +752,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_CAN_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_CAN_PERIPHERAL_FREQMHZ {100} \
    CONFIG.PCW_CAN_PERIPHERAL_VALID {0} \
-   CONFIG.PCW_CLK0_FREQ {125000000} \
+   CONFIG.PCW_CLK0_FREQ {150000000} \
    CONFIG.PCW_CLK1_FREQ {10000000} \
    CONFIG.PCW_CLK2_FREQ {10000000} \
    CONFIG.PCW_CLK3_FREQ {10000000} \
@@ -789,7 +792,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_ENET0_GRP_MDIO_IO {MIO 52 .. 53} \
    CONFIG.PCW_ENET0_HIGHADDR {0xE000BFFF} \
    CONFIG.PCW_ENET0_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_ENET0_PERIPHERAL_DIVISOR0 {8} \
+   CONFIG.PCW_ENET0_PERIPHERAL_DIVISOR0 {12} \
    CONFIG.PCW_ENET0_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_ENET0_PERIPHERAL_ENABLE {1} \
    CONFIG.PCW_ENET0_PERIPHERAL_FREQMHZ {1000 Mbps} \
@@ -873,7 +876,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_EN_USB1 {0} \
    CONFIG.PCW_EN_WDT {0} \
    CONFIG.PCW_FCLK0_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {8} \
+   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {10} \
    CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_FCLK1_PERIPHERAL_CLKSRC {IO PLL} \
    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {1} \
@@ -888,7 +891,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_FCLK_CLK1_BUF {FALSE} \
    CONFIG.PCW_FCLK_CLK2_BUF {FALSE} \
    CONFIG.PCW_FCLK_CLK3_BUF {FALSE} \
-   CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {130} \
+   CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {155} \
    CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA3_PERIPHERAL_FREQMHZ {50} \
@@ -915,8 +918,8 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_IMPORT_BOARD_PRESET {None} \
    CONFIG.PCW_INCLUDE_ACP_TRANS_CHECK {0} \
    CONFIG.PCW_INCLUDE_TRACE_BUFFER {0} \
-   CONFIG.PCW_IOPLL_CTRL_FBDIV {20} \
-   CONFIG.PCW_IO_IO_PLL_FREQMHZ {1000.000} \
+   CONFIG.PCW_IOPLL_CTRL_FBDIV {30} \
+   CONFIG.PCW_IO_IO_PLL_FREQMHZ {1500.000} \
    CONFIG.PCW_IRQ_F2P_INTR {1} \
    CONFIG.PCW_IRQ_F2P_MODE {DIRECT} \
    CONFIG.PCW_MIO_0_DIRECTION {inout} \
@@ -1233,7 +1236,7 @@ Flash#Quad SPI Flash#GPIO#Quad SPI Flash#ENET Reset#GPIO#GPIO#GPIO#GPIO#UART\
    CONFIG.PCW_PACKAGE_DDR_DQS_TO_CLK_DELAY_3 {-0.033} \
    CONFIG.PCW_PACKAGE_NAME {clg400} \
    CONFIG.PCW_PCAP_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_PCAP_PERIPHERAL_DIVISOR0 {5} \
+   CONFIG.PCW_PCAP_PERIPHERAL_DIVISOR0 {8} \
    CONFIG.PCW_PCAP_PERIPHERAL_FREQMHZ {200} \
    CONFIG.PCW_PERIPHERAL_BOARD_PRESET {part0} \
    CONFIG.PCW_PLL_BYPASSMODE_ENABLE {0} \
@@ -1248,7 +1251,7 @@ Flash#Quad SPI Flash#GPIO#Quad SPI Flash#ENET Reset#GPIO#GPIO#GPIO#GPIO#UART\
    CONFIG.PCW_QSPI_GRP_SS1_ENABLE {0} \
    CONFIG.PCW_QSPI_INTERNAL_HIGHADDRESS {0xFCFFFFFF} \
    CONFIG.PCW_QSPI_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_QSPI_PERIPHERAL_DIVISOR0 {5} \
+   CONFIG.PCW_QSPI_PERIPHERAL_DIVISOR0 {8} \
    CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {1} \
    CONFIG.PCW_QSPI_PERIPHERAL_FREQMHZ {200} \
    CONFIG.PCW_QSPI_QSPI_IO {MIO 1 .. 6} \
@@ -1267,7 +1270,7 @@ Flash#Quad SPI Flash#GPIO#Quad SPI Flash#ENET Reset#GPIO#GPIO#GPIO#GPIO#UART\
    CONFIG.PCW_SDIO1_BASEADDR {0xE0101000} \
    CONFIG.PCW_SDIO1_HIGHADDR {0xE0101FFF} \
    CONFIG.PCW_SDIO_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_SDIO_PERIPHERAL_DIVISOR0 {20} \
+   CONFIG.PCW_SDIO_PERIPHERAL_DIVISOR0 {30} \
    CONFIG.PCW_SDIO_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_SDIO_PERIPHERAL_VALID {1} \
    CONFIG.PCW_SINGLE_QSPI_DATA_MODE {x4} \
@@ -1352,7 +1355,7 @@ Flash#Quad SPI Flash#GPIO#Quad SPI Flash#ENET Reset#GPIO#GPIO#GPIO#GPIO#UART\
    CONFIG.PCW_UART1_HIGHADDR {0xE0001FFF} \
    CONFIG.PCW_UART1_PERIPHERAL_ENABLE {0} \
    CONFIG.PCW_UART_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_UART_PERIPHERAL_DIVISOR0 {10} \
+   CONFIG.PCW_UART_PERIPHERAL_DIVISOR0 {15} \
    CONFIG.PCW_UART_PERIPHERAL_FREQMHZ {100} \
    CONFIG.PCW_UART_PERIPHERAL_VALID {1} \
    CONFIG.PCW_UIPARAM_ACT_DDR_FREQ_MHZ {525.000000} \
@@ -1501,7 +1504,9 @@ Flash#Quad SPI Flash#GPIO#Quad SPI Flash#ENET Reset#GPIO#GPIO#GPIO#GPIO#UART\
   connect_bd_net -net CU_0_Arand [get_bd_pins CU_0/Arand] [get_bd_pins PG_0/Arand]
   connect_bd_net -net CU_0_Asel [get_bd_pins CU_0/Asel] [get_bd_pins PG_0/Asel]
   connect_bd_net -net CU_0_S0 [get_bd_pins CU_0/S0] [get_bd_pins SD_0/S0]
-  connect_bd_net -net CU_0_finish [get_bd_ports finish] [get_bd_pins CU_0/finish] [get_bd_pins SD_0/finish] [get_bd_pins axi_intc_0/intr]
+  connect_bd_net -net CU_0_finish [get_bd_ports finish] [get_bd_pins CU_0/finish] [get_bd_pins axi_intc_0/intr]
+  connect_bd_net -net CU_0_idle [get_bd_ports idle] [get_bd_pins CU_0/idle]
+  connect_bd_net -net CU_0_wen [get_bd_pins CU_0/wen] [get_bd_pins MII_0/wen]
   connect_bd_net -net MII_0_READ_ADDR [get_bd_pins Action_RAM/READ_ADDR] [get_bd_pins MII_0/RD_ADDR]
   connect_bd_net -net MII_0_WRITE_ADDR [get_bd_pins Action_RAM/WRITE_ADDR] [get_bd_pins MII_0/WR_ADDR] [get_bd_pins PL_RAM/WRITE_ADDR]
   connect_bd_net -net MII_0_wen0 [get_bd_pins Action_RAM/wen0] [get_bd_pins MII_0/wen0] [get_bd_pins PL_RAM/wen0]
@@ -1519,12 +1524,13 @@ Flash#Quad SPI Flash#GPIO#Quad SPI Flash#ENET Reset#GPIO#GPIO#GPIO#GPIO#UART\
   connect_bd_net -net intellight_0_R0 [get_bd_pins RD_0/R0] [get_bd_pins intellight_0/R0]
   connect_bd_net -net intellight_0_R1 [get_bd_pins RD_0/R1] [get_bd_pins intellight_0/R1]
   connect_bd_net -net intellight_0_R2 [get_bd_pins RD_0/R2] [get_bd_pins intellight_0/R2]
+  connect_bd_net -net intellight_0_active [get_bd_ports active] [get_bd_pins CU_0/active] [get_bd_pins PG_0/active] [get_bd_pins SD_0/active] [get_bd_pins intellight_0/active]
   connect_bd_net -net intellight_0_alpha [get_bd_pins QA_0/alpha] [get_bd_pins intellight_0/alpha]
   connect_bd_net -net intellight_0_gamma [get_bd_pins QA_0/gamma] [get_bd_pins intellight_0/gamma]
   connect_bd_net -net intellight_0_max_episode [get_bd_pins CU_0/max_episode] [get_bd_pins intellight_0/max_episode]
   connect_bd_net -net intellight_0_max_step [get_bd_pins CU_0/max_step] [get_bd_pins intellight_0/max_step]
   connect_bd_net -net intellight_0_seed_16bit [get_bd_pins CU_0/seed] [get_bd_pins intellight_0/seed]
-  connect_bd_net -net intellight_0_start [get_bd_pins CU_0/start] [get_bd_pins intellight_0/start]
+  connect_bd_net -net intellight_0_start [get_bd_ports start] [get_bd_pins CU_0/start] [get_bd_pins intellight_0/start]
   connect_bd_net -net intellight_0_traffic [get_bd_pins SD_0/traffic] [get_bd_pins intellight_0/traffic]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_clk_100M/ext_reset_in]
   connect_bd_net -net rst_clk_100M_peripheral_aresetn [get_bd_pins PL_RAM/rst_n] [get_bd_pins axi_intc_0/s_axi_aresetn] [get_bd_pins axi_smc/aresetn] [get_bd_pins intellight_0/s00_axi_aresetn] [get_bd_pins rst_clk_100M/peripheral_aresetn]
@@ -1532,9 +1538,9 @@ Flash#Quad SPI Flash#GPIO#Quad SPI Flash#ENET Reset#GPIO#GPIO#GPIO#GPIO#UART\
 
   # Create address segments
   assign_bd_address -offset 0x40000000 -range 0x00004000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PL_RAM/axi_bram_ctrl_0/S_AXI/Mem0] -force
-  assign_bd_address -offset 0x42000000 -range 0x00004000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PL_RAM/axi_bram_ctrl_1/S_AXI/Mem0] -force
-  assign_bd_address -offset 0x44000000 -range 0x00004000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PL_RAM/axi_bram_ctrl_2/S_AXI/Mem0] -force
-  assign_bd_address -offset 0x46000000 -range 0x00004000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PL_RAM/axi_bram_ctrl_3/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x40004000 -range 0x00004000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PL_RAM/axi_bram_ctrl_1/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x40008000 -range 0x00004000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PL_RAM/axi_bram_ctrl_2/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x4000C000 -range 0x00004000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PL_RAM/axi_bram_ctrl_3/S_AXI/Mem0] -force
   assign_bd_address -offset 0x41800000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_intc_0/S_AXI/Reg] -force
   assign_bd_address -offset 0x43C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs intellight_0/S00_AXI/S00_AXI_reg] -force
 

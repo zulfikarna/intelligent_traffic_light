@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Fri Jul 22 01:53:36 2022
-# Process ID: 23572
+# Start of session at: Thu Aug 11 03:29:10 2022
+# Process ID: 11460
 # Current directory: F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.runs/intellight_PG_0_0_synth_1
 # Command line: vivado.exe -log intellight_PG_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source intellight_PG_0_0.tcl
 # Log file: F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.runs/intellight_PG_0_0_synth_1/intellight_PG_0_0.vds

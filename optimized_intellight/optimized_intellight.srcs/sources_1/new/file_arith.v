@@ -10,7 +10,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module multiply(
-    input wire rst,
     input wire [31:0] in0,
     input wire [2:0] c,
     output wire [31:0] out0
@@ -22,23 +21,23 @@ module multiply(
     assign k = (c[0])? 2'd3 : 2'd0; // if k==1, then times by 0.125
     
     wire [31:0] w0, w1, w2, w3, w4;
-    r_shift s0(.in0(in0),   .step(i),   .out0(w0),  .rst(rst));
-    r_shift s1(.in0(in0),   .step(j),   .out0(w1),  .rst(rst));
-    r_shift s3(.in0(in0),   .step(k),   .out0(w2),  .rst(rst));
+    r_shift s0(.in0(in0),   .step(i),   .out0(w0));
+    r_shift s1(.in0(in0),   .step(j),   .out0(w1));
+    r_shift s3(.in0(in0),   .step(k),   .out0(w2));
     assign w3 = w0 + w1;
     assign w4 = w2 + w3;
     
-    assign out0 = (rst)? 32'd0 : w4;
+    assign out0 = w4;
 endmodule
 
 module r_shift(
-    input wire rst,
+
     input wire [31:0] in0,
     input wire [1:0] step,
     output wire [31:0] out0
     );
     assign out0 =
-        (step == 2'd0) || (rst)             ? 32'd0 :
+        (step == 2'd0)                      ? 32'd0 :
         (step == 2'd1) && (in0[31] == 1'b1) ? (in0 >> step)|32'h8000_0000 :
         (step == 2'd2) && (in0[31] == 1'b1) ? (in0 >> step)|32'hc000_0000 :
         (step == 2'd3) && (in0[31] == 1'b1) ? (in0 >> step)|32'he000_0000 :
@@ -65,17 +64,14 @@ module lsfr_12bit(
     assign out0 = {in0[10:0],w0};
 endmodule
 
-//module lsfr_32bit(
-//    input wire clk, rst,
-//    input wire  [31:0] in0,
-//    output wire [31:0] out0
-//    );
-//    wire w0, temp0;
-//    assign w0 = in0[31] ^~ in0[21] ^~ in0[1] ^~ in0[0];
-//    assign temp0 = {in0[30:0],w0};
-//    reg_32bit reg0( .clk(clk),   .rst(rst),
-//                    .in0(temp0), .out0(out0));
-//endmodule
+module lsfr_32bit(
+    input wire  [31:0] in0,
+    output wire [31:0] out0
+    );
+    wire w0, temp0;
+    assign w0 = in0[31] ^~ in0[21] ^~ in0[1] ^~ in0[0];
+    assign out0 = {in0[30:0],w0};
+endmodule
 
 //module encoder(
 //    input wire en,

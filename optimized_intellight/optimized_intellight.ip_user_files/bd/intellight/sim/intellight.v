@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Thu Jul 28 14:56:44 2022
+//Date        : Tue Aug 16 14:15:56 2022
 //Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 //Command     : generate_target intellight.bd
 //Design      : intellight
@@ -791,7 +791,7 @@ module PL_RAM_imp_MR7DWM
         .s_axi_wready(S_AXI_0_1_WREADY),
         .s_axi_wstrb(S_AXI_0_1_WSTRB),
         .s_axi_wvalid(S_AXI_0_1_WVALID));
-  (* BMM_INFO_ADDRESS_SPACE = "byte  0x42000000 32 > intellight PL_RAM/RAM1" *) 
+  (* BMM_INFO_ADDRESS_SPACE = "byte  0x40004000 32 > intellight PL_RAM/RAM1" *) 
   (* KEEP_HIERARCHY = "yes" *) 
   intellight_axi_bram_ctrl_1_0 axi_bram_ctrl_1
        (.bram_addr_a(axi_bram_ctrl_1_BRAM_PORTA_ADDR),
@@ -834,7 +834,7 @@ module PL_RAM_imp_MR7DWM
         .s_axi_wready(Conn2_WREADY),
         .s_axi_wstrb(Conn2_WSTRB),
         .s_axi_wvalid(Conn2_WVALID));
-  (* BMM_INFO_ADDRESS_SPACE = "byte  0x44000000 32 > intellight PL_RAM/RAM2" *) 
+  (* BMM_INFO_ADDRESS_SPACE = "byte  0x40008000 32 > intellight PL_RAM/RAM2" *) 
   (* KEEP_HIERARCHY = "yes" *) 
   intellight_axi_bram_ctrl_1_1 axi_bram_ctrl_2
        (.bram_addr_a(axi_bram_ctrl_2_BRAM_PORTA_ADDR),
@@ -877,7 +877,7 @@ module PL_RAM_imp_MR7DWM
         .s_axi_wready(Conn3_WREADY),
         .s_axi_wstrb(Conn3_WSTRB),
         .s_axi_wvalid(Conn3_WVALID));
-  (* BMM_INFO_ADDRESS_SPACE = "byte  0x46000000 32 > intellight PL_RAM/RAM3" *) 
+  (* BMM_INFO_ADDRESS_SPACE = "byte  0x4000C000 32 > intellight PL_RAM/RAM3" *) 
   (* KEEP_HIERARCHY = "yes" *) 
   intellight_axi_bram_ctrl_2_0 axi_bram_ctrl_3
        (.bram_addr_a(axi_bram_ctrl_3_BRAM_PORTA_ADDR),
@@ -947,7 +947,10 @@ module intellight
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    finish);
+    active,
+    finish,
+    idle,
+    start);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -969,7 +972,10 @@ module intellight
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
+  output active;
   output finish;
+  output idle;
+  output start;
 
   wire [31:0]Action_RAM_D0;
   wire [31:0]Action_RAM_D1;
@@ -979,6 +985,8 @@ module intellight
   wire CU_0_Asel;
   wire [11:0]CU_0_S0;
   wire CU_0_finish;
+  wire CU_0_idle;
+  wire CU_0_wen;
   wire [31:0]MII_0_READ_ADDR;
   wire [31:0]MII_0_WRITE_ADDR;
   wire [3:0]MII_0_wen0;
@@ -1156,6 +1164,7 @@ module intellight
   wire [31:0]intellight_0_R0;
   wire [31:0]intellight_0_R1;
   wire [31:0]intellight_0_R2;
+  wire intellight_0_active;
   wire [2:0]intellight_0_alpha;
   wire [2:0]intellight_0_gamma;
   wire [15:0]intellight_0_max_episode;
@@ -1226,7 +1235,10 @@ module intellight
   wire [0:0]rst_clk_100M_peripheral_aresetn;
   wire [0:0]rsta_0_1;
 
+  assign active = intellight_0_active;
   assign finish = CU_0_finish;
+  assign idle = CU_0_idle;
+  assign start = intellight_0_start;
   Action_RAM_imp_1YLN0P3 Action_RAM
        (.D0(Action_RAM_D0),
         .D1(Action_RAM_D1),
@@ -1245,13 +1257,16 @@ module intellight
        (.Arand(CU_0_Arand),
         .Asel(CU_0_Asel),
         .S0(CU_0_S0),
+        .active(intellight_0_active),
         .clk(clka_0_1),
         .finish(CU_0_finish),
+        .idle(CU_0_idle),
         .max_episode(intellight_0_max_episode),
         .max_step(intellight_0_max_step),
         .rst(rsta_0_1),
         .seed(intellight_0_seed_16bit),
-        .start(intellight_0_start));
+        .start(intellight_0_start),
+        .wen(CU_0_wen));
   intellight_MII_0_0 MII_0
        (.A(PG_0_A),
         .RD_ADDR(MII_0_READ_ADDR),
@@ -1259,6 +1274,7 @@ module intellight
         .WR_ADDR(MII_0_WRITE_ADDR),
         .clk(clka_0_1),
         .rst(rsta_0_1),
+        .wen(CU_0_wen),
         .wen0(MII_0_wen0),
         .wen1(MII_0_wen1),
         .wen2(MII_0_wen2),
@@ -1270,6 +1286,7 @@ module intellight
         .Arand(CU_0_Arand),
         .Asel(CU_0_Asel),
         .S(SD_0_S),
+        .active(intellight_0_active),
         .clk(clka_0_1),
         .rst(rsta_0_1));
   PL_RAM_imp_MR7DWM PL_RAM
@@ -1433,8 +1450,8 @@ module intellight
        (.A(PG_0_A),
         .S(SD_0_S),
         .S0(CU_0_S0),
+        .active(intellight_0_active),
         .clk(clka_0_1),
-        .finish(CU_0_finish),
         .rst(rsta_0_1),
         .traffic(intellight_0_traffic));
   intellight_axi_intc_0_0 axi_intc_0
@@ -1620,42 +1637,6 @@ module intellight
         .M05_AXI_wready(axi_smc_M05_AXI_WREADY),
         .M05_AXI_wstrb(axi_smc_M05_AXI_WSTRB),
         .M05_AXI_wvalid(axi_smc_M05_AXI_WVALID),
-        .M06_AXI_arready(1'b0),
-        .M06_AXI_awready(1'b0),
-        .M06_AXI_bresp({1'b0,1'b0}),
-        .M06_AXI_bvalid(1'b0),
-        .M06_AXI_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .M06_AXI_rlast(1'b0),
-        .M06_AXI_rresp({1'b0,1'b0}),
-        .M06_AXI_rvalid(1'b0),
-        .M06_AXI_wready(1'b0),
-        .M07_AXI_arready(1'b0),
-        .M07_AXI_awready(1'b0),
-        .M07_AXI_bresp({1'b0,1'b0}),
-        .M07_AXI_bvalid(1'b0),
-        .M07_AXI_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .M07_AXI_rlast(1'b0),
-        .M07_AXI_rresp({1'b0,1'b0}),
-        .M07_AXI_rvalid(1'b0),
-        .M07_AXI_wready(1'b0),
-        .M08_AXI_arready(1'b0),
-        .M08_AXI_awready(1'b0),
-        .M08_AXI_bresp({1'b0,1'b0}),
-        .M08_AXI_bvalid(1'b0),
-        .M08_AXI_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .M08_AXI_rlast(1'b0),
-        .M08_AXI_rresp({1'b0,1'b0}),
-        .M08_AXI_rvalid(1'b0),
-        .M08_AXI_wready(1'b0),
-        .M09_AXI_arready(1'b0),
-        .M09_AXI_awready(1'b0),
-        .M09_AXI_bresp({1'b0,1'b0}),
-        .M09_AXI_bvalid(1'b0),
-        .M09_AXI_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .M09_AXI_rlast(1'b0),
-        .M09_AXI_rresp({1'b0,1'b0}),
-        .M09_AXI_rvalid(1'b0),
-        .M09_AXI_wready(1'b0),
         .S00_AXI_araddr(processing_system7_0_M_AXI_GP0_ARADDR),
         .S00_AXI_arburst(processing_system7_0_M_AXI_GP0_ARBURST),
         .S00_AXI_arcache(processing_system7_0_M_AXI_GP0_ARCACHE),
@@ -1704,6 +1685,7 @@ module intellight
         .R0(intellight_0_R0),
         .R1(intellight_0_R1),
         .R2(intellight_0_R2),
+        .active(intellight_0_active),
         .alpha(intellight_0_alpha),
         .gamma(intellight_0_gamma),
         .max_episode(intellight_0_max_episode),

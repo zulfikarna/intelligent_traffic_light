@@ -74,10 +74,13 @@ module intellight_CU_0_0 (
   wire_cs,
   wire_ns,
   wire_epsilon,
-  finish
+  finish,
+  wen,
+  idle,
+  active
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
@@ -96,10 +99,13 @@ output wire SD;
 output wire RD;
 output wire [15 : 0] wire_sc;
 output wire [15 : 0] wire_ec;
-output wire [3 : 0] wire_cs;
-output wire [3 : 0] wire_ns;
+output wire [4 : 0] wire_cs;
+output wire [4 : 0] wire_ns;
 output wire [15 : 0] wire_epsilon;
 output wire finish;
+output wire wen;
+output wire idle;
+input wire active;
 
   CU inst (
     .clk(clk),
@@ -120,6 +126,9 @@ output wire finish;
     .wire_cs(wire_cs),
     .wire_ns(wire_ns),
     .wire_epsilon(wire_epsilon),
-    .finish(finish)
+    .finish(finish),
+    .wen(wen),
+    .idle(idle),
+    .active(active)
   );
 endmodule

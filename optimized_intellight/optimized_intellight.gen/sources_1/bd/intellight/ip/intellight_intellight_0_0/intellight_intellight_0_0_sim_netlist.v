@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Thu Jul 28 14:13:12 2022
+// Date        : Tue Aug 16 13:25:26 2022
 // Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_intellight_0_0/intellight_intellight_0_0_sim_netlist.v
@@ -16,6 +16,7 @@
 (* NotValidForBitStream *)
 module intellight_intellight_0_0
    (start,
+    active,
     alpha,
     gamma,
     seed,
@@ -51,6 +52,7 @@ module intellight_intellight_0_0
     s00_axi_rvalid,
     s00_axi_rready);
   output start;
+  output active;
   output [2:0]alpha;
   output [2:0]gamma;
   output [15:0]seed;
@@ -64,7 +66,7 @@ module intellight_intellight_0_0
   input [31:0]Q1;
   input [31:0]Q2;
   input [31:0]Q3;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s00_axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s00_axi_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s00_axi_aresetn;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) input [5:0]s00_axi_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
@@ -84,7 +86,7 @@ module intellight_intellight_0_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 16, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 125000000, ID_WIDTH 0, ADDR_WIDTH 6, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s00_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 16, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 150000000, ID_WIDTH 0, ADDR_WIDTH 6, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s00_axi_rready;
 
   wire \<const0> ;
   wire [31:0]Q0;
@@ -94,6 +96,7 @@ module intellight_intellight_0_0
   wire [31:0]R0;
   wire [31:0]R1;
   wire [31:0]R2;
+  wire active;
   wire [2:0]alpha;
   wire [2:0]gamma;
   wire [15:0]max_episode;
@@ -152,7 +155,7 @@ module intellight_intellight_0_0
         .s00_axi_wstrb(s00_axi_wstrb),
         .s00_axi_wvalid(s00_axi_wvalid),
         .\slv_reg1_reg[31] ({max_episode,max_step}),
-        .traffic(traffic));
+        .\slv_reg5_reg[16] ({active,traffic}));
 endmodule
 
 (* ORIG_REF_NAME = "intellight_v1_0" *) 
@@ -160,11 +163,11 @@ module intellight_intellight_0_0_intellight_v1_0
    (S_AXI_AWREADY,
     S_AXI_WREADY,
     Q,
+    \slv_reg5_reg[16] ,
     \slv_reg1_reg[31] ,
     R0,
     R1,
     R2,
-    traffic,
     S_AXI_ARREADY,
     s00_axi_rdata,
     s00_axi_rvalid,
@@ -187,11 +190,11 @@ module intellight_intellight_0_0_intellight_v1_0
   output S_AXI_AWREADY;
   output S_AXI_WREADY;
   output [22:0]Q;
+  output [12:0]\slv_reg5_reg[16] ;
   output [31:0]\slv_reg1_reg[31] ;
   output [31:0]R0;
   output [31:0]R1;
   output [31:0]R2;
-  output [11:0]traffic;
   output S_AXI_ARREADY;
   output [31:0]s00_axi_rdata;
   output s00_axi_rvalid;
@@ -243,7 +246,7 @@ module intellight_intellight_0_0_intellight_v1_0
   wire s00_axi_wvalid;
   wire \slv_reg0[0]_i_1_n_0 ;
   wire [31:0]\slv_reg1_reg[31] ;
-  wire [11:0]traffic;
+  wire [12:0]\slv_reg5_reg[16] ;
 
   LUT6 #(
     .INIT(64'hF7FFC4CCC4CCC4CC)) 
@@ -302,7 +305,7 @@ module intellight_intellight_0_0_intellight_v1_0
         .s00_axi_wstrb(s00_axi_wstrb),
         .s00_axi_wvalid(s00_axi_wvalid),
         .\slv_reg1_reg[31]_0 (\slv_reg1_reg[31] ),
-        .traffic(traffic));
+        .\slv_reg5_reg[16]_0 (\slv_reg5_reg[16] ));
   LUT1 #(
     .INIT(2'h1)) 
     \slv_reg0[0]_i_1 
@@ -319,11 +322,11 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
     aw_en_reg_0,
     s00_axi_rvalid,
     Q,
+    \slv_reg5_reg[16]_0 ,
     \slv_reg1_reg[31]_0 ,
     R0,
     R1,
     R2,
-    traffic,
     s00_axi_rdata,
     SR,
     s00_axi_aclk,
@@ -348,11 +351,11 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
   output aw_en_reg_0;
   output s00_axi_rvalid;
   output [22:0]Q;
+  output [12:0]\slv_reg5_reg[16]_0 ;
   output [31:0]\slv_reg1_reg[31]_0 ;
   output [31:0]R0;
   output [31:0]R1;
   output [31:0]R2;
-  output [11:0]traffic;
   output [31:0]s00_axi_rdata;
   input [0:0]SR;
   input s00_axi_aclk;
@@ -647,16 +650,16 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
   wire \slv_reg4[7]_i_1_n_0 ;
   wire [31:12]slv_reg5;
   wire \slv_reg5[11]_i_1_n_0 ;
-  wire \slv_reg5[23]_i_1_n_0 ;
+  wire \slv_reg5[16]_i_1_n_0 ;
   wire \slv_reg5[31]_i_1_n_0 ;
   wire \slv_reg5[7]_i_1_n_0 ;
+  wire [12:0]\slv_reg5_reg[16]_0 ;
   wire [31:0]slv_reg6;
   wire [31:0]slv_reg7;
   wire [31:0]slv_reg8;
   wire [31:0]slv_reg9;
   wire slv_reg_rden__0;
   wire slv_reg_wren__0;
-  wire [11:0]traffic;
 
   FDSE aw_en_reg
        (.C(s00_axi_aclk),
@@ -760,7 +763,7 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.I0(slv_reg7[0]),
         .I1(slv_reg6[0]),
         .I2(sel0[1]),
-        .I3(traffic[0]),
+        .I3(\slv_reg5_reg[16]_0 [0]),
         .I4(sel0[0]),
         .I5(R2[0]),
         .O(\axi_rdata[0]_i_5_n_0 ));
@@ -800,7 +803,7 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.I0(slv_reg7[10]),
         .I1(slv_reg6[10]),
         .I2(sel0[1]),
-        .I3(traffic[10]),
+        .I3(\slv_reg5_reg[16]_0 [10]),
         .I4(sel0[0]),
         .I5(R2[10]),
         .O(\axi_rdata[10]_i_5_n_0 ));
@@ -840,7 +843,7 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.I0(slv_reg7[11]),
         .I1(slv_reg6[11]),
         .I2(sel0[1]),
-        .I3(traffic[11]),
+        .I3(\slv_reg5_reg[16]_0 [11]),
         .I4(sel0[0]),
         .I5(R2[11]),
         .O(\axi_rdata[11]_i_5_n_0 ));
@@ -1040,7 +1043,7 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.I0(slv_reg7[16]),
         .I1(slv_reg6[16]),
         .I2(sel0[1]),
-        .I3(slv_reg5[16]),
+        .I3(\slv_reg5_reg[16]_0 [12]),
         .I4(sel0[0]),
         .I5(R2[16]),
         .O(\axi_rdata[16]_i_5_n_0 ));
@@ -1200,7 +1203,7 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.I0(slv_reg7[1]),
         .I1(slv_reg6[1]),
         .I2(sel0[1]),
-        .I3(traffic[1]),
+        .I3(\slv_reg5_reg[16]_0 [1]),
         .I4(sel0[0]),
         .I5(R2[1]),
         .O(\axi_rdata[1]_i_5_n_0 ));
@@ -1640,7 +1643,7 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.I0(slv_reg7[2]),
         .I1(slv_reg6[2]),
         .I2(sel0[1]),
-        .I3(traffic[2]),
+        .I3(\slv_reg5_reg[16]_0 [2]),
         .I4(sel0[0]),
         .I5(R2[2]),
         .O(\axi_rdata[2]_i_5_n_0 ));
@@ -1760,7 +1763,7 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.I0(slv_reg7[3]),
         .I1(slv_reg6[3]),
         .I2(sel0[1]),
-        .I3(traffic[3]),
+        .I3(\slv_reg5_reg[16]_0 [3]),
         .I4(sel0[0]),
         .I5(R2[3]),
         .O(\axi_rdata[3]_i_5_n_0 ));
@@ -1800,7 +1803,7 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.I0(slv_reg7[4]),
         .I1(slv_reg6[4]),
         .I2(sel0[1]),
-        .I3(traffic[4]),
+        .I3(\slv_reg5_reg[16]_0 [4]),
         .I4(sel0[0]),
         .I5(R2[4]),
         .O(\axi_rdata[4]_i_5_n_0 ));
@@ -1840,7 +1843,7 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.I0(slv_reg7[5]),
         .I1(slv_reg6[5]),
         .I2(sel0[1]),
-        .I3(traffic[5]),
+        .I3(\slv_reg5_reg[16]_0 [5]),
         .I4(sel0[0]),
         .I5(R2[5]),
         .O(\axi_rdata[5]_i_5_n_0 ));
@@ -1880,7 +1883,7 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.I0(slv_reg7[6]),
         .I1(slv_reg6[6]),
         .I2(sel0[1]),
-        .I3(traffic[6]),
+        .I3(\slv_reg5_reg[16]_0 [6]),
         .I4(sel0[0]),
         .I5(R2[6]),
         .O(\axi_rdata[6]_i_5_n_0 ));
@@ -1920,7 +1923,7 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.I0(slv_reg7[7]),
         .I1(slv_reg6[7]),
         .I2(sel0[1]),
-        .I3(traffic[7]),
+        .I3(\slv_reg5_reg[16]_0 [7]),
         .I4(sel0[0]),
         .I5(R2[7]),
         .O(\axi_rdata[7]_i_5_n_0 ));
@@ -1960,7 +1963,7 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.I0(slv_reg7[8]),
         .I1(slv_reg6[8]),
         .I2(sel0[1]),
-        .I3(traffic[8]),
+        .I3(\slv_reg5_reg[16]_0 [8]),
         .I4(sel0[0]),
         .I5(R2[8]),
         .O(\axi_rdata[8]_i_5_n_0 ));
@@ -2000,7 +2003,7 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.I0(slv_reg7[9]),
         .I1(slv_reg6[9]),
         .I2(sel0[1]),
-        .I3(traffic[9]),
+        .I3(\slv_reg5_reg[16]_0 [9]),
         .I4(sel0[0]),
         .I5(R2[9]),
         .O(\axi_rdata[9]_i_5_n_0 ));
@@ -5288,14 +5291,14 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
         .O(\slv_reg5[11]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h0000000000008000)) 
-    \slv_reg5[23]_i_1 
+    \slv_reg5[16]_i_1 
        (.I0(slv_reg_wren__0),
         .I1(s00_axi_wstrb[2]),
         .I2(p_0_in[0]),
         .I3(p_0_in[2]),
         .I4(p_0_in[1]),
         .I5(p_0_in[3]),
-        .O(\slv_reg5[23]_i_1_n_0 ));
+        .O(\slv_reg5[16]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h0000000000008000)) 
     \slv_reg5[31]_i_1 
@@ -5320,19 +5323,19 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[0]),
-        .Q(traffic[0]),
+        .Q(\slv_reg5_reg[16]_0 [0]),
         .R(SR));
   FDRE \slv_reg5_reg[10] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[11]_i_1_n_0 ),
         .D(s00_axi_wdata[10]),
-        .Q(traffic[10]),
+        .Q(\slv_reg5_reg[16]_0 [10]),
         .R(SR));
   FDRE \slv_reg5_reg[11] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[11]_i_1_n_0 ),
         .D(s00_axi_wdata[11]),
-        .Q(traffic[11]),
+        .Q(\slv_reg5_reg[16]_0 [11]),
         .R(SR));
   FDRE \slv_reg5_reg[12] 
        (.C(s00_axi_aclk),
@@ -5360,25 +5363,25 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
         .R(SR));
   FDRE \slv_reg5_reg[16] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg5[23]_i_1_n_0 ),
+        .CE(\slv_reg5[16]_i_1_n_0 ),
         .D(s00_axi_wdata[16]),
-        .Q(slv_reg5[16]),
+        .Q(\slv_reg5_reg[16]_0 [12]),
         .R(SR));
   FDRE \slv_reg5_reg[17] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg5[23]_i_1_n_0 ),
+        .CE(\slv_reg5[16]_i_1_n_0 ),
         .D(s00_axi_wdata[17]),
         .Q(slv_reg5[17]),
         .R(SR));
   FDRE \slv_reg5_reg[18] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg5[23]_i_1_n_0 ),
+        .CE(\slv_reg5[16]_i_1_n_0 ),
         .D(s00_axi_wdata[18]),
         .Q(slv_reg5[18]),
         .R(SR));
   FDRE \slv_reg5_reg[19] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg5[23]_i_1_n_0 ),
+        .CE(\slv_reg5[16]_i_1_n_0 ),
         .D(s00_axi_wdata[19]),
         .Q(slv_reg5[19]),
         .R(SR));
@@ -5386,29 +5389,29 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[1]),
-        .Q(traffic[1]),
+        .Q(\slv_reg5_reg[16]_0 [1]),
         .R(SR));
   FDRE \slv_reg5_reg[20] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg5[23]_i_1_n_0 ),
+        .CE(\slv_reg5[16]_i_1_n_0 ),
         .D(s00_axi_wdata[20]),
         .Q(slv_reg5[20]),
         .R(SR));
   FDRE \slv_reg5_reg[21] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg5[23]_i_1_n_0 ),
+        .CE(\slv_reg5[16]_i_1_n_0 ),
         .D(s00_axi_wdata[21]),
         .Q(slv_reg5[21]),
         .R(SR));
   FDRE \slv_reg5_reg[22] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg5[23]_i_1_n_0 ),
+        .CE(\slv_reg5[16]_i_1_n_0 ),
         .D(s00_axi_wdata[22]),
         .Q(slv_reg5[22]),
         .R(SR));
   FDRE \slv_reg5_reg[23] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg5[23]_i_1_n_0 ),
+        .CE(\slv_reg5[16]_i_1_n_0 ),
         .D(s00_axi_wdata[23]),
         .Q(slv_reg5[23]),
         .R(SR));
@@ -5452,7 +5455,7 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[2]),
-        .Q(traffic[2]),
+        .Q(\slv_reg5_reg[16]_0 [2]),
         .R(SR));
   FDRE \slv_reg5_reg[30] 
        (.C(s00_axi_aclk),
@@ -5470,43 +5473,43 @@ module intellight_intellight_0_0_intellight_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[3]),
-        .Q(traffic[3]),
+        .Q(\slv_reg5_reg[16]_0 [3]),
         .R(SR));
   FDRE \slv_reg5_reg[4] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[4]),
-        .Q(traffic[4]),
+        .Q(\slv_reg5_reg[16]_0 [4]),
         .R(SR));
   FDRE \slv_reg5_reg[5] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[5]),
-        .Q(traffic[5]),
+        .Q(\slv_reg5_reg[16]_0 [5]),
         .R(SR));
   FDRE \slv_reg5_reg[6] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[6]),
-        .Q(traffic[6]),
+        .Q(\slv_reg5_reg[16]_0 [6]),
         .R(SR));
   FDRE \slv_reg5_reg[7] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[7]),
-        .Q(traffic[7]),
+        .Q(\slv_reg5_reg[16]_0 [7]),
         .R(SR));
   FDRE \slv_reg5_reg[8] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[11]_i_1_n_0 ),
         .D(s00_axi_wdata[8]),
-        .Q(traffic[8]),
+        .Q(\slv_reg5_reg[16]_0 [8]),
         .R(SR));
   FDRE \slv_reg5_reg[9] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[11]_i_1_n_0 ),
         .D(s00_axi_wdata[9]),
-        .Q(traffic[9]),
+        .Q(\slv_reg5_reg[16]_0 [9]),
         .R(SR));
   FDRE \slv_reg6_reg[0] 
        (.C(s00_axi_aclk),

@@ -10,7 +10,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module SD(
-    input wire clk, rst, finish,
+    input wire clk, rst, active,
     input wire [1:0] A,
     input wire [11:0] S0,
     input wire [11:0] traffic,
@@ -46,7 +46,7 @@ module SD(
                     ((L3!=3'b111)? (L3 + 1'b1):(3'b111));
     
 //    wire [11:0] Stemp;
-    assign S = finish? traffic : ((L0)|(L1<<3)|(L2<<6)|(L3<<9))|12'h000;
+    assign S = active? traffic : (((L0)|(L1<<3)|(L2<<6)|(L3<<9))|12'h000);
     
 //    enabler_12bit en0(  .en(en),
 //                        .in0(Stemp),    .out0(S));

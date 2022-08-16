@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Fri Jul 22 01:56:31 2022
+-- Date        : Thu Aug 11 03:29:53 2022
 -- Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_PG_0_0/intellight_PG_0_0_sim_netlist.vhdl
@@ -17,13 +17,14 @@ use UNISIM.VCOMPONENTS.ALL;
 entity intellight_PG_0_0_PG is
   port (
     Amax : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    A : out STD_LOGIC_VECTOR ( 1 downto 0 );
     Amin : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    Asel : in STD_LOGIC;
-    Arand : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    A : out STD_LOGIC_VECTOR ( 1 downto 0 );
     rst : in STD_LOGIC;
     S : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    clk : in STD_LOGIC
+    clk : in STD_LOGIC;
+    Asel : in STD_LOGIC;
+    Arand : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    active : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of intellight_PG_0_0_PG : entity is "PG";
@@ -38,6 +39,8 @@ architecture STRUCTURE of intellight_PG_0_0_PG is
   signal \Amin1__4\ : STD_LOGIC;
   signal \Amin2__4\ : STD_LOGIC;
   signal \Amin3__4\ : STD_LOGIC;
+  signal Arand_reg : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal Asel_reg : STD_LOGIC;
   signal Max : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \Max[2]_i_2_n_0\ : STD_LOGIC;
   signal \Max[2]_i_4_n_0\ : STD_LOGIC;
@@ -58,36 +61,36 @@ architecture STRUCTURE of intellight_PG_0_0_PG is
   signal \min0/w0__2\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal p_0_in0_in : STD_LOGIC_VECTOR ( 2 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \A[0]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \A[1]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \Amax[0]_INST_0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \Amax[1]_INST_0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \Amin[0]_INST_0\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \Amin[1]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \Amax[0]_INST_0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \Amax[1]_INST_0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \Amin[0]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \Amin[1]_INST_0\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \Max[1]_i_2\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \Max[2]_i_3\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \Max[2]_i_3\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \Min[1]_i_2\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \Min[2]_i_3\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \Min[2]_i_3\ : label is "soft_lutpair3";
 begin
   Amax(1 downto 0) <= \^amax\(1 downto 0);
-\A[0]_INST_0\: unisim.vcomponents.LUT3
+\A[0]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"B8"
+      INIT => X"FE02"
     )
         port map (
       I0 => Agreed(0),
-      I1 => Asel,
-      I2 => Arand(0),
+      I1 => Asel_reg,
+      I2 => active,
+      I3 => Arand_reg(0),
       O => A(0)
     );
-\A[1]_INST_0\: unisim.vcomponents.LUT3
+\A[1]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"B8"
+      INIT => X"FE02"
     )
         port map (
       I0 => Agreed(1),
-      I1 => Asel,
-      I2 => Arand(1),
+      I1 => Asel_reg,
+      I2 => active,
+      I3 => Arand_reg(1),
       O => A(1)
     );
 \Agreed_reg[0]\: unisim.vcomponents.FDRE
@@ -221,6 +224,30 @@ begin
       I4 => \Stest_reg_n_0_[1]\,
       I5 => Min(1),
       O => \Amin1__4\
+    );
+\Arand_reg_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => Arand(0),
+      Q => Arand_reg(0),
+      R => '0'
+    );
+\Arand_reg_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => Arand(1),
+      Q => Arand_reg(1),
+      R => '0'
+    );
+Asel_reg_reg: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => Asel,
+      Q => Asel_reg,
+      R => '0'
     );
 \Max[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -576,6 +603,7 @@ entity intellight_PG_0_0 is
     S : in STD_LOGIC_VECTOR ( 11 downto 0 );
     Arand : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Asel : in STD_LOGIC;
+    active : in STD_LOGIC;
     Amax : out STD_LOGIC_VECTOR ( 1 downto 0 );
     Amin : out STD_LOGIC_VECTOR ( 1 downto 0 );
     A : out STD_LOGIC_VECTOR ( 1 downto 0 )
@@ -596,7 +624,7 @@ architecture STRUCTURE of intellight_PG_0_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
   attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
 begin
@@ -608,6 +636,7 @@ inst: entity work.intellight_PG_0_0_PG
       Arand(1 downto 0) => Arand(1 downto 0),
       Asel => Asel,
       S(11 downto 0) => S(11 downto 0),
+      active => active,
       clk => clk,
       rst => rst
     );

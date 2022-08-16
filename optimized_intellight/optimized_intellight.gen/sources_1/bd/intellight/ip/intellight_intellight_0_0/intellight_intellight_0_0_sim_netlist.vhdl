@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Thu Jul 28 14:13:12 2022
+-- Date        : Tue Aug 16 13:25:26 2022
 -- Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_intellight_0_0/intellight_intellight_0_0_sim_netlist.vhdl
@@ -23,11 +23,11 @@ entity intellight_intellight_0_0_intellight_v1_0_S00_AXI is
     aw_en_reg_0 : out STD_LOGIC;
     s00_axi_rvalid : out STD_LOGIC;
     Q : out STD_LOGIC_VECTOR ( 22 downto 0 );
+    \slv_reg5_reg[16]_0\ : out STD_LOGIC_VECTOR ( 12 downto 0 );
     \slv_reg1_reg[31]_0\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
     R0 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     R1 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     R2 : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    traffic : out STD_LOGIC_VECTOR ( 11 downto 0 );
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     s00_axi_aclk : in STD_LOGIC;
@@ -309,16 +309,16 @@ architecture STRUCTURE of intellight_intellight_0_0_intellight_v1_0_S00_AXI is
   signal \slv_reg4[7]_i_1_n_0\ : STD_LOGIC;
   signal slv_reg5 : STD_LOGIC_VECTOR ( 31 downto 12 );
   signal \slv_reg5[11]_i_1_n_0\ : STD_LOGIC;
-  signal \slv_reg5[23]_i_1_n_0\ : STD_LOGIC;
+  signal \slv_reg5[16]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg5[31]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg5[7]_i_1_n_0\ : STD_LOGIC;
+  signal \^slv_reg5_reg[16]_0\ : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal slv_reg6 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal slv_reg7 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal slv_reg8 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal slv_reg9 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \slv_reg_rden__0\ : STD_LOGIC;
   signal \slv_reg_wren__0\ : STD_LOGIC;
-  signal \^traffic\ : STD_LOGIC_VECTOR ( 11 downto 0 );
 begin
   Q(22 downto 0) <= \^q\(22 downto 0);
   R0(31 downto 0) <= \^r0\(31 downto 0);
@@ -330,7 +330,7 @@ begin
   aw_en_reg_0 <= \^aw_en_reg_0\;
   s00_axi_rvalid <= \^s00_axi_rvalid\;
   \slv_reg1_reg[31]_0\(31 downto 0) <= \^slv_reg1_reg[31]_0\(31 downto 0);
-  traffic(11 downto 0) <= \^traffic\(11 downto 0);
+  \slv_reg5_reg[16]_0\(12 downto 0) <= \^slv_reg5_reg[16]_0\(12 downto 0);
 aw_en_reg: unisim.vcomponents.FDSE
      port map (
       C => s00_axi_aclk,
@@ -468,7 +468,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(0),
       I1 => slv_reg6(0),
       I2 => sel0(1),
-      I3 => \^traffic\(0),
+      I3 => \^slv_reg5_reg[16]_0\(0),
       I4 => sel0(0),
       I5 => \^r2\(0),
       O => \axi_rdata[0]_i_5_n_0\
@@ -520,7 +520,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(10),
       I1 => slv_reg6(10),
       I2 => sel0(1),
-      I3 => \^traffic\(10),
+      I3 => \^slv_reg5_reg[16]_0\(10),
       I4 => sel0(0),
       I5 => \^r2\(10),
       O => \axi_rdata[10]_i_5_n_0\
@@ -572,7 +572,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(11),
       I1 => slv_reg6(11),
       I2 => sel0(1),
-      I3 => \^traffic\(11),
+      I3 => \^slv_reg5_reg[16]_0\(11),
       I4 => sel0(0),
       I5 => \^r2\(11),
       O => \axi_rdata[11]_i_5_n_0\
@@ -832,7 +832,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(16),
       I1 => slv_reg6(16),
       I2 => sel0(1),
-      I3 => slv_reg5(16),
+      I3 => \^slv_reg5_reg[16]_0\(12),
       I4 => sel0(0),
       I5 => \^r2\(16),
       O => \axi_rdata[16]_i_5_n_0\
@@ -1040,7 +1040,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(1),
       I1 => slv_reg6(1),
       I2 => sel0(1),
-      I3 => \^traffic\(1),
+      I3 => \^slv_reg5_reg[16]_0\(1),
       I4 => sel0(0),
       I5 => \^r2\(1),
       O => \axi_rdata[1]_i_5_n_0\
@@ -1612,7 +1612,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(2),
       I1 => slv_reg6(2),
       I2 => sel0(1),
-      I3 => \^traffic\(2),
+      I3 => \^slv_reg5_reg[16]_0\(2),
       I4 => sel0(0),
       I5 => \^r2\(2),
       O => \axi_rdata[2]_i_5_n_0\
@@ -1768,7 +1768,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(3),
       I1 => slv_reg6(3),
       I2 => sel0(1),
-      I3 => \^traffic\(3),
+      I3 => \^slv_reg5_reg[16]_0\(3),
       I4 => sel0(0),
       I5 => \^r2\(3),
       O => \axi_rdata[3]_i_5_n_0\
@@ -1820,7 +1820,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(4),
       I1 => slv_reg6(4),
       I2 => sel0(1),
-      I3 => \^traffic\(4),
+      I3 => \^slv_reg5_reg[16]_0\(4),
       I4 => sel0(0),
       I5 => \^r2\(4),
       O => \axi_rdata[4]_i_5_n_0\
@@ -1872,7 +1872,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(5),
       I1 => slv_reg6(5),
       I2 => sel0(1),
-      I3 => \^traffic\(5),
+      I3 => \^slv_reg5_reg[16]_0\(5),
       I4 => sel0(0),
       I5 => \^r2\(5),
       O => \axi_rdata[5]_i_5_n_0\
@@ -1924,7 +1924,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(6),
       I1 => slv_reg6(6),
       I2 => sel0(1),
-      I3 => \^traffic\(6),
+      I3 => \^slv_reg5_reg[16]_0\(6),
       I4 => sel0(0),
       I5 => \^r2\(6),
       O => \axi_rdata[6]_i_5_n_0\
@@ -1976,7 +1976,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(7),
       I1 => slv_reg6(7),
       I2 => sel0(1),
-      I3 => \^traffic\(7),
+      I3 => \^slv_reg5_reg[16]_0\(7),
       I4 => sel0(0),
       I5 => \^r2\(7),
       O => \axi_rdata[7]_i_5_n_0\
@@ -2028,7 +2028,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(8),
       I1 => slv_reg6(8),
       I2 => sel0(1),
-      I3 => \^traffic\(8),
+      I3 => \^slv_reg5_reg[16]_0\(8),
       I4 => sel0(0),
       I5 => \^r2\(8),
       O => \axi_rdata[8]_i_5_n_0\
@@ -2080,7 +2080,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(9),
       I1 => slv_reg6(9),
       I2 => sel0(1),
-      I3 => \^traffic\(9),
+      I3 => \^slv_reg5_reg[16]_0\(9),
       I4 => sel0(0),
       I5 => \^r2\(9),
       O => \axi_rdata[9]_i_5_n_0\
@@ -6478,7 +6478,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I5 => p_0_in(3),
       O => \slv_reg5[11]_i_1_n_0\
     );
-\slv_reg5[23]_i_1\: unisim.vcomponents.LUT6
+\slv_reg5[16]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000000008000"
     )
@@ -6489,7 +6489,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I3 => p_0_in(2),
       I4 => p_0_in(1),
       I5 => p_0_in(3),
-      O => \slv_reg5[23]_i_1_n_0\
+      O => \slv_reg5[16]_i_1_n_0\
     );
 \slv_reg5[31]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -6522,7 +6522,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(0),
-      Q => \^traffic\(0),
+      Q => \^slv_reg5_reg[16]_0\(0),
       R => SR(0)
     );
 \slv_reg5_reg[10]\: unisim.vcomponents.FDRE
@@ -6530,7 +6530,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[11]_i_1_n_0\,
       D => s00_axi_wdata(10),
-      Q => \^traffic\(10),
+      Q => \^slv_reg5_reg[16]_0\(10),
       R => SR(0)
     );
 \slv_reg5_reg[11]\: unisim.vcomponents.FDRE
@@ -6538,7 +6538,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[11]_i_1_n_0\,
       D => s00_axi_wdata(11),
-      Q => \^traffic\(11),
+      Q => \^slv_reg5_reg[16]_0\(11),
       R => SR(0)
     );
 \slv_reg5_reg[12]\: unisim.vcomponents.FDRE
@@ -6576,15 +6576,15 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \slv_reg5_reg[16]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg5[23]_i_1_n_0\,
+      CE => \slv_reg5[16]_i_1_n_0\,
       D => s00_axi_wdata(16),
-      Q => slv_reg5(16),
+      Q => \^slv_reg5_reg[16]_0\(12),
       R => SR(0)
     );
 \slv_reg5_reg[17]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg5[23]_i_1_n_0\,
+      CE => \slv_reg5[16]_i_1_n_0\,
       D => s00_axi_wdata(17),
       Q => slv_reg5(17),
       R => SR(0)
@@ -6592,7 +6592,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \slv_reg5_reg[18]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg5[23]_i_1_n_0\,
+      CE => \slv_reg5[16]_i_1_n_0\,
       D => s00_axi_wdata(18),
       Q => slv_reg5(18),
       R => SR(0)
@@ -6600,7 +6600,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \slv_reg5_reg[19]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg5[23]_i_1_n_0\,
+      CE => \slv_reg5[16]_i_1_n_0\,
       D => s00_axi_wdata(19),
       Q => slv_reg5(19),
       R => SR(0)
@@ -6610,13 +6610,13 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(1),
-      Q => \^traffic\(1),
+      Q => \^slv_reg5_reg[16]_0\(1),
       R => SR(0)
     );
 \slv_reg5_reg[20]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg5[23]_i_1_n_0\,
+      CE => \slv_reg5[16]_i_1_n_0\,
       D => s00_axi_wdata(20),
       Q => slv_reg5(20),
       R => SR(0)
@@ -6624,7 +6624,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \slv_reg5_reg[21]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg5[23]_i_1_n_0\,
+      CE => \slv_reg5[16]_i_1_n_0\,
       D => s00_axi_wdata(21),
       Q => slv_reg5(21),
       R => SR(0)
@@ -6632,7 +6632,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \slv_reg5_reg[22]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg5[23]_i_1_n_0\,
+      CE => \slv_reg5[16]_i_1_n_0\,
       D => s00_axi_wdata(22),
       Q => slv_reg5(22),
       R => SR(0)
@@ -6640,7 +6640,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \slv_reg5_reg[23]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg5[23]_i_1_n_0\,
+      CE => \slv_reg5[16]_i_1_n_0\,
       D => s00_axi_wdata(23),
       Q => slv_reg5(23),
       R => SR(0)
@@ -6698,7 +6698,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(2),
-      Q => \^traffic\(2),
+      Q => \^slv_reg5_reg[16]_0\(2),
       R => SR(0)
     );
 \slv_reg5_reg[30]\: unisim.vcomponents.FDRE
@@ -6722,7 +6722,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(3),
-      Q => \^traffic\(3),
+      Q => \^slv_reg5_reg[16]_0\(3),
       R => SR(0)
     );
 \slv_reg5_reg[4]\: unisim.vcomponents.FDRE
@@ -6730,7 +6730,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(4),
-      Q => \^traffic\(4),
+      Q => \^slv_reg5_reg[16]_0\(4),
       R => SR(0)
     );
 \slv_reg5_reg[5]\: unisim.vcomponents.FDRE
@@ -6738,7 +6738,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(5),
-      Q => \^traffic\(5),
+      Q => \^slv_reg5_reg[16]_0\(5),
       R => SR(0)
     );
 \slv_reg5_reg[6]\: unisim.vcomponents.FDRE
@@ -6746,7 +6746,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(6),
-      Q => \^traffic\(6),
+      Q => \^slv_reg5_reg[16]_0\(6),
       R => SR(0)
     );
 \slv_reg5_reg[7]\: unisim.vcomponents.FDRE
@@ -6754,7 +6754,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(7),
-      Q => \^traffic\(7),
+      Q => \^slv_reg5_reg[16]_0\(7),
       R => SR(0)
     );
 \slv_reg5_reg[8]\: unisim.vcomponents.FDRE
@@ -6762,7 +6762,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[11]_i_1_n_0\,
       D => s00_axi_wdata(8),
-      Q => \^traffic\(8),
+      Q => \^slv_reg5_reg[16]_0\(8),
       R => SR(0)
     );
 \slv_reg5_reg[9]\: unisim.vcomponents.FDRE
@@ -6770,7 +6770,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[11]_i_1_n_0\,
       D => s00_axi_wdata(9),
-      Q => \^traffic\(9),
+      Q => \^slv_reg5_reg[16]_0\(9),
       R => SR(0)
     );
 \slv_reg6_reg[0]\: unisim.vcomponents.FDRE
@@ -7817,11 +7817,11 @@ entity intellight_intellight_0_0_intellight_v1_0 is
     S_AXI_AWREADY : out STD_LOGIC;
     S_AXI_WREADY : out STD_LOGIC;
     Q : out STD_LOGIC_VECTOR ( 22 downto 0 );
+    \slv_reg5_reg[16]\ : out STD_LOGIC_VECTOR ( 12 downto 0 );
     \slv_reg1_reg[31]\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
     R0 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     R1 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     R2 : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    traffic : out STD_LOGIC_VECTOR ( 11 downto 0 );
     S_AXI_ARREADY : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_rvalid : out STD_LOGIC;
@@ -7930,7 +7930,7 @@ intellight_v1_0_S00_AXI_inst: entity work.intellight_intellight_0_0_intellight_v
       s00_axi_wstrb(3 downto 0) => s00_axi_wstrb(3 downto 0),
       s00_axi_wvalid => s00_axi_wvalid,
       \slv_reg1_reg[31]_0\(31 downto 0) => \slv_reg1_reg[31]\(31 downto 0),
-      traffic(11 downto 0) => traffic(11 downto 0)
+      \slv_reg5_reg[16]_0\(12 downto 0) => \slv_reg5_reg[16]\(12 downto 0)
     );
 \slv_reg0[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -7948,6 +7948,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity intellight_intellight_0_0 is
   port (
     start : out STD_LOGIC;
+    active : out STD_LOGIC;
     alpha : out STD_LOGIC_VECTOR ( 2 downto 0 );
     gamma : out STD_LOGIC_VECTOR ( 2 downto 0 );
     seed : out STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -7998,7 +7999,7 @@ architecture STRUCTURE of intellight_intellight_0_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of s00_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of s00_axi_aclk : signal is "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s00_axi_aclk : signal is "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s00_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 S00_AXI_RST RST";
   attribute X_INTERFACE_PARAMETER of s00_axi_aresetn : signal is "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s00_axi_arready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY";
@@ -8008,7 +8009,7 @@ architecture STRUCTURE of intellight_intellight_0_0 is
   attribute X_INTERFACE_INFO of s00_axi_bready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BREADY";
   attribute X_INTERFACE_INFO of s00_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BVALID";
   attribute X_INTERFACE_INFO of s00_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of s00_axi_rready : signal is "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 16, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 125000000, ID_WIDTH 0, ADDR_WIDTH 6, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s00_axi_rready : signal is "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 16, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 150000000, ID_WIDTH 0, ADDR_WIDTH 6, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s00_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RVALID";
   attribute X_INTERFACE_INFO of s00_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WREADY";
   attribute X_INTERFACE_INFO of s00_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WVALID";
@@ -8062,6 +8063,7 @@ inst: entity work.intellight_intellight_0_0_intellight_v1_0
       s00_axi_wvalid => s00_axi_wvalid,
       \slv_reg1_reg[31]\(31 downto 16) => max_episode(15 downto 0),
       \slv_reg1_reg[31]\(15 downto 0) => max_step(15 downto 0),
-      traffic(11 downto 0) => traffic(11 downto 0)
+      \slv_reg5_reg[16]\(12) => active,
+      \slv_reg5_reg[16]\(11 downto 0) => traffic(11 downto 0)
     );
 end STRUCTURE;

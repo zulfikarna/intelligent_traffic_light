@@ -58,6 +58,7 @@ module simulate_MII_0_2 (
   clk,
   rst,
   S,
+  wen,
   RD_ADDR,
   WR_ADDR,
   A,
@@ -74,6 +75,7 @@ input wire clk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
 input wire rst;
 input wire [11 : 0] S;
+input wire wen;
 output wire [31 : 0] RD_ADDR;
 output wire [31 : 0] WR_ADDR;
 input wire [1 : 0] A;
@@ -86,6 +88,7 @@ output wire [3 : 0] wen3;
     .clk(clk),
     .rst(rst),
     .S(S),
+    .wen(wen),
     .RD_ADDR(RD_ADDR),
     .WR_ADDR(WR_ADDR),
     .A(A),

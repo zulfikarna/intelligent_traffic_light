@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Fri Jul 29 14:36:52 2022
+//Date        : Tue Aug 16 12:58:34 2022
 //Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 //Command     : generate_target simulate.bd
 //Design      : simulate
@@ -223,7 +223,12 @@ endmodule
 (* CORE_GENERATION_INFO = "simulate,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=simulate,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=19,numReposBlks=17,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=6,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "simulate.hwdef" *) 
 module simulate
    (A,
+    Amax,
+    Amax_reg0,
+    Amin,
+    Amin_reg0,
     Arand,
+    Asel,
     D0,
     D1,
     D2,
@@ -233,7 +238,10 @@ module simulate
     R0,
     R1,
     R2,
+    R_reg0,
+    Rtemp,
     S,
+    active,
     alpha,
     clk,
     finish,
@@ -244,13 +252,23 @@ module simulate
     seed,
     start,
     traffic,
+    wen,
+    wen0,
+    wen1,
+    wen2,
+    wen3,
     wire_cs,
     wire_ec,
     wire_epsilon,
     wire_ns,
     wire_sc);
   output [1:0]A;
+  output [1:0]Amax;
+  output [1:0]Amax_reg0;
+  output [1:0]Amin;
+  output [1:0]Amin_reg0;
   output [1:0]Arand;
+  output Asel;
   output [31:0]D0;
   output [31:0]D1;
   output [31:0]D2;
@@ -260,7 +278,10 @@ module simulate
   input [31:0]R0;
   input [31:0]R1;
   input [31:0]R2;
+  output [31:0]R_reg0;
+  output [31:0]Rtemp;
   output [11:0]S;
+  input active;
   input [2:0]alpha;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_RESET rst, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk;
   output finish;
@@ -271,10 +292,15 @@ module simulate
   input [15:0]seed;
   input start;
   input [11:0]traffic;
-  output [3:0]wire_cs;
+  output wen;
+  output [3:0]wen0;
+  output [3:0]wen1;
+  output [3:0]wen2;
+  output [3:0]wen3;
+  output [4:0]wire_cs;
   output [15:0]wire_ec;
   output [15:0]wire_epsilon;
-  output [3:0]wire_ns;
+  output [4:0]wire_ns;
   output [15:0]wire_sc;
 
   wire [31:0]Action_RAM_D0;
@@ -285,10 +311,11 @@ module simulate
   wire CU_0_Asel;
   wire [11:0]CU_0_S0;
   wire CU_0_finish;
-  wire [3:0]CU_0_wire_cs;
+  wire CU_0_wen;
+  wire [4:0]CU_0_wire_cs;
   wire [15:0]CU_0_wire_ec;
   wire [15:0]CU_0_wire_epsilon;
-  wire [3:0]CU_0_wire_ns;
+  wire [4:0]CU_0_wire_ns;
   wire [15:0]CU_0_wire_sc;
   wire [31:0]MII_0_READ_ADDR;
   wire [31:0]MII_0_WRITE_ADDR;
@@ -303,8 +330,13 @@ module simulate
   wire [31:0]R0_1;
   wire [31:0]R1_1;
   wire [31:0]R2_1;
+  wire [1:0]RD_0_Amax_reg0;
+  wire [1:0]RD_0_Amin_reg0;
   wire [31:0]RD_0_R;
+  wire [31:0]RD_0_R_reg0;
+  wire [31:0]RD_0_Rtemp;
   wire [11:0]SD_0_S;
+  wire active_1;
   wire [2:0]alpha_1;
   wire clka_0_1;
   wire [2:0]gamma_1;
@@ -316,7 +348,12 @@ module simulate
   wire [11:0]traffic_0_1;
 
   assign A[1:0] = PG_0_A;
+  assign Amax[1:0] = PG_0_Amax;
+  assign Amax_reg0[1:0] = RD_0_Amax_reg0;
+  assign Amin[1:0] = PG_0_Amin;
+  assign Amin_reg0[1:0] = RD_0_Amin_reg0;
   assign Arand[1:0] = CU_0_Arand;
+  assign Asel = CU_0_Asel;
   assign D0[31:0] = Action_RAM_D0;
   assign D1[31:0] = Action_RAM_D1;
   assign D2[31:0] = Action_RAM_D2;
@@ -326,7 +363,10 @@ module simulate
   assign R0_1 = R0[31:0];
   assign R1_1 = R1[31:0];
   assign R2_1 = R2[31:0];
+  assign R_reg0[31:0] = RD_0_R_reg0;
+  assign Rtemp[31:0] = RD_0_Rtemp;
   assign S[11:0] = SD_0_S;
+  assign active_1 = active;
   assign alpha_1 = alpha[2:0];
   assign clka_0_1 = clk;
   assign finish = CU_0_finish;
@@ -337,10 +377,15 @@ module simulate
   assign seed_16bit_1 = seed[15:0];
   assign start_1 = start;
   assign traffic_0_1 = traffic[11:0];
-  assign wire_cs[3:0] = CU_0_wire_cs;
+  assign wen = CU_0_wen;
+  assign wen0[3:0] = MII_0_wen0;
+  assign wen1[3:0] = MII_0_wen1;
+  assign wen2[3:0] = MII_0_wen2;
+  assign wen3[3:0] = MII_0_wen3;
+  assign wire_cs[4:0] = CU_0_wire_cs;
   assign wire_ec[15:0] = CU_0_wire_ec;
   assign wire_epsilon[15:0] = CU_0_wire_epsilon;
-  assign wire_ns[3:0] = CU_0_wire_ns;
+  assign wire_ns[4:0] = CU_0_wire_ns;
   assign wire_sc[15:0] = CU_0_wire_sc;
   Action_RAM_imp_7YDQNW Action_RAM
        (.D0(Action_RAM_D0),
@@ -360,6 +405,7 @@ module simulate
        (.Arand(CU_0_Arand),
         .Asel(CU_0_Asel),
         .S0(CU_0_S0),
+        .active(active_1),
         .clk(clka_0_1),
         .finish(CU_0_finish),
         .max_episode(max_episode_1),
@@ -367,6 +413,7 @@ module simulate
         .rst(rsta_0_1),
         .seed(seed_16bit_1),
         .start(start_1),
+        .wen(CU_0_wen),
         .wire_cs(CU_0_wire_cs),
         .wire_ec(CU_0_wire_ec),
         .wire_epsilon(CU_0_wire_epsilon),
@@ -379,6 +426,7 @@ module simulate
         .WR_ADDR(MII_0_WRITE_ADDR),
         .clk(clka_0_1),
         .rst(rsta_0_1),
+        .wen(CU_0_wen),
         .wen0(MII_0_wen0),
         .wen1(MII_0_wen1),
         .wen2(MII_0_wen2),
@@ -390,6 +438,7 @@ module simulate
         .Arand(CU_0_Arand),
         .Asel(CU_0_Asel),
         .S(SD_0_S),
+        .active(active_1),
         .clk(clka_0_1),
         .rst(rsta_0_1));
   PL_RAM_imp_1KVKOLK PL_RAM
@@ -417,19 +466,23 @@ module simulate
   simulate_RD_0_2 RD_0
        (.A(PG_0_A),
         .Amax(PG_0_Amax),
+        .Amax_reg0(RD_0_Amax_reg0),
         .Amin(PG_0_Amin),
+        .Amin_reg0(RD_0_Amin_reg0),
         .R(RD_0_R),
         .R0(R0_1),
         .R1(R1_1),
         .R2(R2_1),
+        .R_reg0(RD_0_R_reg0),
+        .Rtemp(RD_0_Rtemp),
         .clk(clka_0_1),
         .rst(rsta_0_1));
   simulate_SD_0_2 SD_0
        (.A(PG_0_A),
         .S(SD_0_S),
         .S0(CU_0_S0),
+        .active(active_1),
         .clk(clka_0_1),
-        .finish(CU_0_finish),
         .rst(rsta_0_1),
         .traffic(traffic_0_1));
 endmodule

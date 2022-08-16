@@ -63,23 +63,23 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_
 # IP: bd/intellight/ip/intellight_axi_intc_0_0/intellight_axi_intc_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_axi_intc_0_0 || ORIG_REF_NAME==intellight_axi_intc_0_0} -quiet] -quiet
 
-# IP: bd/intellight/ip/intellight_RD_0_0/intellight_RD_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_RD_0_0 || ORIG_REF_NAME==intellight_RD_0_0} -quiet] -quiet
-
-# IP: bd/intellight/ip/intellight_PG_0_0/intellight_PG_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_PG_0_0 || ORIG_REF_NAME==intellight_PG_0_0} -quiet] -quiet
-
-# IP: bd/intellight/ip/intellight_QA_0_0/intellight_QA_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_QA_0_0 || ORIG_REF_NAME==intellight_QA_0_0} -quiet] -quiet
-
 # IP: bd/intellight/ip/intellight_intellight_0_0/intellight_intellight_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_intellight_0_0 || ORIG_REF_NAME==intellight_intellight_0_0} -quiet] -quiet
+
+# IP: bd/intellight/ip/intellight_RD_0_0/intellight_RD_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_RD_0_0 || ORIG_REF_NAME==intellight_RD_0_0} -quiet] -quiet
 
 # IP: bd/intellight/ip/intellight_SD_0_0/intellight_SD_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_SD_0_0 || ORIG_REF_NAME==intellight_SD_0_0} -quiet] -quiet
 
+# IP: bd/intellight/ip/intellight_PG_0_0/intellight_PG_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_PG_0_0 || ORIG_REF_NAME==intellight_PG_0_0} -quiet] -quiet
+
 # IP: bd/intellight/ip/intellight_MII_0_0/intellight_MII_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_MII_0_0 || ORIG_REF_NAME==intellight_MII_0_0} -quiet] -quiet
+
+# IP: bd/intellight/ip/intellight_QA_0_0/intellight_QA_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_QA_0_0 || ORIG_REF_NAME==intellight_QA_0_0} -quiet] -quiet
 
 # IP: bd/intellight/ip/intellight_CU_0_0/intellight_CU_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_CU_0_0 || ORIG_REF_NAME==intellight_CU_0_0} -quiet] -quiet

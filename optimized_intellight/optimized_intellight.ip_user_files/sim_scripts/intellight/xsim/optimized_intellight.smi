@@ -10,9 +10,9 @@
 
 <MemInfoSimulation Version="1" Minor="1">
   <Processor Endianness="Little" InstPath="intellight/processing_system7_0">
-    <AddressSpace Name="intellight_processing_system7_0.intellight_PL_RAM_RAM0_16K_4_ADDR_SPACE" ECC="NONE" Begin="1073741824" End="1073758207">
+    <AddressSpace Name="intellight_processing_system7_0.intellight_PL_RAM_RAM0_16K_7_ADDR_SPACE" ECC="NONE" Begin="1073741824" End="1073758207">
       <BusBlock>
-        <BitLane MemType="PL_RAM_RAM0_16K_4_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="1073758207">
+        <BitLane MemType="PL_RAM_RAM0_16K_7_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="1073758207">
           <DataWidth MSB="31" LSB="0"/>
           <AddressRange Begin="0" End="4095"/>
           <Parity ON="false" NumBits="0"/>
@@ -20,9 +20,9 @@
         </BitLane>
       </BusBlock>
     </AddressSpace>
-    <AddressSpace Name="intellight_processing_system7_0.intellight_PL_RAM_RAM1_16K_4_ADDR_SPACE" ECC="NONE" Begin="1107296256" End="1107312639">
+    <AddressSpace Name="intellight_processing_system7_0.intellight_PL_RAM_RAM1_16K_7_ADDR_SPACE" ECC="NONE" Begin="1073758208" End="1073774591">
       <BusBlock>
-        <BitLane MemType="PL_RAM_RAM1_16K_4_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="1107312639">
+        <BitLane MemType="PL_RAM_RAM1_16K_7_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="1073774591">
           <DataWidth MSB="31" LSB="0"/>
           <AddressRange Begin="0" End="4095"/>
           <Parity ON="false" NumBits="0"/>
@@ -30,9 +30,9 @@
         </BitLane>
       </BusBlock>
     </AddressSpace>
-    <AddressSpace Name="intellight_processing_system7_0.intellight_PL_RAM_RAM2_16K_4_ADDR_SPACE" ECC="NONE" Begin="1140850688" End="1140867071">
+    <AddressSpace Name="intellight_processing_system7_0.intellight_PL_RAM_RAM2_16K_7_ADDR_SPACE" ECC="NONE" Begin="1073774592" End="1073790975">
       <BusBlock>
-        <BitLane MemType="PL_RAM_RAM2_16K_4_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="1140867071">
+        <BitLane MemType="PL_RAM_RAM2_16K_7_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="1073790975">
           <DataWidth MSB="31" LSB="0"/>
           <AddressRange Begin="0" End="4095"/>
           <Parity ON="false" NumBits="0"/>
@@ -40,9 +40,9 @@
         </BitLane>
       </BusBlock>
     </AddressSpace>
-    <AddressSpace Name="intellight_processing_system7_0.intellight_PL_RAM_RAM3_16K_4_ADDR_SPACE" ECC="NONE" Begin="1174405120" End="1174421503">
+    <AddressSpace Name="intellight_processing_system7_0.intellight_PL_RAM_RAM3_16K_7_ADDR_SPACE" ECC="NONE" Begin="1073790976" End="1073807359">
       <BusBlock>
-        <BitLane MemType="PL_RAM_RAM3_16K_4_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="1174421503">
+        <BitLane MemType="PL_RAM_RAM3_16K_7_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="1073807359">
           <DataWidth MSB="31" LSB="0"/>
           <AddressRange Begin="0" End="4095"/>
           <Parity ON="false" NumBits="0"/>

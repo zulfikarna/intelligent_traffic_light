@@ -4,5 +4,61 @@ Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto c1df7c706d
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-2063] Module <simulate_wrapper> not found while processing module instance <dut> [F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sim_1/new/simulate_tb.v:37]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 5 for port 'wire_ns' [F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sim_1/new/simulate_tb.v:75]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 5 for port 'wire_cs' [F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sim_1/new/simulate_tb.v:76]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'wire_cs' [F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/simulate/hdl/simulate_wrapper.v:171]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'wire_ns' [F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/simulate/hdl/simulate_wrapper.v:174]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.GND
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module simprims_ver.RAMB36E1(READ_WIDTH_A=9,READ_WID...
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.SRL16E_default
+Compiling module xil_defaultlib.simulate_Action_RAM0_2
+Compiling module xil_defaultlib.simulate_Action_RAM1_2
+Compiling module xil_defaultlib.simulate_Action_RAM2_2
+Compiling module xil_defaultlib.simulate_Action_RAM3_2
+Compiling module xil_defaultlib.Action_RAM_imp_7YDQNW
+Compiling module simprims_ver.CARRY4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.FDSE_default
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.simulate_CU_0_1_CU
+Compiling module xil_defaultlib.simulate_CU_0_1
+Compiling module xil_defaultlib.simulate_MII_0_2_wen_decoder
+Compiling module xil_defaultlib.simulate_MII_0_2_MII
+Compiling module xil_defaultlib.simulate_MII_0_2
+Compiling module xil_defaultlib.simulate_PG_0_2_PG
+Compiling module xil_defaultlib.simulate_PG_0_2
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module simprims_ver.RAMB36E1(READ_WIDTH_A=9,READ_WID...
+Compiling module xil_defaultlib.simulate_RAM0_2
+Compiling module xil_defaultlib.simulate_RAM1_2
+Compiling module xil_defaultlib.simulate_RAM2_2
+Compiling module xil_defaultlib.simulate_RAM3_2
+Compiling module simprims_ver.VCC
+Compiling module xil_defaultlib.simulate_const_1_5
+Compiling module xil_defaultlib.PL_RAM_imp_1KVKOLK
+Compiling module xil_defaultlib.simulate_QA_0_2_multiply
+Compiling module xil_defaultlib.simulate_QA_0_2_multiply_0
+Compiling module xil_defaultlib.simulate_QA_0_2_mux4to1_32bit
+Compiling module xil_defaultlib.simulate_QA_0_2_QA
+Compiling module xil_defaultlib.simulate_QA_0_2
+Compiling module xil_defaultlib.simulate_RD_0_2_RD
+Compiling module xil_defaultlib.simulate_RD_0_2
+Compiling module xil_defaultlib.simulate_SD_0_2_SD
+Compiling module xil_defaultlib.simulate_SD_0_2
+Compiling module xil_defaultlib.simulate
+Compiling module xil_defaultlib.simulate_wrapper
+Compiling module xil_defaultlib.simulate_tb
+Built simulation snapshot simulate_tb_time_synth

@@ -1,11 +1,11 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Fri Jul 22 01:56:31 2022
+// Date        : Mon Aug  8 01:52:42 2022
 // Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top simulate_RD_0_2 -prefix
-//               simulate_RD_0_2_ intellight_RD_0_0_stub.v
-// Design      : intellight_RD_0_0
+// Command     : write_verilog -force -mode synth_stub
+//               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/simulate/ip/simulate_RD_0_2/simulate_RD_0_2_stub.v
+// Design      : simulate_RD_0_2
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------
@@ -14,8 +14,13 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "RD,Vivado 2021.1" *)
-module simulate_RD_0_2(clk, rst, R0, R1, R2, Amax, Amin, A, R)
-/* synthesis syn_black_box black_box_pad_pin="clk,rst,R0[31:0],R1[31:0],R2[31:0],Amax[1:0],Amin[1:0],A[1:0],R[31:0]" */;
+module simulate_RD_0_2(Rtemp, R_reg0, Amax_reg0, Amin_reg0, clk, rst, R0, R1, 
+  R2, Amax, Amin, A, R)
+/* synthesis syn_black_box black_box_pad_pin="Rtemp[31:0],R_reg0[31:0],Amax_reg0[1:0],Amin_reg0[1:0],clk,rst,R0[31:0],R1[31:0],R2[31:0],Amax[1:0],Amin[1:0],A[1:0],R[31:0]" */;
+  output [31:0]Rtemp;
+  output [31:0]R_reg0;
+  output [1:0]Amax_reg0;
+  output [1:0]Amin_reg0;
   input clk;
   input rst;
   input [31:0]R0;

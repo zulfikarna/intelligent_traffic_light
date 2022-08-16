@@ -27,14 +27,14 @@ def insertion_sort(arr):
         sorted_arr[j+1] = key
     return sorted_arr
 
-def decide_interval(q_row, action):
+def decide_interval(q_row, action, intervals):
     """ Menentukan interval waktu hijau untuk setiap action """
     sorted = insertion_sort(q_row)
     print(q_row)
     print(sorted)
-    for i in range (len(q_row)):
-        if (q_row[int(action)]==sorted[i-1]):
-            duration = green_intervals[i-1]
+    for i in range (4):
+        if (q_row[int(action)]==sorted[i]):
+            duration = intervals[i]
     return duration
 
 def get_state(traffic):
@@ -117,8 +117,8 @@ def get_state(traffic):
 q_row = [random.random(), random.random(), random.random(), random.random()]
 action = 0
 while(1):
-    duration = decide_interval(q_row, action)
     action = next_action(action)
+    duration = decide_interval(q_row, action, green_intervals)
     print("Action : {}; Duration : {}".format(action, duration))
     q_row = [random.randint(-100,100), random.randint(-100,100), random.randint(-100,100), random.randint(-100,100)]
     print("")
