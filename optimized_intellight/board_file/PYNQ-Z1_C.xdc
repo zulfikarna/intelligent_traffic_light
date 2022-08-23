@@ -24,10 +24,10 @@
 
 ##LEDs
 
-set_property -dict { PACKAGE_PIN R14   IOSTANDARD LVCMOS33 } [get_ports start]
-set_property -dict { PACKAGE_PIN P14   IOSTANDARD LVCMOS33 } [get_ports active ]; #IO_L6P_T0_34 Sch=led[1]
-set_property -dict { PACKAGE_PIN N16   IOSTANDARD LVCMOS33 } [get_ports finish ]; #IO_L21N_T3_DQS_AD14N_35 Sch=led[2]
-set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { idle }]; #IO_L23P_T3_35 Sch=led[3]
+set_property -dict {PACKAGE_PIN R14 IOSTANDARD LVCMOS33} [get_ports start]
+set_property -dict {PACKAGE_PIN P14 IOSTANDARD LVCMOS33} [get_ports active]
+set_property -dict {PACKAGE_PIN N16 IOSTANDARD LVCMOS33} [get_ports finish]
+set_property -dict {PACKAGE_PIN M14 IOSTANDARD LVCMOS33} [get_ports idle]
 #set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { led[3] }]; #IO_L23P_T3_35 Sch=led[3]
 
 ##Buttons
@@ -196,5 +196,16 @@ set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { idle }
 
 
 
+
+
+
+
+
+
+create_pblock pblock_axi_smc
+add_cells_to_pblock [get_pblocks pblock_axi_smc] [get_cells -quiet [list intellight_v2_i/axi_smc]]
+resize_pblock [get_pblocks pblock_axi_smc] -add {SLICE_X26Y90:SLICE_X33Y108}
+resize_pblock [get_pblocks pblock_axi_smc] -add {RAMB18_X2Y36:RAMB18_X2Y41}
+resize_pblock [get_pblocks pblock_axi_smc] -add {RAMB36_X2Y18:RAMB36_X2Y20}
 
 

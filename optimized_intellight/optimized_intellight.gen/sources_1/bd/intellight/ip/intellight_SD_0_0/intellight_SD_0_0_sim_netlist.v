@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Tue Aug 16 13:53:22 2022
+// Date        : Mon Aug 22 17:37:08 2022
 // Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_SD_0_0/intellight_SD_0_0_sim_netlist.v
@@ -18,7 +18,7 @@
 module intellight_SD_0_0
    (clk,
     rst,
-    active,
+    learning,
     A,
     S0,
     traffic,
@@ -33,7 +33,7 @@ module intellight_SD_0_0
     L3);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input rst;
-  input active;
+  input learning;
   input [1:0]A;
   input [11:0]S0;
   input [11:0]traffic;
@@ -53,8 +53,8 @@ module intellight_SD_0_0
   wire [2:0]L2;
   wire [2:0]L3;
   wire [11:0]S;
-  wire active;
   wire clk;
+  wire learning;
   wire [2:0]level0;
   wire [2:0]level1;
   wire [2:0]level2;
@@ -69,8 +69,8 @@ module intellight_SD_0_0
         .\L3_reg[2]_0 (L3),
         .Q(L1),
         .S(S),
-        .active(active),
         .clk(clk),
+        .learning(learning),
         .level0(level0),
         .level1(level1),
         .level2(level2),
@@ -93,8 +93,8 @@ module intellight_SD_0_0_SD
     rst,
     clk,
     A,
-    traffic,
-    active);
+    learning,
+    traffic);
   output [2:0]Q;
   output [2:0]level1;
   output [2:0]\L2_reg[2]_0 ;
@@ -107,8 +107,8 @@ module intellight_SD_0_0_SD
   input rst;
   input clk;
   input [1:0]A;
+  input learning;
   input [11:0]traffic;
-  input active;
 
   wire [1:0]A;
   wire [2:0]\L0_reg[2]_0 ;
@@ -116,8 +116,8 @@ module intellight_SD_0_0_SD
   wire [2:0]\L3_reg[2]_0 ;
   wire [2:0]Q;
   wire [11:0]S;
-  wire active;
   wire clk;
+  wire learning;
   wire [2:0]level0;
   wire [2:0]level1;
   wire [2:0]level2;
@@ -201,213 +201,213 @@ module intellight_SD_0_0_SD
   LUT3 #(
     .INIT(8'hB8)) 
     \S[0]_INST_0 
-       (.I0(traffic[0]),
-        .I1(active),
-        .I2(\L0_reg[2]_0 [0]),
+       (.I0(\L0_reg[2]_0 [0]),
+        .I1(learning),
+        .I2(traffic[0]),
         .O(S[0]));
   (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \S[10]_INST_0 
-       (.I0(traffic[10]),
-        .I1(active),
-        .I2(\L3_reg[2]_0 [1]),
+       (.I0(\L3_reg[2]_0 [1]),
+        .I1(learning),
+        .I2(traffic[10]),
         .O(S[10]));
   (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \S[11]_INST_0 
-       (.I0(traffic[11]),
-        .I1(active),
-        .I2(\L3_reg[2]_0 [2]),
+       (.I0(\L3_reg[2]_0 [2]),
+        .I1(learning),
+        .I2(traffic[11]),
         .O(S[11]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \S[1]_INST_0 
-       (.I0(traffic[1]),
-        .I1(active),
-        .I2(\L0_reg[2]_0 [1]),
+       (.I0(\L0_reg[2]_0 [1]),
+        .I1(learning),
+        .I2(traffic[1]),
         .O(S[1]));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \S[2]_INST_0 
-       (.I0(traffic[2]),
-        .I1(active),
-        .I2(\L0_reg[2]_0 [2]),
+       (.I0(\L0_reg[2]_0 [2]),
+        .I1(learning),
+        .I2(traffic[2]),
         .O(S[2]));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \S[3]_INST_0 
-       (.I0(traffic[3]),
-        .I1(active),
-        .I2(Q[0]),
+       (.I0(Q[0]),
+        .I1(learning),
+        .I2(traffic[3]),
         .O(S[3]));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \S[4]_INST_0 
-       (.I0(traffic[4]),
-        .I1(active),
-        .I2(Q[1]),
+       (.I0(Q[1]),
+        .I1(learning),
+        .I2(traffic[4]),
         .O(S[4]));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \S[5]_INST_0 
-       (.I0(traffic[5]),
-        .I1(active),
-        .I2(Q[2]),
+       (.I0(Q[2]),
+        .I1(learning),
+        .I2(traffic[5]),
         .O(S[5]));
   (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \S[6]_INST_0 
-       (.I0(traffic[6]),
-        .I1(active),
-        .I2(\L2_reg[2]_0 [0]),
+       (.I0(\L2_reg[2]_0 [0]),
+        .I1(learning),
+        .I2(traffic[6]),
         .O(S[6]));
   (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \S[7]_INST_0 
-       (.I0(traffic[7]),
-        .I1(active),
-        .I2(\L2_reg[2]_0 [1]),
+       (.I0(\L2_reg[2]_0 [1]),
+        .I1(learning),
+        .I2(traffic[7]),
         .O(S[7]));
   (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \S[8]_INST_0 
-       (.I0(traffic[8]),
-        .I1(active),
-        .I2(\L2_reg[2]_0 [2]),
+       (.I0(\L2_reg[2]_0 [2]),
+        .I1(learning),
+        .I2(traffic[8]),
         .O(S[8]));
   (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \S[9]_INST_0 
-       (.I0(traffic[9]),
-        .I1(active),
-        .I2(\L3_reg[2]_0 [0]),
+       (.I0(\L3_reg[2]_0 [0]),
+        .I1(learning),
+        .I2(traffic[9]),
         .O(S[9]));
-  LUT5 #(
-    .INIT(32'hF111EEEE)) 
-    \level0[0]_INST_0 
-       (.I0(A[0]),
-        .I1(A[1]),
-        .I2(\L0_reg[2]_0 [1]),
-        .I3(\L0_reg[2]_0 [2]),
-        .I4(\L0_reg[2]_0 [0]),
-        .O(level0[0]));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
-    .INIT(32'hFEF01EF0)) 
+    .INIT(32'hDDDF5550)) 
+    \level0[0]_INST_0 
+       (.I0(\L0_reg[2]_0 [0]),
+        .I1(\L0_reg[2]_0 [2]),
+        .I2(A[0]),
+        .I3(A[1]),
+        .I4(\L0_reg[2]_0 [1]),
+        .O(level0[0]));
+  LUT5 #(
+    .INIT(32'hEEEF6660)) 
     \level0[1]_INST_0 
-       (.I0(A[0]),
-        .I1(A[1]),
-        .I2(\L0_reg[2]_0 [1]),
-        .I3(\L0_reg[2]_0 [0]),
+       (.I0(\L0_reg[2]_0 [1]),
+        .I1(\L0_reg[2]_0 [0]),
+        .I2(A[0]),
+        .I3(A[1]),
         .I4(\L0_reg[2]_0 [2]),
         .O(level0[1]));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
-    .INIT(32'hEEEEF111)) 
+    .INIT(32'hEAEAEA00)) 
     \level0[2]_INST_0 
-       (.I0(A[0]),
-        .I1(A[1]),
+       (.I0(\L0_reg[2]_0 [2]),
+        .I1(\L0_reg[2]_0 [0]),
         .I2(\L0_reg[2]_0 [1]),
-        .I3(\L0_reg[2]_0 [0]),
-        .I4(\L0_reg[2]_0 [2]),
+        .I3(A[1]),
+        .I4(A[0]),
         .O(level0[2]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'hF222DDDD)) 
+    .INIT(32'hDFDD5055)) 
     \level1[0]_INST_0 
-       (.I0(A[0]),
-        .I1(A[1]),
-        .I2(Q[1]),
-        .I3(Q[2]),
-        .I4(Q[0]),
+       (.I0(Q[0]),
+        .I1(Q[2]),
+        .I2(A[1]),
+        .I3(A[0]),
+        .I4(Q[1]),
         .O(level1[0]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'hFDF02DF0)) 
+    .INIT(32'hEFEE6066)) 
     \level1[1]_INST_0 
-       (.I0(A[0]),
-        .I1(A[1]),
-        .I2(Q[1]),
-        .I3(Q[0]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(A[1]),
+        .I3(A[0]),
         .I4(Q[2]),
         .O(level1[1]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'hDDDDF222)) 
+    .INIT(32'hEAEA00EA)) 
     \level1[2]_INST_0 
-       (.I0(A[0]),
-        .I1(A[1]),
+       (.I0(Q[2]),
+        .I1(Q[0]),
         .I2(Q[1]),
-        .I3(Q[0]),
-        .I4(Q[2]),
+        .I3(A[0]),
+        .I4(A[1]),
         .O(level1[2]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
-    .INIT(32'hF222DDDD)) 
+    .INIT(32'hDFDD5055)) 
     \level2[0]_INST_0 
-       (.I0(A[1]),
-        .I1(A[0]),
-        .I2(\L2_reg[2]_0 [1]),
-        .I3(\L2_reg[2]_0 [2]),
-        .I4(\L2_reg[2]_0 [0]),
+       (.I0(\L2_reg[2]_0 [0]),
+        .I1(\L2_reg[2]_0 [2]),
+        .I2(A[0]),
+        .I3(A[1]),
+        .I4(\L2_reg[2]_0 [1]),
         .O(level2[0]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
-    .INIT(32'hFDF02DF0)) 
+    .INIT(32'hEFEE6066)) 
     \level2[1]_INST_0 
-       (.I0(A[1]),
-        .I1(A[0]),
-        .I2(\L2_reg[2]_0 [1]),
-        .I3(\L2_reg[2]_0 [0]),
+       (.I0(\L2_reg[2]_0 [1]),
+        .I1(\L2_reg[2]_0 [0]),
+        .I2(A[0]),
+        .I3(A[1]),
         .I4(\L2_reg[2]_0 [2]),
         .O(level2[1]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
-    .INIT(32'hDDDDF222)) 
+    .INIT(32'hEAEA00EA)) 
     \level2[2]_INST_0 
-       (.I0(A[1]),
-        .I1(A[0]),
+       (.I0(\L2_reg[2]_0 [2]),
+        .I1(\L2_reg[2]_0 [0]),
         .I2(\L2_reg[2]_0 [1]),
-        .I3(\L2_reg[2]_0 [0]),
-        .I4(\L2_reg[2]_0 [2]),
+        .I3(A[1]),
+        .I4(A[0]),
         .O(level2[2]));
-  LUT5 #(
-    .INIT(32'hF8887777)) 
-    \level3[0]_INST_0 
-       (.I0(A[0]),
-        .I1(A[1]),
-        .I2(\L3_reg[2]_0 [1]),
-        .I3(\L3_reg[2]_0 [2]),
-        .I4(\L3_reg[2]_0 [0]),
-        .O(level3[0]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
-    .INIT(32'hF7F087F0)) 
+    .INIT(32'hFDDD0555)) 
+    \level3[0]_INST_0 
+       (.I0(\L3_reg[2]_0 [0]),
+        .I1(\L3_reg[2]_0 [2]),
+        .I2(A[0]),
+        .I3(A[1]),
+        .I4(\L3_reg[2]_0 [1]),
+        .O(level3[0]));
+  LUT5 #(
+    .INIT(32'hFEEE0666)) 
     \level3[1]_INST_0 
-       (.I0(A[0]),
-        .I1(A[1]),
-        .I2(\L3_reg[2]_0 [1]),
-        .I3(\L3_reg[2]_0 [0]),
+       (.I0(\L3_reg[2]_0 [1]),
+        .I1(\L3_reg[2]_0 [0]),
+        .I2(A[0]),
+        .I3(A[1]),
         .I4(\L3_reg[2]_0 [2]),
         .O(level3[1]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
-    .INIT(32'h7777F888)) 
+    .INIT(32'h00EAEAEA)) 
     \level3[2]_INST_0 
-       (.I0(A[0]),
-        .I1(A[1]),
+       (.I0(\L3_reg[2]_0 [2]),
+        .I1(\L3_reg[2]_0 [0]),
         .I2(\L3_reg[2]_0 [1]),
-        .I3(\L3_reg[2]_0 [0]),
-        .I4(\L3_reg[2]_0 [2]),
+        .I3(A[1]),
+        .I4(A[0]),
         .O(level3[2]));
 endmodule
 `ifndef GLBL

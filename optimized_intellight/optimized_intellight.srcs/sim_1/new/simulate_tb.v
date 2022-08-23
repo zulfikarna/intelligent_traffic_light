@@ -21,10 +21,10 @@ module simulate_tb();
     reg [15:0]seed;
     reg [31:0] R0, R1, R2;
     wire Asel;
-    wire [31:0] R, Qnew, Rtemp;
+    wire [31:0] R, Qnew;
     wire [11:0] S;
     wire [1:0] A, Amin, Amax;
-    wire [1:0] Arand, Amax_reg0, Amin_reg0;
+    wire [1:0] Arand;
     wire [31:0]D0;
     wire [31:0]D1;
     wire [31:0]D2;
@@ -38,6 +38,7 @@ module simulate_tb();
     wire [4:0] wire_ns;
     wire wen;
     wire [3:0] wen0, wen1, wen2, wen3;
+    wire en0, en1, en2, en3;
     
     simulate_wrapper dut(
         .clk(clk),
@@ -63,12 +64,9 @@ module simulate_tb();
         .Amin(Amin),
         .Amax(Amax),
         .Arand(Arand),
-        .Amax_reg0(Amax_reg0),
-        .Amin_reg0(Amin_reg0),
         .R(R),
         .S(S),
         .Qnew(Qnew),
-        .Rtemp(Rtemp),
         .wire_epsilon(wire_epsilon),
         .wire_ec(wire_ec),
         .wire_sc(wire_sc),
@@ -78,7 +76,11 @@ module simulate_tb();
         .wen0(wen0),
         .wen1(wen1),
         .wen2(wen2),
-        .wen3(wen3)
+        .wen3(wen3),
+        .en0(en0),
+        .en1(en1),
+        .en2(en2),
+        .en3(en3)
         );
         
     reg [7:0] counter;
@@ -95,19 +97,23 @@ module simulate_tb();
         start = 1'b0;
         alpha = 3'b101;
         gamma = 3'b010;
-        max_episode = 16'd200;
-        max_step = 16'd20;
+        max_episode = 16'd65535;
+        max_step = 16'd200;
         seed = 16'd10;
         R0 = 32'd0;
         R1 = 32'd50;
         R2 = 32'd100;
         traffic = 12'd0;
-        active = 1'b0;
         counter = 8'd0;
         #100;
         rst = 1'b0;
         #100;
         start = 1'b1;
+    end
+    
+    always @(posedge finish) begin 
+        #100;
+        start = 1'b0;
     end
     
     always @(posedge clk) begin 
@@ -123,16 +129,18 @@ module simulate_tb();
     end
     
     always @(posedge clk) begin
-        counter = counter + 1'b1;
         if (counter==8'd100) begin
             counter = 8'd0;
-            active = !active;
+        end else begin
+            counter = counter + 1'b1;
         end
     end
     
-    always @(posedge clk) begin
-        if (wire_ns==5'hD) begin
-            start = 1'b0;
+    always @(posedge finish, negedge finish) begin
+        if (rst|start) begin
+            active = 1'b0;
+        end else begin 
+            active = !active;
         end
     end
 

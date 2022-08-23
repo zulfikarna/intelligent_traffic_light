@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Tue Aug 16 13:25:26 2022
+// Date        : Thu Aug 18 07:31:50 2022
 // Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_intellight_0_0/intellight_intellight_0_0_stub.v
@@ -15,12 +15,12 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "intellight_v1_0,Vivado 2021.1" *)
 module intellight_intellight_0_0(start, active, alpha, gamma, seed, max_step, 
-  max_episode, R0, R1, R2, traffic, Q0, Q1, Q2, Q3, s00_axi_aclk, s00_axi_aresetn, s00_axi_awaddr, 
+  max_episode, R0, R1, R2, traffic, Q0, Q1, Q2, Q3, rd_addr, s00_axi_aclk, s00_axi_aresetn, s00_axi_awaddr, 
   s00_axi_awprot, s00_axi_awvalid, s00_axi_awready, s00_axi_wdata, s00_axi_wstrb, 
   s00_axi_wvalid, s00_axi_wready, s00_axi_bresp, s00_axi_bvalid, s00_axi_bready, 
   s00_axi_araddr, s00_axi_arprot, s00_axi_arvalid, s00_axi_arready, s00_axi_rdata, 
   s00_axi_rresp, s00_axi_rvalid, s00_axi_rready)
-/* synthesis syn_black_box black_box_pad_pin="start,active,alpha[2:0],gamma[2:0],seed[15:0],max_step[15:0],max_episode[15:0],R0[31:0],R1[31:0],R2[31:0],traffic[11:0],Q0[31:0],Q1[31:0],Q2[31:0],Q3[31:0],s00_axi_aclk,s00_axi_aresetn,s00_axi_awaddr[5:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[5:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready" */;
+/* synthesis syn_black_box black_box_pad_pin="start,active,alpha[2:0],gamma[2:0],seed[15:0],max_step[15:0],max_episode[15:0],R0[31:0],R1[31:0],R2[31:0],traffic[11:0],Q0[31:0],Q1[31:0],Q2[31:0],Q3[31:0],rd_addr[31:0],s00_axi_aclk,s00_axi_aresetn,s00_axi_awaddr[5:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[5:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready" */;
   output start;
   output active;
   output [2:0]alpha;
@@ -36,6 +36,7 @@ module intellight_intellight_0_0(start, active, alpha, gamma, seed, max_step,
   input [31:0]Q1;
   input [31:0]Q2;
   input [31:0]Q3;
+  input [31:0]rd_addr;
   input s00_axi_aclk;
   input s00_axi_aresetn;
   input [5:0]s00_axi_awaddr;

@@ -88,6 +88,7 @@ module QA(
         Qsel_reg3 <= Qsel_reg2;
     end              
     
+    // Bellman Equation : Qnew = Qsel + a(R + g*Qmax' - Qsel)
     wire [31:0] Gm;
     reg [31:0] Gm_reg0;
     multiply mul0(.in0(Qmax), .c(gamma), .out0(Gm));

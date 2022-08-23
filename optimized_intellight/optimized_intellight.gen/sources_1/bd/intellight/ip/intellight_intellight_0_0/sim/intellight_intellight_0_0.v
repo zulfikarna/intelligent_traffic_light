@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:intellight:1.0
-// IP Revision: 4
+// IP Revision: 7
 
 `timescale 1ns/1ps
 
@@ -69,6 +69,7 @@ module intellight_intellight_0_0 (
   Q1,
   Q2,
   Q3,
+  rd_addr,
   s00_axi_aclk,
   s00_axi_aresetn,
   s00_axi_awaddr,
@@ -107,6 +108,7 @@ input wire [31 : 0] Q0;
 input wire [31 : 0] Q1;
 input wire [31 : 0] Q2;
 input wire [31 : 0] Q3;
+input wire [31 : 0] rd_addr;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *)
 input wire s00_axi_aclk;
@@ -173,6 +175,7 @@ input wire s00_axi_rready;
     .Q1(Q1),
     .Q2(Q2),
     .Q3(Q3),
+    .rd_addr(rd_addr),
     .s00_axi_aclk(s00_axi_aclk),
     .s00_axi_aresetn(s00_axi_aresetn),
     .s00_axi_awaddr(s00_axi_awaddr),

@@ -128,7 +128,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:73ff8264</spirit:value>
+            <spirit:value>9:58816c0e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -144,11 +144,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Aug 10 21:01:53 UTC 2022</spirit:value>
+            <spirit:value>Mon Aug 22 05:52:19 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:73ff8264</spirit:value>
+            <spirit:value>9:58816c0e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -223,7 +223,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>active</spirit:name>
+        <spirit:name>learning</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>

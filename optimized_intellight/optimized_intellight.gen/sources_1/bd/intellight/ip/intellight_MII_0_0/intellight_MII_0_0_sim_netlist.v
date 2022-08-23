@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Thu Aug 11 14:20:37 2022
+// Date        : Thu Aug 18 06:09:34 2022
 // Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_MII_0_0/intellight_MII_0_0_sim_netlist.v
@@ -26,7 +26,11 @@ module intellight_MII_0_0
     wen0,
     wen1,
     wen2,
-    wen3);
+    wen3,
+    en0,
+    en1,
+    en2,
+    en3);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input rst;
   input [11:0]S;
@@ -38,17 +42,21 @@ module intellight_MII_0_0
   output [3:0]wen1;
   output [3:0]wen2;
   output [3:0]wen3;
+  output en0;
+  output en1;
+  output en2;
+  output en3;
 
   wire \<const0> ;
   wire [1:0]A;
   wire [11:0]S;
   wire [13:2]\^WR_ADDR ;
   wire clk;
+  wire en0;
+  wire en1;
+  wire en2;
+  wire en3;
   wire wen;
-  wire [0:0]\^wen0 ;
-  wire [3:3]\^wen1 ;
-  wire [0:0]\^wen2 ;
-  wire [3:3]\^wen3 ;
 
   assign RD_ADDR[31] = \<const0> ;
   assign RD_ADDR[30] = \<const0> ;
@@ -92,22 +100,22 @@ module intellight_MII_0_0
   assign WR_ADDR[13:2] = \^WR_ADDR [13:2];
   assign WR_ADDR[1] = \<const0> ;
   assign WR_ADDR[0] = \<const0> ;
-  assign wen0[3] = \^wen0 [0];
-  assign wen0[2] = \^wen0 [0];
-  assign wen0[1] = \^wen0 [0];
-  assign wen0[0] = \^wen0 [0];
-  assign wen1[3] = \^wen1 [3];
-  assign wen1[2] = \^wen1 [3];
-  assign wen1[1] = \^wen1 [3];
-  assign wen1[0] = \^wen1 [3];
-  assign wen2[3] = \^wen2 [0];
-  assign wen2[2] = \^wen2 [0];
-  assign wen2[1] = \^wen2 [0];
-  assign wen2[0] = \^wen2 [0];
-  assign wen3[3] = \^wen3 [3];
-  assign wen3[2] = \^wen3 [3];
-  assign wen3[1] = \^wen3 [3];
-  assign wen3[0] = \^wen3 [3];
+  assign wen0[3] = en0;
+  assign wen0[2] = en0;
+  assign wen0[1] = en0;
+  assign wen0[0] = en0;
+  assign wen1[3] = en1;
+  assign wen1[2] = en1;
+  assign wen1[1] = en1;
+  assign wen1[0] = en1;
+  assign wen2[3] = en2;
+  assign wen2[2] = en2;
+  assign wen2[1] = en2;
+  assign wen2[0] = en2;
+  assign wen3[3] = en3;
+  assign wen3[2] = en3;
+  assign wen3[1] = en3;
+  assign wen3[0] = en3;
   GND GND
        (.G(\<const0> ));
   intellight_MII_0_0_MII inst
@@ -115,29 +123,29 @@ module intellight_MII_0_0
         .S(S),
         .WR_ADDR(\^WR_ADDR ),
         .clk(clk),
-        .wen(wen),
-        .wen0(\^wen0 ),
-        .wen1(\^wen1 ),
-        .wen2(\^wen2 ),
-        .wen3(\^wen3 ));
+        .en0(en0),
+        .en1(en1),
+        .en2(en2),
+        .en3(en3),
+        .wen(wen));
 endmodule
 
 (* ORIG_REF_NAME = "MII" *) 
 module intellight_MII_0_0_MII
    (WR_ADDR,
-    wen2,
-    wen0,
-    wen1,
-    wen3,
+    en0,
+    en1,
+    en2,
+    en3,
     S,
     clk,
     A,
     wen);
   output [11:0]WR_ADDR;
-  output [0:0]wen2;
-  output [0:0]wen0;
-  output [0:0]wen1;
-  output [0:0]wen3;
+  output en0;
+  output en1;
+  output en2;
+  output en3;
   input [11:0]S;
   input clk;
   input [1:0]A;
@@ -146,9 +154,9 @@ module intellight_MII_0_0_MII
   wire [1:0]A;
   wire \A_reg0_reg_n_0_[0] ;
   wire \A_reg0_reg_n_0_[1] ;
-  wire \A_reg4_reg[0]_srl4_n_0 ;
-  wire \A_reg4_reg[1]_srl4_n_0 ;
-  wire [1:0]A_reg5;
+  wire \A_reg3_reg[0]_srl3_n_0 ;
+  wire \A_reg3_reg[1]_srl3_n_0 ;
+  wire [1:0]A_reg4;
   wire [11:0]S;
   wire \S_reg6_reg[0]_srl7_n_0 ;
   wire \S_reg6_reg[10]_srl7_n_0 ;
@@ -164,11 +172,15 @@ module intellight_MII_0_0_MII
   wire \S_reg6_reg[9]_srl7_n_0 ;
   wire [11:0]WR_ADDR;
   wire clk;
+  wire en0;
+  wire en1;
+  wire en2;
+  wire en3;
   wire wen;
-  wire [0:0]wen0;
-  wire [0:0]wen1;
-  wire [0:0]wen2;
-  wire [0:0]wen3;
+  wire \wen0[3]_i_1_n_0 ;
+  wire [0:0]wen1_temp;
+  wire \wen2[3]_i_1_n_0 ;
+  wire [0:0]wen3_temp;
 
   FDRE \A_reg0_reg[0] 
        (.C(clk),
@@ -182,39 +194,39 @@ module intellight_MII_0_0_MII
         .D(A[1]),
         .Q(\A_reg0_reg_n_0_[1] ),
         .R(1'b0));
-  (* srl_bus_name = "\inst/A_reg4_reg " *) 
-  (* srl_name = "\inst/A_reg4_reg[0]_srl4 " *) 
-  SRL16E \A_reg4_reg[0]_srl4 
-       (.A0(1'b1),
+  (* srl_bus_name = "\inst/A_reg3_reg " *) 
+  (* srl_name = "\inst/A_reg3_reg[0]_srl3 " *) 
+  SRL16E \A_reg3_reg[0]_srl3 
+       (.A0(1'b0),
         .A1(1'b1),
         .A2(1'b0),
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
         .D(\A_reg0_reg_n_0_[0] ),
-        .Q(\A_reg4_reg[0]_srl4_n_0 ));
-  (* srl_bus_name = "\inst/A_reg4_reg " *) 
-  (* srl_name = "\inst/A_reg4_reg[1]_srl4 " *) 
-  SRL16E \A_reg4_reg[1]_srl4 
-       (.A0(1'b1),
+        .Q(\A_reg3_reg[0]_srl3_n_0 ));
+  (* srl_bus_name = "\inst/A_reg3_reg " *) 
+  (* srl_name = "\inst/A_reg3_reg[1]_srl3 " *) 
+  SRL16E \A_reg3_reg[1]_srl3 
+       (.A0(1'b0),
         .A1(1'b1),
         .A2(1'b0),
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
         .D(\A_reg0_reg_n_0_[1] ),
-        .Q(\A_reg4_reg[1]_srl4_n_0 ));
-  FDRE \A_reg5_reg[0] 
+        .Q(\A_reg3_reg[1]_srl3_n_0 ));
+  FDRE \A_reg4_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .D(\A_reg4_reg[0]_srl4_n_0 ),
-        .Q(A_reg5[0]),
+        .D(\A_reg3_reg[0]_srl3_n_0 ),
+        .Q(A_reg4[0]),
         .R(1'b0));
-  FDRE \A_reg5_reg[1] 
+  FDRE \A_reg4_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .D(\A_reg4_reg[1]_srl4_n_0 ),
-        .Q(A_reg5[1]),
+        .D(\A_reg3_reg[1]_srl3_n_0 ),
+        .Q(A_reg4[1]),
         .R(1'b0));
   (* srl_bus_name = "\inst/S_reg6_reg " *) 
   (* srl_name = "\inst/S_reg6_reg[0]_srl7 " *) 
@@ -348,133 +360,134 @@ module intellight_MII_0_0_MII
         .CLK(clk),
         .D(S[9]),
         .Q(\S_reg6_reg[9]_srl7_n_0 ));
-  FDRE \S_reg7_reg[0] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\S_reg6_reg[0]_srl7_n_0 ),
-        .Q(WR_ADDR[0]),
-        .R(1'b0));
-  FDRE \S_reg7_reg[10] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\S_reg6_reg[10]_srl7_n_0 ),
-        .Q(WR_ADDR[10]),
-        .R(1'b0));
-  FDRE \S_reg7_reg[11] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\S_reg6_reg[11]_srl7_n_0 ),
-        .Q(WR_ADDR[11]),
-        .R(1'b0));
-  FDRE \S_reg7_reg[1] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\S_reg6_reg[1]_srl7_n_0 ),
-        .Q(WR_ADDR[1]),
-        .R(1'b0));
-  FDRE \S_reg7_reg[2] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\S_reg6_reg[2]_srl7_n_0 ),
-        .Q(WR_ADDR[2]),
-        .R(1'b0));
-  FDRE \S_reg7_reg[3] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\S_reg6_reg[3]_srl7_n_0 ),
-        .Q(WR_ADDR[3]),
-        .R(1'b0));
-  FDRE \S_reg7_reg[4] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\S_reg6_reg[4]_srl7_n_0 ),
-        .Q(WR_ADDR[4]),
-        .R(1'b0));
-  FDRE \S_reg7_reg[5] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\S_reg6_reg[5]_srl7_n_0 ),
-        .Q(WR_ADDR[5]),
-        .R(1'b0));
-  FDRE \S_reg7_reg[6] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\S_reg6_reg[6]_srl7_n_0 ),
-        .Q(WR_ADDR[6]),
-        .R(1'b0));
-  FDRE \S_reg7_reg[7] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\S_reg6_reg[7]_srl7_n_0 ),
-        .Q(WR_ADDR[7]),
-        .R(1'b0));
-  FDRE \S_reg7_reg[8] 
+  FDRE \WR_ADDR_reg[10] 
        (.C(clk),
         .CE(1'b1),
         .D(\S_reg6_reg[8]_srl7_n_0 ),
         .Q(WR_ADDR[8]),
         .R(1'b0));
-  FDRE \S_reg7_reg[9] 
+  FDRE \WR_ADDR_reg[11] 
        (.C(clk),
         .CE(1'b1),
         .D(\S_reg6_reg[9]_srl7_n_0 ),
         .Q(WR_ADDR[9]),
         .R(1'b0));
-  intellight_MII_0_0_wen_decoder decod1
-       (.A_reg5(A_reg5),
-        .wen(wen),
-        .wen1(wen1),
-        .wen3(wen3));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  FDRE \WR_ADDR_reg[12] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\S_reg6_reg[10]_srl7_n_0 ),
+        .Q(WR_ADDR[10]),
+        .R(1'b0));
+  FDRE \WR_ADDR_reg[13] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\S_reg6_reg[11]_srl7_n_0 ),
+        .Q(WR_ADDR[11]),
+        .R(1'b0));
+  FDRE \WR_ADDR_reg[2] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\S_reg6_reg[0]_srl7_n_0 ),
+        .Q(WR_ADDR[0]),
+        .R(1'b0));
+  FDRE \WR_ADDR_reg[3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\S_reg6_reg[1]_srl7_n_0 ),
+        .Q(WR_ADDR[1]),
+        .R(1'b0));
+  FDRE \WR_ADDR_reg[4] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\S_reg6_reg[2]_srl7_n_0 ),
+        .Q(WR_ADDR[2]),
+        .R(1'b0));
+  FDRE \WR_ADDR_reg[5] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\S_reg6_reg[3]_srl7_n_0 ),
+        .Q(WR_ADDR[3]),
+        .R(1'b0));
+  FDRE \WR_ADDR_reg[6] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\S_reg6_reg[4]_srl7_n_0 ),
+        .Q(WR_ADDR[4]),
+        .R(1'b0));
+  FDRE \WR_ADDR_reg[7] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\S_reg6_reg[5]_srl7_n_0 ),
+        .Q(WR_ADDR[5]),
+        .R(1'b0));
+  FDRE \WR_ADDR_reg[8] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\S_reg6_reg[6]_srl7_n_0 ),
+        .Q(WR_ADDR[6]),
+        .R(1'b0));
+  FDRE \WR_ADDR_reg[9] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\S_reg6_reg[7]_srl7_n_0 ),
+        .Q(WR_ADDR[7]),
+        .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h04)) 
-    \wen0[0]_INST_0 
-       (.I0(A_reg5[1]),
+    \wen0[3]_i_1 
+       (.I0(A_reg4[1]),
         .I1(wen),
-        .I2(A_reg5[0]),
-        .O(wen0));
+        .I2(A_reg4[0]),
+        .O(\wen0[3]_i_1_n_0 ));
+  FDRE \wen0_reg[3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\wen0[3]_i_1_n_0 ),
+        .Q(en0),
+        .R(1'b0));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
-    .INIT(8'h08)) 
-    \wen2[0]_INST_0 
-       (.I0(wen),
-        .I1(A_reg5[1]),
-        .I2(A_reg5[0]),
-        .O(wen2));
-endmodule
-
-(* ORIG_REF_NAME = "wen_decoder" *) 
-module intellight_MII_0_0_wen_decoder
-   (wen1,
-    wen3,
-    A_reg5,
-    wen);
-  output [0:0]wen1;
-  output [0:0]wen3;
-  input [1:0]A_reg5;
-  input wen;
-
-  wire [1:0]A_reg5;
-  wire wen;
-  wire [0:0]wen1;
-  wire [0:0]wen3;
-
+    .INIT(8'h20)) 
+    \wen1[3]_i_1 
+       (.I0(A_reg4[0]),
+        .I1(A_reg4[1]),
+        .I2(wen),
+        .O(wen1_temp));
+  FDRE \wen1_reg[3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(wen1_temp),
+        .Q(en1),
+        .R(1'b0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
-    .INIT(8'h20)) 
-    \wen1[0]_INST_0 
-       (.I0(A_reg5[0]),
-        .I1(A_reg5[1]),
-        .I2(wen),
-        .O(wen1));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+    .INIT(8'h08)) 
+    \wen2[3]_i_1 
+       (.I0(wen),
+        .I1(A_reg4[1]),
+        .I2(A_reg4[0]),
+        .O(\wen2[3]_i_1_n_0 ));
+  FDRE \wen2_reg[3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\wen2[3]_i_1_n_0 ),
+        .Q(en2),
+        .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'h80)) 
-    \wen3[0]_INST_0 
-       (.I0(A_reg5[0]),
+    \wen3[3]_i_1 
+       (.I0(A_reg4[0]),
         .I1(wen),
-        .I2(A_reg5[1]),
-        .O(wen3));
+        .I2(A_reg4[1]),
+        .O(wen3_temp));
+  FDRE \wen3_reg[3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(wen3_temp),
+        .Q(en3),
+        .R(1'b0));
 endmodule
 `ifndef GLBL
 `define GLBL

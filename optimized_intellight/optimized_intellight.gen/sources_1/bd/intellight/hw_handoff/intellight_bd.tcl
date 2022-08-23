@@ -179,9 +179,9 @@ proc create_hier_cell_PL_RAM { parentCell nameHier } {
   create_bd_pin -dir I -type clk clk
   create_bd_pin -dir I -type rst rst
   create_bd_pin -dir I -type rst rst_n
-  create_bd_pin -dir I -from 3 -to 0 web
   create_bd_pin -dir I -from 3 -to 0 web1
   create_bd_pin -dir I -from 3 -to 0 web2
+  create_bd_pin -dir I -from 3 -to 0 web3
   create_bd_pin -dir I -from 3 -to 0 wen0
 
   # Create instance: RAM0, and set properties
@@ -348,9 +348,9 @@ proc create_hier_cell_PL_RAM { parentCell nameHier } {
   # Create port connections
   connect_bd_net -net MII_0_WRITE_ADDR [get_bd_pins WRITE_ADDR] [get_bd_pins RAM0/addrb] [get_bd_pins RAM1/addrb] [get_bd_pins RAM2/addrb] [get_bd_pins RAM3/addrb]
   connect_bd_net -net MII_0_wen0 [get_bd_pins wen0] [get_bd_pins RAM0/web]
-  connect_bd_net -net MII_0_wen1 [get_bd_pins web] [get_bd_pins RAM1/web]
-  connect_bd_net -net MII_0_wen2 [get_bd_pins web1] [get_bd_pins RAM2/web]
-  connect_bd_net -net MII_0_wen3 [get_bd_pins web2] [get_bd_pins RAM3/web]
+  connect_bd_net -net MII_0_wen1 [get_bd_pins web1] [get_bd_pins RAM1/web]
+  connect_bd_net -net MII_0_wen2 [get_bd_pins web2] [get_bd_pins RAM2/web]
+  connect_bd_net -net MII_0_wen3 [get_bd_pins web3] [get_bd_pins RAM3/web]
   connect_bd_net -net clka_0_1 [get_bd_pins clk] [get_bd_pins RAM0/clkb] [get_bd_pins RAM1/clkb] [get_bd_pins RAM2/clkb] [get_bd_pins RAM3/clkb] [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_bram_ctrl_1/s_axi_aclk] [get_bd_pins axi_bram_ctrl_2/s_axi_aclk] [get_bd_pins axi_bram_ctrl_3/s_axi_aclk]
   connect_bd_net -net const_1_dout [get_bd_pins RAM0/enb] [get_bd_pins RAM1/enb] [get_bd_pins RAM2/enb] [get_bd_pins RAM3/enb] [get_bd_pins const_1/dout]
   connect_bd_net -net dinb_0_1 [get_bd_pins Q] [get_bd_pins RAM0/dinb] [get_bd_pins RAM1/dinb] [get_bd_pins RAM2/dinb] [get_bd_pins RAM3/dinb]
@@ -406,10 +406,14 @@ proc create_hier_cell_Action_RAM { parentCell nameHier } {
   create_bd_pin -dir I -from 31 -to 0 READ_ADDR
   create_bd_pin -dir I -from 31 -to 0 WRITE_ADDR
   create_bd_pin -dir I -type clk clk
+  create_bd_pin -dir I enb0
+  create_bd_pin -dir I enb1
+  create_bd_pin -dir I enb2
+  create_bd_pin -dir I enb3
   create_bd_pin -dir I -type rst rst
-  create_bd_pin -dir I -from 3 -to 0 web
   create_bd_pin -dir I -from 3 -to 0 web1
   create_bd_pin -dir I -from 3 -to 0 web2
+  create_bd_pin -dir I -from 3 -to 0 web3
   create_bd_pin -dir I -from 3 -to 0 wen0
 
   # Create instance: Action_RAM0, and set properties
@@ -550,16 +554,20 @@ proc create_hier_cell_Action_RAM { parentCell nameHier } {
   connect_bd_net -net MII_0_READ_ADDR [get_bd_pins READ_ADDR] [get_bd_pins Action_RAM0/addra] [get_bd_pins Action_RAM1/addra] [get_bd_pins Action_RAM2/addra] [get_bd_pins Action_RAM3/addra]
   connect_bd_net -net MII_0_WRITE_ADDR [get_bd_pins WRITE_ADDR] [get_bd_pins Action_RAM0/addrb] [get_bd_pins Action_RAM1/addrb] [get_bd_pins Action_RAM2/addrb] [get_bd_pins Action_RAM3/addrb]
   connect_bd_net -net MII_0_wen0 [get_bd_pins wen0] [get_bd_pins Action_RAM0/web]
-  connect_bd_net -net MII_0_wen1 [get_bd_pins web] [get_bd_pins Action_RAM1/web]
-  connect_bd_net -net MII_0_wen2 [get_bd_pins web1] [get_bd_pins Action_RAM2/web]
-  connect_bd_net -net MII_0_wen3 [get_bd_pins web2] [get_bd_pins Action_RAM3/web]
+  connect_bd_net -net MII_0_wen1 [get_bd_pins web1] [get_bd_pins Action_RAM1/web]
+  connect_bd_net -net MII_0_wen2 [get_bd_pins web2] [get_bd_pins Action_RAM2/web]
+  connect_bd_net -net MII_0_wen3 [get_bd_pins web3] [get_bd_pins Action_RAM3/web]
   connect_bd_net -net RAM1_douta [get_bd_pins D1] [get_bd_pins Action_RAM1/douta]
   connect_bd_net -net RAM2_douta [get_bd_pins D2] [get_bd_pins Action_RAM2/douta]
   connect_bd_net -net RAM3_douta [get_bd_pins D3] [get_bd_pins Action_RAM3/douta]
   connect_bd_net -net blk_mem_gen_0_douta [get_bd_pins D0] [get_bd_pins Action_RAM0/douta]
   connect_bd_net -net clka_0_1 [get_bd_pins clk] [get_bd_pins Action_RAM0/clka] [get_bd_pins Action_RAM0/clkb] [get_bd_pins Action_RAM1/clka] [get_bd_pins Action_RAM1/clkb] [get_bd_pins Action_RAM2/clka] [get_bd_pins Action_RAM2/clkb] [get_bd_pins Action_RAM3/clka] [get_bd_pins Action_RAM3/clkb]
-  connect_bd_net -net const_1_dout [get_bd_pins Action_RAM0/ena] [get_bd_pins Action_RAM0/enb] [get_bd_pins Action_RAM1/ena] [get_bd_pins Action_RAM1/enb] [get_bd_pins Action_RAM2/ena] [get_bd_pins Action_RAM2/enb] [get_bd_pins Action_RAM3/ena] [get_bd_pins Action_RAM3/enb] [get_bd_pins const_1/dout]
+  connect_bd_net -net const_1_dout [get_bd_pins Action_RAM0/ena] [get_bd_pins Action_RAM1/ena] [get_bd_pins Action_RAM2/ena] [get_bd_pins Action_RAM3/ena] [get_bd_pins const_1/dout]
   connect_bd_net -net dinb_0_1 [get_bd_pins Q] [get_bd_pins Action_RAM0/dinb] [get_bd_pins Action_RAM1/dinb] [get_bd_pins Action_RAM2/dinb] [get_bd_pins Action_RAM3/dinb]
+  connect_bd_net -net enb1_1 [get_bd_pins enb1] [get_bd_pins Action_RAM1/enb]
+  connect_bd_net -net enb2_1 [get_bd_pins enb2] [get_bd_pins Action_RAM2/enb]
+  connect_bd_net -net enb3_1 [get_bd_pins enb3] [get_bd_pins Action_RAM3/enb]
+  connect_bd_net -net enb_1 [get_bd_pins enb0] [get_bd_pins Action_RAM0/enb]
   connect_bd_net -net rsta_0_1 [get_bd_pins rst] [get_bd_pins Action_RAM0/rsta] [get_bd_pins Action_RAM0/rstb] [get_bd_pins Action_RAM1/rsta] [get_bd_pins Action_RAM1/rstb] [get_bd_pins Action_RAM2/rsta] [get_bd_pins Action_RAM2/rstb] [get_bd_pins Action_RAM3/rsta] [get_bd_pins Action_RAM3/rstb]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins Action_RAM0/wea] [get_bd_pins Action_RAM1/wea] [get_bd_pins Action_RAM2/wea] [get_bd_pins Action_RAM3/wea] [get_bd_pins cons_0000/dout]
 
@@ -1507,12 +1515,16 @@ Flash#Quad SPI Flash#GPIO#Quad SPI Flash#ENET Reset#GPIO#GPIO#GPIO#GPIO#UART\
   connect_bd_net -net CU_0_finish [get_bd_ports finish] [get_bd_pins CU_0/finish] [get_bd_pins axi_intc_0/intr]
   connect_bd_net -net CU_0_idle [get_bd_ports idle] [get_bd_pins CU_0/idle]
   connect_bd_net -net CU_0_wen [get_bd_pins CU_0/wen] [get_bd_pins MII_0/wen]
-  connect_bd_net -net MII_0_READ_ADDR [get_bd_pins Action_RAM/READ_ADDR] [get_bd_pins MII_0/RD_ADDR]
+  connect_bd_net -net MII_0_READ_ADDR [get_bd_pins Action_RAM/READ_ADDR] [get_bd_pins MII_0/RD_ADDR] [get_bd_pins intellight_0/rd_addr]
   connect_bd_net -net MII_0_WRITE_ADDR [get_bd_pins Action_RAM/WRITE_ADDR] [get_bd_pins MII_0/WR_ADDR] [get_bd_pins PL_RAM/WRITE_ADDR]
+  connect_bd_net -net MII_0_en0 [get_bd_pins Action_RAM/enb0] [get_bd_pins MII_0/en0]
+  connect_bd_net -net MII_0_en1 [get_bd_pins Action_RAM/enb1] [get_bd_pins MII_0/en1]
+  connect_bd_net -net MII_0_en2 [get_bd_pins Action_RAM/enb2] [get_bd_pins MII_0/en2]
+  connect_bd_net -net MII_0_en3 [get_bd_pins Action_RAM/enb3] [get_bd_pins MII_0/en3]
   connect_bd_net -net MII_0_wen0 [get_bd_pins Action_RAM/wen0] [get_bd_pins MII_0/wen0] [get_bd_pins PL_RAM/wen0]
-  connect_bd_net -net MII_0_wen1 [get_bd_pins Action_RAM/web] [get_bd_pins MII_0/wen1] [get_bd_pins PL_RAM/web]
-  connect_bd_net -net MII_0_wen2 [get_bd_pins Action_RAM/web1] [get_bd_pins MII_0/wen2] [get_bd_pins PL_RAM/web1]
-  connect_bd_net -net MII_0_wen3 [get_bd_pins Action_RAM/web2] [get_bd_pins MII_0/wen3] [get_bd_pins PL_RAM/web2]
+  connect_bd_net -net MII_0_wen1 [get_bd_pins Action_RAM/web1] [get_bd_pins MII_0/wen1] [get_bd_pins PL_RAM/web1]
+  connect_bd_net -net MII_0_wen2 [get_bd_pins Action_RAM/web2] [get_bd_pins MII_0/wen2] [get_bd_pins PL_RAM/web2]
+  connect_bd_net -net MII_0_wen3 [get_bd_pins Action_RAM/web3] [get_bd_pins MII_0/wen3] [get_bd_pins PL_RAM/web3]
   connect_bd_net -net PG_0_A [get_bd_pins MII_0/A] [get_bd_pins PG_0/A] [get_bd_pins QA_0/A] [get_bd_pins RD_0/A] [get_bd_pins SD_0/A]
   connect_bd_net -net PG_0_Amax [get_bd_pins PG_0/Amax] [get_bd_pins QA_0/Amax] [get_bd_pins RD_0/Amax]
   connect_bd_net -net PG_0_Amin [get_bd_pins PG_0/Amin] [get_bd_pins RD_0/Amin]
@@ -1524,13 +1536,13 @@ Flash#Quad SPI Flash#GPIO#Quad SPI Flash#ENET Reset#GPIO#GPIO#GPIO#GPIO#UART\
   connect_bd_net -net intellight_0_R0 [get_bd_pins RD_0/R0] [get_bd_pins intellight_0/R0]
   connect_bd_net -net intellight_0_R1 [get_bd_pins RD_0/R1] [get_bd_pins intellight_0/R1]
   connect_bd_net -net intellight_0_R2 [get_bd_pins RD_0/R2] [get_bd_pins intellight_0/R2]
-  connect_bd_net -net intellight_0_active [get_bd_ports active] [get_bd_pins CU_0/active] [get_bd_pins PG_0/active] [get_bd_pins SD_0/active] [get_bd_pins intellight_0/active]
+  connect_bd_net -net intellight_0_active [get_bd_ports active] [get_bd_pins CU_0/active] [get_bd_pins intellight_0/active]
   connect_bd_net -net intellight_0_alpha [get_bd_pins QA_0/alpha] [get_bd_pins intellight_0/alpha]
   connect_bd_net -net intellight_0_gamma [get_bd_pins QA_0/gamma] [get_bd_pins intellight_0/gamma]
   connect_bd_net -net intellight_0_max_episode [get_bd_pins CU_0/max_episode] [get_bd_pins intellight_0/max_episode]
   connect_bd_net -net intellight_0_max_step [get_bd_pins CU_0/max_step] [get_bd_pins intellight_0/max_step]
   connect_bd_net -net intellight_0_seed_16bit [get_bd_pins CU_0/seed] [get_bd_pins intellight_0/seed]
-  connect_bd_net -net intellight_0_start [get_bd_ports start] [get_bd_pins CU_0/start] [get_bd_pins intellight_0/start]
+  connect_bd_net -net intellight_0_start [get_bd_ports start] [get_bd_pins CU_0/start] [get_bd_pins PG_0/learning] [get_bd_pins SD_0/learning] [get_bd_pins intellight_0/start]
   connect_bd_net -net intellight_0_traffic [get_bd_pins SD_0/traffic] [get_bd_pins intellight_0/traffic]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_clk_100M/ext_reset_in]
   connect_bd_net -net rst_clk_100M_peripheral_aresetn [get_bd_pins PL_RAM/rst_n] [get_bd_pins axi_intc_0/s_axi_aresetn] [get_bd_pins axi_smc/aresetn] [get_bd_pins intellight_0/s00_axi_aresetn] [get_bd_pins rst_clk_100M/peripheral_aresetn]

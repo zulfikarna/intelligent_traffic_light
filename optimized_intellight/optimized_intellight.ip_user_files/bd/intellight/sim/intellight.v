@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Tue Aug 16 14:15:56 2022
+//Date        : Mon Aug 22 17:33:13 2022
 //Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 //Command     : generate_target intellight.bd
 //Design      : intellight
@@ -18,10 +18,14 @@ module Action_RAM_imp_1YLN0P3
     READ_ADDR,
     WRITE_ADDR,
     clk,
+    enb0,
+    enb1,
+    enb2,
+    enb3,
     rst,
-    web,
     web1,
     web2,
+    web3,
     wen0);
   output [31:0]D0;
   output [31:0]D1;
@@ -31,10 +35,14 @@ module Action_RAM_imp_1YLN0P3
   input [31:0]READ_ADDR;
   input [31:0]WRITE_ADDR;
   input clk;
+  input enb0;
+  input enb1;
+  input enb2;
+  input enb3;
   input rst;
-  input [3:0]web;
   input [3:0]web1;
   input [3:0]web2;
+  input [3:0]web3;
   input [3:0]wen0;
 
   wire [31:0]MII_0_READ_ADDR;
@@ -50,6 +58,10 @@ module Action_RAM_imp_1YLN0P3
   wire clka_0_1;
   wire [0:0]const_1_dout;
   wire [31:0]dinb_0_1;
+  wire enb1_1;
+  wire enb2_1;
+  wire enb3_1;
+  wire enb_1;
   wire rsta_0_1;
   wire [3:0]xlconstant_0_dout;
 
@@ -60,11 +72,15 @@ module Action_RAM_imp_1YLN0P3
   assign MII_0_READ_ADDR = READ_ADDR[31:0];
   assign MII_0_WRITE_ADDR = WRITE_ADDR[31:0];
   assign MII_0_wen0 = wen0[3:0];
-  assign MII_0_wen1 = web[3:0];
-  assign MII_0_wen2 = web1[3:0];
-  assign MII_0_wen3 = web2[3:0];
+  assign MII_0_wen1 = web1[3:0];
+  assign MII_0_wen2 = web2[3:0];
+  assign MII_0_wen3 = web3[3:0];
   assign clka_0_1 = clk;
   assign dinb_0_1 = Q[31:0];
+  assign enb1_1 = enb1;
+  assign enb2_1 = enb2;
+  assign enb3_1 = enb3;
+  assign enb_1 = enb0;
   assign rsta_0_1 = rst;
   intellight_blk_mem_gen_0_0 Action_RAM0
        (.addra(MII_0_READ_ADDR),
@@ -75,7 +91,7 @@ module Action_RAM_imp_1YLN0P3
         .dinb(dinb_0_1),
         .douta(blk_mem_gen_0_douta),
         .ena(const_1_dout),
-        .enb(const_1_dout),
+        .enb(enb_1),
         .rsta(rsta_0_1),
         .rstb(rsta_0_1),
         .wea(xlconstant_0_dout),
@@ -89,7 +105,7 @@ module Action_RAM_imp_1YLN0P3
         .dinb(dinb_0_1),
         .douta(RAM1_douta),
         .ena(const_1_dout),
-        .enb(const_1_dout),
+        .enb(enb1_1),
         .rsta(rsta_0_1),
         .rstb(rsta_0_1),
         .wea(xlconstant_0_dout),
@@ -103,7 +119,7 @@ module Action_RAM_imp_1YLN0P3
         .dinb(dinb_0_1),
         .douta(RAM2_douta),
         .ena(const_1_dout),
-        .enb(const_1_dout),
+        .enb(enb2_1),
         .rsta(rsta_0_1),
         .rstb(rsta_0_1),
         .wea(xlconstant_0_dout),
@@ -117,7 +133,7 @@ module Action_RAM_imp_1YLN0P3
         .dinb(dinb_0_1),
         .douta(RAM3_douta),
         .ena(const_1_dout),
-        .enb(const_1_dout),
+        .enb(enb3_1),
         .rsta(rsta_0_1),
         .rstb(rsta_0_1),
         .wea(xlconstant_0_dout),
@@ -258,9 +274,9 @@ module PL_RAM_imp_MR7DWM
     clk,
     rst,
     rst_n,
-    web,
     web1,
     web2,
+    web3,
     wen0);
   input [31:0]Q;
   input [13:0]S_AXI_0_araddr;
@@ -391,9 +407,9 @@ module PL_RAM_imp_MR7DWM
   input clk;
   input rst;
   input rst_n;
-  input [3:0]web;
   input [3:0]web1;
   input [3:0]web2;
+  input [3:0]web3;
   input [3:0]wen0;
 
   wire [13:0]Conn2_ARADDR;
@@ -627,9 +643,9 @@ module PL_RAM_imp_MR7DWM
   assign Conn4_WVALID = S_AXI_3_wvalid;
   assign MII_0_WRITE_ADDR = WRITE_ADDR[31:0];
   assign MII_0_wen0 = wen0[3:0];
-  assign MII_0_wen1 = web[3:0];
-  assign MII_0_wen2 = web1[3:0];
-  assign MII_0_wen3 = web2[3:0];
+  assign MII_0_wen1 = web1[3:0];
+  assign MII_0_wen2 = web2[3:0];
+  assign MII_0_wen3 = web3[3:0];
   assign S_AXI_0_1_ARADDR = S_AXI_0_araddr[13:0];
   assign S_AXI_0_1_ARBURST = S_AXI_0_arburst[1:0];
   assign S_AXI_0_1_ARCACHE = S_AXI_0_arcache[3:0];
@@ -989,6 +1005,10 @@ module intellight
   wire CU_0_wen;
   wire [31:0]MII_0_READ_ADDR;
   wire [31:0]MII_0_WRITE_ADDR;
+  wire MII_0_en0;
+  wire MII_0_en1;
+  wire MII_0_en2;
+  wire MII_0_en3;
   wire [3:0]MII_0_wen0;
   wire [3:0]MII_0_wen1;
   wire [3:0]MII_0_wen2;
@@ -1248,10 +1268,14 @@ module intellight
         .READ_ADDR(MII_0_READ_ADDR),
         .WRITE_ADDR(MII_0_WRITE_ADDR),
         .clk(clka_0_1),
+        .enb0(MII_0_en0),
+        .enb1(MII_0_en1),
+        .enb2(MII_0_en2),
+        .enb3(MII_0_en3),
         .rst(rsta_0_1),
-        .web(MII_0_wen1),
-        .web1(MII_0_wen2),
-        .web2(MII_0_wen3),
+        .web1(MII_0_wen1),
+        .web2(MII_0_wen2),
+        .web3(MII_0_wen3),
         .wen0(MII_0_wen0));
   intellight_CU_0_0 CU_0
        (.Arand(CU_0_Arand),
@@ -1273,6 +1297,10 @@ module intellight
         .S(SD_0_S),
         .WR_ADDR(MII_0_WRITE_ADDR),
         .clk(clka_0_1),
+        .en0(MII_0_en0),
+        .en1(MII_0_en1),
+        .en2(MII_0_en2),
+        .en3(MII_0_en3),
         .rst(rsta_0_1),
         .wen(CU_0_wen),
         .wen0(MII_0_wen0),
@@ -1286,8 +1314,8 @@ module intellight
         .Arand(CU_0_Arand),
         .Asel(CU_0_Asel),
         .S(SD_0_S),
-        .active(intellight_0_active),
         .clk(clka_0_1),
+        .learning(intellight_0_start),
         .rst(rsta_0_1));
   PL_RAM_imp_MR7DWM PL_RAM
        (.Q(QA_0_Qnew),
@@ -1419,9 +1447,9 @@ module intellight
         .clk(clka_0_1),
         .rst(rsta_0_1),
         .rst_n(rst_clk_100M_peripheral_aresetn),
-        .web(MII_0_wen1),
-        .web1(MII_0_wen2),
-        .web2(MII_0_wen3),
+        .web1(MII_0_wen1),
+        .web2(MII_0_wen2),
+        .web3(MII_0_wen3),
         .wen0(MII_0_wen0));
   intellight_QA_0_0 QA_0
        (.A(PG_0_A),
@@ -1450,8 +1478,8 @@ module intellight
        (.A(PG_0_A),
         .S(SD_0_S),
         .S0(CU_0_S0),
-        .active(intellight_0_active),
         .clk(clka_0_1),
+        .learning(intellight_0_start),
         .rst(rsta_0_1),
         .traffic(intellight_0_traffic));
   intellight_axi_intc_0_0 axi_intc_0
@@ -1690,6 +1718,7 @@ module intellight
         .gamma(intellight_0_gamma),
         .max_episode(intellight_0_max_episode),
         .max_step(intellight_0_max_step),
+        .rd_addr(MII_0_READ_ADDR),
         .s00_axi_aclk(clka_0_1),
         .s00_axi_araddr(axi_smc_M04_AXI_ARADDR),
         .s00_axi_aresetn(rst_clk_100M_peripheral_aresetn),

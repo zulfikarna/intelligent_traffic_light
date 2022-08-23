@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Tue Aug 16 12:58:34 2022
+//Date        : Mon Aug 22 12:52:18 2022
 //Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 //Command     : generate_target simulate.bd
 //Design      : simulate
@@ -18,10 +18,14 @@ module Action_RAM_imp_7YDQNW
     READ_ADDR,
     WRITE_ADDR,
     clk,
+    enb0,
+    enb1,
+    enb2,
+    enb3,
     rst,
-    web,
     web1,
     web2,
+    web3,
     wen0);
   output [31:0]D0;
   output [31:0]D1;
@@ -31,10 +35,14 @@ module Action_RAM_imp_7YDQNW
   input [31:0]READ_ADDR;
   input [31:0]WRITE_ADDR;
   input clk;
+  input enb0;
+  input enb1;
+  input enb2;
+  input enb3;
   input rst;
-  input [3:0]web;
   input [3:0]web1;
   input [3:0]web2;
+  input [3:0]web3;
   input [3:0]wen0;
 
   wire [31:0]MII_0_READ_ADDR;
@@ -50,6 +58,10 @@ module Action_RAM_imp_7YDQNW
   wire clka_0_1;
   wire [0:0]const_1_dout;
   wire [31:0]dinb_0_1;
+  wire enb1_1;
+  wire enb2_1;
+  wire enb3_1;
+  wire enb_1;
   wire rsta_0_1;
   wire [3:0]xlconstant_0_dout;
 
@@ -60,11 +72,15 @@ module Action_RAM_imp_7YDQNW
   assign MII_0_READ_ADDR = READ_ADDR[31:0];
   assign MII_0_WRITE_ADDR = WRITE_ADDR[31:0];
   assign MII_0_wen0 = wen0[3:0];
-  assign MII_0_wen1 = web[3:0];
-  assign MII_0_wen2 = web1[3:0];
-  assign MII_0_wen3 = web2[3:0];
+  assign MII_0_wen1 = web1[3:0];
+  assign MII_0_wen2 = web2[3:0];
+  assign MII_0_wen3 = web3[3:0];
   assign clka_0_1 = clk;
   assign dinb_0_1 = Q[31:0];
+  assign enb1_1 = enb1;
+  assign enb2_1 = enb2;
+  assign enb3_1 = enb3;
+  assign enb_1 = enb0;
   assign rsta_0_1 = rst;
   simulate_Action_RAM0_2 Action_RAM0
        (.addra(MII_0_READ_ADDR),
@@ -75,7 +91,7 @@ module Action_RAM_imp_7YDQNW
         .dinb(dinb_0_1),
         .douta(blk_mem_gen_0_douta),
         .ena(const_1_dout),
-        .enb(const_1_dout),
+        .enb(enb_1),
         .rsta(rsta_0_1),
         .rstb(rsta_0_1),
         .wea(xlconstant_0_dout),
@@ -89,7 +105,7 @@ module Action_RAM_imp_7YDQNW
         .dinb(dinb_0_1),
         .douta(RAM1_douta),
         .ena(const_1_dout),
-        .enb(const_1_dout),
+        .enb(enb1_1),
         .rsta(rsta_0_1),
         .rstb(rsta_0_1),
         .wea(xlconstant_0_dout),
@@ -103,7 +119,7 @@ module Action_RAM_imp_7YDQNW
         .dinb(dinb_0_1),
         .douta(RAM2_douta),
         .ena(const_1_dout),
-        .enb(const_1_dout),
+        .enb(enb2_1),
         .rsta(rsta_0_1),
         .rstb(rsta_0_1),
         .wea(xlconstant_0_dout),
@@ -117,7 +133,7 @@ module Action_RAM_imp_7YDQNW
         .dinb(dinb_0_1),
         .douta(RAM3_douta),
         .ena(const_1_dout),
-        .enb(const_1_dout),
+        .enb(enb3_1),
         .rsta(rsta_0_1),
         .rstb(rsta_0_1),
         .wea(xlconstant_0_dout),
@@ -133,17 +149,17 @@ module PL_RAM_imp_1KVKOLK
     WRITE_ADDR,
     clk,
     rst,
-    web,
     web1,
     web2,
+    web3,
     wen0);
   input [31:0]Q;
   input [31:0]WRITE_ADDR;
   input clk;
   input rst;
-  input [3:0]web;
   input [3:0]web1;
   input [3:0]web2;
+  input [3:0]web3;
   input [3:0]wen0;
 
   wire [31:0]MII_0_WRITE_ADDR;
@@ -158,9 +174,9 @@ module PL_RAM_imp_1KVKOLK
 
   assign MII_0_WRITE_ADDR = WRITE_ADDR[31:0];
   assign MII_0_wen0 = wen0[3:0];
-  assign MII_0_wen1 = web[3:0];
-  assign MII_0_wen2 = web1[3:0];
-  assign MII_0_wen3 = web2[3:0];
+  assign MII_0_wen1 = web1[3:0];
+  assign MII_0_wen2 = web2[3:0];
+  assign MII_0_wen3 = web3[3:0];
   assign clka_0_1 = clk;
   assign dinb_0_1 = Q[31:0];
   assign rsta_0_1 = rst;
@@ -224,9 +240,7 @@ endmodule
 module simulate
    (A,
     Amax,
-    Amax_reg0,
     Amin,
-    Amin_reg0,
     Arand,
     Asel,
     D0,
@@ -238,12 +252,14 @@ module simulate
     R0,
     R1,
     R2,
-    R_reg0,
-    Rtemp,
     S,
     active,
     alpha,
     clk,
+    en0,
+    en1,
+    en2,
+    en3,
     finish,
     gamma,
     max_episode,
@@ -264,9 +280,7 @@ module simulate
     wire_sc);
   output [1:0]A;
   output [1:0]Amax;
-  output [1:0]Amax_reg0;
   output [1:0]Amin;
-  output [1:0]Amin_reg0;
   output [1:0]Arand;
   output Asel;
   output [31:0]D0;
@@ -278,12 +292,14 @@ module simulate
   input [31:0]R0;
   input [31:0]R1;
   input [31:0]R2;
-  output [31:0]R_reg0;
-  output [31:0]Rtemp;
   output [11:0]S;
   input active;
   input [2:0]alpha;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_RESET rst, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk;
+  output en0;
+  output en1;
+  output en2;
+  output en3;
   output finish;
   input [2:0]gamma;
   input [15:0]max_episode;
@@ -319,6 +335,10 @@ module simulate
   wire [15:0]CU_0_wire_sc;
   wire [31:0]MII_0_READ_ADDR;
   wire [31:0]MII_0_WRITE_ADDR;
+  wire MII_0_en0;
+  wire MII_0_en1;
+  wire MII_0_en2;
+  wire MII_0_en3;
   wire [3:0]MII_0_wen0;
   wire [3:0]MII_0_wen1;
   wire [3:0]MII_0_wen2;
@@ -330,11 +350,7 @@ module simulate
   wire [31:0]R0_1;
   wire [31:0]R1_1;
   wire [31:0]R2_1;
-  wire [1:0]RD_0_Amax_reg0;
-  wire [1:0]RD_0_Amin_reg0;
   wire [31:0]RD_0_R;
-  wire [31:0]RD_0_R_reg0;
-  wire [31:0]RD_0_Rtemp;
   wire [11:0]SD_0_S;
   wire active_1;
   wire [2:0]alpha_1;
@@ -349,9 +365,7 @@ module simulate
 
   assign A[1:0] = PG_0_A;
   assign Amax[1:0] = PG_0_Amax;
-  assign Amax_reg0[1:0] = RD_0_Amax_reg0;
   assign Amin[1:0] = PG_0_Amin;
-  assign Amin_reg0[1:0] = RD_0_Amin_reg0;
   assign Arand[1:0] = CU_0_Arand;
   assign Asel = CU_0_Asel;
   assign D0[31:0] = Action_RAM_D0;
@@ -363,12 +377,14 @@ module simulate
   assign R0_1 = R0[31:0];
   assign R1_1 = R1[31:0];
   assign R2_1 = R2[31:0];
-  assign R_reg0[31:0] = RD_0_R_reg0;
-  assign Rtemp[31:0] = RD_0_Rtemp;
   assign S[11:0] = SD_0_S;
   assign active_1 = active;
   assign alpha_1 = alpha[2:0];
   assign clka_0_1 = clk;
+  assign en0 = MII_0_en0;
+  assign en1 = MII_0_en1;
+  assign en2 = MII_0_en2;
+  assign en3 = MII_0_en3;
   assign finish = CU_0_finish;
   assign gamma_1 = gamma[2:0];
   assign max_episode_1 = max_episode[15:0];
@@ -396,10 +412,14 @@ module simulate
         .READ_ADDR(MII_0_READ_ADDR),
         .WRITE_ADDR(MII_0_WRITE_ADDR),
         .clk(clka_0_1),
+        .enb0(MII_0_en0),
+        .enb1(MII_0_en1),
+        .enb2(MII_0_en2),
+        .enb3(MII_0_en3),
         .rst(rsta_0_1),
-        .web(MII_0_wen1),
-        .web1(MII_0_wen2),
-        .web2(MII_0_wen3),
+        .web1(MII_0_wen1),
+        .web2(MII_0_wen2),
+        .web3(MII_0_wen3),
         .wen0(MII_0_wen0));
   simulate_CU_0_1 CU_0
        (.Arand(CU_0_Arand),
@@ -425,6 +445,10 @@ module simulate
         .S(SD_0_S),
         .WR_ADDR(MII_0_WRITE_ADDR),
         .clk(clka_0_1),
+        .en0(MII_0_en0),
+        .en1(MII_0_en1),
+        .en2(MII_0_en2),
+        .en3(MII_0_en3),
         .rst(rsta_0_1),
         .wen(CU_0_wen),
         .wen0(MII_0_wen0),
@@ -438,17 +462,17 @@ module simulate
         .Arand(CU_0_Arand),
         .Asel(CU_0_Asel),
         .S(SD_0_S),
-        .active(active_1),
         .clk(clka_0_1),
+        .learning(start_1),
         .rst(rsta_0_1));
   PL_RAM_imp_1KVKOLK PL_RAM
        (.Q(QA_0_Qnew),
         .WRITE_ADDR(MII_0_WRITE_ADDR),
         .clk(clka_0_1),
         .rst(rsta_0_1),
-        .web(MII_0_wen1),
-        .web1(MII_0_wen2),
-        .web2(MII_0_wen3),
+        .web1(MII_0_wen1),
+        .web2(MII_0_wen2),
+        .web3(MII_0_wen3),
         .wen0(MII_0_wen0));
   simulate_QA_0_2 QA_0
        (.A(PG_0_A),
@@ -466,23 +490,19 @@ module simulate
   simulate_RD_0_2 RD_0
        (.A(PG_0_A),
         .Amax(PG_0_Amax),
-        .Amax_reg0(RD_0_Amax_reg0),
         .Amin(PG_0_Amin),
-        .Amin_reg0(RD_0_Amin_reg0),
         .R(RD_0_R),
         .R0(R0_1),
         .R1(R1_1),
         .R2(R2_1),
-        .R_reg0(RD_0_R_reg0),
-        .Rtemp(RD_0_Rtemp),
         .clk(clka_0_1),
         .rst(rsta_0_1));
   simulate_SD_0_2 SD_0
        (.A(PG_0_A),
         .S(SD_0_S),
         .S0(CU_0_S0),
-        .active(active_1),
         .clk(clka_0_1),
+        .learning(start_1),
         .rst(rsta_0_1),
         .traffic(traffic_0_1));
 endmodule

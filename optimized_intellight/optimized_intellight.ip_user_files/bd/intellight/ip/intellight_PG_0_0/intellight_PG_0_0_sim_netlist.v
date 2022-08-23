@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Thu Aug 11 03:29:53 2022
+// Date        : Mon Aug 22 13:01:30 2022
 // Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_PG_0_0/intellight_PG_0_0_sim_netlist.v
@@ -21,7 +21,7 @@ module intellight_PG_0_0
     S,
     Arand,
     Asel,
-    active,
+    learning,
     Amax,
     Amin,
     A);
@@ -30,7 +30,7 @@ module intellight_PG_0_0
   input [11:0]S;
   input [1:0]Arand;
   input Asel;
-  input active;
+  input learning;
   output [1:0]Amax;
   output [1:0]Amin;
   output [1:0]A;
@@ -41,8 +41,8 @@ module intellight_PG_0_0
   wire [1:0]Arand;
   wire Asel;
   wire [11:0]S;
-  wire active;
   wire clk;
+  wire learning;
   wire rst;
 
   intellight_PG_0_0_PG inst
@@ -52,8 +52,8 @@ module intellight_PG_0_0
         .Arand(Arand),
         .Asel(Asel),
         .S(S),
-        .active(active),
         .clk(clk),
+        .learning(learning),
         .rst(rst));
 endmodule
 
@@ -67,7 +67,7 @@ module intellight_PG_0_0_PG
     clk,
     Asel,
     Arand,
-    active);
+    learning);
   output [1:0]Amax;
   output [1:0]Amin;
   output [1:0]A;
@@ -76,7 +76,7 @@ module intellight_PG_0_0_PG
   input clk;
   input Asel;
   input [1:0]Arand;
-  input active;
+  input learning;
 
   wire [1:0]A;
   wire [1:0]Agreed;
@@ -109,27 +109,27 @@ module intellight_PG_0_0_PG
   wire \Stest_reg_n_0_[6] ;
   wire \Stest_reg_n_0_[7] ;
   wire \Stest_reg_n_0_[8] ;
-  wire active;
   wire clk;
+  wire learning;
   wire [2:0]\max0/w0__2 ;
   wire [2:0]\min0/w0__2 ;
   wire [2:0]p_0_in0_in;
   wire rst;
 
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hBF80)) 
     \A[0]_INST_0 
        (.I0(Agreed[0]),
         .I1(Asel_reg),
-        .I2(active),
+        .I2(learning),
         .I3(Arand_reg[0]),
         .O(A[0]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hBF80)) 
     \A[1]_INST_0 
        (.I0(Agreed[1]),
         .I1(Asel_reg),
-        .I2(active),
+        .I2(learning),
         .I3(Arand_reg[1]),
         .O(A[1]));
   FDRE \Agreed_reg[0] 

@@ -10,35 +10,24 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module RD( 
-    output wire [31:0] Rtemp,
-    output reg [31:0] R_reg0,
-    output reg [1:0] Amax_reg0, Amin_reg0,
     // ------------
     input wire clk, rst,
     input wire [31:0] R0, R1, R2,
     input wire [1:0] Amax, Amin, A,
     output reg [31:0] R        
     );
-    
-//    wire [1:0] Amax_reg0;
-//    reg_2bit reg0(.clk(clk), .rst(rst),
-//                    .in0(Amax), .out0(Amax_reg0));
-    
-//    wire [1:0] Amin_reg0;
-//    reg_2bit reg1(.clk(clk), .rst(rst),
-//                    .in0(Amin), .out0(Amin_reg0));
-    
-    // reg [1:0] Amax_reg0, Amin_reg0;
+      
+    reg [1:0] Amax_reg0, Amin_reg0;
     always @(posedge clk) begin
         Amax_reg0 <= Amax;
         Amin_reg0 <= Amin;
     end
     
-    // wire [31:0] Rtemp;
+    wire [31:0] Rtemp;
     assign Rtemp = (A==Amax_reg0)? R2 : 
                    ((A==Amin_reg0)? R0 : R1);
     
-    // reg [31:0] R_reg0;
+    reg [31:0] R_reg0;
     always @(posedge clk) begin
         R_reg0 <= Rtemp;
         R <= R_reg0;

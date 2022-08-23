@@ -25,6 +25,7 @@ Compiling module xil_defaultlib.lsfr_16bit
 Compiling module xil_defaultlib.CU
 Compiling module xil_defaultlib.simulate_CU_0_1
 Compiling module xil_defaultlib.wen_decoder
+Compiling module xil_defaultlib.en_decoder
 Compiling module xil_defaultlib.MII
 Compiling module xil_defaultlib.simulate_MII_0_2
 Compiling module xil_defaultlib.min4to1_3bit

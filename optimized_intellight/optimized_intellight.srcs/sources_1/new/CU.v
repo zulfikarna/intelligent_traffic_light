@@ -145,7 +145,7 @@ module CU(
             S_L13 :
                 ns <= S_L14;
             S_L14 :
-                if ((start)|(!active))
+                if ((start)&(!active))
                     ns <= S_INIT;
                 else 
                     ns <= S_DONE;
@@ -172,7 +172,7 @@ module CU(
     
     // Memory Handling 
     always @(*) begin
-        if ((cs == S_L13)|(cs == S_L14)|(cs == S_L8)|(cs == S_L9)|(cs == S_L10)|(cs == S_L11)|(cs == S_L12)) begin 
+        if ((ns == S_L13)|(ns == S_L14)|(ns == S_L8)|(ns == S_L9)|(ns == S_L10)|(ns == S_L11)|(ns == S_L12)) begin 
             wen = 1'b1;
         end else begin 
             wen = 1'b0;
@@ -248,7 +248,7 @@ module CU(
     
     // Random numbers for Policy Generator 
     always @(posedge clk) begin
-        Asel <= (epsilon < o_lsfr[15:0])? 1'b1 : 1'b0;
+        Asel <= (epsilon > o_lsfr[15:0])? 1'b0 : 1'b1;
         Arand <= o_lsfr[1:0];
         S0 <= o_lsfr[12:1];
     end

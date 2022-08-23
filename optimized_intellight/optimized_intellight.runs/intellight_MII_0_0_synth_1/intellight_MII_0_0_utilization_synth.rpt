@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Thu Aug 11 14:20:37 2022
+| Date         : Thu Aug 18 06:09:34 2022
 | Host         : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file intellight_MII_0_0_utilization_synth.rpt -pb intellight_MII_0_0_utilization_synth.pb
 | Design       : intellight_MII_0_0
@@ -35,8 +35,8 @@ Table of Contents
 |   LUT as Memory            |   14 |     0 |          0 |     17400 |  0.08 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |   14 |     0 |            |           |       |
-| Slice Registers            |   16 |     0 |          0 |    106400 |  0.02 |
-|   Register as Flip Flop    |   16 |     0 |          0 |    106400 |  0.02 |
+| Slice Registers            |   20 |     0 |          0 |    106400 |  0.02 |
+|   Register as Flip Flop    |   20 |     0 |          0 |    106400 |  0.02 |
 |   Register as Latch        |    0 |     0 |          0 |    106400 |  0.00 |
 | F7 Muxes                   |    0 |     0 |          0 |     26600 |  0.00 |
 | F8 Muxes                   |    0 |     0 |          0 |     13300 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 16    |          Yes |       Reset |            - |
+| 20    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,7 +148,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   16 |        Flop & Latch |
+| FDRE     |   20 |        Flop & Latch |
 | SRL16E   |   14 |  Distributed Memory |
 | LUT3     |    4 |                 LUT |
 +----------+------+---------------------+

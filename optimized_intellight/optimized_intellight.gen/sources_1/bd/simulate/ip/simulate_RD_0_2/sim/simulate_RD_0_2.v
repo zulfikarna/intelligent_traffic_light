@@ -55,10 +55,6 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module simulate_RD_0_2 (
-  Rtemp,
-  R_reg0,
-  Amax_reg0,
-  Amin_reg0,
   clk,
   rst,
   R0,
@@ -70,10 +66,6 @@ module simulate_RD_0_2 (
   R
 );
 
-output wire [31 : 0] Rtemp;
-output wire [31 : 0] R_reg0;
-output wire [1 : 0] Amax_reg0;
-output wire [1 : 0] Amin_reg0;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
@@ -89,10 +81,6 @@ input wire [1 : 0] A;
 output wire [31 : 0] R;
 
   RD inst (
-    .Rtemp(Rtemp),
-    .R_reg0(R_reg0),
-    .Amax_reg0(Amax_reg0),
-    .Amin_reg0(Amin_reg0),
     .clk(clk),
     .rst(rst),
     .R0(R0),

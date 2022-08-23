@@ -56,10 +56,6 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module intellight_RD_0_0 (
-  Rtemp,
-  R_reg0,
-  Amax_reg0,
-  Amin_reg0,
   clk,
   rst,
   R0,
@@ -71,11 +67,7 @@ module intellight_RD_0_0 (
   R
 );
 
-output wire [31 : 0] Rtemp;
-output wire [31 : 0] R_reg0;
-output wire [1 : 0] Amax_reg0;
-output wire [1 : 0] Amin_reg0;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
@@ -90,10 +82,6 @@ input wire [1 : 0] A;
 output wire [31 : 0] R;
 
   RD inst (
-    .Rtemp(Rtemp),
-    .R_reg0(R_reg0),
-    .Amax_reg0(Amax_reg0),
-    .Amin_reg0(Amin_reg0),
     .clk(clk),
     .rst(rst),
     .R0(R0),

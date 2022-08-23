@@ -58,7 +58,7 @@
 module intellight_SD_0_0 (
   clk,
   rst,
-  active,
+  learning,
   A,
   S0,
   traffic,
@@ -79,7 +79,7 @@ input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
 input wire rst;
-input wire active;
+input wire learning;
 input wire [1 : 0] A;
 input wire [11 : 0] S0;
 input wire [11 : 0] traffic;
@@ -96,7 +96,7 @@ output wire [2 : 0] L3;
   SD inst (
     .clk(clk),
     .rst(rst),
-    .active(active),
+    .learning(learning),
     .A(A),
     .S0(S0),
     .traffic(traffic),

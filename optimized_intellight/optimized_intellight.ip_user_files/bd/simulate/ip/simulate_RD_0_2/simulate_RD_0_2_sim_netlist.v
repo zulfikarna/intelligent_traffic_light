@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Mon Aug  8 01:52:42 2022
+// Date        : Tue Aug 16 23:00:29 2022
 // Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/simulate/ip/simulate_RD_0_2/simulate_RD_0_2_sim_netlist.v
@@ -16,11 +16,7 @@
 (* X_CORE_INFO = "RD,Vivado 2021.1" *) 
 (* NotValidForBitStream *)
 module simulate_RD_0_2
-   (Rtemp,
-    R_reg0,
-    Amax_reg0,
-    Amin_reg0,
-    clk,
+   (clk,
     rst,
     R0,
     R1,
@@ -29,10 +25,6 @@ module simulate_RD_0_2
     Amin,
     A,
     R);
-  output [31:0]Rtemp;
-  output [31:0]R_reg0;
-  output [1:0]Amax_reg0;
-  output [1:0]Amin_reg0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input rst;
   input [31:0]R0;
@@ -45,39 +37,27 @@ module simulate_RD_0_2
 
   wire [1:0]A;
   wire [1:0]Amax;
-  wire [1:0]Amax_reg0;
   wire [1:0]Amin;
-  wire [1:0]Amin_reg0;
   wire [31:0]R;
   wire [31:0]R0;
   wire [31:0]R1;
   wire [31:0]R2;
-  wire [31:0]R_reg0;
-  wire [31:0]Rtemp;
   wire clk;
 
   simulate_RD_0_2_RD inst
        (.A(A),
         .Amax(Amax),
-        .Amax_reg0(Amax_reg0),
         .Amin(Amin),
-        .Amin_reg0(Amin_reg0),
         .R(R),
         .R0(R0),
         .R1(R1),
         .R2(R2),
-        .R_reg0(R_reg0),
-        .Rtemp(Rtemp),
         .clk(clk));
 endmodule
 
 (* ORIG_REF_NAME = "RD" *) 
 module simulate_RD_0_2_RD
-   (Amin_reg0,
-    Amax_reg0,
-    R_reg0,
-    Rtemp,
-    R,
+   (R,
     Amin,
     clk,
     Amax,
@@ -85,10 +65,6 @@ module simulate_RD_0_2_RD
     R0,
     R1,
     A);
-  output [1:0]Amin_reg0;
-  output [1:0]Amax_reg0;
-  output [31:0]R_reg0;
-  output [31:0]Rtemp;
   output [31:0]R;
   input [1:0]Amin;
   input clk;
@@ -137,6 +113,310 @@ module simulate_RD_0_2_RD
         .D(Amin[1]),
         .Q(Amin_reg0[1]),
         .R(1'b0));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[0]_i_1 
+       (.I0(R2[0]),
+        .I1(Rtemp1),
+        .I2(R0[0]),
+        .I3(Rtemp2),
+        .I4(R1[0]),
+        .O(Rtemp[0]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[10]_i_1 
+       (.I0(R2[10]),
+        .I1(Rtemp1),
+        .I2(R0[10]),
+        .I3(Rtemp2),
+        .I4(R1[10]),
+        .O(Rtemp[10]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[11]_i_1 
+       (.I0(R2[11]),
+        .I1(Rtemp1),
+        .I2(R0[11]),
+        .I3(Rtemp2),
+        .I4(R1[11]),
+        .O(Rtemp[11]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[12]_i_1 
+       (.I0(R2[12]),
+        .I1(Rtemp1),
+        .I2(R0[12]),
+        .I3(Rtemp2),
+        .I4(R1[12]),
+        .O(Rtemp[12]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[13]_i_1 
+       (.I0(R2[13]),
+        .I1(Rtemp1),
+        .I2(R0[13]),
+        .I3(Rtemp2),
+        .I4(R1[13]),
+        .O(Rtemp[13]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[14]_i_1 
+       (.I0(R2[14]),
+        .I1(Rtemp1),
+        .I2(R0[14]),
+        .I3(Rtemp2),
+        .I4(R1[14]),
+        .O(Rtemp[14]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[15]_i_1 
+       (.I0(R2[15]),
+        .I1(Rtemp1),
+        .I2(R0[15]),
+        .I3(Rtemp2),
+        .I4(R1[15]),
+        .O(Rtemp[15]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[16]_i_1 
+       (.I0(R2[16]),
+        .I1(Rtemp1),
+        .I2(R0[16]),
+        .I3(Rtemp2),
+        .I4(R1[16]),
+        .O(Rtemp[16]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[17]_i_1 
+       (.I0(R2[17]),
+        .I1(Rtemp1),
+        .I2(R0[17]),
+        .I3(Rtemp2),
+        .I4(R1[17]),
+        .O(Rtemp[17]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[18]_i_1 
+       (.I0(R2[18]),
+        .I1(Rtemp1),
+        .I2(R0[18]),
+        .I3(Rtemp2),
+        .I4(R1[18]),
+        .O(Rtemp[18]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[19]_i_1 
+       (.I0(R2[19]),
+        .I1(Rtemp1),
+        .I2(R0[19]),
+        .I3(Rtemp2),
+        .I4(R1[19]),
+        .O(Rtemp[19]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[1]_i_1 
+       (.I0(R2[1]),
+        .I1(Rtemp1),
+        .I2(R0[1]),
+        .I3(Rtemp2),
+        .I4(R1[1]),
+        .O(Rtemp[1]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[20]_i_1 
+       (.I0(R2[20]),
+        .I1(Rtemp1),
+        .I2(R0[20]),
+        .I3(Rtemp2),
+        .I4(R1[20]),
+        .O(Rtemp[20]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[21]_i_1 
+       (.I0(R2[21]),
+        .I1(Rtemp1),
+        .I2(R0[21]),
+        .I3(Rtemp2),
+        .I4(R1[21]),
+        .O(Rtemp[21]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[22]_i_1 
+       (.I0(R2[22]),
+        .I1(Rtemp1),
+        .I2(R0[22]),
+        .I3(Rtemp2),
+        .I4(R1[22]),
+        .O(Rtemp[22]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[23]_i_1 
+       (.I0(R2[23]),
+        .I1(Rtemp1),
+        .I2(R0[23]),
+        .I3(Rtemp2),
+        .I4(R1[23]),
+        .O(Rtemp[23]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[24]_i_1 
+       (.I0(R2[24]),
+        .I1(Rtemp1),
+        .I2(R0[24]),
+        .I3(Rtemp2),
+        .I4(R1[24]),
+        .O(Rtemp[24]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[25]_i_1 
+       (.I0(R2[25]),
+        .I1(Rtemp1),
+        .I2(R0[25]),
+        .I3(Rtemp2),
+        .I4(R1[25]),
+        .O(Rtemp[25]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[26]_i_1 
+       (.I0(R2[26]),
+        .I1(Rtemp1),
+        .I2(R0[26]),
+        .I3(Rtemp2),
+        .I4(R1[26]),
+        .O(Rtemp[26]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[27]_i_1 
+       (.I0(R2[27]),
+        .I1(Rtemp1),
+        .I2(R0[27]),
+        .I3(Rtemp2),
+        .I4(R1[27]),
+        .O(Rtemp[27]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[28]_i_1 
+       (.I0(R2[28]),
+        .I1(Rtemp1),
+        .I2(R0[28]),
+        .I3(Rtemp2),
+        .I4(R1[28]),
+        .O(Rtemp[28]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[29]_i_1 
+       (.I0(R2[29]),
+        .I1(Rtemp1),
+        .I2(R0[29]),
+        .I3(Rtemp2),
+        .I4(R1[29]),
+        .O(Rtemp[29]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[2]_i_1 
+       (.I0(R2[2]),
+        .I1(Rtemp1),
+        .I2(R0[2]),
+        .I3(Rtemp2),
+        .I4(R1[2]),
+        .O(Rtemp[2]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[30]_i_1 
+       (.I0(R2[30]),
+        .I1(Rtemp1),
+        .I2(R0[30]),
+        .I3(Rtemp2),
+        .I4(R1[30]),
+        .O(Rtemp[30]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[31]_i_1 
+       (.I0(R2[31]),
+        .I1(Rtemp1),
+        .I2(R0[31]),
+        .I3(Rtemp2),
+        .I4(R1[31]),
+        .O(Rtemp[31]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \R_reg0[31]_i_2 
+       (.I0(A[0]),
+        .I1(Amax_reg0[0]),
+        .I2(A[1]),
+        .I3(Amax_reg0[1]),
+        .O(Rtemp1));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \R_reg0[31]_i_3 
+       (.I0(A[0]),
+        .I1(Amin_reg0[0]),
+        .I2(A[1]),
+        .I3(Amin_reg0[1]),
+        .O(Rtemp2));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[3]_i_1 
+       (.I0(R2[3]),
+        .I1(Rtemp1),
+        .I2(R0[3]),
+        .I3(Rtemp2),
+        .I4(R1[3]),
+        .O(Rtemp[3]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[4]_i_1 
+       (.I0(R2[4]),
+        .I1(Rtemp1),
+        .I2(R0[4]),
+        .I3(Rtemp2),
+        .I4(R1[4]),
+        .O(Rtemp[4]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[5]_i_1 
+       (.I0(R2[5]),
+        .I1(Rtemp1),
+        .I2(R0[5]),
+        .I3(Rtemp2),
+        .I4(R1[5]),
+        .O(Rtemp[5]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[6]_i_1 
+       (.I0(R2[6]),
+        .I1(Rtemp1),
+        .I2(R0[6]),
+        .I3(Rtemp2),
+        .I4(R1[6]),
+        .O(Rtemp[6]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[7]_i_1 
+       (.I0(R2[7]),
+        .I1(Rtemp1),
+        .I2(R0[7]),
+        .I3(Rtemp2),
+        .I4(R1[7]),
+        .O(Rtemp[7]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[8]_i_1 
+       (.I0(R2[8]),
+        .I1(Rtemp1),
+        .I2(R0[8]),
+        .I3(Rtemp2),
+        .I4(R1[8]),
+        .O(Rtemp[8]));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
+    \R_reg0[9]_i_1 
+       (.I0(R2[9]),
+        .I1(Rtemp1),
+        .I2(R0[9]),
+        .I3(Rtemp2),
+        .I4(R1[9]),
+        .O(Rtemp[9]));
   FDRE \R_reg0_reg[0] 
        (.C(clk),
         .CE(1'b1),
@@ -521,310 +801,6 @@ module simulate_RD_0_2_RD
         .D(R_reg0[9]),
         .Q(R[9]),
         .R(1'b0));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[0]_INST_0 
-       (.I0(R2[0]),
-        .I1(Rtemp1),
-        .I2(R0[0]),
-        .I3(Rtemp2),
-        .I4(R1[0]),
-        .O(Rtemp[0]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[10]_INST_0 
-       (.I0(R2[10]),
-        .I1(Rtemp1),
-        .I2(R0[10]),
-        .I3(Rtemp2),
-        .I4(R1[10]),
-        .O(Rtemp[10]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[11]_INST_0 
-       (.I0(R2[11]),
-        .I1(Rtemp1),
-        .I2(R0[11]),
-        .I3(Rtemp2),
-        .I4(R1[11]),
-        .O(Rtemp[11]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[12]_INST_0 
-       (.I0(R2[12]),
-        .I1(Rtemp1),
-        .I2(R0[12]),
-        .I3(Rtemp2),
-        .I4(R1[12]),
-        .O(Rtemp[12]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[13]_INST_0 
-       (.I0(R2[13]),
-        .I1(Rtemp1),
-        .I2(R0[13]),
-        .I3(Rtemp2),
-        .I4(R1[13]),
-        .O(Rtemp[13]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[14]_INST_0 
-       (.I0(R2[14]),
-        .I1(Rtemp1),
-        .I2(R0[14]),
-        .I3(Rtemp2),
-        .I4(R1[14]),
-        .O(Rtemp[14]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[15]_INST_0 
-       (.I0(R2[15]),
-        .I1(Rtemp1),
-        .I2(R0[15]),
-        .I3(Rtemp2),
-        .I4(R1[15]),
-        .O(Rtemp[15]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[16]_INST_0 
-       (.I0(R2[16]),
-        .I1(Rtemp1),
-        .I2(R0[16]),
-        .I3(Rtemp2),
-        .I4(R1[16]),
-        .O(Rtemp[16]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[17]_INST_0 
-       (.I0(R2[17]),
-        .I1(Rtemp1),
-        .I2(R0[17]),
-        .I3(Rtemp2),
-        .I4(R1[17]),
-        .O(Rtemp[17]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[18]_INST_0 
-       (.I0(R2[18]),
-        .I1(Rtemp1),
-        .I2(R0[18]),
-        .I3(Rtemp2),
-        .I4(R1[18]),
-        .O(Rtemp[18]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[19]_INST_0 
-       (.I0(R2[19]),
-        .I1(Rtemp1),
-        .I2(R0[19]),
-        .I3(Rtemp2),
-        .I4(R1[19]),
-        .O(Rtemp[19]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[1]_INST_0 
-       (.I0(R2[1]),
-        .I1(Rtemp1),
-        .I2(R0[1]),
-        .I3(Rtemp2),
-        .I4(R1[1]),
-        .O(Rtemp[1]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[20]_INST_0 
-       (.I0(R2[20]),
-        .I1(Rtemp1),
-        .I2(R0[20]),
-        .I3(Rtemp2),
-        .I4(R1[20]),
-        .O(Rtemp[20]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[21]_INST_0 
-       (.I0(R2[21]),
-        .I1(Rtemp1),
-        .I2(R0[21]),
-        .I3(Rtemp2),
-        .I4(R1[21]),
-        .O(Rtemp[21]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[22]_INST_0 
-       (.I0(R2[22]),
-        .I1(Rtemp1),
-        .I2(R0[22]),
-        .I3(Rtemp2),
-        .I4(R1[22]),
-        .O(Rtemp[22]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[23]_INST_0 
-       (.I0(R2[23]),
-        .I1(Rtemp1),
-        .I2(R0[23]),
-        .I3(Rtemp2),
-        .I4(R1[23]),
-        .O(Rtemp[23]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[24]_INST_0 
-       (.I0(R2[24]),
-        .I1(Rtemp1),
-        .I2(R0[24]),
-        .I3(Rtemp2),
-        .I4(R1[24]),
-        .O(Rtemp[24]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[25]_INST_0 
-       (.I0(R2[25]),
-        .I1(Rtemp1),
-        .I2(R0[25]),
-        .I3(Rtemp2),
-        .I4(R1[25]),
-        .O(Rtemp[25]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[26]_INST_0 
-       (.I0(R2[26]),
-        .I1(Rtemp1),
-        .I2(R0[26]),
-        .I3(Rtemp2),
-        .I4(R1[26]),
-        .O(Rtemp[26]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[27]_INST_0 
-       (.I0(R2[27]),
-        .I1(Rtemp1),
-        .I2(R0[27]),
-        .I3(Rtemp2),
-        .I4(R1[27]),
-        .O(Rtemp[27]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[28]_INST_0 
-       (.I0(R2[28]),
-        .I1(Rtemp1),
-        .I2(R0[28]),
-        .I3(Rtemp2),
-        .I4(R1[28]),
-        .O(Rtemp[28]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[29]_INST_0 
-       (.I0(R2[29]),
-        .I1(Rtemp1),
-        .I2(R0[29]),
-        .I3(Rtemp2),
-        .I4(R1[29]),
-        .O(Rtemp[29]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[2]_INST_0 
-       (.I0(R2[2]),
-        .I1(Rtemp1),
-        .I2(R0[2]),
-        .I3(Rtemp2),
-        .I4(R1[2]),
-        .O(Rtemp[2]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[30]_INST_0 
-       (.I0(R2[30]),
-        .I1(Rtemp1),
-        .I2(R0[30]),
-        .I3(Rtemp2),
-        .I4(R1[30]),
-        .O(Rtemp[30]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[31]_INST_0 
-       (.I0(R2[31]),
-        .I1(Rtemp1),
-        .I2(R0[31]),
-        .I3(Rtemp2),
-        .I4(R1[31]),
-        .O(Rtemp[31]));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \Rtemp[31]_INST_0_i_1 
-       (.I0(A[0]),
-        .I1(Amax_reg0[0]),
-        .I2(A[1]),
-        .I3(Amax_reg0[1]),
-        .O(Rtemp1));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \Rtemp[31]_INST_0_i_2 
-       (.I0(A[0]),
-        .I1(Amin_reg0[0]),
-        .I2(A[1]),
-        .I3(Amin_reg0[1]),
-        .O(Rtemp2));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[3]_INST_0 
-       (.I0(R2[3]),
-        .I1(Rtemp1),
-        .I2(R0[3]),
-        .I3(Rtemp2),
-        .I4(R1[3]),
-        .O(Rtemp[3]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[4]_INST_0 
-       (.I0(R2[4]),
-        .I1(Rtemp1),
-        .I2(R0[4]),
-        .I3(Rtemp2),
-        .I4(R1[4]),
-        .O(Rtemp[4]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[5]_INST_0 
-       (.I0(R2[5]),
-        .I1(Rtemp1),
-        .I2(R0[5]),
-        .I3(Rtemp2),
-        .I4(R1[5]),
-        .O(Rtemp[5]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[6]_INST_0 
-       (.I0(R2[6]),
-        .I1(Rtemp1),
-        .I2(R0[6]),
-        .I3(Rtemp2),
-        .I4(R1[6]),
-        .O(Rtemp[6]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[7]_INST_0 
-       (.I0(R2[7]),
-        .I1(Rtemp1),
-        .I2(R0[7]),
-        .I3(Rtemp2),
-        .I4(R1[7]),
-        .O(Rtemp[7]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[8]_INST_0 
-       (.I0(R2[8]),
-        .I1(Rtemp1),
-        .I2(R0[8]),
-        .I3(Rtemp2),
-        .I4(R1[8]),
-        .O(Rtemp[8]));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \Rtemp[9]_INST_0 
-       (.I0(R2[9]),
-        .I1(Rtemp1),
-        .I2(R0[9]),
-        .I3(Rtemp2),
-        .I4(R1[9]),
-        .O(Rtemp[9]));
 endmodule
 `ifndef GLBL
 `define GLBL

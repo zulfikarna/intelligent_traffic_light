@@ -1,0 +1,13 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|               clk_fpga_0 |               clk_fpga_0 |intellight_v2_i/axi_smc/inst/s00_entry_pipeline/s00_si_converter/inst/gen_axilite_conv.axilite_conv_inst/m_axi_rready_i_reg/D|
+|               clk_fpga_0 |               clk_fpga_0 |intellight_v2_i/axi_smc/inst/s00_entry_pipeline/s00_si_converter/inst/gen_axilite_conv.axilite_conv_inst/w_size_mask_reg[0]/D|
+|               clk_fpga_0 |               clk_fpga_0 |intellight_v2_i/axi_smc/inst/s00_entry_pipeline/s00_si_converter/inst/gen_axilite_conv.axilite_conv_inst/ar_cnt_reg[3]/D|
+|               clk_fpga_0 |               clk_fpga_0 |intellight_v2_i/axi_smc/inst/s00_entry_pipeline/s00_si_converter/inst/gen_axilite_conv.axilite_conv_inst/w_size_mask_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_0 |intellight_v2_i/axi_smc/inst/s00_entry_pipeline/s00_si_converter/inst/gen_axilite_conv.axilite_conv_inst/FSM_sequential_w_state_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_0 |intellight_v2_i/axi_smc/inst/s00_entry_pipeline/s00_transaction_regulator/inst/gen_endpoint.gen_w_singleorder.w_singleorder/gen_id_reg.s_single_aready_i_reg/D|
+|               clk_fpga_0 |               clk_fpga_0 |                intellight_v2_i/axi_smc/inst/s00_entry_pipeline/s00_mmu/inst/gen_endpoint.r_state_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_0 |intellight_v2_i/axi_smc/inst/s00_entry_pipeline/s00_si_converter/inst/gen_axilite_conv.axilite_conv_inst/aw_incr_reg[2]/D|
+|               clk_fpga_0 |               clk_fpga_0 |intellight_v2_i/axi_smc/inst/s00_entry_pipeline/s00_si_converter/inst/gen_axilite_conv.axilite_conv_inst/s_axi_awready_i_reg/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

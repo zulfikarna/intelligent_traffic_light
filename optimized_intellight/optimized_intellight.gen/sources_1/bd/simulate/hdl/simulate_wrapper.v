@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Tue Aug 16 13:33:07 2022
+//Date        : Mon Aug 22 12:52:18 2022
 //Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 //Command     : generate_target simulate_wrapper.bd
 //Design      : simulate_wrapper
@@ -12,9 +12,7 @@
 module simulate_wrapper
    (A,
     Amax,
-    Amax_reg0,
     Amin,
-    Amin_reg0,
     Arand,
     Asel,
     D0,
@@ -26,12 +24,14 @@ module simulate_wrapper
     R0,
     R1,
     R2,
-    R_reg0,
-    Rtemp,
     S,
     active,
     alpha,
     clk,
+    en0,
+    en1,
+    en2,
+    en3,
     finish,
     gamma,
     max_episode,
@@ -52,9 +52,7 @@ module simulate_wrapper
     wire_sc);
   output [1:0]A;
   output [1:0]Amax;
-  output [1:0]Amax_reg0;
   output [1:0]Amin;
-  output [1:0]Amin_reg0;
   output [1:0]Arand;
   output Asel;
   output [31:0]D0;
@@ -66,12 +64,14 @@ module simulate_wrapper
   input [31:0]R0;
   input [31:0]R1;
   input [31:0]R2;
-  output [31:0]R_reg0;
-  output [31:0]Rtemp;
   output [11:0]S;
   input active;
   input [2:0]alpha;
   input clk;
+  output en0;
+  output en1;
+  output en2;
+  output en3;
   output finish;
   input [2:0]gamma;
   input [15:0]max_episode;
@@ -93,9 +93,7 @@ module simulate_wrapper
 
   wire [1:0]A;
   wire [1:0]Amax;
-  wire [1:0]Amax_reg0;
   wire [1:0]Amin;
-  wire [1:0]Amin_reg0;
   wire [1:0]Arand;
   wire Asel;
   wire [31:0]D0;
@@ -107,12 +105,14 @@ module simulate_wrapper
   wire [31:0]R0;
   wire [31:0]R1;
   wire [31:0]R2;
-  wire [31:0]R_reg0;
-  wire [31:0]Rtemp;
   wire [11:0]S;
   wire active;
   wire [2:0]alpha;
   wire clk;
+  wire en0;
+  wire en1;
+  wire en2;
+  wire en3;
   wire finish;
   wire [2:0]gamma;
   wire [15:0]max_episode;
@@ -135,9 +135,7 @@ module simulate_wrapper
   simulate simulate_i
        (.A(A),
         .Amax(Amax),
-        .Amax_reg0(Amax_reg0),
         .Amin(Amin),
-        .Amin_reg0(Amin_reg0),
         .Arand(Arand),
         .Asel(Asel),
         .D0(D0),
@@ -149,12 +147,14 @@ module simulate_wrapper
         .R0(R0),
         .R1(R1),
         .R2(R2),
-        .R_reg0(R_reg0),
-        .Rtemp(Rtemp),
         .S(S),
         .active(active),
         .alpha(alpha),
         .clk(clk),
+        .en0(en0),
+        .en1(en1),
+        .en2(en2),
+        .en3(en3),
         .finish(finish),
         .gamma(gamma),
         .max_episode(max_episode),

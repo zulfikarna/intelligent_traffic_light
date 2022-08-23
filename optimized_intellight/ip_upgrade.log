@@ -1,6 +1,93 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Thu Aug 18 07:29:28 2022
+| Host         : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'intellight_intellight_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of intellight_intellight_0_0 (xilinx.com:user:intellight:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Thu Aug 18 07:16:26 2022
+| Host         : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'intellight_intellight_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of intellight_intellight_0_0 (xilinx.com:user:intellight:1.0) from (Rev. 5) to (Rev. 6)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'intellight_intellight_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'state'
+
+-Upgrade has added port 'rd_addr'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Thu Aug 18 07:08:17 2022
+| Host         : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'intellight_intellight_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of intellight_intellight_0_0 (xilinx.com:user:intellight:1.0) from (Rev. 4) to (Rev. 5)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'intellight_intellight_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'state'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
 | Date         : Tue Aug 16 13:23:15 2022
 | Host         : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

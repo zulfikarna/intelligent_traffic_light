@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Tue Aug 16 13:25:26 2022
+-- Date        : Thu Aug 18 07:31:50 2022
 -- Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_intellight_0_0/intellight_intellight_0_0_sim_netlist.vhdl
@@ -40,6 +40,7 @@ entity intellight_intellight_0_0_intellight_v1_0_S00_AXI is
     Q1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Q2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Q3 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    rd_addr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_arvalid : in STD_LOGIC;
     s00_axi_awvalid : in STD_LOGIC;
@@ -261,10 +262,6 @@ architecture STRUCTURE of intellight_intellight_0_0_intellight_v1_0_S00_AXI is
   signal sel0 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal slv_reg0 : STD_LOGIC_VECTOR ( 15 downto 7 );
   signal slv_reg10 : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal \slv_reg10[15]_i_1_n_0\ : STD_LOGIC;
-  signal \slv_reg10[23]_i_1_n_0\ : STD_LOGIC;
-  signal \slv_reg10[31]_i_1_n_0\ : STD_LOGIC;
-  signal \slv_reg10[7]_i_1_n_0\ : STD_LOGIC;
   signal slv_reg11 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \slv_reg11[15]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg11[23]_i_1_n_0\ : STD_LOGIC;
@@ -3385,311 +3382,259 @@ axi_wready_reg: unisim.vcomponents.FDRE
       Q => slv_reg0(9),
       R => SR(0)
     );
-\slv_reg10[15]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000008000"
-    )
-        port map (
-      I0 => \slv_reg_wren__0\,
-      I1 => p_0_in(3),
-      I2 => s00_axi_wstrb(1),
-      I3 => p_0_in(1),
-      I4 => p_0_in(0),
-      I5 => p_0_in(2),
-      O => \slv_reg10[15]_i_1_n_0\
-    );
-\slv_reg10[23]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000008000"
-    )
-        port map (
-      I0 => \slv_reg_wren__0\,
-      I1 => p_0_in(3),
-      I2 => s00_axi_wstrb(2),
-      I3 => p_0_in(1),
-      I4 => p_0_in(0),
-      I5 => p_0_in(2),
-      O => \slv_reg10[23]_i_1_n_0\
-    );
-\slv_reg10[31]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000008000"
-    )
-        port map (
-      I0 => \slv_reg_wren__0\,
-      I1 => p_0_in(3),
-      I2 => s00_axi_wstrb(3),
-      I3 => p_0_in(1),
-      I4 => p_0_in(0),
-      I5 => p_0_in(2),
-      O => \slv_reg10[31]_i_1_n_0\
-    );
-\slv_reg10[7]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000008000"
-    )
-        port map (
-      I0 => \slv_reg_wren__0\,
-      I1 => p_0_in(3),
-      I2 => s00_axi_wstrb(0),
-      I3 => p_0_in(1),
-      I4 => p_0_in(0),
-      I5 => p_0_in(2),
-      O => \slv_reg10[7]_i_1_n_0\
-    );
 \slv_reg10_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[7]_i_1_n_0\,
-      D => s00_axi_wdata(0),
+      CE => '1',
+      D => rd_addr(0),
       Q => slv_reg10(0),
       R => SR(0)
     );
 \slv_reg10_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[15]_i_1_n_0\,
-      D => s00_axi_wdata(10),
+      CE => '1',
+      D => rd_addr(10),
       Q => slv_reg10(10),
       R => SR(0)
     );
 \slv_reg10_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[15]_i_1_n_0\,
-      D => s00_axi_wdata(11),
+      CE => '1',
+      D => rd_addr(11),
       Q => slv_reg10(11),
       R => SR(0)
     );
 \slv_reg10_reg[12]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[15]_i_1_n_0\,
-      D => s00_axi_wdata(12),
+      CE => '1',
+      D => rd_addr(12),
       Q => slv_reg10(12),
       R => SR(0)
     );
 \slv_reg10_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[15]_i_1_n_0\,
-      D => s00_axi_wdata(13),
+      CE => '1',
+      D => rd_addr(13),
       Q => slv_reg10(13),
       R => SR(0)
     );
 \slv_reg10_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[15]_i_1_n_0\,
-      D => s00_axi_wdata(14),
+      CE => '1',
+      D => rd_addr(14),
       Q => slv_reg10(14),
       R => SR(0)
     );
 \slv_reg10_reg[15]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[15]_i_1_n_0\,
-      D => s00_axi_wdata(15),
+      CE => '1',
+      D => rd_addr(15),
       Q => slv_reg10(15),
       R => SR(0)
     );
 \slv_reg10_reg[16]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[23]_i_1_n_0\,
-      D => s00_axi_wdata(16),
+      CE => '1',
+      D => rd_addr(16),
       Q => slv_reg10(16),
       R => SR(0)
     );
 \slv_reg10_reg[17]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[23]_i_1_n_0\,
-      D => s00_axi_wdata(17),
+      CE => '1',
+      D => rd_addr(17),
       Q => slv_reg10(17),
       R => SR(0)
     );
 \slv_reg10_reg[18]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[23]_i_1_n_0\,
-      D => s00_axi_wdata(18),
+      CE => '1',
+      D => rd_addr(18),
       Q => slv_reg10(18),
       R => SR(0)
     );
 \slv_reg10_reg[19]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[23]_i_1_n_0\,
-      D => s00_axi_wdata(19),
+      CE => '1',
+      D => rd_addr(19),
       Q => slv_reg10(19),
       R => SR(0)
     );
 \slv_reg10_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[7]_i_1_n_0\,
-      D => s00_axi_wdata(1),
+      CE => '1',
+      D => rd_addr(1),
       Q => slv_reg10(1),
       R => SR(0)
     );
 \slv_reg10_reg[20]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[23]_i_1_n_0\,
-      D => s00_axi_wdata(20),
+      CE => '1',
+      D => rd_addr(20),
       Q => slv_reg10(20),
       R => SR(0)
     );
 \slv_reg10_reg[21]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[23]_i_1_n_0\,
-      D => s00_axi_wdata(21),
+      CE => '1',
+      D => rd_addr(21),
       Q => slv_reg10(21),
       R => SR(0)
     );
 \slv_reg10_reg[22]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[23]_i_1_n_0\,
-      D => s00_axi_wdata(22),
+      CE => '1',
+      D => rd_addr(22),
       Q => slv_reg10(22),
       R => SR(0)
     );
 \slv_reg10_reg[23]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[23]_i_1_n_0\,
-      D => s00_axi_wdata(23),
+      CE => '1',
+      D => rd_addr(23),
       Q => slv_reg10(23),
       R => SR(0)
     );
 \slv_reg10_reg[24]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[31]_i_1_n_0\,
-      D => s00_axi_wdata(24),
+      CE => '1',
+      D => rd_addr(24),
       Q => slv_reg10(24),
       R => SR(0)
     );
 \slv_reg10_reg[25]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[31]_i_1_n_0\,
-      D => s00_axi_wdata(25),
+      CE => '1',
+      D => rd_addr(25),
       Q => slv_reg10(25),
       R => SR(0)
     );
 \slv_reg10_reg[26]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[31]_i_1_n_0\,
-      D => s00_axi_wdata(26),
+      CE => '1',
+      D => rd_addr(26),
       Q => slv_reg10(26),
       R => SR(0)
     );
 \slv_reg10_reg[27]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[31]_i_1_n_0\,
-      D => s00_axi_wdata(27),
+      CE => '1',
+      D => rd_addr(27),
       Q => slv_reg10(27),
       R => SR(0)
     );
 \slv_reg10_reg[28]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[31]_i_1_n_0\,
-      D => s00_axi_wdata(28),
+      CE => '1',
+      D => rd_addr(28),
       Q => slv_reg10(28),
       R => SR(0)
     );
 \slv_reg10_reg[29]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[31]_i_1_n_0\,
-      D => s00_axi_wdata(29),
+      CE => '1',
+      D => rd_addr(29),
       Q => slv_reg10(29),
       R => SR(0)
     );
 \slv_reg10_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[7]_i_1_n_0\,
-      D => s00_axi_wdata(2),
+      CE => '1',
+      D => rd_addr(2),
       Q => slv_reg10(2),
       R => SR(0)
     );
 \slv_reg10_reg[30]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[31]_i_1_n_0\,
-      D => s00_axi_wdata(30),
+      CE => '1',
+      D => rd_addr(30),
       Q => slv_reg10(30),
       R => SR(0)
     );
 \slv_reg10_reg[31]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[31]_i_1_n_0\,
-      D => s00_axi_wdata(31),
+      CE => '1',
+      D => rd_addr(31),
       Q => slv_reg10(31),
       R => SR(0)
     );
 \slv_reg10_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[7]_i_1_n_0\,
-      D => s00_axi_wdata(3),
+      CE => '1',
+      D => rd_addr(3),
       Q => slv_reg10(3),
       R => SR(0)
     );
 \slv_reg10_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[7]_i_1_n_0\,
-      D => s00_axi_wdata(4),
+      CE => '1',
+      D => rd_addr(4),
       Q => slv_reg10(4),
       R => SR(0)
     );
 \slv_reg10_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[7]_i_1_n_0\,
-      D => s00_axi_wdata(5),
+      CE => '1',
+      D => rd_addr(5),
       Q => slv_reg10(5),
       R => SR(0)
     );
 \slv_reg10_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[7]_i_1_n_0\,
-      D => s00_axi_wdata(6),
+      CE => '1',
+      D => rd_addr(6),
       Q => slv_reg10(6),
       R => SR(0)
     );
 \slv_reg10_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[7]_i_1_n_0\,
-      D => s00_axi_wdata(7),
+      CE => '1',
+      D => rd_addr(7),
       Q => slv_reg10(7),
       R => SR(0)
     );
 \slv_reg10_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[15]_i_1_n_0\,
-      D => s00_axi_wdata(8),
+      CE => '1',
+      D => rd_addr(8),
       Q => slv_reg10(8),
       R => SR(0)
     );
 \slv_reg10_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg10[15]_i_1_n_0\,
-      D => s00_axi_wdata(9),
+      CE => '1',
+      D => rd_addr(9),
       Q => slv_reg10(9),
       R => SR(0)
     );
@@ -7833,6 +7778,7 @@ entity intellight_intellight_0_0_intellight_v1_0 is
     Q1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Q2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Q3 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    rd_addr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_awvalid : in STD_LOGIC;
     s00_axi_wvalid : in STD_LOGIC;
@@ -7918,6 +7864,7 @@ intellight_v1_0_S00_AXI_inst: entity work.intellight_intellight_0_0_intellight_v
       aw_en_reg_1 => aw_en_i_1_n_0,
       axi_bvalid_reg_0 => axi_bvalid_i_1_n_0,
       axi_rvalid_reg_0 => axi_rvalid_i_1_n_0,
+      rd_addr(31 downto 0) => rd_addr(31 downto 0),
       s00_axi_aclk => s00_axi_aclk,
       s00_axi_araddr(3 downto 0) => s00_axi_araddr(3 downto 0),
       s00_axi_arvalid => s00_axi_arvalid,
@@ -7962,6 +7909,7 @@ entity intellight_intellight_0_0 is
     Q1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Q2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Q3 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    rd_addr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -8047,6 +7995,7 @@ inst: entity work.intellight_intellight_0_0_intellight_v1_0
       S_AXI_ARREADY => s00_axi_arready,
       S_AXI_AWREADY => s00_axi_awready,
       S_AXI_WREADY => s00_axi_wready,
+      rd_addr(31 downto 0) => rd_addr(31 downto 0),
       s00_axi_aclk => s00_axi_aclk,
       s00_axi_araddr(3 downto 0) => s00_axi_araddr(5 downto 2),
       s00_axi_aresetn => s00_axi_aresetn,

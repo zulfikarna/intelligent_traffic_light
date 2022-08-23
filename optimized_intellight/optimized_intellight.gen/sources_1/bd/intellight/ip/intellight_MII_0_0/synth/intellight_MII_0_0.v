@@ -66,7 +66,11 @@ module intellight_MII_0_0 (
   wen0,
   wen1,
   wen2,
-  wen3
+  wen3,
+  en0,
+  en1,
+  en2,
+  en3
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
@@ -84,6 +88,10 @@ output wire [3 : 0] wen0;
 output wire [3 : 0] wen1;
 output wire [3 : 0] wen2;
 output wire [3 : 0] wen3;
+output wire en0;
+output wire en1;
+output wire en2;
+output wire en3;
 
   MII inst (
     .clk(clk),
@@ -96,6 +104,10 @@ output wire [3 : 0] wen3;
     .wen0(wen0),
     .wen1(wen1),
     .wen2(wen2),
-    .wen3(wen3)
+    .wen3(wen3),
+    .en0(en0),
+    .en1(en1),
+    .en2(en2),
+    .en3(en3)
   );
 endmodule

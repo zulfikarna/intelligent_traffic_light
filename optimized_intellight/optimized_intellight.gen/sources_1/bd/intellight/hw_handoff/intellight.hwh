@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Aug 16 14:16:08 2022" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Aug 22 17:33:51 2022" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="www.digilentinc.com:pynq-z1:part0:1.0" DEVICE="7z020" NAME="intellight" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -7,6 +7,21 @@
     <PORT DIR="O" NAME="finish" SIGIS="undef" SIGNAME="CU_0_finish">
       <CONNECTIONS>
         <CONNECTION INSTANCE="CU_0" PORT="finish"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="active" SIGIS="undef" SIGNAME="intellight_0_active">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="intellight_0" PORT="active"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="start" SIGIS="undef" SIGNAME="intellight_0_start">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="intellight_0" PORT="start"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="idle" SIGIS="undef" SIGNAME="CU_0_idle">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="CU_0" PORT="idle"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
@@ -112,21 +127,6 @@
     <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="active" SIGIS="undef" SIGNAME="intellight_0_active">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="intellight_0" PORT="active"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="start" SIGIS="undef" SIGNAME="intellight_0_start">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="intellight_0" PORT="start"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="idle" SIGIS="undef" SIGNAME="CU_0_idle">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="CU_0" PORT="idle"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -376,9 +376,9 @@
             <CONNECTION INSTANCE="rst_clk_100M" PORT="peripheral_reset"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="Action_RAM_const_1_dout">
+        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="MII_0_en0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Action_RAM_const_1" PORT="dout"/>
+            <CONNECTION INSTANCE="MII_0" PORT="en0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="web" RIGHT="0" SIGIS="undef" SIGNAME="MII_0_wen0">
@@ -634,9 +634,9 @@
             <CONNECTION INSTANCE="rst_clk_100M" PORT="peripheral_reset"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="Action_RAM_const_1_dout">
+        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="MII_0_en1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Action_RAM_const_1" PORT="dout"/>
+            <CONNECTION INSTANCE="MII_0" PORT="en1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="web" RIGHT="0" SIGIS="undef" SIGNAME="MII_0_wen1">
@@ -892,9 +892,9 @@
             <CONNECTION INSTANCE="rst_clk_100M" PORT="peripheral_reset"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="Action_RAM_const_1_dout">
+        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="MII_0_en2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Action_RAM_const_1" PORT="dout"/>
+            <CONNECTION INSTANCE="MII_0" PORT="en2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="web" RIGHT="0" SIGIS="undef" SIGNAME="MII_0_wen2">
@@ -1150,9 +1150,9 @@
             <CONNECTION INSTANCE="rst_clk_100M" PORT="peripheral_reset"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="Action_RAM_const_1_dout">
+        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="MII_0_en3">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Action_RAM_const_1" PORT="dout"/>
+            <CONNECTION INSTANCE="MII_0" PORT="en3"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="web" RIGHT="0" SIGIS="undef" SIGNAME="MII_0_wen3">
@@ -1242,13 +1242,9 @@
       <PORTS>
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Action_RAM_const_1_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Action_RAM_Action_RAM0" PORT="enb"/>
             <CONNECTION INSTANCE="Action_RAM_Action_RAM0" PORT="ena"/>
-            <CONNECTION INSTANCE="Action_RAM_Action_RAM1" PORT="enb"/>
             <CONNECTION INSTANCE="Action_RAM_Action_RAM1" PORT="ena"/>
-            <CONNECTION INSTANCE="Action_RAM_Action_RAM2" PORT="enb"/>
             <CONNECTION INSTANCE="Action_RAM_Action_RAM2" PORT="ena"/>
-            <CONNECTION INSTANCE="Action_RAM_Action_RAM3" PORT="enb"/>
             <CONNECTION INSTANCE="Action_RAM_Action_RAM3" PORT="ena"/>
           </CONNECTIONS>
         </PORT>
@@ -1373,6 +1369,7 @@
             <CONNECTION INSTANCE="Action_RAM_Action_RAM1" PORT="addra"/>
             <CONNECTION INSTANCE="Action_RAM_Action_RAM2" PORT="addra"/>
             <CONNECTION INSTANCE="Action_RAM_Action_RAM3" PORT="addra"/>
+            <CONNECTION INSTANCE="intellight_0" PORT="rd_addr"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="WR_ADDR" RIGHT="0" SIGIS="undef" SIGNAME="MII_0_WR_ADDR">
@@ -1416,6 +1413,26 @@
             <CONNECTION INSTANCE="PL_RAM_RAM3" PORT="web"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="en0" SIGIS="undef" SIGNAME="MII_0_en0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Action_RAM_Action_RAM0" PORT="enb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="en1" SIGIS="undef" SIGNAME="MII_0_en1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Action_RAM_Action_RAM1" PORT="enb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="en2" SIGIS="undef" SIGNAME="MII_0_en2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Action_RAM_Action_RAM2" PORT="enb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="en3" SIGIS="undef" SIGNAME="MII_0_en3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Action_RAM_Action_RAM3" PORT="enb"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -1451,15 +1468,15 @@
             <CONNECTION INSTANCE="CU_0" PORT="Asel"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="active" SIGIS="undef" SIGNAME="intellight_0_active">
+        <PORT DIR="I" NAME="learning" SIGIS="undef" SIGNAME="intellight_0_start">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="intellight_0" PORT="active"/>
+            <CONNECTION INSTANCE="intellight_0" PORT="start"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="Amax" RIGHT="0" SIGIS="undef" SIGNAME="PG_0_Amax">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="RD_0" PORT="Amax"/>
             <CONNECTION INSTANCE="QA_0" PORT="Amax"/>
+            <CONNECTION INSTANCE="RD_0" PORT="Amax"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="Amin" RIGHT="0" SIGIS="undef" SIGNAME="PG_0_Amin">
@@ -1469,9 +1486,9 @@
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="PG_0_A">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="QA_0" PORT="A"/>
             <CONNECTION INSTANCE="RD_0" PORT="A"/>
             <CONNECTION INSTANCE="MII_0" PORT="A"/>
-            <CONNECTION INSTANCE="QA_0" PORT="A"/>
             <CONNECTION INSTANCE="SD_0" PORT="A"/>
           </CONNECTIONS>
         </PORT>
@@ -5170,10 +5187,6 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="31" NAME="Rtemp" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="R_reg0" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="Amax_reg0" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="Amin_reg0" RIGHT="0" SIGIS="undef"/>
         <PORT CLKFREQUENCY="150000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
@@ -5239,9 +5252,9 @@
             <CONNECTION INSTANCE="rst_clk_100M" PORT="peripheral_reset"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="active" SIGIS="undef" SIGNAME="intellight_0_active">
+        <PORT DIR="I" NAME="learning" SIGIS="undef" SIGNAME="intellight_0_start">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="intellight_0" PORT="active"/>
+            <CONNECTION INSTANCE="intellight_0" PORT="start"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="1" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="PG_0_A">
@@ -5261,8 +5274,8 @@
         </PORT>
         <PORT DIR="O" LEFT="11" NAME="S" RIGHT="0" SIGIS="undef" SIGNAME="SD_0_S">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="PG_0" PORT="S"/>
             <CONNECTION INSTANCE="MII_0" PORT="S"/>
+            <CONNECTION INSTANCE="PG_0" PORT="S"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="level0" RIGHT="0" SIGIS="undef"/>
@@ -8459,7 +8472,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/intellight_0" HWVERSION="1.0" INSTANCE="intellight_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="intellight" VLNV="xilinx.com:user:intellight:1.0">
+    <MODULE COREREVISION="7" FULLNAME="/intellight_0" HWVERSION="1.0" INSTANCE="intellight_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="intellight" VLNV="xilinx.com:user:intellight:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -8477,13 +8490,13 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="start"/>
             <CONNECTION INSTANCE="CU_0" PORT="start"/>
+            <CONNECTION INSTANCE="PG_0" PORT="learning"/>
+            <CONNECTION INSTANCE="SD_0" PORT="learning"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="active" SIGIS="undef" SIGNAME="intellight_0_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="PG_0" PORT="active"/>
             <CONNECTION INSTANCE="External_Ports" PORT="active"/>
-            <CONNECTION INSTANCE="SD_0" PORT="active"/>
             <CONNECTION INSTANCE="CU_0" PORT="active"/>
           </CONNECTIONS>
         </PORT>
@@ -8550,6 +8563,11 @@
         <PORT DIR="I" LEFT="31" NAME="Q3" RIGHT="0" SIGIS="undef" SIGNAME="Action_RAM_Action_RAM3_douta">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Action_RAM_Action_RAM3" PORT="douta"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="rd_addr" RIGHT="0" SIGIS="undef" SIGNAME="MII_0_RD_ADDR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MII_0" PORT="RD_ADDR"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="150000000" DIR="I" NAME="s00_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
@@ -9884,13 +9902,13 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
             <CONNECTION INSTANCE="rst_clk_100M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="axi_intc_0" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="RD_0" PORT="clk"/>
-            <CONNECTION INSTANCE="PG_0" PORT="clk"/>
-            <CONNECTION INSTANCE="MII_0" PORT="clk"/>
             <CONNECTION INSTANCE="QA_0" PORT="clk"/>
+            <CONNECTION INSTANCE="RD_0" PORT="clk"/>
+            <CONNECTION INSTANCE="MII_0" PORT="clk"/>
             <CONNECTION INSTANCE="intellight_0" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="SD_0" PORT="clk"/>
+            <CONNECTION INSTANCE="PG_0" PORT="clk"/>
             <CONNECTION INSTANCE="CU_0" PORT="clk"/>
+            <CONNECTION INSTANCE="SD_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -10196,12 +10214,12 @@
             <CONNECTION INSTANCE="PL_RAM_RAM1" PORT="rstb"/>
             <CONNECTION INSTANCE="PL_RAM_RAM2" PORT="rstb"/>
             <CONNECTION INSTANCE="PL_RAM_RAM3" PORT="rstb"/>
-            <CONNECTION INSTANCE="RD_0" PORT="rst"/>
-            <CONNECTION INSTANCE="PG_0" PORT="rst"/>
-            <CONNECTION INSTANCE="MII_0" PORT="rst"/>
             <CONNECTION INSTANCE="QA_0" PORT="rst"/>
-            <CONNECTION INSTANCE="SD_0" PORT="rst"/>
+            <CONNECTION INSTANCE="RD_0" PORT="rst"/>
+            <CONNECTION INSTANCE="MII_0" PORT="rst"/>
+            <CONNECTION INSTANCE="PG_0" PORT="rst"/>
             <CONNECTION INSTANCE="CU_0" PORT="rst"/>
+            <CONNECTION INSTANCE="SD_0" PORT="rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>

@@ -14,7 +14,7 @@ module PG(
     input wire [11:0] S,
     input wire [1:0] Arand,
     input wire Asel,
-    input wire active,
+    input wire learning,
     output wire [1:0] Amax,
     output wire [1:0] Amin,
     output wire [1:0] A
@@ -66,7 +66,7 @@ module PG(
         Asel_reg <= Asel;
         Arand_reg <= Arand;
     end
-    assign A = ((!Asel_reg)&(!active))? Agreed : Arand_reg;
+    assign A = ((Asel_reg)&(learning))? Agreed : Arand_reg;
     
 //    wire [1:0] Atemp;
 //    enabler_2bit en0(.en(en),

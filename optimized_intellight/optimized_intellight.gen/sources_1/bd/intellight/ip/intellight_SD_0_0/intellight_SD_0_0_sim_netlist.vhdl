@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Tue Aug 16 13:53:22 2022
+-- Date        : Mon Aug 22 17:37:08 2022
 -- Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_SD_0_0/intellight_SD_0_0_sim_netlist.vhdl
@@ -28,8 +28,8 @@ entity intellight_SD_0_0_SD is
     rst : in STD_LOGIC;
     clk : in STD_LOGIC;
     A : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    traffic : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    active : in STD_LOGIC
+    learning : in STD_LOGIC;
+    traffic : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of intellight_SD_0_0_SD : entity is "SD";
@@ -57,13 +57,13 @@ architecture STRUCTURE of intellight_SD_0_0_SD is
   attribute SOFT_HLUTNM of \S[7]_INST_0\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of \S[8]_INST_0\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \S[9]_INST_0\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \level0[1]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \level0[0]_INST_0\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \level0[2]_INST_0\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \level1[0]_INST_0\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \level1[1]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \level1[2]_INST_0\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \level2[0]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \level2[1]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \level3[1]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \level2[2]_INST_0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \level3[0]_INST_0\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \level3[2]_INST_0\ : label is "soft_lutpair2";
 begin
   \L0_reg[2]_0\(2 downto 0) <= \^l0_reg[2]_0\(2 downto 0);
@@ -175,9 +175,9 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => traffic(0),
-      I1 => active,
-      I2 => \^l0_reg[2]_0\(0),
+      I0 => \^l0_reg[2]_0\(0),
+      I1 => learning,
+      I2 => traffic(0),
       O => S(0)
     );
 \S[10]_INST_0\: unisim.vcomponents.LUT3
@@ -185,9 +185,9 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => traffic(10),
-      I1 => active,
-      I2 => \^l3_reg[2]_0\(1),
+      I0 => \^l3_reg[2]_0\(1),
+      I1 => learning,
+      I2 => traffic(10),
       O => S(10)
     );
 \S[11]_INST_0\: unisim.vcomponents.LUT3
@@ -195,9 +195,9 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => traffic(11),
-      I1 => active,
-      I2 => \^l3_reg[2]_0\(2),
+      I0 => \^l3_reg[2]_0\(2),
+      I1 => learning,
+      I2 => traffic(11),
       O => S(11)
     );
 \S[1]_INST_0\: unisim.vcomponents.LUT3
@@ -205,9 +205,9 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => traffic(1),
-      I1 => active,
-      I2 => \^l0_reg[2]_0\(1),
+      I0 => \^l0_reg[2]_0\(1),
+      I1 => learning,
+      I2 => traffic(1),
       O => S(1)
     );
 \S[2]_INST_0\: unisim.vcomponents.LUT3
@@ -215,9 +215,9 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => traffic(2),
-      I1 => active,
-      I2 => \^l0_reg[2]_0\(2),
+      I0 => \^l0_reg[2]_0\(2),
+      I1 => learning,
+      I2 => traffic(2),
       O => S(2)
     );
 \S[3]_INST_0\: unisim.vcomponents.LUT3
@@ -225,9 +225,9 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => traffic(3),
-      I1 => active,
-      I2 => \^q\(0),
+      I0 => \^q\(0),
+      I1 => learning,
+      I2 => traffic(3),
       O => S(3)
     );
 \S[4]_INST_0\: unisim.vcomponents.LUT3
@@ -235,9 +235,9 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => traffic(4),
-      I1 => active,
-      I2 => \^q\(1),
+      I0 => \^q\(1),
+      I1 => learning,
+      I2 => traffic(4),
       O => S(4)
     );
 \S[5]_INST_0\: unisim.vcomponents.LUT3
@@ -245,9 +245,9 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => traffic(5),
-      I1 => active,
-      I2 => \^q\(2),
+      I0 => \^q\(2),
+      I1 => learning,
+      I2 => traffic(5),
       O => S(5)
     );
 \S[6]_INST_0\: unisim.vcomponents.LUT3
@@ -255,9 +255,9 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => traffic(6),
-      I1 => active,
-      I2 => \^l2_reg[2]_0\(0),
+      I0 => \^l2_reg[2]_0\(0),
+      I1 => learning,
+      I2 => traffic(6),
       O => S(6)
     );
 \S[7]_INST_0\: unisim.vcomponents.LUT3
@@ -265,9 +265,9 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => traffic(7),
-      I1 => active,
-      I2 => \^l2_reg[2]_0\(1),
+      I0 => \^l2_reg[2]_0\(1),
+      I1 => learning,
+      I2 => traffic(7),
       O => S(7)
     );
 \S[8]_INST_0\: unisim.vcomponents.LUT3
@@ -275,9 +275,9 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => traffic(8),
-      I1 => active,
-      I2 => \^l2_reg[2]_0\(2),
+      I0 => \^l2_reg[2]_0\(2),
+      I1 => learning,
+      I2 => traffic(8),
       O => S(8)
     );
 \S[9]_INST_0\: unisim.vcomponents.LUT3
@@ -285,153 +285,153 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => traffic(9),
-      I1 => active,
-      I2 => \^l3_reg[2]_0\(0),
+      I0 => \^l3_reg[2]_0\(0),
+      I1 => learning,
+      I2 => traffic(9),
       O => S(9)
     );
 \level0[0]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"F111EEEE"
+      INIT => X"DDDF5550"
     )
         port map (
-      I0 => A(0),
-      I1 => A(1),
-      I2 => \^l0_reg[2]_0\(1),
-      I3 => \^l0_reg[2]_0\(2),
-      I4 => \^l0_reg[2]_0\(0),
+      I0 => \^l0_reg[2]_0\(0),
+      I1 => \^l0_reg[2]_0\(2),
+      I2 => A(0),
+      I3 => A(1),
+      I4 => \^l0_reg[2]_0\(1),
       O => \^level0\(0)
     );
 \level0[1]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FEF01EF0"
+      INIT => X"EEEF6660"
     )
         port map (
-      I0 => A(0),
-      I1 => A(1),
-      I2 => \^l0_reg[2]_0\(1),
-      I3 => \^l0_reg[2]_0\(0),
+      I0 => \^l0_reg[2]_0\(1),
+      I1 => \^l0_reg[2]_0\(0),
+      I2 => A(0),
+      I3 => A(1),
       I4 => \^l0_reg[2]_0\(2),
       O => \^level0\(1)
     );
 \level0[2]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"EEEEF111"
+      INIT => X"EAEAEA00"
     )
         port map (
-      I0 => A(0),
-      I1 => A(1),
+      I0 => \^l0_reg[2]_0\(2),
+      I1 => \^l0_reg[2]_0\(0),
       I2 => \^l0_reg[2]_0\(1),
-      I3 => \^l0_reg[2]_0\(0),
-      I4 => \^l0_reg[2]_0\(2),
+      I3 => A(1),
+      I4 => A(0),
       O => \^level0\(2)
     );
 \level1[0]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"F222DDDD"
+      INIT => X"DFDD5055"
     )
         port map (
-      I0 => A(0),
-      I1 => A(1),
-      I2 => \^q\(1),
-      I3 => \^q\(2),
-      I4 => \^q\(0),
+      I0 => \^q\(0),
+      I1 => \^q\(2),
+      I2 => A(1),
+      I3 => A(0),
+      I4 => \^q\(1),
       O => \^level1\(0)
     );
 \level1[1]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FDF02DF0"
+      INIT => X"EFEE6066"
     )
         port map (
-      I0 => A(0),
-      I1 => A(1),
-      I2 => \^q\(1),
-      I3 => \^q\(0),
+      I0 => \^q\(1),
+      I1 => \^q\(0),
+      I2 => A(1),
+      I3 => A(0),
       I4 => \^q\(2),
       O => \^level1\(1)
     );
 \level1[2]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"DDDDF222"
+      INIT => X"EAEA00EA"
     )
         port map (
-      I0 => A(0),
-      I1 => A(1),
+      I0 => \^q\(2),
+      I1 => \^q\(0),
       I2 => \^q\(1),
-      I3 => \^q\(0),
-      I4 => \^q\(2),
+      I3 => A(0),
+      I4 => A(1),
       O => \^level1\(2)
     );
 \level2[0]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"F222DDDD"
+      INIT => X"DFDD5055"
     )
         port map (
-      I0 => A(1),
-      I1 => A(0),
-      I2 => \^l2_reg[2]_0\(1),
-      I3 => \^l2_reg[2]_0\(2),
-      I4 => \^l2_reg[2]_0\(0),
+      I0 => \^l2_reg[2]_0\(0),
+      I1 => \^l2_reg[2]_0\(2),
+      I2 => A(0),
+      I3 => A(1),
+      I4 => \^l2_reg[2]_0\(1),
       O => \^level2\(0)
     );
 \level2[1]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FDF02DF0"
+      INIT => X"EFEE6066"
     )
         port map (
-      I0 => A(1),
-      I1 => A(0),
-      I2 => \^l2_reg[2]_0\(1),
-      I3 => \^l2_reg[2]_0\(0),
+      I0 => \^l2_reg[2]_0\(1),
+      I1 => \^l2_reg[2]_0\(0),
+      I2 => A(0),
+      I3 => A(1),
       I4 => \^l2_reg[2]_0\(2),
       O => \^level2\(1)
     );
 \level2[2]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"DDDDF222"
+      INIT => X"EAEA00EA"
     )
         port map (
-      I0 => A(1),
-      I1 => A(0),
+      I0 => \^l2_reg[2]_0\(2),
+      I1 => \^l2_reg[2]_0\(0),
       I2 => \^l2_reg[2]_0\(1),
-      I3 => \^l2_reg[2]_0\(0),
-      I4 => \^l2_reg[2]_0\(2),
+      I3 => A(1),
+      I4 => A(0),
       O => \^level2\(2)
     );
 \level3[0]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"F8887777"
+      INIT => X"FDDD0555"
     )
         port map (
-      I0 => A(0),
-      I1 => A(1),
-      I2 => \^l3_reg[2]_0\(1),
-      I3 => \^l3_reg[2]_0\(2),
-      I4 => \^l3_reg[2]_0\(0),
+      I0 => \^l3_reg[2]_0\(0),
+      I1 => \^l3_reg[2]_0\(2),
+      I2 => A(0),
+      I3 => A(1),
+      I4 => \^l3_reg[2]_0\(1),
       O => \^level3\(0)
     );
 \level3[1]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"F7F087F0"
+      INIT => X"FEEE0666"
     )
         port map (
-      I0 => A(0),
-      I1 => A(1),
-      I2 => \^l3_reg[2]_0\(1),
-      I3 => \^l3_reg[2]_0\(0),
+      I0 => \^l3_reg[2]_0\(1),
+      I1 => \^l3_reg[2]_0\(0),
+      I2 => A(0),
+      I3 => A(1),
       I4 => \^l3_reg[2]_0\(2),
       O => \^level3\(1)
     );
 \level3[2]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"7777F888"
+      INIT => X"00EAEAEA"
     )
         port map (
-      I0 => A(0),
-      I1 => A(1),
+      I0 => \^l3_reg[2]_0\(2),
+      I1 => \^l3_reg[2]_0\(0),
       I2 => \^l3_reg[2]_0\(1),
-      I3 => \^l3_reg[2]_0\(0),
-      I4 => \^l3_reg[2]_0\(2),
+      I3 => A(1),
+      I4 => A(0),
       O => \^level3\(2)
     );
 end STRUCTURE;
@@ -443,7 +443,7 @@ entity intellight_SD_0_0 is
   port (
     clk : in STD_LOGIC;
     rst : in STD_LOGIC;
-    active : in STD_LOGIC;
+    learning : in STD_LOGIC;
     A : in STD_LOGIC_VECTOR ( 1 downto 0 );
     S0 : in STD_LOGIC_VECTOR ( 11 downto 0 );
     traffic : in STD_LOGIC_VECTOR ( 11 downto 0 );
@@ -485,8 +485,8 @@ inst: entity work.intellight_SD_0_0_SD
       \L3_reg[2]_0\(2 downto 0) => L3(2 downto 0),
       Q(2 downto 0) => L1(2 downto 0),
       S(11 downto 0) => S(11 downto 0),
-      active => active,
       clk => clk,
+      learning => learning,
       level0(2 downto 0) => level0(2 downto 0),
       level1(2 downto 0) => level1(2 downto 0),
       level2(2 downto 0) => level2(2 downto 0),

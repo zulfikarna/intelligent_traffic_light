@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Thu Aug 11 03:29:53 2022
+-- Date        : Mon Aug 22 13:01:30 2022
 -- Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_PG_0_0/intellight_PG_0_0_stub.vhdl
@@ -19,7 +19,7 @@ entity intellight_PG_0_0 is
     S : in STD_LOGIC_VECTOR ( 11 downto 0 );
     Arand : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Asel : in STD_LOGIC;
-    active : in STD_LOGIC;
+    learning : in STD_LOGIC;
     Amax : out STD_LOGIC_VECTOR ( 1 downto 0 );
     Amin : out STD_LOGIC_VECTOR ( 1 downto 0 );
     A : out STD_LOGIC_VECTOR ( 1 downto 0 )
@@ -31,7 +31,7 @@ architecture stub of intellight_PG_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,rst,S[11:0],Arand[1:0],Asel,active,Amax[1:0],Amin[1:0],A[1:0]";
+attribute black_box_pad_pin of stub : architecture is "clk,rst,S[11:0],Arand[1:0],Asel,learning,Amax[1:0],Amin[1:0],A[1:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "PG,Vivado 2021.1";
 begin

@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Thu Aug 11 03:29:53 2022
+-- Date        : Mon Aug 22 13:01:30 2022
 -- Host        : DESKTOP-LNFBGQQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_PG_0_0/intellight_PG_0_0_sim_netlist.vhdl
@@ -24,7 +24,7 @@ entity intellight_PG_0_0_PG is
     clk : in STD_LOGIC;
     Asel : in STD_LOGIC;
     Arand : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    active : in STD_LOGIC
+    learning : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of intellight_PG_0_0_PG : entity is "PG";
@@ -73,23 +73,23 @@ begin
   Amax(1 downto 0) <= \^amax\(1 downto 0);
 \A[0]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"BF80"
     )
         port map (
       I0 => Agreed(0),
       I1 => Asel_reg,
-      I2 => active,
+      I2 => learning,
       I3 => Arand_reg(0),
       O => A(0)
     );
 \A[1]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"BF80"
     )
         port map (
       I0 => Agreed(1),
       I1 => Asel_reg,
-      I2 => active,
+      I2 => learning,
       I3 => Arand_reg(1),
       O => A(1)
     );
@@ -603,7 +603,7 @@ entity intellight_PG_0_0 is
     S : in STD_LOGIC_VECTOR ( 11 downto 0 );
     Arand : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Asel : in STD_LOGIC;
-    active : in STD_LOGIC;
+    learning : in STD_LOGIC;
     Amax : out STD_LOGIC_VECTOR ( 1 downto 0 );
     Amin : out STD_LOGIC_VECTOR ( 1 downto 0 );
     A : out STD_LOGIC_VECTOR ( 1 downto 0 )
@@ -636,8 +636,8 @@ inst: entity work.intellight_PG_0_0_PG
       Arand(1 downto 0) => Arand(1 downto 0),
       Asel => Asel,
       S(11 downto 0) => S(11 downto 0),
-      active => active,
       clk => clk,
+      learning => learning,
       rst => rst
     );
 end STRUCTURE;

@@ -37,12 +37,12 @@
   "../../../bd/simulate/ip/simulate_RAM1_2/sim/simulate_RAM1_2.v" \
   "../../../bd/simulate/ip/simulate_RAM2_2/sim/simulate_RAM2_2.v" \
   "../../../bd/simulate/ip/simulate_RAM3_2/sim/simulate_RAM3_2.v" \
-  "../../../bd/simulate/ip/simulate_RD_0_2/sim/simulate_RD_0_2.v" \
-  "../../../bd/simulate/ip/simulate_SD_0_2/sim/simulate_SD_0_2.v" \
   "../../../bd/simulate/ip/simulate_PG_0_2/sim/simulate_PG_0_2.v" \
-  "../../../bd/simulate/ip/simulate_MII_0_2/sim/simulate_MII_0_2.v" \
+  "../../../bd/simulate/ip/simulate_SD_0_2/sim/simulate_SD_0_2.v" \
   "../../../bd/simulate/ip/simulate_QA_0_2/sim/simulate_QA_0_2.v" \
+  "../../../bd/simulate/ip/simulate_RD_0_2/sim/simulate_RD_0_2.v" \
   "../../../bd/simulate/ip/simulate_CU_0_1/sim/simulate_CU_0_1.v" \
+  "../../../bd/simulate/ip/simulate_MII_0_2/sim/simulate_MII_0_2.v" \
   "../../../bd/simulate/sim/simulate.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \

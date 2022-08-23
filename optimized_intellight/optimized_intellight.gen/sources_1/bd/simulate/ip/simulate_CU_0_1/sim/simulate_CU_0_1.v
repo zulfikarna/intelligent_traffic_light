@@ -75,6 +75,7 @@ module simulate_CU_0_1 (
   wire_epsilon,
   finish,
   wen,
+  idle,
   active
 );
 
@@ -102,6 +103,7 @@ output wire [4 : 0] wire_ns;
 output wire [15 : 0] wire_epsilon;
 output wire finish;
 output wire wen;
+output wire idle;
 input wire active;
 
   CU inst (
@@ -125,6 +127,7 @@ input wire active;
     .wire_epsilon(wire_epsilon),
     .finish(finish),
     .wen(wen),
+    .idle(idle),
     .active(active)
   );
 endmodule

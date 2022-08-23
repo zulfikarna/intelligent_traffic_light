@@ -1,90 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1660634303">
-  <File Type="ROUTE-PWR" Name="intellight_wrapper_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="intellight_wrapper.tcl"/>
-  <File Type="BITSTR-MMI" Name="intellight_wrapper.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="intellight_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="intellight_wrapper_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="intellight_wrapper_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="intellight_wrapper_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="intellight_wrapper_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="intellight_wrapper_opt.dcp"/>
-  <File Type="OPT-DRC" Name="intellight_wrapper_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="intellight_wrapper.hwdef"/>
-  <File Type="PWROPT-DCP" Name="intellight_wrapper_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="intellight_wrapper_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="intellight_wrapper_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="intellight_wrapper_placed.dcp"/>
-  <File Type="PLACE-IO" Name="intellight_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="intellight_wrapper_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="intellight_wrapper_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="intellight_wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="intellight_wrapper_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="intellight_wrapper_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="intellight_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="intellight_wrapper.bin"/>
-  <File Type="PLACE-TIMING" Name="intellight_wrapper_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="intellight_wrapper_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-MSK" Name="intellight_wrapper.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="intellight_wrapper_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="intellight_wrapper_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="intellight_wrapper_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="intellight_wrapper.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="intellight_wrapper_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="intellight_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="intellight_wrapper_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="intellight_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="intellight_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="intellight_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="intellight_wrapper_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="intellight_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="intellight_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="intellight_wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="intellight_wrapper_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="intellight_wrapper_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="intellight_wrapper_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="intellight_wrapper_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="intellight_wrapper_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="intellight_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="intellight_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="intellight_wrapper_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="intellight_wrapper_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="intellight_wrapper_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="intellight_wrapper_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="intellight_wrapper_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="intellight_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="intellight_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="intellight_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="intellight_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="intellight_wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="intellight_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="intellight_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="intellight_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="intellight_wrapper.nky"/>
-  <File Type="BITSTR-BMM" Name="intellight_wrapper_bd.bmm"/>
-  <File Type="PDI-FILE" Name="intellight_wrapper.pdi"/>
-  <File Type="RCFI_FILE" Name="intellight_wrapper.rcfi"/>
-  <File Type="CFI_FILE" Name="intellight_wrapper.cfi"/>
-  <File Type="RNPI_FILE" Name="intellight_wrapper.rnpi"/>
-  <File Type="NPI_FILE" Name="intellight_wrapper.npi"/>
-  <File Type="RBD_FILE" Name="intellight_wrapper.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1661230282">
+  <File Type="OPT-HWDEF" Name="intellight_v2_wrapper.hwdef"/>
+  <File Type="ROUTE-BUS-SKEW" Name="intellight_v2_wrapper_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="intellight_v2_wrapper.dcp"/>
+  <File Type="ROUTE-PWR" Name="intellight_v2_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="intellight_v2_wrapper.tcl"/>
+  <File Type="BITSTR-MMI" Name="intellight_v2_wrapper.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="intellight_v2_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="intellight_v2_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="intellight_v2_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="intellight_v2_wrapper_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="intellight_v2_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="intellight_v2_wrapper_opt.dcp"/>
+  <File Type="OPT-DRC" Name="intellight_v2_wrapper_drc_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="intellight_v2_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="intellight_v2_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="intellight_v2_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="intellight_v2_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="intellight_v2_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="intellight_v2_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="intellight_v2_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="intellight_v2_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="intellight_v2_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="intellight_v2_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="intellight_v2_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="intellight_v2_wrapper.bin"/>
+  <File Type="PLACE-TIMING" Name="intellight_v2_wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="intellight_v2_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="intellight_v2_wrapper.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="intellight_v2_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="intellight_v2_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="intellight_v2_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="intellight_v2_wrapper.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="intellight_v2_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="intellight_v2_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="intellight_v2_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="intellight_v2_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="intellight_v2_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="intellight_v2_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="intellight_v2_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="intellight_v2_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="intellight_v2_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="intellight_v2_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="intellight_v2_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="intellight_v2_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="intellight_v2_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="intellight_v2_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="intellight_v2_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="intellight_v2_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="intellight_v2_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="intellight_v2_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="intellight_v2_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="intellight_v2_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="intellight_v2_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="intellight_v2_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="intellight_v2_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="intellight_v2_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="intellight_v2_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="intellight_v2_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="intellight_v2_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="intellight_v2_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="intellight_v2_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="intellight_v2_wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="intellight_v2_wrapper_bd.bmm"/>
+  <File Type="PDI-FILE" Name="intellight_v2_wrapper.pdi"/>
+  <File Type="RCFI_FILE" Name="intellight_v2_wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="intellight_v2_wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="intellight_v2_wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="intellight_v2_wrapper.npi"/>
+  <File Type="RBD_FILE" Name="intellight_v2_wrapper.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="intellight_wrapper.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="intellight_wrapper.sysdef"/>
-  <File Type="BG-BGN" Name="intellight_wrapper.bgn"/>
-  <File Type="BG-DRC" Name="intellight_wrapper.drc"/>
-  <File Type="RDI-RDI" Name="intellight_wrapper.vdi"/>
+  <File Type="BITSTR-LTX" Name="intellight_v2_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="intellight_v2_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="intellight_v2_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="intellight_v2_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="intellight_v2_wrapper.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/RD.v">
+    <File Path="$PSRCDIR/sources_1/new/file_arith.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/SD.v">
+    <File Path="$PSRCDIR/sources_1/new/CU.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MII.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -105,20 +113,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/MII.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/file_arith.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/file_mux.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -133,7 +127,28 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/CU.v">
+    <File Path="$PSRCDIR/sources_1/new/RD.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SD.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/intellight_v2/intellight_v2.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/intellight_v2/hdl/intellight_v2_wrapper.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -142,19 +157,13 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/intellight/intellight.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PGENDIR/sources_1/bd/intellight/hdl/intellight_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/file_reg.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -178,6 +187,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/file_reg.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/file_ena.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -188,7 +205,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="intellight_wrapper"/>
+      <Option Name="TopModule" Val="intellight_v2_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -231,11 +248,15 @@
   <BlockFileSet Type="BlockSrcs" Name="intellight_RAM2_1"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_RAM3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="simulate_RD_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="simulate_QA_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_RD_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_PG_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_MII_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_QA_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="simulate_MII_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_MII_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_intellight_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_SD_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_PG_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_CU_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_SD_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_processing_system7_0_0"/>
 </GenRun>

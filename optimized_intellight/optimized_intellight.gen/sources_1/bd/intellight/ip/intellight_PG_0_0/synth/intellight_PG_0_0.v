@@ -61,7 +61,7 @@ module intellight_PG_0_0 (
   S,
   Arand,
   Asel,
-  active,
+  learning,
   Amax,
   Amin,
   A
@@ -76,7 +76,7 @@ input wire rst;
 input wire [11 : 0] S;
 input wire [1 : 0] Arand;
 input wire Asel;
-input wire active;
+input wire learning;
 output wire [1 : 0] Amax;
 output wire [1 : 0] Amin;
 output wire [1 : 0] A;
@@ -87,7 +87,7 @@ output wire [1 : 0] A;
     .S(S),
     .Arand(Arand),
     .Asel(Asel),
-    .active(active),
+    .learning(learning),
     .Amax(Amax),
     .Amin(Amin),
     .A(A)
