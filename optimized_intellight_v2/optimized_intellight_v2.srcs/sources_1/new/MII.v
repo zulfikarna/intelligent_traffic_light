@@ -12,63 +12,60 @@
 module MII
 #(  parameter ADDR_WIDTH = 32,
     parameter WEN_WIDTH = 8,
+    parameter Q_WIDTH = 16,
     parameter S_WIDTH = 12,
     parameter A_WIDTH = 4)
 (
     input wire clk, rst, 
-//    input wire READ_EN, WRITE_EN,
-    // For state-address converter
     input wire [S_WIDTH-1:0] S,
-    input wire wen, 
+    input wire [Q_WIDTH-1:0] Qnew,
+    input wire wen_cu, 
+    input wire [A_WIDTH-1:0] A,
     output wire[ADDR_WIDTH-1:0] RD_ADDR,
     output reg [ADDR_WIDTH-1:0] WR_ADDR,
-    // Write enable handling 
-    input wire [A_WIDTH-1:0] A,
-    output reg [WEN_WIDTH-1:0] wen0, wen1, wen2, wen3,
+    output wire[Q_WIDTH*4-1:0] Dnew,
+    output reg [WEN_WIDTH-1:0] wen_bram,
     output reg en0, en1, en2, en3
     );
     
     // 1. Address configuration
     reg [S_WIDTH-1:0] S_reg0, S_reg1, S_reg2, S_reg3, S_reg4, S_reg5, S_reg6, S_reg7;
     always @(posedge clk) begin
-        S_reg0 <= S;
-        S_reg1 <= S_reg0;
-        S_reg2 <= S_reg1;
-        S_reg3 <= S_reg2;
-        S_reg4 <= S_reg3;
-        S_reg5 <= S_reg4;
-        S_reg6 <= S_reg5;
+        S_reg6 = S_reg5;
+        S_reg5 = S_reg4;
+        S_reg5 = S_reg4;
+        S_reg4 = S_reg3;
+        S_reg3 = S_reg2;
+        S_reg2 = S_reg1;
+        S_reg1 = S_reg0;
+        S_reg0 = S;
         WR_ADDR <= WR_ADDR_temp; 
     end
     wire [ADDR_WIDTH-1:0] WR_ADDR_temp;
-    assign RD_ADDR = (S<<2)|32'h0000_0000;
-    assign WR_ADDR_temp = (S_reg6<<2)|32'h0000_0000;
+    assign RD_ADDR = (S<<2)| {ADDR_WIDTH{1'b0}};
+    assign WR_ADDR_temp = (S_reg4<<2) | {ADDR_WIDTH{1'b0}};
     
     // 2. Action register
     reg [A_WIDTH-1:0] A_reg0, A_reg1, A_reg2, A_reg3, A_reg4, A_reg5;
     always @(posedge clk) begin 
-        A_reg0 <= A;
-        A_reg1 <= A_reg0;
-        A_reg2 <= A_reg1;
-        A_reg3 <= A_reg2;
-        A_reg4 <= A_reg3;
-        A_reg5 <= A_reg4;
+        A_reg5 = A_reg4;
+        A_reg4 = A_reg3;
+        A_reg3 = A_reg2;
+        A_reg2 = A_reg1;
+        A_reg1 = A_reg0;
+        A_reg0 = A;
     end
     
     // 3. Write-Enable Configuration
-    wire [WEN_WIDTH-1:0] wen0_temp, wen1_temp, wen2_temp, wen3_temp;
-    wen_decoder decod0(.A(A_reg4), .en(wen), .wen0(wen0_temp), .wen1(wen1_temp), .wen2(wen2_temp), .wen3(wen3_temp));
+    wire [WEN_WIDTH-1:0] wen_bram_temp;
+    wen_decoder decod0(.A(A_reg1), .en(wen_cu), .wen(wen_bram_temp));
     always @(posedge clk) begin
-        wen0 <= wen0_temp;
-        wen1 <= wen1_temp;
-        wen2 <= wen2_temp;
-        wen3 <= wen3_temp;     
-          
+        wen_bram <= wen_bram_temp;   
     end
     
     // 4. Enable Configuration 
     wire en0_temp, en1_temp, en2_temp, en3_temp;
-    en_decoder  decod1(.A(A_reg4), .en(wen), .en0(en0_temp), .en1(en1_temp), .en2(en2_temp), .en3(en3_temp));
+    en_decoder  decod1(.A(A_reg1), .en(wen_cu), .en0(en0_temp), .en1(en1_temp), .en2(en2_temp), .en3(en3_temp));
     always @(posedge clk) begin
         en0 <= en0_temp;
         en1 <= en1_temp;
@@ -77,6 +74,7 @@ module MII
     end
     
     // 5. Data Configuration 
+    data_config decod2(.Q(Qnew), .A(A_reg2), .D(Dnew));
 endmodule
 
 module wen_decoder
@@ -85,12 +83,13 @@ module wen_decoder
 (
     input wire en,
     input wire  [A_WIDTH-1:0] A,
-    output wire [WEN_WIDTH-1:0] wen0, wen1, wen2, wen3
+    output wire [WEN_WIDTH-1:0] wen
     );
-    assign wen0 = ((A==0)&(en))? 4'b1111 : 4'b0000;
-    assign wen1 = ((A==1)&(en))? 4'b1111 : 4'b0000;
-    assign wen2 = ((A==2)&(en))? 4'b1111 : 4'b0000;
-    assign wen3 = ((A==3)&(en))? 4'b1111 : 4'b0000;
+    assign wen = ((A[A_WIDTH/2-1:0]==2'd0))? 8'b0000_0011:
+                 ((A[A_WIDTH/2-1:0]==2'd1))? 8'b0000_1100:
+                 ((A[A_WIDTH/2-1:0]==2'd2))? 8'b0011_0000:
+                 ((A[A_WIDTH/2-1:0]==2'd3))? 8'b1100_0000:
+                                             8'b0000_0000;
 endmodule
 
 module en_decoder
@@ -100,8 +99,24 @@ module en_decoder
     input wire  [A_WIDTH-1:0] A,
     output wire en0, en1, en2, en3
     );
-    assign en0 = (A==0)&(en);
-    assign en1 = (A==1)&(en);
-    assign en2 = (A==2)&(en);
-    assign en3 = (A==3)&(en);
+    assign en0 = (A[A_WIDTH-1:A_WIDTH/2]==2'd0)&(en);
+    assign en1 = (A[A_WIDTH-1:A_WIDTH/2]==2'd1)&(en);
+    assign en2 = (A[A_WIDTH-1:A_WIDTH/2]==2'd2)&(en);
+    assign en3 = (A[A_WIDTH-1:A_WIDTH/2]==2'd3)&(en);
+endmodule
+
+module data_config
+#(  parameter Q_WIDTH = 16,
+    parameter A_WIDTH = 4)
+ (
+    input wire [Q_WIDTH-1:0] Q,
+    input wire [A_WIDTH-1:0] A,
+    output wire [Q_WIDTH*4-1:0] D
+    );
+    
+    assign D = ((A[A_WIDTH/2-1:0]==2'd0))? Q     | {Q_WIDTH*4{1'b0}}:
+               ((A[A_WIDTH/2-1:0]==2'd1))? Q<<16 | {Q_WIDTH*4{1'b0}}:
+               ((A[A_WIDTH/2-1:0]==2'd2))? Q<<32 | {Q_WIDTH*4{1'b0}}:
+               ((A[A_WIDTH/2-1:0]==2'd3))? Q<<48 | {Q_WIDTH*4{1'b0}}:
+                                           {Q_WIDTH*4{1'bx}};
 endmodule
