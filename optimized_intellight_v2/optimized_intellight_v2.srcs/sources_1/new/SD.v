@@ -21,9 +21,9 @@ module SD // verified
     input wire [ITV_WIDTH-1:0] L_inc,
     input wire [ITV_WIDTH-1:0] L_dec,
     output wire [S_WIDTH-1:0] S,
-    output wire [L_WIDTH-1:0] L0, L1, L2, L3
-//    output wire [L_WIDTH:0] l0, l1, l2, l3,
-//    output wire [L_WIDTH-1:0] inc, dec
+    output wire [L_WIDTH-1:0] L0, L1, L2, L3,
+    output wire [L_WIDTH:0] l0, l1, l2, l3,
+    output wire [L_WIDTH-1:0] inc, dec
     );
     
     localparam MAX_TRAFFIC = 4'b1111;

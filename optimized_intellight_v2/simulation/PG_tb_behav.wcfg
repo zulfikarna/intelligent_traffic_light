@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="141.730 ns"></ZoomStartTime>
-      <ZoomEndTime time="267.031 ns"></ZoomEndTime>
-      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+      <ZoomStartTime time="76.210 ns"></ZoomStartTime>
+      <ZoomEndTime time="250.611 ns"></ZoomEndTime>
+      <Cursor1Time time="92.880 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="192"></NameColumnWidth>
-      <ValueColumnWidth column_width="91"></ValueColumnWidth>
+      <ValueColumnWidth column_width="86"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="16" />
    <wvobject fp_name="/MII_tb/clk" type="logic">
@@ -32,15 +32,17 @@
       <obj_property name="ElementShortName">S[11:0]</obj_property>
       <obj_property name="ObjectShortName">S[11:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/MII_tb/Qnew" type="array">
-      <obj_property name="ElementShortName">Qnew[15:0]</obj_property>
-      <obj_property name="ObjectShortName">Qnew[15:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/MII_tb/A" type="array">
       <obj_property name="ElementShortName">A[3:0]</obj_property>
       <obj_property name="ObjectShortName">A[3:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MII_tb/Qnew" type="array">
+      <obj_property name="ElementShortName">Qnew[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Qnew[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/MII_tb/Dnew" type="array">
       <obj_property name="ElementShortName">Dnew[63:0]</obj_property>

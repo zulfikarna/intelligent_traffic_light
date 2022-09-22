@@ -20,6 +20,7 @@ module MII_tb
     wire[Q_WIDTH*4-1:0] Dnew;
     wire [WEN_WIDTH-1:0] wen_bram;
     wire en0, en1, en2, en3;
+    wire [A_WIDTH-1:0] A_reg0, A_reg1, A_reg2, A_reg3, A_reg4, A_reg5;
     MII dut(
         .clk(clk),
         .rst(rst),
@@ -34,7 +35,14 @@ module MII_tb
         .en0(en0),
         .en1(en1),
         .en2(en2),
-        .en3(en3));
+        .en3(en3),
+        .A_reg0(A_reg0),
+        .A_reg1(A_reg1),
+        .A_reg2(A_reg2),
+        .A_reg3(A_reg3),
+        .A_reg4(A_reg4),
+        .A_reg5(A_reg5)
+        );
     
     
     // Random generator porting
@@ -42,14 +50,7 @@ module MII_tb
     reg  [RAND_WIDTH-1:0] i_lsfr;
     wire signed [RAND_WIDTH-1:0] o_lsfr;
     lsfr_16bit rand(.in0(i_lsfr), .out0(o_lsfr));
-    always@(posedge clk) begin
-        case(rst)
-            1'b1:
-                i_lsfr <= 16'd128;
-            default:
-                i_lsfr <= o_lsfr;
-        endcase
-    end
+
     
     // Clock setting
     always begin

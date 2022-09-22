@@ -3,10 +3,6 @@
 Apr 18 2022
 16:05:34
 D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,,,,,,,
-D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/MII_tb.v,1663828178,verilog,,,,MII_tb,,,,,,,,
-D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/QA_tb.v,1663761689,verilog,,,,QA_tb,,,,,,,,
-D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/MII.v,1663828471,verilog,,D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v,,MII;data_config;en_decoder;wen_decoder,,,,,,,,
-D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/QA.v,1663762220,verilog,,D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v,,QA,,,,,,,,
-D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v,1663762039,verilog,,D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/MII_tb.v,,lsfr_12bit;lsfr_16bit;lsfr_32bit;multiply;r_shift,,,,,,,,
-D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_max.v,1663224582,verilog,,D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_mux.v,,max4to1_16bit,,,,,,,,
-D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_mux.v,1663174160,verilog,,D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/QA_tb.v,,mux4to1_16bit,,,,,,,,
+D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/SD_tb.v,1663301642,verilog,,,,SD_tb,,,,,,,,
+D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v,1663836649,verilog,,D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v,,SD,,,,,,,,
+D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v,1663835389,verilog,,D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/SD_tb.v,,lsfr_16bit;multiply;r_shift,,,,,,,,

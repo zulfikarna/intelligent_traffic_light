@@ -47,33 +47,26 @@ module r_shift
         (in0 >> step) ;
 endmodule
 
-module lsfr_16bit(
-    input wire  [15:0] in0,
-    output wire [15:0] out0
+module lsfr_16bit
+#(  parameter DATA_WIDTH = 16)
+(
+    input wire clk, rst,
+    input wire  [DATA_WIDTH-1:0] in0,
+    output wire [DATA_WIDTH-1:0] out0
     );
+    // Register 
+    reg [DATA_WIDTH-1:0] reg_lsfr;
+    always@(posedge clk) begin
+        if (rst) begin
+            reg_lsfr <= in0;
+        end else begin
+            reg_lsfr <= out0;
+        end
+    end
+    // Calculate the new LSB
     wire w0;
-    
-    assign w0 = in0[15] ^ in0[13] ^ in0[12] ^ in0[10];
-    assign out0 = {in0[14:0],w0};
-endmodule
-
-module lsfr_12bit(
-    input wire  [11:0] in0,
-    output wire [11:0] out0
-    );
-    wire w0;
-    
-    assign w0 = in0[11] ^ in0[10] ^ in0[9] ^ in0[3];
-    assign out0 = {in0[10:0],w0};
-endmodule
-
-module lsfr_32bit(
-    input wire  [31:0] in0,
-    output wire [31:0] out0
-    );
-    wire w0, temp0;
-    assign w0 = in0[31] ^~ in0[21] ^~ in0[1] ^~ in0[0];
-    assign out0 = {in0[30:0],w0};
+    assign w0 = reg_lsfr[15] ^ reg_lsfr[13] ^ reg_lsfr[12] ^ reg_lsfr[10];
+    assign out0 = {reg_lsfr[14:0],w0};
 endmodule
 
 //module encoder(

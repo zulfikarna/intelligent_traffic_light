@@ -1,46 +1,48 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.18595",
-   "Default View_TopLeft":"-139,1019",
+   "Default View_TopLeft":"-215,-20",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
 preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 210 -defaultsOSRD
 preplace port port-id_rst -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace port port-id_wen3 -pg 1 -lvl 0 -x 0 -y 0 -defaultsOSRD
+preplace port port-id_wen1 -pg 1 -lvl 0 -x 0 -y 30 -defaultsOSRD
+preplace port port-id_wen0 -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_wen2 -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
 preplace portBus Dnew -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
 preplace portBus wr_addr -pg 1 -lvl 0 -x 0 -y 640 -defaultsOSRD
 preplace portBus rd_addr -pg 1 -lvl 0 -x 0 -y 610 -defaultsOSRD
-preplace portBus Dlane0 -pg 1 -lvl 3 -x 510 -y 380 -defaultsOSRD
-preplace portBus Dlane1 -pg 1 -lvl 3 -x 510 -y 780 -defaultsOSRD
-preplace portBus Dlane2 -pg 1 -lvl 3 -x 510 -y 1620 -defaultsOSRD
-preplace portBus Dlane3 -pg 1 -lvl 3 -x 510 -y 1200 -defaultsOSRD
-preplace portBus wen0 -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
-preplace portBus wen1 -pg 1 -lvl 0 -x 0 -y 580 -defaultsOSRD
-preplace portBus wen2 -pg 1 -lvl 0 -x 0 -y 1400 -defaultsOSRD
-preplace portBus wen3 -pg 1 -lvl 0 -x 0 -y 980 -defaultsOSRD
-preplace inst action_ram_0 -pg 1 -lvl 2 -x 370 -y 190 -defaultsOSRD
-preplace inst action_ram_1 -pg 1 -lvl 2 -x 370 -y 580 -defaultsOSRD
-preplace inst action_ram_2 -pg 1 -lvl 2 -x 370 -y 1410 -defaultsOSRD
-preplace inst action_ram_3 -pg 1 -lvl 2 -x 370 -y 990 -defaultsOSRD
+preplace portBus Dlane0 -pg 1 -lvl 3 -x 550 -y 380 -defaultsOSRD
+preplace portBus Dlane1 -pg 1 -lvl 3 -x 550 -y 780 -defaultsOSRD
+preplace portBus Dlane2 -pg 1 -lvl 3 -x 550 -y 1620 -defaultsOSRD
+preplace portBus Dlane3 -pg 1 -lvl 3 -x 550 -y 1200 -defaultsOSRD
+preplace portBus wen -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace inst action_ram_0 -pg 1 -lvl 2 -x 410 -y 200 -defaultsOSRD
+preplace inst action_ram_1 -pg 1 -lvl 2 -x 410 -y 620 -defaultsOSRD
+preplace inst action_ram_2 -pg 1 -lvl 2 -x 410 -y 1530 -defaultsOSRD
+preplace inst action_ram_3 -pg 1 -lvl 2 -x 410 -y 1070 -defaultsOSRD
 preplace inst const_1_1bit -pg 1 -lvl 1 -x 100 -y 1040 -defaultsOSRD
 preplace inst const_0_8bit -pg 1 -lvl 1 -x 100 -y 1460 -defaultsOSRD
-preplace netloc clka_0_1 1 0 2 NJ 210 230
+preplace netloc action_ram_0_doutb 1 1 2 290 400 530J
+preplace netloc action_ram_1_doutb 1 1 2 290 820 530J
+preplace netloc action_ram_2_doutb 1 1 2 290 1730 530J
+preplace netloc action_ram_3_doutb 1 1 2 290 1270 530J
+preplace netloc addra_0_1 1 0 2 NJ 640 280
+preplace netloc addrb_0_1 1 0 2 NJ 610 270
+preplace netloc clka_0_1 1 0 2 NJ 210 210
+preplace netloc const_0_4bit_dout 1 1 1 220 340n
+preplace netloc dina_0_1 1 0 2 NJ 120 230
 preplace netloc rsta_0_1 1 0 2 NJ 240 200
-preplace netloc xlconstant_0_dout 1 1 1 190 140n
-preplace netloc const_0_4bit_dout 1 1 1 210 320n
-preplace netloc dina_0_1 1 0 2 NJ 120 180
-preplace netloc addra_0_1 1 0 2 NJ 640 220
-preplace netloc addrb_0_1 1 0 2 NJ 610 240
-preplace netloc action_ram_0_doutb 1 1 2 250 380 NJ
-preplace netloc action_ram_1_doutb 1 1 2 250 780 NJ
-preplace netloc action_ram_2_doutb 1 1 2 250 1620 NJ
-preplace netloc action_ram_3_doutb 1 1 2 250 1200 NJ
-preplace netloc wea_0_1 1 0 2 NJ 180 NJ
-preplace netloc wea_0_2 1 0 2 NJ 580 NJ
-preplace netloc wea_0_3 1 0 2 NJ 1400 NJ
-preplace netloc wea_0_4 1 0 2 NJ 980 NJ
-levelinfo -pg 1 0 100 370 510
-pagesize -pg 1 -db -bbox -sgen -140 0 640 1640
+preplace netloc wea_0_1 1 0 2 NJ 180 180J
+preplace netloc xlconstant_0_dout 1 1 1 240 300n
+preplace netloc wen3_1 1 0 2 NJ 0 260
+preplace netloc wen1_1 1 0 2 NJ 30 250
+preplace netloc wen0_1 1 0 2 NJ 60 240
+preplace netloc wen2_1 1 0 2 NJ 90 190
+levelinfo -pg 1 0 100 410 550
+pagesize -pg 1 -db -bbox -sgen -140 -20 680 1740
 "
 }
-
+0
