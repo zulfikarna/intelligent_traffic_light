@@ -1,22 +1,6 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 15.09.2022 11:46:09
-// Design Name: 
-// Module Name: PG_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+
 //////////////////////////////////////////////////////////////////////////////////
 
 module PG_tb
@@ -26,36 +10,40 @@ module PG_tb
     )();
     // Input output porting
     reg clk, rst;
-    reg signed [Q_WIDTH-1:0] Q0, Q1, Q2, Q3;
+    reg [Q_WIDTH*4-1:0] Dlane0, Dlane1, Dlane2, Dlane3;
     reg [A_WIDTH-1:0] A_rand;
     reg A_sel;
     reg mode;
+    wire [A_WIDTH/2-1:0] A_road;
     wire [A_WIDTH-1:0] A;
+    wire [A_WIDTH-1:0] A_gred;
+    wire [Q_WIDTH*4-1:0] Q;
+    wire signed [Q_WIDTH-1:0] Q0, Q1, Q2, Q3, Q_max;
     PG dut(
         .clk(clk),
         .rst(rst),
+        .Dlane0(Dlane0),
+        .Dlane1(Dlane1),
+        .Dlane2(Dlane2),
+        .Dlane3(Dlane3),
+        .A_rand(A_rand),
+        .A_sel(A_sel),
+        .mode(mode),
+        .A_road(A_road),
+        .A(A),
+        .A_gred(A_gred),
+        .Q(Q),
         .Q0(Q0),
         .Q1(Q1),
         .Q2(Q2),
         .Q3(Q3),
-        .A_rand(A_rand),
-        .A_sel(A_sel),
-        .mode(mode),
-        .A(A));
+        .Q_max(Q_max));
     
     // Random generator porting
-    localparam RAND_WIDTH = 16;
-    reg  [RAND_WIDTH-1:0] i_lsfr;
-    wire signed [RAND_WIDTH-1:0] o_lsfr;
-    lsfr_16bit rand(.in0(i_lsfr), .out0(o_lsfr));
-    always@(posedge clk) begin
-        case(rst)
-            1'b1:
-                i_lsfr <= 16'd128;
-            default:
-                i_lsfr <= o_lsfr;
-        endcase
-    end
+    wire signed [15:0] o_lsfr_16bit;
+    wire signed [63:0] o_lsfr_64bit;
+    lsfr_16bit rand0(.clk(clk), .rst(rst), .in0(16'd128), .out0(o_lsfr_16bit));
+    lsfr_64bit rand1(.clk(clk), .rst(rst), .in0(64'd128), .out0(o_lsfr_64bit));
     
     // Clock setting
     always begin
@@ -68,19 +56,18 @@ module PG_tb
     // Reset setting
     initial begin
         rst = 1'b1;
-        mode = 1'b0;
         #100;
         rst = 1'b0;
-        mode = 1'b1;
     end
     
     always @(posedge clk) begin
         #1
-        Q0 = o_lsfr;
-        Q1 = {o_lsfr[14:0], o_lsfr[15]};
-        Q2 = {o_lsfr[13:0], o_lsfr[15:14]};
-        Q3 = {o_lsfr[12:0], o_lsfr[15:13]};
-        A_rand = o_lsfr[A_WIDTH-1:0];
-        A_sel = o_lsfr[2];
+        Dlane0 = o_lsfr_64bit;
+        Dlane1 = {o_lsfr_64bit[62:0], o_lsfr_64bit[63]};
+        Dlane2 = {o_lsfr_64bit[61:0], o_lsfr_64bit[63:62]};
+        Dlane3 = {o_lsfr_64bit[60:0], o_lsfr_64bit[63:61]};
+        A_rand = o_lsfr_16bit[A_WIDTH-1:0];
+        A_sel = o_lsfr_16bit[0];
+        mode = o_lsfr_16bit[4];
     end
 endmodule

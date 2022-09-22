@@ -3,6 +3,7 @@
 Apr 18 2022
 16:05:34
 D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,,,,,,,
-D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/SD_tb.v,1663301642,verilog,,,,SD_tb,,,,,,,,
-D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v,1663836649,verilog,,D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v,,SD,,,,,,,,
-D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v,1663835389,verilog,,D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/SD_tb.v,,lsfr_16bit;multiply;r_shift,,,,,,,,
+D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/PG_tb.v,1663881497,verilog,,,,PG_tb,,,,,,,,
+D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/PG.v,1663883082,verilog,,D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v,,PG,,,,,,,,
+D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v,1663879807,verilog,,D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_max.v,,lsfr_16bit;lsfr_64bit;multiply;r_shift,,,,,,,,
+D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_max.v,1663224582,verilog,,D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/PG_tb.v,,max4to1_16bit,,,,,,,,

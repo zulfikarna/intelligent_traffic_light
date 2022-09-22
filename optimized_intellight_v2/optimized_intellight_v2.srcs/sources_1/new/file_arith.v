@@ -65,8 +65,31 @@ module lsfr_16bit
     end
     // Calculate the new LSB
     wire w0;
-    assign w0 = reg_lsfr[15] ^ reg_lsfr[13] ^ reg_lsfr[12] ^ reg_lsfr[10];
+    assign w0 = ~(reg_lsfr[15] ^ reg_lsfr[13] ^ reg_lsfr[12] ^ reg_lsfr[10]);
     assign out0 = {reg_lsfr[14:0],w0};
+endmodule
+
+module lsfr_64bit
+#(  parameter DATA_WIDTH = 64)
+(
+    input wire clk, rst,
+    input wire  [DATA_WIDTH-1:0] in0,
+    output wire [DATA_WIDTH-1:0] out0
+    );
+    // Register 
+    reg [DATA_WIDTH-1:0] reg_lsfr;
+    always@(posedge clk) begin
+        if (rst) begin
+            reg_lsfr <= in0;
+        end else begin
+            reg_lsfr <= out0;
+        end
+    end
+    // Calculate the new LSB
+    wire w0;
+    
+    assign w0 = ~(reg_lsfr[63] ^ reg_lsfr[62] ^ reg_lsfr[60] ^ reg_lsfr[59]);
+    assign out0 = {reg_lsfr[62:0],w0};
 endmodule
 
 //module encoder(

@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/PG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PG
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'Q' is not allowed [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/PG.v:67]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'Q0' is not allowed [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/PG.v:74]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'Q_max' is not allowed [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/PG.v:81]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'A_gred' is not allowed [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/PG.v:93]
+WARNING: [VRFC 10-3380] identifier 'A_road_temp' is used before its declaration [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/PG.v:49]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiply
+INFO: [VRFC 10-311] analyzing module r_shift
+INFO: [VRFC 10-311] analyzing module lsfr_16bit
+INFO: [VRFC 10-311] analyzing module lsfr_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_max.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module max4to1_16bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/PG_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PG_tb
