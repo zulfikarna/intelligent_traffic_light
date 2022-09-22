@@ -7,7 +7,7 @@
       "name": "simulate",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2021.1"
+      "tool_version": "2022.1"
     },
     "design_tree": {
       "Action_RAM": {
@@ -28,9 +28,9 @@
       "QA_0": "",
       "RD_0": "",
       "MII_0": "",
-      "PG_0": "",
       "CU_0": "",
-      "SD_0": ""
+      "SD_0": "",
+      "PG_0": ""
     },
     "ports": {
       "finish": {
@@ -718,14 +718,14 @@
           "clka_0_1": {
             "ports": [
               "clk",
-              "Action_RAM0/clkb",
               "Action_RAM0/clka",
-              "Action_RAM1/clkb",
+              "Action_RAM0/clkb",
               "Action_RAM1/clka",
-              "Action_RAM2/clkb",
+              "Action_RAM1/clkb",
               "Action_RAM2/clka",
-              "Action_RAM3/clkb",
-              "Action_RAM3/clka"
+              "Action_RAM2/clkb",
+              "Action_RAM3/clka",
+              "Action_RAM3/clkb"
             ]
           },
           "const_1_dout": {
@@ -773,14 +773,14 @@
           "rsta_0_1": {
             "ports": [
               "rst",
-              "Action_RAM0/rstb",
               "Action_RAM0/rsta",
-              "Action_RAM1/rstb",
+              "Action_RAM0/rstb",
               "Action_RAM1/rsta",
-              "Action_RAM2/rstb",
+              "Action_RAM1/rstb",
               "Action_RAM2/rsta",
-              "Action_RAM3/rstb",
-              "Action_RAM3/rsta"
+              "Action_RAM2/rstb",
+              "Action_RAM3/rsta",
+              "Action_RAM3/rstb"
             ]
           },
           "xlconstant_0_dout": {
@@ -1119,10 +1119,10 @@
           "MII_0_WRITE_ADDR": {
             "ports": [
               "WRITE_ADDR",
+              "RAM0/addrb",
               "RAM1/addrb",
               "RAM2/addrb",
-              "RAM3/addrb",
-              "RAM0/addrb"
+              "RAM3/addrb"
             ]
           },
           "MII_0_wen0": {
@@ -1170,10 +1170,10 @@
           "dinb_0_1": {
             "ports": [
               "Q",
-              "RAM3/dinb",
-              "RAM2/dinb",
+              "RAM0/dinb",
               "RAM1/dinb",
-              "RAM0/dinb"
+              "RAM2/dinb",
+              "RAM3/dinb"
             ]
           },
           "rsta_0_1": {
@@ -1450,78 +1450,6 @@
           }
         }
       },
-      "PG_0": {
-        "vlnv": "xilinx.com:module_ref:PG:1.0",
-        "xci_name": "simulate_PG_0_2",
-        "xci_path": "ip\\simulate_PG_0_2\\simulate_PG_0_2.xci",
-        "inst_hier_path": "PG_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "PG",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "intellight_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "S": {
-            "direction": "I",
-            "left": "11",
-            "right": "0"
-          },
-          "Arand": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "Asel": {
-            "direction": "I"
-          },
-          "learning": {
-            "direction": "I"
-          },
-          "Amax": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "Amin": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "A": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          }
-        }
-      },
       "CU_0": {
         "vlnv": "xilinx.com:module_ref:CU:1.0",
         "xci_name": "simulate_CU_0_1",
@@ -1729,6 +1657,79 @@
           "L3": {
             "direction": "O",
             "left": "2",
+            "right": "0"
+          }
+        }
+      },
+      "PG_0": {
+        "vlnv": "xilinx.com:module_ref:PG:1.0",
+        "xci_name": "simulate_PG_0_2",
+        "xci_path": "ip\\simulate_PG_0_2\\simulate_PG_0_2.xci",
+        "inst_hier_path": "PG_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PG",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "Q0": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Q1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Q2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Q3": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Arand": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "Asel": {
+            "direction": "I"
+          },
+          "learning": {
+            "direction": "I"
+          },
+          "Amax": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "Amin": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "A": {
+            "direction": "O",
+            "left": "1",
             "right": "0"
           }
         }
@@ -1961,8 +1962,7 @@
         "ports": [
           "SD_0/S",
           "S",
-          "MII_0/S",
-          "PG_0/S"
+          "MII_0/S"
         ]
       },
       "active_1": {
@@ -1985,9 +1985,9 @@
           "QA_0/clk",
           "RD_0/clk",
           "MII_0/clk",
-          "PG_0/clk",
           "CU_0/clk",
-          "SD_0/clk"
+          "SD_0/clk",
+          "PG_0/clk"
         ]
       },
       "gamma_1": {
@@ -2016,9 +2016,9 @@
           "QA_0/rst",
           "RD_0/rst",
           "MII_0/rst",
-          "PG_0/rst",
           "CU_0/rst",
-          "SD_0/rst"
+          "SD_0/rst",
+          "PG_0/rst"
         ]
       },
       "seed_16bit_1": {
@@ -2031,8 +2031,8 @@
         "ports": [
           "start",
           "CU_0/start",
-          "PG_0/learning",
-          "SD_0/learning"
+          "SD_0/learning",
+          "PG_0/learning"
         ]
       },
       "traffic_0_1": {

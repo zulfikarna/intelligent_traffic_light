@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2021.1 (64-bit)              -->
+<!-- Product Version: Vivado v2022.1 (64-bit)              -->
 <!--                                                         -->
-<!-- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.   -->
+<!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="55" Path="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.xpr">
+<Project Version="7" Minor="60" Path="D:/intelligent_traffic_light/optimized_intellight/optimized_intellight.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="c1df7c706dac4506a9bc7b19e3742c8f"/>
@@ -12,42 +12,37 @@
     <Option Name="CompiledLibDirXSim" Val=""/>
     <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
     <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
-    <Option Name="CompiledLibDirIES" Val="$PCACHEDIR/compile_simlib/ies"/>
     <Option Name="CompiledLibDirXcelium" Val="$PCACHEDIR/compile_simlib/xcelium"/>
     <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
     <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="SimulatorInstallDirModelSim" Val=""/>
     <Option Name="SimulatorInstallDirQuesta" Val=""/>
-    <Option Name="SimulatorInstallDirIES" Val=""/>
     <Option Name="SimulatorInstallDirXcelium" Val=""/>
     <Option Name="SimulatorInstallDirVCS" Val=""/>
     <Option Name="SimulatorInstallDirRiviera" Val=""/>
     <Option Name="SimulatorInstallDirActiveHdl" Val=""/>
     <Option Name="SimulatorGccInstallDirModelSim" Val=""/>
     <Option Name="SimulatorGccInstallDirQuesta" Val=""/>
-    <Option Name="SimulatorGccInstallDirIES" Val=""/>
     <Option Name="SimulatorGccInstallDirXcelium" Val=""/>
     <Option Name="SimulatorGccInstallDirVCS" Val=""/>
     <Option Name="SimulatorGccInstallDirRiviera" Val=""/>
     <Option Name="SimulatorGccInstallDirActiveHdl" Val=""/>
-    <Option Name="SimulatorVersionXsim" Val="2021.1"/>
-    <Option Name="SimulatorVersionModelSim" Val="2020.4"/>
-    <Option Name="SimulatorVersionQuesta" Val="2020.4"/>
-    <Option Name="SimulatorVersionIES" Val="15.20.083"/>
+    <Option Name="SimulatorVersionXsim" Val="2022.1"/>
+    <Option Name="SimulatorVersionModelSim" Val="2021.3"/>
+    <Option Name="SimulatorVersionQuesta" Val="2021.3"/>
     <Option Name="SimulatorVersionXcelium" Val="20.09.006"/>
     <Option Name="SimulatorVersionVCS" Val="R-2020.12"/>
-    <Option Name="SimulatorVersionRiviera" Val="2020.10"/>
+    <Option Name="SimulatorVersionRiviera" Val="2021.04"/>
     <Option Name="SimulatorVersionActiveHdl" Val="12.0"/>
     <Option Name="SimulatorGccVersionXsim" Val="6.2.0"/>
-    <Option Name="SimulatorGccVersionModelSim" Val="5.3.0"/>
-    <Option Name="SimulatorGccVersionQuesta" Val="5.3.0"/>
-    <Option Name="SimulatorGccVersionIES" Val="6.2.0"/>
+    <Option Name="SimulatorGccVersionModelSim" Val="7.4.0"/>
+    <Option Name="SimulatorGccVersionQuesta" Val="7.4.0"/>
     <Option Name="SimulatorGccVersionXcelium" Val="6.3"/>
     <Option Name="SimulatorGccVersionVCS" Val="6.2.0"/>
-    <Option Name="SimulatorGccVersionRiviera" Val="6.2.0"/>
-    <Option Name="SimulatorGccVersionActiveHdl" Val="6.2.0"/>
-    <Option Name="BoardPart" Val="www.digilentinc.com:pynq-z1:part0:1.0"/>
+    <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
+    <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
+    <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -59,6 +54,7 @@
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
+    <Option Name="EnableResourceEstimation" Val="FALSE"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
@@ -90,6 +86,7 @@
     <Option Name="MEMEnableMemoryMapGeneration" Val="TRUE"/>
     <Option Name="DcpsUptoDate" Val="TRUE"/>
     <Option Name="ClassicSocBoot" Val="FALSE"/>
+    <Option Name="LocalIPRepoLeafDirName" Val="ip_repo"/>
   </Configuration>
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
@@ -109,20 +106,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/MII.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/file_max.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/PG.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -157,18 +140,26 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/file_max.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/PG.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/bd/intellight_v2/intellight_v2.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_processing_system7_0_0/intellight_v2_processing_system7_0_0.xci">
-          <Proxy FileSetName="intellight_v2_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_smc_0/intellight_v2_axi_smc_0.xci">
-          <Proxy FileSetName="intellight_v2_axi_smc_0"/>
-        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/intellight_v2/hdl/intellight_v2_wrapper.v">
         <FileInfo>
@@ -184,38 +175,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_RAM0_0/intellight_RAM0_0.xci">
-          <Proxy FileSetName="intellight_RAM0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_RAM3_0/intellight_RAM3_0.xci">
-          <Proxy FileSetName="intellight_RAM3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_blk_mem_gen_0_0/intellight_blk_mem_gen_0_0.xci">
-          <Proxy FileSetName="intellight_blk_mem_gen_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_RAM1_0/intellight_RAM1_0.xci">
-          <Proxy FileSetName="intellight_RAM1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_RAM2_0/intellight_RAM2_0.xci">
-          <Proxy FileSetName="intellight_RAM2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_RAM1_1/intellight_RAM1_1.xci">
-          <Proxy FileSetName="intellight_RAM1_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_RAM2_1/intellight_RAM2_1.xci">
-          <Proxy FileSetName="intellight_RAM2_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_RAM0_1/intellight_RAM0_1.xci">
-          <Proxy FileSetName="intellight_RAM0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_RD_0_0/intellight_RD_0_0.xci">
-          <Proxy FileSetName="intellight_RD_0_0"/>
+        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_CU_0_0/intellight_CU_0_0.xci">
+          <Proxy FileSetName="intellight_CU_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_SD_0_0/intellight_SD_0_0.xci">
           <Proxy FileSetName="intellight_SD_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_CU_0_0/intellight_CU_0_0.xci">
-          <Proxy FileSetName="intellight_CU_0_0"/>
+        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_QA_0_0/intellight_QA_0_0.xci">
+          <Proxy FileSetName="intellight_QA_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_MII_0_0/intellight_MII_0_0.xci">
           <Proxy FileSetName="intellight_MII_0_0"/>
@@ -223,11 +190,8 @@
         <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_intellight_0_0/intellight_intellight_0_0.xci">
           <Proxy FileSetName="intellight_intellight_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_QA_0_0/intellight_QA_0_0.xci">
-          <Proxy FileSetName="intellight_QA_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_PG_0_0/intellight_PG_0_0.xci">
-          <Proxy FileSetName="intellight_PG_0_0"/>
+        <CompFileExtendedInfo CompFileName="intellight.bd" FileRelPathName="ip/intellight_RD_0_0/intellight_RD_0_0.xci">
+          <Proxy FileSetName="intellight_RD_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/intellight/hdl/intellight_wrapper.v">
@@ -248,11 +212,11 @@
         <CompFileExtendedInfo CompFileName="simulate.bd" FileRelPathName="ip/simulate_QA_0_2/simulate_QA_0_2.xci">
           <Proxy FileSetName="simulate_QA_0_2"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="simulate.bd" FileRelPathName="ip/simulate_MII_0_2/simulate_MII_0_2.xci">
-          <Proxy FileSetName="simulate_MII_0_2"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="simulate.bd" FileRelPathName="ip/simulate_RD_0_2/simulate_RD_0_2.xci">
           <Proxy FileSetName="simulate_RD_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="simulate.bd" FileRelPathName="ip/simulate_MII_0_2/simulate_MII_0_2.xci">
+          <Proxy FileSetName="simulate_MII_0_2"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/simulate/hdl/simulate_wrapper.v">
@@ -374,54 +338,6 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="intellight_blk_mem_gen_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/intellight_blk_mem_gen_0_0" RelGenDir="$PGENDIR/intellight_blk_mem_gen_0_0">
-      <Config>
-        <Option Name="TopModule" Val="intellight_blk_mem_gen_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="intellight_RAM0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/intellight_RAM0_0" RelGenDir="$PGENDIR/intellight_RAM0_0">
-      <Config>
-        <Option Name="TopModule" Val="intellight_RAM0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="intellight_RAM1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/intellight_RAM1_0" RelGenDir="$PGENDIR/intellight_RAM1_0">
-      <Config>
-        <Option Name="TopModule" Val="intellight_RAM1_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="intellight_RAM2_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/intellight_RAM2_0" RelGenDir="$PGENDIR/intellight_RAM2_0">
-      <Config>
-        <Option Name="TopModule" Val="intellight_RAM2_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="intellight_RAM0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/intellight_RAM0_1" RelGenDir="$PGENDIR/intellight_RAM0_1">
-      <Config>
-        <Option Name="TopModule" Val="intellight_RAM0_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="intellight_RAM1_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/intellight_RAM1_1" RelGenDir="$PGENDIR/intellight_RAM1_1">
-      <Config>
-        <Option Name="TopModule" Val="intellight_RAM1_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="intellight_RAM2_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/intellight_RAM2_1" RelGenDir="$PGENDIR/intellight_RAM2_1">
-      <Config>
-        <Option Name="TopModule" Val="intellight_RAM2_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="intellight_RAM3_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/intellight_RAM3_0" RelGenDir="$PGENDIR/intellight_RAM3_0">
-      <Config>
-        <Option Name="TopModule" Val="intellight_RAM3_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="simulate_RD_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/simulate_RD_0_2" RelGenDir="$PGENDIR/simulate_RD_0_2">
       <Config>
         <Option Name="TopModule" Val="simulate_RD_0_2"/>
@@ -464,12 +380,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="intellight_PG_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/intellight_PG_0_0" RelGenDir="$PGENDIR/intellight_PG_0_0">
-      <Config>
-        <Option Name="TopModule" Val="intellight_PG_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="intellight_CU_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/intellight_CU_0_0" RelGenDir="$PGENDIR/intellight_CU_0_0">
       <Config>
         <Option Name="TopModule" Val="intellight_CU_0_0"/>
@@ -479,18 +389,6 @@
     <FileSet Name="intellight_SD_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/intellight_SD_0_0" RelGenDir="$PGENDIR/intellight_SD_0_0">
       <Config>
         <Option Name="TopModule" Val="intellight_SD_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="intellight_v2_axi_smc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/intellight_v2_axi_smc_0" RelGenDir="$PGENDIR/intellight_v2_axi_smc_0">
-      <Config>
-        <Option Name="TopModule" Val="intellight_v2_axi_smc_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="intellight_v2_processing_system7_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/intellight_v2_processing_system7_0_0" RelGenDir="$PGENDIR/intellight_v2_processing_system7_0_0">
-      <Config>
-        <Option Name="TopModule" Val="intellight_v2_processing_system7_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -513,8 +411,8 @@
       <Option Name="Description" Val="Active-HDL Simulator"/>
     </Simulator>
   </Simulators>
-  <Runs Version="1" Minor="15">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../riset/optimized_intellight/optimized_intellight.srcs/utils_1/imports/synth_1">
+  <Runs Version="1" Minor="19">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="F:/riset/optimized_intellight/optimized_intellight.srcs/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -524,7 +422,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_blk_mem_gen_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_blk_mem_gen_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../riset/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_blk_mem_gen_0_0_synth_1">
+    <Run Id="simulate_RD_0_2_synth_1" Type="Ft3:Synth" SrcSet="simulate_RD_0_2" Part="xc7z020clg400-1" ConstrsSet="simulate_RD_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/simulate_RD_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/simulate_RD_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/simulate_RD_0_2_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -534,7 +432,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_RAM0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_RAM0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_RAM0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_RAM0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../riset/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RAM0_0_synth_1">
+    <Run Id="simulate_QA_0_2_synth_1" Type="Ft3:Synth" SrcSet="simulate_QA_0_2" Part="xc7z020clg400-1" ConstrsSet="simulate_QA_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/simulate_QA_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/simulate_QA_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/simulate_QA_0_2_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -544,7 +442,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_RAM1_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_RAM1_0" Part="xc7z020clg400-1" ConstrsSet="intellight_RAM1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_RAM1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../riset/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RAM1_0_synth_1">
+    <Run Id="intellight_RD_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_RD_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_RD_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_RD_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RD_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/intellight_RD_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -554,7 +452,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_RAM2_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_RAM2_0" Part="xc7z020clg400-1" ConstrsSet="intellight_RAM2_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_RAM2_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../riset/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RAM2_0_synth_1">
+    <Run Id="intellight_QA_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_QA_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_QA_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_QA_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_QA_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/intellight_QA_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -564,7 +462,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_RAM0_1_synth_1" Type="Ft3:Synth" SrcSet="intellight_RAM0_1" Part="xc7z020clg400-1" ConstrsSet="intellight_RAM0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_RAM0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../Intelligent Traffic Light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RAM0_1_synth_1">
+    <Run Id="simulate_MII_0_2_synth_1" Type="Ft3:Synth" SrcSet="simulate_MII_0_2" Part="xc7z020clg400-1" ConstrsSet="simulate_MII_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/simulate_MII_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/simulate_MII_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/simulate_MII_0_2_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -574,7 +472,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_RAM1_1_synth_1" Type="Ft3:Synth" SrcSet="intellight_RAM1_1" Part="xc7z020clg400-1" ConstrsSet="intellight_RAM1_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_RAM1_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../Intelligent Traffic Light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RAM1_1_synth_1">
+    <Run Id="intellight_MII_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_MII_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_MII_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_MII_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_MII_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/intellight_MII_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -584,7 +482,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_RAM2_1_synth_1" Type="Ft3:Synth" SrcSet="intellight_RAM2_1" Part="xc7z020clg400-1" ConstrsSet="intellight_RAM2_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_RAM2_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../Intelligent Traffic Light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RAM2_1_synth_1">
+    <Run Id="intellight_intellight_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_intellight_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_intellight_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_intellight_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_intellight_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/intellight_intellight_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -594,7 +492,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_RAM3_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_RAM3_0" Part="xc7z020clg400-1" ConstrsSet="intellight_RAM3_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_RAM3_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../Intelligent Traffic Light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RAM3_0_synth_1">
+    <Run Id="intellight_CU_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_CU_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_CU_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_CU_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_CU_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/intellight_CU_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -604,7 +502,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="simulate_RD_0_2_synth_1" Type="Ft3:Synth" SrcSet="simulate_RD_0_2" Part="xc7z020clg400-1" ConstrsSet="simulate_RD_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/simulate_RD_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/simulate_RD_0_2_synth_1">
+    <Run Id="intellight_SD_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_SD_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_SD_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_SD_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_SD_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/intellight_SD_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -614,123 +512,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="simulate_QA_0_2_synth_1" Type="Ft3:Synth" SrcSet="simulate_QA_0_2" Part="xc7z020clg400-1" ConstrsSet="simulate_QA_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/simulate_QA_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/simulate_QA_0_2_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_RD_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_RD_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_RD_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_RD_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_RD_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_QA_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_QA_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_QA_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_QA_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_QA_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="simulate_MII_0_2_synth_1" Type="Ft3:Synth" SrcSet="simulate_MII_0_2" Part="xc7z020clg400-1" ConstrsSet="simulate_MII_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/simulate_MII_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/simulate_MII_0_2_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_MII_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_MII_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_MII_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_MII_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_MII_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_intellight_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_intellight_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_intellight_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_intellight_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_intellight_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_PG_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_PG_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_PG_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_PG_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_PG_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_CU_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_CU_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_CU_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_CU_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_CU_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_SD_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_SD_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_SD_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_SD_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_SD_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_v2_axi_smc_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_v2_axi_smc_0" Part="xc7z020clg400-1" ConstrsSet="intellight_v2_axi_smc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_v2_axi_smc_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_v2_axi_smc_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_v2_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="intellight_v2_processing_system7_0_0" Part="xc7z020clg400-1" ConstrsSet="intellight_v2_processing_system7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_v2_processing_system7_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_v2_processing_system7_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../riset/optimized_intellight/optimized_intellight.srcs/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="F:/riset/optimized_intellight/optimized_intellight.srcs/utils_1/imports/impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -748,7 +530,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_blk_mem_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_blk_mem_gen_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../riset/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_blk_mem_gen_0_0_impl_1">
+    <Run Id="simulate_RD_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="simulate_RD_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="simulate_RD_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/simulate_RD_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/simulate_RD_0_2_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -765,7 +547,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_RAM0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_RAM0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_RAM0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../riset/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RAM0_0_impl_1">
+    <Run Id="simulate_QA_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="simulate_QA_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="simulate_QA_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/simulate_QA_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/simulate_QA_0_2_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -782,7 +564,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_RAM1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_RAM1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_RAM1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../riset/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RAM1_0_impl_1">
+    <Run Id="intellight_RD_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_RD_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_RD_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RD_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/intellight_RD_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -799,7 +581,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_RAM2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_RAM2_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_RAM2_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../riset/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RAM2_0_impl_1">
+    <Run Id="intellight_QA_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_QA_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_QA_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_QA_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/intellight_QA_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -816,7 +598,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_RAM0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_RAM0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_RAM0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../Intelligent Traffic Light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RAM0_1_impl_1">
+    <Run Id="simulate_MII_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="simulate_MII_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="simulate_MII_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/simulate_MII_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/simulate_MII_0_2_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -833,7 +615,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_RAM1_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_RAM1_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_RAM1_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../Intelligent Traffic Light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RAM1_1_impl_1">
+    <Run Id="intellight_MII_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_MII_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_MII_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_MII_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/intellight_MII_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -850,7 +632,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_RAM2_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_RAM2_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_RAM2_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../Intelligent Traffic Light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RAM2_1_impl_1">
+    <Run Id="intellight_intellight_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_intellight_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_intellight_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_intellight_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/intellight_intellight_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -867,7 +649,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="intellight_RAM3_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_RAM3_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_RAM3_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../Intelligent Traffic Light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_RAM3_0_impl_1">
+    <Run Id="intellight_CU_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_CU_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_CU_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_CU_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/intellight_CU_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -884,202 +666,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="simulate_RD_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="simulate_RD_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="simulate_RD_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/simulate_RD_0_2_impl_1">
+    <Run Id="intellight_SD_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_SD_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_SD_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/utils_1/imports/intellight_SD_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/intellight_SD_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="simulate_QA_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="simulate_QA_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="simulate_QA_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/simulate_QA_0_2_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_RD_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_RD_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_RD_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_RD_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_QA_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_QA_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_QA_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_QA_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="simulate_MII_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="simulate_MII_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="simulate_MII_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/simulate_MII_0_2_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_MII_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_MII_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_MII_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_MII_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_intellight_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_intellight_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_intellight_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_intellight_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_PG_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_PG_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_PG_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_PG_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_CU_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_CU_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_CU_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_CU_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_SD_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_SD_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_SD_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_SD_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_v2_axi_smc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_v2_axi_smc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_v2_axi_smc_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_v2_axi_smc_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="intellight_v2_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_v2_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_v2_processing_system7_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_v2_processing_system7_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1095,9 +684,7 @@
       <RQSFiles/>
     </Run>
   </Runs>
-  <Board>
-    <Jumpers/>
-  </Board>
+  <Board/>
   <DashboardSummary Version="1" Minor="0">
     <Dashboards>
       <Dashboard Name="default_dashboard">

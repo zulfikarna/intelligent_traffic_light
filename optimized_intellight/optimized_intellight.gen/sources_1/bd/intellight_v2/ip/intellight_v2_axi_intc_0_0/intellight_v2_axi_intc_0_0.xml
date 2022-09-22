@@ -172,7 +172,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ">166666672</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -343,7 +343,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.NUM_READ_OUTSTANDING">8</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.NUM_READ_OUTSTANDING">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -352,7 +352,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_OUTSTANDING">8</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_OUTSTANDING">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -379,7 +379,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN">intellight_v2_processing_system7_0_0_FCLK_CLK0</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN"/>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -460,7 +460,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.FREQ_HZ">166666672</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -487,7 +487,16 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.CLK_DOMAIN">intellight_v2_processing_system7_0_0_FCLK_CLK0</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.CLK_DOMAIN"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_PORT</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.ASSOCIATED_PORT"/>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -599,6 +608,15 @@
           </spirit:vendorExtensions>
         </spirit:parameter>
         <spirit:parameter>
+          <spirit:name>ASSOCIATED_PORT</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.PROC_CLOCK.ASSOCIATED_PORT"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
           <spirit:name>INSERT_VIP</spirit:name>
           <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.PROC_CLOCK.INSERT_VIP">0</spirit:value>
           <spirit:vendorExtensions>
@@ -660,7 +678,7 @@
       </spirit:vendorExtensions>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>interrupt.irq</spirit:name>
+      <spirit:name>interrupt_irq</spirit:name>
       <spirit:displayName>INTERRUPT</spirit:displayName>
       <spirit:description>Interrupt to other target than MicroBlaze</spirit:description>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="interrupt" spirit:version="1.0"/>
@@ -679,11 +697,11 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>SENSITIVITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.INTERRUPT.IRQ.SENSITIVITY">LEVEL_HIGH</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.INTERRUPT_IRQ.SENSITIVITY">LEVEL_HIGH</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PortWidth</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.INTERRUPT.IRQ.PortWidth">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.INTERRUPT_IRQ.PortWidth">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -694,7 +712,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.interrupt.irq" xilinx:dependency="spirit:decode(id(&apos;PARAM_VALUE.C_IRQ_CONNECTION&apos;)) = 1">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.interrupt_irq" xilinx:dependency="spirit:decode(id(&apos;PARAM_VALUE.C_IRQ_CONNECTION&apos;)) = 1">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -735,7 +753,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>SENSITIVITY</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.INTERRUPT.SENSITIVITY">EDGE_RISING</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.INTERRUPT.SENSITIVITY">LEVEL_HIGH</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -745,24 +763,6 @@
         <spirit:parameter>
           <spirit:name>LOW_LATENCY</spirit:name>
           <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.INTERRUPT.LOW_LATENCY">0</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>IRQ.PortWidth</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.INTERRUPT.IRQ.PortWidth">1</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>irq.SENSITIVITY</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.INTERRUPT.irq.SENSITIVITY">LEVEL_HIGH</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1260,7 +1260,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1294,7 +1294,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1328,7 +1328,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1362,7 +1362,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1396,7 +1396,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1430,7 +1430,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1464,7 +1464,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1498,7 +1498,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1532,7 +1532,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1566,7 +1566,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1600,7 +1600,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1634,7 +1634,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1668,7 +1668,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1702,7 +1702,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1736,7 +1736,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1770,7 +1770,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1804,7 +1804,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1838,7 +1838,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1872,7 +1872,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1906,7 +1906,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1940,7 +1940,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -1974,7 +1974,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2008,7 +2008,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2042,7 +2042,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2076,7 +2076,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2110,7 +2110,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2144,7 +2144,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2178,7 +2178,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2212,7 +2212,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2246,7 +2246,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2280,7 +2280,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2314,7 +2314,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))">0x000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),11,18))" spirit:bitStringLength="32">0x000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2348,7 +2348,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2382,7 +2382,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2416,7 +2416,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2450,7 +2450,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2484,7 +2484,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2518,7 +2518,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2552,7 +2552,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2586,7 +2586,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2620,7 +2620,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2654,7 +2654,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2688,7 +2688,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2722,7 +2722,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2756,7 +2756,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2790,7 +2790,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2824,7 +2824,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2858,7 +2858,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2892,7 +2892,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2926,7 +2926,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2960,7 +2960,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -2994,7 +2994,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -3028,7 +3028,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -3062,7 +3062,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -3096,7 +3096,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -3130,7 +3130,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -3164,7 +3164,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -3198,7 +3198,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -3232,7 +3232,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -3266,7 +3266,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -3300,7 +3300,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -3334,7 +3334,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -3368,7 +3368,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -3402,7 +3402,7 @@ For each bit:
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
-            <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
+            <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="concat(&quot;0x0&quot;,substring(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IVAR_RESET_VALUE&apos;)),3))">0x00000000000000010</spirit:value>
           </spirit:reset>
           <spirit:field>
             <spirit:name>IVA</spirit:name>
@@ -3431,123 +3431,6 @@ For each bit:
     </spirit:memoryMap>
   </spirit:memoryMaps>
   <spirit:model>
-    <spirit:views>
-      <spirit:view>
-        <spirit:name>xilinx_externalfiles</spirit:name>
-        <spirit:displayName>External Files</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Aug 23 03:53:11 UTC 2022</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:08a73f4f</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_vhdlsynthesis</spirit:name>
-        <spirit:displayName>VHDL Synthesis</spirit:displayName>
-        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
-        <spirit:language>vhdl</spirit:language>
-        <spirit:modelName>axi_intc</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_axi_lite_ipif_3_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Aug 23 03:28:16 UTC 2022</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2448f0fb</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_synthesisconstraints</spirit:name>
-        <spirit:displayName>Synthesis Constraints</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:synthesis.constraints</spirit:envIdentifier>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2448f0fb</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_vhdlsynthesiswrapper</spirit:name>
-        <spirit:displayName>VHDL Synthesis Wrapper</spirit:displayName>
-        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
-        <spirit:language>vhdl</spirit:language>
-        <spirit:modelName>intellight_v2_axi_intc_0_0</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Aug 23 03:52:37 UTC 2022</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2448f0fb</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_vhdlbehavioralsimulation</spirit:name>
-        <spirit:displayName>VHDL Simulation</spirit:displayName>
-        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
-        <spirit:language>vhdl</spirit:language>
-        <spirit:modelName>axi_intc</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_axi_lite_ipif_3_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Aug 23 03:28:16 UTC 2022</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6df7e2e9</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_vhdlsimulationwrapper</spirit:name>
-        <spirit:displayName>VHDL Simulation Wrapper</spirit:displayName>
-        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
-        <spirit:language>vhdl</spirit:language>
-        <spirit:modelName>intellight_v2_axi_intc_0_0</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_vhdlsimulationwrapper_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Aug 23 03:52:37 UTC 2022</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6df7e2e9</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-    </spirit:views>
     <spirit:ports>
       <spirit:port>
         <spirit:name>s_axi_aclk</spirit:name>
@@ -3556,8 +3439,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3569,8 +3451,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3586,8 +3467,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3599,8 +3479,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3612,8 +3491,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3629,8 +3507,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3646,8 +3523,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3659,8 +3535,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3672,8 +3547,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3689,8 +3563,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3702,8 +3575,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3715,8 +3587,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3732,8 +3603,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3745,8 +3615,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3758,8 +3627,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3775,8 +3643,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3792,8 +3659,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3805,8 +3671,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3818,8 +3683,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3835,8 +3699,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3848,8 +3711,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -3871,8 +3733,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -3894,8 +3755,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3911,8 +3771,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -3938,8 +3797,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -3958,8 +3816,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -3985,8 +3842,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -4012,8 +3868,7 @@ For each bit:
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -4121,7 +3976,7 @@ For each bit:
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_DISABLE_SYNCHRONIZERS</spirit:name>
         <spirit:displayName>Disable Synchronizers in Design</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DISABLE_SYNCHRONIZERS">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DISABLE_SYNCHRONIZERS">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_MB_CLK_NOT_CONNECTED</spirit:name>
@@ -4171,127 +4026,6 @@ For each bit:
       <spirit:enumeration spirit:text="Single">1</spirit:enumeration>
     </spirit:choice>
   </spirit:choices>
-  <spirit:fileSets>
-    <spirit:fileSet>
-      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>intellight_v2_axi_intc_0_0.dcp</spirit:name>
-        <spirit:userFileType>dcp</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>intellight_v2_axi_intc_0_0_sim_netlist.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>intellight_v2_axi_intc_0_0_sim_netlist.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>intellight_v2_axi_intc_0_0_stub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>intellight_v2_axi_intc_0_0_stub.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_axi_lite_ipif_3_0__ref_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>../../ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>axi_lite_ipif_v3_0_4</spirit:logicalName>
-      </spirit:file>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axi_lite_ipif" xilinx:version="3.0" xilinx:isGenerated="true" xilinx:checksum="db189391">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>intellight_v2_axi_intc_0_0.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>intellight_v2_axi_intc_0_0_clocks.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>late</spirit:value>
-        </spirit:define>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>intellight_v2_axi_intc_0_0_ooc.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/47b8/hdl/axi_intc_v4_1_vh_rfs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>axi_intc_v4_1_15</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>synth/intellight_v2_axi_intc_0_0.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_axi_lite_ipif_3_0__ref_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>../../ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>axi_lite_ipif_v3_0_4</spirit:logicalName>
-      </spirit:file>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axi_lite_ipif" xilinx:version="3.0" xilinx:isGenerated="true" xilinx:checksum="db189391">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>../../ipshared/47b8/hdl/axi_intc_v4_1_vh_rfs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>axi_intc_v4_1_15</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_vhdlsimulationwrapper_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>sim/intellight_v2_axi_intc_0_0.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
-  </spirit:fileSets>
   <spirit:description>The LogiCORE IP AXI Interrupt Controller (AXI INTC) core concentrates multiple interrupt inputs from peripheral devices to a single interrupt output to the system processor.</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
@@ -4383,26 +4117,12 @@ For each bit:
       <spirit:displayName>Enable Fast Interrupt Logic</spirit:displayName>
       <spirit:description>This check box should be set when the core is configured with Fast Mode Interrupt. The processor uses this setting to automatically enable the low-latency interrupt functionality. Fast Mode Interrupt is not available when selecting Single interrupt output connection.</spirit:description>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_HAS_FAST" spirit:choiceRef="choice_pairs_4873554b" spirit:order="2400">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_HAS_FAST">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_ADDR_WIDTH</spirit:name>
       <spirit:displayName>Interrupt Address Width</spirit:displayName>
       <spirit:description>Interrupt address width with Fast Mode Interrupt.</spirit:description>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ADDR_WIDTH" spirit:order="2450" spirit:minimum="32" spirit:maximum="64" spirit:rangeType="long">32</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_ADDR_WIDTH">true</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_IVAR_RESET_VALUE</spirit:name>
@@ -4467,59 +4187,35 @@ For each bit:
       <spirit:name>C_S_AXI_ACLK_FREQ_MHZ</spirit:name>
       <spirit:displayName>s_axi_aclk frequency (MHz)</spirit:displayName>
       <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S_AXI_ACLK_FREQ_MHZ" spirit:order="4000">166.666672</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_S_AXI_ACLK_FREQ_MHZ">true</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_PROCESSOR_CLK_FREQ_MHZ</spirit:name>
       <spirit:displayName>processor_clk frequency (MHz)</spirit:displayName>
       <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.C_PROCESSOR_CLK_FREQ_MHZ" spirit:order="4100">100.0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_PROCESSOR_CLK_FREQ_MHZ">true</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_IRQ_CONNECTION</spirit:name>
       <spirit:displayName>Interrupt Output Connection</spirit:displayName>
       <spirit:description>Select interrupt output connection bus interface. Normally Bus is used when connecting to MicroBlaze and cascaded AXI Interrupt Controllers. Otherwise Single can be used when Fast Mode Interrupt is not enabled, and the target has a single interrupt input.</spirit:description>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_IRQ_CONNECTION" spirit:choiceRef="choice_pairs_d4609148" spirit:order="3200">1</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_IRQ_CONNECTION">true</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>AXI Interrupt Controller</xilinx:displayName>
-      <xilinx:coreRevision>15</xilinx:coreRevision>
+      <xilinx:coreRevision>17</xilinx:coreRevision>
       <xilinx:configElementInfos>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTERRUPT.IRQ.PortWidth" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTERRUPT.IRQ.SENSITIVITY" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTERRUPT.LOW_LATENCY" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTERRUPT.SENSITIVITY" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTERRUPT.irq.SENSITIVITY" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTERRUPT_INPUT.PortWidth" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTERRUPT_INPUT.PortWidth" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTERRUPT_INPUT.SENSITIVITY" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTERRUPT_IRQ.PortWidth" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTERRUPT_IRQ.SENSITIVITY" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.DATA_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
@@ -4530,23 +4226,24 @@ For each bit:
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_RRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.MAX_BURST_LENGTH" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.MAX_BURST_LENGTH" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_OUTSTANDING" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_THREADS" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_OUTSTANDING" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_THREADS" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.PHASE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.READ_WRITE_MODE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.RUSER_BITS_PER_BYTE" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.RUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.SUPPORTS_NARROW_BURST" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_BITS_PER_BYTE" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.SUPPORTS_NARROW_BURST" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.ASSOCIATED_PORT" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.ASSOCIATED_RESET" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.CLK_DOMAIN" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.FREQ_HZ" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.PHASE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_RESETN.POLARITY" xilinx:valuePermission="bd"/>
@@ -4567,13 +4264,13 @@ For each bit:
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2021.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="ee3bd908"/>
+      <xilinx:xilinxVersion>2022.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f15c9036"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="00000000"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="732ad39e"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="00e85795"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="252e29e1"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="237e32d6"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="1b4434db"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="37f75050"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

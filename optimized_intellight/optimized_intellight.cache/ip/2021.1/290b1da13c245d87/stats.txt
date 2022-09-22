@@ -1,2 +1,0 @@
-NumberHits:15
-Timestamp: Mon Aug 22 10:34:12 UTC 2022

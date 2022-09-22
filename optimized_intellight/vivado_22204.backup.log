@@ -1,0 +1,226 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Aug 18 07:25:35 2022
+# Process ID: 22204
+# Current directory: F:/intelligent_traffic_light/optimized_intellight
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15692 F:\intelligent_traffic_light\optimized_intellight\optimized_intellight.xpr
+# Log file: F:/intelligent_traffic_light/optimized_intellight/vivado.log
+# Journal file: F:/intelligent_traffic_light/optimized_intellight\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.xpr
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'F:/intelligent_traffic_light/ip_repo/intellight_ip_1.0'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/intelligent_traffic_light/ip_repo/intellight_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/intelligent_traffic_light/ip_repo/intellight_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/intelligent_traffic_light/ip_repo/intellight_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'f:/intelligent_traffic_light/ip_repo/intellight_ip_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'intellight_intellight_0_0' generated file not found 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_intellight_0_0/intellight_intellight_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'intellight_intellight_0_0' generated file not found 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_intellight_0_0/intellight_intellight_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'intellight_intellight_0_0' generated file not found 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_intellight_0_0/intellight_intellight_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'intellight_intellight_0_0' generated file not found 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_intellight_0_0/intellight_intellight_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'intellight_intellight_0_0' generated file not found 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_intellight_0_0/intellight_intellight_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'intellight.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+intellight_intellight_0_0
+
+open_project: Time (s): cpu = 00:00:33 ; elapsed = 00:00:25 . Memory (MB): peak = 1329.355 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_bd_design {F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd}
+Reading block design file <F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd>...
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - const_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - cons_0000
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - Action_RAM0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - Action_RAM1
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - Action_RAM2
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - Action_RAM3
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - const_1
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - RAM0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - RAM1
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - RAM2
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - RAM3
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_1
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_2
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_3
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_100M
+Adding component instance block -- xilinx.com:ip:axi_intc:4.1 - axi_intc_0
+Adding component instance block -- xilinx.com:module_ref:PG:1.0 - PG_0
+Adding component instance block -- xilinx.com:module_ref:SD:1.0 - SD_0
+Adding component instance block -- xilinx.com:module_ref:QA:1.0 - QA_0
+Adding component instance block -- xilinx.com:module_ref:RD:1.0 - RD_0
+Adding component instance block -- xilinx.com:module_ref:CU:1.0 - CU_0
+Adding component instance block -- xilinx.com:module_ref:MII:1.0 - MII_0
+Adding component instance block -- xilinx.com:user:intellight:1.0 - intellight_0
+Successfully read diagram <intellight> from block design file <F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd>
+open_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1377.242 ; gain = 47.887
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:intellight:1.0 [get_ips  intellight_intellight_0_0] -log ip_upgrade.log
+Upgrading 'F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.runs/intellight_intellight_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded intellight_intellight_0_0 (intellight_v1.0 1.0) from revision 6 to revision 7
+Wrote  : <F:\intelligent_traffic_light\optimized_intellight\optimized_intellight.srcs\sources_1\bd\intellight\intellight.bd> 
+Wrote  : <F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/ui/bd_cc640fc0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/intelligent_traffic_light/optimized_intellight/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips intellight_intellight_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd]
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(150). Command ignored
+INFO: [xilinx.com:ip:smartconnect:1.0-1] intellight_axi_smc_0: SmartConnect intellight_axi_smc_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [xilinx.com:ip:axi_intc:4.1-4] /axi_intc_0: Could not determine interrupt input port type - using default interrupt type Rising Edge. Please change this manually if necessary.
+Wrote  : <F:\intelligent_traffic_light\optimized_intellight\optimized_intellight.srcs\sources_1\bd\intellight\intellight.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/PL_RAM/RAM0/addra'(32) to pin: '/PL_RAM/axi_bram_ctrl_0/bram_addr_a'(14) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/PL_RAM/RAM1/addra'(32) to pin: '/PL_RAM/axi_bram_ctrl_1/bram_addr_a'(14) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/PL_RAM/RAM2/addra'(32) to pin: '/PL_RAM/axi_bram_ctrl_2/bram_addr_a'(14) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/PL_RAM/RAM3/addra'(32) to pin: '/PL_RAM/axi_bram_ctrl_3/bram_addr_a'(14) - Only lower order bits will be connected.
+VHDL Output written to : f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/synth/intellight.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/PL_RAM/RAM0/addra'(32) to pin: '/PL_RAM/axi_bram_ctrl_0/bram_addr_a'(14) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/PL_RAM/RAM1/addra'(32) to pin: '/PL_RAM/axi_bram_ctrl_1/bram_addr_a'(14) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/PL_RAM/RAM2/addra'(32) to pin: '/PL_RAM/axi_bram_ctrl_2/bram_addr_a'(14) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/PL_RAM/RAM3/addra'(32) to pin: '/PL_RAM/axi_bram_ctrl_3/bram_addr_a'(14) - Only lower order bits will be connected.
+VHDL Output written to : f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/sim/intellight.v
+VHDL Output written to : f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/hdl/intellight_wrapper.v
+Exporting to file f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_smc_0/bd_0/hw_handoff/intellight_axi_smc_0.hwh
+Generated Block Design Tcl file f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_smc_0/bd_0/hw_handoff/intellight_axi_smc_0_bd.tcl
+Generated Hardware Definition File f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_smc_0/bd_0/synth/intellight_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block intellight_0 .
+Exporting to file f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/hw_handoff/intellight.hwh
+Generated Block Design Tcl file f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/hw_handoff/intellight_bd.tcl
+Generated Hardware Definition File f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/synth/intellight.hwdef
+generate_target: Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1814.305 ; gain = 275.723
+catch { config_ip_cache -export [get_ips -all intellight_axi_smc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP intellight_axi_smc_0, cache-ID = 290b1da13c245d87; cache size = 397.665 MB.
+config_ip_cache: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1847.281 ; gain = 32.977
+catch { config_ip_cache -export [get_ips -all intellight_intellight_0_0] }
+export_ip_user_files -of_objects [get_files F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd]
+launch_runs intellight_intellight_0_0_synth_1 -jobs 8
+[Thu Aug 18 07:30:54 2022] Launched intellight_intellight_0_0_synth_1...
+Run output will be captured here: F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.runs/intellight_intellight_0_0_synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 1847.281 ; gain = 0.000
+export_simulation -of_objects [get_files F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd] -directory F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.ip_user_files/sim_scripts -ip_user_files_dir F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.ip_user_files -ipstatic_source_dir F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.cache/compile_simlib/modelsim} {questa=F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.cache/compile_simlib/questa} {riviera=F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.cache/compile_simlib/riviera} {activehdl=F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+make_wrapper -files [get_files F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd] -top
+make_wrapper -files [get_files F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd] -top
+generate_target all [get_files  F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd]
+INFO: [BD 41-1637] Generated targets are already up-to-date for block design 'intellight' - hence not re-generating.
+export_ip_user_files -of_objects [get_files F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd]
+export_simulation -of_objects [get_files F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd] -directory F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.ip_user_files/sim_scripts -ip_user_files_dir F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.ip_user_files -ipstatic_source_dir F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.cache/compile_simlib/modelsim} {questa=F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.cache/compile_simlib/questa} {riviera=F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.cache/compile_simlib/riviera} {activehdl=F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+[Thu Aug 18 07:33:42 2022] Launched synth_1...
+Run output will be captured here: F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.runs/synth_1/runme.log
+[Thu Aug 18 07:33:42 2022] Launched impl_1...
+Run output will be captured here: F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Aug 18 07:39:02 2022] Launched impl_1...
+Run output will be captured here: F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2059.281 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 398 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2872.934 ; gain = 0.000
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2872.934 ; gain = 0.000
+Generating merged BMM file for the design top 'intellight_wrapper'...
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2872.934 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 186 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 180 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 6 instances
+
+open_run: Time (s): cpu = 00:00:55 ; elapsed = 00:00:35 . Memory (MB): peak = 2976.445 ; gain = 1088.574
+open_report: Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 3074.621 ; gain = 91.699
+open_bd_design {F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd}
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_CU_0_0/intellight_CU_0_0.dcp' for cell 'intellight_i/CU_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_MII_0_0/intellight_MII_0_0.dcp' for cell 'intellight_i/MII_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_PG_0_0/intellight_PG_0_0.dcp' for cell 'intellight_i/PG_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_QA_0_0/intellight_QA_0_0.dcp' for cell 'intellight_i/QA_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_RD_0_0/intellight_RD_0_0.dcp' for cell 'intellight_i/RD_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_SD_0_0/intellight_SD_0_0.dcp' for cell 'intellight_i/SD_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_intc_0_0/intellight_axi_intc_0_0.dcp' for cell 'intellight_i/axi_intc_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_smc_0/intellight_axi_smc_0.dcp' for cell 'intellight_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_intellight_0_0/intellight_intellight_0_0.dcp' for cell 'intellight_i/intellight_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_processing_system7_0_0/intellight_processing_system7_0_0.dcp' for cell 'intellight_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_rst_clk_100M_0/intellight_rst_clk_100M_0.dcp' for cell 'intellight_i/rst_clk_100M'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_blk_mem_gen_0_0/intellight_blk_mem_gen_0_0.dcp' for cell 'intellight_i/Action_RAM/Action_RAM0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_RAM0_0/intellight_RAM0_0.dcp' for cell 'intellight_i/Action_RAM/Action_RAM1'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_RAM1_0/intellight_RAM1_0.dcp' for cell 'intellight_i/Action_RAM/Action_RAM2'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_RAM2_0/intellight_RAM2_0.dcp' for cell 'intellight_i/Action_RAM/Action_RAM3'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_RAM0_1/intellight_RAM0_1.dcp' for cell 'intellight_i/PL_RAM/RAM0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_RAM1_1/intellight_RAM1_1.dcp' for cell 'intellight_i/PL_RAM/RAM1'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_RAM2_1/intellight_RAM2_1.dcp' for cell 'intellight_i/PL_RAM/RAM2'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_RAM3_0/intellight_RAM3_0.dcp' for cell 'intellight_i/PL_RAM/RAM3'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_bram_ctrl_0_0/intellight_axi_bram_ctrl_0_0.dcp' for cell 'intellight_i/PL_RAM/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_bram_ctrl_1_0/intellight_axi_bram_ctrl_1_0.dcp' for cell 'intellight_i/PL_RAM/axi_bram_ctrl_1'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_bram_ctrl_1_1/intellight_axi_bram_ctrl_1_1.dcp' for cell 'intellight_i/PL_RAM/axi_bram_ctrl_2'
+INFO: [Project 1-454] Reading design checkpoint 'f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_bram_ctrl_2_0/intellight_axi_bram_ctrl_2_0.dcp' for cell 'intellight_i/PL_RAM/axi_bram_ctrl_3'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3832.109 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 464 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_processing_system7_0_0/intellight_processing_system7_0_0.xdc] for cell 'intellight_i/processing_system7_0/inst'
+WARNING: [Vivado 12-2489] -input_jitter contains time 0.199980 which will be rounded to 0.200 to ensure it is an integer multiple of 1 picosecond [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_processing_system7_0_0/intellight_processing_system7_0_0.xdc:21]
+Finished Parsing XDC File [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_processing_system7_0_0/intellight_processing_system7_0_0.xdc] for cell 'intellight_i/processing_system7_0/inst'
+Parsing XDC File [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_smc_0/bd_0/ip/ip_1/bd_0108_psr_aclk_0_board.xdc] for cell 'intellight_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_smc_0/bd_0/ip/ip_1/bd_0108_psr_aclk_0_board.xdc] for cell 'intellight_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_smc_0/bd_0/ip/ip_1/bd_0108_psr_aclk_0.xdc] for cell 'intellight_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_smc_0/bd_0/ip/ip_1/bd_0108_psr_aclk_0.xdc] for cell 'intellight_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_rst_clk_100M_0/intellight_rst_clk_100M_0_board.xdc] for cell 'intellight_i/rst_clk_100M/U0'
+Finished Parsing XDC File [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_rst_clk_100M_0/intellight_rst_clk_100M_0_board.xdc] for cell 'intellight_i/rst_clk_100M/U0'
+Parsing XDC File [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_rst_clk_100M_0/intellight_rst_clk_100M_0.xdc] for cell 'intellight_i/rst_clk_100M/U0'
+Finished Parsing XDC File [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_rst_clk_100M_0/intellight_rst_clk_100M_0.xdc] for cell 'intellight_i/rst_clk_100M/U0'
+Parsing XDC File [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_intc_0_0/intellight_axi_intc_0_0.xdc] for cell 'intellight_i/axi_intc_0/U0'
+Finished Parsing XDC File [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_intc_0_0/intellight_axi_intc_0_0.xdc] for cell 'intellight_i/axi_intc_0/U0'
+Parsing XDC File [F:/intelligent_traffic_light/optimized_intellight/board_file/PYNQ-Z1_C.xdc]
+Finished Parsing XDC File [F:/intelligent_traffic_light/optimized_intellight/board_file/PYNQ-Z1_C.xdc]
+Parsing XDC File [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_intc_0_0/intellight_axi_intc_0_0_clocks.xdc] for cell 'intellight_i/axi_intc_0/U0'
+Finished Parsing XDC File [f:/intelligent_traffic_light/optimized_intellight/optimized_intellight.gen/sources_1/bd/intellight/ip/intellight_axi_intc_0_0/intellight_axi_intc_0_0_clocks.xdc] for cell 'intellight_i/axi_intc_0/U0'
+INFO: [Project 1-1714] 117 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'intellight_wrapper'...
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 3832.109 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 252 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 246 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 6 instances
+
+open_run: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 3845.402 ; gain = 13.293
+current_design impl_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 3884.863 ; gain = 8.320
+current_design synth_1
+current_design impl_1
+current_design synth_1
+current_design impl_1
+open_bd_design {F:/intelligent_traffic_light/optimized_intellight/optimized_intellight.srcs/sources_1/bd/intellight/intellight.bd}
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 18 08:58:50 2022...
