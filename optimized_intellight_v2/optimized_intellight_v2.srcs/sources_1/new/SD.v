@@ -17,6 +17,7 @@ module SD // verified
 (
     input wire clk, rst, mode,
     input wire [A_WIDTH-1:0] A,
+    input wire [A_WIDTH/2-1:0] A_road,
     input wire [S_WIDTH-1:0] S_sim,
     input wire [ITV_WIDTH-1:0] L_inc,
     input wire [ITV_WIDTH-1:0] L_dec,
