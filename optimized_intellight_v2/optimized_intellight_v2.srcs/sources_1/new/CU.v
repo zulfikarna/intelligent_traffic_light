@@ -10,14 +10,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module CU(
-    input wire clk, rst, start,
+    input wire clk, rst, start, mode,
     // From Processing System 
     input wire [15:0] max_step,
     input wire [15:0] max_episode,
     input wire [15:0] seed,
     // Output for Policy Generator 
-    output reg Asel,
-    output reg [1:0] Arand,
+    output reg A_sel,
+    output reg [1:0] A_rand,
     output reg [11:0] S0,
     // Control Signal
     output wire PG,
@@ -32,8 +32,7 @@ module CU(
     output wire [15:0] wire_epsilon,
     output reg finish,
     output reg wen,
-    output reg idle,
-    input wire active
+    output reg idle 
     );
     
     // State variable for FSM implementation 
@@ -68,17 +67,7 @@ module CU(
     // Variables for generating random number 
     reg  [15:0] i_lsfr;
     wire [15:0] o_lsfr;
-    lsfr_16bit rand(.in0(i_lsfr), .out0(o_lsfr));
-        
-    // LSFR Configuration 
-    always@(posedge clk) begin
-        case(cs)
-            S_IDLE:
-                i_lsfr <= seed;
-            default:
-                i_lsfr <= o_lsfr;
-        endcase
-    end
+    lsfr_16bit rand(.clk(clk), .rst(rst), .in0(seed), .out0(o_lsfr));
     
     // Reset handler
     always@(posedge clk) begin 
@@ -101,9 +90,9 @@ module CU(
     always@(*) begin
         case (cs)
             S_IDLE :
-                if ((start)&(!active)) begin
+                if ((start)&(!mode)) begin
                     ns <= S_INIT;
-                end else if ((!start)&(active)) begin
+                end else if ((!start)&(mode)) begin
                     ns <= S_L0;
                 end else begin
                     ns <= S_IDLE;
@@ -124,33 +113,27 @@ module CU(
             S_L4 :
                 ns <= S_L5;
             S_L5 :
-                ns <= S_L6;
+                if(sc > max_step)
+                    ns <= S_L6;
+                else 
+                    ns <= S_L5;
             S_L6 :
                 ns <= S_L7;
             S_L7 :
                 ns <= S_L8;
             S_L8 :
-                if(sc > max_step)
-                    ns <= S_L9;
-                else 
-                    ns <= S_L8;
+                ns <= S_L9;
             S_L9 :
                 ns <= S_L10;
             S_L10 :
                 ns <= S_L11;
             S_L11 :
-                ns <= S_L12;
-            S_L12 :
-                ns <= S_L13;
-            S_L13 :
-                ns <= S_L14;
-            S_L14 :
-                if ((start)&(!active))
+                if ((start)&(!mode))
                     ns <= S_INIT;
                 else 
                     ns <= S_DONE;
             S_DONE :
-                if ((start)|(active))
+                if ((start)|(mode))
                     ns <= S_DONE;
                 else 
                     ns <= S_IDLE;
@@ -172,7 +155,7 @@ module CU(
     
     // Memory Handling 
     always @(*) begin
-        if ((ns == S_L13)|(ns == S_L14)|(ns == S_L8)|(ns == S_L9)|(ns == S_L10)|(ns == S_L11)|(ns == S_L12)) begin 
+        if ((ns == S_L5)|(ns == S_L6)|(ns == S_L7)|(ns == S_L8)|(ns == S_L9)|(ns == S_L10)|(ns == S_L11)) begin 
             wen = 1'b1;
         end else begin 
             wen = 1'b0;
@@ -183,8 +166,8 @@ module CU(
     always @(posedge clk) begin
         if(cs == S_IDLE) begin
             ec = 16'd0;
-        end else if (cs == S_L14) begin
-            ec = ec + 16'd1;
+        end else if (cs == S_L11) begin
+            ec = ec + 1'b1;
         end else begin
             ec = ec;
         end
@@ -230,8 +213,6 @@ module CU(
                 ctrl_sig = 4'b0011;
             S_L11 :
                 ctrl_sig = 4'b0001;
-            S_L12 :
-                ctrl_sig = 4'b0001;
             default
                 ctrl_sig = 4'b0000;       
         endcase
@@ -248,8 +229,8 @@ module CU(
     
     // Random numbers for Policy Generator 
     always @(posedge clk) begin
-        Asel <= (epsilon > o_lsfr[15:0])? 1'b0 : 1'b1;
-        Arand <= o_lsfr[1:0];
+        A_sel <= (epsilon > o_lsfr[15:0])? 1'b0 : 1'b1;
+        A_rand <= o_lsfr[1:0];
         S0 <= o_lsfr[12:1];
     end
   

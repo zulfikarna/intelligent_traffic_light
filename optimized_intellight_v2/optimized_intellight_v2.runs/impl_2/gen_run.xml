@@ -1,80 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_2" LaunchPart="xc7z020clg400-1" LaunchTime="1663918468">
-  <File Type="ROUTE-PWR" Name="PG_power_routed.rpt"/>
   <File Type="PA-TCL" Name="PG.tcl"/>
-  <File Type="BITSTR-MMI" Name="PG.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="PG_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="PG_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="PG_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="PG_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="PG_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="PG_opt.dcp"/>
-  <File Type="OPT-DRC" Name="PG_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="PG.hwdef"/>
-  <File Type="PWROPT-DCP" Name="PG_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="PG_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="PG_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="PG_placed.dcp"/>
-  <File Type="PLACE-IO" Name="PG_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="PG_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="PG_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="PG_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="PG_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="PG_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="PG_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="PG.bin"/>
-  <File Type="PLACE-TIMING" Name="PG_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="PG_postplace_pwropt.dcp"/>
   <File Type="BITSTR-MSK" Name="PG.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="PG_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="PG_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="PG_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="PG.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="PG_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="PG_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="PG_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="PG_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="PG_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="PG_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="PG_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="PG_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="PG_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="PG_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="PG_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="PG_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="PG_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="PG_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="PG_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="PG_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="PG_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="PG_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="PG_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="PG_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="PG_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="PG_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="PG_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="PG_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="PG_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="PG_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="PG_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="PG.vdi"/>
   <File Type="BG-BIT" Name="PG.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="PG_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="PG_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-DRC" Name="PG.drc"/>
+  <File Type="BG-BGN" Name="PG.bgn"/>
+  <File Type="BG-BIN" Name="PG.bin"/>
+  <File Type="BITSTR-RBT" Name="PG.rbt"/>
   <File Type="BITSTR-NKY" Name="PG.nky"/>
   <File Type="BITSTR-BMM" Name="PG_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="PG.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="PG.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="PG.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-DRC" Name="PG_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="PG.hwdef"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="PG_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DCP" Name="PG_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="PG_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="PG_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMING-PB" Name="PG_timing_summary_routed.pb"/>
+  <File Type="OPT-DCP" Name="PG_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="PG_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="PG_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="PG_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="PG_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="PG_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="PG_postroute_physopt_bb.dcp"/>
   <File Type="PDI-FILE" Name="PG.pdi"/>
   <File Type="RCFI_FILE" Name="PG.rcfi"/>
   <File Type="CFI_FILE" Name="PG.cfi"/>
   <File Type="RNPI_FILE" Name="PG.rnpi"/>
   <File Type="NPI_FILE" Name="PG.npi"/>
   <File Type="RBD_FILE" Name="PG.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="PG.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="PG.sysdef"/>
-  <File Type="BG-BGN" Name="PG.bgn"/>
-  <File Type="BG-DRC" Name="PG.drc"/>
-  <File Type="RDI-RDI" Name="PG.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="PG_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="PG_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
@@ -211,5 +172,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>

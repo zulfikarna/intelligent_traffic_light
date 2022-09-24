@@ -19,7 +19,7 @@ module MII
     input wire clk, rst, 
     input wire [S_WIDTH-1:0] S,
     input wire [Q_WIDTH-1:0] Qnew,
-    input wire wen_cu, 
+    input wire wen_cu,
     input wire [A_WIDTH-1:0] A,
     output wire[ADDR_WIDTH-1:0] RD_ADDR,
     output reg [ADDR_WIDTH-1:0] WR_ADDR,
@@ -59,7 +59,7 @@ module MII
     
     // 3. Write-Enable Configuration
     wire [WEN_WIDTH-1:0] wen_bram_temp;
-    wen_decoder decod0(.A(A_reg[1]), .en(wen_cu), .wen(wen_bram_temp));
+    wen_decoder decod0(.A(A_reg[1]), .en(wen_cu), .mode(mode), .wen(wen_bram_temp));
     always @(posedge clk) begin
         wen_bram <= wen_bram_temp;   
     end

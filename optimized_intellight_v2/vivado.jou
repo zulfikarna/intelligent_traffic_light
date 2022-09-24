@@ -2,10 +2,10 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Wed Sep 21 23:49:38 2022
-# Process ID: 6944
+# Start of session at: Fri Sep 23 11:36:04 2022
+# Process ID: 5700
 # Current directory: D:/intelligent_traffic_light/optimized_intellight_v2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11100 D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3936 D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.xpr
 # Log file: D:/intelligent_traffic_light/optimized_intellight_v2/vivado.log
 # Journal file: D:/intelligent_traffic_light/optimized_intellight_v2\vivado.jou
 # Running On: DESKTOP-IH2NQ0H, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 8424 MB
@@ -13,3 +13,49 @@
 start_gui
 open_project D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.xpr
 update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top SD_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_module_reference intellight_v2_RD_0_0
+update_module_reference intellight_v2_MII_0_0
+update_module_reference intellight_v2_action_ram_wrapper_0_0
+update_module_reference intellight_v2_SD_0_1
+update_module_reference intellight_v2_QA_0_0
+update_module_reference intellight_v2_PG_0_0
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config D:/intelligent_traffic_light/optimized_intellight_v2/simulation/PG_tb_behav.wcfg
+source SD_tb.tcl
+current_wave_config {PG_tb_behav.wcfg}
+add_wave {{/SD_tb/clk}} {{/SD_tb/rst}} {{/SD_tb/mode}} {{/SD_tb/A}} {{/SD_tb/S_sim}} {{/SD_tb/L_inc}} {{/SD_tb/L_dec}} {{/SD_tb/S}} {{/SD_tb/L0}} {{/SD_tb/L1}} {{/SD_tb/L2}} {{/SD_tb/L3}} {{/SD_tb/l0}} {{/SD_tb/l1}} {{/SD_tb/l2}} {{/SD_tb/l3}} {{/SD_tb/inc}} {{/SD_tb/dec}} {{/SD_tb/i_lsfr}} {{/SD_tb/o_lsfr}} {{/SD_tb/A_reg}} {{/SD_tb/S_WIDTH}} {{/SD_tb/L_WIDTH}} {{/SD_tb/A_WIDTH}} {{/SD_tb/ITV_WIDTH}} {{/SD_tb/RAND_WIDTH}} 
+run 10 us
+relaunch_sim
+relaunch_sim
+open_bd_design {D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd}
+update_module_reference intellight_v2_SD_0_1
+update_module_reference intellight_v2_QA_0_0
+connect_bd_net [get_bd_pins QA_0/Dlane0] [get_bd_pins action_ram_wrapper_0/Dlane0]
+connect_bd_net [get_bd_pins QA_0/Dlane1] [get_bd_pins action_ram_wrapper_0/Dlane1]
+connect_bd_net [get_bd_pins QA_0/Dlane2] [get_bd_pins action_ram_wrapper_0/Dlane2]
+connect_bd_net [get_bd_pins QA_0/Dlane3] [get_bd_pins action_ram_wrapper_0/Dlane3]
+connect_bd_net [get_bd_pins QA_0/A_road] [get_bd_pins PG_0/A_road]
+save_bd_design
+regenerate_bd_layout
+create_bd_cell -type module -reference CU CU_0
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins CU_0/clk]
+update_module_reference intellight_v2_CU_0_0
+connect_bd_net [get_bd_pins CU_0/A_sel] [get_bd_pins PG_0/A_sel]
+connect_bd_net [get_bd_pins CU_0/A_sel] [get_bd_pins PG_0/A_rand]
+undo
+connect_bd_net [get_bd_pins CU_0/A_rand] [get_bd_pins PG_0/A_rand]
+connect_bd_net [get_bd_pins CU_0/wen] [get_bd_pins MII_0/wen_cu]
+regenerate_bd_layout
+update_module_reference intellight_v2_CU_0_0
+update_module_reference intellight_v2_SD_0_1
+update_module_reference intellight_v2_MII_0_0
+update_module_reference intellight_v2_CU_0_0
+save_wave_config {D:/intelligent_traffic_light/optimized_intellight_v2/simulation/PG_tb_behav.wcfg}
+close_sim

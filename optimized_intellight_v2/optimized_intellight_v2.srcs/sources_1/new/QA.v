@@ -17,12 +17,13 @@ module QA // verified
 (
     input wire clk, rst,
     input wire [2:0] alpha, gamma,
-    input wire signed [Q_WIDTH-1:0] Q0, Q1, Q2, Q3,
+    input wire [Q_WIDTH*4-1:0] Dlane0, Dlane1, Dlane2, Dlane3,
     input wire signed [R_WIDTH-1:0] R,
     input wire [A_WIDTH-1:0] A,
-    output wire signed [Q_WIDTH-1:0] Qnew,
+    input wire [A_WIDTH/2-1:0] A_road,
+    output wire signed [Q_WIDTH-1:0] Qnew
     // for debugging 
-    output wire signed [Q_WIDTH-1:0] x, Qmax, gm
+//    output wire signed [Q_WIDTH-1:0] x, Qmax, gm
     );
     // Registers for Q-values
     reg signed [Q_WIDTH-1:0] Q_reg0 [0:3];
@@ -73,13 +74,24 @@ module QA // verified
         end
     end
     
+    // Select data from BRAM 
+    wire [Q_WIDTH*4-1:0] Q;
+    assign Q = (A_road==2'd0)? Dlane0:
+               (A_road==2'd1)? Dlane1: 
+               (A_road==2'd2)? Dlane2: 
+               (A_road==2'd3)? Dlane3: {Q_WIDTH*4{1'bx}};
+    wire signed [Q_WIDTH-1:0] Q0, Q1, Q2, Q3;
+    assign Q0 = Q[Q_WIDTH-1:0];
+    assign Q1 = Q[Q_WIDTH*2-1:Q_WIDTH];
+    assign Q2 = Q[Q_WIDTH*3-1:Q_WIDTH*2];
+    assign Q3 = Q[Q_WIDTH*4-1:Q_WIDTH*3];  
     
-    // 1. Select maximum Q-value
+    // Select maximum Q-value
     wire signed [Q_WIDTH-1:0] Qmax;
     max4to1_16bit max0( .in0(Q0),   .in1(Q1),   .in2(Q2),   .in3(Q3),
                         .out0(Qmax));
     
-    // 2. Determine selected Q-value based on action 
+    // Determine selected Q-value based on action 
     wire signed [Q_WIDTH-1:0] Qsel;
     mux4to1_16bit mux0( .in0(Q_reg1[0]),   .in1(Q_reg1[1]),   .in2(Q_reg1[2]),   .in3(Q_reg1[3]),
                         .sel(A_reg0[3:2]), .out0(Qsel)
@@ -89,13 +101,13 @@ module QA // verified
     // x = R + g*Qmax' - Qsel 
     // y = Qsel - a*x
     
-    // 3. Calculate x
+    // Calculate x
     wire signed [Q_WIDTH-1:0] gm;
     wire signed [Q_WIDTH-1:0] x;
     multiply mul0(.in0(Qmax), .c(gamma), .out0(gm));
     assign x = R_reg0 + gm - Qsel_reg0;
     
-    // 4. Calculate y 
+    // Calculate y 
     wire signed [Q_WIDTH-1:0] ap;
     wire signed [Q_WIDTH-1:0] y;
     multiply mul1(.in0(x_reg0), .c(alpha), .out0(ap));
