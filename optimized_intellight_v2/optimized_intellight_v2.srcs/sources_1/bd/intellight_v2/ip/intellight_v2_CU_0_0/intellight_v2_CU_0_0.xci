@@ -59,7 +59,7 @@
                 &quot;ports&quot;: {
                   &quot;clk&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
                   &quot;rst&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
-                  &quot;start&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
+                  &quot;run&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
                   &quot;mode&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
                   &quot;max_step&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;15&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;max_episode&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;15&quot;, &quot;size_right&quot;: &quot;0&quot; } ],

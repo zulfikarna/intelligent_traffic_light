@@ -154,7 +154,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>start</spirit:name>
+        <spirit:name>run</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>

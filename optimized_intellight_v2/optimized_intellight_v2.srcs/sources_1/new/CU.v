@@ -10,7 +10,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module CU(
-    input wire clk, rst, start, mode,
+    input wire clk, rst, run, mode,
     // From Processing System 
     input wire [15:0] max_step,
     input wire [15:0] max_episode,
@@ -90,18 +90,13 @@ module CU(
     always@(*) begin
         case (cs)
             S_IDLE :
-                if ((start)&(!mode)) begin
+                if (run) begin
                     ns <= S_INIT;
-                end else if ((!start)&(mode)) begin
-                    ns <= S_L0;
                 end else begin
                     ns <= S_IDLE;
                 end
             S_INIT :
-                if (ec < max_episode)
-                    ns <= S_L0;
-                else
-                    ns <= S_DONE;
+                ns <= S_L0;
             S_L0 : 
                 ns <= S_L1;
             S_L1 :
@@ -128,12 +123,13 @@ module CU(
             S_L10 :
                 ns <= S_L11;
             S_L11 :
-                if ((start)&(!mode))
+                if (episode < max_episode)
                     ns <= S_INIT;
                 else 
                     ns <= S_DONE;
             S_DONE :
-                if ((start)|(mode))
+            
+                if (run)
                     ns <= S_DONE;
                 else 
                     ns <= S_IDLE;
@@ -144,9 +140,9 @@ module CU(
     
     // Step Counter Machine 
     always@(posedge clk) begin
-        if ((cs == S_INIT)|(cs == S_L0)) begin
+        if ((cs == S_INIT)) begin
             sc = 16'd0;
-        end else if(cs == S_L8) begin
+        end else if(cs == S_L5) begin
             sc = sc + 1'b1;
         end else begin
             sc = sc;
@@ -177,7 +173,7 @@ module CU(
     always @(posedge clk) begin
         if (cs == S_IDLE) begin 
             epsilon = 16'd0;
-        end else if (cs == S_L14) begin
+        end else if (cs == S_L11) begin
             epsilon = max_episode - ec;
         end else begin
             epsilon = epsilon;
