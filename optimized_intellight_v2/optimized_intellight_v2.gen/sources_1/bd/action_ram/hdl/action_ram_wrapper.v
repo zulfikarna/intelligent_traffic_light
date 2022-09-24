@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Thu Sep 22 00:18:10 2022
+//Date        : Sat Sep 24 10:27:56 2022
 //Host        : DESKTOP-IH2NQ0H running 64-bit major release  (build 9200)
 //Command     : generate_target action_ram_wrapper.bd
 //Design      : action_ram_wrapper
@@ -10,11 +10,11 @@
 `timescale 1 ps / 1 ps
 
 module action_ram_wrapper
-   (Dlane0,
-    Dlane1,
-    Dlane2,
-    Dlane3,
-    Dnew,
+   (Dnew,
+    Droad0,
+    Droad1,
+    Droad2,
+    Droad3,
     clk,
     rd_addr,
     rst,
@@ -24,11 +24,11 @@ module action_ram_wrapper
     wen2,
     wen3,
     wr_addr);
-  output [63:0]Dlane0;
-  output [63:0]Dlane1;
-  output [63:0]Dlane2;
-  output [63:0]Dlane3;
   input [63:0]Dnew;
+  output [63:0]Droad0;
+  output [63:0]Droad1;
+  output [63:0]Droad2;
+  output [63:0]Droad3;
   input clk;
   input [31:0]rd_addr;
   input rst;
@@ -39,11 +39,11 @@ module action_ram_wrapper
   input wen3;
   input [31:0]wr_addr;
 
-  wire [63:0]Dlane0;
-  wire [63:0]Dlane1;
-  wire [63:0]Dlane2;
-  wire [63:0]Dlane3;
   wire [63:0]Dnew;
+  wire [63:0]Droad0;
+  wire [63:0]Droad1;
+  wire [63:0]Droad2;
+  wire [63:0]Droad3;
   wire clk;
   wire [31:0]rd_addr;
   wire rst;
@@ -55,11 +55,11 @@ module action_ram_wrapper
   wire [31:0]wr_addr;
 
   action_ram action_ram_i
-       (.Dlane0(Dlane0),
-        .Dlane1(Dlane1),
-        .Dlane2(Dlane2),
-        .Dlane3(Dlane3),
-        .Dnew(Dnew),
+       (.Dnew(Dnew),
+        .Droad0(Droad0),
+        .Droad1(Droad1),
+        .Droad2(Droad2),
+        .Droad3(Droad3),
         .clk(clk),
         .rd_addr(rd_addr),
         .rst(rst),

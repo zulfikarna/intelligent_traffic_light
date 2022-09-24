@@ -18,6 +18,7 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-DRC" Name="PG_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="PG.hwdef"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="PG_incremental_reuse_pre_placed.rpt"/>
   <File Type="ROUTE-DCP" Name="PG_routed.dcp"/>
   <File Type="ROUTE-ERROR-DCP" Name="PG_routed_error.dcp"/>
@@ -38,7 +39,6 @@
   <File Type="RBD_FILE" Name="PG.rbd"/>
   <File Type="ROUTE-RQS" Name="PG_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="PG_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>

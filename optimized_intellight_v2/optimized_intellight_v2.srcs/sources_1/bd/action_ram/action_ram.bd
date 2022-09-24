@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x383D0D31389A7BBB",
+      "boundary_crc": "0xE00BA555E0ACD3DF",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../optimized_intellight_v2.gen/sources_1/bd/action_ram",
       "name": "action_ram",
@@ -74,22 +74,22 @@
         "left": "31",
         "right": "0"
       },
-      "Dlane0": {
+      "Droad0": {
         "direction": "O",
         "left": "63",
         "right": "0"
       },
-      "Dlane1": {
+      "Droad1": {
         "direction": "O",
         "left": "63",
         "right": "0"
       },
-      "Dlane2": {
+      "Droad2": {
         "direction": "O",
         "left": "63",
         "right": "0"
       },
-      "Dlane3": {
+      "Droad3": {
         "direction": "O",
         "left": "63",
         "right": "0"
@@ -410,25 +410,25 @@
       "action_ram_0_doutb": {
         "ports": [
           "action_ram_0/doutb",
-          "Dlane0"
+          "Droad0"
         ]
       },
       "action_ram_1_doutb": {
         "ports": [
           "action_ram_1/doutb",
-          "Dlane1"
+          "Droad1"
         ]
       },
       "action_ram_2_doutb": {
         "ports": [
           "action_ram_2/doutb",
-          "Dlane2"
+          "Droad2"
         ]
       },
       "action_ram_3_doutb": {
         "ports": [
           "action_ram_3/doutb",
-          "Dlane3"
+          "Droad3"
         ]
       },
       "addra_0_1": {

@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Thu Sep 22 00:18:10 2022
+//Date        : Sat Sep 24 10:27:56 2022
 //Host        : DESKTOP-IH2NQ0H running 64-bit major release  (build 9200)
 //Command     : generate_target action_ram.bd
 //Design      : action_ram
@@ -11,11 +11,11 @@
 
 (* CORE_GENERATION_INFO = "action_ram,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=action_ram,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "action_ram.hwdef" *) 
 module action_ram
-   (Dlane0,
-    Dlane1,
-    Dlane2,
-    Dlane3,
-    Dnew,
+   (Dnew,
+    Droad0,
+    Droad1,
+    Droad2,
+    Droad3,
     clk,
     rd_addr,
     rst,
@@ -25,11 +25,11 @@ module action_ram
     wen2,
     wen3,
     wr_addr);
-  output [63:0]Dlane0;
-  output [63:0]Dlane1;
-  output [63:0]Dlane2;
-  output [63:0]Dlane3;
   input [63:0]Dnew;
+  output [63:0]Droad0;
+  output [63:0]Droad1;
+  output [63:0]Droad2;
+  output [63:0]Droad3;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN action_ram_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk;
   input [31:0]rd_addr;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RST, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input rst;
@@ -57,10 +57,10 @@ module action_ram
   wire wen3_1;
   wire [0:0]xlconstant_0_dout;
 
-  assign Dlane0[63:0] = action_ram_0_doutb;
-  assign Dlane1[63:0] = action_ram_1_doutb;
-  assign Dlane2[63:0] = action_ram_2_doutb;
-  assign Dlane3[63:0] = action_ram_3_doutb;
+  assign Droad0[63:0] = action_ram_0_doutb;
+  assign Droad1[63:0] = action_ram_1_doutb;
+  assign Droad2[63:0] = action_ram_2_doutb;
+  assign Droad3[63:0] = action_ram_3_doutb;
   assign addra_0_1 = wr_addr[31:0];
   assign addrb_0_1 = rd_addr[31:0];
   assign clka_0_1 = clk;

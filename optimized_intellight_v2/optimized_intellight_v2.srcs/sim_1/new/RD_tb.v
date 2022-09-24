@@ -25,15 +25,7 @@ module RD_tb
     localparam RAND_WIDTH = 16;
     reg  [RAND_WIDTH-1:0] i_lsfr;
     wire signed [RAND_WIDTH-1:0] o_lsfr;
-    lsfr_16bit rand(.in0(i_lsfr), .out0(o_lsfr));
-    always@(posedge clk) begin
-        case(rst)
-            1'b1:
-                i_lsfr <= 16'd128;
-            default:
-                i_lsfr <= o_lsfr;
-        endcase
-    end
+    lsfr_16bit rand(.clk(clk), .rst(rst), .in0(i_lsfr), .out0(o_lsfr));
     
     // Clock setting
     always begin

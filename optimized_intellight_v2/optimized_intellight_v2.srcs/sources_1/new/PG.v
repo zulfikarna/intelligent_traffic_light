@@ -16,7 +16,7 @@ module PG // verified
     )
 (
     input wire clk, rst,
-    input wire [Q_WIDTH*4-1:0] Dlane0, Dlane1, Dlane2, Dlane3,
+    input wire [Q_WIDTH*4-1:0] Droad0, Droad1, Droad2, Droad3,
     input wire [A_WIDTH-1:0] A_rand,
     input wire A_sel,
     input wire mode,
@@ -65,10 +65,10 @@ module PG // verified
     
     // 2. Select data from BRAM  
     wire [Q_WIDTH*4-1:0] Q;
-    assign Q = (A_road==2'd0)? Dlane0:
-               (A_road==2'd1)? Dlane1: 
-               (A_road==2'd2)? Dlane2: 
-               (A_road==2'd3)? Dlane3: {Q_WIDTH*4{1'bx}};
+    assign Q = (A_road==2'd0)? Droad0:
+               (A_road==2'd1)? Droad1: 
+               (A_road==2'd2)? Droad2: 
+               (A_road==2'd3)? Droad3: {Q_WIDTH*4{1'bx}};
     
     // 3. Truncate data into Q-values
     wire signed [Q_WIDTH-1:0] Q0, Q1, Q2, Q3;

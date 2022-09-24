@@ -3,102 +3,119 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="SD_tb_behav.wdb" id="1">
+      <db_ref path="CU_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="SD_tb" />
+            <top_module name="CU_tb" />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="671.584 ns"></ZoomEndTime>
-      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+      <ZoomStartTime time="7,626.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="9,400.001 ns"></ZoomEndTime>
+      <Cursor1Time time="9,080.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="192"></NameColumnWidth>
-      <ValueColumnWidth column_width="76"></ValueColumnWidth>
+      <NameColumnWidth column_width="191"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
-   <wvobject fp_name="/SD_tb/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/SD_tb/rst" type="logic">
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/CU_tb/rst" type="logic">
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
-   <wvobject fp_name="/SD_tb/mode" type="logic">
+   <wvobject fp_name="/CU_tb/run" type="logic">
+      <obj_property name="ElementShortName">run</obj_property>
+      <obj_property name="ObjectShortName">run</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/mode" type="logic">
       <obj_property name="ElementShortName">mode</obj_property>
       <obj_property name="ObjectShortName">mode</obj_property>
    </wvobject>
-   <wvobject fp_name="/SD_tb/A" type="array">
-      <obj_property name="ElementShortName">A[3:0]</obj_property>
-      <obj_property name="ObjectShortName">A[3:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+   <wvobject fp_name="/CU_tb/max_step" type="array">
+      <obj_property name="ElementShortName">max_step[3:0]</obj_property>
+      <obj_property name="ObjectShortName">max_step[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/SD_tb/L_inc" type="array">
-      <obj_property name="ElementShortName">L_inc[15:0]</obj_property>
-      <obj_property name="ObjectShortName">L_inc[15:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+   <wvobject fp_name="/CU_tb/max_episode" type="array">
+      <obj_property name="ElementShortName">max_episode[3:0]</obj_property>
+      <obj_property name="ObjectShortName">max_episode[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/SD_tb/L_dec" type="array">
-      <obj_property name="ElementShortName">L_dec[15:0]</obj_property>
-      <obj_property name="ObjectShortName">L_dec[15:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+   <wvobject fp_name="/CU_tb/seed" type="array">
+      <obj_property name="ElementShortName">seed[15:0]</obj_property>
+      <obj_property name="ObjectShortName">seed[15:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/SD_tb/inc" type="array">
-      <obj_property name="ElementShortName">inc[3:0]</obj_property>
-      <obj_property name="ObjectShortName">inc[3:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+   <wvobject fp_name="/CU_tb/A_sel" type="logic">
+      <obj_property name="ElementShortName">A_sel</obj_property>
+      <obj_property name="ObjectShortName">A_sel</obj_property>
    </wvobject>
-   <wvobject fp_name="/SD_tb/dec" type="array">
-      <obj_property name="ElementShortName">dec[3:0]</obj_property>
-      <obj_property name="ObjectShortName">dec[3:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+   <wvobject fp_name="/CU_tb/A_rand" type="array">
+      <obj_property name="ElementShortName">A_rand[3:0]</obj_property>
+      <obj_property name="ObjectShortName">A_rand[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/SD_tb/L0" type="array">
-      <obj_property name="ElementShortName">L0[3:0]</obj_property>
-      <obj_property name="ObjectShortName">L0[3:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">2</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
+   <wvobject fp_name="/CU_tb/S0" type="array">
+      <obj_property name="ElementShortName">S0[11:0]</obj_property>
+      <obj_property name="ObjectShortName">S0[11:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
-   <wvobject fp_name="/SD_tb/L1" type="array">
-      <obj_property name="ElementShortName">L1[3:0]</obj_property>
-      <obj_property name="ObjectShortName">L1[3:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">2</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
+   <wvobject fp_name="/CU_tb/PG" type="logic">
+      <obj_property name="ElementShortName">PG</obj_property>
+      <obj_property name="ObjectShortName">PG</obj_property>
    </wvobject>
-   <wvobject fp_name="/SD_tb/L2" type="array">
-      <obj_property name="ElementShortName">L2[3:0]</obj_property>
-      <obj_property name="ObjectShortName">L2[3:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">2</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
+   <wvobject fp_name="/CU_tb/QA" type="logic">
+      <obj_property name="ElementShortName">QA</obj_property>
+      <obj_property name="ObjectShortName">QA</obj_property>
    </wvobject>
-   <wvobject fp_name="/SD_tb/L3" type="array">
-      <obj_property name="ElementShortName">L3[3:0]</obj_property>
-      <obj_property name="ObjectShortName">L3[3:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">2</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
+   <wvobject fp_name="/CU_tb/SD" type="logic">
+      <obj_property name="ElementShortName">SD</obj_property>
+      <obj_property name="ObjectShortName">SD</obj_property>
    </wvobject>
-   <wvobject fp_name="/SD_tb/S" type="array">
-      <obj_property name="ElementShortName">S[11:0]</obj_property>
-      <obj_property name="ObjectShortName">S[11:0]</obj_property>
+   <wvobject fp_name="/CU_tb/RD" type="logic">
+      <obj_property name="ElementShortName">RD</obj_property>
+      <obj_property name="ObjectShortName">RD</obj_property>
    </wvobject>
-   <wvobject fp_name="/SD_tb/o_lsfr" type="array">
+   <wvobject fp_name="/CU_tb/wen" type="logic">
+      <obj_property name="ElementShortName">wen</obj_property>
+      <obj_property name="ObjectShortName">wen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/wire_step" type="array">
+      <obj_property name="ElementShortName">wire_step[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wire_step[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/wire_ns" type="array">
+      <obj_property name="ElementShortName">wire_ns[4:0]</obj_property>
+      <obj_property name="ObjectShortName">wire_ns[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/wire_cs" type="array">
+      <obj_property name="ElementShortName">wire_cs[4:0]</obj_property>
+      <obj_property name="ObjectShortName">wire_cs[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/wire_episode" type="array">
+      <obj_property name="ElementShortName">wire_episode[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wire_episode[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/wire_epsilon" type="array">
+      <obj_property name="ElementShortName">wire_epsilon[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wire_epsilon[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/finish" type="logic">
+      <obj_property name="ElementShortName">finish</obj_property>
+      <obj_property name="ObjectShortName">finish</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/idle" type="logic">
+      <obj_property name="ElementShortName">idle</obj_property>
+      <obj_property name="ObjectShortName">idle</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/o_lsfr" type="array">
       <obj_property name="ElementShortName">o_lsfr[15:0]</obj_property>
       <obj_property name="ObjectShortName">o_lsfr[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/SD_tb/A_reg" type="array">
-      <obj_property name="ElementShortName">A_reg[3:0]</obj_property>
-      <obj_property name="ObjectShortName">A_reg[3:0]</obj_property>
    </wvobject>
 </wave_config>

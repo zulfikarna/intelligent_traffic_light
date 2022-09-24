@@ -154,7 +154,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>Dlane0</spirit:name>
+        <spirit:name>Droad0</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -170,7 +170,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>Dlane1</spirit:name>
+        <spirit:name>Droad1</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -186,7 +186,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>Dlane2</spirit:name>
+        <spirit:name>Droad2</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -202,7 +202,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>Dlane3</spirit:name>
+        <spirit:name>Droad3</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>

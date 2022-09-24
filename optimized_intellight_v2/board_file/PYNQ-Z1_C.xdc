@@ -24,8 +24,8 @@
 
 ##LEDs
 
-set_property -dict {PACKAGE_PIN R14 IOSTANDARD LVCMOS33} [get_ports start]
-set_property -dict {PACKAGE_PIN P14 IOSTANDARD LVCMOS33} [get_ports active]
+set_property -dict {PACKAGE_PIN R14 IOSTANDARD LVCMOS33} [get_ports run]
+# set_property -dict {PACKAGE_PIN P14 IOSTANDARD LVCMOS33} [get_ports mode ]
 set_property -dict {PACKAGE_PIN N16 IOSTANDARD LVCMOS33} [get_ports finish]
 set_property -dict {PACKAGE_PIN M14 IOSTANDARD LVCMOS33} [get_ports idle]
 #set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { led[3] }]; #IO_L23P_T3_35 Sch=led[3]

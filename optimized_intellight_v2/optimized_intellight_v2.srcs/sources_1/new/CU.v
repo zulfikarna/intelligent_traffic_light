@@ -9,27 +9,33 @@
 // Description: Control Unit
 //////////////////////////////////////////////////////////////////////////////////
 
-module CU(
+module CU // verified
+#(  parameter S_WIDTH = 12,
+    parameter A_WIDTH = 4,
+    parameter RND_WIDTH = 16,
+    parameter CTR_WIDTH = 16
+    )
+(
     input wire clk, rst, run, mode,
     // From Processing System 
-    input wire [15:0] max_step,
-    input wire [15:0] max_episode,
-    input wire [15:0] seed,
+    input wire [CTR_WIDTH-1:0] max_step,
+    input wire [CTR_WIDTH-1:0] max_episode,
+    input wire [RND_WIDTH-1:0] seed,
     // Output for Policy Generator 
     output reg A_sel,
-    output reg [1:0] A_rand,
-    output reg [11:0] S0,
+    output reg [A_WIDTH-1:0] A_rand,
+    output reg [S_WIDTH-1:0] S0,
     // Control Signal
     output wire PG,
     output wire QA,
     output wire SD,
     output wire RD,
         // for debugging 
-    output wire [15:0] wire_sc,
-    output wire [15:0] wire_ec,
+    output wire [CTR_WIDTH-1:0] wire_step,
+    output wire [CTR_WIDTH-1:0] wire_episode,
+    output wire [CTR_WIDTH-1:0] wire_epsilon,
     output wire [4:0] wire_cs,
     output wire [4:0] wire_ns,
-    output wire [15:0] wire_epsilon,
     output reg finish,
     output reg wen,
     output reg idle 
@@ -56,17 +62,15 @@ module CU(
         S_L12    = 5'd12,
         S_L13    = 5'd13,
         S_L14    = 5'd14,
-        S_DONE   = 5'd17;
-        
+        S_DONE   = 5'd17;  
     // Counter variabel 
-    reg [15:0] sc; // step counter
-    reg [15:0] ec; // episode counter
+    reg [CTR_WIDTH-1:0] step; // step counter
+    reg [CTR_WIDTH-1:0] episode; // episode counter
     reg [4:0] ns;
     reg [4:0] cs;
-    reg [15:0] epsilon;
+    reg [CTR_WIDTH-1:0] epsilon;
     // Variables for generating random number 
-    reg  [15:0] i_lsfr;
-    wire [15:0] o_lsfr;
+    wire [RND_WIDTH-1:0] o_lsfr;
     lsfr_16bit rand(.clk(clk), .rst(rst), .in0(seed), .out0(o_lsfr));
     
     // Reset handler
@@ -75,14 +79,6 @@ module CU(
             cs <= S_IDLE;
         end else begin
             cs <= ns;
-        end
-    end
-    
-    always @(posedge clk) begin 
-        if (cs == S_IDLE) begin
-            idle = 1'b1;
-        end else begin
-            idle = 1'b0;
         end
     end
     
@@ -108,10 +104,10 @@ module CU(
             S_L4 :
                 ns <= S_L5;
             S_L5 :
-                if(sc > max_step)
-                    ns <= S_L6;
+                if(step < max_step)
+                    ns <= S_L5;  
                 else 
-                    ns <= S_L5;
+                    ns <= S_L6;
             S_L6 :
                 ns <= S_L7;
             S_L7 :
@@ -128,7 +124,6 @@ module CU(
                 else 
                     ns <= S_DONE;
             S_DONE :
-            
                 if (run)
                     ns <= S_DONE;
                 else 
@@ -138,14 +133,40 @@ module CU(
          endcase
     end
     
+    // Episode Counter Machine 
+    always @(posedge clk) begin
+        if(cs == S_IDLE) begin
+            if (!mode) begin
+                episode = {CTR_WIDTH{1'b0}};
+            end else begin 
+                episode = max_episode;
+            end
+        end else if (cs == S_L11) begin
+            episode = episode + 1'b1;
+        end else begin
+            episode = episode;
+        end
+    end
+    
+    // Epsilon updating machine
+    always @(posedge clk) begin
+        if (cs == S_IDLE) begin 
+            epsilon = 16'd0;
+        end else if (cs == S_L11) begin
+            epsilon = max_episode - episode;
+        end else begin
+            epsilon = epsilon;
+        end
+    end
+    
     // Step Counter Machine 
     always@(posedge clk) begin
         if ((cs == S_INIT)) begin
-            sc = 16'd0;
+            step = {CTR_WIDTH{1'b0}};
         end else if(cs == S_L5) begin
-            sc = sc + 1'b1;
+            step = step + 1'b1;
         end else begin
-            sc = sc;
+            step = step;
         end
     end
     
@@ -155,28 +176,6 @@ module CU(
             wen = 1'b1;
         end else begin 
             wen = 1'b0;
-        end
-    end
-    
-    // Episode Counter Machine 
-    always @(posedge clk) begin
-        if(cs == S_IDLE) begin
-            ec = 16'd0;
-        end else if (cs == S_L11) begin
-            ec = ec + 1'b1;
-        end else begin
-            ec = ec;
-        end
-    end
-    
-    // Epsilon updating machine
-    always @(posedge clk) begin
-        if (cs == S_IDLE) begin 
-            epsilon = 16'd0;
-        end else if (cs == S_L11) begin
-            epsilon = max_episode - ec;
-        end else begin
-            epsilon = epsilon;
         end
     end
     
@@ -214,6 +213,15 @@ module CU(
         endcase
     end
     
+    // Idle signal generator
+    always @(posedge clk) begin 
+        if (cs == S_IDLE) begin
+            idle = 1'b1;
+        end else begin
+            idle = 1'b0;
+        end
+    end
+    
     // Finish signal generator 
     always @(posedge clk) begin
         if (ns==S_DONE) begin
@@ -225,21 +233,20 @@ module CU(
     
     // Random numbers for Policy Generator 
     always @(posedge clk) begin
-        A_sel <= (epsilon > o_lsfr[15:0])? 1'b0 : 1'b1;
-        A_rand <= o_lsfr[1:0];
-        S0 <= o_lsfr[12:1];
+        A_sel <= (epsilon < o_lsfr[CTR_WIDTH-1:0])? 1'b0 : 1'b1;
+        A_rand <= o_lsfr[A_WIDTH-1:0];
+        S0 <= o_lsfr[S_WIDTH-1:0];
     end
-  
     
     // Control signal decoder
     assign SD = ctrl_sig[3];
     assign PG = ctrl_sig[2];
     assign RD = ctrl_sig[1];
     assign QA = ctrl_sig[0];
-    
+    // For debugging
     assign wire_cs = cs;
-    assign wire_ec = ec;
-    assign wire_sc = sc;  
+    assign wire_episode = episode;
+    assign wire_step = step;  
     assign wire_ns = ns;
     assign wire_epsilon = epsilon;  
 endmodule
