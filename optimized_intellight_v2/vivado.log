@@ -2,540 +2,133 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Fri Sep 23 11:36:04 2022
-# Process ID: 5700
+# Start of session at: Wed Sep 28 13:37:35 2022
+# Process ID: 19128
 # Current directory: D:/intelligent_traffic_light/optimized_intellight_v2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3936 D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3244 D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.xpr
 # Log file: D:/intelligent_traffic_light/optimized_intellight_v2/vivado.log
 # Journal file: D:/intelligent_traffic_light/optimized_intellight_v2\vivado.jou
-# Running On: DESKTOP-IH2NQ0H, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 8424 MB
+# Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
 #-----------------------------------------------------------
 start_gui
 open_project D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.xpr
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'D:/intelligent_traffic_light/ip_repo/intellight_database_1.0'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
-open_project: Time (s): cpu = 00:00:35 ; elapsed = 00:00:14 . Memory (MB): peak = 1590.988 ; gain = 0.000
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/intelligent_traffic_light/ip_repo/intellight_database_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program/Vivado/2022.1/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 1633.547 ; gain = 0.000
 update_compile_order -fileset sources_1
-set_property top SD_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-update_module_reference intellight_v2_RD_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
+open_bd_design {D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd}
 Reading block design file <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd>...
 Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
 Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:module_ref:SD:1.0 - SD_0
+Adding component instance block -- xilinx.com:ip:axi_intc:4.1 - axi_intc_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
 Adding component instance block -- xilinx.com:module_ref:RD:1.0 - RD_0
 Adding component instance block -- xilinx.com:module_ref:MII:1.0 - MII_0
-Adding component instance block -- xilinx.com:module_ref:action_ram_wrapper:1.0 - action_ram_wrapper_0
-Adding component instance block -- xilinx.com:module_ref:SD:1.0 - SD_0
+Adding component instance block -- xilinx.com:module_ref:CU:1.0 - CU_0
 Adding component instance block -- xilinx.com:module_ref:QA:1.0 - QA_0
 Adding component instance block -- xilinx.com:module_ref:PG:1.0 - PG_0
+Adding component instance block -- xilinx.com:module_ref:action_ram_wrapper:1.0 - action_ram_wrapper_0
+Adding component instance block -- xilinx.com:module_ref:MOI:1.0 - MOI_0
 Successfully read diagram <intellight_v2> from block design file <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd>
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd'
-INFO: [IP_Flow 19-3420] Updated intellight_v2_RD_0_0 to use current project options
-WARNING: [BD 41-597] NET <Net> has no source
-WARNING: [BD 41-597] NET <Net1> has no source
-WARNING: [BD 41-597] NET <Net2> has no source
-WARNING: [BD 41-597] NET <Net3> has no source
-Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
-Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-upgrade_ip: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1590.988 ; gain = 0.000
-update_module_reference: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1590.988 ; gain = 0.000
-update_module_reference intellight_v2_MII_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1633.547 ; gain = 0.000
+update_ip_catalog -rebuild
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd'
-INFO: [IP_Flow 19-3420] Updated intellight_v2_MII_0_0 to use current project options
-WARNING: [BD 41-597] NET <Net> has no source
-WARNING: [BD 41-597] NET <Net1> has no source
-WARNING: [BD 41-597] NET <Net2> has no source
-WARNING: [BD 41-597] NET <Net3> has no source
-Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
-Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-update_module_reference intellight_v2_action_ram_wrapper_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/intelligent_traffic_light/ip_repo/intellight_database_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+set_property  ip_repo_paths  {d:/intelligent_traffic_light/ip_repo/intellight_database_1.0 D:/intelligent_traffic_light/ip_repo} [current_project]
+update_ip_catalog
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd'
-INFO: [IP_Flow 19-3420] Updated intellight_v2_action_ram_wrapper_0_0 to use current project options
-WARNING: [BD 41-597] NET <Net> has no source
-WARNING: [BD 41-597] NET <Net1> has no source
-WARNING: [BD 41-597] NET <Net2> has no source
-WARNING: [BD 41-597] NET <Net3> has no source
-Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
-Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-update_module_reference intellight_v2_SD_0_1
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'd:/intelligent_traffic_light/ip_repo/intellight_database_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/ip_repo'.
+set_property  ip_repo_paths  d:/intelligent_traffic_light/ip_repo [current_project]
+update_ip_catalog
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd'
-INFO: [IP_Flow 19-3420] Updated intellight_v2_SD_0_1 to use current project options
-WARNING: [IP_Flow 19-4698] Upgrade has added port 'A_road'
-WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'intellight_v2_SD_0_1'. These changes may impact your design.
-CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'intellight_v2_SD_0_1' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
-WARNING: [BD 41-597] NET <Net> has no source
-WARNING: [BD 41-597] NET <Net1> has no source
-WARNING: [BD 41-597] NET <Net2> has no source
-WARNING: [BD 41-597] NET <Net3> has no source
-Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
-Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-update_module_reference intellight_v2_QA_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd'
-INFO: [IP_Flow 19-3420] Updated intellight_v2_QA_0_0 to use current project options
-WARNING: [BD 41-597] NET <Net> has no source
-WARNING: [BD 41-597] NET <Net1> has no source
-WARNING: [BD 41-597] NET <Net2> has no source
-WARNING: [BD 41-597] NET <Net3> has no source
-Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
-Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-update_module_reference intellight_v2_PG_0_0
-INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'N_ROAD' by 4 for port or parameter 'Q_reg0'
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd'
-INFO: [IP_Flow 19-3420] Updated intellight_v2_PG_0_0 to use current project options
-WARNING: [BD 41-597] NET <Net> has no source
-WARNING: [BD 41-597] NET <Net1> has no source
-WARNING: [BD 41-597] NET <Net2> has no source
-WARNING: [BD 41-597] NET <Net3> has no source
-Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
-Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-update_compile_order -fileset sim_1
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'SD_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.1/tps/boost_1_72_0'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.1/data/xsim/xsim.ini' copied to run dir:'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'SD_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj SD_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module SD
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'inc' is not allowed [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v:53]
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'dec' is not allowed [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v:54]
-WARNING: [VRFC 10-3380] identifier 'L_next' is used before its declaration [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v:45]
-WARNING: [VRFC 10-3380] identifier 'L_next' is used before its declaration [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v:46]
-WARNING: [VRFC 10-3380] identifier 'L_next' is used before its declaration [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v:47]
-WARNING: [VRFC 10-3380] identifier 'L_next' is used before its declaration [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v:48]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/SD_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module SD_tb
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SD_tb_behav xil_defaultlib.SD_tb xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator v2022.1
-Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SD_tb_behav xil_defaultlib.SD_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'A_road' is not connected on this instance [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/SD_tb.v:22]
-WARNING: [VRFC 10-5021] port 'clk' is not connected on this instance [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/SD_tb.v:46]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.SD
-Compiling module xil_defaultlib.lsfr_16bit
-Compiling module xil_defaultlib.SD_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot SD_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "SD_tb_behav -key {Behavioral:sim_1:Functional:SD_tb} -tclbatch {SD_tb.tcl} -view {D:/intelligent_traffic_light/optimized_intellight_v2/simulation/PG_tb_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config D:/intelligent_traffic_light/optimized_intellight_v2/simulation/PG_tb_behav.wcfg
-WARNING: Simulation object /PG_tb/clk was not found in the design.
-WARNING: Simulation object /PG_tb/rst was not found in the design.
-WARNING: Simulation object /PG_tb/Dlane0 was not found in the design.
-WARNING: Simulation object /PG_tb/Dlane1 was not found in the design.
-WARNING: Simulation object /PG_tb/Dlane2 was not found in the design.
-WARNING: Simulation object /PG_tb/Dlane3 was not found in the design.
-WARNING: Simulation object /PG_tb/A_rand was not found in the design.
-WARNING: Simulation object /PG_tb/A_road was not found in the design.
-WARNING: Simulation object /PG_tb/A was not found in the design.
-WARNING: Simulation object /PG_tb/Q was not found in the design.
-WARNING: Simulation object /PG_tb/Q0 was not found in the design.
-WARNING: Simulation object /PG_tb/Q1 was not found in the design.
-WARNING: Simulation object /PG_tb/Q2 was not found in the design.
-WARNING: Simulation object /PG_tb/Q3 was not found in the design.
-WARNING: Simulation object /PG_tb/Q_max was not found in the design.
-WARNING: Simulation object /PG_tb/A_gred was not found in the design.
-WARNING: Simulation object /PG_tb/A_sel was not found in the design.
-WARNING: Simulation object /PG_tb/mode was not found in the design.
-source SD_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'SD_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1590.988 ; gain = 0.000
-current_wave_config {PG_tb_behav.wcfg}
-PG_tb_behav.wcfg
-add_wave {{/SD_tb/clk}} {{/SD_tb/rst}} {{/SD_tb/mode}} {{/SD_tb/A}} {{/SD_tb/S_sim}} {{/SD_tb/L_inc}} {{/SD_tb/L_dec}} {{/SD_tb/S}} {{/SD_tb/L0}} {{/SD_tb/L1}} {{/SD_tb/L2}} {{/SD_tb/L3}} {{/SD_tb/l0}} {{/SD_tb/l1}} {{/SD_tb/l2}} {{/SD_tb/l3}} {{/SD_tb/inc}} {{/SD_tb/dec}} {{/SD_tb/i_lsfr}} {{/SD_tb/o_lsfr}} {{/SD_tb/A_reg}} {{/SD_tb/S_WIDTH}} {{/SD_tb/L_WIDTH}} {{/SD_tb/A_WIDTH}} {{/SD_tb/ITV_WIDTH}} {{/SD_tb/RAND_WIDTH}} 
-run 10 us
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'SD_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.1/tps/boost_1_72_0'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.1/data/xsim/xsim.ini' copied to run dir:'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'SD_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj SD_tb_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'SD_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SD_tb_behav xil_defaultlib.SD_tb xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator v2022.1
-Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SD_tb_behav xil_defaultlib.SD_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'A_road' is not connected on this instance [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/SD_tb.v:22]
-WARNING: [VRFC 10-5021] port 'clk' is not connected on this instance [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/SD_tb.v:46]
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1590.988 ; gain = 0.000
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'SD_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj SD_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module SD
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'inc' is not allowed [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v:53]
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'dec' is not allowed [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v:54]
-WARNING: [VRFC 10-3380] identifier 'L_next' is used before its declaration [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v:45]
-WARNING: [VRFC 10-3380] identifier 'L_next' is used before its declaration [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v:46]
-WARNING: [VRFC 10-3380] identifier 'L_next' is used before its declaration [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v:47]
-WARNING: [VRFC 10-3380] identifier 'L_next' is used before its declaration [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v:48]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiply
-INFO: [VRFC 10-311] analyzing module r_shift
-INFO: [VRFC 10-311] analyzing module lsfr_16bit
-INFO: [VRFC 10-311] analyzing module lsfr_64bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/SD_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module SD_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1590.988 ; gain = 0.000
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'SD_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SD_tb_behav xil_defaultlib.SD_tb xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator v2022.1
-Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SD_tb_behav xil_defaultlib.SD_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'A_road' is not connected on this instance [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sim_1/new/SD_tb.v:22]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.SD
-Compiling module xil_defaultlib.lsfr_16bit
-Compiling module xil_defaultlib.SD_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot SD_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1590.988 ; gain = 0.000
-open_bd_design {D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd}
-update_module_reference intellight_v2_SD_0_1
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd'
-INFO: [IP_Flow 19-3420] Updated intellight_v2_SD_0_1 to use current project options
-INFO: [IP_Flow 19-4702] Upgrade has renamed port 'l0' as 'L0'
-WARNING: [IP_Flow 19-4706] Upgraded port 'L0' width 4 differs from original width 5
-INFO: [IP_Flow 19-4702] Upgrade has renamed port 'l1' as 'L1'
-WARNING: [IP_Flow 19-4706] Upgraded port 'L1' width 4 differs from original width 5
-INFO: [IP_Flow 19-4702] Upgrade has renamed port 'l2' as 'L2'
-WARNING: [IP_Flow 19-4706] Upgraded port 'L2' width 4 differs from original width 5
-INFO: [IP_Flow 19-4702] Upgrade has renamed port 'l3' as 'L3'
-WARNING: [IP_Flow 19-4706] Upgraded port 'L3' width 4 differs from original width 5
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'A_road'
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'dec'
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'inc'
-WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'intellight_v2_SD_0_1'. These changes may impact your design.
-CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'intellight_v2_SD_0_1' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
-WARNING: [BD 41-597] NET <Net> has no source
-WARNING: [BD 41-597] NET <Net1> has no source
-WARNING: [BD 41-597] NET <Net2> has no source
-WARNING: [BD 41-597] NET <Net3> has no source
-Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
-Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-update_module_reference intellight_v2_QA_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd'
-INFO: [IP_Flow 19-3420] Updated intellight_v2_QA_0_0 to use current project options
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'Q0'
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'Q1'
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'Q2'
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'Q3'
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'Qmax'
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'gm'
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'x'
-WARNING: [IP_Flow 19-4698] Upgrade has added port 'A_road'
-WARNING: [IP_Flow 19-4698] Upgrade has added port 'Dlane0'
-WARNING: [IP_Flow 19-4698] Upgrade has added port 'Dlane1'
-WARNING: [IP_Flow 19-4698] Upgrade has added port 'Dlane2'
-WARNING: [IP_Flow 19-4698] Upgrade has added port 'Dlane3'
-WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'intellight_v2_QA_0_0'. These changes may impact your design.
-CRITICAL WARNING: [BD 41-1167] The pin 'Q0' is not found on the upgraded version of the cell '/QA_0'. Its connection to the net 'Net' has been removed.
-CRITICAL WARNING: [BD 41-1167] The pin 'Q1' is not found on the upgraded version of the cell '/QA_0'. Its connection to the net 'Net1' has been removed.
-CRITICAL WARNING: [BD 41-1167] The pin 'Q2' is not found on the upgraded version of the cell '/QA_0'. Its connection to the net 'Net2' has been removed.
-CRITICAL WARNING: [BD 41-1167] The pin 'Q3' is not found on the upgraded version of the cell '/QA_0'. Its connection to the net 'Net3' has been removed.
-CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'intellight_v2_QA_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
-WARNING: [BD 41-597] NET <Net> has no source
-WARNING: [BD 41-597] NET <Net1> has no source
-WARNING: [BD 41-597] NET <Net2> has no source
-WARNING: [BD 41-597] NET <Net3> has no source
-Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
-Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-connect_bd_net [get_bd_pins QA_0/Dlane0] [get_bd_pins action_ram_wrapper_0/Dlane0]
-connect_bd_net [get_bd_pins QA_0/Dlane1] [get_bd_pins action_ram_wrapper_0/Dlane1]
-connect_bd_net [get_bd_pins QA_0/Dlane2] [get_bd_pins action_ram_wrapper_0/Dlane2]
-connect_bd_net [get_bd_pins QA_0/Dlane3] [get_bd_pins action_ram_wrapper_0/Dlane3]
-connect_bd_net [get_bd_pins QA_0/A_road] [get_bd_pins PG_0/A_road]
-save_bd_design
-WARNING: [BD 41-597] NET <Net> has no source
-WARNING: [BD 41-597] NET <Net1> has no source
-WARNING: [BD 41-597] NET <Net2> has no source
-WARNING: [BD 41-597] NET <Net3> has no source
-Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
-Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-regenerate_bd_layout
-create_bd_cell -type module -reference CU CU_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins CU_0/clk]
-update_module_reference intellight_v2_CU_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd'
-INFO: [IP_Flow 19-3420] Updated intellight_v2_CU_0_0 to use current project options
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'Arand'
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'Asel'
-WARNING: [IP_Flow 19-4698] Upgrade has added port 'A_rand'
-WARNING: [IP_Flow 19-4698] Upgrade has added port 'A_sel'
-WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'intellight_v2_CU_0_0'. These changes may impact your design.
-CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'intellight_v2_CU_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
-WARNING: [BD 41-597] NET <Net> has no source
-WARNING: [BD 41-597] NET <Net1> has no source
-WARNING: [BD 41-597] NET <Net2> has no source
-WARNING: [BD 41-597] NET <Net3> has no source
-Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
-Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-update_module_reference: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1590.988 ; gain = 0.000
-connect_bd_net [get_bd_pins CU_0/A_sel] [get_bd_pins PG_0/A_sel]
-connect_bd_net [get_bd_pins CU_0/A_sel] [get_bd_pins PG_0/A_rand]
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/ip_repo'.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:intellight_database:1.0 intellight_database_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/intellight_database_0/S00_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins intellight_database_0/S00_AXI]
+Slave segment '/intellight_database_0/S00_AXI/S00_AXI_reg' is being assigned into address space '/processing_system7_0/Data' at <0x43C0_0000 [ 64K ]>.
+connect_bd_net [get_bd_pins intellight_database_0/mode] [get_bd_pins PG_0/mode]
+connect_bd_net [get_bd_pins SD_0/mode] [get_bd_pins intellight_database_0/mode]
+connect_bd_net [get_bd_pins CU_0/run] [get_bd_pins intellight_database_0/run]
+connect_bd_net [get_bd_pins CU_0/mode] [get_bd_pins intellight_database_0/run]
 undo
-INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins CU_0/A_sel] [get_bd_pins PG_0/A_rand]'
-connect_bd_net [get_bd_pins CU_0/A_rand] [get_bd_pins PG_0/A_rand]
-connect_bd_net [get_bd_pins CU_0/wen] [get_bd_pins MII_0/wen_cu]
-regenerate_bd_layout
-update_module_reference intellight_v2_CU_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd'
-INFO: [IP_Flow 19-3420] Updated intellight_v2_CU_0_0 to use current project options
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'active'
-WARNING: [IP_Flow 19-4698] Upgrade has added port 'mode'
-WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'intellight_v2_CU_0_0'. These changes may impact your design.
-CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'intellight_v2_CU_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
-WARNING: [BD 41-597] NET <Net> has no source
-WARNING: [BD 41-597] NET <Net1> has no source
-WARNING: [BD 41-597] NET <Net2> has no source
-WARNING: [BD 41-597] NET <Net3> has no source
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins CU_0/mode] [get_bd_pins intellight_database_0/run]'
+connect_bd_net [get_bd_pins CU_0/mode] [get_bd_pins intellight_database_0/mode]
+connect_bd_net [get_bd_pins CU_0/max_step] [get_bd_pins intellight_database_0/max_step]
+connect_bd_net [get_bd_pins CU_0/max_episode] [get_bd_pins intellight_database_0/max_episode]
+connect_bd_net [get_bd_pins CU_0/seed] [get_bd_pins intellight_database_0/seed]
+connect_bd_net [get_bd_pins intellight_database_0/S_sim] [get_bd_pins SD_0/S_sim]
+connect_bd_net [get_bd_pins intellight_database_0/L_inc] [get_bd_pins SD_0/L_inc]
+connect_bd_net [get_bd_pins intellight_database_0/L_dec] [get_bd_pins SD_0/L_dec]
+set_property location {4 1637 570} [get_bd_cells QA_0]
+connect_bd_net [get_bd_pins intellight_database_0/alpha] [get_bd_pins QA_0/alpha]
+connect_bd_net [get_bd_pins intellight_database_0/gamma] [get_bd_pins QA_0/gamma]
+save_bd_design
 Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
 Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-update_module_reference: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1590.988 ; gain = 0.000
-update_module_reference intellight_v2_SD_0_1
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd'
-INFO: [IP_Flow 19-3420] Updated intellight_v2_SD_0_1 to use current project options
-WARNING: [BD 41-597] NET <Net> has no source
-WARNING: [BD 41-597] NET <Net1> has no source
-WARNING: [BD 41-597] NET <Net2> has no source
-WARNING: [BD 41-597] NET <Net3> has no source
+set_property location {6 2189 892} [get_bd_cells intellight_database_0]
+set_property location {7.5 3439 1000} [get_bd_cells intellight_database_0]
+set_property location {7.5 3176 1066} [get_bd_cells intellight_database_0]
+connect_bd_net [get_bd_pins MOI_0/Q_00] [get_bd_pins intellight_database_0/Q_00]
+connect_bd_net [get_bd_pins MOI_0/Q_01] [get_bd_pins intellight_database_0/Q_01]
+connect_bd_net [get_bd_pins MOI_0/Q_02] [get_bd_pins intellight_database_0/Q_02]
+connect_bd_net [get_bd_pins MOI_0/Q_03] [get_bd_pins intellight_database_0/Q_03]
+connect_bd_net [get_bd_pins MOI_0/Q_10] [get_bd_pins intellight_database_0/Q_10]
+connect_bd_net [get_bd_pins MOI_0/Q_11] [get_bd_pins intellight_database_0/Q_11]
+connect_bd_net [get_bd_pins MOI_0/Q_12] [get_bd_pins intellight_database_0/Q_12]
+connect_bd_net [get_bd_pins MOI_0/Q_13] [get_bd_pins intellight_database_0/Q_13]
+connect_bd_net [get_bd_pins MOI_0/Q_20] [get_bd_pins intellight_database_0/Q_20]
+connect_bd_net [get_bd_pins MOI_0/Q_21] [get_bd_pins intellight_database_0/Q_21]
+save_bd_design
 Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
 Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-update_module_reference: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1590.988 ; gain = 0.000
-update_module_reference intellight_v2_MII_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd'
-INFO: [IP_Flow 19-3420] Updated intellight_v2_MII_0_0 to use current project options
-WARNING: [BD 41-597] NET <Net> has no source
-WARNING: [BD 41-597] NET <Net1> has no source
-WARNING: [BD 41-597] NET <Net2> has no source
-WARNING: [BD 41-597] NET <Net3> has no source
-Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
-Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-update_module_reference intellight_v2_CU_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd'
-INFO: [IP_Flow 19-3420] Updated intellight_v2_CU_0_0 to use current project options
-WARNING: [IP_Flow 19-4707] Upgraded port order differs after port 'mode'
-WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'intellight_v2_CU_0_0'. These changes may impact your design.
-CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'intellight_v2_CU_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
-WARNING: [BD 41-597] NET <Net> has no source
-WARNING: [BD 41-597] NET <Net1> has no source
-WARNING: [BD 41-597] NET <Net2> has no source
-WARNING: [BD 41-597] NET <Net3> has no source
-Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
-Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-update_module_reference: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1590.988 ; gain = 0.000
-save_wave_config {D:/intelligent_traffic_light/optimized_intellight_v2/simulation/PG_tb_behav.wcfg}
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Fri Sep 23 17:47:26 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 28 13:41:47 2022...
+INFO: [filemgmt 56-326] User Interrupt. Could not getCurrentGraph()

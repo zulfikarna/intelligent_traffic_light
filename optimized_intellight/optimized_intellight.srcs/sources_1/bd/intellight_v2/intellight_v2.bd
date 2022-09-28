@@ -18,17 +18,17 @@
         "Action_RAM2": "",
         "Action_RAM3": ""
       },
+      "intellight_0": "",
+      "axi_intc_0": "",
+      "axi_smc": "",
+      "processing_system7_0": "",
+      "rst_clk_100M": "",
       "CU_0": "",
       "MII_0": "",
       "QA_0": "",
       "RD_0": "",
       "SD_0": "",
-      "intellight_0": "",
-      "PG_0": "",
-      "axi_intc_0": "",
-      "axi_smc": "",
-      "processing_system7_0": "",
-      "rst_clk_100M": ""
+      "PG_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -623,578 +623,11 @@
           }
         }
       },
-      "CU_0": {
-        "vlnv": "xilinx.com:module_ref:CU:1.0",
-        "xci_name": "intellight_v2_CU_0_0",
-        "xci_path": "ip\\intellight_v2_CU_0_0\\intellight_v2_CU_0_0.xci",
-        "inst_hier_path": "CU_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "CU",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "166666672",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "intellight_v2_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH",
-                "value_src": "const_prop"
-              }
-            }
-          },
-          "start": {
-            "direction": "I"
-          },
-          "max_step": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "max_episode": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "seed": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "Asel": {
-            "direction": "O"
-          },
-          "Arand": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "S0": {
-            "direction": "O",
-            "left": "11",
-            "right": "0"
-          },
-          "PG": {
-            "direction": "O"
-          },
-          "QA": {
-            "direction": "O"
-          },
-          "SD": {
-            "direction": "O"
-          },
-          "RD": {
-            "direction": "O"
-          },
-          "wire_sc": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "wire_ec": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "wire_cs": {
-            "direction": "O",
-            "left": "4",
-            "right": "0"
-          },
-          "wire_ns": {
-            "direction": "O",
-            "left": "4",
-            "right": "0"
-          },
-          "wire_epsilon": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "finish": {
-            "direction": "O",
-            "parameters": {
-              "PortWidth": {
-                "value": "1",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "wen": {
-            "direction": "O"
-          },
-          "idle": {
-            "direction": "O"
-          },
-          "active": {
-            "direction": "I"
-          }
-        }
-      },
-      "MII_0": {
-        "vlnv": "xilinx.com:module_ref:MII:1.0",
-        "xci_name": "intellight_v2_MII_0_0",
-        "xci_path": "ip\\intellight_v2_MII_0_0\\intellight_v2_MII_0_0.xci",
-        "inst_hier_path": "MII_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "MII",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "166666672",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "intellight_v2_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH",
-                "value_src": "const_prop"
-              }
-            }
-          },
-          "S": {
-            "direction": "I",
-            "left": "11",
-            "right": "0"
-          },
-          "wen": {
-            "direction": "I"
-          },
-          "RD_ADDR": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "WR_ADDR": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "A": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "wen0": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "wen1": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "wen2": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "wen3": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "en0": {
-            "direction": "O"
-          },
-          "en1": {
-            "direction": "O"
-          },
-          "en2": {
-            "direction": "O"
-          },
-          "en3": {
-            "direction": "O"
-          }
-        }
-      },
-      "QA_0": {
-        "vlnv": "xilinx.com:module_ref:QA:1.0",
-        "xci_name": "intellight_v2_QA_0_0",
-        "xci_path": "ip\\intellight_v2_QA_0_0\\intellight_v2_QA_0_0.xci",
-        "inst_hier_path": "QA_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "QA",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "166666672",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "intellight_v2_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH",
-                "value_src": "const_prop"
-              }
-            }
-          },
-          "Q0": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "Q1": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "Q2": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "Q3": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "R": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "A": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "Amax": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "alpha": {
-            "direction": "I",
-            "left": "2",
-            "right": "0"
-          },
-          "gamma": {
-            "direction": "I",
-            "left": "2",
-            "right": "0"
-          },
-          "Qnew": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          }
-        }
-      },
-      "RD_0": {
-        "vlnv": "xilinx.com:module_ref:RD:1.0",
-        "xci_name": "intellight_v2_RD_0_0",
-        "xci_path": "ip\\intellight_v2_RD_0_0\\intellight_v2_RD_0_0.xci",
-        "inst_hier_path": "RD_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "RD",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "166666672",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "intellight_v2_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH",
-                "value_src": "const_prop"
-              }
-            }
-          },
-          "R0": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "R1": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "R2": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "Amax": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "Amin": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "A": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "R": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          }
-        }
-      },
-      "SD_0": {
-        "vlnv": "xilinx.com:module_ref:SD:1.0",
-        "xci_name": "intellight_v2_SD_0_0",
-        "xci_path": "ip\\intellight_v2_SD_0_0\\intellight_v2_SD_0_0.xci",
-        "inst_hier_path": "SD_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "SD",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "166666672",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "intellight_v2_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH",
-                "value_src": "const_prop"
-              }
-            }
-          },
-          "learning": {
-            "direction": "I"
-          },
-          "A": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "S0": {
-            "direction": "I",
-            "left": "11",
-            "right": "0"
-          },
-          "traffic": {
-            "direction": "I",
-            "left": "11",
-            "right": "0"
-          },
-          "S": {
-            "direction": "O",
-            "left": "11",
-            "right": "0"
-          },
-          "level0": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          },
-          "level1": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          },
-          "level2": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          },
-          "level3": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          },
-          "L0": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          },
-          "L1": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          },
-          "L2": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          },
-          "L3": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          }
-        }
-      },
       "intellight_0": {
         "vlnv": "xilinx.com:user:intellight:1.0",
         "xci_name": "intellight_v2_intellight_0_0",
         "xci_path": "ip\\intellight_v2_intellight_0_0\\intellight_v2_intellight_0_0.xci",
         "inst_hier_path": "intellight_0"
-      },
-      "PG_0": {
-        "vlnv": "xilinx.com:module_ref:PG:1.0",
-        "xci_name": "intellight_v2_PG_0_0",
-        "xci_path": "ip\\intellight_v2_PG_0_0\\intellight_v2_PG_0_0.xci",
-        "inst_hier_path": "PG_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "PG",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "Q0": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "Q1": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "Q2": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "Q3": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "Arand": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "Asel": {
-            "direction": "I"
-          },
-          "learning": {
-            "direction": "I"
-          },
-          "Amax": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "Amin": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "A": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          }
-        }
       },
       "axi_intc_0": {
         "vlnv": "xilinx.com:ip:axi_intc:4.1",
@@ -3071,6 +2504,497 @@
         "xci_name": "intellight_v2_rst_clk_100M_0",
         "xci_path": "ip\\intellight_v2_rst_clk_100M_0\\intellight_v2_rst_clk_100M_0.xci",
         "inst_hier_path": "rst_clk_100M"
+      },
+      "CU_0": {
+        "vlnv": "xilinx.com:module_ref:CU:1.0",
+        "xci_name": "intellight_v2_CU_0_0",
+        "xci_path": "ip\\intellight_v2_CU_0_0\\intellight_v2_CU_0_0.xci",
+        "inst_hier_path": "CU_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "CU",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "start": {
+            "direction": "I"
+          },
+          "max_step": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "max_episode": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "seed": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "Asel": {
+            "direction": "O"
+          },
+          "Arand": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "S0": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "PG": {
+            "direction": "O"
+          },
+          "QA": {
+            "direction": "O"
+          },
+          "SD": {
+            "direction": "O"
+          },
+          "RD": {
+            "direction": "O"
+          },
+          "wire_sc": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "wire_ec": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "wire_cs": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "wire_ns": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "wire_epsilon": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "finish": {
+            "direction": "O"
+          },
+          "wen": {
+            "direction": "O"
+          },
+          "idle": {
+            "direction": "O"
+          },
+          "active": {
+            "direction": "I"
+          }
+        }
+      },
+      "MII_0": {
+        "vlnv": "xilinx.com:module_ref:MII:1.0",
+        "xci_name": "intellight_v2_MII_0_0",
+        "xci_path": "ip\\intellight_v2_MII_0_0\\intellight_v2_MII_0_0.xci",
+        "inst_hier_path": "MII_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "MII",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "S": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "wen": {
+            "direction": "I"
+          },
+          "RD_ADDR": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "WR_ADDR": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "A": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "wen0": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "wen1": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "wen2": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "wen3": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "en0": {
+            "direction": "O"
+          },
+          "en1": {
+            "direction": "O"
+          },
+          "en2": {
+            "direction": "O"
+          },
+          "en3": {
+            "direction": "O"
+          }
+        }
+      },
+      "QA_0": {
+        "vlnv": "xilinx.com:module_ref:QA:1.0",
+        "xci_name": "intellight_v2_QA_0_0",
+        "xci_path": "ip\\intellight_v2_QA_0_0\\intellight_v2_QA_0_0.xci",
+        "inst_hier_path": "QA_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "QA",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "Q0": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Q1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Q2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Q3": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "R": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "A": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "Amax": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "alpha": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "gamma": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "Qnew": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "RD_0": {
+        "vlnv": "xilinx.com:module_ref:RD:1.0",
+        "xci_name": "intellight_v2_RD_0_0",
+        "xci_path": "ip\\intellight_v2_RD_0_0\\intellight_v2_RD_0_0.xci",
+        "inst_hier_path": "RD_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RD",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "R0": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "R1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "R2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Amax": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "Amin": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "A": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "R": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "SD_0": {
+        "vlnv": "xilinx.com:module_ref:SD:1.0",
+        "xci_name": "intellight_v2_SD_0_0",
+        "xci_path": "ip\\intellight_v2_SD_0_0\\intellight_v2_SD_0_0.xci",
+        "inst_hier_path": "SD_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "SD",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "learning": {
+            "direction": "I"
+          },
+          "A": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "S0": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "traffic": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "S": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "level0": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "level1": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "level2": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "level3": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "L0": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "L1": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "L2": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "L3": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          }
+        }
+      },
+      "PG_0": {
+        "vlnv": "xilinx.com:module_ref:PG:1.0",
+        "xci_name": "intellight_v2_PG_0_0",
+        "xci_path": "ip\\intellight_v2_PG_0_0\\intellight_v2_PG_0_0.xci",
+        "inst_hier_path": "PG_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PG",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "Q0": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Q1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Q2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Q3": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Arand": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "Asel": {
+            "direction": "I"
+          },
+          "learning": {
+            "direction": "I"
+          },
+          "Amax": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "Amin": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "A": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -3109,29 +3033,29 @@
       "Action_RAM_D0": {
         "ports": [
           "Action_RAM/D0",
-          "QA_0/Q0",
-          "intellight_0/Q0"
+          "intellight_0/Q0",
+          "QA_0/Q0"
         ]
       },
       "Action_RAM_D1": {
         "ports": [
           "Action_RAM/D1",
-          "QA_0/Q1",
-          "intellight_0/Q1"
+          "intellight_0/Q1",
+          "QA_0/Q1"
         ]
       },
       "Action_RAM_D2": {
         "ports": [
           "Action_RAM/D2",
-          "QA_0/Q2",
-          "intellight_0/Q2"
+          "intellight_0/Q2",
+          "QA_0/Q2"
         ]
       },
       "Action_RAM_D3": {
         "ports": [
           "Action_RAM/D3",
-          "QA_0/Q3",
-          "intellight_0/Q3"
+          "intellight_0/Q3",
+          "QA_0/Q3"
         ]
       },
       "CU_0_Arand": {
@@ -3235,9 +3159,9 @@
       "PG_0_A": {
         "ports": [
           "PG_0/A",
+          "MII_0/A",
           "QA_0/A",
           "RD_0/A",
-          "MII_0/A",
           "SD_0/A"
         ]
       },
@@ -3282,17 +3206,17 @@
         "ports": [
           "processing_system7_0/FCLK_CLK0",
           "Action_RAM/clk",
-          "QA_0/clk",
-          "RD_0/clk",
-          "MII_0/clk",
           "intellight_0/s00_axi_aclk",
-          "CU_0/clk",
-          "SD_0/clk",
-          "PG_0/clk",
           "axi_intc_0/s_axi_aclk",
           "axi_smc/aclk",
           "processing_system7_0/M_AXI_GP0_ACLK",
-          "rst_clk_100M/slowest_sync_clk"
+          "rst_clk_100M/slowest_sync_clk",
+          "CU_0/clk",
+          "MII_0/clk",
+          "QA_0/clk",
+          "RD_0/clk",
+          "SD_0/clk",
+          "PG_0/clk"
         ]
       },
       "intellight_0_R0": {
@@ -3383,10 +3307,10 @@
         "ports": [
           "rst_clk_100M/peripheral_reset",
           "Action_RAM/rst",
+          "CU_0/rst",
+          "MII_0/rst",
           "QA_0/rst",
           "RD_0/rst",
-          "MII_0/rst",
-          "CU_0/rst",
           "SD_0/rst",
           "PG_0/rst"
         ]

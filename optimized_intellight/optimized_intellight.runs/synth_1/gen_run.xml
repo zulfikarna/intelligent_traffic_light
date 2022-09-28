@@ -161,9 +161,9 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_RAM1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_RAM0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_RAM0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_RAM2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_RAM1_1"/>

@@ -222,9 +222,9 @@
     <Step Id="write_bitstream"/>
     <Step Id="write_device_image"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_RAM1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_RAM0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_RAM0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_RAM2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_RAM1_1"/>

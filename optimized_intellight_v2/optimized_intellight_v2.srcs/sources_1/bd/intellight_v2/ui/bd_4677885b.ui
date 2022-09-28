@@ -1,66 +1,88 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.547802",
-   "Default View_TopLeft":"0,-37",
+   "Default View_ScaleFactor":"2.34848",
+   "Default View_TopLeft":"2846,900",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 9 -x 2760 -y 830 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 9 -x 2760 -y 860 -defaultsOSRD
-preplace port port-id_idle -pg 1 -lvl 9 -x 2760 -y 800 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 210 -y 880 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -x 610 -y 730 -defaultsOSRD
-preplace inst RD_0 -pg 1 -lvl 6 -x 1910 -y 230 -defaultsOSRD
-preplace inst SD_0 -pg 1 -lvl 5 -x 1680 -y 240 -defaultsOSRD
-preplace inst MII_0 -pg 1 -lvl 8 -x 2530 -y 190 -defaultsOSRD
-preplace inst CU_0 -pg 1 -lvl 2 -x 610 -y 450 -defaultsOSRD
-preplace inst QA_0 -pg 1 -lvl 7 -x 2230 -y 620 -defaultsOSRD
-preplace inst PG_0 -pg 1 -lvl 4 -x 1410 -y 230 -defaultsOSRD
-preplace inst action_ram_wrapper_0 -pg 1 -lvl 3 -x 1070 -y 210 -defaultsOSRD
-preplace inst MOI_0 -pg 1 -lvl 8 -x 2530 -y 1060 -defaultsOSRD
-preplace inst axi_intc_0 -pg 1 -lvl 3 -x 1070 -y 1030 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 610 -y 1000 -defaultsOSRD
-preplace netloc CU_0_A_rand 1 2 2 830J 480 1250
-preplace netloc CU_0_A_sel 1 2 2 850 370 1260J
-preplace netloc CU_0_idle 1 2 7 NJ 590 NJ 590 1540J 730 NJ 730 2010J 820 NJ 820 2710J
-preplace netloc CU_0_wen 1 2 6 820J 470 NJ 470 NJ 470 NJ 470 2080J 460 2390
-preplace netloc MII_0_Dnew 1 2 7 870 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 2720
-preplace netloc MII_0_RD_ADDR 1 2 7 880 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 2730
-preplace netloc MII_0_WR_ADDR 1 2 7 930 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 2710
-preplace netloc MII_0_en0 1 2 7 910 390 NJ 390 NJ 390 NJ 390 NJ 390 NJ 390 2680
-preplace netloc MII_0_en1 1 2 7 920 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 2670
-preplace netloc MII_0_en2 1 2 7 890 440 NJ 440 NJ 440 NJ 440 2010J 430 NJ 430 2700
-preplace netloc MII_0_en3 1 2 7 900 450 NJ 450 NJ 450 NJ 450 2020J 440 NJ 440 2690
-preplace netloc MII_0_wen_bram 1 2 7 860 460 NJ 460 NJ 460 NJ 460 2030J 450 NJ 450 2740
-preplace netloc PG_0_A 1 4 4 1570 520 NJ 520 2070 240 NJ
-preplace netloc PG_0_A_road 1 4 3 1550 720 NJ 720 NJ
-preplace netloc QA_0_Qnew 1 7 1 2370 200n
-preplace netloc RD_0_R 1 6 1 2060 230n
-preplace netloc SD_0_L0 1 5 1 N 220
-preplace netloc SD_0_L1 1 5 1 N 240
-preplace netloc SD_0_L2 1 5 1 N 260
-preplace netloc SD_0_L3 1 5 1 N 280
-preplace netloc SD_0_S 1 5 3 1800 360 2080J 230 2360J
-preplace netloc action_ram_wrapper_0_Droad0 1 3 5 1270 480 NJ 480 NJ 480 2050 780 2390
-preplace netloc action_ram_wrapper_0_Droad1 1 3 5 1230 490 NJ 490 NJ 490 2040 790 2380
-preplace netloc action_ram_wrapper_0_Droad2 1 3 5 1220 500 NJ 500 NJ 500 2030 800 2370
-preplace netloc action_ram_wrapper_0_Droad3 1 3 5 1210 510 NJ 510 NJ 510 2020 810 2360
-preplace netloc clk_wiz_clk_out1 1 0 8 20 770 420 860 840 360 1280 370 1540 360 1790 340 2090 140 NJ
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 400 710n
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 7 440 250 810 600 1240 430 1560 370 1810 350 2100 160 NJ
-preplace netloc CU_0_finish 1 2 1 800 550n
-preplace netloc axi_intc_0_irq 1 0 4 20 990 430J 880 780J 1120 1250
-preplace netloc rst_ps7_0_100M_peripheral_aresetn1 1 1 2 440 870 790
-preplace netloc processing_system7_0_DDR 1 1 8 NJ 830 NJ 830 NJ 830 NJ 830 NJ 830 NJ 830 NJ 830 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 1 8 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 2700J
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 410 890n
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 N 1000
-levelinfo -pg 1 0 210 610 1070 1410 1680 1910 2230 2530 2760
-pagesize -pg 1 -db -bbox -sgen 0 0 2870 1270
+preplace port DDR -pg 1 -lvl 9 -x 3730 -y 830 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 9 -x 3730 -y 860 -defaultsOSRD
+preplace port port-id_idle -pg 1 -lvl 9 -x 3730 -y 800 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 110 -y 880 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -x 560 -y 730 -defaultsOSRD
+preplace inst SD_0 -pg 1 -lvl 5 -x 1810 -y 250 -defaultsOSRD
+preplace inst axi_intc_0 -pg 1 -lvl 3 -x 1030 -y 1040 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 560 -y 1000 -defaultsOSRD
+preplace inst RD_0 -pg 1 -lvl 6 -x 2190 -y 250 -defaultsOSRD
+preplace inst MII_0 -pg 1 -lvl 7 -x 2810 -y 320 -defaultsOSRD
+preplace inst CU_0 -pg 1 -lvl 2 -x 560 -y 450 -defaultsOSRD
+preplace inst QA_0 -pg 1 -lvl 4 -x 1480 -y 570 -defaultsOSRD
+preplace inst PG_0 -pg 1 -lvl 4 -x 1480 -y 240 -defaultsOSRD
+preplace inst action_ram_wrapper_0 -pg 1 -lvl 3 -x 1030 -y 210 -defaultsOSRD
+preplace inst MOI_0 -pg 1 -lvl 7 -x 2810 -y 1060 -defaultsOSRD
+preplace inst intellight_database_0 -pg 1 -lvl 8 -x 3180 -y 1070 -defaultsOSRD
+preplace netloc CU_0_A_rand 1 2 2 730J 50 1180
+preplace netloc CU_0_A_sel 1 2 2 760 60 1170J
+preplace netloc CU_0_finish 1 2 1 760 550n
+preplace netloc CU_0_idle 1 2 7 NJ 590 1180J 780 NJ 780 NJ 780 NJ 780 NJ 780 3440
+preplace netloc CU_0_wen 1 2 5 780J 420 1290J 380 NJ 380 1940J 360 2330J
+preplace netloc MII_0_Dnew 1 2 6 820 400 NJ 400 1660J 510 NJ 510 NJ 510 2970
+preplace netloc MII_0_RD_ADDR 1 2 6 850 360 1230J 10 NJ 10 NJ 10 NJ 10 3010
+preplace netloc MII_0_WR_ADDR 1 2 6 880 370 1250J 20 NJ 20 NJ 20 NJ 20 3000
+preplace netloc MII_0_en0 1 2 6 860 380 1270J 30 NJ 30 NJ 30 NJ 30 2990
+preplace netloc MII_0_en1 1 2 6 870 390 1280J 40 NJ 40 NJ 40 NJ 40 2980
+preplace netloc MII_0_en2 1 2 6 830 730 NJ 730 NJ 730 NJ 730 NJ 730 2960
+preplace netloc MII_0_en3 1 2 6 840 760 NJ 760 NJ 760 NJ 760 NJ 760 2950
+preplace netloc MII_0_wen_bram 1 2 6 810 770 NJ 770 NJ 770 NJ 770 NJ 770 3000
+preplace netloc MOI_0_Q_00 1 7 1 N 910
+preplace netloc MOI_0_Q_01 1 7 1 N 930
+preplace netloc MOI_0_Q_02 1 7 1 N 950
+preplace netloc MOI_0_Q_03 1 7 1 N 970
+preplace netloc MOI_0_Q_10 1 7 1 N 990
+preplace netloc MOI_0_Q_11 1 7 1 N 1010
+preplace netloc MOI_0_Q_12 1 7 1 N 1030
+preplace netloc MOI_0_Q_13 1 7 1 N 1050
+preplace netloc MOI_0_Q_20 1 7 1 N 1070
+preplace netloc MOI_0_Q_21 1 7 1 N 1090
+preplace netloc PG_0_A 1 3 4 1320 390 1640 370 NJ 370 N
+preplace netloc PG_0_A_road 1 3 2 1340 750 1610
+preplace netloc QA_0_Qnew 1 4 3 N 570 N 570 2310
+preplace netloc RD_0_R 1 3 4 1330 740 N 740 N 740 2300
+preplace netloc SD_0_L0 1 5 1 1940 230n
+preplace netloc SD_0_L1 1 5 1 1940 250n
+preplace netloc SD_0_L2 1 5 1 1940 270n
+preplace netloc SD_0_L3 1 5 1 1940 290n
+preplace netloc SD_0_S 1 5 2 1930 140 2310J
+preplace netloc action_ram_wrapper_0_Droad0 1 3 4 1260 1030 NJ 1030 NJ 1030 N
+preplace netloc action_ram_wrapper_0_Droad1 1 3 4 1240 1050 NJ 1050 NJ 1050 N
+preplace netloc action_ram_wrapper_0_Droad2 1 3 4 1220 1070 NJ 1070 NJ 1070 N
+preplace netloc action_ram_wrapper_0_Droad3 1 3 4 1200 1090 NJ 1090 NJ 1090 N
+preplace netloc axi_intc_0_irq 1 0 4 -100 220 NJ 220 790J 430 1170
+preplace netloc clk_wiz_clk_out1 1 0 8 -90 990 320 230 800 440 1300 90 1630 120 1950 120 2330 130 3020
+preplace netloc intellight_database_0_L_dec 1 4 5 1660J 50 N 50 N 50 N 50 3420
+preplace netloc intellight_database_0_L_inc 1 4 5 1670J 60 N 60 N 60 N 60 3410
+preplace netloc intellight_database_0_S_sim 1 4 5 1680J 70 N 70 N 70 N 70 3400
+preplace netloc intellight_database_0_alpha 1 3 6 1300 1310 N 1310 N 1310 N 1310 N 1310 3390
+preplace netloc intellight_database_0_gamma 1 3 6 1310 1320 N 1320 N 1320 N 1320 N 1320 3380
+preplace netloc intellight_database_0_max_episode 1 1 8 340 40 NJ 40 1200 60 1640 90 N 90 N 90 N 90 3370
+preplace netloc intellight_database_0_max_step 1 1 8 370 250 780J 410 N 410 1630 520 N 520 N 520 N 520 3340
+preplace netloc intellight_database_0_mode 1 1 8 360 30 N 30 1190 80 1620 110 N 110 N 110 N 110 3330
+preplace netloc intellight_database_0_run 1 1 8 350 20 NJ 20 1210 70 1630 80 N 80 N 80 N 80 3350
+preplace netloc intellight_database_0_seed 1 1 8 330 10 NJ 10 1220 50 1650 100 N 100 N 100 N 100 3360
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 340 710n
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 6 380 240 770 450 1310 100 1610 130 1940 130 2320
+preplace netloc rst_ps7_0_100M_peripheral_aresetn1 1 1 7 380 860 730 1270 N 1270 N 1270 N 1270 N 1270 2990
+preplace netloc processing_system7_0_DDR 1 1 8 NJ 830 NJ 830 1280J 820 NJ 820 NJ 820 NJ 820 NJ 820 3440
+preplace netloc processing_system7_0_FIXED_IO 1 1 8 370J 840 NJ 840 1290J 830 NJ 830 NJ 830 NJ 830 NJ 830 3430
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 310 890n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 750 990n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 6 740 850 N 850 N 850 N 850 N 850 2980
+levelinfo -pg 1 -120 110 560 1030 1480 1810 2190 2810 3180 3730
+pagesize -pg 1 -db -bbox -sgen -120 0 3850 1330
 "
 }
 {
-   "da_axi4_cnt":"2",
+   "da_axi4_cnt":"3",
    "da_board_cnt":"1",
    "da_clkrst_cnt":"10",
    "da_ps7_cnt":"2"

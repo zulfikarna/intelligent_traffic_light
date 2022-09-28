@@ -1,0 +1,57 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Sep 28 13:48:49 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'intellight_v2_intellight_database_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of intellight_v2_intellight_database_0_0 (xilinx.com:user:intellight_database:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'intellight_v2_intellight_database_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'Q_00' width 16 differs from original width 17
+
+-Upgraded port 'Q_01' width 16 differs from original width 17
+
+-Upgraded port 'Q_02' width 16 differs from original width 17
+
+-Upgraded port 'Q_03' width 16 differs from original width 17
+
+-Upgraded port 'Q_10' width 16 differs from original width 17
+
+-Upgraded port 'Q_11' width 16 differs from original width 17
+
+-Upgraded port 'Q_12' width 16 differs from original width 17
+
+-Upgraded port 'Q_13' width 16 differs from original width 17
+
+-Upgraded port 'Q_20' width 16 differs from original width 17
+
+-Upgraded port 'Q_21' width 16 differs from original width 17
+
+-Upgraded port 'Q_22' width 16 differs from original width 17
+
+-Upgraded port 'Q_23' width 16 differs from original width 17
+
+-Upgraded port 'Q_30' width 16 differs from original width 17
+
+-Upgraded port 'Q_31' width 16 differs from original width 17
+
+-Upgraded port 'Q_32' width 16 differs from original width 17
+
+-Upgraded port 'Q_33' width 16 differs from original width 17
+
+
