@@ -2,10 +2,10 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Sep 29 14:31:58 2022
-# Process ID: 22048
+# Start of session at: Thu Sep 29 17:33:10 2022
+# Process ID: 532
 # Current directory: D:/intelligent_traffic_light/optimized_intellight_v2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8796 D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4592 D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.xpr
 # Log file: D:/intelligent_traffic_light/optimized_intellight_v2/vivado.log
 # Journal file: D:/intelligent_traffic_light/optimized_intellight_v2\vivado.jou
 # Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
@@ -57,120 +57,525 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 WARNING: [IP_Flow 19-3685] Ignored loading user repository 'd:/intelligent_traffic_light/ip_repo/intellight_database/intellight_database_1.0'. The path is contained within another repository.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program/Vivado/2022.1/data/ip'.
-WARNING: [BD 41-1661] One or more IPs have been locked in the design 'intellight_v2.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
-List of locked IPs:
-intellight_v2_intellight_database_0_0
-
-WARNING: [BD 41-1661] One or more IPs have been locked in the design 'clone.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
-List of locked IPs:
-clone_intellight_database_0_0
-
-open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 1734.219 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 1560.766 ; gain = 0.000
 update_compile_order -fileset sources_1
 open_bd_design {D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd}
 Reading block design file <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd>...
 Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
 Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
-Adding component instance block -- xilinx.com:module_ref:SD:1.0 - SD_0
 Adding component instance block -- xilinx.com:ip:axi_intc:4.1 - axi_intc_0
 Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
 Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
 Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
 Adding component instance block -- xilinx.com:module_ref:RD:1.0 - RD_0
 Adding component instance block -- xilinx.com:module_ref:CU:1.0 - CU_0
-Adding component instance block -- xilinx.com:module_ref:QA:1.0 - QA_0
 Adding component instance block -- xilinx.com:module_ref:PG:1.0 - PG_0
 Adding component instance block -- xilinx.com:module_ref:MOI:1.0 - MOI_0
 Adding component instance block -- xilinx.com:module_ref:action_ram_wrapper:1.0 - action_ram_wrapper_0
 Adding component instance block -- xilinx.com:user:intellight_database:1.0 - intellight_database_0
+Adding component instance block -- xilinx.com:module_ref:SD:1.0 - SD_0
+Adding component instance block -- xilinx.com:module_ref:QA:1.0 - QA_0
 Adding component instance block -- xilinx.com:module_ref:MII:1.0 - MII_0
 Successfully read diagram <intellight_v2> from block design file <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd>
-open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1734.219 ; gain = 0.000
-report_ip_status -name ip_status 
-upgrade_ip [get_ips  {clone_intellight_database_0_0 intellight_v2_intellight_database_0_0}] -log ip_upgrade.log
-Reading block design file <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/clone/clone.bd>...
-Adding component instance block -- xilinx.com:module_ref:CU:1.0 - CU_0
-Adding component instance block -- xilinx.com:module_ref:MOI:1.0 - MOI_0
-Adding component instance block -- xilinx.com:module_ref:PG:1.0 - PG_0
-Adding component instance block -- xilinx.com:module_ref:QA:1.0 - QA_0
-Adding component instance block -- xilinx.com:module_ref:RD:1.0 - RD_0
-Adding component instance block -- xilinx.com:module_ref:SD:1.0 - SD_0
-Adding component instance block -- xilinx.com:module_ref:action_ram_wrapper:1.0 - action_ram_wrapper_0
-Adding component instance block -- xilinx.com:ip:axi_intc:4.1 - axi_intc_0
-Adding component instance block -- xilinx.com:user:intellight_database:1.0 - intellight_database_0
-Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
-Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
-Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
-Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
-Adding component instance block -- xilinx.com:module_ref:MII:1.0 - MII_0
-Successfully read diagram <clone> from block design file <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/clone/clone.bd>
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/clone/clone.bd'
-WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'C_S00_AXI_ADDR_WIDTH' from '7' to '6' has been ignored for IP 'clone_intellight_database_0_0'
-INFO: [IP_Flow 19-3422] Upgraded clone_intellight_database_0_0 (intellight_database_v1.0 1.0) from revision 4 to revision 2
-WARNING: [IP_Flow 19-4706] Upgraded port 's00_axi_araddr' width 7 differs from original width 6
-WARNING: [IP_Flow 19-4706] Upgraded port 's00_axi_awaddr' width 7 differs from original width 6
-WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'clone_intellight_database_0_0'. These changes may impact your design.
-CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'clone_intellight_database_0_0' has identified issues that may require user intervention. Please review the upgrade log 'd:/intelligent_traffic_light/optimized_intellight_v2/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
-WARNING: [BD 41-597] NET <MII_0_en0> has no source
-WARNING: [BD 41-597] NET <MII_0_en1> has no source
-WARNING: [BD 41-597] NET <MII_0_en2> has no source
-WARNING: [BD 41-597] NET <MII_0_en3> has no source
-Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\clone\clone.bd> 
-Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/clone/ui/bd_d0a94f9d.ui> 
-Upgrading 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd'
-WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'C_S00_AXI_ADDR_WIDTH' from '7' to '6' has been ignored for IP 'intellight_v2_intellight_database_0_0'
-INFO: [IP_Flow 19-3422] Upgraded intellight_v2_intellight_database_0_0 (intellight_database_v1.0 1.0) from revision 4 to revision 2
-WARNING: [IP_Flow 19-4706] Upgraded port 's00_axi_araddr' width 7 differs from original width 6
-WARNING: [IP_Flow 19-4706] Upgraded port 's00_axi_awaddr' width 7 differs from original width 6
-WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'intellight_v2_intellight_database_0_0'. These changes may impact your design.
-CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'intellight_v2_intellight_database_0_0' has identified issues that may require user intervention. Please review the upgrade log 'd:/intelligent_traffic_light/optimized_intellight_v2/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+open_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 1560.766 ; gain = 0.000
+open_bd_design {D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/action_ram/action_ram.bd}
+Reading block design file <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/action_ram/action_ram.bd>...
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - action_ram_0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - action_ram_1
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - action_ram_2
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - action_ram_3
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - const_1_1bit
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - const_0_8bit
+Successfully read diagram <action_ram> from block design file <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/action_ram/action_ram.bd>
+create_bd_design "comm_ram"
+Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\comm_ram\comm_ram.bd> 
+open_bd_design {D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/action_ram/action_ram.bd}
+current_bd_design [get_bd_designs comm_ram]
+current_bd_design action_ram
+set tmpCopyObjs [concat  [get_bd_cells {action_ram_0 action_ram_1 action_ram_2 action_ram_3 const_1_1bit const_0_8bit}] [get_bd_ports {wen3 rst wen2 wen1 wen0 clk rd_addr Droad3 wr_addr wen Droad2 Droad1 Droad0 Dnew}] [get_bd_nets {clka_0_1 wea_0_1 action_ram_1_doutb xlconstant_0_dout addra_0_1 const_0_4bit_dout addrb_0_1 action_ram_2_doutb wen3_1 dina_0_1 wen2_1 rsta_0_1 action_ram_3_doutb wen1_1 action_ram_0_doutb wen0_1}]]
+current_bd_design comm_ram
+copy_bd_objs -from_design action_ram / $tmpCopyObjs
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/doutb> is being overridden by the user with net <action_ram_0_doutb>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/doutb> is being overridden by the user with net <action_ram_1_doutb>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/doutb> is being overridden by the user with net <action_ram_2_doutb>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/doutb> is being overridden by the user with net <action_ram_3_doutb>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/addrb> is being overridden by the user with net <addrb_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/addrb> is being overridden by the user with net <addrb_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/addrb> is being overridden by the user with net <addrb_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/addrb> is being overridden by the user with net <addrb_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/clkb> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/clkb> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/clkb> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/clkb> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/web> is being overridden by the user with net <const_0_4bit_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/web> is being overridden by the user with net <const_0_4bit_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/web> is being overridden by the user with net <const_0_4bit_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/web> is being overridden by the user with net <const_0_4bit_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/rstb> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/rstb> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/rstb> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/rstb> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/ena> is being overridden by the user with net <wen0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/ena> is being overridden by the user with net <wen1_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/ena> is being overridden by the user with net <wen2_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/ena> is being overridden by the user with net <wen3_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/enb> is being overridden by the user with net <xlconstant_0_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/enb> is being overridden by the user with net <xlconstant_0_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/enb> is being overridden by the user with net <xlconstant_0_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/enb> is being overridden by the user with net <xlconstant_0_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+copy_bd_objs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1560.766 ; gain = 0.000
+save_bd_design
+Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\comm_ram\comm_ram.bd> 
+Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/comm_ram/ui/bd_c31deeb.ui> 
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets addrb_0_1]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets addrb_0_1]'
+delete_bd_objs [get_bd_nets addrb_0_1]
+delete_bd_objs [get_bd_nets action_ram_0_doutb]
+delete_bd_objs [get_bd_nets xlconstant_0_dout]
+update_compile_order -fileset sources_1
+delete_bd_objs [get_bd_nets const_0_4bit_dout]
+disconnect_bd_net /rsta_0_1 [get_bd_pins action_ram_0/rstb]
+disconnect_bd_net /clka_0_1 [get_bd_pins action_ram_0/clkb]
+delete_bd_objs [get_bd_nets action_ram_1_doutb]
+delete_bd_objs [get_bd_nets action_ram_2_doutb]
+delete_bd_objs [get_bd_nets action_ram_3_doutb] [get_bd_ports Droad3]
+delete_bd_objs [get_bd_ports Droad2]
+delete_bd_objs [get_bd_ports Droad1]
+delete_bd_objs [get_bd_ports Droad0]
+disconnect_bd_net /clka_0_1 [get_bd_pins action_ram_1/clkb]
+disconnect_bd_net /rsta_0_1 [get_bd_pins action_ram_1/rstb]
+disconnect_bd_net /clka_0_1 [get_bd_pins action_ram_2/clkb]
+disconnect_bd_net /rsta_0_1 [get_bd_pins action_ram_2/rstb]
+disconnect_bd_net /clka_0_1 [get_bd_pins action_ram_3/clkb]
+disconnect_bd_net /rsta_0_1 [get_bd_pins action_ram_3/rstb]
+set_property name comm_ram_0 [get_bd_cells action_ram_0]
+set_property name comm_ram_1 [get_bd_cells action_ram_1]
+set_property name comm_ram_2 [get_bd_cells action_ram_2]
+set_property name comm_ram_3 [get_bd_cells action_ram_3]
+delete_bd_objs [get_bd_cells const_0_8bit]
+delete_bd_objs [get_bd_cells const_1_1bit]
+regenerate_bd_layout
+delete_bd_objs [get_bd_ports rd_addr]
+create_bd_port -dir I COMM_RAM_0
+delete_bd_objs [get_bd_ports COMM_RAM_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_0_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_0_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+endgroup
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_0_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_0_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_0_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_0_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_0_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_0_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_0_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_0_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+set_property -dict [list CONFIG.DATA_WIDTH {64} CONFIG.PROTOCOL {AXI4} CONFIG.SINGLE_PORT_BRAM {1}] [get_bd_cells axi_bram_ctrl_0]
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_0_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_0_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins comm_ram_0/BRAM_PORTB]
+save_bd_design
+Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\comm_ram\comm_ram.bd> 
+Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/comm_ram/ui/bd_c31deeb.ui> 
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Assume_Synchronous_Clk {false} CONFIG.Operating_Mode_A {WRITE_FIRST} CONFIG.Operating_Mode_B {WRITE_FIRST} CONFIG.use_bram_block {BRAM_Controller}] [get_bd_cells comm_ram_0]
+endgroup
+delete_bd_objs [get_bd_intf_nets axi_bram_ctrl_0_BRAM_PORTA] [get_bd_cells axi_bram_ctrl_0]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Assume_Synchronous_Clk {false} CONFIG.Operating_Mode_A {WRITE_FIRST} CONFIG.Operating_Mode_B {WRITE_FIRST} CONFIG.use_bram_block {BRAM_Controller}] [get_bd_cells comm_ram_1]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Assume_Synchronous_Clk {false} CONFIG.Operating_Mode_A {WRITE_FIRST} CONFIG.Operating_Mode_B {WRITE_FIRST} CONFIG.use_bram_block {BRAM_Controller}] [get_bd_cells comm_ram_3]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Assume_Synchronous_Clk {false} CONFIG.Operating_Mode_A {WRITE_FIRST} CONFIG.Operating_Mode_B {WRITE_FIRST} CONFIG.use_bram_block {BRAM_Controller}] [get_bd_cells comm_ram_2]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_0_1: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_0_1: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+endgroup
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_0_1: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_0_1: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+set_property -dict [list CONFIG.DATA_WIDTH {64} CONFIG.SINGLE_PORT_BRAM {1}] [get_bd_cells axi_bram_ctrl_0]
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_0_1: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_0_1: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins comm_ram_0/BRAM_PORTB]
+current_bd_design action_ram
+set tmpCopyObjs [concat  [get_bd_cells {action_ram_0 action_ram_1 action_ram_2 action_ram_3 const_1_1bit const_0_8bit}] [get_bd_ports {wen3 rst wen2 wen1 wen0 clk rd_addr Droad3 wr_addr wen Droad2 Droad1 Droad0 Dnew}] [get_bd_nets {clka_0_1 wea_0_1 action_ram_1_doutb xlconstant_0_dout addra_0_1 const_0_4bit_dout addrb_0_1 action_ram_2_doutb wen3_1 dina_0_1 wen2_1 rsta_0_1 action_ram_3_doutb wen1_1 action_ram_0_doutb wen0_1}]]
+current_bd_design comm_ram
+copy_bd_objs -from_design action_ram / $tmpCopyObjs
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/doutb> is being overridden by the user with net <action_ram_0_doutb>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/doutb> is being overridden by the user with net <action_ram_1_doutb>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/doutb> is being overridden by the user with net <action_ram_2_doutb>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/doutb> is being overridden by the user with net <action_ram_3_doutb>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/addra> is being overridden by the user with net <addra_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/addra> is being overridden by the user with net <addra_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/addra> is being overridden by the user with net <addra_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/addra> is being overridden by the user with net <addra_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/addrb> is being overridden by the user with net <addrb_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/addrb> is being overridden by the user with net <addrb_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/addrb> is being overridden by the user with net <addrb_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/addrb> is being overridden by the user with net <addrb_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/clka> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/clkb> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/clka> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/clkb> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/clka> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/clkb> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/clka> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/clkb> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/web> is being overridden by the user with net <const_0_4bit_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/web> is being overridden by the user with net <const_0_4bit_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/web> is being overridden by the user with net <const_0_4bit_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/web> is being overridden by the user with net <const_0_4bit_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/dina> is being overridden by the user with net <dina_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/dina> is being overridden by the user with net <dina_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/dina> is being overridden by the user with net <dina_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/dina> is being overridden by the user with net <dina_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/rsta> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/rstb> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/rsta> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/rstb> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/rsta> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/rstb> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/rsta> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/rstb> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/wea> is being overridden by the user with net <wea_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/wea> is being overridden by the user with net <wea_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/wea> is being overridden by the user with net <wea_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/wea> is being overridden by the user with net <wea_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/ena> is being overridden by the user with net <wen0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/ena> is being overridden by the user with net <wen1_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/ena> is being overridden by the user with net <wen2_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/ena> is being overridden by the user with net <wen3_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/enb> is being overridden by the user with net <xlconstant_0_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/enb> is being overridden by the user with net <xlconstant_0_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/enb> is being overridden by the user with net <xlconstant_0_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/enb> is being overridden by the user with net <xlconstant_0_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+copy_bd_objs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1560.766 ; gain = 0.000
+undo
+INFO: [Common 17-17] undo 'copy_bd_objs -from_design action_ram / $tmpCopyObjs'
+regenerate_bd_layout
+copy_bd_objs /  [get_bd_cells {axi_bram_ctrl_0}]
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_0_2: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_0_2: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_0_2: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_0_2: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_1/BRAM_PORTA] [get_bd_intf_pins comm_ram_1/BRAM_PORTB]
+copy_bd_objs /  [get_bd_cells {axi_bram_ctrl_0}]
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_0_3: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_0_3: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_0_3: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_0_3: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_2/BRAM_PORTA] [get_bd_intf_pins comm_ram_2/BRAM_PORTB]
+copy_bd_objs /  [get_bd_cells {axi_bram_ctrl_2}]
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_2_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_2_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] comm_ram_axi_bram_ctrl_2_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] comm_ram_axi_bram_ctrl_2_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_3/BRAM_PORTA] [get_bd_intf_pins comm_ram_3/BRAM_PORTB]
+save_bd_design
+Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\comm_ram\comm_ram.bd> 
+Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/comm_ram/ui/bd_c31deeb.ui> 
+connect_bd_net [get_bd_ports clk] [get_bd_pins axi_bram_ctrl_0/s_axi_aclk]
+connect_bd_net [get_bd_ports clk] [get_bd_pins axi_bram_ctrl_2/s_axi_aclk]
+connect_bd_net [get_bd_ports clk] [get_bd_pins axi_bram_ctrl_3/s_axi_aclk]
+connect_bd_net [get_bd_ports clk] [get_bd_pins axi_bram_ctrl_1/s_axi_aclk]
+save_bd_design
+Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\comm_ram\comm_ram.bd> 
+Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/comm_ram/ui/bd_c31deeb.ui> 
+current_bd_design [get_bd_designs intellight_v2]
+current_bd_design comm_ram
+set tmpCopyObjs [concat  [get_bd_cells {axi_bram_ctrl_0 axi_bram_ctrl_1 axi_bram_ctrl_2 axi_bram_ctrl_3 comm_ram_0 comm_ram_1 comm_ram_2 comm_ram_3}] [get_bd_ports {wen3 rst wen2 wen1 wen0 clk wr_addr wen Dnew}] [get_bd_intf_nets {axi_bram_ctrl_0_BRAM_PORTA axi_bram_ctrl_3_BRAM_PORTA axi_bram_ctrl_2_BRAM_PORTA axi_bram_ctrl_1_BRAM_PORTA}] [get_bd_nets {clka_0_1 wea_0_1 addra_0_1 wen3_1 dina_0_1 wen2_1 rsta_0_1 wen1_1 wen0_1}]]
+current_bd_design intellight_v2
+copy_bd_objs -from_design comm_ram / $tmpCopyObjs
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] intellight_v2_axi_bram_ctrl_0_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] intellight_v2_axi_bram_ctrl_0_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] intellight_v2_axi_bram_ctrl_0_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] intellight_v2_axi_bram_ctrl_0_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] intellight_v2_axi_bram_ctrl_1_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] intellight_v2_axi_bram_ctrl_1_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] intellight_v2_axi_bram_ctrl_1_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] intellight_v2_axi_bram_ctrl_1_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] intellight_v2_axi_bram_ctrl_2_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] intellight_v2_axi_bram_ctrl_2_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] intellight_v2_axi_bram_ctrl_2_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] intellight_v2_axi_bram_ctrl_2_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] intellight_v2_axi_bram_ctrl_3_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] intellight_v2_axi_bram_ctrl_3_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] intellight_v2_axi_bram_ctrl_3_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] intellight_v2_axi_bram_ctrl_3_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_0/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_1/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_2/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_3/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_0/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_1/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_2/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_3/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_0/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_1/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_2/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_3/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_0/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_1/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_2/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_3/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_0/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_1/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_3/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_2/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_0/ena> is being overridden by the user with net <wen0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_1/ena> is being overridden by the user with net <wen1_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_2/ena> is being overridden by the user with net <wen2_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram_3/ena> is being overridden by the user with net <wen3_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+group_bd_cells comm_ram [get_bd_cells axi_bram_ctrl_0] [get_bd_cells axi_bram_ctrl_1] [get_bd_cells axi_bram_ctrl_2] [get_bd_cells axi_bram_ctrl_3] [get_bd_cells comm_ram_0] [get_bd_cells comm_ram_1] [get_bd_cells comm_ram_2] [get_bd_cells comm_ram_3]
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_0/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_1/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_2/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_3/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_1/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_2/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_3/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_0/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_0/ena> is being overridden by the user with net <wen0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_1/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_3/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_2/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_0/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_1/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_2/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_3/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_0/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_1/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_2/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_3/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_0/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_1/ena> is being overridden by the user with net <wen1_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_2/ena> is being overridden by the user with net <wen2_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </comm_ram/comm_ram_3/ena> is being overridden by the user with net <wen3_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+regenerate_bd_layout
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (58 MHz)} Clk_slave {/clk (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (58 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/comm_ram/axi_bram_ctrl_0/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins comm_ram/axi_bram_ctrl_0/S_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment '/comm_ram/axi_bram_ctrl_0/S_AXI/Mem0' is being assigned into address space '/processing_system7_0/Data' at <0x4000_0000 [ 8K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (58 MHz)} Clk_slave {/clk (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (58 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/comm_ram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins comm_ram/axi_bram_ctrl_1/S_AXI]
+Slave segment '/comm_ram/axi_bram_ctrl_1/S_AXI/Mem0' is being assigned into address space '/processing_system7_0/Data' at <0x4200_0000 [ 8K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (58 MHz)} Clk_slave {/clk (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (58 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/comm_ram/axi_bram_ctrl_2/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins comm_ram/axi_bram_ctrl_2/S_AXI]
+Slave segment '/comm_ram/axi_bram_ctrl_2/S_AXI/Mem0' is being assigned into address space '/processing_system7_0/Data' at <0x4400_0000 [ 8K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (58 MHz)} Clk_slave {/clk (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (58 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/comm_ram/axi_bram_ctrl_3/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins comm_ram/axi_bram_ctrl_3/S_AXI]
+Slave segment '/comm_ram/axi_bram_ctrl_3/S_AXI/Mem0' is being assigned into address space '/processing_system7_0/Data' at <0x4600_0000 [ 8K ]>.
+endgroup
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets clka_0_1]
+connect_bd_net [get_bd_pins comm_ram/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+set_property location {6 2032 542} [get_bd_cells comm_ram]
+delete_bd_objs [get_bd_nets rsta_0_1]
+delete_bd_objs [get_bd_nets wen0_1]
+delete_bd_objs [get_bd_nets wea_0_1]
+delete_bd_objs [get_bd_nets addra_0_1]
+delete_bd_objs [get_bd_nets dina_0_1]
+delete_bd_objs [get_bd_nets wen1_1]
+delete_bd_objs [get_bd_nets wen2_1]
+delete_bd_objs [get_bd_nets wen3_1]
+connect_bd_net [get_bd_pins comm_ram/rst] [get_bd_pins rst_ps7_0_100M/peripheral_reset]
+set_property name wen0 [get_bd_pins comm_ram/wen4]
+set_property name wen1 [get_bd_pins comm_ram/wen5]
+set_property name wen2 [get_bd_pins comm_ram/wen6]
+set_property name wen3 [get_bd_pins comm_ram/wen7]
+connect_bd_net [get_bd_pins comm_ram/wen0] [get_bd_pins MII_0/wen0]
+connect_bd_net [get_bd_pins comm_ram/wen] [get_bd_pins comm_ram/Dnew] -boundary_type upper
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins comm_ram/wen] [get_bd_pins comm_ram/Dnew] -boundary_type upper'
+connect_bd_net [get_bd_pins comm_ram/wen1] [get_bd_pins MII_0/wen1]
+connect_bd_net [get_bd_pins comm_ram/wen2] [get_bd_pins MII_0/wen2]
+connect_bd_net [get_bd_pins comm_ram/wen3] [get_bd_pins MII_0/wen3]
+connect_bd_net [get_bd_pins comm_ram/wen] [get_bd_pins MII_0/wen_bram]
+connect_bd_net [get_bd_pins comm_ram/wr_addr] [get_bd_pins MII_0/wr_addr]
+connect_bd_net [get_bd_pins comm_ram/Dnew] [get_bd_pins MII_0/D_new]
+save_bd_design
 Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
 Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/intelligent_traffic_light/optimized_intellight_v2/ip_upgrade.log'.
-upgrade_ip: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1734.219 ; gain = 0.000
-export_ip_user_files -of_objects [get_ips {clone_intellight_database_0_0 intellight_v2_intellight_database_0_0}] -no_script -sync -force -quiet
-report_ip_status -name ip_status 
+regenerate_bd_layout
+delete_bd_objs [get_bd_ports wr_addr]
+delete_bd_objs [get_bd_ports wen]
+delete_bd_objs [get_bd_ports wen7]
+delete_bd_objs [get_bd_ports wen6]
+delete_bd_objs [get_bd_ports wen5]
+delete_bd_objs [get_bd_ports wen4]
+delete_bd_objs [get_bd_ports rst]
+delete_bd_objs [get_bd_ports clk]
+delete_bd_objs [get_bd_ports Dnew]
+regenerate_bd_layout
+delete_bd_objs [get_bd_cells rst_clk_100M]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+regenerate_bd_layout
+save_bd_design
+Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
+Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+save_bd_design
+Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
+Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
 make_wrapper -files [get_files D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd] -top
 WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(58). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter WRITE_WIDTH_A(64) on '/comm_ram/comm_ram_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter READ_WIDTH_A(64) on '/comm_ram/comm_ram_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter WRITE_WIDTH_A(64) on '/comm_ram/comm_ram_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter READ_WIDTH_A(64) on '/comm_ram/comm_ram_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter WRITE_WIDTH_A(64) on '/comm_ram/comm_ram_2' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter READ_WIDTH_A(64) on '/comm_ram/comm_ram_2' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter WRITE_WIDTH_A(64) on '/comm_ram/comm_ram_3' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter READ_WIDTH_A(64) on '/comm_ram/comm_ram_3' with propagated value(32). Command ignored
 WARNING: [xilinx.com:ip:axi_intc:4.1-4] /axi_intc_0: Could not determine interrupt input port type - using default interrupt type Rising Edge. Please change this manually if necessary.
 Wrote  : <D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.srcs\sources_1\bd\intellight_v2\intellight_v2.bd> 
 Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_0/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_1/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_2/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_2/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_3/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_3/bram_addr_a'(13) - Only lower order bits will be connected.
 Verilog Output written to : d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_0/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_1/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_2/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_2/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_3/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_3/bram_addr_a'(13) - Only lower order bits will be connected.
 Verilog Output written to : d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/sim/intellight_v2.v
 Verilog Output written to : d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/hdl/intellight_v2_wrapper.v
-make_wrapper: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1750.613 ; gain = 16.395
+make_wrapper: Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 1919.723 ; gain = 246.938
 generate_target all [get_files  D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd]
 INFO: [BD 41-1662] The design 'intellight_v2.bd' is already validated. Therefore parameter propagation will not be re-run.
 Wrote  : <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ui/bd_4677885b.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_0/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_1/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_2/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_2/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_3/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_3/bram_addr_a'(13) - Only lower order bits will be connected.
 Verilog Output written to : d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_0/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_1/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_2/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_2/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/comm_ram/comm_ram_3/addrb'(32) to pin: '/comm_ram/axi_bram_ctrl_3/bram_addr_a'(13) - Only lower order bits will be connected.
 Verilog Output written to : d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/sim/intellight_v2.v
 Verilog Output written to : d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/hdl/intellight_v2_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block intellight_database_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_0/intellight_v2_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block comm_ram/axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block comm_ram/axi_bram_ctrl_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block comm_ram/axi_bram_ctrl_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block comm_ram/axi_bram_ctrl_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block comm_ram/comm_ram_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block comm_ram/comm_ram_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block comm_ram/comm_ram_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block comm_ram/comm_ram_3 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_2/intellight_v2_auto_pc_2_ooc.xdc'
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_us_0/intellight_v2_auto_us_0_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_ds_0/intellight_v2_auto_ds_0_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_0/intellight_v2_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_ds_1/intellight_v2_auto_ds_1_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m01_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_1/intellight_v2_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m01_couplers/auto_pc .
 Exporting to file d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/hw_handoff/intellight_v2.hwh
 Generated Hardware Definition File d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.hwdef
-catch { config_ip_cache -export [get_ips -all intellight_v2_intellight_database_0_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_xbar_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_axi_bram_ctrl_0_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_axi_bram_ctrl_1_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_axi_bram_ctrl_2_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_axi_bram_ctrl_3_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_comm_ram_0_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_comm_ram_1_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_comm_ram_2_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_comm_ram_3_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_auto_pc_2] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_auto_us_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_auto_ds_0] }
 catch { config_ip_cache -export [get_ips -all intellight_v2_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP intellight_v2_auto_pc_0, cache-ID = 56e2a6e1c5792f15; cache size = 9.137 MB.
+catch { config_ip_cache -export [get_ips -all intellight_v2_auto_ds_1] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_auto_pc_1] }
 export_ip_user_files -of_objects [get_files D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd]
-launch_runs intellight_v2_intellight_database_0_0_synth_1 -jobs 6
-[Thu Sep 29 14:37:49 2022] Launched intellight_v2_intellight_database_0_0_synth_1...
-Run output will be captured here: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_intellight_database_0_0_synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 1776.582 ; gain = 4.254
+launch_runs intellight_v2_xbar_0_synth_1 intellight_v2_axi_bram_ctrl_0_0_synth_1 intellight_v2_axi_bram_ctrl_1_0_synth_1 intellight_v2_axi_bram_ctrl_2_0_synth_1 intellight_v2_axi_bram_ctrl_3_0_synth_1 intellight_v2_comm_ram_0_0_synth_1 intellight_v2_comm_ram_1_0_synth_1 intellight_v2_comm_ram_2_0_synth_1 intellight_v2_comm_ram_3_0_synth_1 intellight_v2_auto_pc_2_synth_1 intellight_v2_auto_us_0_synth_1 intellight_v2_auto_ds_0_synth_1 intellight_v2_auto_pc_0_synth_1 intellight_v2_auto_ds_1_synth_1 intellight_v2_auto_pc_1_synth_1 -jobs 6
+[Thu Sep 29 17:52:20 2022] Launched intellight_v2_xbar_0_synth_1, intellight_v2_axi_bram_ctrl_0_0_synth_1, intellight_v2_axi_bram_ctrl_1_0_synth_1, intellight_v2_axi_bram_ctrl_2_0_synth_1, intellight_v2_axi_bram_ctrl_3_0_synth_1, intellight_v2_comm_ram_0_0_synth_1, intellight_v2_comm_ram_1_0_synth_1, intellight_v2_comm_ram_2_0_synth_1, intellight_v2_comm_ram_3_0_synth_1, intellight_v2_auto_pc_2_synth_1, intellight_v2_auto_us_0_synth_1, intellight_v2_auto_ds_0_synth_1, intellight_v2_auto_pc_0_synth_1, intellight_v2_auto_ds_1_synth_1, intellight_v2_auto_pc_1_synth_1...
+Run output will be captured here:
+intellight_v2_xbar_0_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_xbar_0_synth_1/runme.log
+intellight_v2_axi_bram_ctrl_0_0_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_axi_bram_ctrl_0_0_synth_1/runme.log
+intellight_v2_axi_bram_ctrl_1_0_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_axi_bram_ctrl_1_0_synth_1/runme.log
+intellight_v2_axi_bram_ctrl_2_0_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_axi_bram_ctrl_2_0_synth_1/runme.log
+intellight_v2_axi_bram_ctrl_3_0_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_axi_bram_ctrl_3_0_synth_1/runme.log
+intellight_v2_comm_ram_0_0_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_comm_ram_0_0_synth_1/runme.log
+intellight_v2_comm_ram_1_0_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_comm_ram_1_0_synth_1/runme.log
+intellight_v2_comm_ram_2_0_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_comm_ram_2_0_synth_1/runme.log
+intellight_v2_comm_ram_3_0_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_comm_ram_3_0_synth_1/runme.log
+intellight_v2_auto_pc_2_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_auto_pc_2_synth_1/runme.log
+intellight_v2_auto_us_0_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_auto_us_0_synth_1/runme.log
+intellight_v2_auto_ds_0_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_auto_ds_0_synth_1/runme.log
+intellight_v2_auto_pc_0_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_auto_pc_0_synth_1/runme.log
+intellight_v2_auto_ds_1_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_auto_ds_1_synth_1/runme.log
+intellight_v2_auto_pc_1_synth_1: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_auto_pc_1_synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 1944.836 ; gain = 0.000
 export_simulation -of_objects [get_files D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd] -directory D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.ip_user_files/sim_scripts -ip_user_files_dir D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.ip_user_files -ipstatic_source_dir D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/compile_simlib/modelsim} {questa=D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/compile_simlib/questa} {riviera=D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/compile_simlib/riviera} {activehdl=D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file D:/intelligent_traffic_light/optimized_intellight_v2/synth_1/PG.dcp with file D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/intellight_v2_wrapper.dcp
-launch_runs impl_2 -to_step write_bitstream -jobs 6
-[Thu Sep 29 14:39:13 2022] Launched synth_1...
+launch_runs synth_1 -jobs 6
+[Thu Sep 29 17:57:32 2022] Launched synth_1...
 Run output will be captured here: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/runme.log
-[Thu Sep 29 14:39:13 2022] Launched impl_2...
+launch_runs impl_2 -jobs 6
+[Thu Sep 29 17:58:43 2022] Launched impl_2...
+Run output will be captured here: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/impl_2/runme.log
+launch_runs impl_2 -to_step write_bitstream -jobs 6
+[Thu Sep 29 18:01:32 2022] Launched impl_2...
 Run output will be captured here: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/impl_2/runme.log
 open_run impl_2
 INFO: [Device 21-403] Loading part xc7z020clg400-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.241 . Memory (MB): peak = 1934.145 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 168 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.681 . Memory (MB): peak = 2160.926 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 236 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2022.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -181,22 +586,17 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.350 . Memory (MB): peak = 2642.734 ; gain = 0.000
+Read XDEF Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.692 . Memory (MB): peak = 2906.602 ; gain = 0.000
 Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.350 . Memory (MB): peak = 2642.734 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2642.734 ; gain = 0.000
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.693 . Memory (MB): peak = 2906.602 ; gain = 0.000
+Generating merged BMM file for the design top 'intellight_v2_wrapper'...
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2906.602 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 26 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 20 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 6 instances
 
-open_run: Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 2745.066 ; gain = 968.484
-open_bd_design {D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd}
-report_ip_status -name ip_status 
-report_utilization -name utilization_1
-open_bd_design {D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd}
-CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
-WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+open_run: Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 3028.500 ; gain = 1044.629
+open_report: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 3115.598 ; gain = 32.102
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 29 15:34:16 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 29 18:12:20 2022...

@@ -33,9 +33,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_
 # IP: bd/intellight_v2/ip/intellight_v2_rst_ps7_0_100M_0/intellight_v2_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_rst_ps7_0_100M_0 || ORIG_REF_NAME==intellight_v2_rst_ps7_0_100M_0} -quiet] -quiet
 
-# IP: bd/intellight_v2/ip/intellight_v2_SD_0_1/intellight_v2_SD_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_SD_0_1 || ORIG_REF_NAME==intellight_v2_SD_0_1} -quiet] -quiet
-
 # IP: bd/intellight_v2/ip/intellight_v2_axi_intc_0_0/intellight_v2_axi_intc_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_axi_intc_0_0 || ORIG_REF_NAME==intellight_v2_axi_intc_0_0} -quiet] -quiet
 
@@ -50,9 +47,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_
 
 # IP: bd/intellight_v2/ip/intellight_v2_CU_0_0/intellight_v2_CU_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_CU_0_0 || ORIG_REF_NAME==intellight_v2_CU_0_0} -quiet] -quiet
-
-# IP: bd/intellight_v2/ip/intellight_v2_QA_0_0/intellight_v2_QA_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_QA_0_0 || ORIG_REF_NAME==intellight_v2_QA_0_0} -quiet] -quiet
 
 # IP: bd/intellight_v2/ip/intellight_v2_PG_0_0/intellight_v2_PG_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_PG_0_0 || ORIG_REF_NAME==intellight_v2_PG_0_0} -quiet] -quiet
@@ -84,14 +78,59 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_
 # IP: bd/action_ram/ip/action_ram_const_1_1bit_0/action_ram_const_1_1bit_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram_const_1_1bit_0 || ORIG_REF_NAME==action_ram_const_1_1bit_0} -quiet] -quiet
 
-# IP: bd/intellight_v2/ip/intellight_v2_MII_0_0/intellight_v2_MII_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_MII_0_0 || ORIG_REF_NAME==intellight_v2_MII_0_0} -quiet] -quiet
-
 # IP: bd/intellight_v2/ip/intellight_v2_intellight_database_0_0/intellight_v2_intellight_database_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_intellight_database_0_0 || ORIG_REF_NAME==intellight_v2_intellight_database_0_0} -quiet] -quiet
 
+# IP: bd/intellight_v2/ip/intellight_v2_SD_0_1/intellight_v2_SD_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_SD_0_1 || ORIG_REF_NAME==intellight_v2_SD_0_1} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_QA_0_0/intellight_v2_QA_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_QA_0_0 || ORIG_REF_NAME==intellight_v2_QA_0_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_MII_0_0/intellight_v2_MII_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_MII_0_0 || ORIG_REF_NAME==intellight_v2_MII_0_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_0_0/intellight_v2_axi_bram_ctrl_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_axi_bram_ctrl_0_0 || ORIG_REF_NAME==intellight_v2_axi_bram_ctrl_0_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_1_0/intellight_v2_axi_bram_ctrl_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_axi_bram_ctrl_1_0 || ORIG_REF_NAME==intellight_v2_axi_bram_ctrl_1_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_2_0/intellight_v2_axi_bram_ctrl_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_axi_bram_ctrl_2_0 || ORIG_REF_NAME==intellight_v2_axi_bram_ctrl_2_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_3_0/intellight_v2_axi_bram_ctrl_3_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_axi_bram_ctrl_3_0 || ORIG_REF_NAME==intellight_v2_axi_bram_ctrl_3_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_comm_ram_0_0/intellight_v2_comm_ram_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_comm_ram_0_0 || ORIG_REF_NAME==intellight_v2_comm_ram_0_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_comm_ram_1_0/intellight_v2_comm_ram_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_comm_ram_1_0 || ORIG_REF_NAME==intellight_v2_comm_ram_1_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_comm_ram_2_0/intellight_v2_comm_ram_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_comm_ram_2_0 || ORIG_REF_NAME==intellight_v2_comm_ram_2_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_comm_ram_3_0/intellight_v2_comm_ram_3_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_comm_ram_3_0 || ORIG_REF_NAME==intellight_v2_comm_ram_3_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_auto_pc_2/intellight_v2_auto_pc_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_auto_pc_2 || ORIG_REF_NAME==intellight_v2_auto_pc_2} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_auto_us_0/intellight_v2_auto_us_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_auto_us_0 || ORIG_REF_NAME==intellight_v2_auto_us_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_auto_ds_0/intellight_v2_auto_ds_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_auto_ds_0 || ORIG_REF_NAME==intellight_v2_auto_ds_0} -quiet] -quiet
+
 # IP: bd/intellight_v2/ip/intellight_v2_auto_pc_0/intellight_v2_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_auto_pc_0 || ORIG_REF_NAME==intellight_v2_auto_pc_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_auto_ds_1/intellight_v2_auto_ds_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_auto_ds_1 || ORIG_REF_NAME==intellight_v2_auto_ds_1} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_auto_pc_1/intellight_v2_auto_pc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_auto_pc_1 || ORIG_REF_NAME==intellight_v2_auto_pc_1} -quiet] -quiet
 
 # XDC: d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/action_ram/action_ram_ooc.xdc
 

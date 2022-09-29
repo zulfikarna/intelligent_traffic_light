@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
-set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -104,7 +102,26 @@ set_property used_in_implementation false [get_files -all d:/intelligent_traffic
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_intc_0_0/intellight_v2_axi_intc_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_intc_0_0/intellight_v2_axi_intc_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_xbar_0/intellight_v2_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_0_0/intellight_v2_axi_bram_ctrl_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_1_0/intellight_v2_axi_bram_ctrl_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_2_0/intellight_v2_axi_bram_ctrl_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_3_0/intellight_v2_axi_bram_ctrl_3_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_comm_ram_0_0/intellight_v2_comm_ram_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_comm_ram_1_0/intellight_v2_comm_ram_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_comm_ram_2_0/intellight_v2_comm_ram_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_comm_ram_3_0/intellight_v2_comm_ram_3_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_2/intellight_v2_auto_pc_2_ooc.xdc]
+set_property used_in_synthesis false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_us_0/intellight_v2_auto_us_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_us_0/intellight_v2_auto_us_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_us_0/intellight_v2_auto_us_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_ds_0/intellight_v2_auto_ds_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_ds_0/intellight_v2_auto_ds_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_ds_0/intellight_v2_auto_ds_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_0/intellight_v2_auto_pc_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_ds_1/intellight_v2_auto_ds_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_ds_1/intellight_v2_auto_ds_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_ds_1/intellight_v2_auto_ds_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_1/intellight_v2_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/intellight_v2_ooc.xdc]
 
 OPTRACE "Adding files" END { }

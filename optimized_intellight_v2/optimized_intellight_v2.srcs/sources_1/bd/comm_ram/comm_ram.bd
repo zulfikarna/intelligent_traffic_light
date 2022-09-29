@@ -1,0 +1,491 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../optimized_intellight_v2.gen/sources_1/bd/comm_ram",
+      "name": "comm_ram",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1"
+    },
+    "design_tree": {
+      "comm_ram_0": "",
+      "comm_ram_1": "",
+      "comm_ram_2": "",
+      "comm_ram_3": "",
+      "axi_bram_ctrl_0": "",
+      "axi_bram_ctrl_1": "",
+      "axi_bram_ctrl_2": "",
+      "axi_bram_ctrl_3": ""
+    },
+    "ports": {
+      "Dnew": {
+        "direction": "I",
+        "left": "63",
+        "right": "0"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "rst": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "wen": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "wen0": {
+        "direction": "I"
+      },
+      "wen1": {
+        "direction": "I"
+      },
+      "wen2": {
+        "direction": "I"
+      },
+      "wen3": {
+        "direction": "I"
+      },
+      "wr_addr": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      }
+    },
+    "components": {
+      "comm_ram_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "comm_ram_action_ram_0_0",
+        "xci_path": "ip\\comm_ram_action_ram_0_0\\comm_ram_action_ram_0_0.xci",
+        "inst_hier_path": "comm_ram_0",
+        "parameters": {
+          "Assume_Synchronous_Clk": {
+            "value": "false"
+          },
+          "EN_SAFETY_CKT": {
+            "value": "true"
+          },
+          "Enable_32bit_Address": {
+            "value": "true"
+          },
+          "Enable_B": {
+            "value": "Use_ENB_Pin"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Operating_Mode_A": {
+            "value": "WRITE_FIRST"
+          },
+          "Operating_Mode_B": {
+            "value": "WRITE_FIRST"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Read_Width_A": {
+            "value": "64"
+          },
+          "Read_Width_B": {
+            "value": "64"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "true"
+          },
+          "Use_RSTB_Pin": {
+            "value": "true"
+          },
+          "Write_Depth_A": {
+            "value": "256"
+          },
+          "Write_Width_A": {
+            "value": "64"
+          },
+          "Write_Width_B": {
+            "value": "64"
+          },
+          "use_bram_block": {
+            "value": "BRAM_Controller"
+          }
+        }
+      },
+      "comm_ram_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "comm_ram_action_ram_1_0",
+        "xci_path": "ip\\comm_ram_action_ram_1_0\\comm_ram_action_ram_1_0.xci",
+        "inst_hier_path": "comm_ram_1",
+        "parameters": {
+          "Assume_Synchronous_Clk": {
+            "value": "false"
+          },
+          "EN_SAFETY_CKT": {
+            "value": "true"
+          },
+          "Enable_32bit_Address": {
+            "value": "true"
+          },
+          "Enable_B": {
+            "value": "Use_ENB_Pin"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Operating_Mode_A": {
+            "value": "WRITE_FIRST"
+          },
+          "Operating_Mode_B": {
+            "value": "WRITE_FIRST"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Read_Width_A": {
+            "value": "64"
+          },
+          "Read_Width_B": {
+            "value": "64"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "true"
+          },
+          "Use_RSTB_Pin": {
+            "value": "true"
+          },
+          "Write_Depth_A": {
+            "value": "256"
+          },
+          "Write_Width_A": {
+            "value": "64"
+          },
+          "Write_Width_B": {
+            "value": "64"
+          },
+          "use_bram_block": {
+            "value": "BRAM_Controller"
+          }
+        }
+      },
+      "comm_ram_2": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "comm_ram_action_ram_2_0",
+        "xci_path": "ip\\comm_ram_action_ram_2_0\\comm_ram_action_ram_2_0.xci",
+        "inst_hier_path": "comm_ram_2",
+        "parameters": {
+          "Assume_Synchronous_Clk": {
+            "value": "false"
+          },
+          "EN_SAFETY_CKT": {
+            "value": "true"
+          },
+          "Enable_32bit_Address": {
+            "value": "true"
+          },
+          "Enable_B": {
+            "value": "Use_ENB_Pin"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Operating_Mode_A": {
+            "value": "WRITE_FIRST"
+          },
+          "Operating_Mode_B": {
+            "value": "WRITE_FIRST"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Read_Width_A": {
+            "value": "64"
+          },
+          "Read_Width_B": {
+            "value": "64"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "true"
+          },
+          "Use_RSTB_Pin": {
+            "value": "true"
+          },
+          "Write_Depth_A": {
+            "value": "256"
+          },
+          "Write_Width_A": {
+            "value": "64"
+          },
+          "Write_Width_B": {
+            "value": "64"
+          },
+          "use_bram_block": {
+            "value": "BRAM_Controller"
+          }
+        }
+      },
+      "comm_ram_3": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "comm_ram_action_ram_3_0",
+        "xci_path": "ip\\comm_ram_action_ram_3_0\\comm_ram_action_ram_3_0.xci",
+        "inst_hier_path": "comm_ram_3",
+        "parameters": {
+          "Assume_Synchronous_Clk": {
+            "value": "false"
+          },
+          "EN_SAFETY_CKT": {
+            "value": "true"
+          },
+          "Enable_32bit_Address": {
+            "value": "true"
+          },
+          "Enable_B": {
+            "value": "Use_ENB_Pin"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Operating_Mode_A": {
+            "value": "WRITE_FIRST"
+          },
+          "Operating_Mode_B": {
+            "value": "WRITE_FIRST"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Read_Width_A": {
+            "value": "64"
+          },
+          "Read_Width_B": {
+            "value": "64"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "true"
+          },
+          "Use_RSTB_Pin": {
+            "value": "true"
+          },
+          "Write_Depth_A": {
+            "value": "256"
+          },
+          "Write_Width_A": {
+            "value": "64"
+          },
+          "Write_Width_B": {
+            "value": "64"
+          },
+          "use_bram_block": {
+            "value": "BRAM_Controller"
+          }
+        }
+      },
+      "axi_bram_ctrl_0": {
+        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+        "xci_name": "comm_ram_axi_bram_ctrl_0_1",
+        "xci_path": "ip\\comm_ram_axi_bram_ctrl_0_1\\comm_ram_axi_bram_ctrl_0_1.xci",
+        "inst_hier_path": "axi_bram_ctrl_0",
+        "parameters": {
+          "DATA_WIDTH": {
+            "value": "64"
+          },
+          "SINGLE_PORT_BRAM": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_bram_ctrl_1": {
+        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+        "xci_name": "comm_ram_axi_bram_ctrl_0_2",
+        "xci_path": "ip\\comm_ram_axi_bram_ctrl_0_2\\comm_ram_axi_bram_ctrl_0_2.xci",
+        "inst_hier_path": "axi_bram_ctrl_1",
+        "parameters": {
+          "DATA_WIDTH": {
+            "value": "64"
+          },
+          "SINGLE_PORT_BRAM": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_bram_ctrl_2": {
+        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+        "xci_name": "comm_ram_axi_bram_ctrl_0_3",
+        "xci_path": "ip\\comm_ram_axi_bram_ctrl_0_3\\comm_ram_axi_bram_ctrl_0_3.xci",
+        "inst_hier_path": "axi_bram_ctrl_2",
+        "parameters": {
+          "DATA_WIDTH": {
+            "value": "64"
+          },
+          "SINGLE_PORT_BRAM": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_bram_ctrl_3": {
+        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+        "xci_name": "comm_ram_axi_bram_ctrl_2_0",
+        "xci_path": "ip\\comm_ram_axi_bram_ctrl_2_0\\comm_ram_axi_bram_ctrl_2_0.xci",
+        "inst_hier_path": "axi_bram_ctrl_3",
+        "parameters": {
+          "DATA_WIDTH": {
+            "value": "64"
+          },
+          "SINGLE_PORT_BRAM": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "axi_bram_ctrl_0_BRAM_PORTA": {
+        "interface_ports": [
+          "axi_bram_ctrl_0/BRAM_PORTA",
+          "comm_ram_0/BRAM_PORTB"
+        ]
+      },
+      "axi_bram_ctrl_1_BRAM_PORTA": {
+        "interface_ports": [
+          "axi_bram_ctrl_1/BRAM_PORTA",
+          "comm_ram_1/BRAM_PORTB"
+        ]
+      },
+      "axi_bram_ctrl_2_BRAM_PORTA": {
+        "interface_ports": [
+          "axi_bram_ctrl_2/BRAM_PORTA",
+          "comm_ram_2/BRAM_PORTB"
+        ]
+      },
+      "axi_bram_ctrl_3_BRAM_PORTA": {
+        "interface_ports": [
+          "axi_bram_ctrl_3/BRAM_PORTA",
+          "comm_ram_3/BRAM_PORTB"
+        ]
+      }
+    },
+    "nets": {
+      "addra_0_1": {
+        "ports": [
+          "wr_addr",
+          "comm_ram_0/addra",
+          "comm_ram_1/addra",
+          "comm_ram_2/addra",
+          "comm_ram_3/addra"
+        ]
+      },
+      "clka_0_1": {
+        "ports": [
+          "clk",
+          "comm_ram_0/clka",
+          "comm_ram_1/clka",
+          "comm_ram_2/clka",
+          "comm_ram_3/clka",
+          "axi_bram_ctrl_0/s_axi_aclk",
+          "axi_bram_ctrl_2/s_axi_aclk",
+          "axi_bram_ctrl_3/s_axi_aclk",
+          "axi_bram_ctrl_1/s_axi_aclk"
+        ]
+      },
+      "dina_0_1": {
+        "ports": [
+          "Dnew",
+          "comm_ram_0/dina",
+          "comm_ram_1/dina",
+          "comm_ram_2/dina",
+          "comm_ram_3/dina"
+        ]
+      },
+      "rsta_0_1": {
+        "ports": [
+          "rst",
+          "comm_ram_0/rsta",
+          "comm_ram_1/rsta",
+          "comm_ram_2/rsta",
+          "comm_ram_3/rsta"
+        ]
+      },
+      "wea_0_1": {
+        "ports": [
+          "wen",
+          "comm_ram_0/wea",
+          "comm_ram_1/wea",
+          "comm_ram_3/wea",
+          "comm_ram_2/wea"
+        ]
+      },
+      "wen0_1": {
+        "ports": [
+          "wen0",
+          "comm_ram_0/ena"
+        ]
+      },
+      "wen1_1": {
+        "ports": [
+          "wen1",
+          "comm_ram_1/ena"
+        ]
+      },
+      "wen2_1": {
+        "ports": [
+          "wen2",
+          "comm_ram_2/ena"
+        ]
+      },
+      "wen3_1": {
+        "ports": [
+          "wen3",
+          "comm_ram_3/ena"
+        ]
+      }
+    }
+  }
+}

@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "intellight_v2_xbar_0_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -86,7 +85,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part www.digilentinc.com:pynq-z1:part0:1.0 [current_project]
-set_property ip_repo_paths d:/intelligent_traffic_light/ip_repo [current_project]
+set_property ip_repo_paths {
+  d:/intelligent_traffic_light/ip_repo/intellight_database/intellight_database_1.0
+  d:/intelligent_traffic_light/ip_repo
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

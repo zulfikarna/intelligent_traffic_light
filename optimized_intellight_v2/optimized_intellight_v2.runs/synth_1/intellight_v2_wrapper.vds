@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Sep 29 17:18:05 2022
-# Process ID: 14708
+# Start of session at: Thu Sep 29 17:57:36 2022
+# Process ID: 19632
 # Current directory: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1
 # Command line: vivado.exe -log intellight_v2_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source intellight_v2_wrapper.tcl
 # Log file: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/intellight_v2_wrapper.vds
@@ -17,7 +17,7 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program/Vivado/2022.1/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/ip 
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1324.359 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1294.398 ; gain = 0.000
 Command: read_checkpoint -auto_incremental -incremental D:/intelligent_traffic_light/optimized_intellight_v2/synth_1/PG.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from D:/intelligent_traffic_light/optimized_intellight_v2/synth_1/PG.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -30,104 +30,251 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 20508
+INFO: [Synth 8-7075] Helper process launched with PID 11872
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1294.398 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'intellight_v2_wrapper' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/hdl/intellight_v2_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:12]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_CU_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_CU_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_CU_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_CU_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'S0' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:225]
-WARNING: [Synth 8-7071] port 'PG' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:225]
-WARNING: [Synth 8-7071] port 'QA' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:225]
-WARNING: [Synth 8-7071] port 'SD' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:225]
-WARNING: [Synth 8-7071] port 'RD' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:225]
-WARNING: [Synth 8-7071] port 'wire_step' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:225]
-WARNING: [Synth 8-7071] port 'wire_episode' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:225]
-WARNING: [Synth 8-7071] port 'wire_epsilon' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:225]
-WARNING: [Synth 8-7071] port 'wire_cs' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:225]
-WARNING: [Synth 8-7071] port 'wire_ns' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:225]
-WARNING: [Synth 8-7023] instance 'CU_0' of module 'intellight_v2_CU_0_0' has 22 connections declared, but only 12 given [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:225]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_MII_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_MII_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_MII_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_MII_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'A_reg0' of module 'intellight_v2_MII_0_0' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:238]
-WARNING: [Synth 8-7071] port 'A_reg1' of module 'intellight_v2_MII_0_0' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:238]
-WARNING: [Synth 8-7071] port 'A_reg2' of module 'intellight_v2_MII_0_0' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:238]
-WARNING: [Synth 8-7071] port 'A_reg3' of module 'intellight_v2_MII_0_0' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:238]
-WARNING: [Synth 8-7071] port 'A_reg4' of module 'intellight_v2_MII_0_0' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:238]
-WARNING: [Synth 8-7071] port 'A_reg5' of module 'intellight_v2_MII_0_0' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:238]
-WARNING: [Synth 8-7023] instance 'MII_0' of module 'intellight_v2_MII_0_0' has 25 connections declared, but only 19 given [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:238]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_MOI_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_MOI_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_MOI_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_MOI_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_PG_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_PG_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_PG_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_PG_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_QA_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_QA_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_QA_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_QA_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_RD_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_RD_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_RD_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_RD_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_SD_0_1' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_SD_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_SD_0_1' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_SD_0_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_action_ram_wrapper_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_action_ram_wrapper_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_action_ram_wrapper_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_action_ram_wrapper_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_axi_intc_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_axi_intc_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_axi_intc_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_axi_intc_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_intellight_database_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_intellight_database_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_intellight_database_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_intellight_database_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_processing_system7_0_1' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_processing_system7_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_processing_system7_0_1' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_processing_system7_0_1_stub.v:5]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'intellight_v2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:410]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'intellight_v2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:410]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'intellight_v2_processing_system7_0_1' has 66 connections declared, but only 64 given [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:410]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_ps7_0_axi_periph_1' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:568]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_142OYAW' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1131]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_142OYAW' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1131]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_330PDO' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1263]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_330PDO' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1263]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_13V00K7' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1409]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_auto_pc_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_auto_pc_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_13V00K7' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1409]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_xbar_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_xbar_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_ps7_0_axi_periph_1' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:568]
-INFO: [Synth 8-6157] synthesizing module 'intellight_v2_rst_ps7_0_100M_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_rst_ps7_0_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_rst_ps7_0_100M_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-14708-DESKTOP-FRUK6JR/realtime/intellight_v2_rst_ps7_0_100M_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'intellight_v2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:558]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'intellight_v2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:558]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'intellight_v2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:558]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'intellight_v2_rst_ps7_0_100M_0' has 10 connections declared, but only 7 given [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:558]
-INFO: [Synth 8-6155] done synthesizing module 'intellight_v2' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:12]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:809]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_CU_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_CU_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_CU_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_CU_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'S0' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1146]
+WARNING: [Synth 8-7071] port 'PG' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1146]
+WARNING: [Synth 8-7071] port 'QA' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1146]
+WARNING: [Synth 8-7071] port 'SD' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1146]
+WARNING: [Synth 8-7071] port 'RD' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1146]
+WARNING: [Synth 8-7071] port 'wire_step' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1146]
+WARNING: [Synth 8-7071] port 'wire_episode' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1146]
+WARNING: [Synth 8-7071] port 'wire_epsilon' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1146]
+WARNING: [Synth 8-7071] port 'wire_cs' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1146]
+WARNING: [Synth 8-7071] port 'wire_ns' of module 'intellight_v2_CU_0_0' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1146]
+WARNING: [Synth 8-7023] instance 'CU_0' of module 'intellight_v2_CU_0_0' has 22 connections declared, but only 12 given [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1146]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_MII_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_MII_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_MII_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_MII_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'A_reg0' of module 'intellight_v2_MII_0_0' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1159]
+WARNING: [Synth 8-7071] port 'A_reg1' of module 'intellight_v2_MII_0_0' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1159]
+WARNING: [Synth 8-7071] port 'A_reg2' of module 'intellight_v2_MII_0_0' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1159]
+WARNING: [Synth 8-7071] port 'A_reg3' of module 'intellight_v2_MII_0_0' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1159]
+WARNING: [Synth 8-7071] port 'A_reg4' of module 'intellight_v2_MII_0_0' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1159]
+WARNING: [Synth 8-7071] port 'A_reg5' of module 'intellight_v2_MII_0_0' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1159]
+WARNING: [Synth 8-7023] instance 'MII_0' of module 'intellight_v2_MII_0_0' has 25 connections declared, but only 19 given [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1159]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_MOI_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_MOI_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_MOI_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_MOI_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_PG_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_PG_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_PG_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_PG_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_QA_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_QA_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_QA_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_QA_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_RD_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_RD_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_RD_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_RD_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_SD_0_1' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_SD_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_SD_0_1' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_SD_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_action_ram_wrapper_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_action_ram_wrapper_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_action_ram_wrapper_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_action_ram_wrapper_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_axi_intc_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_axi_intc_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_axi_intc_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_axi_intc_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'comm_ram_imp_X3GS3H' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:12]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_axi_bram_ctrl_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_axi_bram_ctrl_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_axi_bram_ctrl_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_axi_bram_ctrl_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_axi_bram_ctrl_1_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_axi_bram_ctrl_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_axi_bram_ctrl_1_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_axi_bram_ctrl_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_axi_bram_ctrl_2_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_axi_bram_ctrl_2_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_axi_bram_ctrl_2_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_axi_bram_ctrl_2_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_axi_bram_ctrl_3_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_axi_bram_ctrl_3_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_axi_bram_ctrl_3_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_axi_bram_ctrl_3_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_comm_ram_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_comm_ram_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_comm_ram_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_comm_ram_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'douta' of module 'intellight_v2_comm_ram_0_0' is unconnected for instance 'comm_ram_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:751]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'intellight_v2_comm_ram_0_0' is unconnected for instance 'comm_ram_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:751]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'intellight_v2_comm_ram_0_0' is unconnected for instance 'comm_ram_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:751]
+WARNING: [Synth 8-7023] instance 'comm_ram_0' of module 'intellight_v2_comm_ram_0_0' has 16 connections declared, but only 13 given [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:751]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_comm_ram_1_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_comm_ram_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_comm_ram_1_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_comm_ram_1_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'douta' of module 'intellight_v2_comm_ram_1_0' is unconnected for instance 'comm_ram_1' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:765]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'intellight_v2_comm_ram_1_0' is unconnected for instance 'comm_ram_1' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:765]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'intellight_v2_comm_ram_1_0' is unconnected for instance 'comm_ram_1' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:765]
+WARNING: [Synth 8-7023] instance 'comm_ram_1' of module 'intellight_v2_comm_ram_1_0' has 16 connections declared, but only 13 given [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:765]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_comm_ram_2_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_comm_ram_2_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_comm_ram_2_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_comm_ram_2_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'douta' of module 'intellight_v2_comm_ram_2_0' is unconnected for instance 'comm_ram_2' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:779]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'intellight_v2_comm_ram_2_0' is unconnected for instance 'comm_ram_2' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:779]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'intellight_v2_comm_ram_2_0' is unconnected for instance 'comm_ram_2' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:779]
+WARNING: [Synth 8-7023] instance 'comm_ram_2' of module 'intellight_v2_comm_ram_2_0' has 16 connections declared, but only 13 given [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:779]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_comm_ram_3_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_comm_ram_3_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_comm_ram_3_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_comm_ram_3_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'douta' of module 'intellight_v2_comm_ram_3_0' is unconnected for instance 'comm_ram_3' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:793]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'intellight_v2_comm_ram_3_0' is unconnected for instance 'comm_ram_3' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:793]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'intellight_v2_comm_ram_3_0' is unconnected for instance 'comm_ram_3' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:793]
+WARNING: [Synth 8-7023] instance 'comm_ram_3' of module 'intellight_v2_comm_ram_3_0' has 16 connections declared, but only 13 given [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:793]
+INFO: [Synth 8-6155] done synthesizing module 'comm_ram_imp_X3GS3H' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:12]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_intellight_database_0_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_intellight_database_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_intellight_database_0_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_intellight_database_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_processing_system7_0_1' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_processing_system7_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_processing_system7_0_1' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_processing_system7_0_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'intellight_v2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1468]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'intellight_v2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1468]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'intellight_v2_processing_system7_0_1' has 66 connections declared, but only 64 given [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1468]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_ps7_0_axi_periph_1' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1758]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_142OYAW' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:3349]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_auto_ds_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_auto_ds_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_auto_pc_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_auto_pc_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_auto_pc_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'intellight_v2_auto_pc_0' is unconnected for instance 'auto_pc' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:3680]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'intellight_v2_auto_pc_0' is unconnected for instance 'auto_pc' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:3680]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'intellight_v2_auto_pc_0' has 56 connections declared, but only 54 given [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:3680]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_142OYAW' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:3349]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_330PDO' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:3737]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_auto_ds_1' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_auto_ds_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_auto_ds_1' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_auto_ds_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_auto_pc_1' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_auto_pc_1' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_330PDO' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:3737]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_YYA91D' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:4135]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_YYA91D' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:4135]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1RYUPW5' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:4365]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1RYUPW5' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:4365]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_140BSCB' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:4595]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_140BSCB' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:4595]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_34G5BJ' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:4825]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_34G5BJ' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:4825]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_13V00K7' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:5055]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_auto_pc_2' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_auto_pc_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_auto_pc_2' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_auto_pc_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_auto_us_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_auto_us_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_auto_us_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_auto_us_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'intellight_v2_auto_us_0' is unconnected for instance 'auto_us' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:5473]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'intellight_v2_auto_us_0' is unconnected for instance 'auto_us' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:5473]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'intellight_v2_auto_us_0' has 76 connections declared, but only 74 given [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:5473]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_13V00K7' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:5055]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_xbar_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_xbar_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_xbar_0_stub.v:5]
+WARNING: [Synth 8-689] width (8) of port connection 'm_axi_arqos' does not match port width (24) of module 'intellight_v2_xbar_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:3285]
+WARNING: [Synth 8-689] width (8) of port connection 'm_axi_arregion' does not match port width (24) of module 'intellight_v2_xbar_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:3287]
+WARNING: [Synth 8-689] width (8) of port connection 'm_axi_awqos' does not match port width (24) of module 'intellight_v2_xbar_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:3296]
+WARNING: [Synth 8-689] width (8) of port connection 'm_axi_awregion' does not match port width (24) of module 'intellight_v2_xbar_0' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:3298]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_ps7_0_axi_periph_1' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1758]
+INFO: [Synth 8-6157] synthesizing module 'intellight_v2_rst_ps7_0_100M_0' [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_rst_ps7_0_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_rst_ps7_0_100M_0' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/.Xil/Vivado-19632-DESKTOP-FRUK6JR/realtime/intellight_v2_rst_ps7_0_100M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'intellight_v2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1748]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'intellight_v2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1748]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'intellight_v2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1748]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'intellight_v2_rst_ps7_0_100M_0' has 10 connections declared, but only 7 given [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:1748]
+INFO: [Synth 8-6155] done synthesizing module 'intellight_v2' (0#1) [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/synth/intellight_v2.v:809]
 INFO: [Synth 8-6155] done synthesizing module 'intellight_v2_wrapper' (0#1) [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/hdl/intellight_v2_wrapper.v:12]
 WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_13V00K7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_13V00K7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m05_couplers_imp_34G5BJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m05_couplers_imp_34G5BJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m05_couplers_imp_34G5BJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m05_couplers_imp_34G5BJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m04_couplers_imp_140BSCB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m04_couplers_imp_140BSCB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m04_couplers_imp_140BSCB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m04_couplers_imp_140BSCB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m03_couplers_imp_1RYUPW5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m03_couplers_imp_1RYUPW5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m03_couplers_imp_1RYUPW5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m03_couplers_imp_1RYUPW5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m02_couplers_imp_YYA91D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m02_couplers_imp_YYA91D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m02_couplers_imp_YYA91D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m02_couplers_imp_YYA91D is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ACLK in module m01_couplers_imp_330PDO is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module m01_couplers_imp_330PDO is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m01_couplers_imp_330PDO is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m01_couplers_imp_330PDO is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_142OYAW is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_142OYAW is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_142OYAW is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_142OYAW is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M00_ACLK in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M00_ARESETN in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M01_ACLK in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M01_ARESETN in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M03_ACLK in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M03_ARESETN in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M04_ACLK in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M04_ARESETN in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M05_ACLK in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M05_ARESETN in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ACLK in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[31] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[30] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[29] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[28] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[27] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[26] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[25] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[24] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[23] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[22] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[21] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[20] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[19] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[18] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[17] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[16] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[15] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[14] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_araddr[13] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[31] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[30] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[29] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[28] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[27] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[26] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[25] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[24] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[23] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[22] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[21] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[20] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[19] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[18] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[17] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[16] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[15] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[14] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI1_awaddr[13] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[31] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[30] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[29] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[28] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[27] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[26] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[25] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[24] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[23] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[22] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[21] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[20] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[19] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[18] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[17] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[16] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[15] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[14] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_araddr[13] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_awaddr[31] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_awaddr[30] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_awaddr[29] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_awaddr[28] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_awaddr[27] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_awaddr[26] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI2_awaddr[25] in module comm_ram_imp_X3GS3H is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1306.652 ; gain = 12.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1306.652 ; gain = 12.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1306.652 ; gain = 12.254
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.116 . Memory (MB): peak = 1306.652 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -140,8 +287,18 @@ Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized
 Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_intc_0_0/intellight_v2_axi_intc_0_0/intellight_v2_axi_intc_0_0_in_context.xdc] for cell 'intellight_v2_i/axi_intc_0'
 Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_xbar_0/intellight_v2_xbar_0/intellight_v2_xbar_0_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/xbar'
 Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_xbar_0/intellight_v2_xbar_0/intellight_v2_xbar_0_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/xbar'
-Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_0/intellight_v2_auto_pc_0/intellight_v2_auto_pc_0_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_0/intellight_v2_auto_pc_0/intellight_v2_auto_pc_0_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_2/intellight_v2_auto_pc_2/intellight_v2_auto_pc_2_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_2/intellight_v2_auto_pc_2/intellight_v2_auto_pc_2_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_us_0/intellight_v2_auto_us_0/intellight_v2_auto_us_0_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/s00_couplers/auto_us'
+Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_us_0/intellight_v2_auto_us_0/intellight_v2_auto_us_0_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/s00_couplers/auto_us'
+Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_ds_0/intellight_v2_auto_ds_0/intellight_v2_auto_ds_0_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/m00_couplers/auto_ds'
+Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_ds_0/intellight_v2_auto_ds_0/intellight_v2_auto_ds_0_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/m00_couplers/auto_ds'
+Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_0/intellight_v2_auto_pc_0/intellight_v2_auto_pc_0_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/m00_couplers/auto_pc'
+Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_0/intellight_v2_auto_pc_0/intellight_v2_auto_pc_0_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/m00_couplers/auto_pc'
+Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_ds_1/intellight_v2_auto_ds_1/intellight_v2_auto_ds_0_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/m01_couplers/auto_ds'
+Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_ds_1/intellight_v2_auto_ds_1/intellight_v2_auto_ds_0_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/m01_couplers/auto_ds'
+Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_1/intellight_v2_auto_pc_1/intellight_v2_auto_pc_0_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/m01_couplers/auto_pc'
+Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_pc_1/intellight_v2_auto_pc_1/intellight_v2_auto_pc_0_in_context.xdc] for cell 'intellight_v2_i/ps7_0_axi_periph/m01_couplers/auto_pc'
 Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_RD_0_0/intellight_v2_RD_0_0/intellight_v2_RD_0_0_in_context.xdc] for cell 'intellight_v2_i/RD_0'
 Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_RD_0_0/intellight_v2_RD_0_0/intellight_v2_RD_0_0_in_context.xdc] for cell 'intellight_v2_i/RD_0'
 Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_CU_0_0/intellight_v2_CU_0_0/intellight_v2_CU_0_0_in_context.xdc] for cell 'intellight_v2_i/CU_0'
@@ -160,6 +317,22 @@ Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized
 Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_QA_0_0/intellight_v2_QA_0_0/intellight_v2_QA_0_0_in_context.xdc] for cell 'intellight_v2_i/QA_0'
 Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_MII_0_0/intellight_v2_MII_0_0/intellight_v2_MII_0_0_in_context.xdc] for cell 'intellight_v2_i/MII_0'
 Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_MII_0_0/intellight_v2_MII_0_0/intellight_v2_MII_0_0_in_context.xdc] for cell 'intellight_v2_i/MII_0'
+Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_0_0/intellight_v2_axi_bram_ctrl_0_0/intellight_v2_axi_bram_ctrl_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/axi_bram_ctrl_0'
+Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_0_0/intellight_v2_axi_bram_ctrl_0_0/intellight_v2_axi_bram_ctrl_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/axi_bram_ctrl_0'
+Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_1_0/intellight_v2_axi_bram_ctrl_1_0/intellight_v2_axi_bram_ctrl_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/axi_bram_ctrl_1'
+Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_1_0/intellight_v2_axi_bram_ctrl_1_0/intellight_v2_axi_bram_ctrl_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/axi_bram_ctrl_1'
+Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_2_0/intellight_v2_axi_bram_ctrl_2_0/intellight_v2_axi_bram_ctrl_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/axi_bram_ctrl_2'
+Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_2_0/intellight_v2_axi_bram_ctrl_2_0/intellight_v2_axi_bram_ctrl_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/axi_bram_ctrl_2'
+Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_3_0/intellight_v2_axi_bram_ctrl_3_0/intellight_v2_axi_bram_ctrl_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/axi_bram_ctrl_3'
+Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_3_0/intellight_v2_axi_bram_ctrl_3_0/intellight_v2_axi_bram_ctrl_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/axi_bram_ctrl_3'
+Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_comm_ram_0_0/intellight_v2_comm_ram_0_0/intellight_v2_comm_ram_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/comm_ram_0'
+Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_comm_ram_0_0/intellight_v2_comm_ram_0_0/intellight_v2_comm_ram_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/comm_ram_0'
+Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_comm_ram_1_0/intellight_v2_comm_ram_1_0/intellight_v2_comm_ram_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/comm_ram_1'
+Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_comm_ram_1_0/intellight_v2_comm_ram_1_0/intellight_v2_comm_ram_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/comm_ram_1'
+Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_comm_ram_2_0/intellight_v2_comm_ram_2_0/intellight_v2_comm_ram_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/comm_ram_2'
+Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_comm_ram_2_0/intellight_v2_comm_ram_2_0/intellight_v2_comm_ram_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/comm_ram_2'
+Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_comm_ram_3_0/intellight_v2_comm_ram_3_0/intellight_v2_comm_ram_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/comm_ram_3'
+Finished Parsing XDC File [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_comm_ram_3_0/intellight_v2_comm_ram_3_0/intellight_v2_comm_ram_0_0_in_context.xdc] for cell 'intellight_v2_i/comm_ram/comm_ram_3'
 Parsing XDC File [D:/intelligent_traffic_light/optimized_intellight_v2/board_file/PYNQ-Z1_C.xdc]
 WARNING: [Vivado 12-584] No ports matched 'run'. [D:/intelligent_traffic_light/optimized_intellight_v2/board_file/PYNQ-Z1_C.xdc:18]
 WARNING: [Vivado 12-584] No ports matched 'finish'. [D:/intelligent_traffic_light/optimized_intellight_v2/board_file/PYNQ-Z1_C.xdc:19]
@@ -171,22 +344,26 @@ Parsing XDC File [D:/intelligent_traffic_light/optimized_intellight_v2/optimized
 Finished Parsing XDC File [D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1306.652 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1306.652 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'intellight_v2_i/comm_ram/comm_ram_0' at clock pin 'clka' is different from the actual clock period '17.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'intellight_v2_i/comm_ram/comm_ram_1' at clock pin 'clka' is different from the actual clock period '17.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'intellight_v2_i/comm_ram/comm_ram_2' at clock pin 'clka' is different from the actual clock period '17.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'intellight_v2_i/comm_ram/comm_ram_3' at clock pin 'clka' is different from the actual clock period '17.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1306.652 ; gain = 12.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1306.652 ; gain = 12.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -457,6 +634,11 @@ Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/rst_ps7_0_100M. (
 Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/axi_intc_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/ps7_0_axi_periph/s00_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/ps7_0_axi_periph/m00_couplers/auto_ds. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/ps7_0_axi_periph/m00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/ps7_0_axi_periph/m01_couplers/auto_ds. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/ps7_0_axi_periph/m01_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/RD_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/CU_0. (constraint file  auto generated constraint).
@@ -467,11 +649,19 @@ Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/intellight_databa
 Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/SD_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/QA_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/MII_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/comm_ram/axi_bram_ctrl_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/comm_ram/axi_bram_ctrl_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/comm_ram/axi_bram_ctrl_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/comm_ram/axi_bram_ctrl_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/comm_ram/comm_ram_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/comm_ram/comm_ram_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/comm_ram/comm_ram_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for intellight_v2_i/comm_ram/comm_ram_3. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1306.652 ; gain = 12.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1306.652 ; gain = 12.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -493,32 +683,26 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port M00_ACLK in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_ARESETN in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_ACLK in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_ARESETN in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S00_ACLK in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S00_ARESETN in module intellight_v2_ps7_0_axi_periph_1 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1306.652 ; gain = 12.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1306.652 ; gain = 12.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1307.074 ; gain = 12.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1327.852 ; gain = 33.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -536,37 +720,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1331.629 ; gain = 37.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1331.629 ; gain = 37.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1331.629 ; gain = 37.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1331.629 ; gain = 37.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1331.629 ; gain = 37.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1331.629 ; gain = 37.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -577,19 +761,32 @@ Report BlackBoxes:
 |      |BlackBox name                         |Instances |
 +------+--------------------------------------+----------+
 |1     |intellight_v2_xbar_0                  |         1|
-|2     |intellight_v2_auto_pc_0               |         1|
-|3     |intellight_v2_CU_0_0                  |         1|
-|4     |intellight_v2_MII_0_0                 |         1|
-|5     |intellight_v2_MOI_0_0                 |         1|
-|6     |intellight_v2_PG_0_0                  |         1|
-|7     |intellight_v2_QA_0_0                  |         1|
-|8     |intellight_v2_RD_0_0                  |         1|
-|9     |intellight_v2_SD_0_1                  |         1|
-|10    |intellight_v2_action_ram_wrapper_0_0  |         1|
-|11    |intellight_v2_axi_intc_0_0            |         1|
-|12    |intellight_v2_intellight_database_0_0 |         1|
-|13    |intellight_v2_processing_system7_0_1  |         1|
-|14    |intellight_v2_rst_ps7_0_100M_0        |         1|
+|2     |intellight_v2_auto_ds_0               |         1|
+|3     |intellight_v2_auto_pc_0               |         1|
+|4     |intellight_v2_auto_ds_1               |         1|
+|5     |intellight_v2_auto_pc_1               |         1|
+|6     |intellight_v2_auto_pc_2               |         1|
+|7     |intellight_v2_auto_us_0               |         1|
+|8     |intellight_v2_CU_0_0                  |         1|
+|9     |intellight_v2_MII_0_0                 |         1|
+|10    |intellight_v2_MOI_0_0                 |         1|
+|11    |intellight_v2_PG_0_0                  |         1|
+|12    |intellight_v2_QA_0_0                  |         1|
+|13    |intellight_v2_RD_0_0                  |         1|
+|14    |intellight_v2_SD_0_1                  |         1|
+|15    |intellight_v2_action_ram_wrapper_0_0  |         1|
+|16    |intellight_v2_axi_intc_0_0            |         1|
+|17    |intellight_v2_intellight_database_0_0 |         1|
+|18    |intellight_v2_processing_system7_0_1  |         1|
+|19    |intellight_v2_rst_ps7_0_100M_0        |         1|
+|20    |intellight_v2_axi_bram_ctrl_0_0       |         1|
+|21    |intellight_v2_axi_bram_ctrl_1_0       |         1|
+|22    |intellight_v2_axi_bram_ctrl_2_0       |         1|
+|23    |intellight_v2_axi_bram_ctrl_3_0       |         1|
+|24    |intellight_v2_comm_ram_0_0            |         1|
+|25    |intellight_v2_comm_ram_1_0            |         1|
+|26    |intellight_v2_comm_ram_2_0            |         1|
+|27    |intellight_v2_comm_ram_3_0            |         1|
 +------+--------------------------------------+----------+
 
 Report Cell Usage: 
@@ -604,33 +801,43 @@ Report Cell Usage:
 |6     |intellight_v2_RD_0                  |     1|
 |7     |intellight_v2_SD_0                  |     1|
 |8     |intellight_v2_action_ram_wrapper_0  |     1|
-|9     |intellight_v2_auto_pc               |     1|
-|10    |intellight_v2_axi_intc_0            |     1|
-|11    |intellight_v2_intellight_database_0 |     1|
-|12    |intellight_v2_processing_system7_0  |     1|
-|13    |intellight_v2_rst_ps7_0_100M        |     1|
-|14    |intellight_v2_xbar                  |     1|
-|15    |OBUF                                |     5|
+|9     |intellight_v2_auto_ds               |     2|
+|11    |intellight_v2_auto_pc               |     3|
+|14    |intellight_v2_auto_us               |     1|
+|15    |intellight_v2_axi_bram_ctrl_0       |     1|
+|16    |intellight_v2_axi_bram_ctrl_1       |     1|
+|17    |intellight_v2_axi_bram_ctrl_2       |     1|
+|18    |intellight_v2_axi_bram_ctrl_3       |     1|
+|19    |intellight_v2_axi_intc_0            |     1|
+|20    |intellight_v2_comm_ram_0            |     1|
+|21    |intellight_v2_comm_ram_1            |     1|
+|22    |intellight_v2_comm_ram_2            |     1|
+|23    |intellight_v2_comm_ram_3            |     1|
+|24    |intellight_v2_intellight_database_0 |     1|
+|25    |intellight_v2_processing_system7_0  |     1|
+|26    |intellight_v2_rst_ps7_0_100M        |     1|
+|27    |intellight_v2_xbar                  |     1|
+|28    |OBUF                                |     5|
 +------+------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1331.629 ; gain = 37.230
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1324.359 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1324.359 ; gain = 0.000
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1331.629 ; gain = 37.230
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1331.629 ; gain = 37.230
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1330.367 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 1343.691 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1346.645 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1361.684 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 7a833c59
+Synth Design complete, checksum: 35abdef5
 INFO: [Common 17-83] Releasing license: Synthesis
-62 Infos, 53 Warnings, 0 Critical Warnings and 0 Errors encountered.
+99 Infos, 161 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1346.645 ; gain = 22.285
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1361.684 ; gain = 67.285
 INFO: [Common 17-1381] The checkpoint 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/intellight_v2_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file intellight_v2_wrapper_utilization_synth.rpt -pb PG_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 29 17:19:06 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 29 17:58:34 2022...

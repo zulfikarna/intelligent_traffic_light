@@ -1,0 +1,42 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.763265",
+   "Default View_TopLeft":"-559,0",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -50 -y 100 -defaultsOSRD
+preplace port port-id_rst -pg 1 -lvl 0 -x -50 -y 640 -defaultsOSRD
+preplace port port-id_wen0 -pg 1 -lvl 0 -x -50 -y 360 -defaultsOSRD
+preplace port port-id_wen1 -pg 1 -lvl 0 -x -50 -y 140 -defaultsOSRD
+preplace port port-id_wen2 -pg 1 -lvl 0 -x -50 -y 860 -defaultsOSRD
+preplace port port-id_wen3 -pg 1 -lvl 0 -x -50 -y 620 -defaultsOSRD
+preplace portBus Dnew -pg 1 -lvl 0 -x -50 -y 120 -defaultsOSRD
+preplace portBus wen -pg 1 -lvl 0 -x -50 -y 660 -defaultsOSRD
+preplace portBus wr_addr -pg 1 -lvl 0 -x -50 -y 520 -defaultsOSRD
+preplace inst comm_ram_0 -pg 1 -lvl 2 -x 520 -y 370 -defaultsOSRD
+preplace inst comm_ram_1 -pg 1 -lvl 2 -x 520 -y 130 -defaultsOSRD
+preplace inst comm_ram_2 -pg 1 -lvl 2 -x 520 -y 850 -defaultsOSRD
+preplace inst comm_ram_3 -pg 1 -lvl 2 -x 520 -y 610 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 1 -x 160 -y 190 -defaultsOSRD
+preplace inst axi_bram_ctrl_1 -pg 1 -lvl 1 -x 160 -y 610 -defaultsOSRD
+preplace inst axi_bram_ctrl_2 -pg 1 -lvl 1 -x 160 -y 330 -defaultsOSRD
+preplace inst axi_bram_ctrl_3 -pg 1 -lvl 1 -x 160 -y 470 -defaultsOSRD
+preplace netloc addra_0_1 1 0 2 -10J 710 390
+preplace netloc clka_0_1 1 0 2 0J 90 350
+preplace netloc dina_0_1 1 0 2 10J 100 320
+preplace netloc rsta_0_1 1 0 2 -20J 700 360
+preplace netloc wea_0_1 1 0 2 -30J 720 370
+preplace netloc wen0_1 1 0 2 -10J 80 310J
+preplace netloc wen1_1 1 0 2 20J 110 370J
+preplace netloc wen2_1 1 0 2 NJ 860 NJ
+preplace netloc wen3_1 1 0 2 10J 690 380J
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 1 1 340J 190n
+preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 1 1 330 200n
+preplace netloc axi_bram_ctrl_2_BRAM_PORTA 1 1 1 300 330n
+preplace netloc axi_bram_ctrl_3_BRAM_PORTA 1 1 1 310 470n
+levelinfo -pg 1 -50 160 520 660
+pagesize -pg 1 -db -bbox -sgen -190 -80 660 980
+"
+}
+
