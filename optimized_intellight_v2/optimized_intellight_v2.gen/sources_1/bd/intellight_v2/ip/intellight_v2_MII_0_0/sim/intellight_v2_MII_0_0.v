@@ -58,12 +58,17 @@ module intellight_v2_MII_0_0 (
   clk,
   rst,
   S,
-  Qnew,
+  Q_new,
   wen_cu,
   A,
-  RD_ADDR,
-  WR_ADDR,
-  Dnew,
+  A_road,
+  Droad0,
+  Droad1,
+  Droad2,
+  Droad3,
+  rd_addr,
+  wr_addr,
+  D_new,
   wen_bram,
   wen0,
   wen1,
@@ -84,12 +89,17 @@ input wire clk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
 input wire rst;
 input wire [11 : 0] S;
-input wire [15 : 0] Qnew;
+input wire [15 : 0] Q_new;
 input wire wen_cu;
 input wire [3 : 0] A;
-output wire [31 : 0] RD_ADDR;
-output wire [31 : 0] WR_ADDR;
-output wire [63 : 0] Dnew;
+input wire [1 : 0] A_road;
+input wire [63 : 0] Droad0;
+input wire [63 : 0] Droad1;
+input wire [63 : 0] Droad2;
+input wire [63 : 0] Droad3;
+output wire [31 : 0] rd_addr;
+output wire [31 : 0] wr_addr;
+output wire [63 : 0] D_new;
 output wire [7 : 0] wen_bram;
 output wire wen0;
 output wire wen1;
@@ -112,12 +122,17 @@ output wire [3 : 0] A_reg5;
     .clk(clk),
     .rst(rst),
     .S(S),
-    .Qnew(Qnew),
+    .Q_new(Q_new),
     .wen_cu(wen_cu),
     .A(A),
-    .RD_ADDR(RD_ADDR),
-    .WR_ADDR(WR_ADDR),
-    .Dnew(Dnew),
+    .A_road(A_road),
+    .Droad0(Droad0),
+    .Droad1(Droad1),
+    .Droad2(Droad2),
+    .Droad3(Droad3),
+    .rd_addr(rd_addr),
+    .wr_addr(wr_addr),
+    .D_new(D_new),
     .wen_bram(wen_bram),
     .wen0(wen0),
     .wen1(wen1),

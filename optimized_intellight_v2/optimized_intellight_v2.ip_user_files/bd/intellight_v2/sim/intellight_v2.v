@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Thu Sep 29 14:37:29 2022
+//Date        : Thu Sep 29 17:16:28 2022
 //Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 //Command     : generate_target intellight_v2.bd
 //Design      : intellight_v2
@@ -95,7 +95,7 @@ module intellight_v2
   wire [15:0]MOI_0_Q_33;
   wire [3:0]PG_0_A;
   wire [1:0]PG_0_A_road;
-  wire [15:0]QA_0_Qnew;
+  wire [15:0]QA_0_Q_new;
   wire [15:0]RD_0_R;
   wire [3:0]SD_0_L0;
   wire [3:0]SD_0_L1;
@@ -237,19 +237,24 @@ module intellight_v2
         .wen(CU_0_wen));
   intellight_v2_MII_0_0 MII_0
        (.A(PG_0_A),
-        .Dnew(MII_0_Dnew),
-        .Qnew(QA_0_Qnew),
-        .RD_ADDR(MII_0_RD_ADDR),
+        .A_road(PG_0_A_road),
+        .D_new(MII_0_Dnew),
+        .Droad0(action_ram_wrapper_0_Droad0),
+        .Droad1(action_ram_wrapper_0_Droad1),
+        .Droad2(action_ram_wrapper_0_Droad2),
+        .Droad3(action_ram_wrapper_0_Droad3),
+        .Q_new(QA_0_Q_new),
         .S(SD_0_S),
-        .WR_ADDR(MII_0_WR_ADDR),
         .clk(clk_wiz_clk_out1),
+        .rd_addr(MII_0_RD_ADDR),
         .rst(rst_ps7_0_100M_peripheral_aresetn),
         .wen0(MII_0_en0),
         .wen1(MII_0_en1),
         .wen2(MII_0_en2),
         .wen3(MII_0_en3),
         .wen_bram(MII_0_wen_bram),
-        .wen_cu(CU_0_wen));
+        .wen_cu(CU_0_wen),
+        .wr_addr(MII_0_WR_ADDR));
   intellight_v2_MOI_0_0 MOI_0
        (.Droad0(action_ram_wrapper_0_Droad0),
         .Droad1(action_ram_wrapper_0_Droad1),
@@ -290,7 +295,7 @@ module intellight_v2
         .Droad1(action_ram_wrapper_0_Droad1),
         .Droad2(action_ram_wrapper_0_Droad2),
         .Droad3(action_ram_wrapper_0_Droad3),
-        .Qnew(QA_0_Qnew),
+        .Q_new(QA_0_Q_new),
         .R(RD_0_R),
         .alpha(intellight_database_0_alpha),
         .clk(clk_wiz_clk_out1),

@@ -67,10 +67,10 @@ module intellight_v2_QA_0_0 (
   R,
   A,
   A_road,
-  Qnew
+  Q_new
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 58823528, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
@@ -85,7 +85,7 @@ input wire [63 : 0] Droad3;
 input wire [15 : 0] R;
 input wire [3 : 0] A;
 input wire [1 : 0] A_road;
-output wire [15 : 0] Qnew;
+output wire [15 : 0] Q_new;
 
   QA #(
     .Q_WIDTH(16),
@@ -103,6 +103,6 @@ output wire [15 : 0] Qnew;
     .R(R),
     .A(A),
     .A_road(A_road),
-    .Qnew(Qnew)
+    .Q_new(Q_new)
   );
 endmodule

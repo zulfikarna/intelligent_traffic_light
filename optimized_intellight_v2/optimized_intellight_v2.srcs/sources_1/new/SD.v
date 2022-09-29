@@ -87,7 +87,8 @@ module SD // verified
     assign L3 = L_next[3];  
   
     // 3. Convert traffic condition to state
-    assign S = (!mode)? (((L_next[0])|(L_next[1]<<2)|(L_next[2]<<4)|(L_next[3]<<6))|{S_WIDTH{1'b0}}) : S_sim;
-    
+    wire [S_WIDTH-1:0] S_learn;
+    assign S_learn = ((L_next[0])|(L_next[1]<<2)|(L_next[2]<<4)|(L_next[3]<<6)) | {S_WIDTH{1'b0}};
+    assign S = (!mode)? S_learn : S_sim;
 
 endmodule

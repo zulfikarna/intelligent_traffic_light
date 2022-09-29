@@ -21,7 +21,7 @@ module QA // verified
     input wire signed [R_WIDTH-1:0] R,
     input wire [A_WIDTH-1:0] A,
     input wire [A_WIDTH/2-1:0] A_road,
-    output wire signed [Q_WIDTH-1:0] Qnew
+    output wire signed [Q_WIDTH-1:0] Q_new
     // for debugging 
 //    output wire signed [Q_WIDTH-1:0] x, Qmax, gm
     );
@@ -75,16 +75,16 @@ module QA // verified
     end
     
     // Select data from BRAM 
-    wire [Q_WIDTH*4-1:0] Q;
-    assign Q = (A_road==2'd0)? Droad0:
+    wire [Q_WIDTH*4-1:0] D;
+    assign D = (A_road==2'd0)? Droad0:
                (A_road==2'd1)? Droad1: 
                (A_road==2'd2)? Droad2: 
                (A_road==2'd3)? Droad3: {Q_WIDTH*4{1'bx}};
     wire signed [Q_WIDTH-1:0] Q0, Q1, Q2, Q3;
-    assign Q0 = Q[Q_WIDTH-1:0];
-    assign Q1 = Q[Q_WIDTH*2-1:Q_WIDTH];
-    assign Q2 = Q[Q_WIDTH*3-1:Q_WIDTH*2];
-    assign Q3 = Q[Q_WIDTH*4-1:Q_WIDTH*3];  
+    assign Q0 = D[Q_WIDTH-1:0];
+    assign Q1 = D[Q_WIDTH*2-1:Q_WIDTH];
+    assign Q2 = D[Q_WIDTH*3-1:Q_WIDTH*2];
+    assign Q3 = D[Q_WIDTH*4-1:Q_WIDTH*3];  
     
     // Select maximum Q-value
     wire signed [Q_WIDTH-1:0] Qmax;
@@ -97,7 +97,7 @@ module QA // verified
                         .sel(A_reg0[3:2]), .out0(Qsel)
                         );  
     
-    // Bellman Equation : Qnew = Qsel + a(R + g*Qmax' - Qsel)
+    // Bellman Equation : Q_new = Qsel + a(R + g*Qmax' - Qsel)
     // x = R + g*Qmax' - Qsel 
     // y = Qsel - a*x
     
@@ -112,6 +112,6 @@ module QA // verified
     wire signed [Q_WIDTH-1:0] y;
     multiply mul1(.in0(x_reg0), .c(alpha), .out0(ap));
     assign y = Qsel_reg1 - ap;
-    assign Qnew = y;
+    assign Q_new = y;
      
 endmodule

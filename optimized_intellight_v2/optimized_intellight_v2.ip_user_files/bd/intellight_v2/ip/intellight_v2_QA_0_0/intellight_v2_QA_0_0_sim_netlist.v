@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Wed Sep 28 13:54:31 2022
+// Date        : Thu Sep 29 17:12:29 2022
 // Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_QA_0_0/intellight_v2_QA_0_0_sim_netlist.v
@@ -27,8 +27,8 @@ module intellight_v2_QA_0_0
     R,
     A,
     A_road,
-    Qnew);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *) input clk;
+    Q_new);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 58823528, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input rst;
   input [2:0]alpha;
   input [2:0]gamma;
@@ -39,7 +39,7 @@ module intellight_v2_QA_0_0
   input [15:0]R;
   input [3:0]A;
   input [1:0]A_road;
-  output [15:0]Qnew;
+  output [15:0]Q_new;
 
   wire [3:0]A;
   wire [1:0]A_road;
@@ -47,7 +47,7 @@ module intellight_v2_QA_0_0
   wire [63:0]Droad1;
   wire [63:0]Droad2;
   wire [63:0]Droad3;
-  wire [15:0]Qnew;
+  wire [15:0]Q_new;
   wire [15:0]R;
   wire [2:0]alpha;
   wire clk;
@@ -61,7 +61,7 @@ module intellight_v2_QA_0_0
         .Droad1(Droad1),
         .Droad2(Droad2),
         .Droad3(Droad3),
-        .Qnew(Qnew),
+        .Q_new(Q_new),
         .R(R),
         .alpha(alpha),
         .clk(clk),
@@ -71,7 +71,7 @@ endmodule
 
 (* ORIG_REF_NAME = "QA" *) 
 module intellight_v2_QA_0_0_QA
-   (Qnew,
+   (Q_new,
     gamma,
     rst,
     A,
@@ -83,7 +83,7 @@ module intellight_v2_QA_0_0_QA
     A_road,
     Droad1,
     alpha);
-  output [15:0]Qnew;
+  output [15:0]Q_new;
   input [2:0]gamma;
   input rst;
   input [1:0]A;
@@ -106,6 +106,7 @@ module intellight_v2_QA_0_0_QA
   wire [15:0]Q1;
   wire [15:0]Q2;
   wire [15:0]Q3;
+  wire [15:0]Q_new;
   wire \Q_reg0[0][10]_i_1_n_0 ;
   wire \Q_reg0[0][11]_i_1_n_0 ;
   wire \Q_reg0[0][12]_i_1_n_0 ;
@@ -122,7 +123,6 @@ module intellight_v2_QA_0_0_QA
   wire [15:0]\Q_reg1_reg[1] ;
   wire [15:0]\Q_reg1_reg[2] ;
   wire [15:0]\Q_reg1_reg[3] ;
-  wire [15:0]Qnew;
   wire [15:0]Qsel;
   wire [15:0]Qsel_reg0;
   wire [15:0]Qsel_reg1;
@@ -211,47 +211,47 @@ module intellight_v2_QA_0_0_QA
   wire x__0_carry_n_1;
   wire x__0_carry_n_2;
   wire x__0_carry_n_3;
+  wire x__45_carry__0_i_1_n_0;
+  wire x__45_carry__0_i_2_n_0;
+  wire x__45_carry__0_i_3_n_0;
+  wire x__45_carry__0_i_4_n_0;
+  wire x__45_carry__0_i_5_n_0;
+  wire x__45_carry__0_i_6_n_0;
+  wire x__45_carry__0_i_7_n_0;
+  wire x__45_carry__0_i_8_n_0;
   wire x__45_carry__0_n_0;
   wire x__45_carry__0_n_1;
   wire x__45_carry__0_n_2;
   wire x__45_carry__0_n_3;
+  wire x__45_carry__1_i_1_n_0;
+  wire x__45_carry__1_i_2_n_0;
+  wire x__45_carry__1_i_3_n_0;
+  wire x__45_carry__1_i_4_n_0;
+  wire x__45_carry__1_i_5_n_0;
+  wire x__45_carry__1_i_6_n_0;
+  wire x__45_carry__1_i_7_n_0;
+  wire x__45_carry__1_i_8_n_0;
   wire x__45_carry__1_n_0;
   wire x__45_carry__1_n_1;
   wire x__45_carry__1_n_2;
   wire x__45_carry__1_n_3;
+  wire x__45_carry__2_i_1_n_0;
+  wire x__45_carry__2_i_2_n_0;
+  wire x__45_carry__2_i_3_n_0;
+  wire x__45_carry__2_i_4_n_0;
+  wire x__45_carry__2_i_5_n_0;
+  wire x__45_carry__2_i_6_n_0;
+  wire x__45_carry__2_i_7_n_0;
   wire x__45_carry__2_n_1;
   wire x__45_carry__2_n_2;
   wire x__45_carry__2_n_3;
-  wire x__45_carry_i_1__0_n_0;
-  wire x__45_carry_i_1__1_n_0;
-  wire x__45_carry_i_1__2_n_0;
   wire x__45_carry_i_1_n_0;
-  wire x__45_carry_i_2__0_n_0;
-  wire x__45_carry_i_2__1_n_0;
-  wire x__45_carry_i_2__2_n_0;
   wire x__45_carry_i_2_n_0;
-  wire x__45_carry_i_3__0_n_0;
-  wire x__45_carry_i_3__1_n_0;
-  wire x__45_carry_i_3__2_n_0;
   wire x__45_carry_i_3_n_0;
-  wire x__45_carry_i_4__0_n_0;
-  wire x__45_carry_i_4__1_n_0;
-  wire x__45_carry_i_4__2_n_0;
   wire x__45_carry_i_4_n_0;
-  wire x__45_carry_i_5__0_n_0;
-  wire x__45_carry_i_5__1_n_0;
-  wire x__45_carry_i_5__2_n_0;
   wire x__45_carry_i_5_n_0;
-  wire x__45_carry_i_6__0_n_0;
-  wire x__45_carry_i_6__1_n_0;
-  wire x__45_carry_i_6__2_n_0;
   wire x__45_carry_i_6_n_0;
-  wire x__45_carry_i_7__0_n_0;
-  wire x__45_carry_i_7__1_n_0;
-  wire x__45_carry_i_7__2_n_0;
   wire x__45_carry_i_7_n_0;
-  wire x__45_carry_i_8__0_n_0;
-  wire x__45_carry_i_8_n_0;
   wire x__45_carry_n_0;
   wire x__45_carry_n_1;
   wire x__45_carry_n_2;
@@ -1674,31 +1674,228 @@ module intellight_v2_QA_0_0_QA
         .CYINIT(1'b0),
         .DI({x__45_carry_i_1_n_0,x__45_carry_i_2_n_0,x__45_carry_i_3_n_0,R_reg0[0]}),
         .O({x[3:1],NLW_x__45_carry_O_UNCONNECTED[0]}),
-        .S({x__45_carry_i_4__2_n_0,x__45_carry_i_5_n_0,x__45_carry_i_6_n_0,x__45_carry_i_7_n_0}));
+        .S({x__45_carry_i_4_n_0,x__45_carry_i_5_n_0,x__45_carry_i_6_n_0,x__45_carry_i_7_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 x__45_carry__0
        (.CI(x__45_carry_n_0),
         .CO({x__45_carry__0_n_0,x__45_carry__0_n_1,x__45_carry__0_n_2,x__45_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({x__45_carry_i_1__0_n_0,x__45_carry_i_2__0_n_0,x__45_carry_i_3__0_n_0,x__45_carry_i_4_n_0}),
+        .DI({x__45_carry__0_i_1_n_0,x__45_carry__0_i_2_n_0,x__45_carry__0_i_3_n_0,x__45_carry__0_i_4_n_0}),
         .O(x[7:4]),
-        .S({x__45_carry_i_5__0_n_0,x__45_carry_i_6__0_n_0,x__45_carry_i_7__0_n_0,x__45_carry_i_8_n_0}));
+        .S({x__45_carry__0_i_5_n_0,x__45_carry__0_i_6_n_0,x__45_carry__0_i_7_n_0,x__45_carry__0_i_8_n_0}));
+  LUT3 #(
+    .INIT(8'hB2)) 
+    x__45_carry__0_i_1
+       (.I0(R_reg0[6]),
+        .I1(Qsel_reg0[6]),
+        .I2(gm[6]),
+        .O(x__45_carry__0_i_1_n_0));
+  LUT3 #(
+    .INIT(8'hB2)) 
+    x__45_carry__0_i_2
+       (.I0(R_reg0[5]),
+        .I1(Qsel_reg0[5]),
+        .I2(gm[5]),
+        .O(x__45_carry__0_i_2_n_0));
+  LUT3 #(
+    .INIT(8'hB2)) 
+    x__45_carry__0_i_3
+       (.I0(R_reg0[4]),
+        .I1(Qsel_reg0[4]),
+        .I2(gm[4]),
+        .O(x__45_carry__0_i_3_n_0));
+  LUT3 #(
+    .INIT(8'hB2)) 
+    x__45_carry__0_i_4
+       (.I0(R_reg0[3]),
+        .I1(Qsel_reg0[3]),
+        .I2(gm[3]),
+        .O(x__45_carry__0_i_4_n_0));
+  LUT6 #(
+    .INIT(64'hB24D4DB24DB2B24D)) 
+    x__45_carry__0_i_5
+       (.I0(gm[6]),
+        .I1(Qsel_reg0[6]),
+        .I2(R_reg0[6]),
+        .I3(R_reg0[7]),
+        .I4(gm[7]),
+        .I5(Qsel_reg0[7]),
+        .O(x__45_carry__0_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hB24D4DB24DB2B24D)) 
+    x__45_carry__0_i_6
+       (.I0(gm[5]),
+        .I1(Qsel_reg0[5]),
+        .I2(R_reg0[5]),
+        .I3(R_reg0[6]),
+        .I4(gm[6]),
+        .I5(Qsel_reg0[6]),
+        .O(x__45_carry__0_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hB24D4DB24DB2B24D)) 
+    x__45_carry__0_i_7
+       (.I0(gm[4]),
+        .I1(Qsel_reg0[4]),
+        .I2(R_reg0[4]),
+        .I3(R_reg0[5]),
+        .I4(gm[5]),
+        .I5(Qsel_reg0[5]),
+        .O(x__45_carry__0_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hB24D4DB24DB2B24D)) 
+    x__45_carry__0_i_8
+       (.I0(gm[3]),
+        .I1(Qsel_reg0[3]),
+        .I2(R_reg0[3]),
+        .I3(R_reg0[4]),
+        .I4(gm[4]),
+        .I5(Qsel_reg0[4]),
+        .O(x__45_carry__0_i_8_n_0));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 x__45_carry__1
        (.CI(x__45_carry__0_n_0),
         .CO({x__45_carry__1_n_0,x__45_carry__1_n_1,x__45_carry__1_n_2,x__45_carry__1_n_3}),
         .CYINIT(1'b0),
-        .DI({x__45_carry_i_1__1_n_0,x__45_carry_i_2__1_n_0,x__45_carry_i_3__1_n_0,x__45_carry_i_4__0_n_0}),
+        .DI({x__45_carry__1_i_1_n_0,x__45_carry__1_i_2_n_0,x__45_carry__1_i_3_n_0,x__45_carry__1_i_4_n_0}),
         .O(x[11:8]),
-        .S({x__45_carry_i_5__1_n_0,x__45_carry_i_6__1_n_0,x__45_carry_i_7__1_n_0,x__45_carry_i_8__0_n_0}));
+        .S({x__45_carry__1_i_5_n_0,x__45_carry__1_i_6_n_0,x__45_carry__1_i_7_n_0,x__45_carry__1_i_8_n_0}));
+  LUT3 #(
+    .INIT(8'hB2)) 
+    x__45_carry__1_i_1
+       (.I0(R_reg0[10]),
+        .I1(Qsel_reg0[10]),
+        .I2(gm[10]),
+        .O(x__45_carry__1_i_1_n_0));
+  LUT3 #(
+    .INIT(8'hB2)) 
+    x__45_carry__1_i_2
+       (.I0(R_reg0[9]),
+        .I1(Qsel_reg0[9]),
+        .I2(gm[9]),
+        .O(x__45_carry__1_i_2_n_0));
+  LUT3 #(
+    .INIT(8'hB2)) 
+    x__45_carry__1_i_3
+       (.I0(R_reg0[8]),
+        .I1(Qsel_reg0[8]),
+        .I2(gm[8]),
+        .O(x__45_carry__1_i_3_n_0));
+  LUT3 #(
+    .INIT(8'hB2)) 
+    x__45_carry__1_i_4
+       (.I0(R_reg0[7]),
+        .I1(Qsel_reg0[7]),
+        .I2(gm[7]),
+        .O(x__45_carry__1_i_4_n_0));
+  LUT6 #(
+    .INIT(64'hB24D4DB24DB2B24D)) 
+    x__45_carry__1_i_5
+       (.I0(gm[10]),
+        .I1(Qsel_reg0[10]),
+        .I2(R_reg0[10]),
+        .I3(R_reg0[11]),
+        .I4(gm[11]),
+        .I5(Qsel_reg0[11]),
+        .O(x__45_carry__1_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hB24D4DB24DB2B24D)) 
+    x__45_carry__1_i_6
+       (.I0(gm[9]),
+        .I1(Qsel_reg0[9]),
+        .I2(R_reg0[9]),
+        .I3(R_reg0[10]),
+        .I4(gm[10]),
+        .I5(Qsel_reg0[10]),
+        .O(x__45_carry__1_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hB24D4DB24DB2B24D)) 
+    x__45_carry__1_i_7
+       (.I0(gm[8]),
+        .I1(Qsel_reg0[8]),
+        .I2(R_reg0[8]),
+        .I3(R_reg0[9]),
+        .I4(gm[9]),
+        .I5(Qsel_reg0[9]),
+        .O(x__45_carry__1_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hB24D4DB24DB2B24D)) 
+    x__45_carry__1_i_8
+       (.I0(gm[7]),
+        .I1(Qsel_reg0[7]),
+        .I2(R_reg0[7]),
+        .I3(R_reg0[8]),
+        .I4(gm[8]),
+        .I5(Qsel_reg0[8]),
+        .O(x__45_carry__1_i_8_n_0));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 x__45_carry__2
        (.CI(x__45_carry__1_n_0),
         .CO({NLW_x__45_carry__2_CO_UNCONNECTED[3],x__45_carry__2_n_1,x__45_carry__2_n_2,x__45_carry__2_n_3}),
         .CYINIT(1'b0),
-        .DI({1'b0,x__45_carry_i_1__2_n_0,x__45_carry_i_2__2_n_0,x__45_carry_i_3__2_n_0}),
+        .DI({1'b0,x__45_carry__2_i_1_n_0,x__45_carry__2_i_2_n_0,x__45_carry__2_i_3_n_0}),
         .O(x[15:12]),
-        .S({x__45_carry_i_4__1_n_0,x__45_carry_i_5__2_n_0,x__45_carry_i_6__2_n_0,x__45_carry_i_7__2_n_0}));
+        .S({x__45_carry__2_i_4_n_0,x__45_carry__2_i_5_n_0,x__45_carry__2_i_6_n_0,x__45_carry__2_i_7_n_0}));
+  LUT3 #(
+    .INIT(8'hB2)) 
+    x__45_carry__2_i_1
+       (.I0(R_reg0[13]),
+        .I1(Qsel_reg0[13]),
+        .I2(gm[13]),
+        .O(x__45_carry__2_i_1_n_0));
+  LUT3 #(
+    .INIT(8'hB2)) 
+    x__45_carry__2_i_2
+       (.I0(R_reg0[12]),
+        .I1(Qsel_reg0[12]),
+        .I2(gm[12]),
+        .O(x__45_carry__2_i_2_n_0));
+  LUT3 #(
+    .INIT(8'hB2)) 
+    x__45_carry__2_i_3
+       (.I0(R_reg0[11]),
+        .I1(Qsel_reg0[11]),
+        .I2(gm[11]),
+        .O(x__45_carry__2_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h8E71718E718E8E71)) 
+    x__45_carry__2_i_4
+       (.I0(R_reg0[14]),
+        .I1(gm[14]),
+        .I2(Qsel_reg0[14]),
+        .I3(R_reg0[15]),
+        .I4(gm[15]),
+        .I5(Qsel_reg0[15]),
+        .O(x__45_carry__2_i_4_n_0));
+  LUT6 #(
+    .INIT(64'hB24D4DB24DB2B24D)) 
+    x__45_carry__2_i_5
+       (.I0(gm[13]),
+        .I1(Qsel_reg0[13]),
+        .I2(R_reg0[13]),
+        .I3(R_reg0[14]),
+        .I4(gm[14]),
+        .I5(Qsel_reg0[14]),
+        .O(x__45_carry__2_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hB24D4DB24DB2B24D)) 
+    x__45_carry__2_i_6
+       (.I0(gm[12]),
+        .I1(Qsel_reg0[12]),
+        .I2(R_reg0[12]),
+        .I3(R_reg0[13]),
+        .I4(gm[13]),
+        .I5(Qsel_reg0[13]),
+        .O(x__45_carry__2_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hB24D4DB24DB2B24D)) 
+    x__45_carry__2_i_7
+       (.I0(gm[11]),
+        .I1(Qsel_reg0[11]),
+        .I2(R_reg0[11]),
+        .I3(R_reg0[12]),
+        .I4(gm[12]),
+        .I5(Qsel_reg0[12]),
+        .O(x__45_carry__2_i_7_n_0));
   LUT3 #(
     .INIT(8'hB2)) 
     x__45_carry_i_1
@@ -1708,114 +1905,27 @@ module intellight_v2_QA_0_0_QA
         .O(x__45_carry_i_1_n_0));
   LUT3 #(
     .INIT(8'hB2)) 
-    x__45_carry_i_1__0
-       (.I0(R_reg0[6]),
-        .I1(Qsel_reg0[6]),
-        .I2(gm[6]),
-        .O(x__45_carry_i_1__0_n_0));
-  LUT3 #(
-    .INIT(8'hB2)) 
-    x__45_carry_i_1__1
-       (.I0(R_reg0[10]),
-        .I1(Qsel_reg0[10]),
-        .I2(gm[10]),
-        .O(x__45_carry_i_1__1_n_0));
-  LUT3 #(
-    .INIT(8'hB2)) 
-    x__45_carry_i_1__2
-       (.I0(R_reg0[13]),
-        .I1(Qsel_reg0[13]),
-        .I2(gm[13]),
-        .O(x__45_carry_i_1__2_n_0));
-  LUT3 #(
-    .INIT(8'hB2)) 
     x__45_carry_i_2
        (.I0(R_reg0[1]),
         .I1(Qsel_reg0[1]),
         .I2(gm[1]),
         .O(x__45_carry_i_2_n_0));
-  LUT3 #(
-    .INIT(8'hB2)) 
-    x__45_carry_i_2__0
-       (.I0(R_reg0[5]),
-        .I1(Qsel_reg0[5]),
-        .I2(gm[5]),
-        .O(x__45_carry_i_2__0_n_0));
-  LUT3 #(
-    .INIT(8'hB2)) 
-    x__45_carry_i_2__1
-       (.I0(R_reg0[9]),
-        .I1(Qsel_reg0[9]),
-        .I2(gm[9]),
-        .O(x__45_carry_i_2__1_n_0));
-  LUT3 #(
-    .INIT(8'hB2)) 
-    x__45_carry_i_2__2
-       (.I0(R_reg0[12]),
-        .I1(Qsel_reg0[12]),
-        .I2(gm[12]),
-        .O(x__45_carry_i_2__2_n_0));
   LUT2 #(
     .INIT(4'hB)) 
     x__45_carry_i_3
        (.I0(gm[0]),
         .I1(Qsel_reg0[0]),
         .O(x__45_carry_i_3_n_0));
-  LUT3 #(
-    .INIT(8'hB2)) 
-    x__45_carry_i_3__0
-       (.I0(R_reg0[4]),
-        .I1(Qsel_reg0[4]),
-        .I2(gm[4]),
-        .O(x__45_carry_i_3__0_n_0));
-  LUT3 #(
-    .INIT(8'hB2)) 
-    x__45_carry_i_3__1
-       (.I0(R_reg0[8]),
-        .I1(Qsel_reg0[8]),
-        .I2(gm[8]),
-        .O(x__45_carry_i_3__1_n_0));
-  LUT3 #(
-    .INIT(8'hB2)) 
-    x__45_carry_i_3__2
-       (.I0(R_reg0[11]),
-        .I1(Qsel_reg0[11]),
-        .I2(gm[11]),
-        .O(x__45_carry_i_3__2_n_0));
-  LUT3 #(
-    .INIT(8'hB2)) 
-    x__45_carry_i_4
-       (.I0(R_reg0[3]),
-        .I1(Qsel_reg0[3]),
-        .I2(gm[3]),
-        .O(x__45_carry_i_4_n_0));
-  LUT3 #(
-    .INIT(8'hB2)) 
-    x__45_carry_i_4__0
-       (.I0(R_reg0[7]),
-        .I1(Qsel_reg0[7]),
-        .I2(gm[7]),
-        .O(x__45_carry_i_4__0_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    x__45_carry_i_4__1
-       (.I0(R_reg0[14]),
-        .I1(gm[14]),
-        .I2(Qsel_reg0[14]),
-        .I3(R_reg0[15]),
-        .I4(gm[15]),
-        .I5(Qsel_reg0[15]),
-        .O(x__45_carry_i_4__1_n_0));
   LUT6 #(
     .INIT(64'hB24D4DB24DB2B24D)) 
-    x__45_carry_i_4__2
+    x__45_carry_i_4
        (.I0(gm[2]),
         .I1(Qsel_reg0[2]),
         .I2(R_reg0[2]),
         .I3(R_reg0[3]),
         .I4(gm[3]),
         .I5(Qsel_reg0[3]),
-        .O(x__45_carry_i_4__2_n_0));
+        .O(x__45_carry_i_4_n_0));
   LUT6 #(
     .INIT(64'hB24D4DB24DB2B24D)) 
     x__45_carry_i_5
@@ -1826,36 +1936,6 @@ module intellight_v2_QA_0_0_QA
         .I4(gm[2]),
         .I5(Qsel_reg0[2]),
         .O(x__45_carry_i_5_n_0));
-  LUT6 #(
-    .INIT(64'hB24D4DB24DB2B24D)) 
-    x__45_carry_i_5__0
-       (.I0(gm[6]),
-        .I1(Qsel_reg0[6]),
-        .I2(R_reg0[6]),
-        .I3(R_reg0[7]),
-        .I4(gm[7]),
-        .I5(Qsel_reg0[7]),
-        .O(x__45_carry_i_5__0_n_0));
-  LUT6 #(
-    .INIT(64'hB24D4DB24DB2B24D)) 
-    x__45_carry_i_5__1
-       (.I0(gm[10]),
-        .I1(Qsel_reg0[10]),
-        .I2(R_reg0[10]),
-        .I3(R_reg0[11]),
-        .I4(gm[11]),
-        .I5(Qsel_reg0[11]),
-        .O(x__45_carry_i_5__1_n_0));
-  LUT6 #(
-    .INIT(64'hB24D4DB24DB2B24D)) 
-    x__45_carry_i_5__2
-       (.I0(gm[13]),
-        .I1(Qsel_reg0[13]),
-        .I2(R_reg0[13]),
-        .I3(R_reg0[14]),
-        .I4(gm[14]),
-        .I5(Qsel_reg0[14]),
-        .O(x__45_carry_i_5__2_n_0));
   LUT5 #(
     .INIT(32'hD22D2DD2)) 
     x__45_carry_i_6
@@ -1865,36 +1945,6 @@ module intellight_v2_QA_0_0_QA
         .I3(gm[1]),
         .I4(Qsel_reg0[1]),
         .O(x__45_carry_i_6_n_0));
-  LUT6 #(
-    .INIT(64'hB24D4DB24DB2B24D)) 
-    x__45_carry_i_6__0
-       (.I0(gm[5]),
-        .I1(Qsel_reg0[5]),
-        .I2(R_reg0[5]),
-        .I3(R_reg0[6]),
-        .I4(gm[6]),
-        .I5(Qsel_reg0[6]),
-        .O(x__45_carry_i_6__0_n_0));
-  LUT6 #(
-    .INIT(64'hB24D4DB24DB2B24D)) 
-    x__45_carry_i_6__1
-       (.I0(gm[9]),
-        .I1(Qsel_reg0[9]),
-        .I2(R_reg0[9]),
-        .I3(R_reg0[10]),
-        .I4(gm[10]),
-        .I5(Qsel_reg0[10]),
-        .O(x__45_carry_i_6__1_n_0));
-  LUT6 #(
-    .INIT(64'hB24D4DB24DB2B24D)) 
-    x__45_carry_i_6__2
-       (.I0(gm[12]),
-        .I1(Qsel_reg0[12]),
-        .I2(R_reg0[12]),
-        .I3(R_reg0[13]),
-        .I4(gm[13]),
-        .I5(Qsel_reg0[13]),
-        .O(x__45_carry_i_6__2_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     x__45_carry_i_7
@@ -1902,56 +1952,6 @@ module intellight_v2_QA_0_0_QA
         .I1(gm[0]),
         .I2(R_reg0[0]),
         .O(x__45_carry_i_7_n_0));
-  LUT6 #(
-    .INIT(64'hB24D4DB24DB2B24D)) 
-    x__45_carry_i_7__0
-       (.I0(gm[4]),
-        .I1(Qsel_reg0[4]),
-        .I2(R_reg0[4]),
-        .I3(R_reg0[5]),
-        .I4(gm[5]),
-        .I5(Qsel_reg0[5]),
-        .O(x__45_carry_i_7__0_n_0));
-  LUT6 #(
-    .INIT(64'hB24D4DB24DB2B24D)) 
-    x__45_carry_i_7__1
-       (.I0(gm[8]),
-        .I1(Qsel_reg0[8]),
-        .I2(R_reg0[8]),
-        .I3(R_reg0[9]),
-        .I4(gm[9]),
-        .I5(Qsel_reg0[9]),
-        .O(x__45_carry_i_7__1_n_0));
-  LUT6 #(
-    .INIT(64'hB24D4DB24DB2B24D)) 
-    x__45_carry_i_7__2
-       (.I0(gm[11]),
-        .I1(Qsel_reg0[11]),
-        .I2(R_reg0[11]),
-        .I3(R_reg0[12]),
-        .I4(gm[12]),
-        .I5(Qsel_reg0[12]),
-        .O(x__45_carry_i_7__2_n_0));
-  LUT6 #(
-    .INIT(64'hB24D4DB24DB2B24D)) 
-    x__45_carry_i_8
-       (.I0(gm[3]),
-        .I1(Qsel_reg0[3]),
-        .I2(R_reg0[3]),
-        .I3(R_reg0[4]),
-        .I4(gm[4]),
-        .I5(Qsel_reg0[4]),
-        .O(x__45_carry_i_8_n_0));
-  LUT6 #(
-    .INIT(64'hB24D4DB24DB2B24D)) 
-    x__45_carry_i_8__0
-       (.I0(gm[7]),
-        .I1(Qsel_reg0[7]),
-        .I2(R_reg0[7]),
-        .I3(R_reg0[8]),
-        .I4(gm[8]),
-        .I5(Qsel_reg0[8]),
-        .O(x__45_carry_i_8__0_n_0));
   FDRE \x_reg0_reg[10] 
        (.C(clk),
         .CE(1'b1),
@@ -2048,7 +2048,7 @@ module intellight_v2_QA_0_0_QA
         .CO({y_carry_n_0,y_carry_n_1,y_carry_n_2,y_carry_n_3}),
         .CYINIT(1'b1),
         .DI(Qsel_reg1[3:0]),
-        .O(Qnew[3:0]),
+        .O(Q_new[3:0]),
         .S({mul1_n_12,mul1_n_13,mul1_n_14,mul1_n_15}));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 y_carry__0
@@ -2056,7 +2056,7 @@ module intellight_v2_QA_0_0_QA
         .CO({y_carry__0_n_0,y_carry__0_n_1,y_carry__0_n_2,y_carry__0_n_3}),
         .CYINIT(1'b0),
         .DI(Qsel_reg1[7:4]),
-        .O(Qnew[7:4]),
+        .O(Q_new[7:4]),
         .S({mul1_n_8,mul1_n_9,mul1_n_10,mul1_n_11}));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 y_carry__1
@@ -2064,7 +2064,7 @@ module intellight_v2_QA_0_0_QA
         .CO({y_carry__1_n_0,y_carry__1_n_1,y_carry__1_n_2,y_carry__1_n_3}),
         .CYINIT(1'b0),
         .DI(Qsel_reg1[11:8]),
-        .O(Qnew[11:8]),
+        .O(Q_new[11:8]),
         .S({mul1_n_4,mul1_n_5,mul1_n_6,mul1_n_7}));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 y_carry__2
@@ -2072,7 +2072,7 @@ module intellight_v2_QA_0_0_QA
         .CO({NLW_y_carry__2_CO_UNCONNECTED[3],y_carry__2_n_1,y_carry__2_n_2,y_carry__2_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,Qsel_reg1[14:12]}),
-        .O(Qnew[15:12]),
+        .O(Q_new[15:12]),
         .S({mul1_n_0,mul1_n_1,mul1_n_2,mul1_n_3}));
 endmodule
 
@@ -4460,97 +4460,97 @@ module intellight_v2_QA_0_0_multiply
         .O(w4__0_carry_i_9_n_0));
   LUT2 #(
     .INIT(4'h9)) 
-    y_carry_i_1
-       (.I0(ap[15]),
-        .I1(Qsel_reg1[15]),
-        .O(S[3]));
-  LUT2 #(
-    .INIT(4'h9)) 
-    y_carry_i_1__0
-       (.I0(Qsel_reg1[11]),
-        .I1(ap[11]),
-        .O(\Qsel_reg1_reg[11] [3]));
-  LUT2 #(
-    .INIT(4'h9)) 
-    y_carry_i_1__1
+    y_carry__0_i_1
        (.I0(Qsel_reg1[7]),
         .I1(ap[7]),
         .O(\Qsel_reg1_reg[7] [3]));
   LUT2 #(
     .INIT(4'h9)) 
-    y_carry_i_1__2
+    y_carry__0_i_2
+       (.I0(Qsel_reg1[6]),
+        .I1(ap[6]),
+        .O(\Qsel_reg1_reg[7] [2]));
+  LUT2 #(
+    .INIT(4'h9)) 
+    y_carry__0_i_3
+       (.I0(Qsel_reg1[5]),
+        .I1(ap[5]),
+        .O(\Qsel_reg1_reg[7] [1]));
+  LUT2 #(
+    .INIT(4'h9)) 
+    y_carry__0_i_4
+       (.I0(Qsel_reg1[4]),
+        .I1(ap[4]),
+        .O(\Qsel_reg1_reg[7] [0]));
+  LUT2 #(
+    .INIT(4'h9)) 
+    y_carry__1_i_1
+       (.I0(Qsel_reg1[11]),
+        .I1(ap[11]),
+        .O(\Qsel_reg1_reg[11] [3]));
+  LUT2 #(
+    .INIT(4'h9)) 
+    y_carry__1_i_2
+       (.I0(Qsel_reg1[10]),
+        .I1(ap[10]),
+        .O(\Qsel_reg1_reg[11] [2]));
+  LUT2 #(
+    .INIT(4'h9)) 
+    y_carry__1_i_3
+       (.I0(Qsel_reg1[9]),
+        .I1(ap[9]),
+        .O(\Qsel_reg1_reg[11] [1]));
+  LUT2 #(
+    .INIT(4'h9)) 
+    y_carry__1_i_4
+       (.I0(Qsel_reg1[8]),
+        .I1(ap[8]),
+        .O(\Qsel_reg1_reg[11] [0]));
+  LUT2 #(
+    .INIT(4'h9)) 
+    y_carry__2_i_1
+       (.I0(ap[15]),
+        .I1(Qsel_reg1[15]),
+        .O(S[3]));
+  LUT2 #(
+    .INIT(4'h9)) 
+    y_carry__2_i_2
+       (.I0(Qsel_reg1[14]),
+        .I1(ap[14]),
+        .O(S[2]));
+  LUT2 #(
+    .INIT(4'h9)) 
+    y_carry__2_i_3
+       (.I0(Qsel_reg1[13]),
+        .I1(ap[13]),
+        .O(S[1]));
+  LUT2 #(
+    .INIT(4'h9)) 
+    y_carry__2_i_4
+       (.I0(Qsel_reg1[12]),
+        .I1(ap[12]),
+        .O(S[0]));
+  LUT2 #(
+    .INIT(4'h9)) 
+    y_carry_i_1
        (.I0(Qsel_reg1[3]),
         .I1(ap[3]),
         .O(\Qsel_reg1_reg[3] [3]));
   LUT2 #(
     .INIT(4'h9)) 
     y_carry_i_2
-       (.I0(Qsel_reg1[14]),
-        .I1(ap[14]),
-        .O(S[2]));
-  LUT2 #(
-    .INIT(4'h9)) 
-    y_carry_i_2__0
-       (.I0(Qsel_reg1[10]),
-        .I1(ap[10]),
-        .O(\Qsel_reg1_reg[11] [2]));
-  LUT2 #(
-    .INIT(4'h9)) 
-    y_carry_i_2__1
-       (.I0(Qsel_reg1[6]),
-        .I1(ap[6]),
-        .O(\Qsel_reg1_reg[7] [2]));
-  LUT2 #(
-    .INIT(4'h9)) 
-    y_carry_i_2__2
        (.I0(Qsel_reg1[2]),
         .I1(ap[2]),
         .O(\Qsel_reg1_reg[3] [2]));
   LUT2 #(
     .INIT(4'h9)) 
     y_carry_i_3
-       (.I0(Qsel_reg1[13]),
-        .I1(ap[13]),
-        .O(S[1]));
-  LUT2 #(
-    .INIT(4'h9)) 
-    y_carry_i_3__0
-       (.I0(Qsel_reg1[9]),
-        .I1(ap[9]),
-        .O(\Qsel_reg1_reg[11] [1]));
-  LUT2 #(
-    .INIT(4'h9)) 
-    y_carry_i_3__1
-       (.I0(Qsel_reg1[5]),
-        .I1(ap[5]),
-        .O(\Qsel_reg1_reg[7] [1]));
-  LUT2 #(
-    .INIT(4'h9)) 
-    y_carry_i_3__2
        (.I0(Qsel_reg1[1]),
         .I1(ap[1]),
         .O(\Qsel_reg1_reg[3] [1]));
   LUT2 #(
     .INIT(4'h9)) 
     y_carry_i_4
-       (.I0(Qsel_reg1[12]),
-        .I1(ap[12]),
-        .O(S[0]));
-  LUT2 #(
-    .INIT(4'h9)) 
-    y_carry_i_4__0
-       (.I0(Qsel_reg1[8]),
-        .I1(ap[8]),
-        .O(\Qsel_reg1_reg[11] [0]));
-  LUT2 #(
-    .INIT(4'h9)) 
-    y_carry_i_4__1
-       (.I0(Qsel_reg1[4]),
-        .I1(ap[4]),
-        .O(\Qsel_reg1_reg[7] [0]));
-  LUT2 #(
-    .INIT(4'h9)) 
-    y_carry_i_4__2
        (.I0(Qsel_reg1[0]),
         .I1(ap[0]),
         .O(\Qsel_reg1_reg[3] [0]));

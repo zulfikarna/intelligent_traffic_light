@@ -115,10 +115,10 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../optimized_intellight_v2.ge
 "../../../bd/intellight_v2/ip/intellight_v2_PG_0_0/sim/intellight_v2_PG_0_0.v" \
 "../../../bd/intellight_v2/ip/intellight_v2_MOI_0_0/sim/intellight_v2_MOI_0_0.v" \
 "../../../bd/intellight_v2/ip/intellight_v2_action_ram_wrapper_0_0/sim/intellight_v2_action_ram_wrapper_0_0.v" \
+"../../../bd/intellight_v2/ip/intellight_v2_MII_0_0/sim/intellight_v2_MII_0_0.v" \
 "../../../bd/intellight_v2/ipshared/f107/hdl/intellight_database_v1_0_S00_AXI.v" \
 "../../../bd/intellight_v2/ipshared/f107/hdl/intellight_database_v1_0.v" \
 "../../../bd/intellight_v2/ip/intellight_v2_intellight_database_0_0/sim/intellight_v2_intellight_database_0_0.v" \
-"../../../bd/intellight_v2/ip/intellight_v2_MII_0_0/sim/intellight_v2_MII_0_0.v" \
 
 vlog -work axi_protocol_converter_v2_1_26  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
 "../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/90c8/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
