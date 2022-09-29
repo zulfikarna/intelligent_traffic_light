@@ -1,7 +1,7 @@
 set_property SRC_FILE_INFO {cfile:d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_processing_system7_0_1/intellight_v2_processing_system7_0_1.xdc rfile:../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_processing_system7_0_1/intellight_v2_processing_system7_0_1.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
 current_instance inst
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
-set_input_jitter clk_fpga_0 0.3
+set_input_jitter clk_fpga_0 0.51
 set_property src_info {type:SCOPED_XDC file:1 line:31 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN "C11" [get_ports "MIO[53]"]
 set_property src_info {type:SCOPED_XDC file:1 line:38 export:INPUT save:INPUT read:READ} [current_design]

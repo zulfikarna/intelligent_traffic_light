@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:intellight_database:1.0
-// IP Revision: 3
+// IP Revision: 2
 
 (* X_CORE_INFO = "intellight_database_v1_0,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "intellight_v2_intellight_database_0_0,intellight_database_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "intellight_v2_intellight_database_0_0,intellight_database_v1_0,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=intellight_database,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=6,Q_WIDTH=16}" *)
+(* CORE_GENERATION_INFO = "intellight_v2_intellight_database_0_0,intellight_database_v1_0,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=intellight_database,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=7,Q_WIDTH=16,S_WIDTH=12}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module intellight_v2_intellight_database_0_0 (
   mode,
@@ -111,7 +111,7 @@ output wire [2 : 0] gamma;
 output wire [15 : 0] max_step;
 output wire [15 : 0] max_episode;
 output wire [15 : 0] seed;
-output wire [15 : 0] S_sim;
+output wire [11 : 0] S_sim;
 output wire [15 : 0] L_inc;
 output wire [15 : 0] L_dec;
 input wire [15 : 0] Q_00;
@@ -130,14 +130,14 @@ input wire [15 : 0] Q_30;
 input wire [15 : 0] Q_31;
 input wire [15 : 0] Q_32;
 input wire [15 : 0] Q_33;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 58823528, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *)
 input wire s00_axi_aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *)
 input wire s00_axi_aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
-input wire [5 : 0] s00_axi_awaddr;
+input wire [6 : 0] s00_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *)
 input wire [2 : 0] s00_axi_awprot;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *)
@@ -159,7 +159,7 @@ output wire s00_axi_bvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *)
 input wire s00_axi_bready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *)
-input wire [5 : 0] s00_axi_araddr;
+input wire [6 : 0] s00_axi_araddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT" *)
 input wire [2 : 0] s00_axi_arprot;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *)
@@ -172,15 +172,16 @@ output wire [31 : 0] s00_axi_rdata;
 output wire [1 : 0] s00_axi_rresp;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *)
 output wire s00_axi_rvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 16, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 6, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN intellight_v2_processing\
-_system7_0_1_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 32, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 58823528, ID_WIDTH 0, ADDR_WIDTH 7, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_\
+system7_0_1_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *)
 input wire s00_axi_rready;
 
   intellight_database_v1_0 #(
     .C_S00_AXI_DATA_WIDTH(32),  // Width of S_AXI data bus
-    .C_S00_AXI_ADDR_WIDTH(6),  // Width of S_AXI address bus
-    .Q_WIDTH(16)
+    .C_S00_AXI_ADDR_WIDTH(7),  // Width of S_AXI address bus
+    .Q_WIDTH(16),
+    .S_WIDTH(12)
   ) inst (
     .mode(mode),
     .run(run),

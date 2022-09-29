@@ -66,10 +66,10 @@ module intellight_v2_MII_0_0 (
   WR_ADDR,
   Dnew,
   wen_bram,
-  en0,
-  en1,
-  en2,
-  en3,
+  wen0,
+  wen1,
+  wen2,
+  wen3,
   A_reg0,
   A_reg1,
   A_reg2,
@@ -78,7 +78,7 @@ module intellight_v2_MII_0_0 (
   A_reg5
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 58823528, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
@@ -92,10 +92,10 @@ output wire [31 : 0] RD_ADDR;
 output wire [31 : 0] WR_ADDR;
 output wire [63 : 0] Dnew;
 output wire [7 : 0] wen_bram;
-output wire en0;
-output wire en1;
-output wire en2;
-output wire en3;
+output wire wen0;
+output wire wen1;
+output wire wen2;
+output wire wen3;
 output wire [3 : 0] A_reg0;
 output wire [3 : 0] A_reg1;
 output wire [3 : 0] A_reg2;
@@ -120,10 +120,10 @@ output wire [3 : 0] A_reg5;
     .WR_ADDR(WR_ADDR),
     .Dnew(Dnew),
     .wen_bram(wen_bram),
-    .en0(en0),
-    .en1(en1),
-    .en2(en2),
-    .en3(en3),
+    .wen0(wen0),
+    .wen1(wen1),
+    .wen2(wen2),
+    .wen3(wen3),
     .A_reg0(A_reg0),
     .A_reg1(A_reg1),
     .A_reg2(A_reg2),

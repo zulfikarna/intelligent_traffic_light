@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Sep 29 09:40:17 2022
+# Process ID: 14580
+# Current directory: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_MOI_0_0_synth_1
+# Command line: vivado.exe -log intellight_v2_MOI_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source intellight_v2_MOI_0_0.tcl
+# Log file: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_MOI_0_0_synth_1/intellight_v2_MOI_0_0.vds
+# Journal file: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_MOI_0_0_synth_1\vivado.jou
+# Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
+#-----------------------------------------------------------
+source intellight_v2_MOI_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 865.730 ; gain = 99.141
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/ip 
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP intellight_v2_MOI_0_0, cache-ID = 4637023d8e56627a.
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 29 09:40:50 2022...

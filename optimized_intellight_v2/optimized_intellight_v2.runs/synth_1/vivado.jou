@@ -2,12 +2,12 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Fri Sep 23 14:34:31 2022
-# Process ID: 6968
+# Start of session at: Thu Sep 29 14:39:17 2022
+# Process ID: 8288
 # Current directory: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1
-# Command line: vivado.exe -log PG.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PG.tcl
-# Log file: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/PG.vds
+# Command line: vivado.exe -log intellight_v2_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source intellight_v2_wrapper.tcl
+# Log file: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1/intellight_v2_wrapper.vds
 # Journal file: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/synth_1\vivado.jou
 # Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
 #-----------------------------------------------------------
-source PG.tcl -notrace
+source intellight_v2_wrapper.tcl -notrace

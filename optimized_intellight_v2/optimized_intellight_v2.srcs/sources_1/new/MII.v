@@ -25,7 +25,7 @@ module MII
     output reg [ADDR_WIDTH-1:0] WR_ADDR,
     output wire[Q_WIDTH*4-1:0] Dnew,
     output reg [WEN_WIDTH-1:0] wen_bram,
-    output reg en0, en1, en2, en3,
+    output reg wen0, wen1, wen2, wen3,
     output wire [A_WIDTH-1:0] A_reg0, A_reg1, A_reg2, A_reg3, A_reg4, A_reg5
     );
     
@@ -59,19 +59,19 @@ module MII
     
     // 3. Write-Enable Configuration
     wire [WEN_WIDTH-1:0] wen_bram_temp;
-    wen_decoder decod0(.A(A_reg[1]), .en(wen_cu), .mode(mode), .wen(wen_bram_temp));
+    wen_decoder decod0(.A(A_reg[1]), .en(wen_cu), .wen(wen_bram_temp));
     always @(posedge clk) begin
         wen_bram <= wen_bram_temp;   
     end
     
     // 4. Enable Configuration 
-    wire en0_temp, en1_temp, en2_temp, en3_temp;
-    en_decoder  decod1(.A(A_reg[1]), .en(wen_cu), .en0(en0_temp), .en1(en1_temp), .en2(en2_temp), .en3(en3_temp));
+    wire wen0_temp, wen1_temp, wen2_temp, wen3_temp;
+    en_decoder  decod1(.A(A_reg[1]), .wen(wen_cu), .wen0(wen0_temp), .wen1(wen1_temp), .wen2(wen2_temp), .wen3(wen3_temp));
     always @(posedge clk) begin
-        en0 <= en0_temp;
-        en1 <= en1_temp;
-        en2 <= en2_temp;
-        en3 <= en3_temp;
+        wen0 <= wen0_temp;
+        wen1 <= wen1_temp;
+        wen2 <= wen2_temp;
+        wen3 <= wen3_temp;
     end
     
     // 5. Data Configuration 
@@ -104,14 +104,14 @@ endmodule
 module en_decoder
 #(  parameter A_WIDTH = 4)
 (
-    input wire en,
+    input wire wen,
     input wire  [A_WIDTH-1:0] A,
-    output wire en0, en1, en2, en3
+    output wire wen0, wen1, wen2, wen3
     );
-    assign en0 = (A[A_WIDTH-1:A_WIDTH/2]==2'd0)&(en);
-    assign en1 = (A[A_WIDTH-1:A_WIDTH/2]==2'd1)&(en);
-    assign en2 = (A[A_WIDTH-1:A_WIDTH/2]==2'd2)&(en);
-    assign en3 = (A[A_WIDTH-1:A_WIDTH/2]==2'd3)&(en);
+    assign wen0 = (A[A_WIDTH-1:A_WIDTH/2]==2'd0)&(wen);
+    assign wen1 = (A[A_WIDTH-1:A_WIDTH/2]==2'd1)&(wen);
+    assign wen2 = (A[A_WIDTH-1:A_WIDTH/2]==2'd2)&(wen);
+    assign wen3 = (A[A_WIDTH-1:A_WIDTH/2]==2'd3)&(wen);
 endmodule
 
 module data_config

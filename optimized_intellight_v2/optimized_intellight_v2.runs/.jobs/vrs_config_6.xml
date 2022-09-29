@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="intellight_v2_rst_ps7_0_100M_0_synth_1" LaunchDir="D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="intellight_v2_xbar_0_synth_1" LaunchDir="D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="intellight_v2_MII_0_0_synth_1" LaunchDir="D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_MII_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="intellight_v2_MOI_0_0_synth_1" LaunchDir="D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_MOI_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="intellight_v2_intellight_database_0_0_synth_1" LaunchDir="D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_intellight_database_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="intellight_v2_action_ram_wrapper_0_0_synth_1" LaunchDir="D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_action_ram_wrapper_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="intellight_v2_auto_pc_0_synth_1" LaunchDir="D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

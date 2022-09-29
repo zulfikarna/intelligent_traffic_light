@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Sep 29 10:08:12 2022
+# Process ID: 5284
+# Current directory: D:/intelligent_traffic_light/optimized_intellight_v2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1700 D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.xpr
+# Log file: D:/intelligent_traffic_light/optimized_intellight_v2/vivado.log
+# Journal file: D:/intelligent_traffic_light/optimized_intellight_v2\vivado.jou
+# Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+reset_run synth_1
+reset_run synth_1
+reset_run synth_1
+reset_run synth_1
+reset_run synth_1
+reset_run synth_1
+reset_run synth_1
+reset_run synth_1
+reset_run synth_1
+reset_run synth_1
+reset_run synth_1 -prev_step 
+set_property AUTO_INCREMENTAL_CHECKPOINT.DIRECTORY D:/intelligent_traffic_light/optimized_intellight_v2 [get_runs synth_1]
+set_property AUTO_INCREMENTAL_CHECKPOINT.DIRECTORY D:/intelligent_traffic_light/optimized_intellight_v2/synth_1 [get_runs synth_1]

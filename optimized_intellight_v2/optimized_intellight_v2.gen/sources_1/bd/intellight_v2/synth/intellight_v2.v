@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Wed Sep 28 13:49:08 2022
+//Date        : Thu Sep 29 14:37:29 2022
 //Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 //Command     : generate_target intellight_v2.bd
 //Design      : intellight_v2
@@ -32,7 +32,11 @@ module intellight_v2
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    idle);
+    idle,
+    wen0,
+    wen1,
+    wen2,
+    wen3);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -55,6 +59,10 @@ module intellight_v2
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
   output idle;
+  output wen0;
+  output wen1;
+  output wen2;
+  output wen3;
 
   wire [3:0]CU_0_A_rand;
   wire CU_0_A_sel;
@@ -79,6 +87,12 @@ module intellight_v2
   wire [15:0]MOI_0_Q_13;
   wire [15:0]MOI_0_Q_20;
   wire [15:0]MOI_0_Q_21;
+  wire [15:0]MOI_0_Q_22;
+  wire [15:0]MOI_0_Q_23;
+  wire [15:0]MOI_0_Q_30;
+  wire [15:0]MOI_0_Q_31;
+  wire [15:0]MOI_0_Q_32;
+  wire [15:0]MOI_0_Q_33;
   wire [3:0]PG_0_A;
   wire [1:0]PG_0_A_road;
   wire [15:0]QA_0_Qnew;
@@ -96,7 +110,7 @@ module intellight_v2
   wire clk_wiz_clk_out1;
   wire [15:0]intellight_database_0_L_dec;
   wire [15:0]intellight_database_0_L_inc;
-  wire [15:0]intellight_database_0_S_sim;
+  wire [11:0]intellight_database_0_S_sim;
   wire [2:0]intellight_database_0_alpha;
   wire [2:0]intellight_database_0_gamma;
   wire [15:0]intellight_database_0_max_episode;
@@ -204,6 +218,10 @@ module intellight_v2
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn1;
 
   assign idle = CU_0_idle;
+  assign wen0 = MII_0_en0;
+  assign wen1 = MII_0_en1;
+  assign wen2 = MII_0_en2;
+  assign wen3 = MII_0_en3;
   intellight_v2_CU_0_0 CU_0
        (.A_rand(CU_0_A_rand),
         .A_sel(CU_0_A_sel),
@@ -225,11 +243,11 @@ module intellight_v2
         .S(SD_0_S),
         .WR_ADDR(MII_0_WR_ADDR),
         .clk(clk_wiz_clk_out1),
-        .en0(MII_0_en0),
-        .en1(MII_0_en1),
-        .en2(MII_0_en2),
-        .en3(MII_0_en3),
         .rst(rst_ps7_0_100M_peripheral_aresetn),
+        .wen0(MII_0_en0),
+        .wen1(MII_0_en1),
+        .wen2(MII_0_en2),
+        .wen3(MII_0_en3),
         .wen_bram(MII_0_wen_bram),
         .wen_cu(CU_0_wen));
   intellight_v2_MOI_0_0 MOI_0
@@ -246,7 +264,13 @@ module intellight_v2
         .Q_12(MOI_0_Q_12),
         .Q_13(MOI_0_Q_13),
         .Q_20(MOI_0_Q_20),
-        .Q_21(MOI_0_Q_21));
+        .Q_21(MOI_0_Q_21),
+        .Q_22(MOI_0_Q_22),
+        .Q_23(MOI_0_Q_23),
+        .Q_30(MOI_0_Q_30),
+        .Q_31(MOI_0_Q_31),
+        .Q_32(MOI_0_Q_32),
+        .Q_33(MOI_0_Q_33));
   intellight_v2_PG_0_0 PG_0
        (.A(PG_0_A),
         .A_rand(CU_0_A_rand),
@@ -289,7 +313,7 @@ module intellight_v2
         .L_dec(intellight_database_0_L_dec),
         .L_inc(intellight_database_0_L_inc),
         .S(SD_0_S),
-        .S_sim(intellight_database_0_S_sim[11:0]),
+        .S_sim(intellight_database_0_S_sim),
         .clk(clk_wiz_clk_out1),
         .mode(intellight_database_0_mode),
         .rst(rst_ps7_0_100M_peripheral_aresetn));
@@ -343,12 +367,12 @@ module intellight_v2
         .Q_13(MOI_0_Q_13),
         .Q_20(MOI_0_Q_20),
         .Q_21(MOI_0_Q_21),
-        .Q_22({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .Q_23({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .Q_30({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .Q_31({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .Q_32({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .Q_33({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .Q_22(MOI_0_Q_22),
+        .Q_23(MOI_0_Q_23),
+        .Q_30(MOI_0_Q_30),
+        .Q_31(MOI_0_Q_31),
+        .Q_32(MOI_0_Q_32),
+        .Q_33(MOI_0_Q_33),
         .S_sim(intellight_database_0_S_sim),
         .alpha(intellight_database_0_alpha),
         .gamma(intellight_database_0_gamma),
@@ -357,12 +381,12 @@ module intellight_v2
         .mode(intellight_database_0_mode),
         .run(intellight_database_0_run),
         .s00_axi_aclk(clk_wiz_clk_out1),
-        .s00_axi_araddr(ps7_0_axi_periph_M01_AXI_ARADDR[5:0]),
+        .s00_axi_araddr(ps7_0_axi_periph_M01_AXI_ARADDR[6:0]),
         .s00_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn1),
         .s00_axi_arprot(ps7_0_axi_periph_M01_AXI_ARPROT),
         .s00_axi_arready(ps7_0_axi_periph_M01_AXI_ARREADY),
         .s00_axi_arvalid(ps7_0_axi_periph_M01_AXI_ARVALID),
-        .s00_axi_awaddr(ps7_0_axi_periph_M01_AXI_AWADDR[5:0]),
+        .s00_axi_awaddr(ps7_0_axi_periph_M01_AXI_AWADDR[6:0]),
         .s00_axi_awprot(ps7_0_axi_periph_M01_AXI_AWPROT),
         .s00_axi_awready(ps7_0_axi_periph_M01_AXI_AWREADY),
         .s00_axi_awvalid(ps7_0_axi_periph_M01_AXI_AWVALID),

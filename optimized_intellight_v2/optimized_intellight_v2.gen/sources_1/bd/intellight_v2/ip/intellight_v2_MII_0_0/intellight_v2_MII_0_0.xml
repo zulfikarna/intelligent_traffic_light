@@ -63,7 +63,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ">58823528</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -137,7 +137,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d39a5a57</spirit:value>
+            <spirit:value>9:23fab392</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -148,7 +148,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d39a5a57</spirit:value>
+            <spirit:value>9:23fab392</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -164,11 +164,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Sep 28 06:49:35 UTC 2022</spirit:value>
+            <spirit:value>Thu Sep 29 06:36:15 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d39a5a57</spirit:value>
+            <spirit:value>9:23fab392</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -180,7 +180,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2517f4ca</spirit:value>
+            <spirit:value>9:01e9068c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -196,11 +196,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Sep 28 06:49:35 UTC 2022</spirit:value>
+            <spirit:value>Thu Sep 29 06:36:15 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2517f4ca</spirit:value>
+            <spirit:value>9:01e9068c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -213,8 +213,12 @@
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Thu Sep 29 06:37:37 UTC 2022</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d39a5a57</spirit:value>
+            <spirit:value>9:23fab392</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -379,7 +383,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>en0</spirit:name>
+        <spirit:name>wen0</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -392,7 +396,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>en1</spirit:name>
+        <spirit:name>wen1</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -405,7 +409,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>en2</spirit:name>
+        <spirit:name>wen2</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -418,7 +422,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>en3</spirit:name>
+        <spirit:name>wen3</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
