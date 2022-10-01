@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Thu Sep 29 17:51:53 2022
+//Date        : Sat Oct  1 14:16:25 2022
 //Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 //Command     : generate_target intellight_v2.bd
 //Design      : intellight_v2
@@ -806,7 +806,7 @@ module comm_ram_imp_X3GS3H
         .web(axi_bram_ctrl_3_BRAM_PORTA_WE));
 endmodule
 
-(* CORE_GENERATION_INFO = "intellight_v2,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=intellight_v2,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=36,numReposBlks=27,numNonXlnxBlks=0,numHierBlks=9,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=8,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=7,da_board_cnt=1,da_clkrst_cnt=10,da_ps7_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "intellight_v2.hwdef" *) 
+(* CORE_GENERATION_INFO = "intellight_v2,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=intellight_v2,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=36,numReposBlks=27,numNonXlnxBlks=0,numHierBlks=9,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=8,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=1,da_clkrst_cnt=10,da_ps7_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "intellight_v2.hwdef" *) 
 module intellight_v2
    (DDR_addr,
     DDR_ba,
@@ -898,7 +898,7 @@ module intellight_v2
   wire [3:0]SD_0_L1;
   wire [3:0]SD_0_L2;
   wire [3:0]SD_0_L3;
-  wire [11:0]SD_0_S;
+  wire [7:0]SD_0_S;
   wire [63:0]action_ram_wrapper_0_Droad0;
   wire [63:0]action_ram_wrapper_0_Droad1;
   wire [63:0]action_ram_wrapper_0_Droad2;
@@ -907,7 +907,7 @@ module intellight_v2
   wire clk_wiz_clk_out1;
   wire [15:0]intellight_database_0_L_dec;
   wire [15:0]intellight_database_0_L_inc;
-  wire [11:0]intellight_database_0_S_sim;
+  wire [7:0]intellight_database_0_S_sim;
   wire [2:0]intellight_database_0_alpha;
   wire [2:0]intellight_database_0_gamma;
   wire [15:0]intellight_database_0_max_episode;
@@ -1415,7 +1415,7 @@ module intellight_v2
         .wen2(MII_0_en2),
         .wen3(MII_0_en3),
         .wr_addr(MII_0_WR_ADDR));
-  intellight_v2_intellight_database_0_0 intellight_database_0
+  intellight_v2_intellight_database_0_1 intellight_database_0
        (.L_dec(intellight_database_0_L_dec),
         .L_inc(intellight_database_0_L_inc),
         .Q_00(MOI_0_Q_00),

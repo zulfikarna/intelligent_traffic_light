@@ -10,11 +10,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module CU // verified
-#(  parameter S_WIDTH = 12,
-    parameter A_WIDTH = 4,
-    parameter RND_WIDTH = 16,
-    parameter CTR_WIDTH = 16
-    )
+//#(  parameter S_WIDTH = 12,
+//    parameter A_WIDTH = 4,
+//    parameter RND_WIDTH = 16,
+//    parameter CTR_WIDTH = 16
+//    )
 (
     input wire clk, rst, run, mode,
     // From Processing System 
@@ -40,7 +40,7 @@ module CU // verified
     output reg wen,
     output reg idle 
     );
-    
+    `include "parameters.v"
     // State variable for FSM implementation 
     localparam
         // Preprocessing states

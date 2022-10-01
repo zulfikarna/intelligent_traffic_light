@@ -69,18 +69,7 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/intellight_v2/ip/intellight_v2_xbar_0/sim/intellight_v2_xbar_0.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_RD_0_0/sim/intellight_v2_RD_0_0.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_CU_0_0/sim/intellight_v2_CU_0_0.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_PG_0_0/sim/intellight_v2_PG_0_0.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_MOI_0_0/sim/intellight_v2_MOI_0_0.v" \
   "../../../bd/intellight_v2/ip/intellight_v2_action_ram_wrapper_0_0/sim/intellight_v2_action_ram_wrapper_0_0.v" \
-  "../../../bd/intellight_v2/ipshared/f107/hdl/intellight_database_v1_0_S00_AXI.v" \
-  "../../../bd/intellight_v2/ipshared/f107/hdl/intellight_database_v1_0.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_intellight_database_0_0/sim/intellight_v2_intellight_database_0_0.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_SD_0_1/sim/intellight_v2_SD_0_1.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_QA_0_0/sim/intellight_v2_QA_0_0.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_MII_0_0/sim/intellight_v2_MII_0_0.v" \
-  "../../../bd/intellight_v2/sim/intellight_v2.v" \
 -endlib
 -makelib xcelium_lib/axi_bram_ctrl_v4_1_6 \
   "../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/3c31/hdl/axi_bram_ctrl_v4_1_rfs.vhd" \
@@ -99,6 +88,16 @@
   "../../../bd/intellight_v2/ip/intellight_v2_comm_ram_1_0/sim/intellight_v2_comm_ram_1_0.v" \
   "../../../bd/intellight_v2/ip/intellight_v2_comm_ram_2_0/sim/intellight_v2_comm_ram_2_0.v" \
   "../../../bd/intellight_v2/ip/intellight_v2_comm_ram_3_0/sim/intellight_v2_comm_ram_3_0.v" \
+  "../../../bd/intellight_v2/ip/intellight_v2_CU_0_0/sim/intellight_v2_CU_0_0.v" \
+  "../../../bd/intellight_v2/ip/intellight_v2_MII_0_0/sim/intellight_v2_MII_0_0.v" \
+  "../../../bd/intellight_v2/ip/intellight_v2_MOI_0_0/sim/intellight_v2_MOI_0_0.v" \
+  "../../../bd/intellight_v2/ip/intellight_v2_PG_0_0/sim/intellight_v2_PG_0_0.v" \
+  "../../../bd/intellight_v2/ip/intellight_v2_QA_0_0/sim/intellight_v2_QA_0_0.v" \
+  "../../../bd/intellight_v2/ip/intellight_v2_RD_0_0/sim/intellight_v2_RD_0_0.v" \
+  "../../../bd/intellight_v2/ip/intellight_v2_SD_0_1/sim/intellight_v2_SD_0_1.v" \
+  "../../../bd/intellight_v2/ipshared/0463/hdl/intellight_database_v1_0_S00_AXI.v" \
+  "../../../bd/intellight_v2/ipshared/0463/hdl/intellight_database_v1_0.v" \
+  "../../../bd/intellight_v2/ip/intellight_v2_intellight_database_0_1/sim/intellight_v2_intellight_database_0_1.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_26 \
   "../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/90c8/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
@@ -118,6 +117,7 @@
   "../../../bd/intellight_v2/ip/intellight_v2_auto_pc_0/sim/intellight_v2_auto_pc_0.v" \
   "../../../bd/intellight_v2/ip/intellight_v2_auto_ds_1/sim/intellight_v2_auto_ds_1.v" \
   "../../../bd/intellight_v2/ip/intellight_v2_auto_pc_1/sim/intellight_v2_auto_pc_1.v" \
+  "../../../bd/intellight_v2/sim/intellight_v2.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

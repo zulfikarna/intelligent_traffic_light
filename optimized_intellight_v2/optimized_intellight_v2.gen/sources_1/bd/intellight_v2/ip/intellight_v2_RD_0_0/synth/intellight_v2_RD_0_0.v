@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "RD,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "intellight_v2_RD_0_0,RD,{}" *)
-(* CORE_GENERATION_INFO = "intellight_v2_RD_0_0,RD,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=RD,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,R_WIDTH=16,L_WIDTH=4}" *)
+(* CORE_GENERATION_INFO = "intellight_v2_RD_0_0,RD,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=RD,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,S_WIDTH=8,Q_WIDTH=16,A_WIDTH=4,R_WIDTH=16,L_WIDTH=4,ITV_WIDTH=16,WEN_WIDTH=8,RND_WIDTH=16,CTR_WIDTH=16,ADDR_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module intellight_v2_RD_0_0 (
@@ -65,7 +65,7 @@ module intellight_v2_RD_0_0 (
   R
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 58823528, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
@@ -78,8 +78,16 @@ input wire [3 : 0] L3;
 output wire [15 : 0] R;
 
   RD #(
+    .S_WIDTH(8),
+    .Q_WIDTH(16),
+    .A_WIDTH(4),
     .R_WIDTH(16),
-    .L_WIDTH(4)
+    .L_WIDTH(4),
+    .ITV_WIDTH(16),
+    .WEN_WIDTH(8),
+    .RND_WIDTH(16),
+    .CTR_WIDTH(16),
+    .ADDR_WIDTH(32)
   ) inst (
     .clk(clk),
     .rst(rst),

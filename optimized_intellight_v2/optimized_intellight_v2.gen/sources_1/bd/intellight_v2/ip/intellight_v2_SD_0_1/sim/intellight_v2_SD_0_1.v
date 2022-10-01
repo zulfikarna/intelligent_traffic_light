@@ -77,20 +77,26 @@ input wire clk;
 input wire rst;
 input wire mode;
 input wire [3 : 0] A;
-input wire [11 : 0] S_sim;
+input wire [7 : 0] S_sim;
 input wire [15 : 0] L_inc;
 input wire [15 : 0] L_dec;
-output wire [11 : 0] S;
+output wire [7 : 0] S;
 output wire [3 : 0] L0;
 output wire [3 : 0] L1;
 output wire [3 : 0] L2;
 output wire [3 : 0] L3;
 
   SD #(
-    .S_WIDTH(12),
-    .L_WIDTH(4),
+    .S_WIDTH(8),
+    .Q_WIDTH(16),
     .A_WIDTH(4),
-    .ITV_WIDTH(16)
+    .R_WIDTH(16),
+    .L_WIDTH(4),
+    .ITV_WIDTH(16),
+    .WEN_WIDTH(8),
+    .RND_WIDTH(16),
+    .CTR_WIDTH(16),
+    .ADDR_WIDTH(32)
   ) inst (
     .clk(clk),
     .rst(rst),

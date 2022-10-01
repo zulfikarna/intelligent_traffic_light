@@ -79,7 +79,7 @@ module intellight_v2_CU_0_0 (
   idle
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 58823528, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
@@ -92,7 +92,7 @@ input wire [15 : 0] max_episode;
 input wire [15 : 0] seed;
 output wire A_sel;
 output wire [3 : 0] A_rand;
-output wire [11 : 0] S0;
+output wire [7 : 0] S0;
 output wire PG;
 output wire QA;
 output wire SD;
@@ -107,10 +107,16 @@ output wire wen;
 output wire idle;
 
   CU #(
-    .S_WIDTH(12),
+    .S_WIDTH(8),
+    .Q_WIDTH(16),
     .A_WIDTH(4),
+    .R_WIDTH(16),
+    .L_WIDTH(4),
+    .ITV_WIDTH(16),
+    .WEN_WIDTH(8),
     .RND_WIDTH(16),
-    .CTR_WIDTH(16)
+    .CTR_WIDTH(16),
+    .ADDR_WIDTH(32)
   ) inst (
     .clk(clk),
     .rst(rst),

@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+
 //////////////////////////////////////////////////////////////////////////////////
 // Company: Pusat Mikroelektronika ITB
 // Engineer: Zulfikar N. Arifuzzaki
@@ -10,10 +11,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module SD // verified
-#(  parameter S_WIDTH = 12,
-    parameter L_WIDTH = 4,
-    parameter A_WIDTH = 4,
-    parameter ITV_WIDTH = 16)
 (
     input wire clk, rst, mode,
     input wire [A_WIDTH-1:0] A,
@@ -25,7 +22,7 @@ module SD // verified
 //    output wire [L_WIDTH:0] l0, l1, l2, l3,
 //    output wire [L_WIDTH-1:0] inc, dec
     );
-    
+    `include "parameters.v"
     localparam MAX_TRAFFIC = 4'b1111;
     localparam MIN_TRAFFIC = 4'b0000;
     
@@ -88,7 +85,7 @@ module SD // verified
   
     // 3. Convert traffic condition to state
     wire [S_WIDTH-1:0] S_learn;
-    assign S_learn = ((L_next[0])|(L_next[1]<<2)|(L_next[2]<<4)|(L_next[3]<<6)) | {S_WIDTH{1'b0}};
+    assign S_learn = ((L_next[0][L_WIDTH-1:L_WIDTH/2])|(L_next[1][L_WIDTH-1:L_WIDTH/2]<<2)|(L_next[2][L_WIDTH-1:L_WIDTH/2]<<4)|(L_next[3][L_WIDTH-1:L_WIDTH/2]<<6)) | {S_WIDTH{1'b0}};
     assign S = (!mode)? S_learn : S_sim;
 
 endmodule

@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Wed Sep 28 13:54:31 2022
+// Date        : Sat Oct  1 14:19:35 2022
 // Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_CU_0_0/intellight_v2_CU_0_0_sim_netlist.v
@@ -38,7 +38,7 @@ module intellight_v2_CU_0_0
     finish,
     wen,
     idle);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 58823528, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input rst;
   input run;
   input mode;
@@ -47,7 +47,7 @@ module intellight_v2_CU_0_0
   input [15:0]seed;
   output A_sel;
   output [3:0]A_rand;
-  output [11:0]S0;
+  output [7:0]S0;
   output PG;
   output QA;
   output SD;
@@ -65,7 +65,7 @@ module intellight_v2_CU_0_0
   wire PG;
   wire QA;
   wire RD;
-  wire [11:0]S0;
+  wire [7:0]S0;
   wire SD;
   wire clk;
   wire finish;
@@ -133,7 +133,7 @@ module intellight_v2_CU_0_0_CU
     run);
   output [15:0]Q;
   output [15:0]wire_epsilon;
-  output [11:0]S0;
+  output [7:0]S0;
   output [15:0]wire_step;
   output [4:0]wire_cs;
   output wen;
@@ -187,7 +187,7 @@ module intellight_v2_CU_0_0_CU
   wire QA;
   wire RD;
   wire RD_INST_0_i_1_n_0;
-  wire [11:0]S0;
+  wire [7:0]S0;
   wire SD;
   wire clk;
   wire [15:0]episode;
@@ -209,32 +209,32 @@ module intellight_v2_CU_0_0_CU
   wire \episode_reg[8]_i_2_n_3 ;
   wire epsilon;
   wire [15:0]epsilon0;
+  wire epsilon0_carry__0_i_1_n_0;
+  wire epsilon0_carry__0_i_2_n_0;
+  wire epsilon0_carry__0_i_3_n_0;
+  wire epsilon0_carry__0_i_4_n_0;
   wire epsilon0_carry__0_n_0;
   wire epsilon0_carry__0_n_1;
   wire epsilon0_carry__0_n_2;
   wire epsilon0_carry__0_n_3;
+  wire epsilon0_carry__1_i_1_n_0;
+  wire epsilon0_carry__1_i_2_n_0;
+  wire epsilon0_carry__1_i_3_n_0;
+  wire epsilon0_carry__1_i_4_n_0;
   wire epsilon0_carry__1_n_0;
   wire epsilon0_carry__1_n_1;
   wire epsilon0_carry__1_n_2;
   wire epsilon0_carry__1_n_3;
+  wire epsilon0_carry__2_i_1_n_0;
+  wire epsilon0_carry__2_i_2_n_0;
+  wire epsilon0_carry__2_i_3_n_0;
+  wire epsilon0_carry__2_i_4_n_0;
   wire epsilon0_carry__2_n_1;
   wire epsilon0_carry__2_n_2;
   wire epsilon0_carry__2_n_3;
-  wire epsilon0_carry_i_1__0_n_0;
-  wire epsilon0_carry_i_1__1_n_0;
-  wire epsilon0_carry_i_1__2_n_0;
   wire epsilon0_carry_i_1_n_0;
-  wire epsilon0_carry_i_2__0_n_0;
-  wire epsilon0_carry_i_2__1_n_0;
-  wire epsilon0_carry_i_2__2_n_0;
   wire epsilon0_carry_i_2_n_0;
-  wire epsilon0_carry_i_3__0_n_0;
-  wire epsilon0_carry_i_3__1_n_0;
-  wire epsilon0_carry_i_3__2_n_0;
   wire epsilon0_carry_i_3_n_0;
-  wire epsilon0_carry_i_4__0_n_0;
-  wire epsilon0_carry_i_4__1_n_0;
-  wire epsilon0_carry_i_4__2_n_0;
   wire epsilon0_carry_i_4_n_0;
   wire epsilon0_carry_n_0;
   wire epsilon0_carry_n_1;
@@ -298,7 +298,9 @@ module intellight_v2_CU_0_0_CU
   wire \ns1_inferred__0/i__carry_n_1 ;
   wire \ns1_inferred__0/i__carry_n_2 ;
   wire \ns1_inferred__0/i__carry_n_3 ;
-  wire [11:0]o_lsfr;
+  wire [7:0]o_lsfr;
+  wire rand_n_10;
+  wire rand_n_11;
   wire rand_n_12;
   wire rand_n_13;
   wire rand_n_14;
@@ -311,10 +313,8 @@ module intellight_v2_CU_0_0_CU
   wire rand_n_21;
   wire rand_n_22;
   wire rand_n_23;
-  wire rand_n_24;
-  wire rand_n_25;
-  wire rand_n_26;
-  wire rand_n_27;
+  wire rand_n_8;
+  wire rand_n_9;
   wire rst;
   wire run;
   wire [15:0]seed;
@@ -405,16 +405,16 @@ module intellight_v2_CU_0_0_CU
        (.CI(1'b0),
         .CO({A_sel0_carry_n_0,A_sel0_carry_n_1,A_sel0_carry_n_2,A_sel0_carry_n_3}),
         .CYINIT(1'b0),
-        .DI({rand_n_16,rand_n_17,rand_n_18,rand_n_19}),
+        .DI({rand_n_12,rand_n_13,rand_n_14,rand_n_15}),
         .O(NLW_A_sel0_carry_O_UNCONNECTED[3:0]),
-        .S({rand_n_12,rand_n_13,rand_n_14,rand_n_15}));
+        .S({rand_n_8,rand_n_9,rand_n_10,rand_n_11}));
   CARRY4 A_sel0_carry__0
        (.CI(A_sel0_carry_n_0),
         .CO({A_sel0_carry__0_n_0,A_sel0_carry__0_n_1,A_sel0_carry__0_n_2,A_sel0_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({rand_n_24,rand_n_25,rand_n_26,rand_n_27}),
+        .DI({rand_n_20,rand_n_21,rand_n_22,rand_n_23}),
         .O(NLW_A_sel0_carry__0_O_UNCONNECTED[3:0]),
-        .S({rand_n_20,rand_n_21,rand_n_22,rand_n_23}));
+        .S({rand_n_16,rand_n_17,rand_n_18,rand_n_19}));
   CARRY4 A_sel0_carry__1
        (.CI(A_sel0_carry__0_n_0),
         .CO(NLW_A_sel0_carry__1_CO_UNCONNECTED[3:0]),
@@ -649,18 +649,6 @@ module intellight_v2_CU_0_0_CU
         .I2(\FSM_onehot_cs_reg_n_0_[12] ),
         .I3(\FSM_onehot_cs_reg_n_0_[11] ),
         .O(RD_INST_0_i_1_n_0));
-  FDRE \S0_reg[10] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(o_lsfr[10]),
-        .Q(S0[10]),
-        .R(1'b0));
-  FDRE \S0_reg[11] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(o_lsfr[11]),
-        .Q(S0[11]),
-        .R(1'b0));
   FDRE \S0_reg[4] 
        (.C(clk),
         .CE(1'b1),
@@ -684,18 +672,6 @@ module intellight_v2_CU_0_0_CU
         .CE(1'b1),
         .D(o_lsfr[7]),
         .Q(S0[7]),
-        .R(1'b0));
-  FDRE \S0_reg[8] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(o_lsfr[8]),
-        .Q(S0[8]),
-        .R(1'b0));
-  FDRE \S0_reg[9] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(o_lsfr[9]),
-        .Q(S0[9]),
         .R(1'b0));
   (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
@@ -980,7 +956,7 @@ module intellight_v2_CU_0_0_CU
         .CYINIT(1'b1),
         .DI(max_episode[3:0]),
         .O(epsilon0[3:0]),
-        .S({epsilon0_carry_i_1__0_n_0,epsilon0_carry_i_2_n_0,epsilon0_carry_i_3_n_0,epsilon0_carry_i_4__2_n_0}));
+        .S({epsilon0_carry_i_1_n_0,epsilon0_carry_i_2_n_0,epsilon0_carry_i_3_n_0,epsilon0_carry_i_4_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 epsilon0_carry__0
        (.CI(epsilon0_carry_n_0),
@@ -988,7 +964,31 @@ module intellight_v2_CU_0_0_CU
         .CYINIT(1'b0),
         .DI(max_episode[7:4]),
         .O(epsilon0[7:4]),
-        .S({epsilon0_carry_i_1__1_n_0,epsilon0_carry_i_2__0_n_0,epsilon0_carry_i_3__0_n_0,epsilon0_carry_i_4_n_0}));
+        .S({epsilon0_carry__0_i_1_n_0,epsilon0_carry__0_i_2_n_0,epsilon0_carry__0_i_3_n_0,epsilon0_carry__0_i_4_n_0}));
+  LUT2 #(
+    .INIT(4'h9)) 
+    epsilon0_carry__0_i_1
+       (.I0(max_episode[7]),
+        .I1(Q[7]),
+        .O(epsilon0_carry__0_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    epsilon0_carry__0_i_2
+       (.I0(max_episode[6]),
+        .I1(Q[6]),
+        .O(epsilon0_carry__0_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    epsilon0_carry__0_i_3
+       (.I0(max_episode[5]),
+        .I1(Q[5]),
+        .O(epsilon0_carry__0_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    epsilon0_carry__0_i_4
+       (.I0(max_episode[4]),
+        .I1(Q[4]),
+        .O(epsilon0_carry__0_i_4_n_0));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 epsilon0_carry__1
        (.CI(epsilon0_carry__0_n_0),
@@ -996,7 +996,31 @@ module intellight_v2_CU_0_0_CU
         .CYINIT(1'b0),
         .DI(max_episode[11:8]),
         .O(epsilon0[11:8]),
-        .S({epsilon0_carry_i_1__2_n_0,epsilon0_carry_i_2__1_n_0,epsilon0_carry_i_3__1_n_0,epsilon0_carry_i_4__0_n_0}));
+        .S({epsilon0_carry__1_i_1_n_0,epsilon0_carry__1_i_2_n_0,epsilon0_carry__1_i_3_n_0,epsilon0_carry__1_i_4_n_0}));
+  LUT2 #(
+    .INIT(4'h9)) 
+    epsilon0_carry__1_i_1
+       (.I0(max_episode[11]),
+        .I1(Q[11]),
+        .O(epsilon0_carry__1_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    epsilon0_carry__1_i_2
+       (.I0(max_episode[10]),
+        .I1(Q[10]),
+        .O(epsilon0_carry__1_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    epsilon0_carry__1_i_3
+       (.I0(max_episode[9]),
+        .I1(Q[9]),
+        .O(epsilon0_carry__1_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    epsilon0_carry__1_i_4
+       (.I0(max_episode[8]),
+        .I1(Q[8]),
+        .O(epsilon0_carry__1_i_4_n_0));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 epsilon0_carry__2
        (.CI(epsilon0_carry__1_n_0),
@@ -1004,31 +1028,37 @@ module intellight_v2_CU_0_0_CU
         .CYINIT(1'b0),
         .DI({1'b0,max_episode[14:12]}),
         .O(epsilon0[15:12]),
-        .S({epsilon0_carry_i_1_n_0,epsilon0_carry_i_2__2_n_0,epsilon0_carry_i_3__2_n_0,epsilon0_carry_i_4__1_n_0}));
+        .S({epsilon0_carry__2_i_1_n_0,epsilon0_carry__2_i_2_n_0,epsilon0_carry__2_i_3_n_0,epsilon0_carry__2_i_4_n_0}));
+  LUT2 #(
+    .INIT(4'h9)) 
+    epsilon0_carry__2_i_1
+       (.I0(Q[15]),
+        .I1(max_episode[15]),
+        .O(epsilon0_carry__2_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    epsilon0_carry__2_i_2
+       (.I0(max_episode[14]),
+        .I1(Q[14]),
+        .O(epsilon0_carry__2_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    epsilon0_carry__2_i_3
+       (.I0(max_episode[13]),
+        .I1(Q[13]),
+        .O(epsilon0_carry__2_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    epsilon0_carry__2_i_4
+       (.I0(max_episode[12]),
+        .I1(Q[12]),
+        .O(epsilon0_carry__2_i_4_n_0));
   LUT2 #(
     .INIT(4'h9)) 
     epsilon0_carry_i_1
-       (.I0(Q[15]),
-        .I1(max_episode[15]),
-        .O(epsilon0_carry_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    epsilon0_carry_i_1__0
        (.I0(max_episode[3]),
         .I1(Q[3]),
-        .O(epsilon0_carry_i_1__0_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    epsilon0_carry_i_1__1
-       (.I0(max_episode[7]),
-        .I1(Q[7]),
-        .O(epsilon0_carry_i_1__1_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    epsilon0_carry_i_1__2
-       (.I0(max_episode[11]),
-        .I1(Q[11]),
-        .O(epsilon0_carry_i_1__2_n_0));
+        .O(epsilon0_carry_i_1_n_0));
   LUT2 #(
     .INIT(4'h9)) 
     epsilon0_carry_i_2
@@ -1037,70 +1067,16 @@ module intellight_v2_CU_0_0_CU
         .O(epsilon0_carry_i_2_n_0));
   LUT2 #(
     .INIT(4'h9)) 
-    epsilon0_carry_i_2__0
-       (.I0(max_episode[6]),
-        .I1(Q[6]),
-        .O(epsilon0_carry_i_2__0_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    epsilon0_carry_i_2__1
-       (.I0(max_episode[10]),
-        .I1(Q[10]),
-        .O(epsilon0_carry_i_2__1_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    epsilon0_carry_i_2__2
-       (.I0(max_episode[14]),
-        .I1(Q[14]),
-        .O(epsilon0_carry_i_2__2_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
     epsilon0_carry_i_3
        (.I0(max_episode[1]),
         .I1(Q[1]),
         .O(epsilon0_carry_i_3_n_0));
   LUT2 #(
     .INIT(4'h9)) 
-    epsilon0_carry_i_3__0
-       (.I0(max_episode[5]),
-        .I1(Q[5]),
-        .O(epsilon0_carry_i_3__0_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    epsilon0_carry_i_3__1
-       (.I0(max_episode[9]),
-        .I1(Q[9]),
-        .O(epsilon0_carry_i_3__1_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    epsilon0_carry_i_3__2
-       (.I0(max_episode[13]),
-        .I1(Q[13]),
-        .O(epsilon0_carry_i_3__2_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
     epsilon0_carry_i_4
-       (.I0(max_episode[4]),
-        .I1(Q[4]),
-        .O(epsilon0_carry_i_4_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    epsilon0_carry_i_4__0
-       (.I0(max_episode[8]),
-        .I1(Q[8]),
-        .O(epsilon0_carry_i_4__0_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    epsilon0_carry_i_4__1
-       (.I0(max_episode[12]),
-        .I1(Q[12]),
-        .O(epsilon0_carry_i_4__1_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    epsilon0_carry_i_4__2
        (.I0(max_episode[0]),
         .I1(Q[0]),
-        .O(epsilon0_carry_i_4__2_n_0));
+        .O(epsilon0_carry_i_4_n_0));
   FDRE \epsilon_reg[0] 
        (.C(clk),
         .CE(\FSM_onehot_cs_reg_n_0_[13] ),
@@ -1534,12 +1510,12 @@ module intellight_v2_CU_0_0_CU
         .O(\NLW_ns1_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
         .S({i__carry__0_i_5_n_0,i__carry__0_i_6_n_0,i__carry__0_i_7_n_0,i__carry__0_i_8_n_0}));
   intellight_v2_CU_0_0_lsfr_16bit rand
-       (.DI({rand_n_16,rand_n_17,rand_n_18,rand_n_19}),
-        .S({rand_n_12,rand_n_13,rand_n_14,rand_n_15}),
+       (.DI({rand_n_12,rand_n_13,rand_n_14,rand_n_15}),
+        .S({rand_n_8,rand_n_9,rand_n_10,rand_n_11}),
         .clk(clk),
-        .\reg_lsfr_reg[10]_0 (o_lsfr),
-        .\reg_lsfr_reg[13]_0 ({rand_n_20,rand_n_21,rand_n_22,rand_n_23}),
-        .\reg_lsfr_reg[13]_1 ({rand_n_24,rand_n_25,rand_n_26,rand_n_27}),
+        .\reg_lsfr_reg[13]_0 ({rand_n_16,rand_n_17,rand_n_18,rand_n_19}),
+        .\reg_lsfr_reg[13]_1 ({rand_n_20,rand_n_21,rand_n_22,rand_n_23}),
+        .\reg_lsfr_reg[6]_0 (o_lsfr),
         .rst(rst),
         .seed(seed),
         .wire_epsilon(wire_epsilon));
@@ -1844,7 +1820,7 @@ endmodule
 
 (* ORIG_REF_NAME = "lsfr_16bit" *) 
 module intellight_v2_CU_0_0_lsfr_16bit
-   (\reg_lsfr_reg[10]_0 ,
+   (\reg_lsfr_reg[6]_0 ,
     S,
     DI,
     \reg_lsfr_reg[13]_0 ,
@@ -1853,7 +1829,7 @@ module intellight_v2_CU_0_0_lsfr_16bit
     wire_epsilon,
     seed,
     rst);
-  output [11:0]\reg_lsfr_reg[10]_0 ;
+  output [7:0]\reg_lsfr_reg[6]_0 ;
   output [3:0]S;
   output [3:0]DI;
   output [3:0]\reg_lsfr_reg[13]_0 ;
@@ -1866,12 +1842,12 @@ module intellight_v2_CU_0_0_lsfr_16bit
   wire [3:0]DI;
   wire [3:0]S;
   wire clk;
-  wire [15:12]o_lsfr;
+  wire [15:8]o_lsfr;
   wire [15:0]p_0_in;
   wire [15:15]reg_lsfr;
-  wire [11:0]\reg_lsfr_reg[10]_0 ;
   wire [3:0]\reg_lsfr_reg[13]_0 ;
   wire [3:0]\reg_lsfr_reg[13]_1 ;
+  wire [7:0]\reg_lsfr_reg[6]_0 ;
   wire rst;
   wire [15:0]seed;
   wire [15:0]wire_epsilon;
@@ -1882,19 +1858,11 @@ module intellight_v2_CU_0_0_lsfr_16bit
        (.I0(o_lsfr[13]),
         .I1(o_lsfr[14]),
         .I2(reg_lsfr),
-        .I3(\reg_lsfr_reg[10]_0 [11]),
-        .O(\reg_lsfr_reg[10]_0 [0]));
+        .I3(o_lsfr[11]),
+        .O(\reg_lsfr_reg[6]_0 [0]));
   LUT4 #(
     .INIT(16'h2F02)) 
-    A_sel0_carry_i_1
-       (.I0(\reg_lsfr_reg[10]_0 [6]),
-        .I1(wire_epsilon[6]),
-        .I2(wire_epsilon[7]),
-        .I3(\reg_lsfr_reg[10]_0 [7]),
-        .O(DI[3]));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    A_sel0_carry_i_1__0
+    A_sel0_carry__0_i_1
        (.I0(o_lsfr[14]),
         .I1(wire_epsilon[14]),
         .I2(wire_epsilon[15]),
@@ -1902,15 +1870,7 @@ module intellight_v2_CU_0_0_lsfr_16bit
         .O(\reg_lsfr_reg[13]_1 [3]));
   LUT4 #(
     .INIT(16'h2F02)) 
-    A_sel0_carry_i_2
-       (.I0(\reg_lsfr_reg[10]_0 [4]),
-        .I1(wire_epsilon[4]),
-        .I2(wire_epsilon[5]),
-        .I3(\reg_lsfr_reg[10]_0 [5]),
-        .O(DI[2]));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    A_sel0_carry_i_2__0
+    A_sel0_carry__0_i_2
        (.I0(o_lsfr[12]),
         .I1(wire_epsilon[12]),
         .I2(wire_epsilon[13]),
@@ -1918,47 +1878,23 @@ module intellight_v2_CU_0_0_lsfr_16bit
         .O(\reg_lsfr_reg[13]_1 [2]));
   LUT4 #(
     .INIT(16'h2F02)) 
-    A_sel0_carry_i_3
-       (.I0(\reg_lsfr_reg[10]_0 [2]),
-        .I1(wire_epsilon[2]),
-        .I2(wire_epsilon[3]),
-        .I3(\reg_lsfr_reg[10]_0 [3]),
-        .O(DI[1]));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    A_sel0_carry_i_3__0
-       (.I0(\reg_lsfr_reg[10]_0 [10]),
+    A_sel0_carry__0_i_3
+       (.I0(o_lsfr[10]),
         .I1(wire_epsilon[10]),
         .I2(wire_epsilon[11]),
-        .I3(\reg_lsfr_reg[10]_0 [11]),
+        .I3(o_lsfr[11]),
         .O(\reg_lsfr_reg[13]_1 [1]));
   LUT4 #(
     .INIT(16'h2F02)) 
-    A_sel0_carry_i_4
-       (.I0(\reg_lsfr_reg[10]_0 [0]),
-        .I1(wire_epsilon[0]),
-        .I2(wire_epsilon[1]),
-        .I3(\reg_lsfr_reg[10]_0 [1]),
-        .O(DI[0]));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    A_sel0_carry_i_4__0
-       (.I0(\reg_lsfr_reg[10]_0 [8]),
+    A_sel0_carry__0_i_4
+       (.I0(o_lsfr[8]),
         .I1(wire_epsilon[8]),
         .I2(wire_epsilon[9]),
-        .I3(\reg_lsfr_reg[10]_0 [9]),
+        .I3(o_lsfr[9]),
         .O(\reg_lsfr_reg[13]_1 [0]));
   LUT4 #(
     .INIT(16'h9009)) 
-    A_sel0_carry_i_5
-       (.I0(\reg_lsfr_reg[10]_0 [6]),
-        .I1(wire_epsilon[6]),
-        .I2(\reg_lsfr_reg[10]_0 [7]),
-        .I3(wire_epsilon[7]),
-        .O(S[3]));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    A_sel0_carry_i_5__0
+    A_sel0_carry__0_i_5
        (.I0(o_lsfr[14]),
         .I1(wire_epsilon[14]),
         .I2(o_lsfr[15]),
@@ -1966,15 +1902,7 @@ module intellight_v2_CU_0_0_lsfr_16bit
         .O(\reg_lsfr_reg[13]_0 [3]));
   LUT4 #(
     .INIT(16'h9009)) 
-    A_sel0_carry_i_6
-       (.I0(\reg_lsfr_reg[10]_0 [4]),
-        .I1(wire_epsilon[4]),
-        .I2(\reg_lsfr_reg[10]_0 [5]),
-        .I3(wire_epsilon[5]),
-        .O(S[2]));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    A_sel0_carry_i_6__0
+    A_sel0_carry__0_i_6
        (.I0(o_lsfr[12]),
         .I1(wire_epsilon[12]),
         .I2(o_lsfr[13]),
@@ -1982,36 +1910,84 @@ module intellight_v2_CU_0_0_lsfr_16bit
         .O(\reg_lsfr_reg[13]_0 [2]));
   LUT4 #(
     .INIT(16'h9009)) 
-    A_sel0_carry_i_7
-       (.I0(\reg_lsfr_reg[10]_0 [2]),
-        .I1(wire_epsilon[2]),
-        .I2(\reg_lsfr_reg[10]_0 [3]),
-        .I3(wire_epsilon[3]),
-        .O(S[1]));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    A_sel0_carry_i_7__0
-       (.I0(\reg_lsfr_reg[10]_0 [10]),
+    A_sel0_carry__0_i_7
+       (.I0(o_lsfr[10]),
         .I1(wire_epsilon[10]),
-        .I2(\reg_lsfr_reg[10]_0 [11]),
+        .I2(o_lsfr[11]),
         .I3(wire_epsilon[11]),
         .O(\reg_lsfr_reg[13]_0 [1]));
   LUT4 #(
     .INIT(16'h9009)) 
-    A_sel0_carry_i_8
-       (.I0(\reg_lsfr_reg[10]_0 [0]),
-        .I1(wire_epsilon[0]),
-        .I2(\reg_lsfr_reg[10]_0 [1]),
-        .I3(wire_epsilon[1]),
-        .O(S[0]));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    A_sel0_carry_i_8__0
-       (.I0(\reg_lsfr_reg[10]_0 [8]),
+    A_sel0_carry__0_i_8
+       (.I0(o_lsfr[8]),
         .I1(wire_epsilon[8]),
-        .I2(\reg_lsfr_reg[10]_0 [9]),
+        .I2(o_lsfr[9]),
         .I3(wire_epsilon[9]),
         .O(\reg_lsfr_reg[13]_0 [0]));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    A_sel0_carry_i_1
+       (.I0(\reg_lsfr_reg[6]_0 [6]),
+        .I1(wire_epsilon[6]),
+        .I2(wire_epsilon[7]),
+        .I3(\reg_lsfr_reg[6]_0 [7]),
+        .O(DI[3]));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    A_sel0_carry_i_2
+       (.I0(\reg_lsfr_reg[6]_0 [4]),
+        .I1(wire_epsilon[4]),
+        .I2(wire_epsilon[5]),
+        .I3(\reg_lsfr_reg[6]_0 [5]),
+        .O(DI[2]));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    A_sel0_carry_i_3
+       (.I0(\reg_lsfr_reg[6]_0 [2]),
+        .I1(wire_epsilon[2]),
+        .I2(wire_epsilon[3]),
+        .I3(\reg_lsfr_reg[6]_0 [3]),
+        .O(DI[1]));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    A_sel0_carry_i_4
+       (.I0(\reg_lsfr_reg[6]_0 [0]),
+        .I1(wire_epsilon[0]),
+        .I2(wire_epsilon[1]),
+        .I3(\reg_lsfr_reg[6]_0 [1]),
+        .O(DI[0]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    A_sel0_carry_i_5
+       (.I0(\reg_lsfr_reg[6]_0 [6]),
+        .I1(wire_epsilon[6]),
+        .I2(\reg_lsfr_reg[6]_0 [7]),
+        .I3(wire_epsilon[7]),
+        .O(S[3]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    A_sel0_carry_i_6
+       (.I0(\reg_lsfr_reg[6]_0 [4]),
+        .I1(wire_epsilon[4]),
+        .I2(\reg_lsfr_reg[6]_0 [5]),
+        .I3(wire_epsilon[5]),
+        .O(S[2]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    A_sel0_carry_i_7
+       (.I0(\reg_lsfr_reg[6]_0 [2]),
+        .I1(wire_epsilon[2]),
+        .I2(\reg_lsfr_reg[6]_0 [3]),
+        .I3(wire_epsilon[3]),
+        .O(S[1]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    A_sel0_carry_i_8
+       (.I0(\reg_lsfr_reg[6]_0 [0]),
+        .I1(wire_epsilon[0]),
+        .I2(\reg_lsfr_reg[6]_0 [1]),
+        .I3(wire_epsilon[1]),
+        .O(S[0]));
   LUT6 #(
     .INIT(64'hAAAAAAAAC33C3CC3)) 
     \reg_lsfr[0]_i_1 
@@ -2019,7 +1995,7 @@ module intellight_v2_CU_0_0_lsfr_16bit
         .I1(o_lsfr[13]),
         .I2(o_lsfr[14]),
         .I3(reg_lsfr),
-        .I4(\reg_lsfr_reg[10]_0 [11]),
+        .I4(o_lsfr[11]),
         .I5(rst),
         .O(p_0_in[0]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
@@ -2027,7 +2003,7 @@ module intellight_v2_CU_0_0_lsfr_16bit
     .INIT(8'hAC)) 
     \reg_lsfr[10]_i_1 
        (.I0(seed[10]),
-        .I1(\reg_lsfr_reg[10]_0 [10]),
+        .I1(o_lsfr[10]),
         .I2(rst),
         .O(p_0_in[10]));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
@@ -2035,7 +2011,7 @@ module intellight_v2_CU_0_0_lsfr_16bit
     .INIT(8'hAC)) 
     \reg_lsfr[11]_i_1 
        (.I0(seed[11]),
-        .I1(\reg_lsfr_reg[10]_0 [11]),
+        .I1(o_lsfr[11]),
         .I2(rst),
         .O(p_0_in[11]));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
@@ -2074,7 +2050,7 @@ module intellight_v2_CU_0_0_lsfr_16bit
     .INIT(8'hAC)) 
     \reg_lsfr[1]_i_1 
        (.I0(seed[1]),
-        .I1(\reg_lsfr_reg[10]_0 [1]),
+        .I1(\reg_lsfr_reg[6]_0 [1]),
         .I2(rst),
         .O(p_0_in[1]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
@@ -2082,7 +2058,7 @@ module intellight_v2_CU_0_0_lsfr_16bit
     .INIT(8'hAC)) 
     \reg_lsfr[2]_i_1 
        (.I0(seed[2]),
-        .I1(\reg_lsfr_reg[10]_0 [2]),
+        .I1(\reg_lsfr_reg[6]_0 [2]),
         .I2(rst),
         .O(p_0_in[2]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
@@ -2090,7 +2066,7 @@ module intellight_v2_CU_0_0_lsfr_16bit
     .INIT(8'hAC)) 
     \reg_lsfr[3]_i_1 
        (.I0(seed[3]),
-        .I1(\reg_lsfr_reg[10]_0 [3]),
+        .I1(\reg_lsfr_reg[6]_0 [3]),
         .I2(rst),
         .O(p_0_in[3]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
@@ -2098,7 +2074,7 @@ module intellight_v2_CU_0_0_lsfr_16bit
     .INIT(8'hAC)) 
     \reg_lsfr[4]_i_1 
        (.I0(seed[4]),
-        .I1(\reg_lsfr_reg[10]_0 [4]),
+        .I1(\reg_lsfr_reg[6]_0 [4]),
         .I2(rst),
         .O(p_0_in[4]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
@@ -2106,7 +2082,7 @@ module intellight_v2_CU_0_0_lsfr_16bit
     .INIT(8'hAC)) 
     \reg_lsfr[5]_i_1 
        (.I0(seed[5]),
-        .I1(\reg_lsfr_reg[10]_0 [5]),
+        .I1(\reg_lsfr_reg[6]_0 [5]),
         .I2(rst),
         .O(p_0_in[5]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
@@ -2114,7 +2090,7 @@ module intellight_v2_CU_0_0_lsfr_16bit
     .INIT(8'hAC)) 
     \reg_lsfr[6]_i_1 
        (.I0(seed[6]),
-        .I1(\reg_lsfr_reg[10]_0 [6]),
+        .I1(\reg_lsfr_reg[6]_0 [6]),
         .I2(rst),
         .O(p_0_in[6]));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
@@ -2122,7 +2098,7 @@ module intellight_v2_CU_0_0_lsfr_16bit
     .INIT(8'hAC)) 
     \reg_lsfr[7]_i_1 
        (.I0(seed[7]),
-        .I1(\reg_lsfr_reg[10]_0 [7]),
+        .I1(\reg_lsfr_reg[6]_0 [7]),
         .I2(rst),
         .O(p_0_in[7]));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
@@ -2130,7 +2106,7 @@ module intellight_v2_CU_0_0_lsfr_16bit
     .INIT(8'hAC)) 
     \reg_lsfr[8]_i_1 
        (.I0(seed[8]),
-        .I1(\reg_lsfr_reg[10]_0 [8]),
+        .I1(o_lsfr[8]),
         .I2(rst),
         .O(p_0_in[8]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
@@ -2138,20 +2114,20 @@ module intellight_v2_CU_0_0_lsfr_16bit
     .INIT(8'hAC)) 
     \reg_lsfr[9]_i_1 
        (.I0(seed[9]),
-        .I1(\reg_lsfr_reg[10]_0 [9]),
+        .I1(o_lsfr[9]),
         .I2(rst),
         .O(p_0_in[9]));
   FDRE \reg_lsfr_reg[0] 
        (.C(clk),
         .CE(1'b1),
         .D(p_0_in[0]),
-        .Q(\reg_lsfr_reg[10]_0 [1]),
+        .Q(\reg_lsfr_reg[6]_0 [1]),
         .R(1'b0));
   FDRE \reg_lsfr_reg[10] 
        (.C(clk),
         .CE(1'b1),
         .D(p_0_in[10]),
-        .Q(\reg_lsfr_reg[10]_0 [11]),
+        .Q(o_lsfr[11]),
         .R(1'b0));
   FDRE \reg_lsfr_reg[11] 
        (.C(clk),
@@ -2187,55 +2163,55 @@ module intellight_v2_CU_0_0_lsfr_16bit
        (.C(clk),
         .CE(1'b1),
         .D(p_0_in[1]),
-        .Q(\reg_lsfr_reg[10]_0 [2]),
+        .Q(\reg_lsfr_reg[6]_0 [2]),
         .R(1'b0));
   FDRE \reg_lsfr_reg[2] 
        (.C(clk),
         .CE(1'b1),
         .D(p_0_in[2]),
-        .Q(\reg_lsfr_reg[10]_0 [3]),
+        .Q(\reg_lsfr_reg[6]_0 [3]),
         .R(1'b0));
   FDRE \reg_lsfr_reg[3] 
        (.C(clk),
         .CE(1'b1),
         .D(p_0_in[3]),
-        .Q(\reg_lsfr_reg[10]_0 [4]),
+        .Q(\reg_lsfr_reg[6]_0 [4]),
         .R(1'b0));
   FDRE \reg_lsfr_reg[4] 
        (.C(clk),
         .CE(1'b1),
         .D(p_0_in[4]),
-        .Q(\reg_lsfr_reg[10]_0 [5]),
+        .Q(\reg_lsfr_reg[6]_0 [5]),
         .R(1'b0));
   FDRE \reg_lsfr_reg[5] 
        (.C(clk),
         .CE(1'b1),
         .D(p_0_in[5]),
-        .Q(\reg_lsfr_reg[10]_0 [6]),
+        .Q(\reg_lsfr_reg[6]_0 [6]),
         .R(1'b0));
   FDRE \reg_lsfr_reg[6] 
        (.C(clk),
         .CE(1'b1),
         .D(p_0_in[6]),
-        .Q(\reg_lsfr_reg[10]_0 [7]),
+        .Q(\reg_lsfr_reg[6]_0 [7]),
         .R(1'b0));
   FDRE \reg_lsfr_reg[7] 
        (.C(clk),
         .CE(1'b1),
         .D(p_0_in[7]),
-        .Q(\reg_lsfr_reg[10]_0 [8]),
+        .Q(o_lsfr[8]),
         .R(1'b0));
   FDRE \reg_lsfr_reg[8] 
        (.C(clk),
         .CE(1'b1),
         .D(p_0_in[8]),
-        .Q(\reg_lsfr_reg[10]_0 [9]),
+        .Q(o_lsfr[9]),
         .R(1'b0));
   FDRE \reg_lsfr_reg[9] 
        (.C(clk),
         .CE(1'b1),
         .D(p_0_in[9]),
-        .Q(\reg_lsfr_reg[10]_0 [10]),
+        .Q(o_lsfr[10]),
         .R(1'b0));
 endmodule
 `ifndef GLBL

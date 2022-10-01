@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Wed Sep 28 13:55:36 2022
+// Date        : Sat Oct  1 14:19:35 2022
 // Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top intellight_v2_MOI_0_0 -prefix
-//               intellight_v2_MOI_0_0_ intellight_v2_MOI_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_MOI_0_0/intellight_v2_MOI_0_0_stub.v
 // Design      : intellight_v2_MOI_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

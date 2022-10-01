@@ -87,9 +87,16 @@ input wire [1 : 0] A_road;
 output wire [15 : 0] Q_new;
 
   QA #(
+    .S_WIDTH(8),
     .Q_WIDTH(16),
+    .A_WIDTH(4),
     .R_WIDTH(16),
-    .A_WIDTH(4)
+    .L_WIDTH(4),
+    .ITV_WIDTH(16),
+    .WEN_WIDTH(8),
+    .RND_WIDTH(16),
+    .CTR_WIDTH(16),
+    .ADDR_WIDTH(32)
   ) inst (
     .clk(clk),
     .rst(rst),

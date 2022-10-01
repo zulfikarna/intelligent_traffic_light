@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Wed Sep 28 13:54:31 2022
+-- Date        : Sat Oct  1 14:19:35 2022
 -- Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_PG_0_0/intellight_v2_PG_0_0_sim_netlist.vhdl
@@ -2001,10 +2001,10 @@ end intellight_v2_PG_0_0_PG;
 architecture STRUCTURE of intellight_v2_PG_0_0_PG is
   signal \A1__0\ : STD_LOGIC;
   signal A_dur1 : STD_LOGIC;
+  signal \A_dur1_carry__0_i_1_n_0\ : STD_LOGIC;
+  signal \A_dur1_carry__0_i_2_n_0\ : STD_LOGIC;
   signal \A_dur1_carry__0_n_3\ : STD_LOGIC;
-  signal \A_dur1_carry_i_1__0_n_0\ : STD_LOGIC;
   signal A_dur1_carry_i_1_n_0 : STD_LOGIC;
-  signal \A_dur1_carry_i_2__0_n_0\ : STD_LOGIC;
   signal A_dur1_carry_i_2_n_0 : STD_LOGIC;
   signal A_dur1_carry_i_3_n_0 : STD_LOGIC;
   signal A_dur1_carry_i_4_n_0 : STD_LOGIC;
@@ -2190,8 +2190,30 @@ A_dur1_carry: unisim.vcomponents.CARRY4
       DI(3 downto 0) => B"0000",
       O(3 downto 0) => \NLW_A_dur1_carry__0_O_UNCONNECTED\(3 downto 0),
       S(3 downto 2) => B"00",
-      S(1) => \A_dur1_carry_i_1__0_n_0\,
-      S(0) => \A_dur1_carry_i_2__0_n_0\
+      S(1) => \A_dur1_carry__0_i_1_n_0\,
+      S(0) => \A_dur1_carry__0_i_2_n_0\
+    );
+\A_dur1_carry__0_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => Q_max_reg0(15),
+      I1 => \Q_reg0_reg[0]\(15),
+      O => \A_dur1_carry__0_i_1_n_0\
+    );
+\A_dur1_carry__0_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9009000000009009"
+    )
+        port map (
+      I0 => \Q_reg0_reg[0]\(12),
+      I1 => Q_max_reg0(12),
+      I2 => Q_max_reg0(14),
+      I3 => \Q_reg0_reg[0]\(14),
+      I4 => Q_max_reg0(13),
+      I5 => \Q_reg0_reg[0]\(13),
+      O => \A_dur1_carry__0_i_2_n_0\
     );
 A_dur1_carry_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -2206,15 +2228,6 @@ A_dur1_carry_i_1: unisim.vcomponents.LUT6
       I5 => \Q_reg0_reg[0]\(10),
       O => A_dur1_carry_i_1_n_0
     );
-\A_dur1_carry_i_1__0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"9"
-    )
-        port map (
-      I0 => Q_max_reg0(15),
-      I1 => \Q_reg0_reg[0]\(15),
-      O => \A_dur1_carry_i_1__0_n_0\
-    );
 A_dur1_carry_i_2: unisim.vcomponents.LUT6
     generic map(
       INIT => X"9009000000009009"
@@ -2227,19 +2240,6 @@ A_dur1_carry_i_2: unisim.vcomponents.LUT6
       I4 => Q_max_reg0(7),
       I5 => \Q_reg0_reg[0]\(7),
       O => A_dur1_carry_i_2_n_0
-    );
-\A_dur1_carry_i_2__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"9009000000009009"
-    )
-        port map (
-      I0 => \Q_reg0_reg[0]\(12),
-      I1 => Q_max_reg0(12),
-      I2 => Q_max_reg0(14),
-      I3 => \Q_reg0_reg[0]\(14),
-      I4 => Q_max_reg0(13),
-      I5 => \Q_reg0_reg[0]\(13),
-      O => \A_dur1_carry_i_2__0_n_0\
     );
 A_dur1_carry_i_3: unisim.vcomponents.LUT6
     generic map(
@@ -3675,7 +3675,7 @@ architecture STRUCTURE of intellight_v2_PG_0_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 58823528, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
   attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
 begin

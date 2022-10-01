@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Thu Sep 29 17:17:34 2022
+-- Date        : Sat Oct  1 14:19:35 2022
 -- Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_MII_0_0/intellight_v2_MII_0_0_sim_netlist.vhdl
@@ -849,7 +849,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity intellight_v2_MII_0_0_MII is
   port (
-    wr_addr : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    wr_addr : out STD_LOGIC_VECTOR ( 7 downto 0 );
     Q : out STD_LOGIC_VECTOR ( 3 downto 0 );
     A_reg0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
     A_reg2 : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -863,7 +863,7 @@ entity intellight_v2_MII_0_0_MII is
     wen2 : out STD_LOGIC;
     wen3 : out STD_LOGIC;
     clk : in STD_LOGIC;
-    S : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    S : in STD_LOGIC_VECTOR ( 7 downto 0 );
     A : in STD_LOGIC_VECTOR ( 3 downto 0 );
     Droad1 : in STD_LOGIC_VECTOR ( 63 downto 0 );
     Droad0 : in STD_LOGIC_VECTOR ( 63 downto 0 );
@@ -949,8 +949,6 @@ architecture STRUCTURE of intellight_v2_MII_0_0_MII is
   signal \D_reg_reg[3]\ : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal \^q\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \S_reg3_reg[0]_srl4_n_0\ : STD_LOGIC;
-  signal \S_reg3_reg[10]_srl4_n_0\ : STD_LOGIC;
-  signal \S_reg3_reg[11]_srl4_n_0\ : STD_LOGIC;
   signal \S_reg3_reg[1]_srl4_n_0\ : STD_LOGIC;
   signal \S_reg3_reg[2]_srl4_n_0\ : STD_LOGIC;
   signal \S_reg3_reg[3]_srl4_n_0\ : STD_LOGIC;
@@ -958,8 +956,6 @@ architecture STRUCTURE of intellight_v2_MII_0_0_MII is
   signal \S_reg3_reg[5]_srl4_n_0\ : STD_LOGIC;
   signal \S_reg3_reg[6]_srl4_n_0\ : STD_LOGIC;
   signal \S_reg3_reg[7]_srl4_n_0\ : STD_LOGIC;
-  signal \S_reg3_reg[8]_srl4_n_0\ : STD_LOGIC;
-  signal \S_reg3_reg[9]_srl4_n_0\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal wen00 : STD_LOGIC;
   signal wen0_i_1_n_0 : STD_LOGIC;
@@ -1100,10 +1096,6 @@ architecture STRUCTURE of intellight_v2_MII_0_0_MII is
   attribute srl_name of \D_reg_reg[2][9]_srl3\ : label is "\inst/D_reg_reg[2][9]_srl3 ";
   attribute srl_bus_name of \S_reg3_reg[0]_srl4\ : label is "\inst/S_reg3_reg ";
   attribute srl_name of \S_reg3_reg[0]_srl4\ : label is "\inst/S_reg3_reg[0]_srl4 ";
-  attribute srl_bus_name of \S_reg3_reg[10]_srl4\ : label is "\inst/S_reg3_reg ";
-  attribute srl_name of \S_reg3_reg[10]_srl4\ : label is "\inst/S_reg3_reg[10]_srl4 ";
-  attribute srl_bus_name of \S_reg3_reg[11]_srl4\ : label is "\inst/S_reg3_reg ";
-  attribute srl_name of \S_reg3_reg[11]_srl4\ : label is "\inst/S_reg3_reg[11]_srl4 ";
   attribute srl_bus_name of \S_reg3_reg[1]_srl4\ : label is "\inst/S_reg3_reg ";
   attribute srl_name of \S_reg3_reg[1]_srl4\ : label is "\inst/S_reg3_reg[1]_srl4 ";
   attribute srl_bus_name of \S_reg3_reg[2]_srl4\ : label is "\inst/S_reg3_reg ";
@@ -1118,10 +1110,6 @@ architecture STRUCTURE of intellight_v2_MII_0_0_MII is
   attribute srl_name of \S_reg3_reg[6]_srl4\ : label is "\inst/S_reg3_reg[6]_srl4 ";
   attribute srl_bus_name of \S_reg3_reg[7]_srl4\ : label is "\inst/S_reg3_reg ";
   attribute srl_name of \S_reg3_reg[7]_srl4\ : label is "\inst/S_reg3_reg[7]_srl4 ";
-  attribute srl_bus_name of \S_reg3_reg[8]_srl4\ : label is "\inst/S_reg3_reg ";
-  attribute srl_name of \S_reg3_reg[8]_srl4\ : label is "\inst/S_reg3_reg[8]_srl4 ";
-  attribute srl_bus_name of \S_reg3_reg[9]_srl4\ : label is "\inst/S_reg3_reg ";
-  attribute srl_name of \S_reg3_reg[9]_srl4\ : label is "\inst/S_reg3_reg[9]_srl4 ";
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of wen0_i_2 : label is "soft_lutpair33";
   attribute SOFT_HLUTNM of wen1_i_1 : label is "soft_lutpair33";
@@ -3384,28 +3372,6 @@ begin
       D => S(0),
       Q => \S_reg3_reg[0]_srl4_n_0\
     );
-\S_reg3_reg[10]_srl4\: unisim.vcomponents.SRL16E
-     port map (
-      A0 => '1',
-      A1 => '1',
-      A2 => '0',
-      A3 => '0',
-      CE => '1',
-      CLK => clk,
-      D => S(10),
-      Q => \S_reg3_reg[10]_srl4_n_0\
-    );
-\S_reg3_reg[11]_srl4\: unisim.vcomponents.SRL16E
-     port map (
-      A0 => '1',
-      A1 => '1',
-      A2 => '0',
-      A3 => '0',
-      CE => '1',
-      CLK => clk,
-      D => S(11),
-      Q => \S_reg3_reg[11]_srl4_n_0\
-    );
 \S_reg3_reg[1]_srl4\: unisim.vcomponents.SRL16E
      port map (
       A0 => '1',
@@ -3482,28 +3448,6 @@ begin
       CLK => clk,
       D => S(7),
       Q => \S_reg3_reg[7]_srl4_n_0\
-    );
-\S_reg3_reg[8]_srl4\: unisim.vcomponents.SRL16E
-     port map (
-      A0 => '1',
-      A1 => '1',
-      A2 => '0',
-      A3 => '0',
-      CE => '1',
-      CLK => clk,
-      D => S(8),
-      Q => \S_reg3_reg[8]_srl4_n_0\
-    );
-\S_reg3_reg[9]_srl4\: unisim.vcomponents.SRL16E
-     port map (
-      A0 => '1',
-      A1 => '1',
-      A2 => '0',
-      A3 => '0',
-      CE => '1',
-      CLK => clk,
-      D => S(9),
-      Q => \S_reg3_reg[9]_srl4_n_0\
     );
 decod0: entity work.intellight_v2_MII_0_0_wen_decoder
      port map (
@@ -3636,38 +3580,6 @@ wen3_reg: unisim.vcomponents.FDRE
       Q => wen_bram(3),
       R => '0'
     );
-\wr_addr_reg[10]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk,
-      CE => '1',
-      D => \S_reg3_reg[8]_srl4_n_0\,
-      Q => wr_addr(8),
-      R => '0'
-    );
-\wr_addr_reg[11]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk,
-      CE => '1',
-      D => \S_reg3_reg[9]_srl4_n_0\,
-      Q => wr_addr(9),
-      R => '0'
-    );
-\wr_addr_reg[12]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk,
-      CE => '1',
-      D => \S_reg3_reg[10]_srl4_n_0\,
-      Q => wr_addr(10),
-      R => '0'
-    );
-\wr_addr_reg[13]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk,
-      CE => '1',
-      D => \S_reg3_reg[11]_srl4_n_0\,
-      Q => wr_addr(11),
-      R => '0'
-    );
 \wr_addr_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
@@ -3741,7 +3653,7 @@ entity intellight_v2_MII_0_0 is
   port (
     clk : in STD_LOGIC;
     rst : in STD_LOGIC;
-    S : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    S : in STD_LOGIC_VECTOR ( 7 downto 0 );
     Q_new : in STD_LOGIC_VECTOR ( 15 downto 0 );
     wen_cu : in STD_LOGIC;
     A : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -3779,9 +3691,9 @@ end intellight_v2_MII_0_0;
 
 architecture STRUCTURE of intellight_v2_MII_0_0 is
   signal \<const0>\ : STD_LOGIC;
-  signal \^s\ : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal \^s\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \^wen_bram\ : STD_LOGIC_VECTOR ( 6 downto 0 );
-  signal \^wr_addr\ : STD_LOGIC_VECTOR ( 13 downto 2 );
+  signal \^wr_addr\ : STD_LOGIC_VECTOR ( 9 downto 2 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -3789,7 +3701,7 @@ architecture STRUCTURE of intellight_v2_MII_0_0 is
   attribute X_INTERFACE_INFO of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
   attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
 begin
-  \^s\(11 downto 0) <= S(11 downto 0);
+  \^s\(7 downto 0) <= S(7 downto 0);
   rd_addr(31) <= \<const0>\;
   rd_addr(30) <= \<const0>\;
   rd_addr(29) <= \<const0>\;
@@ -3808,7 +3720,11 @@ begin
   rd_addr(16) <= \<const0>\;
   rd_addr(15) <= \<const0>\;
   rd_addr(14) <= \<const0>\;
-  rd_addr(13 downto 2) <= \^s\(11 downto 0);
+  rd_addr(13) <= \<const0>\;
+  rd_addr(12) <= \<const0>\;
+  rd_addr(11) <= \<const0>\;
+  rd_addr(10) <= \<const0>\;
+  rd_addr(9 downto 2) <= \^s\(7 downto 0);
   rd_addr(1) <= \<const0>\;
   rd_addr(0) <= \<const0>\;
   wen_bram(7) <= \^wen_bram\(6);
@@ -3837,7 +3753,11 @@ begin
   wr_addr(16) <= \<const0>\;
   wr_addr(15) <= \<const0>\;
   wr_addr(14) <= \<const0>\;
-  wr_addr(13 downto 2) <= \^wr_addr\(13 downto 2);
+  wr_addr(13) <= \<const0>\;
+  wr_addr(12) <= \<const0>\;
+  wr_addr(11) <= \<const0>\;
+  wr_addr(10) <= \<const0>\;
+  wr_addr(9 downto 2) <= \^wr_addr\(9 downto 2);
   wr_addr(1) <= \<const0>\;
   wr_addr(0) <= \<const0>\;
 GND: unisim.vcomponents.GND
@@ -3860,7 +3780,7 @@ inst: entity work.intellight_v2_MII_0_0_MII
       Droad3(63 downto 0) => Droad3(63 downto 0),
       Q(3 downto 0) => A_reg1(3 downto 0),
       Q_new(15 downto 0) => Q_new(15 downto 0),
-      S(11 downto 0) => \^s\(11 downto 0),
+      S(7 downto 0) => \^s\(7 downto 0),
       clk => clk,
       wen0 => wen0,
       wen1 => wen1,
@@ -3871,6 +3791,6 @@ inst: entity work.intellight_v2_MII_0_0_MII
       wen_bram(1) => \^wen_bram\(2),
       wen_bram(0) => \^wen_bram\(0),
       wen_cu => wen_cu,
-      wr_addr(11 downto 0) => \^wr_addr\(13 downto 2)
+      wr_addr(7 downto 0) => \^wr_addr\(9 downto 2)
     );
 end STRUCTURE;

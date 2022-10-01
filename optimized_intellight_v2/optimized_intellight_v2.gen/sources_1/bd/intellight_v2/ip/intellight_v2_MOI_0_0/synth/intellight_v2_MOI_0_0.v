@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "MOI,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "intellight_v2_MOI_0_0,MOI,{}" *)
-(* CORE_GENERATION_INFO = "intellight_v2_MOI_0_0,MOI,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=MOI,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,Q_WIDTH=16}" *)
+(* CORE_GENERATION_INFO = "intellight_v2_MOI_0_0,MOI,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=MOI,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,S_WIDTH=8,Q_WIDTH=16,A_WIDTH=4,R_WIDTH=16,L_WIDTH=4,ITV_WIDTH=16,WEN_WIDTH=8,RND_WIDTH=16,CTR_WIDTH=16,ADDR_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module intellight_v2_MOI_0_0 (
@@ -100,7 +100,16 @@ output wire [15 : 0] Q_32;
 output wire [15 : 0] Q_33;
 
   MOI #(
-    .Q_WIDTH(16)
+    .S_WIDTH(8),
+    .Q_WIDTH(16),
+    .A_WIDTH(4),
+    .R_WIDTH(16),
+    .L_WIDTH(4),
+    .ITV_WIDTH(16),
+    .WEN_WIDTH(8),
+    .RND_WIDTH(16),
+    .CTR_WIDTH(16),
+    .ADDR_WIDTH(32)
   ) inst (
     .Droad0(Droad0),
     .Droad1(Droad1),

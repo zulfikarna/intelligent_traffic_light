@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Thu Sep 29 17:55:10 2022
+-- Date        : Thu Sep 29 17:55:09 2022
 -- Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_auto_ds_0/intellight_v2_auto_ds_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top intellight_v2_auto_ds_0 -prefix
+--               intellight_v2_auto_ds_0_ intellight_v2_auto_ds_0_stub.vhdl
 -- Design      : intellight_v2_auto_ds_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

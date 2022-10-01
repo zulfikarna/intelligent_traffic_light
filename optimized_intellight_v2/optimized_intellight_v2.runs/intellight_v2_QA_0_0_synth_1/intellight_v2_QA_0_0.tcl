@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "intellight_v2_QA_0_0_synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref
@@ -99,6 +98,7 @@ read_verilog -library xil_defaultlib {
   D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v
   D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_max.v
   D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_mux.v
+  D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/parameters.v
   D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/QA.v
 }
 read_ip -quiet D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ip/intellight_v2_QA_0_0/intellight_v2_QA_0_0.xci

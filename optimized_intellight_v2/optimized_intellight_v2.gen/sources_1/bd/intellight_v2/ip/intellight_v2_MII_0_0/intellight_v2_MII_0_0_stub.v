@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Thu Sep 29 17:17:34 2022
+// Date        : Sat Oct  1 14:19:35 2022
 // Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_MII_0_0/intellight_v2_MII_0_0_stub.v
@@ -17,10 +17,10 @@
 module intellight_v2_MII_0_0(clk, rst, S, Q_new, wen_cu, A, A_road, Droad0, Droad1, 
   Droad2, Droad3, rd_addr, wr_addr, D_new, wen_bram, wen0, wen1, wen2, wen3, A_reg0, A_reg1, A_reg2, A_reg3, 
   A_reg4, A_reg5)
-/* synthesis syn_black_box black_box_pad_pin="clk,rst,S[11:0],Q_new[15:0],wen_cu,A[3:0],A_road[1:0],Droad0[63:0],Droad1[63:0],Droad2[63:0],Droad3[63:0],rd_addr[31:0],wr_addr[31:0],D_new[63:0],wen_bram[7:0],wen0,wen1,wen2,wen3,A_reg0[3:0],A_reg1[3:0],A_reg2[3:0],A_reg3[3:0],A_reg4[3:0],A_reg5[3:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="clk,rst,S[7:0],Q_new[15:0],wen_cu,A[3:0],A_road[1:0],Droad0[63:0],Droad1[63:0],Droad2[63:0],Droad3[63:0],rd_addr[31:0],wr_addr[31:0],D_new[63:0],wen_bram[7:0],wen0,wen1,wen2,wen3,A_reg0[3:0],A_reg1[3:0],A_reg2[3:0],A_reg3[3:0],A_reg4[3:0],A_reg5[3:0]" */;
   input clk;
   input rst;
-  input [11:0]S;
+  input [7:0]S;
   input [15:0]Q_new;
   input wen_cu;
   input [3:0]A;

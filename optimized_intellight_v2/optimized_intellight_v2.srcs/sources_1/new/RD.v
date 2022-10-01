@@ -10,14 +10,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module RD // verified
-#(  parameter R_WIDTH = 16,
-    parameter L_WIDTH = 4
-    )
+//#(  parameter R_WIDTH = 16,
+//    parameter L_WIDTH = 4
+//    )
 ( 
     input wire clk, rst,
     input wire [L_WIDTH-1:0] L0, L1, L2, L3,
     output reg signed [R_WIDTH-1:0] R        
     );
+    
+    `include "parameters.v"
     wire signed [R_WIDTH-1:0] R_temp [0:3];
     assign R_temp[0] = (L0[L_WIDTH-1:0] == {L_WIDTH/2{0}})? ('d10):
                        (L0[L_WIDTH-1:0] == {L_WIDTH/2{1}})? (-'d10): (-'d1);

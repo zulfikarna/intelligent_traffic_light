@@ -81,10 +81,14 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/wt [current_project]
 set_property parent.project_path D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.xpr [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part www.digilentinc.com:pynq-z1:part0:1.0 [current_project]
-set_property ip_repo_paths d:/intelligent_traffic_light/ip_repo [current_project]
+set_property ip_repo_paths {
+  d:/intelligent_traffic_light/ip_repo/intellight_database/intellight_database_1.0
+  d:/intelligent_traffic_light/ip_repo
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -92,6 +96,7 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v
+  D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/parameters.v
   D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/CU.v
 }
 read_ip -quiet D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ip/intellight_v2_CU_0_0/intellight_v2_CU_0_0.xci

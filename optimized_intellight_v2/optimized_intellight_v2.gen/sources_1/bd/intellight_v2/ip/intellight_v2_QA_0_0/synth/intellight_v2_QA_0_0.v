@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "QA,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "intellight_v2_QA_0_0,QA,{}" *)
-(* CORE_GENERATION_INFO = "intellight_v2_QA_0_0,QA,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=QA,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,Q_WIDTH=16,R_WIDTH=16,A_WIDTH=4}" *)
+(* CORE_GENERATION_INFO = "intellight_v2_QA_0_0,QA,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=QA,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,S_WIDTH=8,Q_WIDTH=16,A_WIDTH=4,R_WIDTH=16,L_WIDTH=4,ITV_WIDTH=16,WEN_WIDTH=8,RND_WIDTH=16,CTR_WIDTH=16,ADDR_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module intellight_v2_QA_0_0 (
@@ -88,9 +88,16 @@ input wire [1 : 0] A_road;
 output wire [15 : 0] Q_new;
 
   QA #(
+    .S_WIDTH(8),
     .Q_WIDTH(16),
+    .A_WIDTH(4),
     .R_WIDTH(16),
-    .A_WIDTH(4)
+    .L_WIDTH(4),
+    .ITV_WIDTH(16),
+    .WEN_WIDTH(8),
+    .RND_WIDTH(16),
+    .CTR_WIDTH(16),
+    .ADDR_WIDTH(32)
   ) inst (
     .clk(clk),
     .rst(rst),

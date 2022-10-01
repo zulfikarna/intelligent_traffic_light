@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Thu Sep 29 17:17:34 2022
+// Date        : Sat Oct  1 14:19:35 2022
 // Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_MII_0_0/intellight_v2_MII_0_0_sim_netlist.v
@@ -43,7 +43,7 @@ module intellight_v2_MII_0_0
     A_reg5);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 58823528, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input rst;
-  input [11:0]S;
+  input [7:0]S;
   input [15:0]Q_new;
   input wen_cu;
   input [3:0]A;
@@ -82,7 +82,7 @@ module intellight_v2_MII_0_0
   wire [63:0]Droad2;
   wire [63:0]Droad3;
   wire [15:0]Q_new;
-  wire [11:0]S;
+  wire [7:0]S;
   wire clk;
   wire wen0;
   wire wen1;
@@ -90,7 +90,7 @@ module intellight_v2_MII_0_0
   wire wen3;
   wire [6:0]\^wen_bram ;
   wire wen_cu;
-  wire [13:2]\^wr_addr ;
+  wire [9:2]\^wr_addr ;
 
   assign rd_addr[31] = \<const0> ;
   assign rd_addr[30] = \<const0> ;
@@ -110,7 +110,11 @@ module intellight_v2_MII_0_0
   assign rd_addr[16] = \<const0> ;
   assign rd_addr[15] = \<const0> ;
   assign rd_addr[14] = \<const0> ;
-  assign rd_addr[13:2] = S;
+  assign rd_addr[13] = \<const0> ;
+  assign rd_addr[12] = \<const0> ;
+  assign rd_addr[11] = \<const0> ;
+  assign rd_addr[10] = \<const0> ;
+  assign rd_addr[9:2] = S;
   assign rd_addr[1] = \<const0> ;
   assign rd_addr[0] = \<const0> ;
   assign wen_bram[7] = \^wen_bram [6];
@@ -139,7 +143,11 @@ module intellight_v2_MII_0_0
   assign wr_addr[16] = \<const0> ;
   assign wr_addr[15] = \<const0> ;
   assign wr_addr[14] = \<const0> ;
-  assign wr_addr[13:2] = \^wr_addr [13:2];
+  assign wr_addr[13] = \<const0> ;
+  assign wr_addr[12] = \<const0> ;
+  assign wr_addr[11] = \<const0> ;
+  assign wr_addr[10] = \<const0> ;
+  assign wr_addr[9:2] = \^wr_addr [9:2];
   assign wr_addr[1] = \<const0> ;
   assign wr_addr[0] = \<const0> ;
   GND GND
@@ -195,7 +203,7 @@ module intellight_v2_MII_0_0_MII
     Droad2,
     Q_new,
     wen_cu);
-  output [11:0]wr_addr;
+  output [7:0]wr_addr;
   output [3:0]Q;
   output [3:0]A_reg0;
   output [3:0]A_reg2;
@@ -209,7 +217,7 @@ module intellight_v2_MII_0_0_MII
   output wen2;
   output wen3;
   input clk;
-  input [11:0]S;
+  input [7:0]S;
   input [3:0]A;
   input [63:0]Droad1;
   input [63:0]Droad0;
@@ -298,10 +306,8 @@ module intellight_v2_MII_0_0_MII
   wire [63:0]Droad3;
   wire [3:0]Q;
   wire [15:0]Q_new;
-  wire [11:0]S;
+  wire [7:0]S;
   wire \S_reg3_reg[0]_srl4_n_0 ;
-  wire \S_reg3_reg[10]_srl4_n_0 ;
-  wire \S_reg3_reg[11]_srl4_n_0 ;
   wire \S_reg3_reg[1]_srl4_n_0 ;
   wire \S_reg3_reg[2]_srl4_n_0 ;
   wire \S_reg3_reg[3]_srl4_n_0 ;
@@ -309,8 +315,6 @@ module intellight_v2_MII_0_0_MII
   wire \S_reg3_reg[5]_srl4_n_0 ;
   wire \S_reg3_reg[6]_srl4_n_0 ;
   wire \S_reg3_reg[7]_srl4_n_0 ;
-  wire \S_reg3_reg[8]_srl4_n_0 ;
-  wire \S_reg3_reg[9]_srl4_n_0 ;
   wire clk;
   wire [63:0]p_0_in;
   wire wen0;
@@ -326,7 +330,7 @@ module intellight_v2_MII_0_0_MII
   wire \wen_bram[7]_i_1_n_0 ;
   wire [5:1]wen_bram_temp;
   wire wen_cu;
-  wire [11:0]wr_addr;
+  wire [7:0]wr_addr;
 
   FDRE \A_reg_reg[0][0] 
        (.C(clk),
@@ -2212,28 +2216,6 @@ module intellight_v2_MII_0_0_MII
         .D(S[0]),
         .Q(\S_reg3_reg[0]_srl4_n_0 ));
   (* srl_bus_name = "\inst/S_reg3_reg " *) 
-  (* srl_name = "\inst/S_reg3_reg[10]_srl4 " *) 
-  SRL16E \S_reg3_reg[10]_srl4 
-       (.A0(1'b1),
-        .A1(1'b1),
-        .A2(1'b0),
-        .A3(1'b0),
-        .CE(1'b1),
-        .CLK(clk),
-        .D(S[10]),
-        .Q(\S_reg3_reg[10]_srl4_n_0 ));
-  (* srl_bus_name = "\inst/S_reg3_reg " *) 
-  (* srl_name = "\inst/S_reg3_reg[11]_srl4 " *) 
-  SRL16E \S_reg3_reg[11]_srl4 
-       (.A0(1'b1),
-        .A1(1'b1),
-        .A2(1'b0),
-        .A3(1'b0),
-        .CE(1'b1),
-        .CLK(clk),
-        .D(S[11]),
-        .Q(\S_reg3_reg[11]_srl4_n_0 ));
-  (* srl_bus_name = "\inst/S_reg3_reg " *) 
   (* srl_name = "\inst/S_reg3_reg[1]_srl4 " *) 
   SRL16E \S_reg3_reg[1]_srl4 
        (.A0(1'b1),
@@ -2310,28 +2292,6 @@ module intellight_v2_MII_0_0_MII
         .CLK(clk),
         .D(S[7]),
         .Q(\S_reg3_reg[7]_srl4_n_0 ));
-  (* srl_bus_name = "\inst/S_reg3_reg " *) 
-  (* srl_name = "\inst/S_reg3_reg[8]_srl4 " *) 
-  SRL16E \S_reg3_reg[8]_srl4 
-       (.A0(1'b1),
-        .A1(1'b1),
-        .A2(1'b0),
-        .A3(1'b0),
-        .CE(1'b1),
-        .CLK(clk),
-        .D(S[8]),
-        .Q(\S_reg3_reg[8]_srl4_n_0 ));
-  (* srl_bus_name = "\inst/S_reg3_reg " *) 
-  (* srl_name = "\inst/S_reg3_reg[9]_srl4 " *) 
-  SRL16E \S_reg3_reg[9]_srl4 
-       (.A0(1'b1),
-        .A1(1'b1),
-        .A2(1'b0),
-        .A3(1'b0),
-        .CE(1'b1),
-        .CLK(clk),
-        .D(S[9]),
-        .Q(\S_reg3_reg[9]_srl4_n_0 ));
   intellight_v2_MII_0_0_wen_decoder decod0
        (.D({wen_bram_temp[5],wen_bram_temp[3],wen_bram_temp[1]}),
         .Q(Q[1:0]));
@@ -2426,30 +2386,6 @@ module intellight_v2_MII_0_0_MII
         .CE(1'b1),
         .D(\wen_bram[7]_i_1_n_0 ),
         .Q(wen_bram[3]),
-        .R(1'b0));
-  FDRE \wr_addr_reg[10] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\S_reg3_reg[8]_srl4_n_0 ),
-        .Q(wr_addr[8]),
-        .R(1'b0));
-  FDRE \wr_addr_reg[11] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\S_reg3_reg[9]_srl4_n_0 ),
-        .Q(wr_addr[9]),
-        .R(1'b0));
-  FDRE \wr_addr_reg[12] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\S_reg3_reg[10]_srl4_n_0 ),
-        .Q(wr_addr[10]),
-        .R(1'b0));
-  FDRE \wr_addr_reg[13] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\S_reg3_reg[11]_srl4_n_0 ),
-        .Q(wr_addr[11]),
         .R(1'b0));
   FDRE \wr_addr_reg[2] 
        (.C(clk),

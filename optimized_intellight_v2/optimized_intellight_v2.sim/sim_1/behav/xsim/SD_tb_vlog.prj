@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" --include "../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" --include "D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../optimized_intellight_v2.srcs/sources_1/new/SD.v" \
+"../../../../optimized_intellight_v2.srcs/sources_1/new/file_arith.v" \
+"../../../../optimized_intellight_v2.srcs/sim_1/new/SD_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

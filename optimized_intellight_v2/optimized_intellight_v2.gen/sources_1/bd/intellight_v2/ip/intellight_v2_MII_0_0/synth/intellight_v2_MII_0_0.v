@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "MII,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "intellight_v2_MII_0_0,MII,{}" *)
-(* CORE_GENERATION_INFO = "intellight_v2_MII_0_0,MII,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=MII,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,ADDR_WIDTH=32,WEN_WIDTH=8,Q_WIDTH=16,S_WIDTH=12,A_WIDTH=4}" *)
+(* CORE_GENERATION_INFO = "intellight_v2_MII_0_0,MII,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=MII,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,S_WIDTH=8,Q_WIDTH=16,A_WIDTH=4,R_WIDTH=16,L_WIDTH=4,ITV_WIDTH=16,WEN_WIDTH=8,RND_WIDTH=16,CTR_WIDTH=16,ADDR_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module intellight_v2_MII_0_0 (
@@ -89,7 +89,7 @@ input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
 input wire rst;
-input wire [11 : 0] S;
+input wire [7 : 0] S;
 input wire [15 : 0] Q_new;
 input wire wen_cu;
 input wire [3 : 0] A;
@@ -114,11 +114,16 @@ output wire [3 : 0] A_reg4;
 output wire [3 : 0] A_reg5;
 
   MII #(
-    .ADDR_WIDTH(32),
-    .WEN_WIDTH(8),
+    .S_WIDTH(8),
     .Q_WIDTH(16),
-    .S_WIDTH(12),
-    .A_WIDTH(4)
+    .A_WIDTH(4),
+    .R_WIDTH(16),
+    .L_WIDTH(4),
+    .ITV_WIDTH(16),
+    .WEN_WIDTH(8),
+    .RND_WIDTH(16),
+    .CTR_WIDTH(16),
+    .ADDR_WIDTH(32)
   ) inst (
     .clk(clk),
     .rst(rst),

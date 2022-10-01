@@ -10,11 +10,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module MII
-#(  parameter ADDR_WIDTH = 32,
-    parameter WEN_WIDTH = 8,
-    parameter Q_WIDTH = 16,
-    parameter S_WIDTH = 12,
-    parameter A_WIDTH = 4)
+//#(  parameter ADDR_WIDTH = 32,
+//    parameter WEN_WIDTH = 8,
+//    parameter Q_WIDTH = 16,
+//    parameter S_WIDTH = 12,
+//    parameter A_WIDTH = 4)
 (
     input wire clk, rst, 
     input wire [S_WIDTH-1:0] S,
@@ -30,7 +30,7 @@ module MII
     output reg wen0, wen1, wen2, wen3,
     output wire [A_WIDTH-1:0] A_reg0, A_reg1, A_reg2, A_reg3, A_reg4, A_reg5
     );
-    
+    `include "parameters.v"
     // 1. Address configuration
     reg [S_WIDTH-1:0] S_reg0, S_reg1, S_reg2, S_reg3, S_reg4, S_reg5, S_reg6, S_reg7;
     always @(posedge clk) begin

@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Wed Sep 28 13:54:31 2022
+// Date        : Sat Oct  1 14:19:35 2022
 // Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_PG_0_0/intellight_v2_PG_0_0_sim_netlist.v
@@ -27,7 +27,7 @@ module intellight_v2_PG_0_0
     mode,
     A_road,
     A);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 58823528, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN intellight_v2_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input rst;
   input [63:0]Droad0;
   input [63:0]Droad1;
@@ -96,10 +96,10 @@ module intellight_v2_PG_0_0_PG
   wire [3:0]A;
   wire A1__0;
   wire A_dur1;
+  wire A_dur1_carry__0_i_1_n_0;
+  wire A_dur1_carry__0_i_2_n_0;
   wire A_dur1_carry__0_n_3;
-  wire A_dur1_carry_i_1__0_n_0;
   wire A_dur1_carry_i_1_n_0;
-  wire A_dur1_carry_i_2__0_n_0;
   wire A_dur1_carry_i_2_n_0;
   wire A_dur1_carry_i_3_n_0;
   wire A_dur1_carry_i_4_n_0;
@@ -265,7 +265,23 @@ module intellight_v2_PG_0_0_PG
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(NLW_A_dur1_carry__0_O_UNCONNECTED[3:0]),
-        .S({1'b0,1'b0,A_dur1_carry_i_1__0_n_0,A_dur1_carry_i_2__0_n_0}));
+        .S({1'b0,1'b0,A_dur1_carry__0_i_1_n_0,A_dur1_carry__0_i_2_n_0}));
+  LUT2 #(
+    .INIT(4'h9)) 
+    A_dur1_carry__0_i_1
+       (.I0(Q_max_reg0[15]),
+        .I1(\Q_reg0_reg[0] [15]),
+        .O(A_dur1_carry__0_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    A_dur1_carry__0_i_2
+       (.I0(\Q_reg0_reg[0] [12]),
+        .I1(Q_max_reg0[12]),
+        .I2(Q_max_reg0[14]),
+        .I3(\Q_reg0_reg[0] [14]),
+        .I4(Q_max_reg0[13]),
+        .I5(\Q_reg0_reg[0] [13]),
+        .O(A_dur1_carry__0_i_2_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     A_dur1_carry_i_1
@@ -276,12 +292,6 @@ module intellight_v2_PG_0_0_PG
         .I4(Q_max_reg0[10]),
         .I5(\Q_reg0_reg[0] [10]),
         .O(A_dur1_carry_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    A_dur1_carry_i_1__0
-       (.I0(Q_max_reg0[15]),
-        .I1(\Q_reg0_reg[0] [15]),
-        .O(A_dur1_carry_i_1__0_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     A_dur1_carry_i_2
@@ -292,16 +302,6 @@ module intellight_v2_PG_0_0_PG
         .I4(Q_max_reg0[7]),
         .I5(\Q_reg0_reg[0] [7]),
         .O(A_dur1_carry_i_2_n_0));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    A_dur1_carry_i_2__0
-       (.I0(\Q_reg0_reg[0] [12]),
-        .I1(Q_max_reg0[12]),
-        .I2(Q_max_reg0[14]),
-        .I3(\Q_reg0_reg[0] [14]),
-        .I4(Q_max_reg0[13]),
-        .I5(\Q_reg0_reg[0] [13]),
-        .O(A_dur1_carry_i_2__0_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     A_dur1_carry_i_3

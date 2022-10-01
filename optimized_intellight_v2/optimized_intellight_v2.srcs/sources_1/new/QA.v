@@ -10,10 +10,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module QA // verified
-#(  parameter Q_WIDTH = 16,
-    parameter R_WIDTH = 16,
-    parameter A_WIDTH = 4
-    )
+//#(  parameter Q_WIDTH = 16,
+//    parameter R_WIDTH = 16,
+//    parameter A_WIDTH = 4
+//    )
 (
     input wire clk, rst,
     input wire [2:0] alpha, gamma,
@@ -25,6 +25,7 @@ module QA // verified
     // for debugging 
 //    output wire signed [Q_WIDTH-1:0] x, Qmax, gm
     );
+    `include "parameters.v"
     // Registers for Q-values
     reg signed [Q_WIDTH-1:0] Q_reg0 [0:3];
     reg signed [Q_WIDTH-1:0] Q_reg1 [0:3];

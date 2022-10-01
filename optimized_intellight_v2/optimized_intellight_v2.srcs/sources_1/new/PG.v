@@ -10,10 +10,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module PG // verified
-#(  parameter   Q_WIDTH = 16,
-    parameter   Q_NUMBR = 4,
-    parameter   A_WIDTH = 4
-    )
+//#(  parameter   Q_WIDTH = 16,
+//    parameter   Q_NUMBR = 4,
+//    parameter   A_WIDTH = 4
+//    )
 (
     input wire clk, rst,
     input wire [Q_WIDTH*4-1:0] Droad0, Droad1, Droad2, Droad3,
@@ -26,6 +26,7 @@ module PG // verified
 //    output wire [Q_WIDTH*4-1:0] Q,
 //    output wire signed [Q_WIDTH-1:0] Q0, Q1, Q2, Q3, Q_max
     ); 
+    `include "parameters.v"
     localparam N_ROAD = 4;
     // Registers 
     reg signed [Q_WIDTH-1:0] Q_max_reg0;  

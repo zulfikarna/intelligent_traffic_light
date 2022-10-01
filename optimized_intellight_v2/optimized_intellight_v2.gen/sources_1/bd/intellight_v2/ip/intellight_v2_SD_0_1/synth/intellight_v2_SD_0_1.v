@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "SD,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "intellight_v2_SD_0_1,SD,{}" *)
-(* CORE_GENERATION_INFO = "intellight_v2_SD_0_1,SD,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=SD,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,S_WIDTH=12,L_WIDTH=4,A_WIDTH=4,ITV_WIDTH=16}" *)
+(* CORE_GENERATION_INFO = "intellight_v2_SD_0_1,SD,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=SD,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,S_WIDTH=8,Q_WIDTH=16,A_WIDTH=4,R_WIDTH=16,L_WIDTH=4,ITV_WIDTH=16,WEN_WIDTH=8,RND_WIDTH=16,CTR_WIDTH=16,ADDR_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module intellight_v2_SD_0_1 (
@@ -78,20 +78,26 @@ input wire clk;
 input wire rst;
 input wire mode;
 input wire [3 : 0] A;
-input wire [11 : 0] S_sim;
+input wire [7 : 0] S_sim;
 input wire [15 : 0] L_inc;
 input wire [15 : 0] L_dec;
-output wire [11 : 0] S;
+output wire [7 : 0] S;
 output wire [3 : 0] L0;
 output wire [3 : 0] L1;
 output wire [3 : 0] L2;
 output wire [3 : 0] L3;
 
   SD #(
-    .S_WIDTH(12),
-    .L_WIDTH(4),
+    .S_WIDTH(8),
+    .Q_WIDTH(16),
     .A_WIDTH(4),
-    .ITV_WIDTH(16)
+    .R_WIDTH(16),
+    .L_WIDTH(4),
+    .ITV_WIDTH(16),
+    .WEN_WIDTH(8),
+    .RND_WIDTH(16),
+    .CTR_WIDTH(16),
+    .ADDR_WIDTH(32)
   ) inst (
     .clk(clk),
     .rst(rst),
