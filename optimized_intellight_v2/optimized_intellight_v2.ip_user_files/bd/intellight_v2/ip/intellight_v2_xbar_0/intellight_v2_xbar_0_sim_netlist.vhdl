@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
 -- Date        : Thu Sep 29 17:55:07 2022
 -- Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_xbar_0/intellight_v2_xbar_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top intellight_v2_xbar_0 -prefix
+--               intellight_v2_xbar_0_ intellight_v2_xbar_0_sim_netlist.vhdl
 -- Design      : intellight_v2_xbar_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -104,8 +104,6 @@ entity intellight_v2_xbar_0_axi_crossbar_v2_1_27_addr_arbiter_sasd is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of intellight_v2_xbar_0_axi_crossbar_v2_1_27_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_27_addr_arbiter_sasd";
 end intellight_v2_xbar_0_axi_crossbar_v2_1_27_addr_arbiter_sasd;
 
 architecture STRUCTURE of intellight_v2_xbar_0_axi_crossbar_v2_1_27_addr_arbiter_sasd is
@@ -2389,8 +2387,6 @@ entity intellight_v2_xbar_0_axi_crossbar_v2_1_27_decerr_slave is
     \gen_axi.s_axi_rlast_i_reg_1\ : in STD_LOGIC;
     \FSM_onehot_gen_axi.write_cs_reg[2]_1\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of intellight_v2_xbar_0_axi_crossbar_v2_1_27_decerr_slave : entity is "axi_crossbar_v2_1_27_decerr_slave";
 end intellight_v2_xbar_0_axi_crossbar_v2_1_27_decerr_slave;
 
 architecture STRUCTURE of intellight_v2_xbar_0_axi_crossbar_v2_1_27_decerr_slave is
@@ -3061,8 +3057,6 @@ entity intellight_v2_xbar_0_axi_crossbar_v2_1_27_splitter is
     \m_ready_d_reg[1]_2\ : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of intellight_v2_xbar_0_axi_crossbar_v2_1_27_splitter : entity is "axi_crossbar_v2_1_27_splitter";
 end intellight_v2_xbar_0_axi_crossbar_v2_1_27_splitter;
 
 architecture STRUCTURE of intellight_v2_xbar_0_axi_crossbar_v2_1_27_splitter is
@@ -3432,8 +3426,6 @@ entity intellight_v2_xbar_0_axi_register_slice_v2_1_26_axic_register_slice is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of intellight_v2_xbar_0_axi_register_slice_v2_1_26_axic_register_slice : entity is "axi_register_slice_v2_1_26_axic_register_slice";
 end intellight_v2_xbar_0_axi_register_slice_v2_1_26_axic_register_slice;
 
 architecture STRUCTURE of intellight_v2_xbar_0_axi_register_slice_v2_1_26_axic_register_slice is
@@ -8247,8 +8239,6 @@ entity intellight_v2_xbar_0_axi_crossbar_v2_1_27_crossbar_sasd is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of intellight_v2_xbar_0_axi_crossbar_v2_1_27_crossbar_sasd : entity is "axi_crossbar_v2_1_27_crossbar_sasd";
 end intellight_v2_xbar_0_axi_crossbar_v2_1_27_crossbar_sasd;
 
 architecture STRUCTURE of intellight_v2_xbar_0_axi_crossbar_v2_1_27_crossbar_sasd is
@@ -8966,8 +8956,6 @@ entity intellight_v2_xbar_0_axi_crossbar_v2_1_27_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of intellight_v2_xbar_0_axi_crossbar_v2_1_27_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of intellight_v2_xbar_0_axi_crossbar_v2_1_27_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of intellight_v2_xbar_0_axi_crossbar_v2_1_27_axi_crossbar : entity is "axi_crossbar_v2_1_27_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of intellight_v2_xbar_0_axi_crossbar_v2_1_27_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;

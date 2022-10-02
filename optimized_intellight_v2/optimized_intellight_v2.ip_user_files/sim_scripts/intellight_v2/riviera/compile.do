@@ -16,11 +16,11 @@ vlib riviera/axi_register_slice_v2_1_26
 vlib riviera/fifo_generator_v13_2_7
 vlib riviera/axi_data_fifo_v2_1_25
 vlib riviera/axi_crossbar_v2_1_27
-vlib riviera/axi_bram_ctrl_v4_1_6
-vlib riviera/blk_mem_gen_v8_4_5
 vlib riviera/axi_protocol_converter_v2_1_26
 vlib riviera/axi_clock_converter_v2_1_25
+vlib riviera/blk_mem_gen_v8_4_5
 vlib riviera/axi_dwidth_converter_v2_1_26
+vlib riviera/axi_bram_ctrl_v4_1_6
 
 vmap xilinx_vip riviera/xilinx_vip
 vmap xpm riviera/xpm
@@ -37,11 +37,11 @@ vmap axi_register_slice_v2_1_26 riviera/axi_register_slice_v2_1_26
 vmap fifo_generator_v13_2_7 riviera/fifo_generator_v13_2_7
 vmap axi_data_fifo_v2_1_25 riviera/axi_data_fifo_v2_1_25
 vmap axi_crossbar_v2_1_27 riviera/axi_crossbar_v2_1_27
-vmap axi_bram_ctrl_v4_1_6 riviera/axi_bram_ctrl_v4_1_6
-vmap blk_mem_gen_v8_4_5 riviera/blk_mem_gen_v8_4_5
 vmap axi_protocol_converter_v2_1_26 riviera/axi_protocol_converter_v2_1_26
 vmap axi_clock_converter_v2_1_25 riviera/axi_clock_converter_v2_1_25
+vmap blk_mem_gen_v8_4_5 riviera/blk_mem_gen_v8_4_5
 vmap axi_dwidth_converter_v2_1_26 riviera/axi_dwidth_converter_v2_1_26
+vmap axi_bram_ctrl_v4_1_6 riviera/axi_bram_ctrl_v4_1_6
 
 vlog -work xilinx_vip  -sv2k12 "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
 "D:/Program/Vivado/2022.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
@@ -114,6 +114,28 @@ vlog -work axi_crossbar_v2_1_27  -v2k5 "+incdir+../../../../optimized_intellight
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
 "../../../bd/intellight_v2/ip/intellight_v2_xbar_0/sim/intellight_v2_xbar_0.v" \
+
+vlog -work axi_protocol_converter_v2_1_26  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/90c8/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../bd/intellight_v2/ip/intellight_v2_auto_pc_2/sim/intellight_v2_auto_pc_2.v" \
+
+vlog -work axi_clock_converter_v2_1_25  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/e893/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
+
+vlog -work blk_mem_gen_v8_4_5  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/25a8/simulation/blk_mem_gen_v8_4.v" \
+
+vlog -work axi_dwidth_converter_v2_1_26  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/b3c7/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../bd/intellight_v2/ip/intellight_v2_auto_us_0/sim/intellight_v2_auto_us_0.v" \
+"../../../bd/intellight_v2/ip/intellight_v2_auto_ds_0/sim/intellight_v2_auto_ds_0.v" \
+"../../../bd/intellight_v2/ip/intellight_v2_auto_pc_0/sim/intellight_v2_auto_pc_0.v" \
+"../../../bd/intellight_v2/ip/intellight_v2_auto_ds_1/sim/intellight_v2_auto_ds_1.v" \
+"../../../bd/intellight_v2/ip/intellight_v2_auto_pc_1/sim/intellight_v2_auto_pc_1.v" \
 "../../../bd/intellight_v2/ip/intellight_v2_action_ram_wrapper_0_0/sim/intellight_v2_action_ram_wrapper_0_0.v" \
 
 vcom -work axi_bram_ctrl_v4_1_6 -93 \
@@ -124,9 +146,6 @@ vcom -work xil_defaultlib -93 \
 "../../../bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_1_0/sim/intellight_v2_axi_bram_ctrl_1_0.vhd" \
 "../../../bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_2_0/sim/intellight_v2_axi_bram_ctrl_2_0.vhd" \
 "../../../bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_3_0/sim/intellight_v2_axi_bram_ctrl_3_0.vhd" \
-
-vlog -work blk_mem_gen_v8_4_5  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
-"../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/25a8/simulation/blk_mem_gen_v8_4.v" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
 "../../../bd/intellight_v2/ip/intellight_v2_comm_ram_0_0/sim/intellight_v2_comm_ram_0_0.v" \
@@ -143,25 +162,6 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../optimized_intellight_v2.ge
 "../../../bd/intellight_v2/ipshared/0463/hdl/intellight_database_v1_0_S00_AXI.v" \
 "../../../bd/intellight_v2/ipshared/0463/hdl/intellight_database_v1_0.v" \
 "../../../bd/intellight_v2/ip/intellight_v2_intellight_database_0_1/sim/intellight_v2_intellight_database_0_1.v" \
-
-vlog -work axi_protocol_converter_v2_1_26  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
-"../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/90c8/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
-
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
-"../../../bd/intellight_v2/ip/intellight_v2_auto_pc_2/sim/intellight_v2_auto_pc_2.v" \
-
-vlog -work axi_clock_converter_v2_1_25  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
-"../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/e893/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
-
-vlog -work axi_dwidth_converter_v2_1_26  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
-"../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/b3c7/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
-
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
-"../../../bd/intellight_v2/ip/intellight_v2_auto_us_0/sim/intellight_v2_auto_us_0.v" \
-"../../../bd/intellight_v2/ip/intellight_v2_auto_ds_0/sim/intellight_v2_auto_ds_0.v" \
-"../../../bd/intellight_v2/ip/intellight_v2_auto_pc_0/sim/intellight_v2_auto_pc_0.v" \
-"../../../bd/intellight_v2/ip/intellight_v2_auto_ds_1/sim/intellight_v2_auto_ds_1.v" \
-"../../../bd/intellight_v2/ip/intellight_v2_auto_pc_1/sim/intellight_v2_auto_pc_1.v" \
 "../../../bd/intellight_v2/sim/intellight_v2.v" \
 
 vlog -work xil_defaultlib \
