@@ -23,23 +23,33 @@ N_LEVEL = 4
 # MODE =  "CONF 3"
 # DEC = [0.75, 1.75, 2.75, 3.75]
 # INC = [0.75, 1, 1.25, 1.5]
-MODE =  "CONF 4"
-DEC = [1, 2, 3, 3.75]
-INC = [0.25, 0.5, 0.75, 1]
+# MODE =  "CONF 4"
+# DEC = [1, 2, 3, 3.75]
+# INC = [0.25, 0.5, 0.75, 1]
 # MODE =  "CONF 5"
 # DEC = [0.5, 1.5, 2.5, 3.5]
 # INC = [0.25, 0.5, 0.75, 1]
 # MODE =  "CONF 6"
 # DEC = [0.25, 1.25, 2.25, 3.25]
 # INC = [0.25, 0.5, 0.75, 1]
+
+R = [-20, -10, 0, 10]
+
+TR_F = 0.25
+INC_F = 0.25
+MODE =  "CONF 1" # A > (B = C = D)
+DEC = [0.75, 1.75, 2.75, 3.75]
+INC = [[0 + TR_F + INC_F, 0.25 + TR_F + INC_F, 0.5 + TR_F + INC_F, 0.75 + TR_F + INC_F], [0 + TR_F, 0.25 + TR_F, 0.5 + TR_F, 0.75 + TR_F], [0 + TR_F, 0.25 + TR_F, 0.5 + TR_F, 0.75 + TR_F], [0 + TR_F, 0.25 + TR_F, 0.5 + TR_F, 0.75 + TR_F]]
 MAX_LEVEL = 3.75
 N_BIT = math.floor(math.log(N_LEVEL,2))
 N_ACTION = N_LEVEL*N_LANE
 N_STATE = N_LEVEL**N_LANE
 GAMMA = 0.9
 ALPHA = 0.1
-MAX_EPISODE = 1023
-MAX_STEP = 16383
+MAX_EPISODE = 1000
+MAX_STEP = 10000
+# MAX_EPISODE = 2047
+# MAX_STEP = 16383
 # lsfr_2bit = LFSR(initstate=[1,1,1], fpoly=[3,2])
 # lsfr_2bit.info()
 
@@ -77,13 +87,13 @@ def EV(_traffic_level_, _action_, _action_sel_,  _q_matrix_):
     # Determine the step up interval
     _inc_level_ = 0
     if (_action_[1] == 0):
-        _inc_level_ = INC[0]
+        _inc_level_ = INC[action[1]][0]
     elif (_action_[1] == 1):
-        _inc_level_ = INC[1]
+        _inc_level_ = INC[action[1]][1]
     elif (_action_[1] == 2):
-        _inc_level_ = INC[2]
+        _inc_level_ = INC[action[1]][2]
     else:
-        _inc_level_ = INC[3]
+        _inc_level_ = INC[action[1]][3]
 
     # Update traffic level
     for _lane_ in range(N_LANE):
@@ -101,12 +111,14 @@ def EV(_traffic_level_, _action_, _action_sel_,  _q_matrix_):
     # Determine reward
     _reward_ = 0
     for _lane_ in range(N_LANE):
-        if (math.floor(_traffic_level_[_lane_]) <= 0):
-            _reward_ = _reward_ + 10
-        elif(math.floor(_traffic_level_[_lane_]) == 3):
-            _reward_ = _reward_ - 10
+        if (math.floor(_traffic_level_[_lane_]) == 0):
+            _reward_ = _reward_ + R[3]
+        elif(math.floor(_traffic_level_[_lane_]) == 1):
+            _reward_ = _reward_ + R[2]
+        elif(math.floor(_traffic_level_[_lane_]) == 2):
+            _reward_ = _reward_ + R[1]
         else:
-            _reward_ = _reward_ - 1 
+            _reward_ = _reward_ + R[0]
 
     # Determine next state 
     _state_next_ = math.floor(_traffic_level_[0]) + (2**(N_BIT*1))*math.floor(_traffic_level_[1]) + (2**(N_BIT*2))*math.floor(_traffic_level_[2]) + (2**(N_BIT*3))*math.floor(_traffic_level_[3])
@@ -145,8 +157,8 @@ for episode in range(MAX_EPISODE):
         # Append cummulative database
         state_visited[state_curr] = state_visited[state_curr] + 1
         reward_sum = reward_sum + reward
-        if (state_next == 0) :
-            break
+        # if (state_curr == 0) :
+        #     break
         if (action_sel == False):
             act_random[episode] = act_random[episode] + 1
         else:
@@ -170,14 +182,14 @@ for i in range(len(cum_reward_avg) - N_AVG):
 for i in range(N_AVG):
     cum_reward_mov.append(cum_reward_mov[MAX_EPISODE - N_AVG - 1])
 
-# # Plotting Random Action taken
-# plt.plot(act_random)
-# plt.legend(loc='best')
-# plt.title('Random action taken')
-# plt.ylabel('Times')
-# plt.xlabel('Episode')
-# plt.savefig("{}_act_random.png".format(MODE))
-# plt.show()
+# Plotting Random Action taken
+plt.plot(act_random)
+plt.legend(loc='best')
+plt.title('Random action taken')
+plt.ylabel('Times')
+plt.xlabel('Episode')
+plt.savefig("{}_act_random.png".format(MODE))
+plt.show()
 
 # # Plotting Greed Action taken
 # plt.plot(act_greed)
