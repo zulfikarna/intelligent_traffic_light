@@ -35,11 +35,15 @@ N_LEVEL = 4
 
 R = [-20, -10, 0, 10]
 
-TR_F = 0.25
-INC_F = 0.25
-MODE =  "CONF 1" # A > (B = C = D)
-DEC = [0.75, 1.75, 2.75, 3.75]
-INC = [[0 + TR_F + INC_F, 0.25 + TR_F + INC_F, 0.5 + TR_F + INC_F, 0.75 + TR_F + INC_F], [0 + TR_F, 0.25 + TR_F, 0.5 + TR_F, 0.75 + TR_F], [0 + TR_F, 0.25 + TR_F, 0.5 + TR_F, 0.75 + TR_F], [0 + TR_F, 0.25 + TR_F, 0.5 + TR_F, 0.75 + TR_F]]
+RDF_A = 0.25
+RDF_B = 0
+RDF_C = 0
+RDF_D = 0
+RDF = 0.25
+GRF = 0
+MODE =  "CONF X" # A > (B = C = D)
+DEC = [0.75 - GRF, 1.75 - GRF, 2.75 - GRF, 3.75 - GRF]
+INC = [[0 + RDF + RDF_A, 0.25 + RDF + RDF_A, 0.5 + RDF + RDF_A, 0.75 + RDF + RDF_A], [0 + RDF + RDF_B, 0.25 + RDF + RDF_B, 0.5 + RDF + RDF_B, 0.75 + RDF + RDF_B], [0 + RDF + RDF_C, 0.25 + RDF + RDF_C, 0.5 + RDF + RDF_C, 0.75 + RDF + RDF_C], [0 + RDF + RDF_D, 0.25 + RDF + RDF_D, 0.5 + RDF + RDF_D, 0.75 + RDF + RDF_D]]
 MAX_LEVEL = 3.75
 N_BIT = math.floor(math.log(N_LEVEL,2))
 N_ACTION = N_LEVEL*N_LANE

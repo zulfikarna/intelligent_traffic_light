@@ -40,8 +40,8 @@
       "PG_0": "",
       "QA_0": "",
       "RD_0": "",
-      "SD_0": "",
-      "intellight_database_0": ""
+      "intellight_database_0": "",
+      "SD_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -3824,6 +3824,17 @@
           }
         }
       },
+      "intellight_database_0": {
+        "vlnv": "xilinx.com:user:intellight_database:1.0",
+        "xci_name": "clone_intellight_database_0_1",
+        "xci_path": "ip\\clone_intellight_database_0_1\\clone_intellight_database_0_1.xci",
+        "inst_hier_path": "intellight_database_0",
+        "parameters": {
+          "S_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
       "SD_0": {
         "vlnv": "xilinx.com:module_ref:SD:1.0",
         "xci_name": "clone_SD_0_1",
@@ -3862,7 +3873,22 @@
             "left": "7",
             "right": "0"
           },
-          "L_inc": {
+          "L_inc_a": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "L_inc_b": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "L_inc_c": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "L_inc_d": {
             "direction": "I",
             "left": "15",
             "right": "0"
@@ -3896,17 +3922,6 @@
             "direction": "O",
             "left": "3",
             "right": "0"
-          }
-        }
-      },
-      "intellight_database_0": {
-        "vlnv": "xilinx.com:user:intellight_database:1.0",
-        "xci_name": "clone_intellight_database_0_1",
-        "xci_path": "ip\\clone_intellight_database_0_1\\clone_intellight_database_0_1.xci",
-        "inst_hier_path": "intellight_database_0",
-        "parameters": {
-          "S_WIDTH": {
-            "value": "12"
           }
         }
       }
@@ -4273,8 +4288,8 @@
           "PG_0/clk",
           "QA_0/clk",
           "RD_0/clk",
-          "SD_0/clk",
-          "intellight_database_0/s00_axi_aclk"
+          "intellight_database_0/s00_axi_aclk",
+          "SD_0/clk"
         ]
       },
       "intellight_database_0_L_dec": {
@@ -4285,8 +4300,7 @@
       },
       "intellight_database_0_L_inc": {
         "ports": [
-          "intellight_database_0/L_inc",
-          "SD_0/L_inc"
+          "intellight_database_0/L_inc"
         ]
       },
       "intellight_database_0_S_sim": {

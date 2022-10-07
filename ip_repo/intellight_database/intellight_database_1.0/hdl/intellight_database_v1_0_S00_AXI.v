@@ -6,6 +6,7 @@
 		// Users to add parameters here
 		parameter integer Q_WIDTH = 16,
 		parameter integer S_WIDTH = 8,
+		parameter integer L_WIDTH = 4,
 
 		// User parameters ends
 		// Do not modify the parameters beyond this line
@@ -22,7 +23,7 @@
 		output wire [15:0] max_step, max_episode,
 		output wire [15:0] seed,
 		output wire [S_WIDTH-1:0] S_sim,
-		output wire [15:0] L_inc, L_dec,
+		output wire [L_WIDTH*4-1:0] L_inc_a, L_inc_b, L_inc_c, L_inc_d, L_dec,
 		input wire [Q_WIDTH-1:0] Q_00, Q_01, Q_02, Q_03,
 		input wire [Q_WIDTH-1:0] Q_10, Q_11, Q_12, Q_13,
 		input wire [Q_WIDTH-1:0] Q_20, Q_21, Q_22, Q_23,
@@ -766,8 +767,11 @@
 	assign max_episode = slv_reg1[31:16];
 	assign seed = slv_reg2[15:0];
 	assign S_sim = slv_reg2[S_WIDTH+15:16];
-	assign L_inc = slv_reg3[15:0];
-	assign L_dec = slv_reg3[31:16];
+	assign L_inc_a = slv_reg3[15:0];
+	assign L_inc_b = slv_reg3[31:16];
+	assign L_inc_c = slv_reg4[15:0];
+	assign L_inc_d = slv_reg4[31:16];
+	assign L_dec = slv_reg5[15:0];
 	// User logic ends
 
 	endmodule
