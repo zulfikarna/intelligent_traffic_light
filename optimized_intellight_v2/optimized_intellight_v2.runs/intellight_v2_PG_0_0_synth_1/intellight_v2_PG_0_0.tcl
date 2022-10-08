@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "intellight_v2_PG_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 1
+set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref
@@ -95,6 +97,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+  D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v
   D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_max.v
   D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/parameters.v
   D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/PG.v

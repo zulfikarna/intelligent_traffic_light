@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Sat Oct  1 14:20:45 2022
+-- Date        : Sat Oct  8 15:12:28 2022
 -- Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_intellight_database_0_1/intellight_v2_intellight_database_0_1_sim_netlist.vhdl
@@ -26,6 +26,8 @@ entity intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI is
     \slv_reg1_reg[31]_0\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
     \slv_reg2_reg[23]_0\ : out STD_LOGIC_VECTOR ( 23 downto 0 );
     \slv_reg3_reg[31]_0\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    \slv_reg4_reg[31]_0\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    L_dec : out STD_LOGIC_VECTOR ( 15 downto 0 );
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     s00_axi_aclk : in STD_LOGIC;
@@ -61,6 +63,7 @@ entity intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI is
 end intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI;
 
 architecture STRUCTURE of intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI is
+  signal \^l_dec\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \^q\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \^aw_en_reg_0\ : STD_LOGIC;
   signal \axi_araddr_reg[2]_rep_n_0\ : STD_LOGIC;
@@ -443,12 +446,12 @@ architecture STRUCTURE of intellight_v2_intellight_database_0_1_intellight_datab
   signal \slv_reg3[31]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg3[7]_i_1_n_0\ : STD_LOGIC;
   signal \^slv_reg3_reg[31]_0\ : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal slv_reg4 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \slv_reg4[15]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg4[23]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg4[31]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg4[7]_i_1_n_0\ : STD_LOGIC;
-  signal slv_reg5 : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal \^slv_reg4_reg[31]_0\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal slv_reg5 : STD_LOGIC_VECTOR ( 31 downto 16 );
   signal \slv_reg5[15]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg5[23]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg5[31]_i_1_n_0\ : STD_LOGIC;
@@ -480,6 +483,7 @@ architecture STRUCTURE of intellight_v2_intellight_database_0_1_intellight_datab
   attribute ORIG_CELL_NAME of \axi_araddr_reg[3]\ : label is "axi_araddr_reg[3]";
   attribute ORIG_CELL_NAME of \axi_araddr_reg[3]_rep\ : label is "axi_araddr_reg[3]";
 begin
+  L_dec(15 downto 0) <= \^l_dec\(15 downto 0);
   Q(7 downto 0) <= \^q\(7 downto 0);
   aw_en_reg_0 <= \^aw_en_reg_0\;
   axi_arready_reg_0 <= \^axi_arready_reg_0\;
@@ -489,6 +493,7 @@ begin
   \slv_reg1_reg[31]_0\(31 downto 0) <= \^slv_reg1_reg[31]_0\(31 downto 0);
   \slv_reg2_reg[23]_0\(23 downto 0) <= \^slv_reg2_reg[23]_0\(23 downto 0);
   \slv_reg3_reg[31]_0\(31 downto 0) <= \^slv_reg3_reg[31]_0\(31 downto 0);
+  \slv_reg4_reg[31]_0\(31 downto 0) <= \^slv_reg4_reg[31]_0\(31 downto 0);
 aw_en_reg: unisim.vcomponents.FDSE
      port map (
       C => s00_axi_aclk,
@@ -697,9 +702,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(0),
       I1 => slv_reg6(0),
       I2 => \axi_araddr_reg[3]_rep_n_0\,
-      I3 => slv_reg5(0),
+      I3 => \^l_dec\(0),
       I4 => \axi_araddr_reg[2]_rep_n_0\,
-      I5 => slv_reg4(0),
+      I5 => \^slv_reg4_reg[31]_0\(0),
       O => \axi_rdata[0]_i_13_n_0\
     );
 \axi_rdata[0]_i_6\: unisim.vcomponents.LUT6
@@ -814,9 +819,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(10),
       I1 => slv_reg6(10),
       I2 => sel0(1),
-      I3 => slv_reg5(10),
+      I3 => \^l_dec\(10),
       I4 => sel0(0),
-      I5 => slv_reg4(10),
+      I5 => \^slv_reg4_reg[31]_0\(10),
       O => \axi_rdata[10]_i_13_n_0\
     );
 \axi_rdata[10]_i_6\: unisim.vcomponents.LUT6
@@ -931,9 +936,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(11),
       I1 => slv_reg6(11),
       I2 => sel0(1),
-      I3 => slv_reg5(11),
+      I3 => \^l_dec\(11),
       I4 => sel0(0),
-      I5 => slv_reg4(11),
+      I5 => \^slv_reg4_reg[31]_0\(11),
       O => \axi_rdata[11]_i_13_n_0\
     );
 \axi_rdata[11]_i_6\: unisim.vcomponents.LUT6
@@ -1048,9 +1053,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(12),
       I1 => slv_reg6(12),
       I2 => sel0(1),
-      I3 => slv_reg5(12),
+      I3 => \^l_dec\(12),
       I4 => sel0(0),
-      I5 => slv_reg4(12),
+      I5 => \^slv_reg4_reg[31]_0\(12),
       O => \axi_rdata[12]_i_13_n_0\
     );
 \axi_rdata[12]_i_6\: unisim.vcomponents.LUT6
@@ -1165,9 +1170,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(13),
       I1 => slv_reg6(13),
       I2 => sel0(1),
-      I3 => slv_reg5(13),
+      I3 => \^l_dec\(13),
       I4 => sel0(0),
-      I5 => slv_reg4(13),
+      I5 => \^slv_reg4_reg[31]_0\(13),
       O => \axi_rdata[13]_i_13_n_0\
     );
 \axi_rdata[13]_i_6\: unisim.vcomponents.LUT6
@@ -1282,9 +1287,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(14),
       I1 => slv_reg6(14),
       I2 => sel0(1),
-      I3 => slv_reg5(14),
+      I3 => \^l_dec\(14),
       I4 => sel0(0),
-      I5 => slv_reg4(14),
+      I5 => \^slv_reg4_reg[31]_0\(14),
       O => \axi_rdata[14]_i_13_n_0\
     );
 \axi_rdata[14]_i_6\: unisim.vcomponents.LUT6
@@ -1399,9 +1404,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(15),
       I1 => slv_reg6(15),
       I2 => sel0(1),
-      I3 => slv_reg5(15),
+      I3 => \^l_dec\(15),
       I4 => sel0(0),
-      I5 => slv_reg4(15),
+      I5 => \^slv_reg4_reg[31]_0\(15),
       O => \axi_rdata[15]_i_13_n_0\
     );
 \axi_rdata[15]_i_6\: unisim.vcomponents.LUT6
@@ -1518,7 +1523,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(16),
       I4 => sel0(0),
-      I5 => slv_reg4(16),
+      I5 => \^slv_reg4_reg[31]_0\(16),
       O => \axi_rdata[16]_i_6_n_0\
     );
 \axi_rdata[17]_i_1\: unisim.vcomponents.LUT6
@@ -1583,7 +1588,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(17),
       I4 => sel0(0),
-      I5 => slv_reg4(17),
+      I5 => \^slv_reg4_reg[31]_0\(17),
       O => \axi_rdata[17]_i_6_n_0\
     );
 \axi_rdata[18]_i_1\: unisim.vcomponents.LUT6
@@ -1648,7 +1653,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(18),
       I4 => sel0(0),
-      I5 => slv_reg4(18),
+      I5 => \^slv_reg4_reg[31]_0\(18),
       O => \axi_rdata[18]_i_6_n_0\
     );
 \axi_rdata[19]_i_1\: unisim.vcomponents.LUT6
@@ -1713,7 +1718,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(19),
       I4 => sel0(0),
-      I5 => slv_reg4(19),
+      I5 => \^slv_reg4_reg[31]_0\(19),
       O => \axi_rdata[19]_i_6_n_0\
     );
 \axi_rdata[1]_i_1\: unisim.vcomponents.LUT6
@@ -1776,9 +1781,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(1),
       I1 => slv_reg6(1),
       I2 => \axi_araddr_reg[3]_rep_n_0\,
-      I3 => slv_reg5(1),
+      I3 => \^l_dec\(1),
       I4 => \axi_araddr_reg[2]_rep_n_0\,
-      I5 => slv_reg4(1),
+      I5 => \^slv_reg4_reg[31]_0\(1),
       O => \axi_rdata[1]_i_13_n_0\
     );
 \axi_rdata[1]_i_6\: unisim.vcomponents.LUT6
@@ -1895,7 +1900,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(20),
       I4 => sel0(0),
-      I5 => slv_reg4(20),
+      I5 => \^slv_reg4_reg[31]_0\(20),
       O => \axi_rdata[20]_i_6_n_0\
     );
 \axi_rdata[21]_i_1\: unisim.vcomponents.LUT6
@@ -1960,7 +1965,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(21),
       I4 => sel0(0),
-      I5 => slv_reg4(21),
+      I5 => \^slv_reg4_reg[31]_0\(21),
       O => \axi_rdata[21]_i_6_n_0\
     );
 \axi_rdata[22]_i_1\: unisim.vcomponents.LUT6
@@ -2025,7 +2030,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(22),
       I4 => sel0(0),
-      I5 => slv_reg4(22),
+      I5 => \^slv_reg4_reg[31]_0\(22),
       O => \axi_rdata[22]_i_6_n_0\
     );
 \axi_rdata[23]_i_1\: unisim.vcomponents.LUT6
@@ -2090,7 +2095,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(23),
       I4 => sel0(0),
-      I5 => slv_reg4(23),
+      I5 => \^slv_reg4_reg[31]_0\(23),
       O => \axi_rdata[23]_i_6_n_0\
     );
 \axi_rdata[24]_i_1\: unisim.vcomponents.LUT6
@@ -2155,7 +2160,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(24),
       I4 => sel0(0),
-      I5 => slv_reg4(24),
+      I5 => \^slv_reg4_reg[31]_0\(24),
       O => \axi_rdata[24]_i_6_n_0\
     );
 \axi_rdata[25]_i_1\: unisim.vcomponents.LUT6
@@ -2220,7 +2225,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(25),
       I4 => sel0(0),
-      I5 => slv_reg4(25),
+      I5 => \^slv_reg4_reg[31]_0\(25),
       O => \axi_rdata[25]_i_6_n_0\
     );
 \axi_rdata[26]_i_1\: unisim.vcomponents.LUT6
@@ -2285,7 +2290,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(26),
       I4 => sel0(0),
-      I5 => slv_reg4(26),
+      I5 => \^slv_reg4_reg[31]_0\(26),
       O => \axi_rdata[26]_i_6_n_0\
     );
 \axi_rdata[27]_i_1\: unisim.vcomponents.LUT6
@@ -2350,7 +2355,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(27),
       I4 => sel0(0),
-      I5 => slv_reg4(27),
+      I5 => \^slv_reg4_reg[31]_0\(27),
       O => \axi_rdata[27]_i_6_n_0\
     );
 \axi_rdata[28]_i_1\: unisim.vcomponents.LUT6
@@ -2415,7 +2420,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(28),
       I4 => sel0(0),
-      I5 => slv_reg4(28),
+      I5 => \^slv_reg4_reg[31]_0\(28),
       O => \axi_rdata[28]_i_6_n_0\
     );
 \axi_rdata[29]_i_1\: unisim.vcomponents.LUT6
@@ -2480,7 +2485,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(29),
       I4 => sel0(0),
-      I5 => slv_reg4(29),
+      I5 => \^slv_reg4_reg[31]_0\(29),
       O => \axi_rdata[29]_i_6_n_0\
     );
 \axi_rdata[2]_i_1\: unisim.vcomponents.LUT6
@@ -2543,9 +2548,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(2),
       I1 => slv_reg6(2),
       I2 => \axi_araddr_reg[3]_rep_n_0\,
-      I3 => slv_reg5(2),
+      I3 => \^l_dec\(2),
       I4 => \axi_araddr_reg[2]_rep_n_0\,
-      I5 => slv_reg4(2),
+      I5 => \^slv_reg4_reg[31]_0\(2),
       O => \axi_rdata[2]_i_13_n_0\
     );
 \axi_rdata[2]_i_6\: unisim.vcomponents.LUT6
@@ -2662,7 +2667,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(30),
       I4 => sel0(0),
-      I5 => slv_reg4(30),
+      I5 => \^slv_reg4_reg[31]_0\(30),
       O => \axi_rdata[30]_i_6_n_0\
     );
 \axi_rdata[31]_i_1\: unisim.vcomponents.LUT6
@@ -2727,7 +2732,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I2 => sel0(1),
       I3 => slv_reg5(31),
       I4 => sel0(0),
-      I5 => slv_reg4(31),
+      I5 => \^slv_reg4_reg[31]_0\(31),
       O => \axi_rdata[31]_i_6_n_0\
     );
 \axi_rdata[3]_i_1\: unisim.vcomponents.LUT6
@@ -2790,9 +2795,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(3),
       I1 => slv_reg6(3),
       I2 => \axi_araddr_reg[3]_rep_n_0\,
-      I3 => slv_reg5(3),
+      I3 => \^l_dec\(3),
       I4 => \axi_araddr_reg[2]_rep_n_0\,
-      I5 => slv_reg4(3),
+      I5 => \^slv_reg4_reg[31]_0\(3),
       O => \axi_rdata[3]_i_13_n_0\
     );
 \axi_rdata[3]_i_6\: unisim.vcomponents.LUT6
@@ -2907,9 +2912,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(4),
       I1 => slv_reg6(4),
       I2 => \axi_araddr_reg[3]_rep_n_0\,
-      I3 => slv_reg5(4),
+      I3 => \^l_dec\(4),
       I4 => \axi_araddr_reg[2]_rep_n_0\,
-      I5 => slv_reg4(4),
+      I5 => \^slv_reg4_reg[31]_0\(4),
       O => \axi_rdata[4]_i_13_n_0\
     );
 \axi_rdata[4]_i_6\: unisim.vcomponents.LUT6
@@ -3024,9 +3029,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(5),
       I1 => slv_reg6(5),
       I2 => \axi_araddr_reg[3]_rep_n_0\,
-      I3 => slv_reg5(5),
+      I3 => \^l_dec\(5),
       I4 => \axi_araddr_reg[2]_rep_n_0\,
-      I5 => slv_reg4(5),
+      I5 => \^slv_reg4_reg[31]_0\(5),
       O => \axi_rdata[5]_i_13_n_0\
     );
 \axi_rdata[5]_i_6\: unisim.vcomponents.LUT6
@@ -3141,9 +3146,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(6),
       I1 => slv_reg6(6),
       I2 => \axi_araddr_reg[3]_rep_n_0\,
-      I3 => slv_reg5(6),
+      I3 => \^l_dec\(6),
       I4 => \axi_araddr_reg[2]_rep_n_0\,
-      I5 => slv_reg4(6),
+      I5 => \^slv_reg4_reg[31]_0\(6),
       O => \axi_rdata[6]_i_13_n_0\
     );
 \axi_rdata[6]_i_6\: unisim.vcomponents.LUT6
@@ -3258,9 +3263,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(7),
       I1 => slv_reg6(7),
       I2 => \axi_araddr_reg[3]_rep_n_0\,
-      I3 => slv_reg5(7),
+      I3 => \^l_dec\(7),
       I4 => \axi_araddr_reg[2]_rep_n_0\,
-      I5 => slv_reg4(7),
+      I5 => \^slv_reg4_reg[31]_0\(7),
       O => \axi_rdata[7]_i_13_n_0\
     );
 \axi_rdata[7]_i_6\: unisim.vcomponents.LUT6
@@ -3375,9 +3380,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(8),
       I1 => slv_reg6(8),
       I2 => sel0(1),
-      I3 => slv_reg5(8),
+      I3 => \^l_dec\(8),
       I4 => sel0(0),
-      I5 => slv_reg4(8),
+      I5 => \^slv_reg4_reg[31]_0\(8),
       O => \axi_rdata[8]_i_13_n_0\
     );
 \axi_rdata[8]_i_6\: unisim.vcomponents.LUT6
@@ -3492,9 +3497,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I0 => slv_reg7(9),
       I1 => slv_reg6(9),
       I2 => sel0(1),
-      I3 => slv_reg5(9),
+      I3 => \^l_dec\(9),
       I4 => sel0(0),
-      I5 => slv_reg4(9),
+      I5 => \^slv_reg4_reg[31]_0\(9),
       O => \axi_rdata[9]_i_13_n_0\
     );
 \axi_rdata[9]_i_6\: unisim.vcomponents.LUT6
@@ -9589,7 +9594,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[7]_i_1_n_0\,
       D => s00_axi_wdata(0),
-      Q => slv_reg4(0),
+      Q => \^slv_reg4_reg[31]_0\(0),
       R => SR(0)
     );
 \slv_reg4_reg[10]\: unisim.vcomponents.FDRE
@@ -9597,7 +9602,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[15]_i_1_n_0\,
       D => s00_axi_wdata(10),
-      Q => slv_reg4(10),
+      Q => \^slv_reg4_reg[31]_0\(10),
       R => SR(0)
     );
 \slv_reg4_reg[11]\: unisim.vcomponents.FDRE
@@ -9605,7 +9610,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[15]_i_1_n_0\,
       D => s00_axi_wdata(11),
-      Q => slv_reg4(11),
+      Q => \^slv_reg4_reg[31]_0\(11),
       R => SR(0)
     );
 \slv_reg4_reg[12]\: unisim.vcomponents.FDRE
@@ -9613,7 +9618,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[15]_i_1_n_0\,
       D => s00_axi_wdata(12),
-      Q => slv_reg4(12),
+      Q => \^slv_reg4_reg[31]_0\(12),
       R => SR(0)
     );
 \slv_reg4_reg[13]\: unisim.vcomponents.FDRE
@@ -9621,7 +9626,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[15]_i_1_n_0\,
       D => s00_axi_wdata(13),
-      Q => slv_reg4(13),
+      Q => \^slv_reg4_reg[31]_0\(13),
       R => SR(0)
     );
 \slv_reg4_reg[14]\: unisim.vcomponents.FDRE
@@ -9629,7 +9634,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[15]_i_1_n_0\,
       D => s00_axi_wdata(14),
-      Q => slv_reg4(14),
+      Q => \^slv_reg4_reg[31]_0\(14),
       R => SR(0)
     );
 \slv_reg4_reg[15]\: unisim.vcomponents.FDRE
@@ -9637,7 +9642,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[15]_i_1_n_0\,
       D => s00_axi_wdata(15),
-      Q => slv_reg4(15),
+      Q => \^slv_reg4_reg[31]_0\(15),
       R => SR(0)
     );
 \slv_reg4_reg[16]\: unisim.vcomponents.FDRE
@@ -9645,7 +9650,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[23]_i_1_n_0\,
       D => s00_axi_wdata(16),
-      Q => slv_reg4(16),
+      Q => \^slv_reg4_reg[31]_0\(16),
       R => SR(0)
     );
 \slv_reg4_reg[17]\: unisim.vcomponents.FDRE
@@ -9653,7 +9658,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[23]_i_1_n_0\,
       D => s00_axi_wdata(17),
-      Q => slv_reg4(17),
+      Q => \^slv_reg4_reg[31]_0\(17),
       R => SR(0)
     );
 \slv_reg4_reg[18]\: unisim.vcomponents.FDRE
@@ -9661,7 +9666,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[23]_i_1_n_0\,
       D => s00_axi_wdata(18),
-      Q => slv_reg4(18),
+      Q => \^slv_reg4_reg[31]_0\(18),
       R => SR(0)
     );
 \slv_reg4_reg[19]\: unisim.vcomponents.FDRE
@@ -9669,7 +9674,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[23]_i_1_n_0\,
       D => s00_axi_wdata(19),
-      Q => slv_reg4(19),
+      Q => \^slv_reg4_reg[31]_0\(19),
       R => SR(0)
     );
 \slv_reg4_reg[1]\: unisim.vcomponents.FDRE
@@ -9677,7 +9682,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[7]_i_1_n_0\,
       D => s00_axi_wdata(1),
-      Q => slv_reg4(1),
+      Q => \^slv_reg4_reg[31]_0\(1),
       R => SR(0)
     );
 \slv_reg4_reg[20]\: unisim.vcomponents.FDRE
@@ -9685,7 +9690,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[23]_i_1_n_0\,
       D => s00_axi_wdata(20),
-      Q => slv_reg4(20),
+      Q => \^slv_reg4_reg[31]_0\(20),
       R => SR(0)
     );
 \slv_reg4_reg[21]\: unisim.vcomponents.FDRE
@@ -9693,7 +9698,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[23]_i_1_n_0\,
       D => s00_axi_wdata(21),
-      Q => slv_reg4(21),
+      Q => \^slv_reg4_reg[31]_0\(21),
       R => SR(0)
     );
 \slv_reg4_reg[22]\: unisim.vcomponents.FDRE
@@ -9701,7 +9706,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[23]_i_1_n_0\,
       D => s00_axi_wdata(22),
-      Q => slv_reg4(22),
+      Q => \^slv_reg4_reg[31]_0\(22),
       R => SR(0)
     );
 \slv_reg4_reg[23]\: unisim.vcomponents.FDRE
@@ -9709,7 +9714,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[23]_i_1_n_0\,
       D => s00_axi_wdata(23),
-      Q => slv_reg4(23),
+      Q => \^slv_reg4_reg[31]_0\(23),
       R => SR(0)
     );
 \slv_reg4_reg[24]\: unisim.vcomponents.FDRE
@@ -9717,7 +9722,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[31]_i_1_n_0\,
       D => s00_axi_wdata(24),
-      Q => slv_reg4(24),
+      Q => \^slv_reg4_reg[31]_0\(24),
       R => SR(0)
     );
 \slv_reg4_reg[25]\: unisim.vcomponents.FDRE
@@ -9725,7 +9730,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[31]_i_1_n_0\,
       D => s00_axi_wdata(25),
-      Q => slv_reg4(25),
+      Q => \^slv_reg4_reg[31]_0\(25),
       R => SR(0)
     );
 \slv_reg4_reg[26]\: unisim.vcomponents.FDRE
@@ -9733,7 +9738,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[31]_i_1_n_0\,
       D => s00_axi_wdata(26),
-      Q => slv_reg4(26),
+      Q => \^slv_reg4_reg[31]_0\(26),
       R => SR(0)
     );
 \slv_reg4_reg[27]\: unisim.vcomponents.FDRE
@@ -9741,7 +9746,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[31]_i_1_n_0\,
       D => s00_axi_wdata(27),
-      Q => slv_reg4(27),
+      Q => \^slv_reg4_reg[31]_0\(27),
       R => SR(0)
     );
 \slv_reg4_reg[28]\: unisim.vcomponents.FDRE
@@ -9749,7 +9754,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[31]_i_1_n_0\,
       D => s00_axi_wdata(28),
-      Q => slv_reg4(28),
+      Q => \^slv_reg4_reg[31]_0\(28),
       R => SR(0)
     );
 \slv_reg4_reg[29]\: unisim.vcomponents.FDRE
@@ -9757,7 +9762,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[31]_i_1_n_0\,
       D => s00_axi_wdata(29),
-      Q => slv_reg4(29),
+      Q => \^slv_reg4_reg[31]_0\(29),
       R => SR(0)
     );
 \slv_reg4_reg[2]\: unisim.vcomponents.FDRE
@@ -9765,7 +9770,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[7]_i_1_n_0\,
       D => s00_axi_wdata(2),
-      Q => slv_reg4(2),
+      Q => \^slv_reg4_reg[31]_0\(2),
       R => SR(0)
     );
 \slv_reg4_reg[30]\: unisim.vcomponents.FDRE
@@ -9773,7 +9778,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[31]_i_1_n_0\,
       D => s00_axi_wdata(30),
-      Q => slv_reg4(30),
+      Q => \^slv_reg4_reg[31]_0\(30),
       R => SR(0)
     );
 \slv_reg4_reg[31]\: unisim.vcomponents.FDRE
@@ -9781,7 +9786,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[31]_i_1_n_0\,
       D => s00_axi_wdata(31),
-      Q => slv_reg4(31),
+      Q => \^slv_reg4_reg[31]_0\(31),
       R => SR(0)
     );
 \slv_reg4_reg[3]\: unisim.vcomponents.FDRE
@@ -9789,7 +9794,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[7]_i_1_n_0\,
       D => s00_axi_wdata(3),
-      Q => slv_reg4(3),
+      Q => \^slv_reg4_reg[31]_0\(3),
       R => SR(0)
     );
 \slv_reg4_reg[4]\: unisim.vcomponents.FDRE
@@ -9797,7 +9802,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[7]_i_1_n_0\,
       D => s00_axi_wdata(4),
-      Q => slv_reg4(4),
+      Q => \^slv_reg4_reg[31]_0\(4),
       R => SR(0)
     );
 \slv_reg4_reg[5]\: unisim.vcomponents.FDRE
@@ -9805,7 +9810,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[7]_i_1_n_0\,
       D => s00_axi_wdata(5),
-      Q => slv_reg4(5),
+      Q => \^slv_reg4_reg[31]_0\(5),
       R => SR(0)
     );
 \slv_reg4_reg[6]\: unisim.vcomponents.FDRE
@@ -9813,7 +9818,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[7]_i_1_n_0\,
       D => s00_axi_wdata(6),
-      Q => slv_reg4(6),
+      Q => \^slv_reg4_reg[31]_0\(6),
       R => SR(0)
     );
 \slv_reg4_reg[7]\: unisim.vcomponents.FDRE
@@ -9821,7 +9826,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[7]_i_1_n_0\,
       D => s00_axi_wdata(7),
-      Q => slv_reg4(7),
+      Q => \^slv_reg4_reg[31]_0\(7),
       R => SR(0)
     );
 \slv_reg4_reg[8]\: unisim.vcomponents.FDRE
@@ -9829,7 +9834,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[15]_i_1_n_0\,
       D => s00_axi_wdata(8),
-      Q => slv_reg4(8),
+      Q => \^slv_reg4_reg[31]_0\(8),
       R => SR(0)
     );
 \slv_reg4_reg[9]\: unisim.vcomponents.FDRE
@@ -9837,7 +9842,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg4[15]_i_1_n_0\,
       D => s00_axi_wdata(9),
-      Q => slv_reg4(9),
+      Q => \^slv_reg4_reg[31]_0\(9),
       R => SR(0)
     );
 \slv_reg5[15]_i_1\: unisim.vcomponents.LUT6
@@ -9897,7 +9902,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(0),
-      Q => slv_reg5(0),
+      Q => \^l_dec\(0),
       R => SR(0)
     );
 \slv_reg5_reg[10]\: unisim.vcomponents.FDRE
@@ -9905,7 +9910,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[15]_i_1_n_0\,
       D => s00_axi_wdata(10),
-      Q => slv_reg5(10),
+      Q => \^l_dec\(10),
       R => SR(0)
     );
 \slv_reg5_reg[11]\: unisim.vcomponents.FDRE
@@ -9913,7 +9918,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[15]_i_1_n_0\,
       D => s00_axi_wdata(11),
-      Q => slv_reg5(11),
+      Q => \^l_dec\(11),
       R => SR(0)
     );
 \slv_reg5_reg[12]\: unisim.vcomponents.FDRE
@@ -9921,7 +9926,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[15]_i_1_n_0\,
       D => s00_axi_wdata(12),
-      Q => slv_reg5(12),
+      Q => \^l_dec\(12),
       R => SR(0)
     );
 \slv_reg5_reg[13]\: unisim.vcomponents.FDRE
@@ -9929,7 +9934,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[15]_i_1_n_0\,
       D => s00_axi_wdata(13),
-      Q => slv_reg5(13),
+      Q => \^l_dec\(13),
       R => SR(0)
     );
 \slv_reg5_reg[14]\: unisim.vcomponents.FDRE
@@ -9937,7 +9942,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[15]_i_1_n_0\,
       D => s00_axi_wdata(14),
-      Q => slv_reg5(14),
+      Q => \^l_dec\(14),
       R => SR(0)
     );
 \slv_reg5_reg[15]\: unisim.vcomponents.FDRE
@@ -9945,7 +9950,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[15]_i_1_n_0\,
       D => s00_axi_wdata(15),
-      Q => slv_reg5(15),
+      Q => \^l_dec\(15),
       R => SR(0)
     );
 \slv_reg5_reg[16]\: unisim.vcomponents.FDRE
@@ -9985,7 +9990,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(1),
-      Q => slv_reg5(1),
+      Q => \^l_dec\(1),
       R => SR(0)
     );
 \slv_reg5_reg[20]\: unisim.vcomponents.FDRE
@@ -10073,7 +10078,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(2),
-      Q => slv_reg5(2),
+      Q => \^l_dec\(2),
       R => SR(0)
     );
 \slv_reg5_reg[30]\: unisim.vcomponents.FDRE
@@ -10097,7 +10102,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(3),
-      Q => slv_reg5(3),
+      Q => \^l_dec\(3),
       R => SR(0)
     );
 \slv_reg5_reg[4]\: unisim.vcomponents.FDRE
@@ -10105,7 +10110,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(4),
-      Q => slv_reg5(4),
+      Q => \^l_dec\(4),
       R => SR(0)
     );
 \slv_reg5_reg[5]\: unisim.vcomponents.FDRE
@@ -10113,7 +10118,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(5),
-      Q => slv_reg5(5),
+      Q => \^l_dec\(5),
       R => SR(0)
     );
 \slv_reg5_reg[6]\: unisim.vcomponents.FDRE
@@ -10121,7 +10126,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(6),
-      Q => slv_reg5(6),
+      Q => \^l_dec\(6),
       R => SR(0)
     );
 \slv_reg5_reg[7]\: unisim.vcomponents.FDRE
@@ -10129,7 +10134,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[7]_i_1_n_0\,
       D => s00_axi_wdata(7),
-      Q => slv_reg5(7),
+      Q => \^l_dec\(7),
       R => SR(0)
     );
 \slv_reg5_reg[8]\: unisim.vcomponents.FDRE
@@ -10137,7 +10142,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[15]_i_1_n_0\,
       D => s00_axi_wdata(8),
-      Q => slv_reg5(8),
+      Q => \^l_dec\(8),
       R => SR(0)
     );
 \slv_reg5_reg[9]\: unisim.vcomponents.FDRE
@@ -10145,7 +10150,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg5[15]_i_1_n_0\,
       D => s00_axi_wdata(9),
-      Q => slv_reg5(9),
+      Q => \^l_dec\(9),
       R => SR(0)
     );
 \slv_reg6[15]_i_1\: unisim.vcomponents.LUT6
@@ -11403,6 +11408,8 @@ entity intellight_v2_intellight_database_0_1_intellight_database_v1_0 is
     \slv_reg1_reg[31]\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
     \slv_reg2_reg[23]\ : out STD_LOGIC_VECTOR ( 23 downto 0 );
     \slv_reg3_reg[31]\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    \slv_reg4_reg[31]\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    L_dec : out STD_LOGIC_VECTOR ( 15 downto 0 );
     S_AXI_ARREADY : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_rvalid : out STD_LOGIC;
@@ -11495,6 +11502,7 @@ axi_rvalid_i_1: unisim.vcomponents.LUT4
     );
 intellight_database_v1_0_S00_AXI_inst: entity work.intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
      port map (
+      L_dec(15 downto 0) => L_dec(15 downto 0),
       Q(7 downto 0) => Q(7 downto 0),
       Q_00(15 downto 0) => Q_00(15 downto 0),
       Q_01(15 downto 0) => Q_01(15 downto 0),
@@ -11533,7 +11541,8 @@ intellight_database_v1_0_S00_AXI_inst: entity work.intellight_v2_intellight_data
       s00_axi_wvalid => s00_axi_wvalid,
       \slv_reg1_reg[31]_0\(31 downto 0) => \slv_reg1_reg[31]\(31 downto 0),
       \slv_reg2_reg[23]_0\(23 downto 0) => \slv_reg2_reg[23]\(23 downto 0),
-      \slv_reg3_reg[31]_0\(31 downto 0) => \slv_reg3_reg[31]\(31 downto 0)
+      \slv_reg3_reg[31]_0\(31 downto 0) => \slv_reg3_reg[31]\(31 downto 0),
+      \slv_reg4_reg[31]_0\(31 downto 0) => \slv_reg4_reg[31]\(31 downto 0)
     );
 \slv_reg0[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -11558,7 +11567,10 @@ entity intellight_v2_intellight_database_0_1 is
     max_episode : out STD_LOGIC_VECTOR ( 15 downto 0 );
     seed : out STD_LOGIC_VECTOR ( 15 downto 0 );
     S_sim : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    L_inc : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    L_inc_a : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    L_inc_b : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    L_inc_c : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    L_inc_d : out STD_LOGIC_VECTOR ( 15 downto 0 );
     L_dec : out STD_LOGIC_VECTOR ( 15 downto 0 );
     Q_00 : in STD_LOGIC_VECTOR ( 15 downto 0 );
     Q_01 : in STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -11647,6 +11659,7 @@ GND: unisim.vcomponents.GND
     );
 inst: entity work.intellight_v2_intellight_database_0_1_intellight_database_v1_0
      port map (
+      L_dec(15 downto 0) => L_dec(15 downto 0),
       Q(7 downto 5) => gamma(2 downto 0),
       Q(4 downto 2) => alpha(2 downto 0),
       Q(1) => run,
@@ -11688,7 +11701,9 @@ inst: entity work.intellight_v2_intellight_database_0_1_intellight_database_v1_0
       \slv_reg1_reg[31]\(15 downto 0) => max_step(15 downto 0),
       \slv_reg2_reg[23]\(23 downto 16) => S_sim(7 downto 0),
       \slv_reg2_reg[23]\(15 downto 0) => seed(15 downto 0),
-      \slv_reg3_reg[31]\(31 downto 16) => L_dec(15 downto 0),
-      \slv_reg3_reg[31]\(15 downto 0) => L_inc(15 downto 0)
+      \slv_reg3_reg[31]\(31 downto 16) => L_inc_b(15 downto 0),
+      \slv_reg3_reg[31]\(15 downto 0) => L_inc_a(15 downto 0),
+      \slv_reg4_reg[31]\(31 downto 16) => L_inc_d(15 downto 0),
+      \slv_reg4_reg[31]\(15 downto 0) => L_inc_c(15 downto 0)
     );
 end STRUCTURE;

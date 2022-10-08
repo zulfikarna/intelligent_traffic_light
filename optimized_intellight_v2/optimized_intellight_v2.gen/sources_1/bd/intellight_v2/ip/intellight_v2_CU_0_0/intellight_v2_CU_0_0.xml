@@ -137,7 +137,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c620ae72</spirit:value>
+            <spirit:value>9:b1f76ebd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -148,7 +148,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c620ae72</spirit:value>
+            <spirit:value>9:b1f76ebd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -164,11 +164,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Oct 01 07:16:25 UTC 2022</spirit:value>
+            <spirit:value>Sat Oct 08 10:29:25 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c620ae72</spirit:value>
+            <spirit:value>9:b1f76ebd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -180,7 +180,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3d4116e1</spirit:value>
+            <spirit:value>9:3bf3f365</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -196,11 +196,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Oct 01 07:16:25 UTC 2022</spirit:value>
+            <spirit:value>Sat Oct 08 10:29:25 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3d4116e1</spirit:value>
+            <spirit:value>9:3bf3f365</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -214,11 +214,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Oct 01 07:19:35 UTC 2022</spirit:value>
+            <spirit:value>Sat Oct 08 10:30:43 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c620ae72</spirit:value>
+            <spirit:value>9:b1f76ebd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -331,40 +331,6 @@
         <spirit:name>A_sel</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>reg</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>A_rand</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.A_WIDTH&apos;)) - 1)">3</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>reg</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>S0</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.S_WIDTH&apos;)) - 1)">7</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>reg</spirit:typeName>

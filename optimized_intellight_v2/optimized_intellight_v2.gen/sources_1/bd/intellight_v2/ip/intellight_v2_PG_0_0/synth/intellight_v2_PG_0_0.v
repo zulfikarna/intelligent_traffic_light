@@ -62,7 +62,6 @@ module intellight_v2_PG_0_0 (
   Droad1,
   Droad2,
   Droad3,
-  A_rand,
   A_sel,
   mode,
   A_road,
@@ -79,7 +78,6 @@ input wire [63 : 0] Droad0;
 input wire [63 : 0] Droad1;
 input wire [63 : 0] Droad2;
 input wire [63 : 0] Droad3;
-input wire [3 : 0] A_rand;
 input wire A_sel;
 input wire mode;
 output wire [1 : 0] A_road;
@@ -103,7 +101,6 @@ output wire [3 : 0] A;
     .Droad1(Droad1),
     .Droad2(Droad2),
     .Droad3(Droad3),
-    .A_rand(A_rand),
     .A_sel(A_sel),
     .mode(mode),
     .A_road(A_road),

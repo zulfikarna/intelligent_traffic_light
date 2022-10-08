@@ -23,8 +23,6 @@ module CU // verified
     input wire [RND_WIDTH-1:0] seed,
     // Output for Policy Generator 
     output reg A_sel,
-    output reg [A_WIDTH-1:0] A_rand,
-    output reg [S_WIDTH-1:0] S0,
     // Control Signal
     output wire PG,
     output wire QA,
@@ -71,7 +69,7 @@ module CU // verified
     reg [CTR_WIDTH-1:0] epsilon;
     // Variables for generating random number 
     wire [RND_WIDTH-1:0] o_lsfr;
-    lsfr_16bit rand(.clk(clk), .rst(rst), .in0(seed), .out0(o_lsfr));
+    lsfr_16bit rand(.clk(clk), .rst(rst), .seed(seed), .out0(o_lsfr));
     
     // Reset handler
     always@(posedge clk) begin 
@@ -234,8 +232,6 @@ module CU // verified
     // Random numbers for Policy Generator 
     always @(posedge clk) begin
         A_sel <= (epsilon < o_lsfr[CTR_WIDTH-1:0])? 1'b0 : 1'b1;
-        A_rand <= o_lsfr[A_WIDTH-1:0];
-        S0 <= o_lsfr[S_WIDTH-1:0];
     end
     
     // Control signal decoder

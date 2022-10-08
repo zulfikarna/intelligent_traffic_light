@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:intellight_database:1.0
-// IP Revision: 4
+// IP Revision: 5
 
 `timescale 1ns/1ps
 
@@ -62,7 +62,10 @@ module intellight_v2_intellight_database_0_1 (
   max_episode,
   seed,
   S_sim,
-  L_inc,
+  L_inc_a,
+  L_inc_b,
+  L_inc_c,
+  L_inc_d,
   L_dec,
   Q_00,
   Q_01,
@@ -111,7 +114,10 @@ output wire [15 : 0] max_step;
 output wire [15 : 0] max_episode;
 output wire [15 : 0] seed;
 output wire [7 : 0] S_sim;
-output wire [15 : 0] L_inc;
+output wire [15 : 0] L_inc_a;
+output wire [15 : 0] L_inc_b;
+output wire [15 : 0] L_inc_c;
+output wire [15 : 0] L_inc_d;
 output wire [15 : 0] L_dec;
 input wire [15 : 0] Q_00;
 input wire [15 : 0] Q_01;
@@ -180,7 +186,8 @@ input wire s00_axi_rready;
     .C_S00_AXI_DATA_WIDTH(32),  // Width of S_AXI data bus
     .C_S00_AXI_ADDR_WIDTH(7),  // Width of S_AXI address bus
     .Q_WIDTH(16),
-    .S_WIDTH(8)
+    .S_WIDTH(8),
+    .L_WIDTH(4)
   ) inst (
     .mode(mode),
     .run(run),
@@ -190,7 +197,10 @@ input wire s00_axi_rready;
     .max_episode(max_episode),
     .seed(seed),
     .S_sim(S_sim),
-    .L_inc(L_inc),
+    .L_inc_a(L_inc_a),
+    .L_inc_b(L_inc_b),
+    .L_inc_c(L_inc_c),
+    .L_inc_d(L_inc_d),
     .L_dec(L_dec),
     .Q_00(Q_00),
     .Q_01(Q_01),

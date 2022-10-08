@@ -83,7 +83,6 @@
                   &quot;Droad1&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;63&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;Droad2&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;63&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;Droad3&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;63&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
-                  &quot;A_rand&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;3&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;A_sel&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
                   &quot;mode&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
                   &quot;A_road&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;1&quot;, &quot;size_right&quot;: &quot;0&quot; } ],

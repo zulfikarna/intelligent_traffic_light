@@ -93,7 +93,7 @@ set_property ip_output_repo d:/intelligent_traffic_light/optimized_intellight_v2
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ip/intellight_v2_intellight_database_0_1/intellight_v2_intellight_database_0_1.xci
+read_ip -quiet D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/ip/intellight_v2_intellight_database_0_1/intellight_v2_intellight_database_0_1.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "intellight_v2_QA_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 1
+set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref

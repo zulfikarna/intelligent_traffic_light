@@ -64,8 +64,6 @@ module intellight_v2_CU_0_0 (
   max_episode,
   seed,
   A_sel,
-  A_rand,
-  S0,
   PG,
   QA,
   SD,
@@ -92,8 +90,6 @@ input wire [15 : 0] max_step;
 input wire [15 : 0] max_episode;
 input wire [15 : 0] seed;
 output wire A_sel;
-output wire [3 : 0] A_rand;
-output wire [7 : 0] S0;
 output wire PG;
 output wire QA;
 output wire SD;
@@ -127,8 +123,6 @@ output wire idle;
     .max_episode(max_episode),
     .seed(seed),
     .A_sel(A_sel),
-    .A_rand(A_rand),
-    .S0(S0),
     .PG(PG),
     .QA(QA),
     .SD(SD),

@@ -1,0 +1,98 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Oct  1 14:10:40 2022
+# Process ID: 25000
+# Current directory: D:/intelligent_traffic_light/optimized_intellight_v2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13320 D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.xpr
+# Log file: D:/intelligent_traffic_light/optimized_intellight_v2/vivado.log
+# Journal file: D:/intelligent_traffic_light/optimized_intellight_v2\vivado.jou
+# Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd}
+report_ip_status -name ip_status 
+delete_bd_objs [get_bd_nets intellight_database_0_alpha] [get_bd_nets intellight_database_0_gamma] [get_bd_nets intellight_database_0_S_sim] [get_bd_nets MOI_0_Q_02] [get_bd_nets MOI_0_Q_22] [get_bd_nets intellight_database_0_L_inc] [get_bd_nets MOI_0_Q_01] [get_bd_nets MOI_0_Q_12] [get_bd_nets MOI_0_Q_13] [get_bd_nets MOI_0_Q_30] [get_bd_nets MOI_0_Q_31] [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_nets intellight_database_0_seed] [get_bd_nets intellight_database_0_L_dec] [get_bd_nets MOI_0_Q_03] [get_bd_nets MOI_0_Q_21] [get_bd_nets MOI_0_Q_23] [get_bd_nets MOI_0_Q_33] [get_bd_nets intellight_database_0_max_step] [get_bd_nets intellight_database_0_run] [get_bd_nets intellight_database_0_max_episode] [get_bd_nets MOI_0_Q_00] [get_bd_nets MOI_0_Q_10] [get_bd_nets MOI_0_Q_11] [get_bd_nets MOI_0_Q_20] [get_bd_nets MOI_0_Q_32] [get_bd_cells intellight_database_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:intellight_database:1.0 intellight_database_0
+endgroup
+set_property location {7.5 2914 315} [get_bd_cells intellight_database_0]
+set_property location {8 2950 363} [get_bd_cells intellight_database_0]
+connect_bd_net [get_bd_pins MOI_0/Q_00] [get_bd_pins intellight_database_0/Q_00]
+connect_bd_net [get_bd_pins MOI_0/Q_01] [get_bd_pins intellight_database_0/Q_01]
+connect_bd_net [get_bd_pins MOI_0/Q_02] [get_bd_pins intellight_database_0/Q_02]
+connect_bd_net [get_bd_pins MOI_0/Q_03] [get_bd_pins intellight_database_0/Q_03]
+connect_bd_net [get_bd_pins MOI_0/Q_10] [get_bd_pins intellight_database_0/Q_10]
+connect_bd_net [get_bd_pins MOI_0/Q_11] [get_bd_pins intellight_database_0/Q_11]
+connect_bd_net [get_bd_pins MOI_0/Q_12] [get_bd_pins intellight_database_0/Q_12]
+connect_bd_net [get_bd_pins MOI_0/Q_13] [get_bd_pins intellight_database_0/Q_13]
+connect_bd_net [get_bd_pins MOI_0/Q_20] [get_bd_pins intellight_database_0/Q_20]
+connect_bd_net [get_bd_pins MOI_0/Q_21] [get_bd_pins intellight_database_0/Q_21]
+connect_bd_net [get_bd_pins MOI_0/Q_22] [get_bd_pins intellight_database_0/Q_22]
+connect_bd_net [get_bd_pins MOI_0/Q_23] [get_bd_pins intellight_database_0/Q_23]
+connect_bd_net [get_bd_pins MOI_0/Q_30] [get_bd_pins intellight_database_0/Q_30]
+connect_bd_net [get_bd_pins MOI_0/Q_31] [get_bd_pins intellight_database_0/Q_31]
+connect_bd_net [get_bd_pins MOI_0/Q_32] [get_bd_pins intellight_database_0/Q_32]
+connect_bd_net [get_bd_pins MOI_0/Q_33] [get_bd_pins intellight_database_0/Q_33]
+set_property location {3 937 590} [get_bd_cells intellight_database_0]
+set_property location {3.5 1187 279} [get_bd_cells intellight_database_0]
+connect_bd_net [get_bd_pins intellight_database_0/S_sim] [get_bd_pins SD_0/S_sim]
+connect_bd_net [get_bd_pins intellight_database_0/L_inc] [get_bd_pins SD_0/L_inc]
+connect_bd_net [get_bd_pins intellight_database_0/L_dec] [get_bd_pins SD_0/L_dec]
+set_property location {6 1806 387} [get_bd_cells intellight_database_0]
+set_property location {1 21 296} [get_bd_cells intellight_database_0]
+connect_bd_net [get_bd_pins intellight_database_0/max_step] [get_bd_pins CU_0/max_step]
+connect_bd_net [get_bd_pins intellight_database_0/max_episode] [get_bd_pins CU_0/max_episode]
+connect_bd_net [get_bd_pins intellight_database_0/seed] [get_bd_pins CU_0/seed]
+connect_bd_net [get_bd_pins intellight_database_0/mode] [get_bd_pins CU_0/mode]
+connect_bd_net [get_bd_pins intellight_database_0/run] [get_bd_pins CU_0/run]
+set_property location {5.5 2059 306} [get_bd_cells intellight_database_0]
+connect_bd_net [get_bd_pins intellight_database_0/alpha] [get_bd_pins QA_0/alpha]
+connect_bd_net [get_bd_pins intellight_database_0/gamma] [get_bd_pins QA_0/gamma]
+save_bd_design
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (58 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (58 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/intellight_database_0/S00_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins intellight_database_0/S00_AXI]
+report_ip_status -name ip_status 
+regenerate_bd_layout
+save_bd_design
+make_wrapper -files [get_files D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd] -top
+report_ip_status -name ip_status 
+generate_target all [get_files  D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd]
+catch { config_ip_cache -export [get_ips -all intellight_v2_CU_0_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_MII_0_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_MOI_0_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_PG_0_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_QA_0_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_RD_0_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_SD_0_1] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_intellight_database_0_1] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_auto_pc_2] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_auto_us_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_auto_ds_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_auto_ds_1] }
+catch { config_ip_cache -export [get_ips -all intellight_v2_auto_pc_1] }
+export_ip_user_files -of_objects [get_files D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd]
+reset_run intellight_v2_xbar_0_synth_1
+launch_runs intellight_v2_xbar_0_synth_1 intellight_v2_CU_0_0_synth_1 intellight_v2_MII_0_0_synth_1 intellight_v2_MOI_0_0_synth_1 intellight_v2_PG_0_0_synth_1 intellight_v2_QA_0_0_synth_1 intellight_v2_RD_0_0_synth_1 intellight_v2_SD_0_1_synth_1 intellight_v2_intellight_database_0_1_synth_1 -jobs 6
+wait_on_run intellight_v2_xbar_0_synth_1
+wait_on_run intellight_v2_CU_0_0_synth_1
+wait_on_run intellight_v2_MII_0_0_synth_1
+wait_on_run intellight_v2_MOI_0_0_synth_1
+wait_on_run intellight_v2_PG_0_0_synth_1
+wait_on_run intellight_v2_QA_0_0_synth_1
+wait_on_run intellight_v2_RD_0_0_synth_1
+wait_on_run intellight_v2_SD_0_1_synth_1
+wait_on_run intellight_v2_intellight_database_0_1_synth_1
+export_simulation -of_objects [get_files D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/intellight_v2/intellight_v2.bd] -directory D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.ip_user_files/sim_scripts -ip_user_files_dir D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.ip_user_files -ipstatic_source_dir D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/compile_simlib/modelsim} {questa=D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/compile_simlib/questa} {riviera=D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/compile_simlib/riviera} {activehdl=D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+regenerate_bd_layout
+reset_run synth_1
+launch_runs impl_2 -to_step write_bitstream -jobs 6
+wait_on_run impl_2
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1

@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Sat Oct  1 14:20:45 2022
+// Date        : Sat Oct  8 15:12:28 2022
 // Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_intellight_database_0_1/intellight_v2_intellight_database_0_1_sim_netlist.v
@@ -23,7 +23,10 @@ module intellight_v2_intellight_database_0_1
     max_episode,
     seed,
     S_sim,
-    L_inc,
+    L_inc_a,
+    L_inc_b,
+    L_inc_c,
+    L_inc_d,
     L_dec,
     Q_00,
     Q_01,
@@ -70,7 +73,10 @@ module intellight_v2_intellight_database_0_1
   output [15:0]max_episode;
   output [15:0]seed;
   output [7:0]S_sim;
-  output [15:0]L_inc;
+  output [15:0]L_inc_a;
+  output [15:0]L_inc_b;
+  output [15:0]L_inc_c;
+  output [15:0]L_inc_d;
   output [15:0]L_dec;
   input [15:0]Q_00;
   input [15:0]Q_01;
@@ -112,7 +118,10 @@ module intellight_v2_intellight_database_0_1
 
   wire \<const0> ;
   wire [15:0]L_dec;
-  wire [15:0]L_inc;
+  wire [15:0]L_inc_a;
+  wire [15:0]L_inc_b;
+  wire [15:0]L_inc_c;
+  wire [15:0]L_inc_d;
   wire [15:0]Q_00;
   wire [15:0]Q_01;
   wire [15:0]Q_02;
@@ -162,7 +171,8 @@ module intellight_v2_intellight_database_0_1
   GND GND
        (.G(\<const0> ));
   intellight_v2_intellight_database_0_1_intellight_database_v1_0 inst
-       (.Q({gamma,alpha,run,mode}),
+       (.L_dec(L_dec),
+        .Q({gamma,alpha,run,mode}),
         .Q_00(Q_00),
         .Q_01(Q_01),
         .Q_02(Q_02),
@@ -198,7 +208,8 @@ module intellight_v2_intellight_database_0_1
         .s00_axi_wvalid(s00_axi_wvalid),
         .\slv_reg1_reg[31] ({max_episode,max_step}),
         .\slv_reg2_reg[23] ({S_sim,seed}),
-        .\slv_reg3_reg[31] ({L_dec,L_inc}));
+        .\slv_reg3_reg[31] ({L_inc_b,L_inc_a}),
+        .\slv_reg4_reg[31] ({L_inc_d,L_inc_c}));
 endmodule
 
 (* ORIG_REF_NAME = "intellight_database_v1_0" *) 
@@ -209,6 +220,8 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0
     \slv_reg1_reg[31] ,
     \slv_reg2_reg[23] ,
     \slv_reg3_reg[31] ,
+    \slv_reg4_reg[31] ,
+    L_dec,
     S_AXI_ARREADY,
     s00_axi_rdata,
     s00_axi_rvalid,
@@ -246,6 +259,8 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0
   output [31:0]\slv_reg1_reg[31] ;
   output [23:0]\slv_reg2_reg[23] ;
   output [31:0]\slv_reg3_reg[31] ;
+  output [31:0]\slv_reg4_reg[31] ;
+  output [15:0]L_dec;
   output S_AXI_ARREADY;
   output [31:0]s00_axi_rdata;
   output s00_axi_rvalid;
@@ -278,6 +293,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0
   input s00_axi_bready;
   input s00_axi_rready;
 
+  wire [15:0]L_dec;
   wire [7:0]Q;
   wire [15:0]Q_00;
   wire [15:0]Q_01;
@@ -320,6 +336,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0
   wire [31:0]\slv_reg1_reg[31] ;
   wire [23:0]\slv_reg2_reg[23] ;
   wire [31:0]\slv_reg3_reg[31] ;
+  wire [31:0]\slv_reg4_reg[31] ;
 
   LUT6 #(
     .INIT(64'hFF7FF070F070F070)) 
@@ -350,7 +367,8 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0
         .I3(s00_axi_rready),
         .O(axi_rvalid_i_1_n_0));
   intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI intellight_database_v1_0_S00_AXI_inst
-       (.Q(Q),
+       (.L_dec(L_dec),
+        .Q(Q),
         .Q_00(Q_00),
         .Q_01(Q_01),
         .Q_02(Q_02),
@@ -388,7 +406,8 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0
         .s00_axi_wvalid(s00_axi_wvalid),
         .\slv_reg1_reg[31]_0 (\slv_reg1_reg[31] ),
         .\slv_reg2_reg[23]_0 (\slv_reg2_reg[23] ),
-        .\slv_reg3_reg[31]_0 (\slv_reg3_reg[31] ));
+        .\slv_reg3_reg[31]_0 (\slv_reg3_reg[31] ),
+        .\slv_reg4_reg[31]_0 (\slv_reg4_reg[31] ));
   LUT1 #(
     .INIT(2'h1)) 
     \slv_reg0[0]_i_1 
@@ -408,6 +427,8 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
     \slv_reg1_reg[31]_0 ,
     \slv_reg2_reg[23]_0 ,
     \slv_reg3_reg[31]_0 ,
+    \slv_reg4_reg[31]_0 ,
+    L_dec,
     s00_axi_rdata,
     SR,
     s00_axi_aclk,
@@ -447,6 +468,8 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
   output [31:0]\slv_reg1_reg[31]_0 ;
   output [23:0]\slv_reg2_reg[23]_0 ;
   output [31:0]\slv_reg3_reg[31]_0 ;
+  output [31:0]\slv_reg4_reg[31]_0 ;
+  output [15:0]L_dec;
   output [31:0]s00_axi_rdata;
   input [0:0]SR;
   input s00_axi_aclk;
@@ -477,6 +500,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
   input s00_axi_wvalid;
   input [3:0]s00_axi_wstrb;
 
+  wire [15:0]L_dec;
   wire [7:0]Q;
   wire [15:0]Q_00;
   wire [15:0]Q_01;
@@ -889,12 +913,12 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
   wire \slv_reg3[31]_i_1_n_0 ;
   wire \slv_reg3[7]_i_1_n_0 ;
   wire [31:0]\slv_reg3_reg[31]_0 ;
-  wire [31:0]slv_reg4;
   wire \slv_reg4[15]_i_1_n_0 ;
   wire \slv_reg4[23]_i_1_n_0 ;
   wire \slv_reg4[31]_i_1_n_0 ;
   wire \slv_reg4[7]_i_1_n_0 ;
-  wire [31:0]slv_reg5;
+  wire [31:0]\slv_reg4_reg[31]_0 ;
+  wire [31:16]slv_reg5;
   wire \slv_reg5[15]_i_1_n_0 ;
   wire \slv_reg5[23]_i_1_n_0 ;
   wire \slv_reg5[31]_i_1_n_0 ;
@@ -1081,9 +1105,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[0]),
         .I1(slv_reg6[0]),
         .I2(\axi_araddr_reg[3]_rep_n_0 ),
-        .I3(slv_reg5[0]),
+        .I3(L_dec[0]),
         .I4(\axi_araddr_reg[2]_rep_n_0 ),
-        .I5(slv_reg4[0]),
+        .I5(\slv_reg4_reg[31]_0 [0]),
         .O(\axi_rdata[0]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -1171,9 +1195,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[10]),
         .I1(slv_reg6[10]),
         .I2(sel0[1]),
-        .I3(slv_reg5[10]),
+        .I3(L_dec[10]),
         .I4(sel0[0]),
-        .I5(slv_reg4[10]),
+        .I5(\slv_reg4_reg[31]_0 [10]),
         .O(\axi_rdata[10]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -1261,9 +1285,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[11]),
         .I1(slv_reg6[11]),
         .I2(sel0[1]),
-        .I3(slv_reg5[11]),
+        .I3(L_dec[11]),
         .I4(sel0[0]),
-        .I5(slv_reg4[11]),
+        .I5(\slv_reg4_reg[31]_0 [11]),
         .O(\axi_rdata[11]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -1351,9 +1375,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[12]),
         .I1(slv_reg6[12]),
         .I2(sel0[1]),
-        .I3(slv_reg5[12]),
+        .I3(L_dec[12]),
         .I4(sel0[0]),
-        .I5(slv_reg4[12]),
+        .I5(\slv_reg4_reg[31]_0 [12]),
         .O(\axi_rdata[12]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -1441,9 +1465,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[13]),
         .I1(slv_reg6[13]),
         .I2(sel0[1]),
-        .I3(slv_reg5[13]),
+        .I3(L_dec[13]),
         .I4(sel0[0]),
-        .I5(slv_reg4[13]),
+        .I5(\slv_reg4_reg[31]_0 [13]),
         .O(\axi_rdata[13]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -1531,9 +1555,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[14]),
         .I1(slv_reg6[14]),
         .I2(sel0[1]),
-        .I3(slv_reg5[14]),
+        .I3(L_dec[14]),
         .I4(sel0[0]),
-        .I5(slv_reg4[14]),
+        .I5(\slv_reg4_reg[31]_0 [14]),
         .O(\axi_rdata[14]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -1621,9 +1645,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[15]),
         .I1(slv_reg6[15]),
         .I2(sel0[1]),
-        .I3(slv_reg5[15]),
+        .I3(L_dec[15]),
         .I4(sel0[0]),
-        .I5(slv_reg4[15]),
+        .I5(\slv_reg4_reg[31]_0 [15]),
         .O(\axi_rdata[15]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -1713,7 +1737,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[16]),
         .I4(sel0[0]),
-        .I5(slv_reg4[16]),
+        .I5(\slv_reg4_reg[31]_0 [16]),
         .O(\axi_rdata[16]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
@@ -1763,7 +1787,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[17]),
         .I4(sel0[0]),
-        .I5(slv_reg4[17]),
+        .I5(\slv_reg4_reg[31]_0 [17]),
         .O(\axi_rdata[17]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
@@ -1813,7 +1837,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[18]),
         .I4(sel0[0]),
-        .I5(slv_reg4[18]),
+        .I5(\slv_reg4_reg[31]_0 [18]),
         .O(\axi_rdata[18]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
@@ -1863,7 +1887,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[19]),
         .I4(sel0[0]),
-        .I5(slv_reg4[19]),
+        .I5(\slv_reg4_reg[31]_0 [19]),
         .O(\axi_rdata[19]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -1911,9 +1935,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[1]),
         .I1(slv_reg6[1]),
         .I2(\axi_araddr_reg[3]_rep_n_0 ),
-        .I3(slv_reg5[1]),
+        .I3(L_dec[1]),
         .I4(\axi_araddr_reg[2]_rep_n_0 ),
-        .I5(slv_reg4[1]),
+        .I5(\slv_reg4_reg[31]_0 [1]),
         .O(\axi_rdata[1]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -2003,7 +2027,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[20]),
         .I4(sel0[0]),
-        .I5(slv_reg4[20]),
+        .I5(\slv_reg4_reg[31]_0 [20]),
         .O(\axi_rdata[20]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
@@ -2053,7 +2077,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[21]),
         .I4(sel0[0]),
-        .I5(slv_reg4[21]),
+        .I5(\slv_reg4_reg[31]_0 [21]),
         .O(\axi_rdata[21]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
@@ -2103,7 +2127,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[22]),
         .I4(sel0[0]),
-        .I5(slv_reg4[22]),
+        .I5(\slv_reg4_reg[31]_0 [22]),
         .O(\axi_rdata[22]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
@@ -2153,7 +2177,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[23]),
         .I4(sel0[0]),
-        .I5(slv_reg4[23]),
+        .I5(\slv_reg4_reg[31]_0 [23]),
         .O(\axi_rdata[23]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
@@ -2203,7 +2227,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[24]),
         .I4(sel0[0]),
-        .I5(slv_reg4[24]),
+        .I5(\slv_reg4_reg[31]_0 [24]),
         .O(\axi_rdata[24]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
@@ -2253,7 +2277,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[25]),
         .I4(sel0[0]),
-        .I5(slv_reg4[25]),
+        .I5(\slv_reg4_reg[31]_0 [25]),
         .O(\axi_rdata[25]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
@@ -2303,7 +2327,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[26]),
         .I4(sel0[0]),
-        .I5(slv_reg4[26]),
+        .I5(\slv_reg4_reg[31]_0 [26]),
         .O(\axi_rdata[26]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
@@ -2353,7 +2377,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[27]),
         .I4(sel0[0]),
-        .I5(slv_reg4[27]),
+        .I5(\slv_reg4_reg[31]_0 [27]),
         .O(\axi_rdata[27]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
@@ -2403,7 +2427,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[28]),
         .I4(sel0[0]),
-        .I5(slv_reg4[28]),
+        .I5(\slv_reg4_reg[31]_0 [28]),
         .O(\axi_rdata[28]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
@@ -2453,7 +2477,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[29]),
         .I4(sel0[0]),
-        .I5(slv_reg4[29]),
+        .I5(\slv_reg4_reg[31]_0 [29]),
         .O(\axi_rdata[29]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -2501,9 +2525,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[2]),
         .I1(slv_reg6[2]),
         .I2(\axi_araddr_reg[3]_rep_n_0 ),
-        .I3(slv_reg5[2]),
+        .I3(L_dec[2]),
         .I4(\axi_araddr_reg[2]_rep_n_0 ),
-        .I5(slv_reg4[2]),
+        .I5(\slv_reg4_reg[31]_0 [2]),
         .O(\axi_rdata[2]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -2593,7 +2617,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[30]),
         .I4(sel0[0]),
-        .I5(slv_reg4[30]),
+        .I5(\slv_reg4_reg[31]_0 [30]),
         .O(\axi_rdata[30]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
@@ -2643,7 +2667,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
         .I2(sel0[1]),
         .I3(slv_reg5[31]),
         .I4(sel0[0]),
-        .I5(slv_reg4[31]),
+        .I5(\slv_reg4_reg[31]_0 [31]),
         .O(\axi_rdata[31]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -2691,9 +2715,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[3]),
         .I1(slv_reg6[3]),
         .I2(\axi_araddr_reg[3]_rep_n_0 ),
-        .I3(slv_reg5[3]),
+        .I3(L_dec[3]),
         .I4(\axi_araddr_reg[2]_rep_n_0 ),
-        .I5(slv_reg4[3]),
+        .I5(\slv_reg4_reg[31]_0 [3]),
         .O(\axi_rdata[3]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -2781,9 +2805,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[4]),
         .I1(slv_reg6[4]),
         .I2(\axi_araddr_reg[3]_rep_n_0 ),
-        .I3(slv_reg5[4]),
+        .I3(L_dec[4]),
         .I4(\axi_araddr_reg[2]_rep_n_0 ),
-        .I5(slv_reg4[4]),
+        .I5(\slv_reg4_reg[31]_0 [4]),
         .O(\axi_rdata[4]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -2871,9 +2895,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[5]),
         .I1(slv_reg6[5]),
         .I2(\axi_araddr_reg[3]_rep_n_0 ),
-        .I3(slv_reg5[5]),
+        .I3(L_dec[5]),
         .I4(\axi_araddr_reg[2]_rep_n_0 ),
-        .I5(slv_reg4[5]),
+        .I5(\slv_reg4_reg[31]_0 [5]),
         .O(\axi_rdata[5]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -2961,9 +2985,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[6]),
         .I1(slv_reg6[6]),
         .I2(\axi_araddr_reg[3]_rep_n_0 ),
-        .I3(slv_reg5[6]),
+        .I3(L_dec[6]),
         .I4(\axi_araddr_reg[2]_rep_n_0 ),
-        .I5(slv_reg4[6]),
+        .I5(\slv_reg4_reg[31]_0 [6]),
         .O(\axi_rdata[6]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -3051,9 +3075,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[7]),
         .I1(slv_reg6[7]),
         .I2(\axi_araddr_reg[3]_rep_n_0 ),
-        .I3(slv_reg5[7]),
+        .I3(L_dec[7]),
         .I4(\axi_araddr_reg[2]_rep_n_0 ),
-        .I5(slv_reg4[7]),
+        .I5(\slv_reg4_reg[31]_0 [7]),
         .O(\axi_rdata[7]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -3141,9 +3165,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[8]),
         .I1(slv_reg6[8]),
         .I2(sel0[1]),
-        .I3(slv_reg5[8]),
+        .I3(L_dec[8]),
         .I4(sel0[0]),
-        .I5(slv_reg4[8]),
+        .I5(\slv_reg4_reg[31]_0 [8]),
         .O(\axi_rdata[8]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -3231,9 +3255,9 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.I0(slv_reg7[9]),
         .I1(slv_reg6[9]),
         .I2(sel0[1]),
-        .I3(slv_reg5[9]),
+        .I3(L_dec[9]),
         .I4(sel0[0]),
-        .I5(slv_reg4[9]),
+        .I5(\slv_reg4_reg[31]_0 [9]),
         .O(\axi_rdata[9]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -7796,193 +7820,193 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[7]_i_1_n_0 ),
         .D(s00_axi_wdata[0]),
-        .Q(slv_reg4[0]),
+        .Q(\slv_reg4_reg[31]_0 [0]),
         .R(SR));
   FDRE \slv_reg4_reg[10] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[15]_i_1_n_0 ),
         .D(s00_axi_wdata[10]),
-        .Q(slv_reg4[10]),
+        .Q(\slv_reg4_reg[31]_0 [10]),
         .R(SR));
   FDRE \slv_reg4_reg[11] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[15]_i_1_n_0 ),
         .D(s00_axi_wdata[11]),
-        .Q(slv_reg4[11]),
+        .Q(\slv_reg4_reg[31]_0 [11]),
         .R(SR));
   FDRE \slv_reg4_reg[12] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[15]_i_1_n_0 ),
         .D(s00_axi_wdata[12]),
-        .Q(slv_reg4[12]),
+        .Q(\slv_reg4_reg[31]_0 [12]),
         .R(SR));
   FDRE \slv_reg4_reg[13] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[15]_i_1_n_0 ),
         .D(s00_axi_wdata[13]),
-        .Q(slv_reg4[13]),
+        .Q(\slv_reg4_reg[31]_0 [13]),
         .R(SR));
   FDRE \slv_reg4_reg[14] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[15]_i_1_n_0 ),
         .D(s00_axi_wdata[14]),
-        .Q(slv_reg4[14]),
+        .Q(\slv_reg4_reg[31]_0 [14]),
         .R(SR));
   FDRE \slv_reg4_reg[15] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[15]_i_1_n_0 ),
         .D(s00_axi_wdata[15]),
-        .Q(slv_reg4[15]),
+        .Q(\slv_reg4_reg[31]_0 [15]),
         .R(SR));
   FDRE \slv_reg4_reg[16] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[23]_i_1_n_0 ),
         .D(s00_axi_wdata[16]),
-        .Q(slv_reg4[16]),
+        .Q(\slv_reg4_reg[31]_0 [16]),
         .R(SR));
   FDRE \slv_reg4_reg[17] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[23]_i_1_n_0 ),
         .D(s00_axi_wdata[17]),
-        .Q(slv_reg4[17]),
+        .Q(\slv_reg4_reg[31]_0 [17]),
         .R(SR));
   FDRE \slv_reg4_reg[18] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[23]_i_1_n_0 ),
         .D(s00_axi_wdata[18]),
-        .Q(slv_reg4[18]),
+        .Q(\slv_reg4_reg[31]_0 [18]),
         .R(SR));
   FDRE \slv_reg4_reg[19] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[23]_i_1_n_0 ),
         .D(s00_axi_wdata[19]),
-        .Q(slv_reg4[19]),
+        .Q(\slv_reg4_reg[31]_0 [19]),
         .R(SR));
   FDRE \slv_reg4_reg[1] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[7]_i_1_n_0 ),
         .D(s00_axi_wdata[1]),
-        .Q(slv_reg4[1]),
+        .Q(\slv_reg4_reg[31]_0 [1]),
         .R(SR));
   FDRE \slv_reg4_reg[20] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[23]_i_1_n_0 ),
         .D(s00_axi_wdata[20]),
-        .Q(slv_reg4[20]),
+        .Q(\slv_reg4_reg[31]_0 [20]),
         .R(SR));
   FDRE \slv_reg4_reg[21] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[23]_i_1_n_0 ),
         .D(s00_axi_wdata[21]),
-        .Q(slv_reg4[21]),
+        .Q(\slv_reg4_reg[31]_0 [21]),
         .R(SR));
   FDRE \slv_reg4_reg[22] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[23]_i_1_n_0 ),
         .D(s00_axi_wdata[22]),
-        .Q(slv_reg4[22]),
+        .Q(\slv_reg4_reg[31]_0 [22]),
         .R(SR));
   FDRE \slv_reg4_reg[23] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[23]_i_1_n_0 ),
         .D(s00_axi_wdata[23]),
-        .Q(slv_reg4[23]),
+        .Q(\slv_reg4_reg[31]_0 [23]),
         .R(SR));
   FDRE \slv_reg4_reg[24] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[31]_i_1_n_0 ),
         .D(s00_axi_wdata[24]),
-        .Q(slv_reg4[24]),
+        .Q(\slv_reg4_reg[31]_0 [24]),
         .R(SR));
   FDRE \slv_reg4_reg[25] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[31]_i_1_n_0 ),
         .D(s00_axi_wdata[25]),
-        .Q(slv_reg4[25]),
+        .Q(\slv_reg4_reg[31]_0 [25]),
         .R(SR));
   FDRE \slv_reg4_reg[26] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[31]_i_1_n_0 ),
         .D(s00_axi_wdata[26]),
-        .Q(slv_reg4[26]),
+        .Q(\slv_reg4_reg[31]_0 [26]),
         .R(SR));
   FDRE \slv_reg4_reg[27] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[31]_i_1_n_0 ),
         .D(s00_axi_wdata[27]),
-        .Q(slv_reg4[27]),
+        .Q(\slv_reg4_reg[31]_0 [27]),
         .R(SR));
   FDRE \slv_reg4_reg[28] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[31]_i_1_n_0 ),
         .D(s00_axi_wdata[28]),
-        .Q(slv_reg4[28]),
+        .Q(\slv_reg4_reg[31]_0 [28]),
         .R(SR));
   FDRE \slv_reg4_reg[29] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[31]_i_1_n_0 ),
         .D(s00_axi_wdata[29]),
-        .Q(slv_reg4[29]),
+        .Q(\slv_reg4_reg[31]_0 [29]),
         .R(SR));
   FDRE \slv_reg4_reg[2] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[7]_i_1_n_0 ),
         .D(s00_axi_wdata[2]),
-        .Q(slv_reg4[2]),
+        .Q(\slv_reg4_reg[31]_0 [2]),
         .R(SR));
   FDRE \slv_reg4_reg[30] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[31]_i_1_n_0 ),
         .D(s00_axi_wdata[30]),
-        .Q(slv_reg4[30]),
+        .Q(\slv_reg4_reg[31]_0 [30]),
         .R(SR));
   FDRE \slv_reg4_reg[31] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[31]_i_1_n_0 ),
         .D(s00_axi_wdata[31]),
-        .Q(slv_reg4[31]),
+        .Q(\slv_reg4_reg[31]_0 [31]),
         .R(SR));
   FDRE \slv_reg4_reg[3] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[7]_i_1_n_0 ),
         .D(s00_axi_wdata[3]),
-        .Q(slv_reg4[3]),
+        .Q(\slv_reg4_reg[31]_0 [3]),
         .R(SR));
   FDRE \slv_reg4_reg[4] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[7]_i_1_n_0 ),
         .D(s00_axi_wdata[4]),
-        .Q(slv_reg4[4]),
+        .Q(\slv_reg4_reg[31]_0 [4]),
         .R(SR));
   FDRE \slv_reg4_reg[5] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[7]_i_1_n_0 ),
         .D(s00_axi_wdata[5]),
-        .Q(slv_reg4[5]),
+        .Q(\slv_reg4_reg[31]_0 [5]),
         .R(SR));
   FDRE \slv_reg4_reg[6] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[7]_i_1_n_0 ),
         .D(s00_axi_wdata[6]),
-        .Q(slv_reg4[6]),
+        .Q(\slv_reg4_reg[31]_0 [6]),
         .R(SR));
   FDRE \slv_reg4_reg[7] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[7]_i_1_n_0 ),
         .D(s00_axi_wdata[7]),
-        .Q(slv_reg4[7]),
+        .Q(\slv_reg4_reg[31]_0 [7]),
         .R(SR));
   FDRE \slv_reg4_reg[8] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[15]_i_1_n_0 ),
         .D(s00_axi_wdata[8]),
-        .Q(slv_reg4[8]),
+        .Q(\slv_reg4_reg[31]_0 [8]),
         .R(SR));
   FDRE \slv_reg4_reg[9] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg4[15]_i_1_n_0 ),
         .D(s00_axi_wdata[9]),
-        .Q(slv_reg4[9]),
+        .Q(\slv_reg4_reg[31]_0 [9]),
         .R(SR));
   LUT6 #(
     .INIT(64'h0400000000000000)) 
@@ -8028,43 +8052,43 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[0]),
-        .Q(slv_reg5[0]),
+        .Q(L_dec[0]),
         .R(SR));
   FDRE \slv_reg5_reg[10] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[15]_i_1_n_0 ),
         .D(s00_axi_wdata[10]),
-        .Q(slv_reg5[10]),
+        .Q(L_dec[10]),
         .R(SR));
   FDRE \slv_reg5_reg[11] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[15]_i_1_n_0 ),
         .D(s00_axi_wdata[11]),
-        .Q(slv_reg5[11]),
+        .Q(L_dec[11]),
         .R(SR));
   FDRE \slv_reg5_reg[12] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[15]_i_1_n_0 ),
         .D(s00_axi_wdata[12]),
-        .Q(slv_reg5[12]),
+        .Q(L_dec[12]),
         .R(SR));
   FDRE \slv_reg5_reg[13] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[15]_i_1_n_0 ),
         .D(s00_axi_wdata[13]),
-        .Q(slv_reg5[13]),
+        .Q(L_dec[13]),
         .R(SR));
   FDRE \slv_reg5_reg[14] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[15]_i_1_n_0 ),
         .D(s00_axi_wdata[14]),
-        .Q(slv_reg5[14]),
+        .Q(L_dec[14]),
         .R(SR));
   FDRE \slv_reg5_reg[15] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[15]_i_1_n_0 ),
         .D(s00_axi_wdata[15]),
-        .Q(slv_reg5[15]),
+        .Q(L_dec[15]),
         .R(SR));
   FDRE \slv_reg5_reg[16] 
        (.C(s00_axi_aclk),
@@ -8094,7 +8118,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[1]),
-        .Q(slv_reg5[1]),
+        .Q(L_dec[1]),
         .R(SR));
   FDRE \slv_reg5_reg[20] 
        (.C(s00_axi_aclk),
@@ -8160,7 +8184,7 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[2]),
-        .Q(slv_reg5[2]),
+        .Q(L_dec[2]),
         .R(SR));
   FDRE \slv_reg5_reg[30] 
        (.C(s00_axi_aclk),
@@ -8178,43 +8202,43 @@ module intellight_v2_intellight_database_0_1_intellight_database_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[3]),
-        .Q(slv_reg5[3]),
+        .Q(L_dec[3]),
         .R(SR));
   FDRE \slv_reg5_reg[4] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[4]),
-        .Q(slv_reg5[4]),
+        .Q(L_dec[4]),
         .R(SR));
   FDRE \slv_reg5_reg[5] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[5]),
-        .Q(slv_reg5[5]),
+        .Q(L_dec[5]),
         .R(SR));
   FDRE \slv_reg5_reg[6] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[6]),
-        .Q(slv_reg5[6]),
+        .Q(L_dec[6]),
         .R(SR));
   FDRE \slv_reg5_reg[7] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[7]_i_1_n_0 ),
         .D(s00_axi_wdata[7]),
-        .Q(slv_reg5[7]),
+        .Q(L_dec[7]),
         .R(SR));
   FDRE \slv_reg5_reg[8] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[15]_i_1_n_0 ),
         .D(s00_axi_wdata[8]),
-        .Q(slv_reg5[8]),
+        .Q(L_dec[8]),
         .R(SR));
   FDRE \slv_reg5_reg[9] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg5[15]_i_1_n_0 ),
         .D(s00_axi_wdata[9]),
-        .Q(slv_reg5[9]),
+        .Q(L_dec[9]),
         .R(SR));
   LUT6 #(
     .INIT(64'h0000200000000000)) 
