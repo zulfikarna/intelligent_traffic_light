@@ -1,0 +1,114 @@
+% REINFORCEMENT LEARNING
+@book{sutton-2014,
+    author = {Richard S. Sutton and Andrew G. Barto},
+    title = {Reinforcement Learning: An Introduction},
+    year = {2015},
+    edition = {2},
+    publisher = {The MIT Press},
+    city = {Cambridge and London},
+}
+
+@phdthesis{watkins-1989,
+    author = {Christopher John Cornish Hellaby Watkins},
+    title = {Learning from Delayed Rewards},
+    school = {King's College},
+    year = {1989},
+    address = {Cambridge, UK},
+    month = {May},
+    url = {http://www.cs.rhul.ac.uk/~chrisw/new\_thesis.pdf}
+}
+
+@book{may-2003,
+    author = {Gary S. May and Simon M. Sze},
+    title = {Fundamentals of Semiconductor Fabrication},
+    year = {2003},
+    publisher = {John Wiley \& Sons, Inc},
+}
+
+@article{greaves-2011,
+  title={System on Chip Design and Modelling},
+  author={Greaves, David J},
+  journal={University of Cambridge Computer Laboratory Lecture Notes},
+  pages={130},
+  year={2011}
+}
+
+@article{dasilva-2019,
+    author={Da Silva, Lucileide M. D. and Torquato, Matheus F. and Fernandes, Marcelo A. C.},
+    journal={IEEE Access}, 
+    title={Parallel Implementation of Reinforcement Learning Q-Learning Technique for FPGA}, 
+    year={2019},
+    volume={7},
+    number={},
+    pages={2782-2798},
+    doi={10.1109/ACCESS.2018.2885950}
+}
+
+@journal{spano-2019,
+    author={Spanò, Sergio and Cardarilli, Gian Carlo and Di Nunzio, Luca and Fazzolari, Rocco and Giardino, Daniele and Matta, Marco and Nannarelli, Alberto and Re, Marco},
+    journal={IEEE Access}, 
+    title={An Efficient Hardware Implementation of Reinforcement Learning: The Q-Learning Algorithm}, 
+    year={2019},
+    volume={7},
+    number={},
+    pages={186340-186351},
+    doi={10.1109/ACCESS.2019.2961174}
+}
+
+@conference{huang-2022,
+  author={Huang, Demei and Zhu, Haoyuan and Lin, Xianqi and Wang, Li},
+  booktitle={2022 5th International Conference on Pattern Recognition and Artificial Intelligence (PRAI)}, 
+  title={Application of Massive Parallel Computation Based Q-Learning in System Control}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-5},
+  doi={10.1109/PRAI55851.2022.9904213}}
+
+@article{jang-2019,
+  author={Jang, Beakcheol and Kim, Myeonghwi and Harerimana, Gaspard and Kim, Jong Wook},
+  journal={IEEE Access}, 
+  title={Q-Learning Algorithms: A Comprehensive Classification and Applications}, 
+  year={2019},
+  volume={7},
+  number={},
+  pages={133653-133667},
+  doi={10.1109/ACCESS.2019.2941229}}
+
+@article{spano-2019,
+    author={Spanò, Sergio and Cardarilli, Gian Carlo and Di Nunzio, Luca and Fazzolari, Rocco and Giardino, Daniele and Matta, Marco and Nannarelli, Alberto and Re, Marco},  
+    journal={IEEE Access},   
+    title={An Efficient Hardware Implementation of Reinforcement Learning: The Q-Learning Algorithm},   
+    year={2019},  
+    volume={7},  
+    number={},  
+    pages={186340-186351},  
+    doi={10.1109/ACCESS.2019.2961174}}
+
+@article{dasilva-2019,  
+    author={Da Silva, Lucileide M. D. and Torquato, Matheus F. and Fernandes, Marcelo A. C.},  
+    journal={IEEE Access},   
+    title={Parallel Implementation of Reinforcement Learning Q-Learning Technique for FPGA},   
+    year={2019},  
+    volume={7},  
+    number={},  
+    pages={2782-2798},  
+    doi={10.1109/ACCESS.2018.2885950}}
+
+@article{gupta-2021,  
+    author={Gupta, Anmol and Roy, Partha Pratim and Dutt, Varun},  
+    journal={IEEE Access},   
+    title={Evaluation of Instance-Based Learning and Q-Learning Algorithms in Dynamic Environments},   
+    year={2021},  
+    volume={9},  
+    number={},  
+    pages={138775-138790}, 
+    doi={10.1109/ACCESS.2021.3117855}}
+
+@article{melo-2001,
+  title={Convergence of Q-learning: A simple proof},
+  author={Melo, Francisco S},
+  journal={Institute Of Systems and Robotics, Tech. Rep},
+  pages={1-4},
+  year={2001}
+}
