@@ -4,7 +4,17 @@
 
 
 module MOI
-//#(  parameter   Q_WIDTH = 16)
+#(  parameter integer S_WIDTH = 8,
+    parameter integer Q_WIDTH = 16,
+    parameter integer A_WIDTH = 4,
+    parameter integer R_WIDTH = 16,
+    parameter integer L_WIDTH = 4,
+    parameter integer ITV_WIDTH = 16,
+    parameter integer WEN_WIDTH = 8,
+    parameter integer RND_WIDTH = 16,
+    parameter integer CTR_WIDTH = 16,
+    parameter integer ADDR_WIDTH = 32
+    )
 (
     input wire [Q_WIDTH*4-1:0] Droad0, Droad1, Droad2, Droad3,
     output wire signed [Q_WIDTH-1:0] Q_00, Q_01, Q_02, Q_03,

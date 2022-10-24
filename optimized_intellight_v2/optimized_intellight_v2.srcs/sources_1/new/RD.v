@@ -10,11 +10,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module RD // verified
-#(  parameter integer S_WIDTH = 8,
+#(  parameter integer S_WIDTH = 32,
+    parameter integer L_WIDTH = 8,
     parameter integer Q_WIDTH = 16,
     parameter integer A_WIDTH = 4,
     parameter integer R_WIDTH = 16,
-    parameter integer L_WIDTH = 4,
     parameter integer ITV_WIDTH = 16,
     parameter integer WEN_WIDTH = 8,
     parameter integer RND_WIDTH = 16,
@@ -27,7 +27,6 @@ module RD // verified
     output reg signed [R_WIDTH-1:0] R        
     );
     
-    `include "parameters.v"
     wire signed [R_WIDTH-1:0] R_temp [0:3];
     assign R_temp[0] = (L0[L_WIDTH-1:0] == {L_WIDTH/2{0}})? ('d10):
                        (L0[L_WIDTH-1:0] == {L_WIDTH/2{1}})? (-'d10): (-'d1);

@@ -5,8 +5,8 @@
 	(
 		// Users to add parameters here
 		parameter integer Q_WIDTH = 16,
-		parameter integer S_WIDTH = 8,
-		parameter integer L_WIDTH = 4,
+		parameter integer S_WIDTH = 32,
+		parameter integer L_WIDTH = 8,
 
 		// User parameters ends
 		// Do not modify the parameters beyond this line
@@ -766,12 +766,12 @@
 	assign max_step = slv_reg1[15:0];
 	assign max_episode = slv_reg1[31:16];
 	assign seed = slv_reg2[15:0];
-	assign S_sim = slv_reg2[S_WIDTH+15:16];
 	assign L_inc_a = slv_reg3[15:0];
 	assign L_inc_b = slv_reg3[31:16];
 	assign L_inc_c = slv_reg4[15:0];
 	assign L_inc_d = slv_reg4[31:16];
 	assign L_dec = slv_reg5[15:0];
+	assign S_sim = slv_reg6;
 	// User logic ends
 
 	endmodule

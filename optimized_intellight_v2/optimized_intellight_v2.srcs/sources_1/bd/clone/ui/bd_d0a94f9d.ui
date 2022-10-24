@@ -18,14 +18,14 @@ preplace inst comm_ram -pg 1 -lvl 8 -x 3160 -y 970 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 6 -x 2080 -y 640 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 7 -x 2620 -y 850 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 190 -y 670 -defaultsOSRD
-preplace inst MII_0 -pg 1 -lvl 7 -x 2620 -y 1260 -defaultsOSRD
-preplace inst MOI_0 -pg 1 -lvl 7 -x 2620 -y 340 -defaultsOSRD
 preplace inst intellight_database_0 -pg 1 -lvl 8 -x 3160 -y 290 -defaultsOSRD
-preplace inst PG_0 -pg 1 -lvl 3 -x 980 -y 250 -defaultsOSRD
-preplace inst SD_0 -pg 1 -lvl 4 -x 1330 -y 270 -defaultsOSRD
-preplace inst RD_0 -pg 1 -lvl 5 -x 1620 -y 260 -defaultsOSRD
 preplace inst CU_0 -pg 1 -lvl 2 -x 590 -y 380 -defaultsOSRD
 preplace inst QA_0 -pg 1 -lvl 6 -x 2080 -y 310 -defaultsOSRD
+preplace inst MOI_0 -pg 1 -lvl 7 -x 2620 -y 340 -defaultsOSRD
+preplace inst PG_0 -pg 1 -lvl 3 -x 980 -y 250 -defaultsOSRD
+preplace inst MII_0 -pg 1 -lvl 7 -x 2620 -y 1260 -defaultsOSRD
+preplace inst SD_0 -pg 1 -lvl 4 -x 1330 -y 270 -defaultsOSRD
+preplace inst RD_0 -pg 1 -lvl 5 -x 1620 -y 260 -defaultsOSRD
 preplace netloc CU_0_A_sel 1 2 1 770 260n
 preplace netloc CU_0_finish 1 2 6 NJ 460 NJ 460 NJ 460 1790J 80 NJ 80 2910
 preplace netloc CU_0_idle 1 2 7 NJ 500 NJ 500 NJ 500 NJ 500 2450J 560 NJ 560 3370J

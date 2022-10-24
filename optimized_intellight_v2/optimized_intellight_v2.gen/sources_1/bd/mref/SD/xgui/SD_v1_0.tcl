@@ -113,6 +113,11 @@ proc update_MODELPARAM_VALUE.S_WIDTH { MODELPARAM_VALUE.S_WIDTH PARAM_VALUE.S_WI
 	set_property value [get_property value ${PARAM_VALUE.S_WIDTH}] ${MODELPARAM_VALUE.S_WIDTH}
 }
 
+proc update_MODELPARAM_VALUE.L_WIDTH { MODELPARAM_VALUE.L_WIDTH PARAM_VALUE.L_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.L_WIDTH}] ${MODELPARAM_VALUE.L_WIDTH}
+}
+
 proc update_MODELPARAM_VALUE.Q_WIDTH { MODELPARAM_VALUE.Q_WIDTH PARAM_VALUE.Q_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.Q_WIDTH}] ${MODELPARAM_VALUE.Q_WIDTH}
@@ -126,11 +131,6 @@ proc update_MODELPARAM_VALUE.A_WIDTH { MODELPARAM_VALUE.A_WIDTH PARAM_VALUE.A_WI
 proc update_MODELPARAM_VALUE.R_WIDTH { MODELPARAM_VALUE.R_WIDTH PARAM_VALUE.R_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.R_WIDTH}] ${MODELPARAM_VALUE.R_WIDTH}
-}
-
-proc update_MODELPARAM_VALUE.L_WIDTH { MODELPARAM_VALUE.L_WIDTH PARAM_VALUE.L_WIDTH } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.L_WIDTH}] ${MODELPARAM_VALUE.L_WIDTH}
 }
 
 proc update_MODELPARAM_VALUE.ITV_WIDTH { MODELPARAM_VALUE.ITV_WIDTH PARAM_VALUE.ITV_WIDTH } {

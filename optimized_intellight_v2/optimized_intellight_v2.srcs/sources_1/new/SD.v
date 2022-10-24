@@ -11,11 +11,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module SD // verified
-#(  parameter integer S_WIDTH = 8,
+#(  parameter integer S_WIDTH = 32,
+    parameter integer L_WIDTH = 8,
     parameter integer Q_WIDTH = 16,
     parameter integer A_WIDTH = 4,
     parameter integer R_WIDTH = 16,
-    parameter integer L_WIDTH = 4,
     parameter integer ITV_WIDTH = 16,
     parameter integer WEN_WIDTH = 8,
     parameter integer RND_WIDTH = 16,
@@ -26,11 +26,11 @@ module SD // verified
     input wire clk, rst, mode,
     input wire [A_WIDTH-1:0] A,
     input wire [S_WIDTH-1:0] S_sim,
-    input wire [ITV_WIDTH-1:0] L_inc_a,
-    input wire [ITV_WIDTH-1:0] L_inc_b,
-    input wire [ITV_WIDTH-1:0] L_inc_c,
-    input wire [ITV_WIDTH-1:0] L_inc_d,
-    input wire [ITV_WIDTH-1:0] L_dec,
+    input wire [4*L_WIDTH-1:0] L_inc_a,
+    input wire [4*L_WIDTH-1:0] L_inc_b,
+    input wire [4*L_WIDTH-1:0] L_inc_c,
+    input wire [4*L_WIDTH-1:0] L_inc_d,
+    input wire [4*L_WIDTH-1:0] L_dec,
     output wire [S_WIDTH-1:0] S,
     output wire [L_WIDTH-1:0] L0, L1, L2, L3
 //    output wire [L_WIDTH:0] l0, l1, l2, l3,
@@ -62,26 +62,27 @@ module SD // verified
     // 1. Determine increasing and decreasing value 
     wire [L_WIDTH-1:0] inc [0:3];
     wire [L_WIDTH-1:0] dec;
-    assign inc[0] = (A[A_WIDTH/2-1:0] == 2'd0)? L_inc_a[3:0]:
-                    (A[A_WIDTH/2-1:0] == 2'd1)? L_inc_a[7:4]:
-                    (A[A_WIDTH/2-1:0] == 2'd2)? L_inc_a[11:8]:
-                    (A[A_WIDTH/2-1:0] == 2'd3)? L_inc_a[15:12]: {L_WIDTH{1'bx}};
-    assign inc[1] = (A[A_WIDTH/2-1:0] == 2'd0)? L_inc_b[3:0]:
-                    (A[A_WIDTH/2-1:0] == 2'd1)? L_inc_b[7:4]:
-                    (A[A_WIDTH/2-1:0] == 2'd2)? L_inc_b[11:8]:
-                    (A[A_WIDTH/2-1:0] == 2'd3)? L_inc_b[15:12]: {L_WIDTH{1'bx}};
-    assign inc[2] = (A[A_WIDTH/2-1:0] == 2'd0)? L_inc_c[3:0]:
-                    (A[A_WIDTH/2-1:0] == 2'd1)? L_inc_c[7:4]:
-                    (A[A_WIDTH/2-1:0] == 2'd2)? L_inc_c[11:8]:
-                    (A[A_WIDTH/2-1:0] == 2'd3)? L_inc_c[15:12]: {L_WIDTH{1'bx}};
-    assign inc[3] = (A[A_WIDTH/2-1:0] == 2'd0)? L_inc_d[3:0]:
-                    (A[A_WIDTH/2-1:0] == 2'd1)? L_inc_d[7:4]:
-                    (A[A_WIDTH/2-1:0] == 2'd2)? L_inc_d[11:8]:
-                    (A[A_WIDTH/2-1:0] == 2'd3)? L_inc_d[15:12]: {L_WIDTH{1'bx}};
-    assign dec = (A[A_WIDTH/2-1:0] == 2'd0)? L_dec[3:0]:
-                 (A[A_WIDTH/2-1:0] == 2'd1)? L_dec[7:4]:
-                 (A[A_WIDTH/2-1:0] == 2'd2)? L_dec[11:8]:
-                 (A[A_WIDTH/2-1:0] == 2'd3)? L_dec[15:12]: {L_WIDTH{1'bx}};
+    assign inc[0] = (A[A_WIDTH/2-1:0] == 2'd0)? L_inc_a[1*L_WIDTH-1:0]:
+                    (A[A_WIDTH/2-1:0] == 2'd1)? L_inc_a[2*L_WIDTH-1:1*L_WIDTH]:
+                    (A[A_WIDTH/2-1:0] == 2'd2)? L_inc_a[3*L_WIDTH-1:2*L_WIDTH]:
+                    (A[A_WIDTH/2-1:0] == 2'd3)? L_inc_a[4*L_WIDTH-1:3*L_WIDTH]: {L_WIDTH{1'bx}};
+    assign inc[1] = (A[A_WIDTH/2-1:0] == 2'd0)? L_inc_b[1*L_WIDTH-1:0]:
+                    (A[A_WIDTH/2-1:0] == 2'd1)? L_inc_b[2*L_WIDTH-1:1*L_WIDTH]:
+                    (A[A_WIDTH/2-1:0] == 2'd2)? L_inc_b[3*L_WIDTH-1:2*L_WIDTH]:
+                    (A[A_WIDTH/2-1:0] == 2'd3)? L_inc_b[4*L_WIDTH-1:3*L_WIDTH]: {L_WIDTH{1'bx}};
+    assign inc[2] = (A[A_WIDTH/2-1:0] == 2'd0)? L_inc_c[1*L_WIDTH-1:0]:
+                    (A[A_WIDTH/2-1:0] == 2'd1)? L_inc_c[2*L_WIDTH-1:1*L_WIDTH]:
+                    (A[A_WIDTH/2-1:0] == 2'd2)? L_inc_c[3*L_WIDTH-1:2*L_WIDTH]:
+                    (A[A_WIDTH/2-1:0] == 2'd3)? L_inc_c[4*L_WIDTH-1:3*L_WIDTH]: {L_WIDTH{1'bx}};
+    assign inc[3] = (A[A_WIDTH/2-1:0] == 2'd0)? L_inc_d[1*L_WIDTH-1:0]:
+                    (A[A_WIDTH/2-1:0] == 2'd1)? L_inc_d[2*L_WIDTH-1:1*L_WIDTH]:
+                    (A[A_WIDTH/2-1:0] == 2'd2)? L_inc_d[3*L_WIDTH-1:2*L_WIDTH]:
+                    (A[A_WIDTH/2-1:0] == 2'd3)? L_inc_d[4*L_WIDTH-1:3*L_WIDTH]: {L_WIDTH{1'bx}};
+   
+    assign dec = (A[A_WIDTH/2-1:0] == 2'd0)? L_dec[1*L_WIDTH-1:0]:
+                 (A[A_WIDTH/2-1:0] == 2'd1)? L_dec[2*L_WIDTH-1:1*L_WIDTH]:
+                 (A[A_WIDTH/2-1:0] == 2'd2)? L_dec[3*L_WIDTH-1:2*L_WIDTH]:
+                 (A[A_WIDTH/2-1:0] == 2'd3)? L_dec[4*L_WIDTH-1:3*L_WIDTH]: {L_WIDTH{1'bx}};
     
     // 2. Examine the next traffic condition
     wire [L_WIDTH:0] L_temp [0:3];
@@ -111,7 +112,7 @@ module SD // verified
   
     // 3. Convert traffic condition to state
     wire [S_WIDTH-1:0] S_learn;
-    assign S_learn = ((L_next[0][L_WIDTH-1:L_WIDTH/2])|(L_next[1][L_WIDTH-1:L_WIDTH/2]<<2)|(L_next[2][L_WIDTH-1:L_WIDTH/2]<<4)|(L_next[3][L_WIDTH-1:L_WIDTH/2]<<6)) | {S_WIDTH{1'b0}};
+    assign S_learn = ((L_next[0][L_WIDTH-1:L_WIDTH/2])|(L_next[1][L_WIDTH-1:L_WIDTH/2]<<(L_WIDTH/2))|(L_next[2][L_WIDTH-1:L_WIDTH/2]<<(L_WIDTH))|(L_next[3][L_WIDTH-1:L_WIDTH/2]<<(3*L_WIDTH/2))) | {S_WIDTH{1'b0}};
     assign S = (!mode)? S_learn : S_sim;
 
 endmodule

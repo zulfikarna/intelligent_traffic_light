@@ -5,8 +5,8 @@
 	(
 		// Users to add parameters here
 		parameter integer Q_WIDTH = 16,
-		parameter integer S_WIDTH = 8,
-		parameter integer L_WIDTH = 4,
+		parameter integer S_WIDTH = 32,
+		parameter integer L_WIDTH = 8,
 
 		// User parameters ends
 		// Do not modify the parameters beyond this line
