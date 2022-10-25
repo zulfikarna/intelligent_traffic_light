@@ -96,9 +96,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="action_ram.bd" FileRelPathName="ip/action_ram_action_ram_0_1/action_ram_action_ram_0_1.xci">
-          <Proxy FileSetName="action_ram_action_ram_0_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="action_ram.bd" FileRelPathName="ip/action_ram_blk_mem_gen_0_0/action_ram_blk_mem_gen_0_0.xci">
           <Proxy FileSetName="action_ram_blk_mem_gen_0_0"/>
         </CompFileExtendedInfo>
@@ -108,29 +105,11 @@
         <CompFileExtendedInfo CompFileName="action_ram.bd" FileRelPathName="ip/action_ram_action_ram_0_0/action_ram_action_ram_0_0.xci">
           <Proxy FileSetName="action_ram_action_ram_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="action_ram.bd" FileRelPathName="ip/action_ram_action_ram_0_1/action_ram_action_ram_0_1.xci">
+          <Proxy FileSetName="action_ram_action_ram_0_1"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/action_ram/hdl/action_ram_wrapper.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/parameters.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/MII.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/MOI.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -144,28 +123,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/file_max.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/PG.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/SD.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/RD.v">
+      <File Path="$PSRCDIR/sources_1/new/parameters.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -173,6 +131,13 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/CU.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/file_max.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -193,6 +158,41 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/MOI.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/PG.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/MII.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/SD.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/RD.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/bd/intellight_v2/intellight_v2.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -202,29 +202,20 @@
         <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_2_0/intellight_v2_comm_ram_2_0.xci">
           <Proxy FileSetName="intellight_v2_comm_ram_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_0_0/intellight_v2_comm_ram_0_0.xci">
-          <Proxy FileSetName="intellight_v2_comm_ram_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_bram_ctrl_1_0/intellight_v2_axi_bram_ctrl_1_0.xci">
           <Proxy FileSetName="intellight_v2_axi_bram_ctrl_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_intellight_database_0_1/intellight_v2_intellight_database_0_1.xci">
-          <Proxy FileSetName="intellight_v2_intellight_database_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_1_0/intellight_v2_comm_ram_1_0.xci">
-          <Proxy FileSetName="intellight_v2_comm_ram_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_bram_ctrl_3_0/intellight_v2_axi_bram_ctrl_3_0.xci">
           <Proxy FileSetName="intellight_v2_axi_bram_ctrl_3_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_3_0/intellight_v2_comm_ram_3_0.xci">
-          <Proxy FileSetName="intellight_v2_comm_ram_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_bram_ctrl_2_0/intellight_v2_axi_bram_ctrl_2_0.xci">
-          <Proxy FileSetName="intellight_v2_axi_bram_ctrl_2_0"/>
+        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_0_0/intellight_v2_comm_ram_0_0.xci">
+          <Proxy FileSetName="intellight_v2_comm_ram_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_rst_ps7_0_100M_0/intellight_v2_rst_ps7_0_100M_0.xci">
           <Proxy FileSetName="intellight_v2_rst_ps7_0_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_bram_ctrl_2_0/intellight_v2_axi_bram_ctrl_2_0.xci">
+          <Proxy FileSetName="intellight_v2_axi_bram_ctrl_2_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_xbar_0/intellight_v2_xbar_0.xci">
           <Proxy FileSetName="intellight_v2_xbar_0"/>
@@ -235,8 +226,17 @@
         <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_bram_ctrl_0_0/intellight_v2_axi_bram_ctrl_0_0.xci">
           <Proxy FileSetName="intellight_v2_axi_bram_ctrl_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_1_0/intellight_v2_comm_ram_1_0.xci">
+          <Proxy FileSetName="intellight_v2_comm_ram_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_3_0/intellight_v2_comm_ram_3_0.xci">
+          <Proxy FileSetName="intellight_v2_comm_ram_3_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_processing_system7_0_1/intellight_v2_processing_system7_0_1.xci">
           <Proxy FileSetName="intellight_v2_processing_system7_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_intellight_database_0_1/intellight_v2_intellight_database_0_1.xci">
+          <Proxy FileSetName="intellight_v2_intellight_database_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_intc_0_0/intellight_v2_axi_intc_0_0.xci">
           <Proxy FileSetName="intellight_v2_axi_intc_0_0"/>
