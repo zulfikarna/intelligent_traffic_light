@@ -1,9 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../bd/intellight_v2/ip/intellight_v2_rst_ps7_0_100M_0/sim/intellight_v2_rst_ps7_0_100M_0.vhd" \
-"../../../bd/intellight_v2/ip/intellight_v2_axi_intc_0_0/sim/intellight_v2_axi_intc_0_0.vhd" \
-"../../../bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_0_0/sim/intellight_v2_axi_bram_ctrl_0_0.vhd" \
-"../../../bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_1_0/sim/intellight_v2_axi_bram_ctrl_1_0.vhd" \
-"../../../bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_2_0/sim/intellight_v2_axi_bram_ctrl_2_0.vhd" \
-"../../../bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_3_0/sim/intellight_v2_axi_bram_ctrl_3_0.vhd" \
-
-nosort

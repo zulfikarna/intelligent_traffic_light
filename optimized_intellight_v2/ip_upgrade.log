@@ -1,6 +1,48 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Oct 26 09:56:43 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'intellight_v2_intellight_database_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of intellight_v2_intellight_database_0_1 (xilinx.com:user:intellight_database:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Oct 26 09:56:40 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'clone_intellight_database_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of clone_intellight_database_0_1 (xilinx.com:user:intellight_database:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
 | Date         : Sat Oct  8 15:06:59 2022
 | Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
