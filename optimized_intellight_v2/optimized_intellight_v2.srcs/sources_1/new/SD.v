@@ -11,31 +11,28 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module SD // verified
-#(  parameter integer S_WIDTH = 16,
-    parameter integer A_WIDTH = 4
+#(  parameter integer L_WIDTH   = 4
     )
 (
     input wire clk, rst, mode,
-    input wire [A_WIDTH-1:0] A,
-    input wire [S_WIDTH-1:0] S_sim,
-    input wire [2*S_WIDTH-1:0] L_inc_a,
-    input wire [2*S_WIDTH-1:0] L_inc_b,
-    input wire [2*S_WIDTH-1:0] L_inc_c,
-    input wire [2*S_WIDTH-1:0] L_inc_d,
-    input wire [2*S_WIDTH-1:0] L_dec,
-    output wire [S_WIDTH-1:0] S,
-    output wire [S_WIDTH/4-1:0] L0, L1, L2, L3
+    input wire [(2+L_WIDTH/2)-1:0] A,
+    input wire [2*L_WIDTH-1:0] S_sim,
+    input wire [4*L_WIDTH-1:0] L_inc_a, L_inc_b, L_inc_c, L_inc_d,
+    input wire [4*L_WIDTH-1:0] L_dec,
+    output wire [L_WIDTH-1:0] L0, L1, L2, L3,
+    output wire [2*L_WIDTH-1:0] S
 //    output wire [L_WIDTH:0] l0, l1, l2, l3,
 //    output wire [L_WIDTH-1:0] inc, dec
     );
-    `include "parameters.v"
+    localparam S_WIDTH = 2*L_WIDTH;
+    localparam A_WIDTH = 2 + L_WIDTH/2;
     localparam MAX_TRAFFIC = 4'b1111;
     localparam MIN_TRAFFIC = 4'b0000;
-    localparam L_WIDTH = 2*S_WIDTH;
     
     // Registers
     reg [A_WIDTH-1:0] A_reg0;
     reg [L_WIDTH-1:0] L_curr[0:3];
+    
     always@(posedge clk) begin
         if (rst) begin
             A_reg0 <= {A_WIDTH{1'b0}};

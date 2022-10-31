@@ -42,30 +42,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_
 # IP: bd/intellight_v2/ip/intellight_v2_ps7_0_axi_periph_1/intellight_v2_ps7_0_axi_periph_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_ps7_0_axi_periph_1 || ORIG_REF_NAME==intellight_v2_ps7_0_axi_periph_1} -quiet] -quiet
 
-# IP: bd/intellight_v2/ip/intellight_v2_action_ram_wrapper_0_0/intellight_v2_action_ram_wrapper_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_action_ram_wrapper_0_0 || ORIG_REF_NAME==intellight_v2_action_ram_wrapper_0_0} -quiet] -quiet
-
-# Block Designs: bd/action_ram/action_ram.bd
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram || ORIG_REF_NAME==action_ram} -quiet] -quiet
-
-# IP: bd/action_ram/ip/action_ram_blk_mem_gen_0_0/action_ram_blk_mem_gen_0_0.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram_blk_mem_gen_0_0 || ORIG_REF_NAME==action_ram_blk_mem_gen_0_0} -quiet] -quiet
-
-# IP: bd/action_ram/ip/action_ram_action_ram_0_0/action_ram_action_ram_0_0.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram_action_ram_0_0 || ORIG_REF_NAME==action_ram_action_ram_0_0} -quiet] -quiet
-
-# IP: bd/action_ram/ip/action_ram_action_ram_0_1/action_ram_action_ram_0_1.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram_action_ram_0_1 || ORIG_REF_NAME==action_ram_action_ram_0_1} -quiet] -quiet
-
-# IP: bd/action_ram/ip/action_ram_action_ram_1_0/action_ram_action_ram_1_0.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram_action_ram_1_0 || ORIG_REF_NAME==action_ram_action_ram_1_0} -quiet] -quiet
-
-# IP: bd/action_ram/ip/action_ram_xlconstant_0_0/action_ram_xlconstant_0_0.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram_xlconstant_0_0 || ORIG_REF_NAME==action_ram_xlconstant_0_0} -quiet] -quiet
-
-# IP: bd/action_ram/ip/action_ram_const_1_1bit_0/action_ram_const_1_1bit_0.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram_const_1_1bit_0 || ORIG_REF_NAME==action_ram_const_1_1bit_0} -quiet] -quiet
-
 # IP: bd/intellight_v2/ip/intellight_v2_axi_bram_ctrl_0_0/intellight_v2_axi_bram_ctrl_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_axi_bram_ctrl_0_0 || ORIG_REF_NAME==intellight_v2_axi_bram_ctrl_0_0} -quiet] -quiet
 
@@ -90,29 +66,53 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_
 # IP: bd/intellight_v2/ip/intellight_v2_comm_ram_3_0/intellight_v2_comm_ram_3_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_comm_ram_3_0 || ORIG_REF_NAME==intellight_v2_comm_ram_3_0} -quiet] -quiet
 
-# IP: bd/intellight_v2/ip/intellight_v2_CU_0_0/intellight_v2_CU_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_CU_0_0 || ORIG_REF_NAME==intellight_v2_CU_0_0} -quiet] -quiet
+# IP: bd/intellight_v2/ip/intellight_v2_action_ram_wrapper_0_0/intellight_v2_action_ram_wrapper_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_action_ram_wrapper_0_0 || ORIG_REF_NAME==intellight_v2_action_ram_wrapper_0_0} -quiet] -quiet
 
-# IP: bd/intellight_v2/ip/intellight_v2_MII_0_0/intellight_v2_MII_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_MII_0_0 || ORIG_REF_NAME==intellight_v2_MII_0_0} -quiet] -quiet
+# Block Designs: bd/action_ram/action_ram.bd
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram || ORIG_REF_NAME==action_ram} -quiet] -quiet
 
-# IP: bd/intellight_v2/ip/intellight_v2_MOI_0_0/intellight_v2_MOI_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_MOI_0_0 || ORIG_REF_NAME==intellight_v2_MOI_0_0} -quiet] -quiet
+# IP: bd/action_ram/ip/action_ram_blk_mem_gen_0_0/action_ram_blk_mem_gen_0_0.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram_blk_mem_gen_0_0 || ORIG_REF_NAME==action_ram_blk_mem_gen_0_0} -quiet] -quiet
 
-# IP: bd/intellight_v2/ip/intellight_v2_PG_0_0/intellight_v2_PG_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_PG_0_0 || ORIG_REF_NAME==intellight_v2_PG_0_0} -quiet] -quiet
+# IP: bd/action_ram/ip/action_ram_action_ram_0_0/action_ram_action_ram_0_0.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram_action_ram_0_0 || ORIG_REF_NAME==action_ram_action_ram_0_0} -quiet] -quiet
 
-# IP: bd/intellight_v2/ip/intellight_v2_QA_0_0/intellight_v2_QA_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_QA_0_0 || ORIG_REF_NAME==intellight_v2_QA_0_0} -quiet] -quiet
+# IP: bd/action_ram/ip/action_ram_action_ram_0_1/action_ram_action_ram_0_1.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram_action_ram_0_1 || ORIG_REF_NAME==action_ram_action_ram_0_1} -quiet] -quiet
 
-# IP: bd/intellight_v2/ip/intellight_v2_RD_0_0/intellight_v2_RD_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_RD_0_0 || ORIG_REF_NAME==intellight_v2_RD_0_0} -quiet] -quiet
+# IP: bd/action_ram/ip/action_ram_action_ram_1_0/action_ram_action_ram_1_0.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram_action_ram_1_0 || ORIG_REF_NAME==action_ram_action_ram_1_0} -quiet] -quiet
+
+# IP: bd/action_ram/ip/action_ram_xlconstant_0_0/action_ram_xlconstant_0_0.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram_xlconstant_0_0 || ORIG_REF_NAME==action_ram_xlconstant_0_0} -quiet] -quiet
+
+# IP: bd/action_ram/ip/action_ram_const_1_1bit_0/action_ram_const_1_1bit_0.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==action_ram_const_1_1bit_0 || ORIG_REF_NAME==action_ram_const_1_1bit_0} -quiet] -quiet
 
 # IP: bd/intellight_v2/ip/intellight_v2_intellight_database_0_1/intellight_v2_intellight_database_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_intellight_database_0_1 || ORIG_REF_NAME==intellight_v2_intellight_database_0_1} -quiet] -quiet
 
 # IP: bd/intellight_v2/ip/intellight_v2_SD_0_1/intellight_v2_SD_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_SD_0_1 || ORIG_REF_NAME==intellight_v2_SD_0_1} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_QA_0_0/intellight_v2_QA_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_QA_0_0 || ORIG_REF_NAME==intellight_v2_QA_0_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_CU_0_0/intellight_v2_CU_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_CU_0_0 || ORIG_REF_NAME==intellight_v2_CU_0_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_PG_0_0/intellight_v2_PG_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_PG_0_0 || ORIG_REF_NAME==intellight_v2_PG_0_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_RD_0_0/intellight_v2_RD_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_RD_0_0 || ORIG_REF_NAME==intellight_v2_RD_0_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_MII_0_0/intellight_v2_MII_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_MII_0_0 || ORIG_REF_NAME==intellight_v2_MII_0_0} -quiet] -quiet
+
+# IP: bd/intellight_v2/ip/intellight_v2_MOI_0_0/intellight_v2_MOI_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_MOI_0_0 || ORIG_REF_NAME==intellight_v2_MOI_0_0} -quiet] -quiet
 
 # IP: bd/intellight_v2/ip/intellight_v2_auto_pc_2/intellight_v2_auto_pc_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==intellight_v2_auto_pc_2 || ORIG_REF_NAME==intellight_v2_auto_pc_2} -quiet] -quiet

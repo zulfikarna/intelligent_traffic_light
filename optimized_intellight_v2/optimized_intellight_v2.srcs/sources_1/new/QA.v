@@ -10,22 +10,23 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module QA // verified
-#(  parameter integer Q_WIDTH = 16,
-    parameter integer A_WIDTH = 4,
+#(  parameter integer L_WIDTH = 4,
+    parameter integer Q_WIDTH = 16,
     parameter integer R_WIDTH = 16
     )
 (
     input wire clk, rst,
     input wire [2:0] alpha, gamma,
-    input wire [Q_WIDTH*4-1:0] Droad0, Droad1, Droad2, Droad3,
+    input wire [4*Q_WIDTH-1:0] Droad0, Droad1, Droad2, Droad3,
     input wire signed [R_WIDTH-1:0] R,
-    input wire [A_WIDTH-1:0] A,
-    input wire [A_WIDTH/2-1:0] A_road,
+    input wire [(2 + L_WIDTH/2)-1:0] A,
+    input wire [1:0] A_road,
     output wire signed [Q_WIDTH-1:0] Q_new
     // for debugging 
 //    output wire signed [Q_WIDTH-1:0] x, Qmax, gm
     );
-    `include "parameters.v"
+    localparam A_WIDTH = 2 + L_WIDTH/2;
+    
     // Registers for Q-values
     reg signed [Q_WIDTH-1:0] Q_reg0 [0:3];
     reg signed [Q_WIDTH-1:0] Q_reg1 [0:3];

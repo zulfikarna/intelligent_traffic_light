@@ -10,33 +10,31 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module MII
-#(  parameter integer S_WIDTH = 32,
-    parameter integer L_WIDTH = 8,
+#(  parameter integer L_WIDTH = 4,
     parameter integer Q_WIDTH = 16,
-    parameter integer A_WIDTH = 4,
     parameter integer R_WIDTH = 16,
-    parameter integer ITV_WIDTH = 16,
     parameter integer WEN_WIDTH = 8,
-    parameter integer RND_WIDTH = 16,
-    parameter integer CTR_WIDTH = 16,
     parameter integer ADDR_WIDTH = 32
     )
 (
     input wire clk, rst, 
-    input wire [S_WIDTH-1:0] S,
+    input wire [(2 + L_WIDTH/2)-1:0] A,
     input wire [Q_WIDTH-1:0] Q_new,
+    input wire [2*L_WIDTH-1:0] S,
+    input wire [4*Q_WIDTH-1:0] Droad0, Droad1, Droad2, Droad3,
+    input wire [1:0] A_road,
     input wire wen_cu,
-    input wire [A_WIDTH-1:0] A,
-    input wire [A_WIDTH/2-1:0] A_road,
-    input wire [Q_WIDTH*4-1:0] Droad0, Droad1, Droad2, Droad3,
     output wire[ADDR_WIDTH-1:0] rd_addr,
     output reg [ADDR_WIDTH-1:0] wr_addr,
-    output wire[Q_WIDTH*4-1:0] D_new,
     output reg [WEN_WIDTH-1:0] wen_bram,
-    output reg wen0, wen1, wen2, wen3,
-    output wire [A_WIDTH-1:0] A_reg0, A_reg1, A_reg2, A_reg3, A_reg4, A_reg5
+    output wire[4*Q_WIDTH-1:0] D_new,
+    output reg wen0, wen1, wen2, wen3
+    // for debugging
+//    output wire [A_WIDTH-1:0] A_reg0, A_reg1, A_reg2, A_reg3, A_reg4, A_reg5
     );
-    `include "parameters.v"
+    localparam S_WIDTH = 2*L_WIDTH;
+    localparam A_WIDTH = 2 + L_WIDTH/2;
+    
     // 1. Address configuration
     reg [S_WIDTH-1:0] S_reg0, S_reg1, S_reg2, S_reg3, S_reg4, S_reg5, S_reg6, S_reg7;
     always @(posedge clk) begin
@@ -67,14 +65,17 @@ module MII
     
     // 3. Write-Enable Configuration
     wire [WEN_WIDTH-1:0] wen_bram_temp;
-    wen_decoder decod0(.A(A_reg[1]), .wen(wen_bram_temp));
+    wen_decoder #(.WEN_WIDTH(WEN_WIDTH), .L_WIDTH(L_WIDTH)) decod0 
+                 (.A(A_reg[1]), .wen(wen_bram_temp));
+                 
     always @(posedge clk) begin
         wen_bram <= wen_bram_temp;   
     end
     
     // 4. Enable Configuration 
     wire wen0_temp, wen1_temp, wen2_temp, wen3_temp;
-    en_decoder  decod1(.A(A_reg[1]), .wen(wen_cu), .wen0(wen0_temp), .wen1(wen1_temp), .wen2(wen2_temp), .wen3(wen3_temp));
+    en_decoder #(.L_WIDTH(L_WIDTH)) decod1
+                (.A(A_reg[1]), .wen(wen_cu), .wen0(wen0_temp), .wen1(wen1_temp), .wen2(wen2_temp), .wen3(wen3_temp));
     always @(posedge clk) begin
         wen0 <= wen0_temp;
         wen1 <= wen1_temp;
@@ -95,7 +96,8 @@ module MII
         D_reg[1] = D_reg[0];
         D_reg[0] = D;
     end
-    data_config decod2(.Q_new(Q_new), .A(A_reg[2]), .D(D_reg[3]), .D_new(D_new));
+    data_config #(.Q_WIDTH(Q_WIDTH), .L_WIDTH(L_WIDTH)) decod2
+                 (.Q_new(Q_new), .A(A_reg[2]), .D(D_reg[3]), .D_new(D_new));
     
     // For debugging
     assign A_reg0 = A_reg[0];
@@ -107,12 +109,13 @@ module MII
 endmodule
 
 module wen_decoder
-#(  parameter WEN_WIDTH = 8,
-    parameter A_WIDTH = 4)
-(
-    input wire  [A_WIDTH-1:0] A,
+#(  parameter integer WEN_WIDTH = 8,
+    parameter integer L_WIDTH = 4
+    )(
+    input wire  [(2 + L_WIDTH/2)-1:0] A,
     output wire [WEN_WIDTH-1:0] wen
     );
+    localparam A_WIDTH = 2 + L_WIDTH/2;
     assign wen = ((A[A_WIDTH/2-1:0]==2'd0))? 8'b0000_0011:
                  ((A[A_WIDTH/2-1:0]==2'd1))? 8'b0000_1100:
                  ((A[A_WIDTH/2-1:0]==2'd2))? 8'b0011_0000:
@@ -121,12 +124,14 @@ module wen_decoder
 endmodule
 
 module en_decoder
-#(  parameter A_WIDTH = 4)
-(
+#(  parameter integer L_WIDTH = 4 
+    )(
     input wire wen,
-    input wire  [A_WIDTH-1:0] A,
+    input wire  [(2 + L_WIDTH/2)-1:0] A,
     output wire wen0, wen1, wen2, wen3
     );
+    localparam A_WIDTH = 2 + L_WIDTH/2;
+    
     assign wen0 = (A[A_WIDTH-1:A_WIDTH/2]==2'd0)&(wen);
     assign wen1 = (A[A_WIDTH-1:A_WIDTH/2]==2'd1)&(wen);
     assign wen2 = (A[A_WIDTH-1:A_WIDTH/2]==2'd2)&(wen);
@@ -134,14 +139,15 @@ module en_decoder
 endmodule
 
 module data_config
-#(  parameter Q_WIDTH = 16,
-    parameter A_WIDTH = 4)
+#(  parameter integer Q_WIDTH = 16,
+    parameter integer L_WIDTH = 4)
  (
     input wire [Q_WIDTH-1:0] Q_new,
-    input wire [A_WIDTH-1:0] A,
+    input wire [(2 + L_WIDTH/2)-1:0] A,
     input wire [Q_WIDTH*4-1:0] D,
     output wire [Q_WIDTH*4-1:0] D_new
     );
+    localparam A_WIDTH = 2 + L_WIDTH/2;
     
     assign D_new[Q_WIDTH-1:0]           = (A[A_WIDTH/2-1:0]==2'd0)? Q_new : D[Q_WIDTH-1:0];
     assign D_new[Q_WIDTH*2-1:Q_WIDTH]   = (A[A_WIDTH/2-1:0]==2'd1)? Q_new : D[Q_WIDTH*2-1:Q_WIDTH];

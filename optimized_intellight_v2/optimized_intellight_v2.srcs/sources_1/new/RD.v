@@ -10,7 +10,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module RD // verified
-#(  parameter integer L_WIDTH = 8,
+#(  parameter integer L_WIDTH = 4,
     parameter integer R_WIDTH = 16
     )
 ( 

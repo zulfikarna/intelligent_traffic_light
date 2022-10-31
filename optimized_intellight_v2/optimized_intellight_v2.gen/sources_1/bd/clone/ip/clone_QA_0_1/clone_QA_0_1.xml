@@ -270,7 +270,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.A_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long">5</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -286,7 +286,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.A_WIDTH&apos;)) / 2) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long">2</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -321,11 +321,6 @@
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.Q_WIDTH">16</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>A_WIDTH</spirit:name>
-        <spirit:displayName>A Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.A_WIDTH">4</spirit:value>
-      </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>R_WIDTH</spirit:name>
         <spirit:displayName>R Width</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.R_WIDTH">16</spirit:value>
@@ -338,11 +333,6 @@
       <spirit:name>Q_WIDTH</spirit:name>
       <spirit:displayName>Q Width</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.Q_WIDTH">16</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
-      <spirit:name>A_WIDTH</spirit:name>
-      <spirit:displayName>A Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.A_WIDTH">4</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>R_WIDTH</spirit:name>
