@@ -10,8 +10,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 // BLOK MAX 
-module max4to1_16bit // verified
-#(  parameter DATA_WIDTH = 16)
+module max4to1 // verified
+#(  parameter integer DATA_WIDTH = 16)
 (
     input wire signed [DATA_WIDTH-1:0] in0, in1, in2, in3,
     output wire signed [DATA_WIDTH-1:0] out0
@@ -22,7 +22,19 @@ module max4to1_16bit // verified
     assign out0  = (temp0 > temp1)? temp0 : temp1;
 endmodule
 
-
+module max8to1 // verified
+#(  parameter integer DATA_WIDTH = 16)
+(
+    input wire signed [DATA_WIDTH-1:0] in0, in1, in2, in3, in4, in5, in6, in7,
+    output wire signed [DATA_WIDTH-1:0] out0
+    );
+    wire signed [DATA_WIDTH-1:0] temp0, temp1;
+    max4to1 #(.DATA_WIDTH(DATA_WIDTH))    max0(.in0(in0), .in1(in1), .in2(in2), .in3(in3),
+                                            .out0(temp0));
+    max4to1 #(.DATA_WIDTH(DATA_WIDTH))    max1(.in0(in4), .in1(in5), .in2(in6), .in3(in7),
+                                            .out0(temp1));
+    assign out0  = (temp0 > temp1)? temp0 : temp1;
+endmodule
 
 
 

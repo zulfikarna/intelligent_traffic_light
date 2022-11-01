@@ -104,7 +104,6 @@ output wire idle;
 
   CU #(
     .R_WIDTH(16),
-    .RND_WIDTH(16),
     .CTR_WIDTH(16)
   ) inst (
     .clk(clk),

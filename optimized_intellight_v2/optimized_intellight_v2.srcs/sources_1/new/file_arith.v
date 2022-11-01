@@ -47,7 +47,7 @@ module r_shift
         (in0 >> step) ;
 endmodule
 
-module lsfr_16bit
+module lfsr
 #(  parameter DATA_WIDTH = 16)
 (
     input wire clk, rst,
@@ -56,7 +56,6 @@ module lsfr_16bit
     );
     // Register 
     reg [DATA_WIDTH:1] r_lsfr;
-    wire r_xnor;
     always@(posedge clk) begin
         if (rst) begin
             r_lsfr <= seed;
@@ -64,55 +63,25 @@ module lsfr_16bit
             r_lsfr <= {r_lsfr[DATA_WIDTH-1:1], r_xnor};
         end
     end
-    // Calculate the new LSB
-    assign r_xnor = r_lsfr[16] ^~ r_lsfr[15] ^~ r_lsfr[13] ^~ r_lsfr[4];
-    assign out0 = r_lsfr[DATA_WIDTH:1];
-endmodule
-
-module lsfr_4bit
-#(  parameter DATA_WIDTH = 4)
-(
-    input wire clk, rst,
-    input wire  [DATA_WIDTH-1:0] seed,
-    output wire [DATA_WIDTH-1:0] out0
-    );
-    // Register 
-    reg [DATA_WIDTH:1] r_lsfr;
     wire r_xnor;
-    always@(posedge clk) begin
-        if (rst) begin
-            r_lsfr <= seed;
-        end else begin
-            r_lsfr <= {r_lsfr[DATA_WIDTH-1:1], r_xnor};
+    genvar i;
+    generate 
+        if (DATA_WIDTH == 4) begin 
+            assign r_xnor = r_lsfr[4] ^~ r_lsfr[3];
+        end else if (DATA_WIDTH == 8) begin 
+            assign r_xnor = r_lsfr[8] ^~ r_lsfr[6] ^~ r_lsfr[5] ^~ r_lsfr[4];
+        end else if (DATA_WIDTH == 16) begin 
+            assign r_xnor = r_lsfr[16] ^~ r_lsfr[15] ^~ r_lsfr[13] ^~ r_lsfr[4];
+        end else if (DATA_WIDTH == 32) begin 
+            assign r_xnor = r_lsfr[32] ^~ r_lsfr[22] ^~ r_lsfr[2] ^~ r_lsfr[1];
+        end else if (DATA_WIDTH == 64) begin 
+            assign r_xnor = r_lsfr[63] ^~ r_lsfr[62] ^~ r_lsfr[60] ^~ r_lsfr[59];
+        end else begin 
+            assign r_xnor = 1'b1;
         end
-    end
-    // Calculate the new LSB
-    assign r_xnor = r_lsfr[4] ^~ r_lsfr[3];
+    endgenerate 
     assign out0 = r_lsfr[DATA_WIDTH:1];
 endmodule
-
-//module lsfr_64bit
-//#(  parameter DATA_WIDTH = 64)
-//(
-//    input wire clk, rst,
-//    input wire  [DATA_WIDTH-1:0] in0,
-//    output wire [DATA_WIDTH-1:0] out0
-//    );
-//    // Register 
-//    reg [DATA_WIDTH-1:0] reg_lsfr;
-//    always@(posedge clk) begin
-//        if (rst) begin
-//            reg_lsfr <= in0;
-//        end else begin
-//            reg_lsfr <= out0;
-//        end
-//    end
-//    // Calculate the new LSB
-//    wire w0;
-    
-//    assign w0 = ~(reg_lsfr[63] ^ reg_lsfr[62] ^ reg_lsfr[60] ^ reg_lsfr[59]);
-//    assign out0 = {reg_lsfr[62:0],w0};
-//endmodule
 
 //module encoder(
 //    input wire en,

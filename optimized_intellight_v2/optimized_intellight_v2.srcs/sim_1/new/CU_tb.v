@@ -77,7 +77,7 @@ module CU_tb
         
     // Random generator porting
     wire [RND_WIDTH-1:0] o_lsfr;
-    lsfr_16bit rand(.clk(clk), .rst(rst), .in0(seed), .out0(o_lsfr));
+    lfsr #(.DATA_WIDTH(16)) rand(.clk(clk), .rst(rst), .in0(seed), .out0(o_lsfr));
     
     // Clock setting
     always begin

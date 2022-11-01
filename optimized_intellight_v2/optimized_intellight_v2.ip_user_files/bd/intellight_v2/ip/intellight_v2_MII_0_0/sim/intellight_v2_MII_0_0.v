@@ -104,7 +104,6 @@ output wire wen3;
     .L_WIDTH(4),
     .Q_WIDTH(16),
     .R_WIDTH(16),
-    .WEN_WIDTH(8),
     .ADDR_WIDTH(32)
   ) inst (
     .clk(clk),

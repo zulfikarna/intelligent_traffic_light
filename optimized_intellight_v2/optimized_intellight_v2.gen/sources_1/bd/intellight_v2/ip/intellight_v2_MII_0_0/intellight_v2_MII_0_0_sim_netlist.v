@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Mon Oct 31 15:55:55 2022
+// Date        : Tue Nov  1 18:11:24 2022
 // Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_MII_0_0/intellight_v2_MII_0_0_sim_netlist.v
@@ -70,7 +70,7 @@ module intellight_v2_MII_0_0
   wire wen1;
   wire wen2;
   wire wen3;
-  wire [6:0]\^wen_bram ;
+  wire [4:0]\^wen_bram ;
   wire wen_cu;
   wire [9:2]\^wr_addr ;
 
@@ -99,14 +99,10 @@ module intellight_v2_MII_0_0
   assign rd_addr[9:2] = S;
   assign rd_addr[1] = \<const0> ;
   assign rd_addr[0] = \<const0> ;
-  assign wen_bram[7] = \^wen_bram [6];
-  assign wen_bram[6] = \^wen_bram [6];
-  assign wen_bram[5] = \^wen_bram [4];
-  assign wen_bram[4] = \^wen_bram [4];
-  assign wen_bram[3] = \^wen_bram [2];
-  assign wen_bram[2] = \^wen_bram [2];
-  assign wen_bram[1] = \^wen_bram [0];
-  assign wen_bram[0] = \^wen_bram [0];
+  assign wen_bram[7] = \<const0> ;
+  assign wen_bram[6] = \<const0> ;
+  assign wen_bram[5] = \<const0> ;
+  assign wen_bram[4:0] = \^wen_bram [4:0];
   assign wr_addr[31] = \<const0> ;
   assign wr_addr[30] = \<const0> ;
   assign wr_addr[29] = \<const0> ;
@@ -149,7 +145,8 @@ module intellight_v2_MII_0_0
         .wen1(wen1),
         .wen2(wen2),
         .wen3(wen3),
-        .wen_bram({\^wen_bram [6],\^wen_bram [4],\^wen_bram [2],\^wen_bram [0]}),
+        .wen_bram({\^wen_bram [4],\^wen_bram [2:0]}),
+        .\wen_bram_reg[3]_0 (\^wen_bram [3]),
         .wen_cu(wen_cu),
         .wr_addr(\^wr_addr ));
 endmodule
@@ -158,6 +155,7 @@ endmodule
 module intellight_v2_MII_0_0_MII
    (wr_addr,
     D_new,
+    \wen_bram_reg[3]_0 ,
     wen_bram,
     wen0,
     wen1,
@@ -175,6 +173,7 @@ module intellight_v2_MII_0_0_MII
     wen_cu);
   output [7:0]wr_addr;
   output [63:0]D_new;
+  output \wen_bram_reg[3]_0 ;
   output [3:0]wen_bram;
   output wen0;
   output wen1;
@@ -192,76 +191,139 @@ module intellight_v2_MII_0_0_MII
   input wen_cu;
 
   wire [3:0]A;
+  wire [1:0]A_dur;
   wire [3:0]\A_reg_reg[0] ;
-  wire [1:0]\A_reg_reg[1] ;
-  wire [1:0]\A_reg_reg[2] ;
-  wire \A_reg_reg_n_0_[1][2] ;
-  wire \A_reg_reg_n_0_[1][3] ;
+  wire \A_reg_reg_n_0_[1][0] ;
+  wire \A_reg_reg_n_0_[1][1] ;
   wire [1:0]A_road;
   wire [63:0]D_new;
+  wire \D_reg_reg[2][0]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][0]_srl3_n_0 ;
+  wire \D_reg_reg[2][10]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][10]_srl3_n_0 ;
+  wire \D_reg_reg[2][11]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][11]_srl3_n_0 ;
+  wire \D_reg_reg[2][12]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][12]_srl3_n_0 ;
+  wire \D_reg_reg[2][13]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][13]_srl3_n_0 ;
+  wire \D_reg_reg[2][14]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][14]_srl3_n_0 ;
+  wire \D_reg_reg[2][15]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][15]_srl3_n_0 ;
+  wire \D_reg_reg[2][16]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][16]_srl3_n_0 ;
+  wire \D_reg_reg[2][17]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][17]_srl3_n_0 ;
+  wire \D_reg_reg[2][18]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][18]_srl3_n_0 ;
+  wire \D_reg_reg[2][19]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][19]_srl3_n_0 ;
+  wire \D_reg_reg[2][1]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][1]_srl3_n_0 ;
+  wire \D_reg_reg[2][20]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][20]_srl3_n_0 ;
+  wire \D_reg_reg[2][21]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][21]_srl3_n_0 ;
+  wire \D_reg_reg[2][22]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][22]_srl3_n_0 ;
+  wire \D_reg_reg[2][23]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][23]_srl3_n_0 ;
+  wire \D_reg_reg[2][24]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][24]_srl3_n_0 ;
+  wire \D_reg_reg[2][25]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][25]_srl3_n_0 ;
+  wire \D_reg_reg[2][26]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][26]_srl3_n_0 ;
+  wire \D_reg_reg[2][27]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][27]_srl3_n_0 ;
+  wire \D_reg_reg[2][28]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][28]_srl3_n_0 ;
+  wire \D_reg_reg[2][29]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][29]_srl3_n_0 ;
+  wire \D_reg_reg[2][2]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][2]_srl3_n_0 ;
+  wire \D_reg_reg[2][30]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][30]_srl3_n_0 ;
+  wire \D_reg_reg[2][31]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][31]_srl3_n_0 ;
+  wire \D_reg_reg[2][32]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][32]_srl3_n_0 ;
+  wire \D_reg_reg[2][33]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][33]_srl3_n_0 ;
+  wire \D_reg_reg[2][34]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][34]_srl3_n_0 ;
+  wire \D_reg_reg[2][35]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][35]_srl3_n_0 ;
+  wire \D_reg_reg[2][36]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][36]_srl3_n_0 ;
+  wire \D_reg_reg[2][37]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][37]_srl3_n_0 ;
+  wire \D_reg_reg[2][38]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][38]_srl3_n_0 ;
+  wire \D_reg_reg[2][39]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][39]_srl3_n_0 ;
+  wire \D_reg_reg[2][3]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][3]_srl3_n_0 ;
+  wire \D_reg_reg[2][40]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][40]_srl3_n_0 ;
+  wire \D_reg_reg[2][41]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][41]_srl3_n_0 ;
+  wire \D_reg_reg[2][42]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][42]_srl3_n_0 ;
+  wire \D_reg_reg[2][43]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][43]_srl3_n_0 ;
+  wire \D_reg_reg[2][44]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][44]_srl3_n_0 ;
+  wire \D_reg_reg[2][45]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][45]_srl3_n_0 ;
+  wire \D_reg_reg[2][46]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][46]_srl3_n_0 ;
+  wire \D_reg_reg[2][47]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][47]_srl3_n_0 ;
+  wire \D_reg_reg[2][48]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][48]_srl3_n_0 ;
+  wire \D_reg_reg[2][49]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][49]_srl3_n_0 ;
+  wire \D_reg_reg[2][4]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][4]_srl3_n_0 ;
+  wire \D_reg_reg[2][50]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][50]_srl3_n_0 ;
+  wire \D_reg_reg[2][51]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][51]_srl3_n_0 ;
+  wire \D_reg_reg[2][52]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][52]_srl3_n_0 ;
+  wire \D_reg_reg[2][53]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][53]_srl3_n_0 ;
+  wire \D_reg_reg[2][54]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][54]_srl3_n_0 ;
+  wire \D_reg_reg[2][55]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][55]_srl3_n_0 ;
+  wire \D_reg_reg[2][56]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][56]_srl3_n_0 ;
+  wire \D_reg_reg[2][57]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][57]_srl3_n_0 ;
+  wire \D_reg_reg[2][58]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][58]_srl3_n_0 ;
+  wire \D_reg_reg[2][59]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][59]_srl3_n_0 ;
+  wire \D_reg_reg[2][5]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][5]_srl3_n_0 ;
+  wire \D_reg_reg[2][60]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][60]_srl3_n_0 ;
+  wire \D_reg_reg[2][61]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][61]_srl3_n_0 ;
+  wire \D_reg_reg[2][62]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][62]_srl3_n_0 ;
+  wire \D_reg_reg[2][63]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][63]_srl3_n_0 ;
+  wire \D_reg_reg[2][6]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][6]_srl3_n_0 ;
+  wire \D_reg_reg[2][7]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][7]_srl3_n_0 ;
+  wire \D_reg_reg[2][8]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][8]_srl3_n_0 ;
+  wire \D_reg_reg[2][9]_srl3_i_1_n_0 ;
   wire \D_reg_reg[2][9]_srl3_n_0 ;
   wire [63:0]\D_reg_reg[3] ;
   wire [63:0]Droad0;
@@ -279,7 +341,11 @@ module intellight_v2_MII_0_0_MII
   wire \S_reg3_reg[6]_srl4_n_0 ;
   wire \S_reg3_reg[7]_srl4_n_0 ;
   wire clk;
-  wire [63:0]p_0_in;
+  wire decod0_n_0;
+  wire decod0_n_1;
+  wire decod0_n_2;
+  wire decod0_n_3;
+  wire [0:0]p_0_in;
   wire wen0;
   wire wen00;
   wire wen0_i_1_n_0;
@@ -290,8 +356,7 @@ module intellight_v2_MII_0_0_MII
   wire wen3;
   wire wen30;
   wire [3:0]wen_bram;
-  wire \wen_bram[7]_i_1_n_0 ;
-  wire [5:1]wen_bram_temp;
+  wire \wen_bram_reg[3]_0 ;
   wire wen_cu;
   wire [7:0]wr_addr;
 
@@ -323,37 +388,31 @@ module intellight_v2_MII_0_0_MII
        (.C(clk),
         .CE(1'b1),
         .D(\A_reg_reg[0] [0]),
-        .Q(\A_reg_reg[1] [0]),
+        .Q(\A_reg_reg_n_0_[1][0] ),
         .R(1'b0));
   FDRE \A_reg_reg[1][1] 
        (.C(clk),
         .CE(1'b1),
         .D(\A_reg_reg[0] [1]),
-        .Q(\A_reg_reg[1] [1]),
+        .Q(\A_reg_reg_n_0_[1][1] ),
         .R(1'b0));
   FDRE \A_reg_reg[1][2] 
        (.C(clk),
         .CE(1'b1),
         .D(\A_reg_reg[0] [2]),
-        .Q(\A_reg_reg_n_0_[1][2] ),
+        .Q(A_dur[0]),
         .R(1'b0));
   FDRE \A_reg_reg[1][3] 
        (.C(clk),
         .CE(1'b1),
         .D(\A_reg_reg[0] [3]),
-        .Q(\A_reg_reg_n_0_[1][3] ),
+        .Q(A_dur[1]),
         .R(1'b0));
-  FDRE \A_reg_reg[2][0] 
+  FDRE \A_reg_reg[2][2] 
        (.C(clk),
         .CE(1'b1),
-        .D(\A_reg_reg[1] [0]),
-        .Q(\A_reg_reg[2] [0]),
-        .R(1'b0));
-  FDRE \A_reg_reg[2][1] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\A_reg_reg[1] [1]),
-        .Q(\A_reg_reg[2] [1]),
+        .D(A_dur[0]),
+        .Q(p_0_in),
         .R(1'b0));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][0]_srl3 " *) 
@@ -364,7 +423,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[0]),
+        .D(\D_reg_reg[2][0]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][0]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -375,7 +434,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[0]),
-        .O(p_0_in[0]));
+        .O(\D_reg_reg[2][0]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][10]_srl3 " *) 
   SRL16E \D_reg_reg[2][10]_srl3 
@@ -385,7 +444,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[10]),
+        .D(\D_reg_reg[2][10]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][10]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -396,7 +455,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[10]),
-        .O(p_0_in[10]));
+        .O(\D_reg_reg[2][10]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][11]_srl3 " *) 
   SRL16E \D_reg_reg[2][11]_srl3 
@@ -406,7 +465,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[11]),
+        .D(\D_reg_reg[2][11]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][11]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -417,7 +476,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[11]),
-        .O(p_0_in[11]));
+        .O(\D_reg_reg[2][11]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][12]_srl3 " *) 
   SRL16E \D_reg_reg[2][12]_srl3 
@@ -427,7 +486,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[12]),
+        .D(\D_reg_reg[2][12]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][12]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -438,7 +497,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[12]),
-        .O(p_0_in[12]));
+        .O(\D_reg_reg[2][12]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][13]_srl3 " *) 
   SRL16E \D_reg_reg[2][13]_srl3 
@@ -448,7 +507,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[13]),
+        .D(\D_reg_reg[2][13]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][13]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -459,7 +518,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[13]),
-        .O(p_0_in[13]));
+        .O(\D_reg_reg[2][13]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][14]_srl3 " *) 
   SRL16E \D_reg_reg[2][14]_srl3 
@@ -469,7 +528,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[14]),
+        .D(\D_reg_reg[2][14]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][14]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -480,7 +539,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[14]),
-        .O(p_0_in[14]));
+        .O(\D_reg_reg[2][14]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][15]_srl3 " *) 
   SRL16E \D_reg_reg[2][15]_srl3 
@@ -490,7 +549,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[15]),
+        .D(\D_reg_reg[2][15]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][15]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -501,7 +560,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[15]),
-        .O(p_0_in[15]));
+        .O(\D_reg_reg[2][15]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][16]_srl3 " *) 
   SRL16E \D_reg_reg[2][16]_srl3 
@@ -511,7 +570,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[16]),
+        .D(\D_reg_reg[2][16]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][16]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -522,7 +581,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[16]),
-        .O(p_0_in[16]));
+        .O(\D_reg_reg[2][16]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][17]_srl3 " *) 
   SRL16E \D_reg_reg[2][17]_srl3 
@@ -532,7 +591,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[17]),
+        .D(\D_reg_reg[2][17]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][17]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -543,7 +602,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[17]),
-        .O(p_0_in[17]));
+        .O(\D_reg_reg[2][17]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][18]_srl3 " *) 
   SRL16E \D_reg_reg[2][18]_srl3 
@@ -553,7 +612,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[18]),
+        .D(\D_reg_reg[2][18]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][18]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -564,7 +623,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[18]),
-        .O(p_0_in[18]));
+        .O(\D_reg_reg[2][18]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][19]_srl3 " *) 
   SRL16E \D_reg_reg[2][19]_srl3 
@@ -574,7 +633,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[19]),
+        .D(\D_reg_reg[2][19]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][19]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -585,7 +644,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[19]),
-        .O(p_0_in[19]));
+        .O(\D_reg_reg[2][19]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][1]_srl3 " *) 
   SRL16E \D_reg_reg[2][1]_srl3 
@@ -595,7 +654,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[1]),
+        .D(\D_reg_reg[2][1]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][1]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -606,7 +665,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[1]),
-        .O(p_0_in[1]));
+        .O(\D_reg_reg[2][1]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][20]_srl3 " *) 
   SRL16E \D_reg_reg[2][20]_srl3 
@@ -616,7 +675,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[20]),
+        .D(\D_reg_reg[2][20]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][20]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -627,7 +686,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[20]),
-        .O(p_0_in[20]));
+        .O(\D_reg_reg[2][20]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][21]_srl3 " *) 
   SRL16E \D_reg_reg[2][21]_srl3 
@@ -637,7 +696,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[21]),
+        .D(\D_reg_reg[2][21]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][21]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -648,7 +707,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[21]),
-        .O(p_0_in[21]));
+        .O(\D_reg_reg[2][21]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][22]_srl3 " *) 
   SRL16E \D_reg_reg[2][22]_srl3 
@@ -658,7 +717,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[22]),
+        .D(\D_reg_reg[2][22]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][22]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -669,7 +728,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[22]),
-        .O(p_0_in[22]));
+        .O(\D_reg_reg[2][22]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][23]_srl3 " *) 
   SRL16E \D_reg_reg[2][23]_srl3 
@@ -679,7 +738,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[23]),
+        .D(\D_reg_reg[2][23]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][23]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -690,7 +749,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[23]),
-        .O(p_0_in[23]));
+        .O(\D_reg_reg[2][23]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][24]_srl3 " *) 
   SRL16E \D_reg_reg[2][24]_srl3 
@@ -700,7 +759,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[24]),
+        .D(\D_reg_reg[2][24]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][24]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -711,7 +770,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[24]),
-        .O(p_0_in[24]));
+        .O(\D_reg_reg[2][24]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][25]_srl3 " *) 
   SRL16E \D_reg_reg[2][25]_srl3 
@@ -721,7 +780,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[25]),
+        .D(\D_reg_reg[2][25]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][25]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -732,7 +791,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[25]),
-        .O(p_0_in[25]));
+        .O(\D_reg_reg[2][25]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][26]_srl3 " *) 
   SRL16E \D_reg_reg[2][26]_srl3 
@@ -742,7 +801,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[26]),
+        .D(\D_reg_reg[2][26]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][26]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -753,7 +812,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[26]),
-        .O(p_0_in[26]));
+        .O(\D_reg_reg[2][26]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][27]_srl3 " *) 
   SRL16E \D_reg_reg[2][27]_srl3 
@@ -763,7 +822,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[27]),
+        .D(\D_reg_reg[2][27]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][27]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -774,7 +833,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[27]),
-        .O(p_0_in[27]));
+        .O(\D_reg_reg[2][27]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][28]_srl3 " *) 
   SRL16E \D_reg_reg[2][28]_srl3 
@@ -784,7 +843,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[28]),
+        .D(\D_reg_reg[2][28]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][28]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -795,7 +854,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[28]),
-        .O(p_0_in[28]));
+        .O(\D_reg_reg[2][28]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][29]_srl3 " *) 
   SRL16E \D_reg_reg[2][29]_srl3 
@@ -805,7 +864,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[29]),
+        .D(\D_reg_reg[2][29]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][29]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -816,7 +875,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[29]),
-        .O(p_0_in[29]));
+        .O(\D_reg_reg[2][29]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][2]_srl3 " *) 
   SRL16E \D_reg_reg[2][2]_srl3 
@@ -826,7 +885,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[2]),
+        .D(\D_reg_reg[2][2]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][2]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -837,7 +896,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[2]),
-        .O(p_0_in[2]));
+        .O(\D_reg_reg[2][2]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][30]_srl3 " *) 
   SRL16E \D_reg_reg[2][30]_srl3 
@@ -847,7 +906,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[30]),
+        .D(\D_reg_reg[2][30]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][30]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -858,7 +917,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[30]),
-        .O(p_0_in[30]));
+        .O(\D_reg_reg[2][30]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][31]_srl3 " *) 
   SRL16E \D_reg_reg[2][31]_srl3 
@@ -868,7 +927,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[31]),
+        .D(\D_reg_reg[2][31]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][31]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -879,7 +938,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[31]),
-        .O(p_0_in[31]));
+        .O(\D_reg_reg[2][31]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][32]_srl3 " *) 
   SRL16E \D_reg_reg[2][32]_srl3 
@@ -889,7 +948,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[32]),
+        .D(\D_reg_reg[2][32]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][32]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -900,7 +959,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[32]),
-        .O(p_0_in[32]));
+        .O(\D_reg_reg[2][32]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][33]_srl3 " *) 
   SRL16E \D_reg_reg[2][33]_srl3 
@@ -910,7 +969,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[33]),
+        .D(\D_reg_reg[2][33]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][33]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -921,7 +980,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[33]),
-        .O(p_0_in[33]));
+        .O(\D_reg_reg[2][33]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][34]_srl3 " *) 
   SRL16E \D_reg_reg[2][34]_srl3 
@@ -931,7 +990,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[34]),
+        .D(\D_reg_reg[2][34]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][34]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -942,7 +1001,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[34]),
-        .O(p_0_in[34]));
+        .O(\D_reg_reg[2][34]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][35]_srl3 " *) 
   SRL16E \D_reg_reg[2][35]_srl3 
@@ -952,7 +1011,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[35]),
+        .D(\D_reg_reg[2][35]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][35]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -963,7 +1022,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[35]),
-        .O(p_0_in[35]));
+        .O(\D_reg_reg[2][35]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][36]_srl3 " *) 
   SRL16E \D_reg_reg[2][36]_srl3 
@@ -973,7 +1032,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[36]),
+        .D(\D_reg_reg[2][36]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][36]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -984,7 +1043,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[36]),
-        .O(p_0_in[36]));
+        .O(\D_reg_reg[2][36]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][37]_srl3 " *) 
   SRL16E \D_reg_reg[2][37]_srl3 
@@ -994,7 +1053,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[37]),
+        .D(\D_reg_reg[2][37]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][37]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1005,7 +1064,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[37]),
-        .O(p_0_in[37]));
+        .O(\D_reg_reg[2][37]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][38]_srl3 " *) 
   SRL16E \D_reg_reg[2][38]_srl3 
@@ -1015,7 +1074,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[38]),
+        .D(\D_reg_reg[2][38]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][38]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1026,7 +1085,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[38]),
-        .O(p_0_in[38]));
+        .O(\D_reg_reg[2][38]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][39]_srl3 " *) 
   SRL16E \D_reg_reg[2][39]_srl3 
@@ -1036,7 +1095,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[39]),
+        .D(\D_reg_reg[2][39]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][39]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1047,7 +1106,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[39]),
-        .O(p_0_in[39]));
+        .O(\D_reg_reg[2][39]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][3]_srl3 " *) 
   SRL16E \D_reg_reg[2][3]_srl3 
@@ -1057,7 +1116,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[3]),
+        .D(\D_reg_reg[2][3]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][3]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1068,7 +1127,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[3]),
-        .O(p_0_in[3]));
+        .O(\D_reg_reg[2][3]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][40]_srl3 " *) 
   SRL16E \D_reg_reg[2][40]_srl3 
@@ -1078,7 +1137,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[40]),
+        .D(\D_reg_reg[2][40]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][40]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1089,7 +1148,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[40]),
-        .O(p_0_in[40]));
+        .O(\D_reg_reg[2][40]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][41]_srl3 " *) 
   SRL16E \D_reg_reg[2][41]_srl3 
@@ -1099,7 +1158,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[41]),
+        .D(\D_reg_reg[2][41]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][41]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1110,7 +1169,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[41]),
-        .O(p_0_in[41]));
+        .O(\D_reg_reg[2][41]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][42]_srl3 " *) 
   SRL16E \D_reg_reg[2][42]_srl3 
@@ -1120,7 +1179,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[42]),
+        .D(\D_reg_reg[2][42]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][42]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1131,7 +1190,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[42]),
-        .O(p_0_in[42]));
+        .O(\D_reg_reg[2][42]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][43]_srl3 " *) 
   SRL16E \D_reg_reg[2][43]_srl3 
@@ -1141,7 +1200,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[43]),
+        .D(\D_reg_reg[2][43]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][43]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1152,7 +1211,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[43]),
-        .O(p_0_in[43]));
+        .O(\D_reg_reg[2][43]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][44]_srl3 " *) 
   SRL16E \D_reg_reg[2][44]_srl3 
@@ -1162,7 +1221,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[44]),
+        .D(\D_reg_reg[2][44]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][44]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1173,7 +1232,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[44]),
-        .O(p_0_in[44]));
+        .O(\D_reg_reg[2][44]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][45]_srl3 " *) 
   SRL16E \D_reg_reg[2][45]_srl3 
@@ -1183,7 +1242,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[45]),
+        .D(\D_reg_reg[2][45]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][45]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1194,7 +1253,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[45]),
-        .O(p_0_in[45]));
+        .O(\D_reg_reg[2][45]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][46]_srl3 " *) 
   SRL16E \D_reg_reg[2][46]_srl3 
@@ -1204,7 +1263,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[46]),
+        .D(\D_reg_reg[2][46]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][46]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1215,7 +1274,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[46]),
-        .O(p_0_in[46]));
+        .O(\D_reg_reg[2][46]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][47]_srl3 " *) 
   SRL16E \D_reg_reg[2][47]_srl3 
@@ -1225,7 +1284,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[47]),
+        .D(\D_reg_reg[2][47]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][47]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1236,7 +1295,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[47]),
-        .O(p_0_in[47]));
+        .O(\D_reg_reg[2][47]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][48]_srl3 " *) 
   SRL16E \D_reg_reg[2][48]_srl3 
@@ -1246,7 +1305,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[48]),
+        .D(\D_reg_reg[2][48]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][48]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1257,7 +1316,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[48]),
-        .O(p_0_in[48]));
+        .O(\D_reg_reg[2][48]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][49]_srl3 " *) 
   SRL16E \D_reg_reg[2][49]_srl3 
@@ -1267,7 +1326,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[49]),
+        .D(\D_reg_reg[2][49]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][49]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1278,7 +1337,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[49]),
-        .O(p_0_in[49]));
+        .O(\D_reg_reg[2][49]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][4]_srl3 " *) 
   SRL16E \D_reg_reg[2][4]_srl3 
@@ -1288,7 +1347,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[4]),
+        .D(\D_reg_reg[2][4]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][4]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1299,7 +1358,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[4]),
-        .O(p_0_in[4]));
+        .O(\D_reg_reg[2][4]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][50]_srl3 " *) 
   SRL16E \D_reg_reg[2][50]_srl3 
@@ -1309,7 +1368,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[50]),
+        .D(\D_reg_reg[2][50]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][50]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1320,7 +1379,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[50]),
-        .O(p_0_in[50]));
+        .O(\D_reg_reg[2][50]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][51]_srl3 " *) 
   SRL16E \D_reg_reg[2][51]_srl3 
@@ -1330,7 +1389,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[51]),
+        .D(\D_reg_reg[2][51]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][51]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1341,7 +1400,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[51]),
-        .O(p_0_in[51]));
+        .O(\D_reg_reg[2][51]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][52]_srl3 " *) 
   SRL16E \D_reg_reg[2][52]_srl3 
@@ -1351,7 +1410,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[52]),
+        .D(\D_reg_reg[2][52]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][52]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1362,7 +1421,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[52]),
-        .O(p_0_in[52]));
+        .O(\D_reg_reg[2][52]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][53]_srl3 " *) 
   SRL16E \D_reg_reg[2][53]_srl3 
@@ -1372,7 +1431,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[53]),
+        .D(\D_reg_reg[2][53]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][53]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1383,7 +1442,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[53]),
-        .O(p_0_in[53]));
+        .O(\D_reg_reg[2][53]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][54]_srl3 " *) 
   SRL16E \D_reg_reg[2][54]_srl3 
@@ -1393,7 +1452,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[54]),
+        .D(\D_reg_reg[2][54]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][54]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1404,7 +1463,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[54]),
-        .O(p_0_in[54]));
+        .O(\D_reg_reg[2][54]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][55]_srl3 " *) 
   SRL16E \D_reg_reg[2][55]_srl3 
@@ -1414,7 +1473,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[55]),
+        .D(\D_reg_reg[2][55]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][55]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1425,7 +1484,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[55]),
-        .O(p_0_in[55]));
+        .O(\D_reg_reg[2][55]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][56]_srl3 " *) 
   SRL16E \D_reg_reg[2][56]_srl3 
@@ -1435,7 +1494,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[56]),
+        .D(\D_reg_reg[2][56]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][56]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1446,7 +1505,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[56]),
-        .O(p_0_in[56]));
+        .O(\D_reg_reg[2][56]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][57]_srl3 " *) 
   SRL16E \D_reg_reg[2][57]_srl3 
@@ -1456,7 +1515,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[57]),
+        .D(\D_reg_reg[2][57]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][57]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1467,7 +1526,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[57]),
-        .O(p_0_in[57]));
+        .O(\D_reg_reg[2][57]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][58]_srl3 " *) 
   SRL16E \D_reg_reg[2][58]_srl3 
@@ -1477,7 +1536,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[58]),
+        .D(\D_reg_reg[2][58]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][58]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1488,7 +1547,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[58]),
-        .O(p_0_in[58]));
+        .O(\D_reg_reg[2][58]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][59]_srl3 " *) 
   SRL16E \D_reg_reg[2][59]_srl3 
@@ -1498,7 +1557,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[59]),
+        .D(\D_reg_reg[2][59]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][59]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1509,7 +1568,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[59]),
-        .O(p_0_in[59]));
+        .O(\D_reg_reg[2][59]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][5]_srl3 " *) 
   SRL16E \D_reg_reg[2][5]_srl3 
@@ -1519,7 +1578,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[5]),
+        .D(\D_reg_reg[2][5]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][5]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1530,7 +1589,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[5]),
-        .O(p_0_in[5]));
+        .O(\D_reg_reg[2][5]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][60]_srl3 " *) 
   SRL16E \D_reg_reg[2][60]_srl3 
@@ -1540,7 +1599,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[60]),
+        .D(\D_reg_reg[2][60]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][60]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1551,7 +1610,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[60]),
-        .O(p_0_in[60]));
+        .O(\D_reg_reg[2][60]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][61]_srl3 " *) 
   SRL16E \D_reg_reg[2][61]_srl3 
@@ -1561,7 +1620,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[61]),
+        .D(\D_reg_reg[2][61]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][61]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1572,7 +1631,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[61]),
-        .O(p_0_in[61]));
+        .O(\D_reg_reg[2][61]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][62]_srl3 " *) 
   SRL16E \D_reg_reg[2][62]_srl3 
@@ -1582,7 +1641,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[62]),
+        .D(\D_reg_reg[2][62]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][62]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1593,7 +1652,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[62]),
-        .O(p_0_in[62]));
+        .O(\D_reg_reg[2][62]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][63]_srl3 " *) 
   SRL16E \D_reg_reg[2][63]_srl3 
@@ -1603,7 +1662,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[63]),
+        .D(\D_reg_reg[2][63]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][63]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1614,7 +1673,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[63]),
-        .O(p_0_in[63]));
+        .O(\D_reg_reg[2][63]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][6]_srl3 " *) 
   SRL16E \D_reg_reg[2][6]_srl3 
@@ -1624,7 +1683,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[6]),
+        .D(\D_reg_reg[2][6]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][6]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1635,7 +1694,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[6]),
-        .O(p_0_in[6]));
+        .O(\D_reg_reg[2][6]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][7]_srl3 " *) 
   SRL16E \D_reg_reg[2][7]_srl3 
@@ -1645,7 +1704,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[7]),
+        .D(\D_reg_reg[2][7]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][7]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1656,7 +1715,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[7]),
-        .O(p_0_in[7]));
+        .O(\D_reg_reg[2][7]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][8]_srl3 " *) 
   SRL16E \D_reg_reg[2][8]_srl3 
@@ -1666,7 +1725,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[8]),
+        .D(\D_reg_reg[2][8]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][8]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1677,7 +1736,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[8]),
-        .O(p_0_in[8]));
+        .O(\D_reg_reg[2][8]_srl3_i_1_n_0 ));
   (* srl_bus_name = "\inst/D_reg_reg[2] " *) 
   (* srl_name = "\inst/D_reg_reg[2][9]_srl3 " *) 
   SRL16E \D_reg_reg[2][9]_srl3 
@@ -1687,7 +1746,7 @@ module intellight_v2_MII_0_0_MII
         .A3(1'b0),
         .CE(1'b1),
         .CLK(clk),
-        .D(p_0_in[9]),
+        .D(\D_reg_reg[2][9]_srl3_i_1_n_0 ),
         .Q(\D_reg_reg[2][9]_srl3_n_0 ));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
@@ -1698,7 +1757,7 @@ module intellight_v2_MII_0_0_MII
         .I3(A_road[0]),
         .I4(A_road[1]),
         .I5(Droad2[9]),
-        .O(p_0_in[9]));
+        .O(\D_reg_reg[2][9]_srl3_i_1_n_0 ));
   FDRE \D_reg_reg[3][0] 
        (.C(clk),
         .CE(1'b1),
@@ -2172,24 +2231,25 @@ module intellight_v2_MII_0_0_MII
         .D(S[7]),
         .Q(\S_reg3_reg[7]_srl4_n_0 ));
   intellight_v2_MII_0_0_wen_decoder decod0
-       (.D({wen_bram_temp[5],wen_bram_temp[3],wen_bram_temp[1]}),
-        .Q(\A_reg_reg[1] ));
+       (.D({decod0_n_0,decod0_n_1,decod0_n_2,decod0_n_3}),
+        .Q(A_dur));
   intellight_v2_MII_0_0_data_config decod2
        (.D_new(D_new),
+        .D_new_48_sp_1(\wen_bram_reg[3]_0 ),
         .\D_reg_reg[3] (\D_reg_reg[3] ),
-        .Q(\A_reg_reg[2] ),
-        .Q_new(Q_new));
+        .Q_new(Q_new),
+        .p_0_in(p_0_in));
   LUT1 #(
     .INIT(2'h1)) 
     wen0_i_1
        (.I0(wen_cu),
         .O(wen0_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT2 #(
     .INIT(4'h1)) 
     wen0_i_2
-       (.I0(\A_reg_reg_n_0_[1][2] ),
-        .I1(\A_reg_reg_n_0_[1][3] ),
+       (.I0(\A_reg_reg_n_0_[1][0] ),
+        .I1(\A_reg_reg_n_0_[1][1] ),
         .O(wen00));
   FDRE wen0_reg
        (.C(clk),
@@ -2197,12 +2257,12 @@ module intellight_v2_MII_0_0_MII
         .D(wen00),
         .Q(wen0),
         .R(wen0_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT2 #(
     .INIT(4'h2)) 
     wen1_i_1
-       (.I0(\A_reg_reg_n_0_[1][2] ),
-        .I1(\A_reg_reg_n_0_[1][3] ),
+       (.I0(\A_reg_reg_n_0_[1][0] ),
+        .I1(\A_reg_reg_n_0_[1][1] ),
         .O(wen1_i_1_n_0));
   FDRE wen1_reg
        (.C(clk),
@@ -2210,12 +2270,12 @@ module intellight_v2_MII_0_0_MII
         .D(wen1_i_1_n_0),
         .Q(wen1),
         .R(wen0_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT2 #(
     .INIT(4'h2)) 
     wen2_i_1
-       (.I0(\A_reg_reg_n_0_[1][3] ),
-        .I1(\A_reg_reg_n_0_[1][2] ),
+       (.I0(\A_reg_reg_n_0_[1][1] ),
+        .I1(\A_reg_reg_n_0_[1][0] ),
         .O(wen2_i_1_n_0));
   FDRE wen2_reg
        (.C(clk),
@@ -2223,12 +2283,12 @@ module intellight_v2_MII_0_0_MII
         .D(wen2_i_1_n_0),
         .Q(wen2),
         .R(wen0_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT2 #(
     .INIT(4'h8)) 
     wen3_i_1
-       (.I0(\A_reg_reg_n_0_[1][2] ),
-        .I1(\A_reg_reg_n_0_[1][3] ),
+       (.I0(\A_reg_reg_n_0_[1][0] ),
+        .I1(\A_reg_reg_n_0_[1][1] ),
         .O(wen30));
   FDRE wen3_reg
        (.C(clk),
@@ -2236,34 +2296,34 @@ module intellight_v2_MII_0_0_MII
         .D(wen30),
         .Q(wen3),
         .R(wen0_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    \wen_bram[7]_i_1 
-       (.I0(\A_reg_reg[1] [0]),
-        .I1(\A_reg_reg[1] [1]),
-        .O(\wen_bram[7]_i_1_n_0 ));
+  FDRE \wen_bram_reg[0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(decod0_n_3),
+        .Q(wen_bram[0]),
+        .R(1'b0));
   FDRE \wen_bram_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .D(wen_bram_temp[1]),
-        .Q(wen_bram[0]),
+        .D(decod0_n_2),
+        .Q(wen_bram[1]),
+        .R(1'b0));
+  FDRE \wen_bram_reg[2] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(decod0_n_1),
+        .Q(wen_bram[2]),
         .R(1'b0));
   FDRE \wen_bram_reg[3] 
        (.C(clk),
         .CE(1'b1),
-        .D(wen_bram_temp[3]),
-        .Q(wen_bram[1]),
+        .D(A_dur[1]),
+        .Q(\wen_bram_reg[3]_0 ),
         .R(1'b0));
-  FDRE \wen_bram_reg[5] 
+  FDRE \wen_bram_reg[4] 
        (.C(clk),
         .CE(1'b1),
-        .D(wen_bram_temp[5]),
-        .Q(wen_bram[2]),
-        .R(1'b0));
-  FDRE \wen_bram_reg[7] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\wen_bram[7]_i_1_n_0 ),
+        .D(decod0_n_0),
         .Q(wen_bram[3]),
         .R(1'b0));
   FDRE \wr_addr_reg[2] 
@@ -2320,592 +2380,596 @@ endmodule
 module intellight_v2_MII_0_0_data_config
    (D_new,
     Q_new,
-    Q,
+    p_0_in,
+    D_new_48_sp_1,
     \D_reg_reg[3] );
   output [63:0]D_new;
   input [15:0]Q_new;
-  input [1:0]Q;
+  input [0:0]p_0_in;
+  input D_new_48_sp_1;
   input [63:0]\D_reg_reg[3] ;
 
   wire [63:0]D_new;
+  wire D_new_48_sn_1;
   wire [63:0]\D_reg_reg[3] ;
-  wire [1:0]Q;
   wire [15:0]Q_new;
+  wire [0:0]p_0_in;
 
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  assign D_new_48_sn_1 = D_new_48_sp_1;
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[0]_INST_0 
        (.I0(Q_new[0]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [0]),
         .O(D_new[0]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[10]_INST_0 
        (.I0(Q_new[10]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [10]),
         .O(D_new[10]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[11]_INST_0 
        (.I0(Q_new[11]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [11]),
         .O(D_new[11]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[12]_INST_0 
        (.I0(Q_new[12]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [12]),
         .O(D_new[12]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[13]_INST_0 
        (.I0(Q_new[13]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [13]),
         .O(D_new[13]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[14]_INST_0 
        (.I0(Q_new[14]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [14]),
         .O(D_new[14]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[15]_INST_0 
        (.I0(Q_new[15]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [15]),
         .O(D_new[15]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[16]_INST_0 
        (.I0(Q_new[0]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [16]),
         .O(D_new[16]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[17]_INST_0 
        (.I0(Q_new[1]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [17]),
         .O(D_new[17]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[18]_INST_0 
        (.I0(Q_new[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [18]),
         .O(D_new[18]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[19]_INST_0 
        (.I0(Q_new[3]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [19]),
         .O(D_new[19]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[1]_INST_0 
        (.I0(Q_new[1]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [1]),
         .O(D_new[1]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[20]_INST_0 
        (.I0(Q_new[4]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [20]),
         .O(D_new[20]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[21]_INST_0 
        (.I0(Q_new[5]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [21]),
         .O(D_new[21]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[22]_INST_0 
        (.I0(Q_new[6]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [22]),
         .O(D_new[22]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[23]_INST_0 
        (.I0(Q_new[7]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [23]),
         .O(D_new[23]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[24]_INST_0 
        (.I0(Q_new[8]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [24]),
         .O(D_new[24]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[25]_INST_0 
        (.I0(Q_new[9]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [25]),
         .O(D_new[25]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[26]_INST_0 
        (.I0(Q_new[10]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [26]),
         .O(D_new[26]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[27]_INST_0 
        (.I0(Q_new[11]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [27]),
         .O(D_new[27]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[28]_INST_0 
        (.I0(Q_new[12]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [28]),
         .O(D_new[28]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[29]_INST_0 
        (.I0(Q_new[13]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [29]),
         .O(D_new[29]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[2]_INST_0 
        (.I0(Q_new[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [2]),
         .O(D_new[2]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[30]_INST_0 
        (.I0(Q_new[14]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [30]),
         .O(D_new[30]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[31]_INST_0 
        (.I0(Q_new[15]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [31]),
         .O(D_new[31]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[32]_INST_0 
        (.I0(Q_new[0]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [32]),
         .O(D_new[32]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[33]_INST_0 
        (.I0(Q_new[1]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [33]),
         .O(D_new[33]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[34]_INST_0 
        (.I0(Q_new[2]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [34]),
         .O(D_new[34]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[35]_INST_0 
        (.I0(Q_new[3]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [35]),
         .O(D_new[35]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[36]_INST_0 
        (.I0(Q_new[4]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [36]),
         .O(D_new[36]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[37]_INST_0 
        (.I0(Q_new[5]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [37]),
         .O(D_new[37]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[38]_INST_0 
        (.I0(Q_new[6]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [38]),
         .O(D_new[38]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[39]_INST_0 
        (.I0(Q_new[7]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [39]),
         .O(D_new[39]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[3]_INST_0 
        (.I0(Q_new[3]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [3]),
         .O(D_new[3]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[40]_INST_0 
        (.I0(Q_new[8]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [40]),
         .O(D_new[40]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[41]_INST_0 
        (.I0(Q_new[9]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [41]),
         .O(D_new[41]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[42]_INST_0 
        (.I0(Q_new[10]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [42]),
         .O(D_new[42]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[43]_INST_0 
        (.I0(Q_new[11]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [43]),
         .O(D_new[43]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[44]_INST_0 
        (.I0(Q_new[12]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [44]),
         .O(D_new[44]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[45]_INST_0 
        (.I0(Q_new[13]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [45]),
         .O(D_new[45]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[46]_INST_0 
        (.I0(Q_new[14]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [46]),
         .O(D_new[46]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \D_new[47]_INST_0 
        (.I0(Q_new[15]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(D_new_48_sn_1),
+        .I2(p_0_in),
         .I3(\D_reg_reg[3] [47]),
         .O(D_new[47]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[48]_INST_0 
        (.I0(Q_new[0]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [48]),
         .O(D_new[48]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[49]_INST_0 
        (.I0(Q_new[1]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [49]),
         .O(D_new[49]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[4]_INST_0 
        (.I0(Q_new[4]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [4]),
         .O(D_new[4]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[50]_INST_0 
        (.I0(Q_new[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [50]),
         .O(D_new[50]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[51]_INST_0 
        (.I0(Q_new[3]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [51]),
         .O(D_new[51]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[52]_INST_0 
        (.I0(Q_new[4]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [52]),
         .O(D_new[52]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[53]_INST_0 
        (.I0(Q_new[5]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [53]),
         .O(D_new[53]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[54]_INST_0 
        (.I0(Q_new[6]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [54]),
         .O(D_new[54]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[55]_INST_0 
        (.I0(Q_new[7]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [55]),
         .O(D_new[55]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[56]_INST_0 
        (.I0(Q_new[8]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [56]),
         .O(D_new[56]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[57]_INST_0 
        (.I0(Q_new[9]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [57]),
         .O(D_new[57]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[58]_INST_0 
        (.I0(Q_new[10]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [58]),
         .O(D_new[58]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[59]_INST_0 
        (.I0(Q_new[11]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [59]),
         .O(D_new[59]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[5]_INST_0 
        (.I0(Q_new[5]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [5]),
         .O(D_new[5]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[60]_INST_0 
        (.I0(Q_new[12]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [60]),
         .O(D_new[60]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[61]_INST_0 
        (.I0(Q_new[13]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [61]),
         .O(D_new[61]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[62]_INST_0 
        (.I0(Q_new[14]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [62]),
         .O(D_new[62]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \D_new[63]_INST_0 
        (.I0(Q_new[15]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [63]),
         .O(D_new[63]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[6]_INST_0 
        (.I0(Q_new[6]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [6]),
         .O(D_new[6]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[7]_INST_0 
        (.I0(Q_new[7]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [7]),
         .O(D_new[7]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[8]_INST_0 
        (.I0(Q_new[8]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [8]),
         .O(D_new[8]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \D_new[9]_INST_0 
        (.I0(Q_new[9]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+        .I1(p_0_in),
+        .I2(D_new_48_sn_1),
         .I3(\D_reg_reg[3] [9]),
         .O(D_new[9]));
 endmodule
@@ -2914,32 +2978,39 @@ endmodule
 module intellight_v2_MII_0_0_wen_decoder
    (D,
     Q);
-  output [2:0]D;
+  output [3:0]D;
   input [1:0]Q;
 
-  wire [2:0]D;
+  wire [3:0]D;
   wire [1:0]Q;
 
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
     .INIT(4'h1)) 
-    \wen_bram[1]_i_1 
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \wen_bram[3]_i_1 
+    \wen_bram[0]_i_1 
        (.I0(Q[0]),
         .I1(Q[1]),
+        .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT1 #(
+    .INIT(2'h1)) 
+    \wen_bram[1]_i_1 
+       (.I0(Q[1]),
         .O(D[1]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
-    .INIT(4'h2)) 
-    \wen_bram[5]_i_1 
+    .INIT(4'h6)) 
+    \wen_bram[2]_i_1 
        (.I0(Q[1]),
         .I1(Q[0]),
         .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \wen_bram[4]_i_1 
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .O(D[3]));
 endmodule
 `ifndef GLBL
 `define GLBL

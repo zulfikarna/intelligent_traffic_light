@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "CU,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "intellight_v2_CU_0_0,CU,{}" *)
-(* CORE_GENERATION_INFO = "intellight_v2_CU_0_0,CU,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=CU,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,R_WIDTH=16,RND_WIDTH=16,CTR_WIDTH=16}" *)
+(* CORE_GENERATION_INFO = "intellight_v2_CU_0_0,CU,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=CU,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,R_WIDTH=16,CTR_WIDTH=16}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module intellight_v2_CU_0_0 (
@@ -105,7 +105,6 @@ output wire idle;
 
   CU #(
     .R_WIDTH(16),
-    .RND_WIDTH(16),
     .CTR_WIDTH(16)
   ) inst (
     .clk(clk),

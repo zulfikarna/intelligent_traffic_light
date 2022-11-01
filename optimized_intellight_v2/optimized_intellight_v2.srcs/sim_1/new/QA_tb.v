@@ -53,7 +53,7 @@ module QA_tb
     localparam RAND_WIDTH = 16;
     reg  [RAND_WIDTH-1:0] i_lsfr;
     wire signed [RAND_WIDTH-1:0] o_lsfr;
-    lsfr_16bit rand(.in0(i_lsfr), .out0(o_lsfr));
+    lfsr #(.DATA_WIDTH(16)) rand(.in0(i_lsfr), .out0(o_lsfr));
     always@(posedge clk) begin
         case(rst)
             1'b1:

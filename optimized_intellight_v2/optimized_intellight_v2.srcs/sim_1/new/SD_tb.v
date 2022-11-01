@@ -42,7 +42,7 @@ module SD_tb
     // Random generator porting
     localparam RAND_WIDTH = 16;
     wire [RAND_WIDTH-1:0] o_lsfr;
-    lsfr_16bit rand(.clk(clk), .rst(rst), .in0(16'd81), .out0(o_lsfr));
+    lfsr #(.DATA_WIDTH(16)) rand(.clk(clk), .rst(rst), .in0(16'd81), .out0(o_lsfr));
     
     // Clock setting
     always begin

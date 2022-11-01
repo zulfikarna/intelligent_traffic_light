@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Mon Oct 31 16:10:45 2022
+// Date        : Tue Nov  1 18:24:56 2022
 // Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_QA_0_0/intellight_v2_QA_0_0_sim_netlist.v
@@ -55,7 +55,7 @@ module intellight_v2_QA_0_0
   wire rst;
 
   intellight_v2_QA_0_0_QA inst
-       (.A(A[3:2]),
+       (.A(A[1:0]),
         .A_road(A_road),
         .Droad0(Droad0),
         .Droad1(Droad1),
@@ -97,32 +97,16 @@ module intellight_v2_QA_0_0_QA
   input [2:0]alpha;
 
   wire [1:0]A;
-  wire [3:2]A_reg0;
+  wire [1:0]A_reg0;
   wire [1:0]A_road;
   wire [63:0]Droad0;
   wire [63:0]Droad1;
   wire [63:0]Droad2;
   wire [63:0]Droad3;
-  wire [15:0]Q1;
-  wire [15:0]Q2;
-  wire [15:0]Q3;
+  wire [15:0]\Q[1] ;
+  wire [15:0]\Q[2] ;
+  wire [15:0]\Q[3] ;
   wire [15:0]Q_new;
-  wire \Q_reg0[0][10]_i_1_n_0 ;
-  wire \Q_reg0[0][11]_i_1_n_0 ;
-  wire \Q_reg0[0][12]_i_1_n_0 ;
-  wire \Q_reg0[0][13]_i_1_n_0 ;
-  wire \Q_reg0[0][14]_i_1_n_0 ;
-  wire \Q_reg0[0][15]_i_1_n_0 ;
-  wire \Q_reg0[0][8]_i_1_n_0 ;
-  wire \Q_reg0[0][9]_i_1_n_0 ;
-  wire [15:0]\Q_reg0_reg[0] ;
-  wire [15:0]\Q_reg0_reg[1] ;
-  wire [15:0]\Q_reg0_reg[2] ;
-  wire [15:0]\Q_reg0_reg[3] ;
-  wire [15:0]\Q_reg1_reg[0] ;
-  wire [15:0]\Q_reg1_reg[1] ;
-  wire [15:0]\Q_reg1_reg[2] ;
-  wire [15:0]\Q_reg1_reg[3] ;
   wire [15:0]Qsel;
   wire [15:0]Qsel_reg0;
   wire [15:0]Qsel_reg1;
@@ -131,6 +115,22 @@ module intellight_v2_QA_0_0_QA
   wire [2:0]alpha;
   wire clk;
   wire [2:0]gamma;
+  wire \genblk1[0].Q_reg0[0][10]_i_1_n_0 ;
+  wire \genblk1[0].Q_reg0[0][11]_i_1_n_0 ;
+  wire \genblk1[0].Q_reg0[0][12]_i_1_n_0 ;
+  wire \genblk1[0].Q_reg0[0][13]_i_1_n_0 ;
+  wire \genblk1[0].Q_reg0[0][14]_i_1_n_0 ;
+  wire \genblk1[0].Q_reg0[0][15]_i_1_n_0 ;
+  wire \genblk1[0].Q_reg0[0][8]_i_1_n_0 ;
+  wire \genblk1[0].Q_reg0[0][9]_i_1_n_0 ;
+  wire [15:0]\genblk1[0].Q_reg0_reg[0] ;
+  wire [15:0]\genblk1[0].Q_reg1_reg[0] ;
+  wire [15:0]\genblk1[1].Q_reg0_reg[1] ;
+  wire [15:0]\genblk1[1].Q_reg1_reg[1] ;
+  wire [15:0]\genblk1[2].Q_reg0_reg[2] ;
+  wire [15:0]\genblk1[2].Q_reg1_reg[2] ;
+  wire [15:0]\genblk1[3].Q_reg0_reg[3] ;
+  wire [15:0]\genblk1[3].Q_reg1_reg[3] ;
   wire [15:0]gm;
   wire max0_n_0;
   wire max0_n_1;
@@ -291,945 +291,17 @@ module intellight_v2_QA_0_0_QA
   wire [3:3]NLW_x__45_carry__2_CO_UNCONNECTED;
   wire [3:3]NLW_y_carry__2_CO_UNCONNECTED;
 
-  FDRE \A_reg0_reg[2] 
+  FDRE \A_reg0_reg[0] 
        (.C(clk),
         .CE(1'b1),
         .D(A[0]),
-        .Q(A_reg0[2]),
+        .Q(A_reg0[0]),
         .R(rst));
-  FDRE \A_reg0_reg[3] 
+  FDRE \A_reg0_reg[1] 
        (.C(clk),
         .CE(1'b1),
         .D(A[1]),
-        .Q(A_reg0[3]),
-        .R(rst));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][10]_i_1 
-       (.I0(Droad2[10]),
-        .I1(Droad3[10]),
-        .I2(Droad0[10]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[10]),
-        .O(\Q_reg0[0][10]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][11]_i_1 
-       (.I0(Droad2[11]),
-        .I1(Droad3[11]),
-        .I2(Droad0[11]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[11]),
-        .O(\Q_reg0[0][11]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][12]_i_1 
-       (.I0(Droad2[12]),
-        .I1(Droad3[12]),
-        .I2(Droad0[12]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[12]),
-        .O(\Q_reg0[0][12]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][13]_i_1 
-       (.I0(Droad2[13]),
-        .I1(Droad3[13]),
-        .I2(Droad0[13]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[13]),
-        .O(\Q_reg0[0][13]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][14]_i_1 
-       (.I0(Droad2[14]),
-        .I1(Droad3[14]),
-        .I2(Droad0[14]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[14]),
-        .O(\Q_reg0[0][14]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][15]_i_1 
-       (.I0(Droad2[15]),
-        .I1(Droad3[15]),
-        .I2(Droad0[15]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[15]),
-        .O(\Q_reg0[0][15]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][8]_i_1 
-       (.I0(Droad2[8]),
-        .I1(Droad3[8]),
-        .I2(Droad0[8]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[8]),
-        .O(\Q_reg0[0][8]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][9]_i_1 
-       (.I0(Droad2[9]),
-        .I1(Droad3[9]),
-        .I2(Droad0[9]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[9]),
-        .O(\Q_reg0[0][9]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][10]_i_1 
-       (.I0(Droad2[26]),
-        .I1(Droad3[26]),
-        .I2(Droad0[26]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[26]),
-        .O(Q1[10]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][11]_i_1 
-       (.I0(Droad2[27]),
-        .I1(Droad3[27]),
-        .I2(Droad0[27]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[27]),
-        .O(Q1[11]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][12]_i_1 
-       (.I0(Droad2[28]),
-        .I1(Droad3[28]),
-        .I2(Droad0[28]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[28]),
-        .O(Q1[12]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][13]_i_1 
-       (.I0(Droad2[29]),
-        .I1(Droad3[29]),
-        .I2(Droad0[29]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[29]),
-        .O(Q1[13]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][14]_i_1 
-       (.I0(Droad2[30]),
-        .I1(Droad3[30]),
-        .I2(Droad0[30]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[30]),
-        .O(Q1[14]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][15]_i_1 
-       (.I0(Droad2[31]),
-        .I1(Droad3[31]),
-        .I2(Droad0[31]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[31]),
-        .O(Q1[15]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][8]_i_1 
-       (.I0(Droad2[24]),
-        .I1(Droad3[24]),
-        .I2(Droad0[24]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[24]),
-        .O(Q1[8]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][9]_i_1 
-       (.I0(Droad2[25]),
-        .I1(Droad3[25]),
-        .I2(Droad0[25]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[25]),
-        .O(Q1[9]));
-  FDRE \Q_reg0_reg[0][0] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(max0_n_45),
-        .Q(\Q_reg0_reg[0] [0]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][10] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0[0][10]_i_1_n_0 ),
-        .Q(\Q_reg0_reg[0] [10]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][11] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0[0][11]_i_1_n_0 ),
-        .Q(\Q_reg0_reg[0] [11]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][12] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0[0][12]_i_1_n_0 ),
-        .Q(\Q_reg0_reg[0] [12]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][13] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0[0][13]_i_1_n_0 ),
-        .Q(\Q_reg0_reg[0] [13]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][14] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0[0][14]_i_1_n_0 ),
-        .Q(\Q_reg0_reg[0] [14]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][15] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0[0][15]_i_1_n_0 ),
-        .Q(\Q_reg0_reg[0] [15]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][1] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(max0_n_44),
-        .Q(\Q_reg0_reg[0] [1]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][2] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(max0_n_69),
-        .Q(\Q_reg0_reg[0] [2]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][3] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(max0_n_68),
-        .Q(\Q_reg0_reg[0] [3]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][4] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(max0_n_64),
-        .Q(\Q_reg0_reg[0] [4]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][5] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(max0_n_63),
-        .Q(\Q_reg0_reg[0] [5]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][6] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(max0_n_62),
-        .Q(\Q_reg0_reg[0] [6]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][7] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(max0_n_61),
-        .Q(\Q_reg0_reg[0] [7]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][8] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0[0][8]_i_1_n_0 ),
-        .Q(\Q_reg0_reg[0] [8]),
-        .R(rst));
-  FDRE \Q_reg0_reg[0][9] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0[0][9]_i_1_n_0 ),
-        .Q(\Q_reg0_reg[0] [9]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][0] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[0]),
-        .Q(\Q_reg0_reg[1] [0]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][10] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[10]),
-        .Q(\Q_reg0_reg[1] [10]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][11] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[11]),
-        .Q(\Q_reg0_reg[1] [11]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][12] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[12]),
-        .Q(\Q_reg0_reg[1] [12]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][13] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[13]),
-        .Q(\Q_reg0_reg[1] [13]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][14] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[14]),
-        .Q(\Q_reg0_reg[1] [14]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][15] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[15]),
-        .Q(\Q_reg0_reg[1] [15]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][1] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[1]),
-        .Q(\Q_reg0_reg[1] [1]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][2] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[2]),
-        .Q(\Q_reg0_reg[1] [2]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][3] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[3]),
-        .Q(\Q_reg0_reg[1] [3]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][4] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[4]),
-        .Q(\Q_reg0_reg[1] [4]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][5] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[5]),
-        .Q(\Q_reg0_reg[1] [5]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][6] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[6]),
-        .Q(\Q_reg0_reg[1] [6]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][7] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[7]),
-        .Q(\Q_reg0_reg[1] [7]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][8] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[8]),
-        .Q(\Q_reg0_reg[1] [8]),
-        .R(rst));
-  FDRE \Q_reg0_reg[1][9] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q1[9]),
-        .Q(\Q_reg0_reg[1] [9]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][0] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[0]),
-        .Q(\Q_reg0_reg[2] [0]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][10] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[10]),
-        .Q(\Q_reg0_reg[2] [10]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][11] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[11]),
-        .Q(\Q_reg0_reg[2] [11]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][12] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[12]),
-        .Q(\Q_reg0_reg[2] [12]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][13] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[13]),
-        .Q(\Q_reg0_reg[2] [13]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][14] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[14]),
-        .Q(\Q_reg0_reg[2] [14]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][15] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[15]),
-        .Q(\Q_reg0_reg[2] [15]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][1] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[1]),
-        .Q(\Q_reg0_reg[2] [1]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][2] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[2]),
-        .Q(\Q_reg0_reg[2] [2]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][3] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[3]),
-        .Q(\Q_reg0_reg[2] [3]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][4] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[4]),
-        .Q(\Q_reg0_reg[2] [4]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][5] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[5]),
-        .Q(\Q_reg0_reg[2] [5]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][6] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[6]),
-        .Q(\Q_reg0_reg[2] [6]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][7] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[7]),
-        .Q(\Q_reg0_reg[2] [7]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][8] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[8]),
-        .Q(\Q_reg0_reg[2] [8]),
-        .R(rst));
-  FDRE \Q_reg0_reg[2][9] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q2[9]),
-        .Q(\Q_reg0_reg[2] [9]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][0] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[0]),
-        .Q(\Q_reg0_reg[3] [0]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][10] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[10]),
-        .Q(\Q_reg0_reg[3] [10]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][11] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[11]),
-        .Q(\Q_reg0_reg[3] [11]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][12] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[12]),
-        .Q(\Q_reg0_reg[3] [12]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][13] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[13]),
-        .Q(\Q_reg0_reg[3] [13]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][14] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[14]),
-        .Q(\Q_reg0_reg[3] [14]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][15] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[15]),
-        .Q(\Q_reg0_reg[3] [15]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][1] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[1]),
-        .Q(\Q_reg0_reg[3] [1]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][2] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[2]),
-        .Q(\Q_reg0_reg[3] [2]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][3] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[3]),
-        .Q(\Q_reg0_reg[3] [3]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][4] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[4]),
-        .Q(\Q_reg0_reg[3] [4]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][5] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[5]),
-        .Q(\Q_reg0_reg[3] [5]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][6] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[6]),
-        .Q(\Q_reg0_reg[3] [6]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][7] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[7]),
-        .Q(\Q_reg0_reg[3] [7]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][8] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[8]),
-        .Q(\Q_reg0_reg[3] [8]),
-        .R(rst));
-  FDRE \Q_reg0_reg[3][9] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(Q3[9]),
-        .Q(\Q_reg0_reg[3] [9]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][0] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [0]),
-        .Q(\Q_reg1_reg[0] [0]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][10] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [10]),
-        .Q(\Q_reg1_reg[0] [10]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][11] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [11]),
-        .Q(\Q_reg1_reg[0] [11]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][12] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [12]),
-        .Q(\Q_reg1_reg[0] [12]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][13] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [13]),
-        .Q(\Q_reg1_reg[0] [13]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][14] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [14]),
-        .Q(\Q_reg1_reg[0] [14]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][15] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [15]),
-        .Q(\Q_reg1_reg[0] [15]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][1] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [1]),
-        .Q(\Q_reg1_reg[0] [1]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][2] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [2]),
-        .Q(\Q_reg1_reg[0] [2]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][3] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [3]),
-        .Q(\Q_reg1_reg[0] [3]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][4] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [4]),
-        .Q(\Q_reg1_reg[0] [4]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][5] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [5]),
-        .Q(\Q_reg1_reg[0] [5]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][6] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [6]),
-        .Q(\Q_reg1_reg[0] [6]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][7] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [7]),
-        .Q(\Q_reg1_reg[0] [7]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][8] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [8]),
-        .Q(\Q_reg1_reg[0] [8]),
-        .R(rst));
-  FDRE \Q_reg1_reg[0][9] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[0] [9]),
-        .Q(\Q_reg1_reg[0] [9]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][0] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [0]),
-        .Q(\Q_reg1_reg[1] [0]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][10] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [10]),
-        .Q(\Q_reg1_reg[1] [10]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][11] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [11]),
-        .Q(\Q_reg1_reg[1] [11]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][12] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [12]),
-        .Q(\Q_reg1_reg[1] [12]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][13] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [13]),
-        .Q(\Q_reg1_reg[1] [13]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][14] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [14]),
-        .Q(\Q_reg1_reg[1] [14]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][15] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [15]),
-        .Q(\Q_reg1_reg[1] [15]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][1] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [1]),
-        .Q(\Q_reg1_reg[1] [1]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][2] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [2]),
-        .Q(\Q_reg1_reg[1] [2]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][3] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [3]),
-        .Q(\Q_reg1_reg[1] [3]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][4] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [4]),
-        .Q(\Q_reg1_reg[1] [4]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][5] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [5]),
-        .Q(\Q_reg1_reg[1] [5]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][6] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [6]),
-        .Q(\Q_reg1_reg[1] [6]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][7] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [7]),
-        .Q(\Q_reg1_reg[1] [7]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][8] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [8]),
-        .Q(\Q_reg1_reg[1] [8]),
-        .R(rst));
-  FDRE \Q_reg1_reg[1][9] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[1] [9]),
-        .Q(\Q_reg1_reg[1] [9]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][0] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [0]),
-        .Q(\Q_reg1_reg[2] [0]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][10] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [10]),
-        .Q(\Q_reg1_reg[2] [10]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][11] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [11]),
-        .Q(\Q_reg1_reg[2] [11]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][12] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [12]),
-        .Q(\Q_reg1_reg[2] [12]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][13] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [13]),
-        .Q(\Q_reg1_reg[2] [13]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][14] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [14]),
-        .Q(\Q_reg1_reg[2] [14]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][15] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [15]),
-        .Q(\Q_reg1_reg[2] [15]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][1] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [1]),
-        .Q(\Q_reg1_reg[2] [1]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][2] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [2]),
-        .Q(\Q_reg1_reg[2] [2]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][3] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [3]),
-        .Q(\Q_reg1_reg[2] [3]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][4] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [4]),
-        .Q(\Q_reg1_reg[2] [4]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][5] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [5]),
-        .Q(\Q_reg1_reg[2] [5]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][6] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [6]),
-        .Q(\Q_reg1_reg[2] [6]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][7] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [7]),
-        .Q(\Q_reg1_reg[2] [7]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][8] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [8]),
-        .Q(\Q_reg1_reg[2] [8]),
-        .R(rst));
-  FDRE \Q_reg1_reg[2][9] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[2] [9]),
-        .Q(\Q_reg1_reg[2] [9]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][0] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [0]),
-        .Q(\Q_reg1_reg[3] [0]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][10] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [10]),
-        .Q(\Q_reg1_reg[3] [10]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][11] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [11]),
-        .Q(\Q_reg1_reg[3] [11]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][12] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [12]),
-        .Q(\Q_reg1_reg[3] [12]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][13] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [13]),
-        .Q(\Q_reg1_reg[3] [13]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][14] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [14]),
-        .Q(\Q_reg1_reg[3] [14]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][15] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [15]),
-        .Q(\Q_reg1_reg[3] [15]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][1] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [1]),
-        .Q(\Q_reg1_reg[3] [1]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][2] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [2]),
-        .Q(\Q_reg1_reg[3] [2]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][3] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [3]),
-        .Q(\Q_reg1_reg[3] [3]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][4] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [4]),
-        .Q(\Q_reg1_reg[3] [4]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][5] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [5]),
-        .Q(\Q_reg1_reg[3] [5]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][6] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [6]),
-        .Q(\Q_reg1_reg[3] [6]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][7] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [7]),
-        .Q(\Q_reg1_reg[3] [7]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][8] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [8]),
-        .Q(\Q_reg1_reg[3] [8]),
-        .R(rst));
-  FDRE \Q_reg1_reg[3][9] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\Q_reg0_reg[3] [9]),
-        .Q(\Q_reg1_reg[3] [9]),
+        .Q(A_reg0[1]),
         .R(rst));
   FDRE \Qsel_reg0_reg[0] 
        (.C(clk),
@@ -1519,7 +591,935 @@ module intellight_v2_QA_0_0_QA
         .D(R[9]),
         .Q(R_reg0[9]),
         .R(rst));
-  intellight_v2_QA_0_0_max4to1_16bit max0
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][10]_i_1 
+       (.I0(Droad2[10]),
+        .I1(Droad3[10]),
+        .I2(Droad0[10]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[10]),
+        .O(\genblk1[0].Q_reg0[0][10]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][11]_i_1 
+       (.I0(Droad2[11]),
+        .I1(Droad3[11]),
+        .I2(Droad0[11]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[11]),
+        .O(\genblk1[0].Q_reg0[0][11]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][12]_i_1 
+       (.I0(Droad2[12]),
+        .I1(Droad3[12]),
+        .I2(Droad0[12]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[12]),
+        .O(\genblk1[0].Q_reg0[0][12]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][13]_i_1 
+       (.I0(Droad2[13]),
+        .I1(Droad3[13]),
+        .I2(Droad0[13]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[13]),
+        .O(\genblk1[0].Q_reg0[0][13]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][14]_i_1 
+       (.I0(Droad2[14]),
+        .I1(Droad3[14]),
+        .I2(Droad0[14]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[14]),
+        .O(\genblk1[0].Q_reg0[0][14]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][15]_i_1 
+       (.I0(Droad2[15]),
+        .I1(Droad3[15]),
+        .I2(Droad0[15]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[15]),
+        .O(\genblk1[0].Q_reg0[0][15]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][8]_i_1 
+       (.I0(Droad2[8]),
+        .I1(Droad3[8]),
+        .I2(Droad0[8]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[8]),
+        .O(\genblk1[0].Q_reg0[0][8]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][9]_i_1 
+       (.I0(Droad2[9]),
+        .I1(Droad3[9]),
+        .I2(Droad0[9]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[9]),
+        .O(\genblk1[0].Q_reg0[0][9]_i_1_n_0 ));
+  FDRE \genblk1[0].Q_reg0_reg[0][0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(max0_n_45),
+        .Q(\genblk1[0].Q_reg0_reg[0] [0]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][10] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0[0][10]_i_1_n_0 ),
+        .Q(\genblk1[0].Q_reg0_reg[0] [10]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][11] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0[0][11]_i_1_n_0 ),
+        .Q(\genblk1[0].Q_reg0_reg[0] [11]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][12] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0[0][12]_i_1_n_0 ),
+        .Q(\genblk1[0].Q_reg0_reg[0] [12]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][13] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0[0][13]_i_1_n_0 ),
+        .Q(\genblk1[0].Q_reg0_reg[0] [13]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][14] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0[0][14]_i_1_n_0 ),
+        .Q(\genblk1[0].Q_reg0_reg[0] [14]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][15] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0[0][15]_i_1_n_0 ),
+        .Q(\genblk1[0].Q_reg0_reg[0] [15]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][1] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(max0_n_44),
+        .Q(\genblk1[0].Q_reg0_reg[0] [1]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][2] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(max0_n_69),
+        .Q(\genblk1[0].Q_reg0_reg[0] [2]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(max0_n_68),
+        .Q(\genblk1[0].Q_reg0_reg[0] [3]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][4] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(max0_n_64),
+        .Q(\genblk1[0].Q_reg0_reg[0] [4]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][5] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(max0_n_63),
+        .Q(\genblk1[0].Q_reg0_reg[0] [5]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][6] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(max0_n_62),
+        .Q(\genblk1[0].Q_reg0_reg[0] [6]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][7] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(max0_n_61),
+        .Q(\genblk1[0].Q_reg0_reg[0] [7]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][8] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0[0][8]_i_1_n_0 ),
+        .Q(\genblk1[0].Q_reg0_reg[0] [8]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg0_reg[0][9] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0[0][9]_i_1_n_0 ),
+        .Q(\genblk1[0].Q_reg0_reg[0] [9]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [0]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [0]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][10] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [10]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [10]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][11] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [11]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [11]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][12] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [12]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [12]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][13] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [13]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [13]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][14] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [14]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [14]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][15] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [15]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [15]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][1] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [1]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [1]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][2] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [2]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [2]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [3]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [3]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][4] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [4]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [4]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][5] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [5]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [5]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][6] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [6]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [6]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][7] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [7]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [7]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][8] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [8]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [8]),
+        .R(rst));
+  FDRE \genblk1[0].Q_reg1_reg[0][9] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[0].Q_reg0_reg[0] [9]),
+        .Q(\genblk1[0].Q_reg1_reg[0] [9]),
+        .R(rst));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][10]_i_1 
+       (.I0(Droad2[26]),
+        .I1(Droad3[26]),
+        .I2(Droad0[26]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[26]),
+        .O(\Q[1] [10]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][11]_i_1 
+       (.I0(Droad2[27]),
+        .I1(Droad3[27]),
+        .I2(Droad0[27]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[27]),
+        .O(\Q[1] [11]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][12]_i_1 
+       (.I0(Droad2[28]),
+        .I1(Droad3[28]),
+        .I2(Droad0[28]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[28]),
+        .O(\Q[1] [12]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][13]_i_1 
+       (.I0(Droad2[29]),
+        .I1(Droad3[29]),
+        .I2(Droad0[29]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[29]),
+        .O(\Q[1] [13]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][14]_i_1 
+       (.I0(Droad2[30]),
+        .I1(Droad3[30]),
+        .I2(Droad0[30]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[30]),
+        .O(\Q[1] [14]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][15]_i_1 
+       (.I0(Droad2[31]),
+        .I1(Droad3[31]),
+        .I2(Droad0[31]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[31]),
+        .O(\Q[1] [15]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][8]_i_1 
+       (.I0(Droad2[24]),
+        .I1(Droad3[24]),
+        .I2(Droad0[24]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[24]),
+        .O(\Q[1] [8]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][9]_i_1 
+       (.I0(Droad2[25]),
+        .I1(Droad3[25]),
+        .I2(Droad0[25]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[25]),
+        .O(\Q[1] [9]));
+  FDRE \genblk1[1].Q_reg0_reg[1][0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [0]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [0]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][10] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [10]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [10]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][11] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [11]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [11]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][12] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [12]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [12]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][13] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [13]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [13]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][14] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [14]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [14]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][15] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [15]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [15]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][1] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [1]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [1]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][2] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [2]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [2]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [3]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [3]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][4] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [4]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [4]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][5] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [5]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [5]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][6] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [6]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [6]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][7] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [7]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [7]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][8] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [8]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [8]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg0_reg[1][9] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[1] [9]),
+        .Q(\genblk1[1].Q_reg0_reg[1] [9]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [0]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [0]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][10] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [10]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [10]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][11] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [11]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [11]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][12] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [12]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [12]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][13] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [13]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [13]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][14] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [14]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [14]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][15] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [15]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [15]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][1] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [1]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [1]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][2] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [2]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [2]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [3]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [3]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][4] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [4]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [4]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][5] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [5]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [5]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][6] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [6]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [6]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][7] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [7]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [7]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][8] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [8]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [8]),
+        .R(rst));
+  FDRE \genblk1[1].Q_reg1_reg[1][9] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg0_reg[1] [9]),
+        .Q(\genblk1[1].Q_reg1_reg[1] [9]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [0]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [0]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][10] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [10]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [10]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][11] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [11]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [11]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][12] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [12]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [12]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][13] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [13]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [13]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][14] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [14]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [14]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][15] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [15]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [15]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][1] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [1]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [1]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][2] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [2]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [2]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [3]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [3]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][4] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [4]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [4]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][5] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [5]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [5]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][6] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [6]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [6]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][7] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [7]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [7]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][8] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [8]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [8]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg0_reg[2][9] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[2] [9]),
+        .Q(\genblk1[2].Q_reg0_reg[2] [9]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [0]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [0]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][10] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [10]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [10]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][11] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [11]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [11]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][12] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [12]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [12]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][13] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [13]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [13]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][14] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [14]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [14]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][15] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [15]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [15]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][1] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [1]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [1]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][2] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [2]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [2]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [3]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [3]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][4] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [4]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [4]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][5] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [5]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [5]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][6] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [6]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [6]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][7] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [7]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [7]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][8] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [8]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [8]),
+        .R(rst));
+  FDRE \genblk1[2].Q_reg1_reg[2][9] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg0_reg[2] [9]),
+        .Q(\genblk1[2].Q_reg1_reg[2] [9]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [0]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [0]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][10] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [10]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [10]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][11] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [11]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [11]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][12] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [12]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [12]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][13] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [13]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [13]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][14] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [14]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [14]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][15] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [15]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [15]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][1] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [1]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [1]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][2] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [2]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [2]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [3]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [3]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][4] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [4]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [4]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][5] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [5]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [5]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][6] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [6]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [6]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][7] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [7]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [7]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][8] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [8]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [8]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg0_reg[3][9] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\Q[3] [9]),
+        .Q(\genblk1[3].Q_reg0_reg[3] [9]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [0]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [0]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][10] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [10]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [10]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][11] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [11]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [11]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][12] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [12]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [12]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][13] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [13]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [13]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][14] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [14]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [14]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][15] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [15]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [15]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][1] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [1]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [1]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][2] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [2]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [2]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [3]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [3]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][4] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [4]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [4]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][5] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [5]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [5]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][6] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [6]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [6]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][7] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [7]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [7]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][8] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [8]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [8]),
+        .R(rst));
+  FDRE \genblk1[3].Q_reg1_reg[3][9] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg0_reg[3] [9]),
+        .Q(\genblk1[3].Q_reg1_reg[3] [9]),
+        .R(rst));
+  intellight_v2_QA_0_0_max4to1 max0
        (.A_road(A_road),
         .DI({temp01_carry__0_i_1_n_0,temp01_carry__0_i_2_n_0,temp01_carry__0_i_3_n_0,temp01_carry__0_i_4_n_0}),
         .Droad0({Droad0[63:32],Droad0[23:16],Droad0[7:0]}),
@@ -1534,11 +1534,11 @@ module intellight_v2_QA_0_0_QA
         .Droad2_6_sp_1(max0_n_62),
         .Droad2_7_sp_1(max0_n_61),
         .Droad3({Droad3[63:32],Droad3[23:16],Droad3[7:0]}),
-        .Q1(Q1[7:0]),
-        .Q2(Q2),
-        .Q3(Q3),
+        .\Q[1] (\Q[1] [7:0]),
+        .\Q[2] (\Q[2] ),
+        .\Q[3] (\Q[3] ),
         .S({temp01_carry__0_i_5_n_0,temp01_carry__0_i_6_n_0,temp01_carry__0_i_7_n_0,temp01_carry__0_i_8_n_0}),
-        ._carry__0_0(Q1[15:8]),
+        ._carry__0_0(\Q[1] [15:8]),
         .gamma(gamma),
         .\gamma[2] ({max0_n_0,max0_n_1,max0_n_2,max0_n_3}),
         .\gamma[2]_0 ({max0_n_46,max0_n_47,max0_n_48,max0_n_49}),
@@ -1548,14 +1548,14 @@ module intellight_v2_QA_0_0_QA
         .\gamma[2]_4 ({max0_n_65,max0_n_66,max0_n_67}),
         .\gamma[2]_5 ({max0_n_70,max0_n_71,max0_n_72,max0_n_73}),
         .\gamma[2]_6 ({max0_n_74,max0_n_75,max0_n_76,max0_n_77}),
-        .x__0_carry__1_i_1_0(\Q_reg0[0][11]_i_1_n_0 ),
-        .x__0_carry__1_i_2_0(\Q_reg0[0][10]_i_1_n_0 ),
-        .x__0_carry__1_i_3_0(\Q_reg0[0][9]_i_1_n_0 ),
-        .x__0_carry__1_i_4_0(\Q_reg0[0][8]_i_1_n_0 ),
-        .x__0_carry__2_i_3_0(\Q_reg0[0][12]_i_1_n_0 ),
-        .x__0_carry__2_i_6_0(\Q_reg0[0][15]_i_1_n_0 ),
-        .x__0_carry__2_i_7_0(\Q_reg0[0][14]_i_1_n_0 ),
-        .x__0_carry__2_i_7_1(\Q_reg0[0][13]_i_1_n_0 ));
+        .x__0_carry__1_i_1_0(\genblk1[0].Q_reg0[0][11]_i_1_n_0 ),
+        .x__0_carry__1_i_2_0(\genblk1[0].Q_reg0[0][10]_i_1_n_0 ),
+        .x__0_carry__1_i_3_0(\genblk1[0].Q_reg0[0][9]_i_1_n_0 ),
+        .x__0_carry__1_i_4_0(\genblk1[0].Q_reg0[0][8]_i_1_n_0 ),
+        .x__0_carry__2_i_3_0(\genblk1[0].Q_reg0[0][12]_i_1_n_0 ),
+        .x__0_carry__2_i_6_0(\genblk1[0].Q_reg0[0][15]_i_1_n_0 ),
+        .x__0_carry__2_i_7_0(\genblk1[0].Q_reg0[0][14]_i_1_n_0 ),
+        .x__0_carry__2_i_7_1(\genblk1[0].Q_reg0[0][13]_i_1_n_0 ));
   intellight_v2_QA_0_0_multiply mul1
        (.Q({x_reg0,\x_reg0_reg_n_0_[14] ,\x_reg0_reg_n_0_[13] ,\x_reg0_reg_n_0_[12] ,\x_reg0_reg_n_0_[11] ,\x_reg0_reg_n_0_[10] ,\x_reg0_reg_n_0_[9] ,\x_reg0_reg_n_0_[8] ,\x_reg0_reg_n_0_[7] ,\x_reg0_reg_n_0_[6] ,\x_reg0_reg_n_0_[5] ,\x_reg0_reg_n_0_[4] ,\x_reg0_reg_n_0_[3] ,\x_reg0_reg_n_0_[2] ,\x_reg0_reg_n_0_[1] }),
         .Qsel_reg1(Qsel_reg1),
@@ -1564,76 +1564,76 @@ module intellight_v2_QA_0_0_QA
         .\Qsel_reg1_reg[7] ({mul1_n_8,mul1_n_9,mul1_n_10,mul1_n_11}),
         .S({mul1_n_0,mul1_n_1,mul1_n_2,mul1_n_3}),
         .alpha(alpha));
-  intellight_v2_QA_0_0_mux4to1_16bit mux0
+  intellight_v2_QA_0_0_mux4to1 mux0
        (.Q(A_reg0),
-        .\Q_reg1_reg[0] (\Q_reg1_reg[0] ),
-        .\Q_reg1_reg[1] (\Q_reg1_reg[1] ),
-        .\Q_reg1_reg[2] (\Q_reg1_reg[2] ),
-        .\Q_reg1_reg[3] (\Q_reg1_reg[3] ),
-        .Qsel(Qsel));
+        .Qsel(Qsel),
+        .\genblk1[0].Q_reg1_reg[0] (\genblk1[0].Q_reg1_reg[0] ),
+        .\genblk1[1].Q_reg1_reg[1] (\genblk1[1].Q_reg1_reg[1] ),
+        .\genblk1[2].Q_reg1_reg[2] (\genblk1[2].Q_reg1_reg[2] ),
+        .\genblk1[3].Q_reg1_reg[3] (\genblk1[3].Q_reg1_reg[3] ));
   LUT4 #(
     .INIT(16'h30B2)) 
     temp01_carry__0_i_1
-       (.I0(\Q_reg0[0][14]_i_1_n_0 ),
-        .I1(\Q_reg0[0][15]_i_1_n_0 ),
-        .I2(Q1[15]),
-        .I3(Q1[14]),
+       (.I0(\genblk1[0].Q_reg0[0][14]_i_1_n_0 ),
+        .I1(\genblk1[0].Q_reg0[0][15]_i_1_n_0 ),
+        .I2(\Q[1] [15]),
+        .I3(\Q[1] [14]),
         .O(temp01_carry__0_i_1_n_0));
   LUT4 #(
     .INIT(16'h30B2)) 
     temp01_carry__0_i_2
-       (.I0(\Q_reg0[0][12]_i_1_n_0 ),
-        .I1(Q1[13]),
-        .I2(\Q_reg0[0][13]_i_1_n_0 ),
-        .I3(Q1[12]),
+       (.I0(\genblk1[0].Q_reg0[0][12]_i_1_n_0 ),
+        .I1(\Q[1] [13]),
+        .I2(\genblk1[0].Q_reg0[0][13]_i_1_n_0 ),
+        .I3(\Q[1] [12]),
         .O(temp01_carry__0_i_2_n_0));
   LUT4 #(
     .INIT(16'h30B2)) 
     temp01_carry__0_i_3
-       (.I0(\Q_reg0[0][10]_i_1_n_0 ),
-        .I1(Q1[11]),
-        .I2(\Q_reg0[0][11]_i_1_n_0 ),
-        .I3(Q1[10]),
+       (.I0(\genblk1[0].Q_reg0[0][10]_i_1_n_0 ),
+        .I1(\Q[1] [11]),
+        .I2(\genblk1[0].Q_reg0[0][11]_i_1_n_0 ),
+        .I3(\Q[1] [10]),
         .O(temp01_carry__0_i_3_n_0));
   LUT4 #(
     .INIT(16'h30B2)) 
     temp01_carry__0_i_4
-       (.I0(\Q_reg0[0][8]_i_1_n_0 ),
-        .I1(Q1[9]),
-        .I2(\Q_reg0[0][9]_i_1_n_0 ),
-        .I3(Q1[8]),
+       (.I0(\genblk1[0].Q_reg0[0][8]_i_1_n_0 ),
+        .I1(\Q[1] [9]),
+        .I2(\genblk1[0].Q_reg0[0][9]_i_1_n_0 ),
+        .I3(\Q[1] [8]),
         .O(temp01_carry__0_i_4_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp01_carry__0_i_5
-       (.I0(\Q_reg0[0][15]_i_1_n_0 ),
-        .I1(Q1[14]),
-        .I2(\Q_reg0[0][14]_i_1_n_0 ),
-        .I3(Q1[15]),
+       (.I0(\genblk1[0].Q_reg0[0][15]_i_1_n_0 ),
+        .I1(\Q[1] [14]),
+        .I2(\genblk1[0].Q_reg0[0][14]_i_1_n_0 ),
+        .I3(\Q[1] [15]),
         .O(temp01_carry__0_i_5_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp01_carry__0_i_6
-       (.I0(\Q_reg0[0][13]_i_1_n_0 ),
-        .I1(Q1[12]),
-        .I2(\Q_reg0[0][12]_i_1_n_0 ),
-        .I3(Q1[13]),
+       (.I0(\genblk1[0].Q_reg0[0][13]_i_1_n_0 ),
+        .I1(\Q[1] [12]),
+        .I2(\genblk1[0].Q_reg0[0][12]_i_1_n_0 ),
+        .I3(\Q[1] [13]),
         .O(temp01_carry__0_i_6_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp01_carry__0_i_7
-       (.I0(\Q_reg0[0][11]_i_1_n_0 ),
-        .I1(Q1[10]),
-        .I2(\Q_reg0[0][10]_i_1_n_0 ),
-        .I3(Q1[11]),
+       (.I0(\genblk1[0].Q_reg0[0][11]_i_1_n_0 ),
+        .I1(\Q[1] [10]),
+        .I2(\genblk1[0].Q_reg0[0][10]_i_1_n_0 ),
+        .I3(\Q[1] [11]),
         .O(temp01_carry__0_i_7_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp01_carry__0_i_8
-       (.I0(\Q_reg0[0][9]_i_1_n_0 ),
-        .I1(Q1[8]),
-        .I2(\Q_reg0[0][8]_i_1_n_0 ),
-        .I3(Q1[9]),
+       (.I0(\genblk1[0].Q_reg0[0][9]_i_1_n_0 ),
+        .I1(\Q[1] [8]),
+        .I2(\genblk1[0].Q_reg0[0][8]_i_1_n_0 ),
+        .I3(\Q[1] [9]),
         .O(temp01_carry__0_i_8_n_0));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 x__0_carry
@@ -2076,12 +2076,12 @@ module intellight_v2_QA_0_0_QA
         .S({mul1_n_0,mul1_n_1,mul1_n_2,mul1_n_3}));
 endmodule
 
-(* ORIG_REF_NAME = "max4to1_16bit" *) 
-module intellight_v2_QA_0_0_max4to1_16bit
+(* ORIG_REF_NAME = "max4to1" *) 
+module intellight_v2_QA_0_0_max4to1
    (\gamma[2] ,
-    Q2,
-    Q3,
-    Q1,
+    \Q[2] ,
+    \Q[3] ,
+    \Q[1] ,
     Droad2_1_sp_1,
     Droad2_0_sp_1,
     \gamma[2]_0 ,
@@ -2115,9 +2115,9 @@ module intellight_v2_QA_0_0_max4to1_16bit
     A_road,
     Droad1);
   output [3:0]\gamma[2] ;
-  output [15:0]Q2;
-  output [15:0]Q3;
-  output [7:0]Q1;
+  output [15:0]\Q[2] ;
+  output [15:0]\Q[3] ;
+  output [7:0]\Q[1] ;
   output Droad2_1_sp_1;
   output Droad2_0_sp_1;
   output [3:0]\gamma[2]_0 ;
@@ -2165,9 +2165,9 @@ module intellight_v2_QA_0_0_max4to1_16bit
   wire Droad2_6_sn_1;
   wire Droad2_7_sn_1;
   wire [47:0]Droad3;
-  wire [7:0]Q1;
-  wire [15:0]Q2;
-  wire [15:0]Q3;
+  wire [7:0]\Q[1] ;
+  wire [15:0]\Q[2] ;
+  wire [15:0]\Q[3] ;
   wire [15:15]Qmax;
   wire [3:0]S;
   wire __7_carry__0_i_1_n_0;
@@ -2311,486 +2311,6 @@ module intellight_v2_QA_0_0_max4to1_16bit
   assign Droad2_5_sp_1 = Droad2_5_sn_1;
   assign Droad2_6_sp_1 = Droad2_6_sn_1;
   assign Droad2_7_sp_1 = Droad2_7_sn_1;
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][0]_i_1 
-       (.I0(Droad2[0]),
-        .I1(Droad3[0]),
-        .I2(Droad0[0]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[0]),
-        .O(Droad2_0_sn_1));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][1]_i_1 
-       (.I0(Droad2[1]),
-        .I1(Droad3[1]),
-        .I2(Droad0[1]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[1]),
-        .O(Droad2_1_sn_1));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][2]_i_1 
-       (.I0(Droad2[2]),
-        .I1(Droad3[2]),
-        .I2(Droad0[2]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[2]),
-        .O(Droad2_2_sn_1));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][3]_i_1 
-       (.I0(Droad2[3]),
-        .I1(Droad3[3]),
-        .I2(Droad0[3]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[3]),
-        .O(Droad2_3_sn_1));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][4]_i_1 
-       (.I0(Droad2[4]),
-        .I1(Droad3[4]),
-        .I2(Droad0[4]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[4]),
-        .O(Droad2_4_sn_1));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][5]_i_1 
-       (.I0(Droad2[5]),
-        .I1(Droad3[5]),
-        .I2(Droad0[5]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[5]),
-        .O(Droad2_5_sn_1));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][6]_i_1 
-       (.I0(Droad2[6]),
-        .I1(Droad3[6]),
-        .I2(Droad0[6]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[6]),
-        .O(Droad2_6_sn_1));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[0][7]_i_1 
-       (.I0(Droad2[7]),
-        .I1(Droad3[7]),
-        .I2(Droad0[7]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[7]),
-        .O(Droad2_7_sn_1));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][0]_i_1 
-       (.I0(Droad2[8]),
-        .I1(Droad3[8]),
-        .I2(Droad0[8]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[8]),
-        .O(Q1[0]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][1]_i_1 
-       (.I0(Droad2[9]),
-        .I1(Droad3[9]),
-        .I2(Droad0[9]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[9]),
-        .O(Q1[1]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][2]_i_1 
-       (.I0(Droad2[10]),
-        .I1(Droad3[10]),
-        .I2(Droad0[10]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[10]),
-        .O(Q1[2]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][3]_i_1 
-       (.I0(Droad2[11]),
-        .I1(Droad3[11]),
-        .I2(Droad0[11]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[11]),
-        .O(Q1[3]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][4]_i_1 
-       (.I0(Droad2[12]),
-        .I1(Droad3[12]),
-        .I2(Droad0[12]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[12]),
-        .O(Q1[4]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][5]_i_1 
-       (.I0(Droad2[13]),
-        .I1(Droad3[13]),
-        .I2(Droad0[13]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[13]),
-        .O(Q1[5]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][6]_i_1 
-       (.I0(Droad2[14]),
-        .I1(Droad3[14]),
-        .I2(Droad0[14]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[14]),
-        .O(Q1[6]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[1][7]_i_1 
-       (.I0(Droad2[15]),
-        .I1(Droad3[15]),
-        .I2(Droad0[15]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[15]),
-        .O(Q1[7]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][0]_i_1 
-       (.I0(Droad2[16]),
-        .I1(Droad3[16]),
-        .I2(Droad0[16]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[16]),
-        .O(Q2[0]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][10]_i_1 
-       (.I0(Droad2[26]),
-        .I1(Droad3[26]),
-        .I2(Droad0[26]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[26]),
-        .O(Q2[10]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][11]_i_1 
-       (.I0(Droad2[27]),
-        .I1(Droad3[27]),
-        .I2(Droad0[27]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[27]),
-        .O(Q2[11]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][12]_i_1 
-       (.I0(Droad2[28]),
-        .I1(Droad3[28]),
-        .I2(Droad0[28]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[28]),
-        .O(Q2[12]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][13]_i_1 
-       (.I0(Droad2[29]),
-        .I1(Droad3[29]),
-        .I2(Droad0[29]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[29]),
-        .O(Q2[13]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][14]_i_1 
-       (.I0(Droad2[30]),
-        .I1(Droad3[30]),
-        .I2(Droad0[30]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[30]),
-        .O(Q2[14]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][15]_i_1 
-       (.I0(Droad2[31]),
-        .I1(Droad3[31]),
-        .I2(Droad0[31]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[31]),
-        .O(Q2[15]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][1]_i_1 
-       (.I0(Droad2[17]),
-        .I1(Droad3[17]),
-        .I2(Droad0[17]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[17]),
-        .O(Q2[1]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][2]_i_1 
-       (.I0(Droad2[18]),
-        .I1(Droad3[18]),
-        .I2(Droad0[18]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[18]),
-        .O(Q2[2]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][3]_i_1 
-       (.I0(Droad2[19]),
-        .I1(Droad3[19]),
-        .I2(Droad0[19]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[19]),
-        .O(Q2[3]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][4]_i_1 
-       (.I0(Droad2[20]),
-        .I1(Droad3[20]),
-        .I2(Droad0[20]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[20]),
-        .O(Q2[4]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][5]_i_1 
-       (.I0(Droad2[21]),
-        .I1(Droad3[21]),
-        .I2(Droad0[21]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[21]),
-        .O(Q2[5]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][6]_i_1 
-       (.I0(Droad2[22]),
-        .I1(Droad3[22]),
-        .I2(Droad0[22]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[22]),
-        .O(Q2[6]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][7]_i_1 
-       (.I0(Droad2[23]),
-        .I1(Droad3[23]),
-        .I2(Droad0[23]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[23]),
-        .O(Q2[7]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][8]_i_1 
-       (.I0(Droad2[24]),
-        .I1(Droad3[24]),
-        .I2(Droad0[24]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[24]),
-        .O(Q2[8]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[2][9]_i_1 
-       (.I0(Droad2[25]),
-        .I1(Droad3[25]),
-        .I2(Droad0[25]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[25]),
-        .O(Q2[9]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][0]_i_1 
-       (.I0(Droad2[32]),
-        .I1(Droad3[32]),
-        .I2(Droad0[32]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[32]),
-        .O(Q3[0]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][10]_i_1 
-       (.I0(Droad2[42]),
-        .I1(Droad3[42]),
-        .I2(Droad0[42]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[42]),
-        .O(Q3[10]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][11]_i_1 
-       (.I0(Droad2[43]),
-        .I1(Droad3[43]),
-        .I2(Droad0[43]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[43]),
-        .O(Q3[11]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][12]_i_1 
-       (.I0(Droad2[44]),
-        .I1(Droad3[44]),
-        .I2(Droad0[44]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[44]),
-        .O(Q3[12]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][13]_i_1 
-       (.I0(Droad2[45]),
-        .I1(Droad3[45]),
-        .I2(Droad0[45]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[45]),
-        .O(Q3[13]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][14]_i_1 
-       (.I0(Droad2[46]),
-        .I1(Droad3[46]),
-        .I2(Droad0[46]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[46]),
-        .O(Q3[14]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][15]_i_1 
-       (.I0(Droad2[47]),
-        .I1(Droad3[47]),
-        .I2(Droad0[47]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[47]),
-        .O(Q3[15]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][1]_i_1 
-       (.I0(Droad2[33]),
-        .I1(Droad3[33]),
-        .I2(Droad0[33]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[33]),
-        .O(Q3[1]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][2]_i_1 
-       (.I0(Droad2[34]),
-        .I1(Droad3[34]),
-        .I2(Droad0[34]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[34]),
-        .O(Q3[2]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][3]_i_1 
-       (.I0(Droad2[35]),
-        .I1(Droad3[35]),
-        .I2(Droad0[35]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[35]),
-        .O(Q3[3]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][4]_i_1 
-       (.I0(Droad2[36]),
-        .I1(Droad3[36]),
-        .I2(Droad0[36]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[36]),
-        .O(Q3[4]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][5]_i_1 
-       (.I0(Droad2[37]),
-        .I1(Droad3[37]),
-        .I2(Droad0[37]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[37]),
-        .O(Q3[5]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][6]_i_1 
-       (.I0(Droad2[38]),
-        .I1(Droad3[38]),
-        .I2(Droad0[38]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[38]),
-        .O(Q3[6]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][7]_i_1 
-       (.I0(Droad2[39]),
-        .I1(Droad3[39]),
-        .I2(Droad0[39]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[39]),
-        .O(Q3[7]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][8]_i_1 
-       (.I0(Droad2[40]),
-        .I1(Droad3[40]),
-        .I2(Droad0[40]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[40]),
-        .O(Q3[8]));
-  LUT6 #(
-    .INIT(64'hCCFFAAF0CC00AAF0)) 
-    \Q_reg0[3][9]_i_1 
-       (.I0(Droad2[41]),
-        .I1(Droad3[41]),
-        .I2(Droad0[41]),
-        .I3(A_road[1]),
-        .I4(A_road[0]),
-        .I5(Droad1[41]),
-        .O(Q3[9]));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 __7_carry
        (.CI(1'b0),
@@ -2898,9 +2418,9 @@ module intellight_v2_QA_0_0_max4to1_16bit
   LUT6 #(
     .INIT(64'h4700FF470000FF00)) 
     __7_carry_i_4
-       (.I0(Q2[0]),
+       (.I0(\Q[2] [0]),
         .I1(temp11),
-        .I2(Q3[0]),
+        .I2(\Q[3] [0]),
         .I3(Droad2_1_sn_1),
         .I4(temp1[1]),
         .I5(Droad2_0_sn_1),
@@ -2932,9 +2452,9 @@ module intellight_v2_QA_0_0_max4to1_16bit
   LUT6 #(
     .INIT(64'hB80000B847000047)) 
     __7_carry_i_8
-       (.I0(Q2[0]),
+       (.I0(\Q[2] [0]),
         .I1(temp11),
-        .I2(Q3[0]),
+        .I2(\Q[3] [0]),
         .I3(Droad2_1_sn_1),
         .I4(temp1[1]),
         .I5(Droad2_0_sn_1),
@@ -2967,57 +2487,57 @@ module intellight_v2_QA_0_0_max4to1_16bit
   LUT3 #(
     .INIT(8'hB8)) 
     _carry__0_i_10
-       (.I0(Q2[14]),
+       (.I0(\Q[2] [14]),
         .I1(temp11),
-        .I2(Q3[14]),
+        .I2(\Q[3] [14]),
         .O(temp1[14]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     _carry__0_i_11
-       (.I0(Q2[13]),
+       (.I0(\Q[2] [13]),
         .I1(temp11),
-        .I2(Q3[13]),
+        .I2(\Q[3] [13]),
         .O(temp1[13]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     _carry__0_i_12
-       (.I0(Q2[12]),
+       (.I0(\Q[2] [12]),
         .I1(temp11),
-        .I2(Q3[12]),
+        .I2(\Q[3] [12]),
         .O(temp1[12]));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     _carry__0_i_13
-       (.I0(Q2[11]),
+       (.I0(\Q[2] [11]),
         .I1(temp11),
-        .I2(Q3[11]),
+        .I2(\Q[3] [11]),
         .O(temp1[11]));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     _carry__0_i_14
-       (.I0(Q2[10]),
+       (.I0(\Q[2] [10]),
         .I1(temp11),
-        .I2(Q3[10]),
+        .I2(\Q[3] [10]),
         .O(temp1[10]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     _carry__0_i_15
-       (.I0(Q2[9]),
+       (.I0(\Q[2] [9]),
         .I1(temp11),
-        .I2(Q3[9]),
+        .I2(\Q[3] [9]),
         .O(temp1[9]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     _carry__0_i_16
-       (.I0(Q2[8]),
+       (.I0(\Q[2] [8]),
         .I1(temp11),
-        .I2(Q3[8]),
+        .I2(\Q[3] [8]),
         .O(temp1[8]));
   LUT4 #(
     .INIT(16'h22B2)) 
@@ -3079,133 +2599,613 @@ module intellight_v2_QA_0_0_max4to1_16bit
   LUT3 #(
     .INIT(8'hB8)) 
     _carry__0_i_9
-       (.I0(Q2[15]),
+       (.I0(\Q[2] [15]),
         .I1(temp11),
-        .I2(Q3[15]),
+        .I2(\Q[3] [15]),
         .O(temp1[15]));
   LUT4 #(
     .INIT(16'h22B2)) 
     _carry_i_1
-       (.I0(Q1[7]),
+       (.I0(\Q[1] [7]),
         .I1(temp1[7]),
-        .I2(Q1[6]),
+        .I2(\Q[1] [6]),
         .I3(temp1[6]),
         .O(_carry_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     _carry_i_10
-       (.I0(Q2[6]),
+       (.I0(\Q[2] [6]),
         .I1(temp11),
-        .I2(Q3[6]),
+        .I2(\Q[3] [6]),
         .O(temp1[6]));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     _carry_i_11
-       (.I0(Q2[5]),
+       (.I0(\Q[2] [5]),
         .I1(temp11),
-        .I2(Q3[5]),
+        .I2(\Q[3] [5]),
         .O(temp1[5]));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     _carry_i_12
-       (.I0(Q2[4]),
+       (.I0(\Q[2] [4]),
         .I1(temp11),
-        .I2(Q3[4]),
+        .I2(\Q[3] [4]),
         .O(temp1[4]));
   (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     _carry_i_13
-       (.I0(Q2[3]),
+       (.I0(\Q[2] [3]),
         .I1(temp11),
-        .I2(Q3[3]),
+        .I2(\Q[3] [3]),
         .O(temp1[3]));
   (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     _carry_i_14
-       (.I0(Q2[2]),
+       (.I0(\Q[2] [2]),
         .I1(temp11),
-        .I2(Q3[2]),
+        .I2(\Q[3] [2]),
         .O(temp1[2]));
   LUT3 #(
     .INIT(8'hB8)) 
     _carry_i_15
-       (.I0(Q2[1]),
+       (.I0(\Q[2] [1]),
         .I1(temp11),
-        .I2(Q3[1]),
+        .I2(\Q[3] [1]),
         .O(temp1[1]));
   LUT4 #(
     .INIT(16'h22B2)) 
     _carry_i_2
-       (.I0(Q1[5]),
+       (.I0(\Q[1] [5]),
         .I1(temp1[5]),
-        .I2(Q1[4]),
+        .I2(\Q[1] [4]),
         .I3(temp1[4]),
         .O(_carry_i_2_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
     _carry_i_3
-       (.I0(Q1[3]),
+       (.I0(\Q[1] [3]),
         .I1(temp1[3]),
-        .I2(Q1[2]),
+        .I2(\Q[1] [2]),
         .I3(temp1[2]),
         .O(_carry_i_3_n_0));
   LUT6 #(
     .INIT(64'h4700FF470000FF00)) 
     _carry_i_4
-       (.I0(Q2[0]),
+       (.I0(\Q[2] [0]),
         .I1(temp11),
-        .I2(Q3[0]),
-        .I3(Q1[1]),
+        .I2(\Q[3] [0]),
+        .I3(\Q[1] [1]),
         .I4(temp1[1]),
-        .I5(Q1[0]),
+        .I5(\Q[1] [0]),
         .O(_carry_i_4_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     _carry_i_5
        (.I0(temp1[6]),
-        .I1(Q1[6]),
-        .I2(Q1[7]),
+        .I1(\Q[1] [6]),
+        .I2(\Q[1] [7]),
         .I3(temp1[7]),
         .O(_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     _carry_i_6
        (.I0(temp1[4]),
-        .I1(Q1[4]),
-        .I2(Q1[5]),
+        .I1(\Q[1] [4]),
+        .I2(\Q[1] [5]),
         .I3(temp1[5]),
         .O(_carry_i_6_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     _carry_i_7
        (.I0(temp1[2]),
-        .I1(Q1[2]),
-        .I2(Q1[3]),
+        .I1(\Q[1] [2]),
+        .I2(\Q[1] [3]),
         .I3(temp1[3]),
         .O(_carry_i_7_n_0));
   LUT6 #(
     .INIT(64'hB84700000000B847)) 
     _carry_i_8
-       (.I0(Q2[0]),
+       (.I0(\Q[2] [0]),
         .I1(temp11),
-        .I2(Q3[0]),
-        .I3(Q1[0]),
-        .I4(Q1[1]),
+        .I2(\Q[3] [0]),
+        .I3(\Q[1] [0]),
+        .I4(\Q[1] [1]),
         .I5(temp1[1]),
         .O(_carry_i_8_n_0));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     _carry_i_9
-       (.I0(Q2[7]),
+       (.I0(\Q[2] [7]),
         .I1(temp11),
-        .I2(Q3[7]),
+        .I2(\Q[3] [7]),
         .O(temp1[7]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][0]_i_1 
+       (.I0(Droad2[0]),
+        .I1(Droad3[0]),
+        .I2(Droad0[0]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[0]),
+        .O(Droad2_0_sn_1));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][1]_i_1 
+       (.I0(Droad2[1]),
+        .I1(Droad3[1]),
+        .I2(Droad0[1]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[1]),
+        .O(Droad2_1_sn_1));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][2]_i_1 
+       (.I0(Droad2[2]),
+        .I1(Droad3[2]),
+        .I2(Droad0[2]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[2]),
+        .O(Droad2_2_sn_1));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][3]_i_1 
+       (.I0(Droad2[3]),
+        .I1(Droad3[3]),
+        .I2(Droad0[3]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[3]),
+        .O(Droad2_3_sn_1));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][4]_i_1 
+       (.I0(Droad2[4]),
+        .I1(Droad3[4]),
+        .I2(Droad0[4]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[4]),
+        .O(Droad2_4_sn_1));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][5]_i_1 
+       (.I0(Droad2[5]),
+        .I1(Droad3[5]),
+        .I2(Droad0[5]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[5]),
+        .O(Droad2_5_sn_1));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][6]_i_1 
+       (.I0(Droad2[6]),
+        .I1(Droad3[6]),
+        .I2(Droad0[6]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[6]),
+        .O(Droad2_6_sn_1));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[0].Q_reg0[0][7]_i_1 
+       (.I0(Droad2[7]),
+        .I1(Droad3[7]),
+        .I2(Droad0[7]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[7]),
+        .O(Droad2_7_sn_1));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][0]_i_1 
+       (.I0(Droad2[8]),
+        .I1(Droad3[8]),
+        .I2(Droad0[8]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[8]),
+        .O(\Q[1] [0]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][1]_i_1 
+       (.I0(Droad2[9]),
+        .I1(Droad3[9]),
+        .I2(Droad0[9]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[9]),
+        .O(\Q[1] [1]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][2]_i_1 
+       (.I0(Droad2[10]),
+        .I1(Droad3[10]),
+        .I2(Droad0[10]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[10]),
+        .O(\Q[1] [2]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][3]_i_1 
+       (.I0(Droad2[11]),
+        .I1(Droad3[11]),
+        .I2(Droad0[11]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[11]),
+        .O(\Q[1] [3]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][4]_i_1 
+       (.I0(Droad2[12]),
+        .I1(Droad3[12]),
+        .I2(Droad0[12]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[12]),
+        .O(\Q[1] [4]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][5]_i_1 
+       (.I0(Droad2[13]),
+        .I1(Droad3[13]),
+        .I2(Droad0[13]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[13]),
+        .O(\Q[1] [5]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][6]_i_1 
+       (.I0(Droad2[14]),
+        .I1(Droad3[14]),
+        .I2(Droad0[14]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[14]),
+        .O(\Q[1] [6]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[1].Q_reg0[1][7]_i_1 
+       (.I0(Droad2[15]),
+        .I1(Droad3[15]),
+        .I2(Droad0[15]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[15]),
+        .O(\Q[1] [7]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][0]_i_1 
+       (.I0(Droad2[16]),
+        .I1(Droad3[16]),
+        .I2(Droad0[16]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[16]),
+        .O(\Q[2] [0]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][10]_i_1 
+       (.I0(Droad2[26]),
+        .I1(Droad3[26]),
+        .I2(Droad0[26]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[26]),
+        .O(\Q[2] [10]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][11]_i_1 
+       (.I0(Droad2[27]),
+        .I1(Droad3[27]),
+        .I2(Droad0[27]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[27]),
+        .O(\Q[2] [11]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][12]_i_1 
+       (.I0(Droad2[28]),
+        .I1(Droad3[28]),
+        .I2(Droad0[28]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[28]),
+        .O(\Q[2] [12]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][13]_i_1 
+       (.I0(Droad2[29]),
+        .I1(Droad3[29]),
+        .I2(Droad0[29]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[29]),
+        .O(\Q[2] [13]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][14]_i_1 
+       (.I0(Droad2[30]),
+        .I1(Droad3[30]),
+        .I2(Droad0[30]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[30]),
+        .O(\Q[2] [14]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][15]_i_1 
+       (.I0(Droad2[31]),
+        .I1(Droad3[31]),
+        .I2(Droad0[31]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[31]),
+        .O(\Q[2] [15]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][1]_i_1 
+       (.I0(Droad2[17]),
+        .I1(Droad3[17]),
+        .I2(Droad0[17]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[17]),
+        .O(\Q[2] [1]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][2]_i_1 
+       (.I0(Droad2[18]),
+        .I1(Droad3[18]),
+        .I2(Droad0[18]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[18]),
+        .O(\Q[2] [2]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][3]_i_1 
+       (.I0(Droad2[19]),
+        .I1(Droad3[19]),
+        .I2(Droad0[19]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[19]),
+        .O(\Q[2] [3]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][4]_i_1 
+       (.I0(Droad2[20]),
+        .I1(Droad3[20]),
+        .I2(Droad0[20]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[20]),
+        .O(\Q[2] [4]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][5]_i_1 
+       (.I0(Droad2[21]),
+        .I1(Droad3[21]),
+        .I2(Droad0[21]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[21]),
+        .O(\Q[2] [5]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][6]_i_1 
+       (.I0(Droad2[22]),
+        .I1(Droad3[22]),
+        .I2(Droad0[22]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[22]),
+        .O(\Q[2] [6]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][7]_i_1 
+       (.I0(Droad2[23]),
+        .I1(Droad3[23]),
+        .I2(Droad0[23]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[23]),
+        .O(\Q[2] [7]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][8]_i_1 
+       (.I0(Droad2[24]),
+        .I1(Droad3[24]),
+        .I2(Droad0[24]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[24]),
+        .O(\Q[2] [8]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[2].Q_reg0[2][9]_i_1 
+       (.I0(Droad2[25]),
+        .I1(Droad3[25]),
+        .I2(Droad0[25]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[25]),
+        .O(\Q[2] [9]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][0]_i_1 
+       (.I0(Droad2[32]),
+        .I1(Droad3[32]),
+        .I2(Droad0[32]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[32]),
+        .O(\Q[3] [0]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][10]_i_1 
+       (.I0(Droad2[42]),
+        .I1(Droad3[42]),
+        .I2(Droad0[42]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[42]),
+        .O(\Q[3] [10]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][11]_i_1 
+       (.I0(Droad2[43]),
+        .I1(Droad3[43]),
+        .I2(Droad0[43]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[43]),
+        .O(\Q[3] [11]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][12]_i_1 
+       (.I0(Droad2[44]),
+        .I1(Droad3[44]),
+        .I2(Droad0[44]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[44]),
+        .O(\Q[3] [12]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][13]_i_1 
+       (.I0(Droad2[45]),
+        .I1(Droad3[45]),
+        .I2(Droad0[45]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[45]),
+        .O(\Q[3] [13]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][14]_i_1 
+       (.I0(Droad2[46]),
+        .I1(Droad3[46]),
+        .I2(Droad0[46]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[46]),
+        .O(\Q[3] [14]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][15]_i_1 
+       (.I0(Droad2[47]),
+        .I1(Droad3[47]),
+        .I2(Droad0[47]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[47]),
+        .O(\Q[3] [15]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][1]_i_1 
+       (.I0(Droad2[33]),
+        .I1(Droad3[33]),
+        .I2(Droad0[33]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[33]),
+        .O(\Q[3] [1]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][2]_i_1 
+       (.I0(Droad2[34]),
+        .I1(Droad3[34]),
+        .I2(Droad0[34]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[34]),
+        .O(\Q[3] [2]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][3]_i_1 
+       (.I0(Droad2[35]),
+        .I1(Droad3[35]),
+        .I2(Droad0[35]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[35]),
+        .O(\Q[3] [3]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][4]_i_1 
+       (.I0(Droad2[36]),
+        .I1(Droad3[36]),
+        .I2(Droad0[36]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[36]),
+        .O(\Q[3] [4]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][5]_i_1 
+       (.I0(Droad2[37]),
+        .I1(Droad3[37]),
+        .I2(Droad0[37]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[37]),
+        .O(\Q[3] [5]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][6]_i_1 
+       (.I0(Droad2[38]),
+        .I1(Droad3[38]),
+        .I2(Droad0[38]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[38]),
+        .O(\Q[3] [6]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][7]_i_1 
+       (.I0(Droad2[39]),
+        .I1(Droad3[39]),
+        .I2(Droad0[39]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[39]),
+        .O(\Q[3] [7]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][8]_i_1 
+       (.I0(Droad2[40]),
+        .I1(Droad3[40]),
+        .I2(Droad0[40]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[40]),
+        .O(\Q[3] [8]));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \genblk1[3].Q_reg0[3][9]_i_1 
+       (.I0(Droad2[41]),
+        .I1(Droad3[41]),
+        .I2(Droad0[41]),
+        .I3(A_road[1]),
+        .I4(A_road[0]),
+        .I5(Droad1[41]),
+        .O(\Q[3] [9]));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 temp01_carry
        (.CI(1'b0),
@@ -3226,65 +3226,65 @@ module intellight_v2_QA_0_0_max4to1_16bit
     .INIT(16'h30B2)) 
     temp01_carry_i_1
        (.I0(Droad2_6_sn_1),
-        .I1(Q1[7]),
+        .I1(\Q[1] [7]),
         .I2(Droad2_7_sn_1),
-        .I3(Q1[6]),
+        .I3(\Q[1] [6]),
         .O(temp01_carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h30B2)) 
     temp01_carry_i_2
        (.I0(Droad2_4_sn_1),
-        .I1(Q1[5]),
+        .I1(\Q[1] [5]),
         .I2(Droad2_5_sn_1),
-        .I3(Q1[4]),
+        .I3(\Q[1] [4]),
         .O(temp01_carry_i_2_n_0));
   LUT4 #(
     .INIT(16'h30B2)) 
     temp01_carry_i_3
        (.I0(Droad2_2_sn_1),
-        .I1(Q1[3]),
+        .I1(\Q[1] [3]),
         .I2(Droad2_3_sn_1),
-        .I3(Q1[2]),
+        .I3(\Q[1] [2]),
         .O(temp01_carry_i_3_n_0));
   LUT4 #(
     .INIT(16'h30B2)) 
     temp01_carry_i_4
        (.I0(Droad2_0_sn_1),
-        .I1(Q1[1]),
+        .I1(\Q[1] [1]),
         .I2(Droad2_1_sn_1),
-        .I3(Q1[0]),
+        .I3(\Q[1] [0]),
         .O(temp01_carry_i_4_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp01_carry_i_5
        (.I0(Droad2_7_sn_1),
-        .I1(Q1[6]),
+        .I1(\Q[1] [6]),
         .I2(Droad2_6_sn_1),
-        .I3(Q1[7]),
+        .I3(\Q[1] [7]),
         .O(temp01_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp01_carry_i_6
        (.I0(Droad2_5_sn_1),
-        .I1(Q1[4]),
+        .I1(\Q[1] [4]),
         .I2(Droad2_4_sn_1),
-        .I3(Q1[5]),
+        .I3(\Q[1] [5]),
         .O(temp01_carry_i_6_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp01_carry_i_7
        (.I0(Droad2_3_sn_1),
-        .I1(Q1[2]),
+        .I1(\Q[1] [2]),
         .I2(Droad2_2_sn_1),
-        .I3(Q1[3]),
+        .I3(\Q[1] [3]),
         .O(temp01_carry_i_7_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp01_carry_i_8
        (.I0(Droad2_1_sn_1),
-        .I1(Q1[0]),
+        .I1(\Q[1] [0]),
         .I2(Droad2_0_sn_1),
-        .I3(Q1[1]),
+        .I3(\Q[1] [1]),
         .O(temp01_carry_i_8_n_0));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 temp11_carry
@@ -3305,130 +3305,130 @@ module intellight_v2_QA_0_0_max4to1_16bit
   LUT4 #(
     .INIT(16'h4F04)) 
     temp11_carry__0_i_1
-       (.I0(Q3[14]),
-        .I1(Q2[14]),
-        .I2(Q2[15]),
-        .I3(Q3[15]),
+       (.I0(\Q[3] [14]),
+        .I1(\Q[2] [14]),
+        .I2(\Q[2] [15]),
+        .I3(\Q[3] [15]),
         .O(temp11_carry__0_i_1_n_0));
   LUT4 #(
     .INIT(16'h4F04)) 
     temp11_carry__0_i_2
-       (.I0(Q3[12]),
-        .I1(Q2[12]),
-        .I2(Q3[13]),
-        .I3(Q2[13]),
+       (.I0(\Q[3] [12]),
+        .I1(\Q[2] [12]),
+        .I2(\Q[3] [13]),
+        .I3(\Q[2] [13]),
         .O(temp11_carry__0_i_2_n_0));
   LUT4 #(
     .INIT(16'h4F04)) 
     temp11_carry__0_i_3
-       (.I0(Q3[10]),
-        .I1(Q2[10]),
-        .I2(Q3[11]),
-        .I3(Q2[11]),
+       (.I0(\Q[3] [10]),
+        .I1(\Q[2] [10]),
+        .I2(\Q[3] [11]),
+        .I3(\Q[2] [11]),
         .O(temp11_carry__0_i_3_n_0));
   LUT4 #(
     .INIT(16'h4F04)) 
     temp11_carry__0_i_4
-       (.I0(Q3[8]),
-        .I1(Q2[8]),
-        .I2(Q3[9]),
-        .I3(Q2[9]),
+       (.I0(\Q[3] [8]),
+        .I1(\Q[2] [8]),
+        .I2(\Q[3] [9]),
+        .I3(\Q[2] [9]),
         .O(temp11_carry__0_i_4_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp11_carry__0_i_5
-       (.I0(Q2[15]),
-        .I1(Q2[14]),
-        .I2(Q3[14]),
-        .I3(Q3[15]),
+       (.I0(\Q[2] [15]),
+        .I1(\Q[2] [14]),
+        .I2(\Q[3] [14]),
+        .I3(\Q[3] [15]),
         .O(temp11_carry__0_i_5_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp11_carry__0_i_6
-       (.I0(Q3[13]),
-        .I1(Q2[12]),
-        .I2(Q3[12]),
-        .I3(Q2[13]),
+       (.I0(\Q[3] [13]),
+        .I1(\Q[2] [12]),
+        .I2(\Q[3] [12]),
+        .I3(\Q[2] [13]),
         .O(temp11_carry__0_i_6_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp11_carry__0_i_7
-       (.I0(Q3[11]),
-        .I1(Q2[10]),
-        .I2(Q3[10]),
-        .I3(Q2[11]),
+       (.I0(\Q[3] [11]),
+        .I1(\Q[2] [10]),
+        .I2(\Q[3] [10]),
+        .I3(\Q[2] [11]),
         .O(temp11_carry__0_i_7_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp11_carry__0_i_8
-       (.I0(Q3[9]),
-        .I1(Q2[8]),
-        .I2(Q3[8]),
-        .I3(Q2[9]),
+       (.I0(\Q[3] [9]),
+        .I1(\Q[2] [8]),
+        .I2(\Q[3] [8]),
+        .I3(\Q[2] [9]),
         .O(temp11_carry__0_i_8_n_0));
   LUT4 #(
     .INIT(16'h4F04)) 
     temp11_carry_i_1
-       (.I0(Q3[6]),
-        .I1(Q2[6]),
-        .I2(Q3[7]),
-        .I3(Q2[7]),
+       (.I0(\Q[3] [6]),
+        .I1(\Q[2] [6]),
+        .I2(\Q[3] [7]),
+        .I3(\Q[2] [7]),
         .O(temp11_carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h4F04)) 
     temp11_carry_i_2
-       (.I0(Q3[4]),
-        .I1(Q2[4]),
-        .I2(Q3[5]),
-        .I3(Q2[5]),
+       (.I0(\Q[3] [4]),
+        .I1(\Q[2] [4]),
+        .I2(\Q[3] [5]),
+        .I3(\Q[2] [5]),
         .O(temp11_carry_i_2_n_0));
   LUT4 #(
     .INIT(16'h4F04)) 
     temp11_carry_i_3
-       (.I0(Q3[2]),
-        .I1(Q2[2]),
-        .I2(Q3[3]),
-        .I3(Q2[3]),
+       (.I0(\Q[3] [2]),
+        .I1(\Q[2] [2]),
+        .I2(\Q[3] [3]),
+        .I3(\Q[2] [3]),
         .O(temp11_carry_i_3_n_0));
   LUT4 #(
     .INIT(16'h4F04)) 
     temp11_carry_i_4
-       (.I0(Q3[0]),
-        .I1(Q2[0]),
-        .I2(Q3[1]),
-        .I3(Q2[1]),
+       (.I0(\Q[3] [0]),
+        .I1(\Q[2] [0]),
+        .I2(\Q[3] [1]),
+        .I3(\Q[2] [1]),
         .O(temp11_carry_i_4_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp11_carry_i_5
-       (.I0(Q3[7]),
-        .I1(Q2[6]),
-        .I2(Q3[6]),
-        .I3(Q2[7]),
+       (.I0(\Q[3] [7]),
+        .I1(\Q[2] [6]),
+        .I2(\Q[3] [6]),
+        .I3(\Q[2] [7]),
         .O(temp11_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp11_carry_i_6
-       (.I0(Q3[5]),
-        .I1(Q2[4]),
-        .I2(Q3[4]),
-        .I3(Q2[5]),
+       (.I0(\Q[3] [5]),
+        .I1(\Q[2] [4]),
+        .I2(\Q[3] [4]),
+        .I3(\Q[2] [5]),
         .O(temp11_carry_i_6_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp11_carry_i_7
-       (.I0(Q3[3]),
-        .I1(Q2[2]),
-        .I2(Q3[2]),
-        .I3(Q2[3]),
+       (.I0(\Q[3] [3]),
+        .I1(\Q[2] [2]),
+        .I2(\Q[3] [2]),
+        .I3(\Q[2] [3]),
         .O(temp11_carry_i_7_n_0));
   LUT4 #(
     .INIT(16'h8241)) 
     temp11_carry_i_8
-       (.I0(Q3[1]),
-        .I1(Q2[0]),
-        .I2(Q3[0]),
-        .I3(Q2[1]),
+       (.I0(\Q[3] [1]),
+        .I1(\Q[2] [0]),
+        .I2(\Q[3] [0]),
+        .I3(\Q[2] [1]),
         .O(temp11_carry_i_8_n_0));
   LUT6 #(
     .INIT(64'hF880808088000000)) 
@@ -3465,7 +3465,7 @@ module intellight_v2_QA_0_0_max4to1_16bit
     x__0_carry__0_i_12
        (.I0(p_0_in),
         .I1(temp1[6]),
-        .I2(Q1[6]),
+        .I2(\Q[1] [6]),
         .I3(Droad2_6_sn_1),
         .I4(temp01),
         .I5(p_1_in),
@@ -3569,7 +3569,7 @@ module intellight_v2_QA_0_0_max4to1_16bit
     x__0_carry__0_i_9
        (.I0(p_0_in),
         .I1(temp1[7]),
-        .I2(Q1[7]),
+        .I2(\Q[1] [7]),
         .I3(Droad2_7_sn_1),
         .I4(temp01),
         .I5(p_1_in),
@@ -3824,7 +3824,7 @@ module intellight_v2_QA_0_0_max4to1_16bit
     x__0_carry_i_10
        (.I0(p_0_in),
         .I1(temp1[4]),
-        .I2(Q1[4]),
+        .I2(\Q[1] [4]),
         .I3(Droad2_4_sn_1),
         .I4(temp01),
         .I5(p_1_in),
@@ -3834,7 +3834,7 @@ module intellight_v2_QA_0_0_max4to1_16bit
     x__0_carry_i_11
        (.I0(p_0_in),
         .I1(temp1[2]),
-        .I2(Q1[2]),
+        .I2(\Q[1] [2]),
         .I3(Droad2_2_sn_1),
         .I4(temp01),
         .I5(p_1_in),
@@ -3846,7 +3846,7 @@ module intellight_v2_QA_0_0_max4to1_16bit
         .I1(x__0_carry_i_16_n_0),
         .I2(temp1[1]),
         .I3(x__0_carry_i_17_n_0),
-        .I4(Q1[1]),
+        .I4(\Q[1] [1]),
         .I5(x__0_carry_i_18_n_0),
         .O(x__0_carry_i_12_n_0));
   LUT6 #(
@@ -3957,7 +3957,7 @@ module intellight_v2_QA_0_0_max4to1_16bit
     x__0_carry_i_8
        (.I0(p_0_in),
         .I1(temp1[3]),
-        .I2(Q1[3]),
+        .I2(\Q[1] [3]),
         .I3(Droad2_3_sn_1),
         .I4(temp01),
         .I5(p_1_in),
@@ -3967,7 +3967,7 @@ module intellight_v2_QA_0_0_max4to1_16bit
     x__0_carry_i_9
        (.I0(p_0_in),
         .I1(temp1[5]),
-        .I2(Q1[5]),
+        .I2(\Q[1] [5]),
         .I3(Droad2_5_sn_1),
         .I4(temp01),
         .I5(p_1_in),
@@ -4556,187 +4556,187 @@ module intellight_v2_QA_0_0_multiply
         .O(\Qsel_reg1_reg[3] [0]));
 endmodule
 
-(* ORIG_REF_NAME = "mux4to1_16bit" *) 
-module intellight_v2_QA_0_0_mux4to1_16bit
+(* ORIG_REF_NAME = "mux4to1" *) 
+module intellight_v2_QA_0_0_mux4to1
    (Qsel,
-    \Q_reg1_reg[1] ,
-    \Q_reg1_reg[0] ,
-    \Q_reg1_reg[3] ,
+    \genblk1[1].Q_reg1_reg[1] ,
+    \genblk1[0].Q_reg1_reg[0] ,
+    \genblk1[3].Q_reg1_reg[3] ,
     Q,
-    \Q_reg1_reg[2] );
+    \genblk1[2].Q_reg1_reg[2] );
   output [15:0]Qsel;
-  input [15:0]\Q_reg1_reg[1] ;
-  input [15:0]\Q_reg1_reg[0] ;
-  input [15:0]\Q_reg1_reg[3] ;
+  input [15:0]\genblk1[1].Q_reg1_reg[1] ;
+  input [15:0]\genblk1[0].Q_reg1_reg[0] ;
+  input [15:0]\genblk1[3].Q_reg1_reg[3] ;
   input [1:0]Q;
-  input [15:0]\Q_reg1_reg[2] ;
+  input [15:0]\genblk1[2].Q_reg1_reg[2] ;
 
   wire [1:0]Q;
-  wire [15:0]\Q_reg1_reg[0] ;
-  wire [15:0]\Q_reg1_reg[1] ;
-  wire [15:0]\Q_reg1_reg[2] ;
-  wire [15:0]\Q_reg1_reg[3] ;
   wire [15:0]Qsel;
+  wire [15:0]\genblk1[0].Q_reg1_reg[0] ;
+  wire [15:0]\genblk1[1].Q_reg1_reg[1] ;
+  wire [15:0]\genblk1[2].Q_reg1_reg[2] ;
+  wire [15:0]\genblk1[3].Q_reg1_reg[3] ;
 
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[0]_i_1 
-       (.I0(\Q_reg1_reg[1] [0]),
-        .I1(\Q_reg1_reg[0] [0]),
-        .I2(\Q_reg1_reg[3] [0]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [0]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [0]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [0]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [0]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [0]),
         .O(Qsel[0]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[10]_i_1 
-       (.I0(\Q_reg1_reg[1] [10]),
-        .I1(\Q_reg1_reg[0] [10]),
-        .I2(\Q_reg1_reg[3] [10]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [10]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [10]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [10]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [10]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [10]),
         .O(Qsel[10]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[11]_i_1 
-       (.I0(\Q_reg1_reg[1] [11]),
-        .I1(\Q_reg1_reg[0] [11]),
-        .I2(\Q_reg1_reg[3] [11]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [11]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [11]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [11]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [11]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [11]),
         .O(Qsel[11]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[12]_i_1 
-       (.I0(\Q_reg1_reg[1] [12]),
-        .I1(\Q_reg1_reg[0] [12]),
-        .I2(\Q_reg1_reg[3] [12]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [12]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [12]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [12]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [12]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [12]),
         .O(Qsel[12]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[13]_i_1 
-       (.I0(\Q_reg1_reg[1] [13]),
-        .I1(\Q_reg1_reg[0] [13]),
-        .I2(\Q_reg1_reg[3] [13]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [13]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [13]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [13]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [13]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [13]),
         .O(Qsel[13]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[14]_i_1 
-       (.I0(\Q_reg1_reg[1] [14]),
-        .I1(\Q_reg1_reg[0] [14]),
-        .I2(\Q_reg1_reg[3] [14]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [14]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [14]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [14]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [14]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [14]),
         .O(Qsel[14]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[15]_i_1 
-       (.I0(\Q_reg1_reg[1] [15]),
-        .I1(\Q_reg1_reg[0] [15]),
-        .I2(\Q_reg1_reg[3] [15]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [15]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [15]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [15]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [15]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [15]),
         .O(Qsel[15]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[1]_i_1 
-       (.I0(\Q_reg1_reg[1] [1]),
-        .I1(\Q_reg1_reg[0] [1]),
-        .I2(\Q_reg1_reg[3] [1]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [1]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [1]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [1]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [1]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [1]),
         .O(Qsel[1]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[2]_i_1 
-       (.I0(\Q_reg1_reg[1] [2]),
-        .I1(\Q_reg1_reg[0] [2]),
-        .I2(\Q_reg1_reg[3] [2]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [2]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [2]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [2]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [2]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [2]),
         .O(Qsel[2]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[3]_i_1 
-       (.I0(\Q_reg1_reg[1] [3]),
-        .I1(\Q_reg1_reg[0] [3]),
-        .I2(\Q_reg1_reg[3] [3]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [3]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [3]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [3]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [3]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [3]),
         .O(Qsel[3]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[4]_i_1 
-       (.I0(\Q_reg1_reg[1] [4]),
-        .I1(\Q_reg1_reg[0] [4]),
-        .I2(\Q_reg1_reg[3] [4]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [4]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [4]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [4]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [4]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [4]),
         .O(Qsel[4]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[5]_i_1 
-       (.I0(\Q_reg1_reg[1] [5]),
-        .I1(\Q_reg1_reg[0] [5]),
-        .I2(\Q_reg1_reg[3] [5]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [5]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [5]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [5]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [5]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [5]),
         .O(Qsel[5]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[6]_i_1 
-       (.I0(\Q_reg1_reg[1] [6]),
-        .I1(\Q_reg1_reg[0] [6]),
-        .I2(\Q_reg1_reg[3] [6]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [6]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [6]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [6]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [6]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [6]),
         .O(Qsel[6]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[7]_i_1 
-       (.I0(\Q_reg1_reg[1] [7]),
-        .I1(\Q_reg1_reg[0] [7]),
-        .I2(\Q_reg1_reg[3] [7]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [7]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [7]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [7]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [7]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [7]),
         .O(Qsel[7]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[8]_i_1 
-       (.I0(\Q_reg1_reg[1] [8]),
-        .I1(\Q_reg1_reg[0] [8]),
-        .I2(\Q_reg1_reg[3] [8]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [8]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [8]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [8]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [8]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [8]),
         .O(Qsel[8]));
   LUT6 #(
     .INIT(64'hF0FFAACCF000AACC)) 
     \Qsel_reg0[9]_i_1 
-       (.I0(\Q_reg1_reg[1] [9]),
-        .I1(\Q_reg1_reg[0] [9]),
-        .I2(\Q_reg1_reg[3] [9]),
+       (.I0(\genblk1[1].Q_reg1_reg[1] [9]),
+        .I1(\genblk1[0].Q_reg1_reg[0] [9]),
+        .I2(\genblk1[3].Q_reg1_reg[3] [9]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\Q_reg1_reg[2] [9]),
+        .I5(\genblk1[2].Q_reg1_reg[2] [9]),
         .O(Qsel[9]));
 endmodule
 `ifndef GLBL

@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Mon Oct 31 17:28:15 2022
+//Date        : Tue Nov  1 18:23:13 2022
 //Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 //Command     : generate_target intellight_v2_wrapper.bd
 //Design      : intellight_v2_wrapper
@@ -31,6 +31,7 @@ module intellight_v2_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    finish,
     idle,
     wen0,
     wen1,
@@ -57,6 +58,7 @@ module intellight_v2_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  output finish;
   output idle;
   output wen0;
   output wen1;
@@ -84,6 +86,7 @@ module intellight_v2_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire finish;
   wire idle;
   wire wen0;
   wire wen1;
@@ -112,6 +115,7 @@ module intellight_v2_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .finish(finish),
         .idle(idle),
         .wen0(wen0),
         .wen1(wen1),

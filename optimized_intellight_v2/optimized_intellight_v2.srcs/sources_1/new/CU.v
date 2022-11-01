@@ -11,7 +11,6 @@
 
 module CU // verified
 #(  parameter integer R_WIDTH = 16,
-    parameter integer RND_WIDTH = 16,
     parameter integer CTR_WIDTH = 16
     )
 (
@@ -19,7 +18,7 @@ module CU // verified
     // From Processing System 
     input wire [CTR_WIDTH-1:0] max_step,
     input wire [CTR_WIDTH-1:0] max_episode,
-    input wire [RND_WIDTH-1:0] seed,
+    input wire [15:0] seed,
     // Output for Policy Generator 
     output reg A_sel,
     // Control Signal
@@ -66,8 +65,8 @@ module CU // verified
     reg [4:0] cs;
     reg [CTR_WIDTH-1:0] epsilon;
     // Variables for generating random number 
-    wire [RND_WIDTH-1:0] o_lsfr;
-    lsfr_16bit rand(.clk(clk), .rst(rst), .seed(seed), .out0(o_lsfr));
+    wire [15:0] o_lsfr;
+    lfsr #(.DATA_WIDTH(16)) rand(.clk(clk), .rst(rst), .seed(seed), .out0(o_lsfr));
     
     // Reset handler
     always@(posedge clk) begin 

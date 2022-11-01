@@ -13,27 +13,31 @@ module MII
 #(  parameter integer L_WIDTH = 4,
     parameter integer Q_WIDTH = 16,
     parameter integer R_WIDTH = 16,
-    parameter integer WEN_WIDTH = 8,
     parameter integer ADDR_WIDTH = 32
     )
 (
     input wire clk, rst, 
-    input wire [(2 + L_WIDTH/2)-1:0] A,
+    input wire [(L_WIDTH/2 + 2)-1:0] A,
     input wire [Q_WIDTH-1:0] Q_new,
     input wire [2*L_WIDTH-1:0] S,
-    input wire [4*Q_WIDTH-1:0] Droad0, Droad1, Droad2, Droad3,
+    input wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0] Droad0, Droad1, Droad2, Droad3,
     input wire [1:0] A_road,
     input wire wen_cu,
     output wire[ADDR_WIDTH-1:0] rd_addr,
     output reg [ADDR_WIDTH-1:0] wr_addr,
-    output reg [WEN_WIDTH-1:0] wen_bram,
-    output wire[4*Q_WIDTH-1:0] D_new,
+    output reg [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0] wen_bram,
+    output wire[Q_WIDTH*(2**(L_WIDTH/2))-1:0] D_new,
     output reg wen0, wen1, wen2, wen3
     // for debugging
 //    output wire [A_WIDTH-1:0] A_reg0, A_reg1, A_reg2, A_reg3, A_reg4, A_reg5
     );
     localparam S_WIDTH = 2*L_WIDTH;
-    localparam A_WIDTH = 2 + L_WIDTH/2;
+    localparam D_WIDTH  = Q_WIDTH*(2**(L_WIDTH/2));
+    localparam WEN_WIDTH = D_WIDTH/8;
+    localparam  A_ROAD_WIDTH    = 2,
+                A_DUR_WIDTH     = L_WIDTH/2,
+                A_WIDTH         = A_ROAD_WIDTH + A_DUR_WIDTH;
+    localparam  N_LEVEL = 2**(L_WIDTH/2);
     
     // 1. Address configuration
     reg [S_WIDTH-1:0] S_reg0, S_reg1, S_reg2, S_reg3, S_reg4, S_reg5, S_reg6, S_reg7;
@@ -65,7 +69,7 @@ module MII
     
     // 3. Write-Enable Configuration
     wire [WEN_WIDTH-1:0] wen_bram_temp;
-    wen_decoder #(.WEN_WIDTH(WEN_WIDTH), .L_WIDTH(L_WIDTH)) decod0 
+    wen_decoder #(.L_WIDTH(L_WIDTH)) decod0 
                  (.A(A_reg[1]), .wen(wen_bram_temp));
                  
     always @(posedge clk) begin
@@ -84,12 +88,12 @@ module MII
     end
     
     // 5. Data Configuration 
-    wire [Q_WIDTH*4-1:0] D;
+    wire [Q_WIDTH*2*$clog2(L_WIDTH)-1:0] D;
     assign D = (A_road==2'd0)? Droad0:
                (A_road==2'd1)? Droad1: 
                (A_road==2'd2)? Droad2: 
                (A_road==2'd3)? Droad3: {Q_WIDTH*4{1'bx}};
-    reg [Q_WIDTH*4-1:0] D_reg [0:3];
+    reg [Q_WIDTH*2*$clog2(L_WIDTH)-1:0] D_reg [0:3];
     always @(posedge clk) begin
         D_reg[3] = D_reg[2];
         D_reg[2] = D_reg[1];
@@ -109,18 +113,26 @@ module MII
 endmodule
 
 module wen_decoder
-#(  parameter integer WEN_WIDTH = 8,
+#(  parameter integer Q_WIDTH = 16,
     parameter integer L_WIDTH = 4
     )(
-    input wire  [(2 + L_WIDTH/2)-1:0] A,
-    output wire [WEN_WIDTH-1:0] wen
+    input wire  [(L_WIDTH/2 + 2)-1:0] A,
+    output wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0] wen
     );
-    localparam A_WIDTH = 2 + L_WIDTH/2;
-    assign wen = ((A[A_WIDTH/2-1:0]==2'd0))? 8'b0000_0011:
-                 ((A[A_WIDTH/2-1:0]==2'd1))? 8'b0000_1100:
-                 ((A[A_WIDTH/2-1:0]==2'd2))? 8'b0011_0000:
-                 ((A[A_WIDTH/2-1:0]==2'd3))? 8'b1100_0000:
-                                             8'b0000_0000;
+    localparam  A_ROAD_WIDTH    = 2,
+                A_DUR_WIDTH     = L_WIDTH/2,
+                A_WIDTH         = A_ROAD_WIDTH + A_DUR_WIDTH,
+                D_WIDTH         = Q_WIDTH*(2**(L_WIDTH/2)),
+                WEN_WIDTH       = D_WIDTH/8,
+                N_LEVEL         = 2**(L_WIDTH/2);
+    wire [A_DUR_WIDTH-1:0] A_dur;
+    assign A_dur = A[A_WIDTH-1:A_ROAD_WIDTH];
+    assign wen = ({(Q_WIDTH/8){1'b1}}<<A_dur) | ({WEN_WIDTH{1'b0}});
+//    assign wen = ((A[A_WIDTH/2-1:0]==2'd0))? 8'b0000_0011:
+//                 ((A[A_WIDTH/2-1:0]==2'd1))? 8'b0000_1100:
+//                 ((A[A_WIDTH/2-1:0]==2'd2))? 8'b0011_0000:
+//                 ((A[A_WIDTH/2-1:0]==2'd3))? 8'b1100_0000:
+//                                             8'b0000_0000;
 endmodule
 
 module en_decoder
@@ -130,12 +142,14 @@ module en_decoder
     input wire  [(2 + L_WIDTH/2)-1:0] A,
     output wire wen0, wen1, wen2, wen3
     );
-    localparam A_WIDTH = 2 + L_WIDTH/2;
+    localparam  A_ROAD_WIDTH    = 2,
+                A_DUR_WIDTH     = L_WIDTH/2,
+                A_WIDTH         = A_ROAD_WIDTH + A_DUR_WIDTH;
     
-    assign wen0 = (A[A_WIDTH-1:A_WIDTH/2]==2'd0)&(wen);
-    assign wen1 = (A[A_WIDTH-1:A_WIDTH/2]==2'd1)&(wen);
-    assign wen2 = (A[A_WIDTH-1:A_WIDTH/2]==2'd2)&(wen);
-    assign wen3 = (A[A_WIDTH-1:A_WIDTH/2]==2'd3)&(wen);
+    assign wen0 = (A[A_ROAD_WIDTH-1:0]==2'd0)&(wen);
+    assign wen1 = (A[A_ROAD_WIDTH-1:0]==2'd1)&(wen);
+    assign wen2 = (A[A_ROAD_WIDTH-1:0]==2'd2)&(wen);
+    assign wen3 = (A[A_ROAD_WIDTH-1:0]==2'd3)&(wen);
 endmodule
 
 module data_config
@@ -143,14 +157,22 @@ module data_config
     parameter integer L_WIDTH = 4)
  (
     input wire [Q_WIDTH-1:0] Q_new,
-    input wire [(2 + L_WIDTH/2)-1:0] A,
-    input wire [Q_WIDTH*4-1:0] D,
-    output wire [Q_WIDTH*4-1:0] D_new
+    input wire [(L_WIDTH/2 + 2)-1:0] A,
+    input wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0] D,
+    output wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0] D_new
     );
-    localparam A_WIDTH = 2 + L_WIDTH/2;
-    
-    assign D_new[Q_WIDTH-1:0]           = (A[A_WIDTH/2-1:0]==2'd0)? Q_new : D[Q_WIDTH-1:0];
-    assign D_new[Q_WIDTH*2-1:Q_WIDTH]   = (A[A_WIDTH/2-1:0]==2'd1)? Q_new : D[Q_WIDTH*2-1:Q_WIDTH];
-    assign D_new[Q_WIDTH*3-1:Q_WIDTH*2] = (A[A_WIDTH/2-1:0]==2'd2)? Q_new : D[Q_WIDTH*3-1:Q_WIDTH*2];
-    assign D_new[Q_WIDTH*4-1:Q_WIDTH*3] = (A[A_WIDTH/2-1:0]==2'd3)? Q_new : D[Q_WIDTH*4-1:Q_WIDTH*3];
+    localparam  A_ROAD_WIDTH    = 2,
+                A_DUR_WIDTH     = L_WIDTH/2,
+                A_WIDTH         = A_ROAD_WIDTH + A_DUR_WIDTH,
+                N_LEVEL         = 2**(L_WIDTH/2);
+    genvar i;
+    generate 
+        for (i = 0; i < N_LEVEL; i = i + 1) begin 
+            assign D_new[Q_WIDTH*(i+1)-1:Q_WIDTH*i] = (A[A_WIDTH-1:A_ROAD_WIDTH]==i)? Q_new : D[Q_WIDTH*(i+1)-1:Q_WIDTH*i];
+        end
+    endgenerate 
+//    assign D_new[Q_WIDTH-1:0]           = (A[A_WIDTH/2-1:0]==2'd0)? Q_new : D[Q_WIDTH-1:0];
+//    assign D_new[Q_WIDTH*2-1:Q_WIDTH]   = (A[A_WIDTH/2-1:0]==2'd1)? Q_new : D[Q_WIDTH*2-1:Q_WIDTH];
+//    assign D_new[Q_WIDTH*3-1:Q_WIDTH*2] = (A[A_WIDTH/2-1:0]==2'd2)? Q_new : D[Q_WIDTH*3-1:Q_WIDTH*2];
+//    assign D_new[Q_WIDTH*4-1:Q_WIDTH*3] = (A[A_WIDTH/2-1:0]==2'd3)? Q_new : D[Q_WIDTH*4-1:Q_WIDTH*3];
 endmodule

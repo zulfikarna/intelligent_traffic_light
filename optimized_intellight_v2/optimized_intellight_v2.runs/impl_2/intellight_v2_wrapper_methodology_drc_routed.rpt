@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Mon Oct 31 17:35:30 2022
+| Date         : Tue Nov  1 18:28:50 2022
 | Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 | Command      : report_methodology -file intellight_v2_wrapper_methodology_drc_routed.rpt -pb intellight_v2_wrapper_methodology_drc_routed.pb -rpx intellight_v2_wrapper_methodology_drc_routed.rpx
 | Design       : intellight_v2_wrapper
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 11
+             Violations found: 12
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
 | LUTAR-1   | Warning  | LUT drives async reset alert  | 6          |
-| TIMING-18 | Warning  | Missing input or output delay | 5          |
+| TIMING-18 | Warning  | Missing input or output delay | 6          |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -155,25 +155,30 @@ Related violations: <none>
 
 TIMING-18#1 Warning
 Missing input or output delay  
-An output delay is missing on idle relative to clock(s) clk_fpga_0
+An output delay is missing on finish relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An output delay is missing on wen0 relative to clock(s) clk_fpga_0
+An output delay is missing on idle relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An output delay is missing on wen1 relative to clock(s) clk_fpga_0
+An output delay is missing on wen0 relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An output delay is missing on wen2 relative to clock(s) clk_fpga_0
+An output delay is missing on wen1 relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on wen2 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#6 Warning
 Missing input or output delay  
 An output delay is missing on wen3 relative to clock(s) clk_fpga_0
 Related violations: <none>

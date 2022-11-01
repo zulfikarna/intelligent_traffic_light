@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct 31 17:28:16 2022" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Nov  1 18:23:15 2022" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="www.digilentinc.com:pynq-z1:part0:1.0" DEVICE="7z020" NAME="intellight_v2" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -134,6 +134,11 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" NAME="finish" SIGIS="undef" SIGNAME="CU_0_finish">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="CU_0" PORT="finish"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -188,7 +193,6 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="R_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="RND_WIDTH" VALUE="16"/>
         <PARAMETER NAME="CTR_WIDTH" VALUE="16"/>
         <PARAMETER NAME="Component_Name" VALUE="intellight_v2_CU_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -246,6 +250,7 @@
         <PORT DIR="O" NAME="finish" SIGIS="undef" SIGNAME="CU_0_finish">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_intc_0" PORT="intr"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="finish"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="wen" SIGIS="undef" SIGNAME="CU_0_wen">
@@ -267,7 +272,6 @@
         <PARAMETER NAME="L_WIDTH" VALUE="4"/>
         <PARAMETER NAME="Q_WIDTH" VALUE="16"/>
         <PARAMETER NAME="R_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="WEN_WIDTH" VALUE="8"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="Component_Name" VALUE="intellight_v2_MII_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -789,32 +793,32 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="MOI_0" PORT="Droad0"/>
             <CONNECTION INSTANCE="MII_0" PORT="Droad0"/>
-            <CONNECTION INSTANCE="QA_0" PORT="Droad0"/>
             <CONNECTION INSTANCE="PG_0" PORT="Droad0"/>
+            <CONNECTION INSTANCE="QA_0" PORT="Droad0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="Droad1" RIGHT="0" SIGIS="undef" SIGNAME="action_ram_wrapper_0_Droad1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="MOI_0" PORT="Droad1"/>
             <CONNECTION INSTANCE="MII_0" PORT="Droad1"/>
-            <CONNECTION INSTANCE="QA_0" PORT="Droad1"/>
             <CONNECTION INSTANCE="PG_0" PORT="Droad1"/>
+            <CONNECTION INSTANCE="QA_0" PORT="Droad1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="Droad2" RIGHT="0" SIGIS="undef" SIGNAME="action_ram_wrapper_0_Droad2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="MOI_0" PORT="Droad2"/>
             <CONNECTION INSTANCE="MII_0" PORT="Droad2"/>
-            <CONNECTION INSTANCE="QA_0" PORT="Droad2"/>
             <CONNECTION INSTANCE="PG_0" PORT="Droad2"/>
+            <CONNECTION INSTANCE="QA_0" PORT="Droad2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="Droad3" RIGHT="0" SIGIS="undef" SIGNAME="action_ram_wrapper_0_Droad3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="MOI_0" PORT="Droad3"/>
             <CONNECTION INSTANCE="MII_0" PORT="Droad3"/>
-            <CONNECTION INSTANCE="QA_0" PORT="Droad3"/>
             <CONNECTION INSTANCE="PG_0" PORT="Droad3"/>
+            <CONNECTION INSTANCE="QA_0" PORT="Droad3"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="58823528" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
@@ -6171,8 +6175,8 @@
       <PORTS>
         <PORT DIR="O" NAME="mode" SIGIS="undef" SIGNAME="intellight_database_0_mode">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CU_0" PORT="mode"/>
             <CONNECTION INSTANCE="SD_0" PORT="mode"/>
+            <CONNECTION INSTANCE="CU_0" PORT="mode"/>
             <CONNECTION INSTANCE="PG_0" PORT="mode"/>
           </CONNECTIONS>
         </PORT>
@@ -7648,13 +7652,13 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M04_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M05_ACLK"/>
             <CONNECTION INSTANCE="action_ram_wrapper_0" PORT="clk"/>
-            <CONNECTION INSTANCE="CU_0" PORT="clk"/>
             <CONNECTION INSTANCE="RD_0" PORT="clk"/>
             <CONNECTION INSTANCE="intellight_database_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="MII_0" PORT="clk"/>
             <CONNECTION INSTANCE="SD_0" PORT="clk"/>
-            <CONNECTION INSTANCE="QA_0" PORT="clk"/>
+            <CONNECTION INSTANCE="CU_0" PORT="clk"/>
             <CONNECTION INSTANCE="PG_0" PORT="clk"/>
+            <CONNECTION INSTANCE="QA_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -9612,12 +9616,12 @@
             <CONNECTION INSTANCE="comm_ram_comm_ram_3" PORT="rsta"/>
             <CONNECTION INSTANCE="comm_ram_comm_ram_0" PORT="rsta"/>
             <CONNECTION INSTANCE="action_ram_wrapper_0" PORT="rst"/>
-            <CONNECTION INSTANCE="CU_0" PORT="rst"/>
             <CONNECTION INSTANCE="RD_0" PORT="rst"/>
             <CONNECTION INSTANCE="MII_0" PORT="rst"/>
             <CONNECTION INSTANCE="SD_0" PORT="rst"/>
-            <CONNECTION INSTANCE="QA_0" PORT="rst"/>
+            <CONNECTION INSTANCE="CU_0" PORT="rst"/>
             <CONNECTION INSTANCE="PG_0" PORT="rst"/>
+            <CONNECTION INSTANCE="QA_0" PORT="rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>

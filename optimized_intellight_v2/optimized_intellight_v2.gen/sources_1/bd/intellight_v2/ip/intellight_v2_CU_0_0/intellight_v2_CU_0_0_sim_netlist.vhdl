@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Mon Oct 31 14:59:57 2022
+-- Date        : Tue Nov  1 18:17:51 2022
 -- Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_CU_0_0/intellight_v2_CU_0_0_sim_netlist.vhdl
@@ -14,7 +14,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity intellight_v2_CU_0_0_lsfr_16bit is
+entity intellight_v2_CU_0_0_lfsr is
   port (
     S : out STD_LOGIC_VECTOR ( 3 downto 0 );
     DI : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -26,10 +26,10 @@ entity intellight_v2_CU_0_0_lsfr_16bit is
     rst : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of intellight_v2_CU_0_0_lsfr_16bit : entity is "lsfr_16bit";
-end intellight_v2_CU_0_0_lsfr_16bit;
+  attribute ORIG_REF_NAME of intellight_v2_CU_0_0_lfsr : entity is "lfsr";
+end intellight_v2_CU_0_0_lfsr;
 
-architecture STRUCTURE of intellight_v2_CU_0_0_lsfr_16bit is
+architecture STRUCTURE of intellight_v2_CU_0_0_lfsr is
   signal p_0_in : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal r_lsfr : STD_LOGIC_VECTOR ( 16 downto 1 );
   attribute SOFT_HLUTNM : string;
@@ -2340,7 +2340,7 @@ ns1_carry_i_8: unisim.vcomponents.LUT4
       S(1) => \i__carry__0_i_7_n_0\,
       S(0) => \i__carry__0_i_8_n_0\
     );
-rand: entity work.intellight_v2_CU_0_0_lsfr_16bit
+rand: entity work.intellight_v2_CU_0_0_lfsr
      port map (
       DI(3) => rand_n_4,
       DI(2) => rand_n_5,

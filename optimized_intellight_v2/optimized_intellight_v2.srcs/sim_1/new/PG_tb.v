@@ -42,8 +42,8 @@ module PG_tb
     // Random generator porting
     wire signed [15:0] o_lsfr_16bit;
     wire signed [63:0] o_lsfr_64bit;
-    lsfr_16bit rand0(.clk(clk), .rst(rst), .in0(16'd128), .out0(o_lsfr_16bit));
-    lsfr_64bit rand1(.clk(clk), .rst(rst), .in0(64'd128), .out0(o_lsfr_64bit));
+    lfsr #(.DATA_WIDTH(16)) rand0(.clk(clk), .rst(rst), .in0(16'd128), .out0(o_lsfr_16bit));
+    lfsr #(.DATA_WIDTH(64)) rand1(.clk(clk), .rst(rst), .in0(64'd128), .out0(o_lsfr_64bit));
     
     // Clock setting
     always begin

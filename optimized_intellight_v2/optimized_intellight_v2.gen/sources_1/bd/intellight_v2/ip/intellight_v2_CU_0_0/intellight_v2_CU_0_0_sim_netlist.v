@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Mon Oct 31 14:59:57 2022
+// Date        : Tue Nov  1 18:17:51 2022
 // Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_CU_0_0/intellight_v2_CU_0_0_sim_netlist.v
@@ -1450,7 +1450,7 @@ module intellight_v2_CU_0_0_CU
         .DI({i__carry__0_i_1_n_0,i__carry__0_i_2_n_0,i__carry__0_i_3_n_0,i__carry__0_i_4_n_0}),
         .O(\NLW_ns1_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
         .S({i__carry__0_i_5_n_0,i__carry__0_i_6_n_0,i__carry__0_i_7_n_0,i__carry__0_i_8_n_0}));
-  intellight_v2_CU_0_0_lsfr_16bit rand
+  intellight_v2_CU_0_0_lfsr rand
        (.DI({rand_n_4,rand_n_5,rand_n_6,rand_n_7}),
         .S({rand_n_0,rand_n_1,rand_n_2,rand_n_3}),
         .clk(clk),
@@ -1758,8 +1758,8 @@ module intellight_v2_CU_0_0_CU
         .O(wire_ns[4]));
 endmodule
 
-(* ORIG_REF_NAME = "lsfr_16bit" *) 
-module intellight_v2_CU_0_0_lsfr_16bit
+(* ORIG_REF_NAME = "lfsr" *) 
+module intellight_v2_CU_0_0_lfsr
    (S,
     DI,
     \r_lsfr_reg[15]_0 ,
