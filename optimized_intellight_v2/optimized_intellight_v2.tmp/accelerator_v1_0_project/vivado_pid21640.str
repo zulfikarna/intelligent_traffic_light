@@ -1,0 +1,225 @@
+/*
+
+Xilinx Vivado v2022.1 (64-bit) [Major: 2022, Minor: 1]
+SW Build: 3526262 on Mon Apr 18 15:48:16 MDT 2022
+IP Build: 3524634 on Mon Apr 18 20:55:01 MDT 2022
+
+Process ID (PID): 21640
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Nov 02 15:35:58 ICT 2022
+Time zone: 	Indochina Time (Asia/Bangkok)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 6
+
+Screen size: 1280x1024
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	D:/Program/Vivado/2022.1/tps/win64/jre11.0.11_9
+Java executable: 	D:/Program/Vivado/2022.1/tps/win64/jre11.0.11_9/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	USER
+User home directory: C:/Users/USER
+User working directory: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project
+User country: 	ID
+User language: 	en
+User locale: 	en_ID
+
+RDI_BASEROOT: D:/Program/Vivado
+HDI_APPROOT: D:/Program/Vivado/2022.1
+RDI_DATADIR: D:/Program/Vivado/2022.1/data
+RDI_BINDIR: D:/Program/Vivado/2022.1/bin
+
+Vivado preferences file: C:/Users/USER/AppData/Roaming/Xilinx/Vivado/2022.1/vivado.xml
+Vivado preferences directory: C:/Users/USER/AppData/Roaming/Xilinx/Vivado/2022.1/
+Vivado layouts directory: C:/Users/USER/AppData/Roaming/Xilinx/Vivado/2022.1/data/layouts
+PlanAhead jar file: 	D:/Program/Vivado/2022.1/lib/classes/planAhead.jar
+Vivado log file: 	D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project/vivado.log
+Vivado journal file: 	D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project/vivado.jou
+Engine tmp dir: 	D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project/.Xil/Vivado-21640-DESKTOP-FRUK6JR
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Program/Vivado/2022.1/ids_lite/ISE
+XILINX_DSP: D:/Program/Vivado/2022.1/ids_lite/ISE
+XILINX_HLS: D:/Program/Vitis_HLS/2022.1
+XILINX_PLANAHEAD: D:/Program/Vivado/2022.1
+XILINX_VIVADO: D:/Program/Vivado/2022.1
+XILINX_VIVADO_HLS: D:/Program/Vivado/2022.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,515 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.tmp\accelerator_v1_0_project\accelerator_v1_0_project.xpr. Version: Vivado v2022.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project/accelerator_v1_0_project.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project/accelerator_v1_0_project.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project/accelerator_v1_0_project.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,515 MB. GUI used memory: 54 MB. Current time: 11/2/22, 3:35:59 PM ICT
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/ip_repo'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 111 MB (+113718kb) [00:00:22]
+// [Engine Memory]: 1,515 MB (+1437354kb) [00:00:22]
+// WARNING: HEventQueue.dispatchEvent() is taking  2435 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program/Vivado/2022.1/data/ip'. 
+// Project name: accelerator_v1_0_project; location: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project; part: xc7z020clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1676.348 ; gain = 0.000 
+dismissDialog("Open Project"); // bA
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT]", 4); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 5, false, false, false, false, false, true); // D - Double Click
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::open_ipxact_file {D:\intelligent_traffic_light\ip_repo\accelerator\component.xml} 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// [GUI Memory]: 130 MB (+14397kb) [00:00:33]
+dismissDialog("Open IP-XACT File"); // bA
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // aq
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // aq
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // aq
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "UI Layout ;  ;  ; false ;  ; ", 4, "UI Layout", 0, true); // M - Node
+expandTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "UI Layout ;  ;  ; false ;  ; ", 4); // M
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "UI Layout ;  ;  ; false ;  ; ", 4, "UI Layout", 0, true, false, false, false, true, false); // M - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_PACKAGER_ADD_FILE_GROUP, "Add File Group..."); // ar
+// Run Command: PAResourceCommand.PACommandNames_PACKAGER_ADD_FILE_GROUP
+selectTree(PAResourceAtoD.AddFileGroupDialog_FILE_GROUP_TABLE, "[File Group, Advanced]", 34, false); // h
+selectTree(PAResourceAtoD.AddFileGroupDialog_FILE_GROUP_TABLE, "[File Group, Advanced]", 34, false, false, false, false, false, true); // h - Double Click
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: PACKAGER_OBJECT_ADD
+// 'b' command handler elapsed time: 4 seconds
+// Tcl Message: ipx::add_file_group -type utility {} [ipx::current_core] 
+dismissDialog("Add File Group"); // a
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Utility XIT/TTCL ;  ;  ; false ;  ; ", 6, "Utility XIT/TTCL", 0, false); // M
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Utility XIT/TTCL ;  ;  ; false ;  ; ", 6, "Utility XIT/TTCL", 0, false, false, false, false, true, false); // M - Popup Trigger
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectMenuItem(PAResourceEtoH.FileGroupFacetTable_ADD_FILES, "Add Files..."); // ar
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+// Elapsed time: 16 seconds
+dismissFileChooser();
+dismissDialog("Add IP Files (Utility XIT/TTCL)"); // j
+// Elapsed time: 19 seconds
+selectButton(PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String) null); // D
+// Run Command: PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV
+selectButton(PAResourceCommand.PACommandNames_PACKAGER_ADD_FILE_GROUP, "Package IP_packager_add_file_group"); // D
+// Run Command: PAResourceCommand.PACommandNames_PACKAGER_ADD_FILE_GROUP
+dismissDialog("Add File Group"); // a
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Utility XIT/TTCL ;  ;  ; false ;  ; ", 6, "Utility XIT/TTCL", 0, false, false, false, false, true, false); // M - Popup Trigger
+selectMenuItem(PAResourceEtoH.FileGroupFacetTable_REMOVE_FILE_GROUP, "Remove File Group"); // ar
+// TclEventType: PACKAGER_OBJECT_DELETE
+// Tcl Message: ipx::remove_file_group xilinx_utilityxitfiles [ipx::current_core] 
+collapseTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Advanced ;  ;  ; false ;  ; ", 3); // M
+collapseTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Standard ;  ;  ; 2 ;  ; ", 0); // M
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(PAResourceCommand.PACommandNames_PACKAGER_ADD_FILE_GROUP, "Package IP_packager_add_file_group"); // D
+// Run Command: PAResourceCommand.PACommandNames_PACKAGER_ADD_FILE_GROUP
+// Elapsed time: 12 seconds
+selectTree(PAResourceAtoD.AddFileGroupDialog_FILE_GROUP_TABLE, "[File Group, Advanced]", 34, false); // h
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: PACKAGER_OBJECT_ADD
+// 'b' command handler elapsed time: 19 seconds
+// Tcl Message: ipx::add_file_group -type utility {} [ipx::current_core] 
+dismissDialog("Add File Group"); // a
+// [GUI Memory]: 138 MB (+1548kb) [00:02:00]
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Utility XIT/TTCL ;  ;  ; false ;  ; ", 5, "Utility XIT/TTCL", 0, false); // M
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Utility XIT/TTCL ;  ;  ; false ;  ; ", 5, "Utility XIT/TTCL", 0, false, false, false, false, true, false); // M - Popup Trigger
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Elapsed time: 17 seconds
+selectMenuItem(PAResourceEtoH.FileGroupFacetTable_ADD_FILES, "Add Files..."); // ar
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // D
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // ar
+// Elapsed time: 19 seconds
+setFileChooser("C:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png");
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "SourceRoot ; 1 ; 5c17908344f5fd02b8cd3b71.png ;  N/A ; C:/Users/USER/Downloads", 0, " N/A", 3); // bQ
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "SourceRoot ; 1 ; 5c17908344f5fd02b8cd3b71.png ;  N/A ; C:/Users/USER/Downloads", 0, " N/A", 3, false, false, false, true, false); // bQ - Popup Trigger
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "SourceRoot ; 1 ; 5c17908344f5fd02b8cd3b71.png ;  N/A ; C:/Users/USER/Downloads", 0, " N/A", 3, false, false, false, true, false); // bQ - Popup Trigger
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_CHANGE_SOURCE_PROPERTIES, "Change Source Properties..."); // ar
+selectComboBox(PAResourceQtoS.SourceConfigDialog_SELECT_SOURCE_TYPE, "Synthesis & Simulation", 1); // e
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Configure Sources"); // bg
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "SourceRoot ; 1 ; 5c17908344f5fd02b8cd3b71.png ;  N/A ; C:/Users/USER/Downloads", 0, "SourceRoot", 0); // bQ
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Add IP Files (Utility XIT/TTCL)"); // j
+// TclEventType: PACKAGER_OBJECT_ADD
+// Tcl Message: ipx::add_file C:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png [ipx::get_file_groups xilinx_utilityxitfiles -of_objects [ipx::current_core]] 
+// Tcl Message: set_property type image [ipx::get_files c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png -of_objects [ipx::get_file_groups xilinx_utilityxitfiles -of_objects [ipx::current_core]]] 
+expandTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Utility XIT/TTCL ;  ;  ; false ;  ; ", 5); // M
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png ;  ; image ; false ; xilinx_utilityxitfiles ; ", 6, "false", 4, false); // M
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png ;  ; image ; false ; xilinx_utilityxitfiles ; ", 6, "false", 4, false, false, false, false, true, false); // M - Popup Trigger
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png ;  ; image ; false ; xilinx_utilityxitfiles ; ", 6, "false", 4, false); // M
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png ;  ; image ; false ; xilinx_utilityxitfiles ; ", 6, "false", 4, false); // M
+expandTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png ;  ; image ; false ; xilinx_utilityxitfiles ; ", 6); // M
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png ;  ; image ; false ; xilinx_utilityxitfiles ; ", 6, "false", 4, false, false, false, false, false, true); // M - Double Click
+dismissDialog("Opening Editor"); // bA
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png ;  ; image ; false ; xilinx_utilityxitfiles ; ", 6, (String) null, 1, false); // M
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png ;  ; image ; false ; xilinx_utilityxitfiles ; ", 6, "image", 2, false); // M
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png ;  ; image ; false ; xilinx_utilityxitfiles ; ", 6, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png", 0, false); // M
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png ;  ; image ; false ; xilinx_utilityxitfiles ; ", 6, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png", 0, false, false, false, false, true, false); // M - Popup Trigger
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // aq
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // aq
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png ;  ; image ; false ; xilinx_utilityxitfiles ; ", 6, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png", 0, false, false, false, false, true, false); // M - Popup Trigger
+selectMenu(PAResourceEtoH.FileGroupFacetTable_COPY_TO, "Copy To"); // ao
+// Elapsed time: 11 seconds
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png ;  ; image ; false ; xilinx_utilityxitfiles ; ", 6, "image", 2, false); // M
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property type LOGO [ipx::get_files c:/Users/USER/Downloads/5c17908344f5fd02b8cd3b71.png -of_objects [ipx::get_file_groups xilinx_utilityxitfiles -of_objects [ipx::current_core]]] 
+editTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "LOGO", 6, "Type", 2); // M
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // aq
+selectButton(PAResourceOtoP.PackagerStepContentPanel_MESSAGES, "1"); // g
+// [GUI Memory]: 146 MB (+620kb) [00:03:48]

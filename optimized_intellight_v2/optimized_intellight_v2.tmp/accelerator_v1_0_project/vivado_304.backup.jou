@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Nov  2 15:44:32 2022
+# Process ID: 304
+# Current directory: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4960 D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.tmp\accelerator_v1_0_project\accelerator_v1_0_project.xpr
+# Log file: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project/vivado.log
+# Journal file: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project\vivado.jou
+# Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project/accelerator_v1_0_project.xpr
+update_compile_order -fileset sources_1
+create_bd_design "acc"
+update_compile_order -fileset sources_1

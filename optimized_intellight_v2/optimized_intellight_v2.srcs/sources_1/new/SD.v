@@ -79,6 +79,7 @@ module SD // verified
             assign L_next[i] = L_temp[i][L_WIDTH]? {L_WIDTH{1'b1}} : L_temp[i][L_WIDTH-1:0];
         end
     endgenerate
+    
     assign L0 = L_next[0];
     assign L1 = L_next[1];
     assign L2 = L_next[2];

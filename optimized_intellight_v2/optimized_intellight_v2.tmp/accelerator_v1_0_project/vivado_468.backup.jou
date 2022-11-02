@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Nov  2 15:53:43 2022
+# Process ID: 468
+# Current directory: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20236 D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.tmp\accelerator_v1_0_project\accelerator_v1_0_project.xpr
+# Log file: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project/vivado.log
+# Journal file: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project\vivado.jou
+# Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.tmp/accelerator_v1_0_project/accelerator_v1_0_project.xpr
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file {D:\intelligent_traffic_light\ip_repo\accelerator\component.xml}
+ipx::remove_file_group xilinx_utilityxitfiles [ipx::current_core]
+ipx::remove_all_hdl_parameter -remove_inferred_params [ipx::current_core]
+ipx::add_model_parameters_from_hdl [ipx::current_core] -top_level_hdl_file d:/intelligent_traffic_light/ip_repo/accelerator/src/accelerator.v -top_module_name accelerator
+ipx::remove_user_parameter L_WIDTH [ipx::current_core]
+ipx::remove_user_parameter Q_WIDTH [ipx::current_core]
+ipx::remove_user_parameter R_WIDTH [ipx::current_core]
+ipx::remove_all_hdl_parameter -remove_inferred_params [ipx::current_core]
+ipx::add_model_parameters_from_hdl [ipx::current_core] -top_level_hdl_file d:/intelligent_traffic_light/ip_repo/accelerator/src/accelerator.v -top_module_name accelerator
+ipx::remove_all_hdl_parameter -remove_inferred_params [ipx::current_core]
+ipx::add_model_parameters_from_hdl [ipx::current_core] -top_level_hdl_file d:/intelligent_traffic_light/ip_repo/accelerator/src/accelerator.v -top_module_name accelerator
+ipx::infer_user_parameters [ipx::current_core]
+ipgui::add_param -name {L_WIDTH} -component [ipx::current_core]
+ipgui::add_param -name {R_WIDTH} -component [ipx::current_core]
+ipgui::add_param -name {Q_WIDTH} -component [ipx::current_core]

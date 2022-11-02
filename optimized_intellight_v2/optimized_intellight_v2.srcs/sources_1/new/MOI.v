@@ -4,16 +4,22 @@
 
 
 module MOI
-#(  parameter integer Q_WIDTH = 16
+#(  parameter integer Q_WIDTH = 16,
+    parameter integer L_WIDTH = 4
     )
 (
-    input wire [Q_WIDTH*4-1:0] Droad0, Droad1, Droad2, Droad3,
+    input wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0] Droad0, Droad1, Droad2, Droad3,
     output wire signed [Q_WIDTH-1:0] Q_00, Q_01, Q_02, Q_03,
     output wire signed [Q_WIDTH-1:0] Q_10, Q_11, Q_12, Q_13,
     output wire signed [Q_WIDTH-1:0] Q_20, Q_21, Q_22, Q_23,
     output wire signed [Q_WIDTH-1:0] Q_30, Q_31, Q_32, Q_33
     );
-    `include "parameters.v"
+    localparam  N_ROAD = 4,
+                N_LEVEL = 2**(L_WIDTH/2);
+                
+    wire signed [Q_WIDTH-1:0] Q [0:N_ROAD-1][0:N_LEVEL-1];    
+    wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0] Droad [0:N_ROAD-1];
+    
     // Q road 0
     assign Q_00 = Droad0[Q_WIDTH-1:0];
     assign Q_01 = Droad0[Q_WIDTH*2-1:Q_WIDTH];

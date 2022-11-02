@@ -1,0 +1,120 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.346086",
+   "Default View_TopLeft":"-191,-627",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -20 -y 300 -defaultsOSRD
+preplace port port-id_finish -pg 1 -lvl 6 -x 2080 -y 820 -defaultsOSRD
+preplace port port-id_idle -pg 1 -lvl 6 -x 2080 -y 860 -defaultsOSRD
+preplace port port-id_mode -pg 1 -lvl 0 -x -20 -y 500 -defaultsOSRD
+preplace port port-id_rst -pg 1 -lvl 0 -x -20 -y 320 -defaultsOSRD
+preplace port port-id_run -pg 1 -lvl 0 -x -20 -y 720 -defaultsOSRD
+preplace port port-id_wen0 -pg 1 -lvl 6 -x 2080 -y 570 -defaultsOSRD
+preplace port port-id_wen1 -pg 1 -lvl 6 -x 2080 -y 590 -defaultsOSRD
+preplace port port-id_wen2 -pg 1 -lvl 6 -x 2080 -y 610 -defaultsOSRD
+preplace port port-id_wen3 -pg 1 -lvl 6 -x 2080 -y 630 -defaultsOSRD
+preplace portBus D_new -pg 1 -lvl 6 -x 2080 -y 550 -defaultsOSRD
+preplace portBus Droad0 -pg 1 -lvl 0 -x -20 -y 340 -defaultsOSRD
+preplace portBus Droad1 -pg 1 -lvl 0 -x -20 -y 360 -defaultsOSRD
+preplace portBus Droad2 -pg 1 -lvl 0 -x -20 -y 440 -defaultsOSRD
+preplace portBus Droad3 -pg 1 -lvl 0 -x -20 -y 460 -defaultsOSRD
+preplace portBus L_dec -pg 1 -lvl 0 -x -20 -y 280 -defaultsOSRD
+preplace portBus L_inc_a -pg 1 -lvl 0 -x -20 -y 200 -defaultsOSRD
+preplace portBus L_inc_b -pg 1 -lvl 0 -x -20 -y 220 -defaultsOSRD
+preplace portBus L_inc_c -pg 1 -lvl 0 -x -20 -y 240 -defaultsOSRD
+preplace portBus L_inc_d -pg 1 -lvl 0 -x -20 -y 260 -defaultsOSRD
+preplace portBus Q_00 -pg 1 -lvl 6 -x 2080 -y 60 -defaultsOSRD
+preplace portBus Q_01 -pg 1 -lvl 6 -x 2080 -y 80 -defaultsOSRD
+preplace portBus Q_02 -pg 1 -lvl 6 -x 2080 -y 100 -defaultsOSRD
+preplace portBus Q_03 -pg 1 -lvl 6 -x 2080 -y 120 -defaultsOSRD
+preplace portBus Q_10 -pg 1 -lvl 6 -x 2080 -y 140 -defaultsOSRD
+preplace portBus Q_11 -pg 1 -lvl 6 -x 2080 -y 160 -defaultsOSRD
+preplace portBus Q_12 -pg 1 -lvl 6 -x 2080 -y 180 -defaultsOSRD
+preplace portBus Q_13 -pg 1 -lvl 6 -x 2080 -y 200 -defaultsOSRD
+preplace portBus Q_20 -pg 1 -lvl 6 -x 2080 -y 220 -defaultsOSRD
+preplace portBus Q_21 -pg 1 -lvl 6 -x 2080 -y 240 -defaultsOSRD
+preplace portBus Q_22 -pg 1 -lvl 6 -x 2080 -y 260 -defaultsOSRD
+preplace portBus Q_23 -pg 1 -lvl 6 -x 2080 -y 280 -defaultsOSRD
+preplace portBus Q_30 -pg 1 -lvl 6 -x 2080 -y 300 -defaultsOSRD
+preplace portBus Q_31 -pg 1 -lvl 6 -x 2080 -y 320 -defaultsOSRD
+preplace portBus Q_32 -pg 1 -lvl 6 -x 2080 -y 340 -defaultsOSRD
+preplace portBus Q_33 -pg 1 -lvl 6 -x 2080 -y 360 -defaultsOSRD
+preplace portBus S_sim -pg 1 -lvl 0 -x -20 -y 180 -defaultsOSRD
+preplace portBus alpha -pg 1 -lvl 0 -x -20 -y 20 -defaultsOSRD
+preplace portBus gamma -pg 1 -lvl 0 -x -20 -y 40 -defaultsOSRD
+preplace portBus max_episode -pg 1 -lvl 0 -x -20 -y 780 -defaultsOSRD
+preplace portBus max_step -pg 1 -lvl 0 -x -20 -y 760 -defaultsOSRD
+preplace portBus rd_addr -pg 1 -lvl 6 -x 2080 -y 490 -defaultsOSRD
+preplace portBus seed -pg 1 -lvl 0 -x -20 -y 800 -defaultsOSRD
+preplace portBus wen_bram -pg 1 -lvl 6 -x 2080 -y 530 -defaultsOSRD
+preplace portBus wr_addr -pg 1 -lvl 6 -x 2080 -y 510 -defaultsOSRD
+preplace inst CU_0 -pg 1 -lvl 4 -x 1140 -y 740 -defaultsOSRD
+preplace inst MII_0 -pg 1 -lvl 5 -x 1690 -y 610 -defaultsOSRD
+preplace inst PG_0 -pg 1 -lvl 1 -x 180 -y 430 -defaultsOSRD
+preplace inst QA_0 -pg 1 -lvl 4 -x 1140 -y 310 -defaultsOSRD
+preplace inst RD_0 -pg 1 -lvl 3 -x 760 -y 160 -defaultsOSRD
+preplace inst SD_0 -pg 1 -lvl 2 -x 500 -y 190 -defaultsOSRD
+preplace inst MOI_0 -pg 1 -lvl 5 -x 1690 -y 210 -defaultsOSRD
+preplace netloc CU_0_A_sel 1 0 5 40 570 NJ 570 NJ 570 930J 560 1310
+preplace netloc CU_0_finish 1 4 2 NJ 820 NJ
+preplace netloc CU_0_idle 1 4 2 NJ 860 NJ
+preplace netloc CU_0_wen 1 4 1 1350 710n
+preplace netloc MII_0_Dnew 1 5 1 1930J 550n
+preplace netloc MII_0_RD_ADDR 1 5 1 1870J 490n
+preplace netloc MII_0_WR_ADDR 1 5 1 1880J 510n
+preplace netloc MII_0_en0 1 5 1 1950J 570n
+preplace netloc MII_0_en1 1 5 1 1980J 590n
+preplace netloc MII_0_en2 1 5 1 2010J 610n
+preplace netloc MII_0_en3 1 5 1 2030J 630n
+preplace netloc MII_0_wen_bram 1 5 1 1910J 530n
+preplace netloc MOI_0_Q_00 1 4 2 1510 770 1830J
+preplace netloc MOI_0_Q_01 1 4 2 1520 780 1840J
+preplace netloc MOI_0_Q_02 1 4 2 1530 790 1850J
+preplace netloc MOI_0_Q_03 1 4 2 1410 830 1860J
+preplace netloc MOI_0_Q_10 1 4 2 1400 870 1900J
+preplace netloc MOI_0_Q_11 1 4 2 1490 840 1890J
+preplace netloc MOI_0_Q_12 1 4 2 1500 850 1920J
+preplace netloc MOI_0_Q_13 1 4 2 1420 880 1940J
+preplace netloc MOI_0_Q_20 1 4 2 1430 890 1970J
+preplace netloc MOI_0_Q_21 1 4 2 1440 900 2000J
+preplace netloc MOI_0_Q_22 1 4 2 1450 910 2020J
+preplace netloc MOI_0_Q_23 1 4 2 1460 920 2040J
+preplace netloc MOI_0_Q_30 1 4 2 1470 930 2050J
+preplace netloc MOI_0_Q_31 1 4 2 1480 940 2060J
+preplace netloc MOI_0_Q_32 1 4 2 1540 800 1960J
+preplace netloc MOI_0_Q_33 1 4 2 1550 810 1990J
+preplace netloc PG_0_A 1 1 4 360 380 NJ 380 970 150 1360J
+preplace netloc PG_0_A_road 1 1 4 NJ 440 NJ 440 930 140 1320J
+preplace netloc QA_0_Q_new 1 4 1 1340 310n
+preplace netloc RD_0_R 1 3 1 920 160n
+preplace netloc SD_0_L0 1 2 1 N 150
+preplace netloc SD_0_L1 1 2 1 N 170
+preplace netloc SD_0_L2 1 2 1 N 190
+preplace netloc SD_0_L3 1 2 1 N 210
+preplace netloc SD_0_S 1 2 3 630 40 NJ 40 1390J
+preplace netloc action_ram_wrapper_0_Droad0 1 0 5 40 290 340J 340 620J 330 880 120 1370
+preplace netloc action_ram_wrapper_0_Droad1 1 0 5 50 300 320J 350 NJ 350 870 100 1380
+preplace netloc action_ram_wrapper_0_Droad2 1 0 5 10 270 310J 390 NJ 390 890 110 1350
+preplace netloc action_ram_wrapper_0_Droad3 1 0 5 0 250 330J 370 NJ 370 910 130 1330
+preplace netloc clk_wiz_clk_out1 1 0 5 20 210 310 40 620 50 900 510 NJ
+preplace netloc intellight_database_0_L_dec 1 0 2 NJ 280 NJ
+preplace netloc intellight_database_0_L_inc_a 1 0 2 NJ 200 NJ
+preplace netloc intellight_database_0_L_inc_b 1 0 2 NJ 220 NJ
+preplace netloc intellight_database_0_L_inc_c 1 0 2 NJ 240 NJ
+preplace netloc intellight_database_0_L_inc_d 1 0 2 NJ 260 NJ
+preplace netloc intellight_database_0_S_sim 1 0 2 NJ 180 NJ
+preplace netloc intellight_database_0_alpha 1 0 4 NJ 20 NJ 20 NJ 20 950J
+preplace netloc intellight_database_0_gamma 1 0 4 0J 30 NJ 30 NJ 30 940J
+preplace netloc intellight_database_0_max_episode 1 0 4 NJ 780 NJ 780 NJ 780 NJ
+preplace netloc intellight_database_0_max_step 1 0 4 NJ 760 NJ 760 NJ 760 NJ
+preplace netloc intellight_database_0_mode 1 0 4 10 560 350 710 NJ 710 920J
+preplace netloc intellight_database_0_run 1 0 4 NJ 720 NJ 720 NJ 720 NJ
+preplace netloc intellight_database_0_seed 1 0 4 NJ 800 NJ 800 NJ 800 NJ
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 5 30 230 370 360 640 340 960 530 NJ
+levelinfo -pg 1 -20 180 500 760 1140 1690 2080
+pagesize -pg 1 -db -bbox -sgen -190 -50 2230 950
+"
+}
+0
