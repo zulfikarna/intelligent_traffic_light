@@ -151,12 +151,12 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_processing_system7_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_axi_bram_ctrl_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_axi_intc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_axi_intc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_axi_bram_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_axi_bram_ctrl_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="action_ram_blk_mem_gen_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="action_ram_action_ram_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="action_ram_action_ram_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="action_ram_action_ram_0_0"/>
@@ -167,8 +167,8 @@
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_comm_ram_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_comm_ram_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_action_ram_wrapper_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_SD_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_RD_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_SD_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_intellight_database_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_MOI_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_QA_0_0"/>

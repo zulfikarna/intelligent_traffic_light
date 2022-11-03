@@ -42,7 +42,6 @@
         "comm_ram_2": "",
         "comm_ram_3": ""
       },
-      "action_ram_wrapper_0": "",
       "intellight_database_0": "",
       "Accelerator": {
         "SD_0": "",
@@ -52,7 +51,8 @@
         "RD_0": "",
         "PG_0": "",
         "MOI_0": ""
-      }
+      },
+      "action_ram_wrapper_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -3388,99 +3388,6 @@
           }
         }
       },
-      "action_ram_wrapper_0": {
-        "vlnv": "xilinx.com:module_ref:action_ram_wrapper:1.0",
-        "xci_name": "intellight_v2_action_ram_wrapper_0_0",
-        "xci_path": "ip\\intellight_v2_action_ram_wrapper_0_0\\intellight_v2_action_ram_wrapper_0_0.xci",
-        "inst_hier_path": "action_ram_wrapper_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "action_ram_wrapper",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "Dnew": {
-            "direction": "I",
-            "left": "63",
-            "right": "0"
-          },
-          "Droad0": {
-            "direction": "O",
-            "left": "63",
-            "right": "0"
-          },
-          "Droad1": {
-            "direction": "O",
-            "left": "63",
-            "right": "0"
-          },
-          "Droad2": {
-            "direction": "O",
-            "left": "63",
-            "right": "0"
-          },
-          "Droad3": {
-            "direction": "O",
-            "left": "63",
-            "right": "0"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "58823528",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "intellight_v2_processing_system7_0_1_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rd_addr": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH",
-                "value_src": "const_prop"
-              }
-            }
-          },
-          "wen": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "wen0": {
-            "direction": "I"
-          },
-          "wen1": {
-            "direction": "I"
-          },
-          "wen2": {
-            "direction": "I"
-          },
-          "wen3": {
-            "direction": "I"
-          },
-          "wr_addr": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          }
-        }
-      },
       "intellight_database_0": {
         "vlnv": "xilinx.com:user:intellight_database:1.0",
         "xci_name": "intellight_v2_intellight_database_0_1",
@@ -4788,6 +4695,85 @@
             ]
           }
         }
+      },
+      "action_ram_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:action_ram_wrapper:1.0",
+        "xci_name": "intellight_v2_action_ram_wrapper_0_0",
+        "xci_path": "ip\\intellight_v2_action_ram_wrapper_0_0\\intellight_v2_action_ram_wrapper_0_0.xci",
+        "inst_hier_path": "action_ram_wrapper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "action_ram_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Dnew": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          },
+          "Droad0": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "Droad1": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "Droad2": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "Droad3": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "wen": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "wen0": {
+            "direction": "I"
+          },
+          "wen1": {
+            "direction": "I"
+          },
+          "wen2": {
+            "direction": "I"
+          },
+          "wen3": {
+            "direction": "I"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -5060,9 +5046,9 @@
           "ps7_0_axi_periph/M03_ACLK",
           "ps7_0_axi_periph/M04_ACLK",
           "ps7_0_axi_periph/M05_ACLK",
-          "action_ram_wrapper_0/clk",
           "intellight_database_0/s00_axi_aclk",
-          "Accelerator/clk"
+          "Accelerator/clk",
+          "action_ram_wrapper_0/clk"
         ]
       },
       "intellight_database_0_L_dec": {
@@ -5153,8 +5139,8 @@
         "ports": [
           "rst_ps7_0_100M/peripheral_reset",
           "comm_ram/rst",
-          "action_ram_wrapper_0/rst",
-          "Accelerator/rst"
+          "Accelerator/rst",
+          "action_ram_wrapper_0/rst"
         ]
       },
       "rst_ps7_0_100M_peripheral_aresetn1": {
