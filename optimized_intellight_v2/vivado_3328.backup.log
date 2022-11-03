@@ -1,0 +1,210 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Nov  3 18:56:32 2022
+# Process ID: 3328
+# Current directory: D:/intelligent_traffic_light/optimized_intellight_v2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12864 D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.xpr
+# Log file: D:/intelligent_traffic_light/optimized_intellight_v2/vivado.log
+# Journal file: D:/intelligent_traffic_light/optimized_intellight_v2\vivado.jou
+# Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Program/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/optimized_intellight_v2'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'd:/intelligent_traffic_light/ip_repo/intellight_database/intellight_database_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:Acceleratorx:1.0'. The one found in IP location 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/Acceleratorx' will take precedence over the same IP in location d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/Acceleratorx
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:action_ram_wrapper:1.0'. The one found in IP location 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/action_ram_wrapper' will take precedence over the same IP in location d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/action_ram_wrapper
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:CU:1.0'. The one found in IP location 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/CU' will take precedence over the same IP in location d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/CU
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:MII:1.0'. The one found in IP location 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/MII' will take precedence over the same IP in location d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/MII
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:MOI:1.0'. The one found in IP location 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/MOI' will take precedence over the same IP in location d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/MOI
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:PG:1.0'. The one found in IP location 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/PG' will take precedence over the same IP in location d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/PG
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:QA:1.0'. The one found in IP location 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/QA' will take precedence over the same IP in location d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/QA
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:RD:1.0'. The one found in IP location 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/RD' will take precedence over the same IP in location d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/RD
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:SD:1.0'. The one found in IP location 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/SD' will take precedence over the same IP in location d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/mref/SD
+WARNING: [IP_Flow 19-3664] IP 'intellight_v2_intellight_database_0_2' generated file not found 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_intellight_database_0_2/intellight_v2_intellight_database_0_2.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'intellight_v2_intellight_database_0_2' generated file not found 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_intellight_database_0_2/intellight_v2_intellight_database_0_2_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'intellight_v2_intellight_database_0_2' generated file not found 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_intellight_database_0_2/intellight_v2_intellight_database_0_2_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'intellight_v2_intellight_database_0_2' generated file not found 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_intellight_database_0_2/intellight_v2_intellight_database_0_2_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'intellight_v2_intellight_database_0_2' generated file not found 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_intellight_database_0_2/intellight_v2_intellight_database_0_2_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'intellight_v2.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+intellight_v2_intellight_database_0_2
+
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 1624.008 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_bd_design {D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/action_ram/action_ram.bd}
+Reading block design file <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/action_ram/action_ram.bd>...
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - action_ram_0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - action_ram_1
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - action_ram_2
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - action_ram_3
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - const_1_1bit
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - const_0_8bit
+Successfully read diagram <action_ram> from block design file <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/action_ram/action_ram.bd>
+open_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 1624.008 ; gain = 0.000
+copy_bd_objs /  [get_bd_cells {action_ram_0 action_ram_1 action_ram_2 action_ram_3 const_1_1bit const_0_8bit}] [get_bd_ports {wen3 rst wen2 wen1 wen0 clk rd_addr Droad3 wr_addr wen Droad2 Droad1 Droad0 Dnew}] [get_bd_nets {clka_0_1 wea_0_1 action_ram_1_doutb xlconstant_0_dout addra_0_1 const_0_4bit_dout addrb_0_1 action_ram_2_doutb wen3_1 dina_0_1 wen2_1 rsta_0_1 action_ram_3_doutb wen1_1 action_ram_0_doutb wen0_1}]
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_4/doutb> is being overridden by the user with net <action_ram_0_doutb1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_5/doutb> is being overridden by the user with net <action_ram_1_doutb1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_6/doutb> is being overridden by the user with net <action_ram_2_doutb1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_7/doutb> is being overridden by the user with net <action_ram_3_doutb1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_4/addra> is being overridden by the user with net <addra_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_5/addra> is being overridden by the user with net <addra_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_6/addra> is being overridden by the user with net <addra_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_7/addra> is being overridden by the user with net <addra_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_4/addrb> is being overridden by the user with net <addrb_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_5/addrb> is being overridden by the user with net <addrb_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_6/addrb> is being overridden by the user with net <addrb_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_7/addrb> is being overridden by the user with net <addrb_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_4/clka> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_4/clkb> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_5/clka> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_5/clkb> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_6/clka> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_6/clkb> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_7/clka> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_7/clkb> is being overridden by the user with net <clka_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_4/web> is being overridden by the user with net <const_0_4bit_dout1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_5/web> is being overridden by the user with net <const_0_4bit_dout1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_6/web> is being overridden by the user with net <const_0_4bit_dout1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_7/web> is being overridden by the user with net <const_0_4bit_dout1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_4/dina> is being overridden by the user with net <dina_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_5/dina> is being overridden by the user with net <dina_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_6/dina> is being overridden by the user with net <dina_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_7/dina> is being overridden by the user with net <dina_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_4/rsta> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_4/rstb> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_5/rsta> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_5/rstb> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_6/rsta> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_6/rstb> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_7/rsta> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_7/rstb> is being overridden by the user with net <rsta_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_4/wea> is being overridden by the user with net <wea_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_5/wea> is being overridden by the user with net <wea_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_7/wea> is being overridden by the user with net <wea_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_6/wea> is being overridden by the user with net <wea_0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_4/ena> is being overridden by the user with net <wen0_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_5/ena> is being overridden by the user with net <wen1_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_6/ena> is being overridden by the user with net <wen2_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_7/ena> is being overridden by the user with net <wen3_2>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_4/enb> is being overridden by the user with net <xlconstant_0_dout1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_5/enb> is being overridden by the user with net <xlconstant_0_dout1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_6/enb> is being overridden by the user with net <xlconstant_0_dout1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_7/enb> is being overridden by the user with net <xlconstant_0_dout1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+copy_bd_objs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1624.008 ; gain = 0.000
+undo
+INFO: [Common 17-17] undo 'copy_bd_objs /  [get_bd_cells {action_ram_0 action_ram_1 action_ram_2 action_ram_3 const_1_1bit const_0_8bit}] [get_bd_ports {wen3 rst wen2 wen1 wen0 clk rd_addr Droad3 wr_addr wen Droad2 Droad1 Droad0 Dnew}] [get_bd_nets {clka_0_1 wea_0_1 action_ram_1_doutb xlconstant_0_dout addra_0_1 const_0_4bit_dout addrb_0_1 action_ram_2_doutb wen3_1 dina_0_1 wen2_1 rsta_0_1 action_ram_3_doutb wen1_1 action_ram_0_doutb wen0_1}]'
+regenerate_bd_layout
+open_bd_design {D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/accelerator/accelerator.bd}
+Reading block design file <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/accelerator/accelerator.bd>...
+Adding component instance block -- xilinx.com:module_ref:CU:1.0 - CU_0
+Adding component instance block -- xilinx.com:module_ref:MII:1.0 - MII_0
+Adding component instance block -- xilinx.com:module_ref:MOI:1.0 - MOI_0
+Adding component instance block -- xilinx.com:module_ref:QA:1.0 - QA_0
+Adding component instance block -- xilinx.com:module_ref:SD:1.0 - SD_0
+Adding component instance block -- xilinx.com:module_ref:PG:1.0 - PG_0
+Adding component instance block -- xilinx.com:module_ref:RD:1.0 - RD_0
+Successfully read diagram <accelerator> from block design file <D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/accelerator/accelerator.bd>
+current_bd_design action_ram
+set tmpCopyObjs [concat  [get_bd_cells {action_ram_0 action_ram_1 action_ram_2 action_ram_3 const_1_1bit const_0_8bit}] [get_bd_ports {wen3 rst wen2 wen1 wen0 clk rd_addr Droad3 wr_addr wen Droad2 Droad1 Droad0 Dnew}] [get_bd_nets {clka_0_1 wea_0_1 action_ram_1_doutb xlconstant_0_dout addra_0_1 const_0_4bit_dout addrb_0_1 action_ram_2_doutb wen3_1 dina_0_1 wen2_1 rsta_0_1 action_ram_3_doutb wen1_1 action_ram_0_doutb wen0_1}]]
+current_bd_design accelerator
+copy_bd_objs -from_design action_ram / $tmpCopyObjs
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/doutb> is being overridden by the user with net <action_ram_0_doutb>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/doutb> is being overridden by the user with net <action_ram_1_doutb>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/doutb> is being overridden by the user with net <action_ram_2_doutb>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/doutb> is being overridden by the user with net <action_ram_3_doutb>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/addra> is being overridden by the user with net <addra_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/addrb> is being overridden by the user with net <addrb_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/addrb> is being overridden by the user with net <addrb_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/addrb> is being overridden by the user with net <addrb_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/addrb> is being overridden by the user with net <addrb_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/clkb> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/clkb> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/clkb> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/clka> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/clkb> is being overridden by the user with net <clka_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/web> is being overridden by the user with net <const_0_4bit_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/web> is being overridden by the user with net <const_0_4bit_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/web> is being overridden by the user with net <const_0_4bit_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/web> is being overridden by the user with net <const_0_4bit_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/dina> is being overridden by the user with net <dina_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/rstb> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/rstb> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/rstb> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/rsta> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/rstb> is being overridden by the user with net <rsta_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/wea> is being overridden by the user with net <wea_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/ena> is being overridden by the user with net <wen0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/ena> is being overridden by the user with net <wen1_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/ena> is being overridden by the user with net <wen2_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/ena> is being overridden by the user with net <wen3_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_0/enb> is being overridden by the user with net <xlconstant_0_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_1/enb> is being overridden by the user with net <xlconstant_0_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_2/enb> is being overridden by the user with net <xlconstant_0_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+WARNING: [BD 41-1306] The connection to interface pin </action_ram_3/enb> is being overridden by the user with net <xlconstant_0_dout>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+copy_bd_objs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1624.008 ; gain = 0.000
+undo
+INFO: [Common 17-17] undo 'copy_bd_objs -from_design action_ram / $tmpCopyObjs'
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  3 19:10:51 2022...

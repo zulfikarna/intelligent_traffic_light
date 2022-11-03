@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:intellight_database:1.0
-// IP Revision: 15
+// IP Revision: 17
 
 (* X_CORE_INFO = "intellight_database_v1_0,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "intellight_v2_intellight_database_0_2,intellight_database_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "intellight_v2_intellight_database_0_2,intellight_database_v1_0,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=intellight_database,x_ipVersion=1.0,x_ipCoreRevision=15,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,L_WIDTH=4,R_WIDTH=16,Q_WIDTH=16,CTR_WIDTH=16,ADDR_WIDTH=32,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=7}" *)
+(* CORE_GENERATION_INFO = "intellight_v2_intellight_database_0_2,intellight_database_v1_0,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=intellight_database,x_ipVersion=1.0,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,L_WIDTH=4,R_WIDTH=16,Q_WIDTH=16,CTR_WIDTH=16,ADDR_WIDTH=32,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=7}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module intellight_v2_intellight_database_0_2 (
   Droad0,

@@ -25,22 +25,6 @@ module Acceleratorx
       input wire [L_WIDTH*4-1:0]L_inc_b,
       input wire [L_WIDTH*4-1:0]L_inc_c,
       input wire [L_WIDTH*4-1:0]L_inc_d,
-//      output wire [Q_WIDTH-1:0]Q_00,
-//      output wire [Q_WIDTH-1:0]Q_01,
-//      output wire [Q_WIDTH-1:0]Q_02,
-//      output wire [Q_WIDTH-1:0]Q_03,
-//      output wire [Q_WIDTH-1:0]Q_10,
-//      output wire [Q_WIDTH-1:0]Q_11,
-//      output wire [Q_WIDTH-1:0]Q_12,
-//      output wire [Q_WIDTH-1:0]Q_13,
-//      output wire [Q_WIDTH-1:0]Q_20,
-//      output wire [Q_WIDTH-1:0]Q_21,
-//      output wire [Q_WIDTH-1:0]Q_22,
-//      output wire [Q_WIDTH-1:0]Q_23,
-//      output wire [Q_WIDTH-1:0]Q_30,
-//      output wire [Q_WIDTH-1:0]Q_31,
-//      output wire [Q_WIDTH-1:0]Q_32,
-//      output wire [Q_WIDTH-1:0]Q_33,
       input wire [L_WIDTH*2-1:0]S_sim,
       input wire [2:0]alpha,
       input wire clk,
@@ -79,22 +63,6 @@ module Acceleratorx
   wire MII_0_en2;
   wire MII_0_en3;
   wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]MII_0_wen_bram;
-  wire [Q_WIDTH-1:0]MOI_0_Q_00;
-  wire [Q_WIDTH-1:0]MOI_0_Q_01;
-  wire [Q_WIDTH-1:0]MOI_0_Q_02;
-  wire [Q_WIDTH-1:0]MOI_0_Q_03;
-  wire [Q_WIDTH-1:0]MOI_0_Q_10;
-  wire [Q_WIDTH-1:0]MOI_0_Q_11;
-  wire [Q_WIDTH-1:0]MOI_0_Q_12;
-  wire [Q_WIDTH-1:0]MOI_0_Q_13;
-  wire [Q_WIDTH-1:0]MOI_0_Q_20;
-  wire [Q_WIDTH-1:0]MOI_0_Q_21;
-  wire [Q_WIDTH-1:0]MOI_0_Q_22;
-  wire [Q_WIDTH-1:0]MOI_0_Q_23;
-  wire [Q_WIDTH-1:0]MOI_0_Q_30;
-  wire [Q_WIDTH-1:0]MOI_0_Q_31;
-  wire [Q_WIDTH-1:0]MOI_0_Q_32;
-  wire [Q_WIDTH-1:0]MOI_0_Q_33;
   wire [A_WIDTH-1:0]PG_0_A;
   wire [A_ROAD_WIDTH-1:0]PG_0_A_road;
   wire [Q_WIDTH-1:0]QA_0_Q_new;
@@ -125,22 +93,6 @@ module Acceleratorx
   wire rst_ps7_0_100M_peripheral_aresetn;
 
   assign D_new[Q_WIDTH*(2**(L_WIDTH/2))-1:0] = MII_0_Dnew;
-  assign Q_00[Q_WIDTH-1:0] = MOI_0_Q_00;
-  assign Q_01[Q_WIDTH-1:0] = MOI_0_Q_01;
-  assign Q_02[Q_WIDTH-1:0] = MOI_0_Q_02;
-  assign Q_03[Q_WIDTH-1:0] = MOI_0_Q_03;
-  assign Q_10[Q_WIDTH-1:0] = MOI_0_Q_10;
-  assign Q_11[Q_WIDTH-1:0] = MOI_0_Q_11;
-  assign Q_12[Q_WIDTH-1:0] = MOI_0_Q_12;
-  assign Q_13[Q_WIDTH-1:0] = MOI_0_Q_13;
-  assign Q_20[Q_WIDTH-1:0] = MOI_0_Q_20;
-  assign Q_21[Q_WIDTH-1:0] = MOI_0_Q_21;
-  assign Q_22[Q_WIDTH-1:0] = MOI_0_Q_22;
-  assign Q_23[Q_WIDTH-1:0] = MOI_0_Q_23;
-  assign Q_30[Q_WIDTH-1:0] = MOI_0_Q_30;
-  assign Q_31[Q_WIDTH-1:0] = MOI_0_Q_31;
-  assign Q_32[Q_WIDTH-1:0] = MOI_0_Q_32;
-  assign Q_33[Q_WIDTH-1:0] = MOI_0_Q_33;
   assign action_ram_wrapper_0_Droad0 = Droad0[Q_WIDTH*(2**(L_WIDTH/2))-1:0];
   assign action_ram_wrapper_0_Droad1 = Droad1[Q_WIDTH*(2**(L_WIDTH/2))-1:0];
   assign action_ram_wrapper_0_Droad2 = Droad2[Q_WIDTH*(2**(L_WIDTH/2))-1:0];
@@ -206,28 +158,6 @@ module Acceleratorx
         .wen_bram(MII_0_wen_bram),
         .wen_cu(CU_0_wen),
         .wr_addr(MII_0_WR_ADDR));
-  MOI #(.Q_WIDTH(Q_WIDTH),
-        .L_WIDTH(L_WIDTH)  )MOI_0
-       (.Droad0(action_ram_wrapper_0_Droad0),
-        .Droad1(action_ram_wrapper_0_Droad1),
-        .Droad2(action_ram_wrapper_0_Droad2),
-        .Droad3(action_ram_wrapper_0_Droad3),
-        .Q_00(MOI_0_Q_00),
-        .Q_01(MOI_0_Q_01),
-        .Q_02(MOI_0_Q_02),
-        .Q_03(MOI_0_Q_03),
-        .Q_10(MOI_0_Q_10),
-        .Q_11(MOI_0_Q_11),
-        .Q_12(MOI_0_Q_12),
-        .Q_13(MOI_0_Q_13),
-        .Q_20(MOI_0_Q_20),
-        .Q_21(MOI_0_Q_21),
-        .Q_22(MOI_0_Q_22),
-        .Q_23(MOI_0_Q_23),
-        .Q_30(MOI_0_Q_30),
-        .Q_31(MOI_0_Q_31),
-        .Q_32(MOI_0_Q_32),
-        .Q_33(MOI_0_Q_33));
   PG #( .L_WIDTH(L_WIDTH),
         .Q_WIDTH(Q_WIDTH)  )PG_0
        (.A(PG_0_A),

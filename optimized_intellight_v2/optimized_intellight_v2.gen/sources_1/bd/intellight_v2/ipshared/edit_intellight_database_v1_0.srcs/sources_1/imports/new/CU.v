@@ -22,16 +22,16 @@ module CU // verified
     // Output for Policy Generator 
     output reg A_sel,
     // Control Signal
-    output wire PG,
-    output wire QA,
-    output wire SD,
-    output wire RD,
-        // for debugging 
-    output wire [CTR_WIDTH-1:0] wire_step,
-    output wire [CTR_WIDTH-1:0] wire_episode,
-    output wire [CTR_WIDTH-1:0] wire_epsilon,
-    output wire [4:0] wire_cs,
-    output wire [4:0] wire_ns,
+//    output wire PG,
+//    output wire QA,
+//    output wire SD,
+//    output wire RD,
+//        // for debugging 
+//    output wire [CTR_WIDTH-1:0] wire_step,
+//    output wire [CTR_WIDTH-1:0] wire_episode,
+//    output wire [CTR_WIDTH-1:0] wire_epsilon,
+//    output wire [4:0] wire_cs,
+//    output wire [4:0] wire_ns,
     output reg finish,
     output reg wen,
     output reg idle 
@@ -59,15 +59,15 @@ module CU // verified
         S_L14    = 5'd14,
         S_DONE   = 5'd17;  
         
-        
     // Counter variabel 
-    reg [CTR_WIDTH-1:0] step; // step counter
-    reg [CTR_WIDTH-1:0] episode; // episode counter
+    wire [15:0] o_lsfr;
+    reg [CTR_WIDTH-1:0] step;
+    reg [CTR_WIDTH-1:0] episode; 
     reg [4:0] ns;
     reg [4:0] cs;
     reg [CTR_WIDTH-1:0] epsilon;
-    // Variables for generating random number 
-    wire [15:0] o_lsfr;
+    reg [3:0] ctrl_sig;
+    
     lfsr #(.DATA_WIDTH(16)) rand(.clk(clk), .rst(rst), .seed(seed), .out0(o_lsfr));
     
     // Reset handler
@@ -177,7 +177,6 @@ module CU // verified
     end
     
     // Control signal generator
-    reg [3:0] ctrl_sig;
     always @(*) begin
         // Format Control Signal : |SD|PG|RD|QA| 
         case(cs)
@@ -234,15 +233,15 @@ module CU // verified
     end
     
     // Control signal decoder
-    assign SD = ctrl_sig[3];
-    assign PG = ctrl_sig[2];
-    assign RD = ctrl_sig[1];
-    assign QA = ctrl_sig[0];
-    // For debugging
-    assign wire_cs = cs;
-    assign wire_episode = episode;
-    assign wire_step = step;  
-    assign wire_ns = ns;
-    assign wire_epsilon = epsilon;  
+//    assign SD = ctrl_sig[3];
+//    assign PG = ctrl_sig[2];
+//    assign RD = ctrl_sig[1];
+//    assign QA = ctrl_sig[0];
+//    // For debugging
+//    assign wire_cs = cs;
+//    assign wire_episode = episode;
+//    assign wire_step = step;  
+//    assign wire_ns = ns;
+//    assign wire_epsilon = epsilon;  
 endmodule
 

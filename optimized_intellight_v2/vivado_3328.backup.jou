@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Nov  3 18:56:32 2022
+# Process ID: 3328
+# Current directory: D:/intelligent_traffic_light/optimized_intellight_v2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12864 D:\intelligent_traffic_light\optimized_intellight_v2\optimized_intellight_v2.xpr
+# Log file: D:/intelligent_traffic_light/optimized_intellight_v2/vivado.log
+# Journal file: D:/intelligent_traffic_light/optimized_intellight_v2\vivado.jou
+# Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/action_ram/action_ram.bd}
+copy_bd_objs /  [get_bd_cells {action_ram_0 action_ram_1 action_ram_2 action_ram_3 const_1_1bit const_0_8bit}] [get_bd_ports {wen3 rst wen2 wen1 wen0 clk rd_addr Droad3 wr_addr wen Droad2 Droad1 Droad0 Dnew}] [get_bd_nets {clka_0_1 wea_0_1 action_ram_1_doutb xlconstant_0_dout addra_0_1 const_0_4bit_dout addrb_0_1 action_ram_2_doutb wen3_1 dina_0_1 wen2_1 rsta_0_1 action_ram_3_doutb wen1_1 action_ram_0_doutb wen0_1}]
+undo
+regenerate_bd_layout
+open_bd_design {D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/bd/accelerator/accelerator.bd}
+current_bd_design action_ram
+set tmpCopyObjs [concat  [get_bd_cells {action_ram_0 action_ram_1 action_ram_2 action_ram_3 const_1_1bit const_0_8bit}] [get_bd_ports {wen3 rst wen2 wen1 wen0 clk rd_addr Droad3 wr_addr wen Droad2 Droad1 Droad0 Dnew}] [get_bd_nets {clka_0_1 wea_0_1 action_ram_1_doutb xlconstant_0_dout addra_0_1 const_0_4bit_dout addrb_0_1 action_ram_2_doutb wen3_1 dina_0_1 wen2_1 rsta_0_1 action_ram_3_doutb wen1_1 action_ram_0_doutb wen0_1}]]
+current_bd_design accelerator
+copy_bd_objs -from_design action_ram / $tmpCopyObjs
+undo

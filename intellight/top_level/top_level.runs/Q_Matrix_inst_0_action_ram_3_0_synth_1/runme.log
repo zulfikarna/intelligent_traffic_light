@@ -1,0 +1,18 @@
+
+*** Running vivado
+    with args -log Q_Matrix_inst_0_action_ram_3_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Q_Matrix_inst_0_action_ram_3_0.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source Q_Matrix_inst_0_action_ram_3_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1324.555 ; gain = 559.148
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program/Vivado/2022.1/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP Q_Matrix_inst_0_action_ram_3_0, cache-ID = 8002c75664c52e44.
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  3 19:33:57 2022...

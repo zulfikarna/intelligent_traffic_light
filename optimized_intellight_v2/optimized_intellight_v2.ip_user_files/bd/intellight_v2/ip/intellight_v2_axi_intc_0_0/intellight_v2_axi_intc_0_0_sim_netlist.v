@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Thu Sep 29 11:09:43 2022
+// Date        : Thu Nov  3 17:54:20 2022
 // Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_intc_0_0/intellight_v2_axi_intc_0_0_sim_netlist.v
@@ -92,7 +92,7 @@ module intellight_v2_axi_intc_0_0
   GND GND
        (.G(\<const0> ));
   (* C_ADDR_WIDTH = "32" *) 
-  (* C_ASYNC_INTR = "-2" *) 
+  (* C_ASYNC_INTR = "-1" *) 
   (* C_CASCADE_MASTER = "0" *) 
   (* C_DISABLE_SYNCHRONIZERS = "0" *) 
   (* C_ENABLE_ASYNC = "0" *) 
@@ -843,7 +843,7 @@ module intellight_v2_axi_intc_0_0_address_decoder
         .O(ip2bus_wrack_reg));
 endmodule
 
-(* C_ADDR_WIDTH = "32" *) (* C_ASYNC_INTR = "-2" *) (* C_CASCADE_MASTER = "0" *) 
+(* C_ADDR_WIDTH = "32" *) (* C_ASYNC_INTR = "-1" *) (* C_CASCADE_MASTER = "0" *) 
 (* C_DISABLE_SYNCHRONIZERS = "0" *) (* C_ENABLE_ASYNC = "0" *) (* C_EN_CASCADE_MODE = "0" *) 
 (* C_FAMILY = "zynq" *) (* C_HAS_CIE = "1" *) (* C_HAS_FAST = "0" *) 
 (* C_HAS_ILR = "0" *) (* C_HAS_IPR = "1" *) (* C_HAS_IVR = "1" *) 
@@ -1325,7 +1325,6 @@ module intellight_v2_axi_intc_0_0_intc_core
     mer,
     irq,
     ier,
-    intr,
     s_axi_aclk,
     \REG_GEN[0].IAR_NORMAL_MODE_GEN.iar_reg[0]_1 ,
     \mer_int_reg[1]_0 ,
@@ -1336,6 +1335,7 @@ module intellight_v2_axi_intc_0_0_intc_core
     s_axi_wdata,
     Bus_RNW_reg,
     p_18_in,
+    intr,
     p_16_in);
   output s_axi_aresetn_0;
   output ivr;
@@ -1348,7 +1348,6 @@ module intellight_v2_axi_intc_0_0_intc_core
   output mer;
   output irq;
   output ier;
-  input [0:0]intr;
   input s_axi_aclk;
   input \REG_GEN[0].IAR_NORMAL_MODE_GEN.iar_reg[0]_1 ;
   input \mer_int_reg[1]_0 ;
@@ -1359,10 +1358,12 @@ module intellight_v2_axi_intc_0_0_intc_core
   input [0:0]s_axi_wdata;
   input Bus_RNW_reg;
   input p_18_in;
+  input [0:0]intr;
   input p_16_in;
 
   wire Bus_RNW_reg;
   wire \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]_0 ;
+  (* async_reg = "true" *) wire [0:1]\INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff ;
   wire \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0 ;
   wire \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1 ;
   wire \IPR_GEN.ipr[0]_i_1_n_0 ;
@@ -1401,11 +1402,31 @@ module intellight_v2_axi_intc_0_0_intc_core
         .D(\CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]_0 ),
         .Q(cie),
         .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[0] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(intr),
+        .Q(\INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff [0]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[1] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(\INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff [0]),
+        .Q(\INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff [1]),
+        .R(1'b0));
   LUT5 #(
     .INIT(32'h0000AE00)) 
     \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1 
        (.I0(hw_intr),
-        .I1(intr),
+        .I1(\INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff [1]),
         .I2(\INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1 ),
         .I3(s_axi_aresetn),
         .I4(\REG_GEN[0].IAR_NORMAL_MODE_GEN.iar_reg[0]_0 ),
@@ -1419,7 +1440,7 @@ module intellight_v2_axi_intc_0_0_intc_core
   FDRE \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1_reg 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(intr),
+        .D(\INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff [1]),
         .Q(\INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1 ),
         .R(s_axi_aresetn_0));
   LUT2 #(

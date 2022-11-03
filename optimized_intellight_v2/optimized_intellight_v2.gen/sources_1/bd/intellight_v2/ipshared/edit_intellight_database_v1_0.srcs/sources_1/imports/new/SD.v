@@ -33,6 +33,12 @@ module SD // verified
                 MIN_TRAFFIC = {L_WIDTH{1'b0}};
     
     // Registers
+    wire [L_WIDTH*4-1:0] L_inc [0:3];
+    wire [L_WIDTH-1:0] dec;
+    wire [L_WIDTH-1:0] inc [0:3];
+    wire [L_WIDTH:0] L_temp [0:3];
+    wire [L_WIDTH-1:0] L_next[0:3];
+    wire [S_WIDTH-1:0] S_learn;
     reg [A_WIDTH-1:0] A_reg0;
     reg [L_WIDTH-1:0] L_curr[0:3];
     
@@ -52,21 +58,15 @@ module SD // verified
         end
     end 
     
-    wire [L_WIDTH*4-1:0] L_inc [0:3];
     assign L_inc[0] = L_inc_a;
     assign L_inc[1] = L_inc_b;
     assign L_inc[2] = L_inc_c;
     assign L_inc[3] = L_inc_d;
     
-    wire [L_WIDTH-1:0] dec;
     assign dec = (A[A_WIDTH/2-1:0] == 2'd0)? L_dec[1*L_WIDTH-1:0]:
                  (A[A_WIDTH/2-1:0] == 2'd1)? L_dec[2*L_WIDTH-1:1*L_WIDTH]:
                  (A[A_WIDTH/2-1:0] == 2'd2)? L_dec[3*L_WIDTH-1:2*L_WIDTH]:
                  (A[A_WIDTH/2-1:0] == 2'd3)? L_dec[4*L_WIDTH-1:3*L_WIDTH]: {L_WIDTH{1'bx}};
-    
-    wire [L_WIDTH-1:0] inc [0:3];
-    wire [L_WIDTH:0] L_temp [0:3];
-    wire [L_WIDTH-1:0] L_next[0:3];
     genvar i;
     generate
         for (i = 0; i < N_ROAD; i = i + 1) begin 
@@ -84,8 +84,6 @@ module SD // verified
     assign L1 = L_next[1];
     assign L2 = L_next[2];
     assign L3 = L_next[3];  
-  
-    wire [S_WIDTH-1:0] S_learn;
     assign S_learn = ((L_next[0][L_WIDTH-1:L_WIDTH/2])|(L_next[1][L_WIDTH-1:L_WIDTH/2]<<(L_WIDTH/2))|(L_next[2][L_WIDTH-1:L_WIDTH/2]<<(L_WIDTH))|(L_next[3][L_WIDTH-1:L_WIDTH/2]<<(3*L_WIDTH/2))) | {S_WIDTH{1'b0}};
     assign S = (!mode)? S_learn : S_sim;
 

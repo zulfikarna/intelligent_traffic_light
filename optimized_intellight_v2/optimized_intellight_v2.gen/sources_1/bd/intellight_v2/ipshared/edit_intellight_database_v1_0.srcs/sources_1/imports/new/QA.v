@@ -31,6 +31,19 @@ module QA // verified
     localparam  N_LEVEL = 2**(L_WIDTH/2);
     
     // Registers for Q-values
+    wire signed [Q_WIDTH-1:0] ap;
+    wire signed [Q_WIDTH-1:0] y;
+    wire signed [Q_WIDTH-1:0] gm;
+    wire signed [Q_WIDTH-1:0] x;
+    wire signed [Q_WIDTH-1:0] Qmax;
+    wire signed [Q_WIDTH-1:0] Qsel;
+    wire signed [Q_WIDTH-1:0] Q [0:N_LEVEL-1];
+    wire [Q_WIDTH*4-1:0] D;
+    reg [A_WIDTH-1:0] A_reg0;
+    reg signed [Q_WIDTH-1:0] Qmax_reg0;
+    reg signed [Q_WIDTH-1:0] Qsel_reg0, Qsel_reg1;
+    reg signed [Q_WIDTH-1:0] x_reg0;
+    reg signed [R_WIDTH-1:0] R_reg0;
     reg signed [Q_WIDTH-1:0] Q_reg0 [0:N_LEVEL-1];
     reg signed [Q_WIDTH-1:0] Q_reg1 [0:N_LEVEL-1];
     genvar i;
@@ -49,11 +62,6 @@ module QA // verified
     endgenerate
     
     // Miscelenaous registers 
-    reg [A_WIDTH-1:0] A_reg0;
-    reg signed [Q_WIDTH-1:0] Qmax_reg0;
-    reg signed [Q_WIDTH-1:0] Qsel_reg0, Qsel_reg1;
-    reg signed [Q_WIDTH-1:0] x_reg0;
-    reg signed [R_WIDTH-1:0] R_reg0;
     always @(posedge clk) begin 
         if (rst) begin
            Qmax_reg0 <= {Q_WIDTH{1'b0}};
@@ -73,12 +81,11 @@ module QA // verified
     end
     
     // Select data from BRAM 
-    wire [Q_WIDTH*4-1:0] D;
     assign D = (A_road==2'd0)? Droad0:
                (A_road==2'd1)? Droad1: 
                (A_road==2'd2)? Droad2: 
                (A_road==2'd3)? Droad3: {Q_WIDTH*4{1'bx}};
-    wire signed [Q_WIDTH-1:0] Q [0:N_LEVEL-1];
+
     generate 
         for (i = 0; i < N_LEVEL; i = i + 1) begin
             assign Q[i] = D[Q_WIDTH*(i+1)-1:Q_WIDTH*i];
@@ -86,8 +93,6 @@ module QA // verified
     endgenerate
     
     // Select maximum Q-value
-    wire signed [Q_WIDTH-1:0] Qmax;
-    wire signed [Q_WIDTH-1:0] Qsel;
     generate 
         if (N_LEVEL == 4) begin 
             max4to1 #(.DATA_WIDTH(Q_WIDTH)) max0( .in0(Q[0]),   .in1(Q[1]),   .in2(Q[2]),   .in3(Q[3]),
@@ -109,14 +114,10 @@ module QA // verified
     // y = Qsel - a*x
     
     // Calculate x
-    wire signed [Q_WIDTH-1:0] gm;
-    wire signed [Q_WIDTH-1:0] x;
     multiply mul0(.in0(Qmax), .c(gamma), .out0(gm));
     assign x = R_reg0 + gm - Qsel_reg0;
     
     // Calculate y 
-    wire signed [Q_WIDTH-1:0] ap;
-    wire signed [Q_WIDTH-1:0] y;
     multiply mul1(.in0(x_reg0), .c(alpha), .out0(ap));
     assign y = Qsel_reg1 - ap;
     assign Q_new = y;

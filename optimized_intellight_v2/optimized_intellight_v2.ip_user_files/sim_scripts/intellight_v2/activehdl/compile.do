@@ -2,6 +2,7 @@ vlib work
 vlib activehdl
 
 vlib activehdl/xilinx_vip
+vlib activehdl/xpm
 vlib activehdl/axi_infrastructure_v1_1_0
 vlib activehdl/axi_vip_v1_1_12
 vlib activehdl/processing_system7_vip_v1_0_14
@@ -22,6 +23,7 @@ vlib activehdl/axi_clock_converter_v2_1_25
 vlib activehdl/axi_dwidth_converter_v2_1_26
 
 vmap xilinx_vip activehdl/xilinx_vip
+vmap xpm activehdl/xpm
 vmap axi_infrastructure_v1_1_0 activehdl/axi_infrastructure_v1_1_0
 vmap axi_vip_v1_1_12 activehdl/axi_vip_v1_1_12
 vmap processing_system7_vip_v1_0_14 activehdl/processing_system7_vip_v1_0_14
@@ -51,6 +53,13 @@ vlog -work xilinx_vip  -sv2k12 "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip
 "D:/Program/Vivado/2022.1/data/xilinx_vip/hdl/axi_vip_if.sv" \
 "D:/Program/Vivado/2022.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
 "D:/Program/Vivado/2022.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
+
+vlog -work xpm  -sv2k12 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
+"D:/Program/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"D:/Program/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+
+vcom -work xpm -93 \
+"D:/Program/Vivado/2022.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work axi_infrastructure_v1_1_0  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
 "../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
@@ -127,7 +136,6 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../optimized_intellight_v2.ge
 "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v" \
 "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/CU.v" \
 "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/MII.v" \
-"../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/MOI.v" \
 "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/PG.v" \
 "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/QA.v" \
 "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/RD.v" \
@@ -135,8 +143,8 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../optimized_intellight_v2.ge
 "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/file_arith.v" \
 "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/file_max.v" \
 "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/file_mux.v" \
-"../../../bd/intellight_v2/ipshared/ef8d/hdl/intellight_database_v1_0_S00_AXI.v" \
-"../../../bd/intellight_v2/ipshared/ef8d/hdl/intellight_database_v1_0.v" \
+"../../../bd/intellight_v2/ipshared/9820/hdl/intellight_database_v1_0_S00_AXI.v" \
+"../../../bd/intellight_v2/ipshared/9820/hdl/intellight_database_v1_0.v" \
 "../../../bd/intellight_v2/ip/intellight_v2_intellight_database_0_2/sim/intellight_v2_intellight_database_0_2.v" \
 
 vlog -work axi_protocol_converter_v2_1_26  -v2k5 "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl" "+incdir+../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \

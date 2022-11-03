@@ -1,0 +1,29 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.287179",
+   "Default View_TopLeft":"-853,-150",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace port port-id_rst -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_wen0 -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_wen1 -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_wen2 -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_wen3 -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace portBus Dnew -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace portBus Droad0 -pg 1 -lvl 2 -x 300 -y 20 -defaultsOSRD
+preplace portBus Droad1 -pg 1 -lvl 2 -x 300 -y 40 -defaultsOSRD
+preplace portBus Droad2 -pg 1 -lvl 2 -x 300 -y 60 -defaultsOSRD
+preplace portBus Droad3 -pg 1 -lvl 2 -x 300 -y 80 -defaultsOSRD
+preplace portBus rd_addr -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace portBus wen -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace portBus wr_addr -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace inst action_ram_0 -pg 1 -lvl 1 -x 150 -y 70 -defaultsOSRD
+preplace inst action_ram_1 -pg 1 -lvl 1 -x 150 -y 190 -defaultsOSRD
+preplace inst action_ram_2 -pg 1 -lvl 1 -x 150 -y 310 -defaultsOSRD
+levelinfo -pg 1 0 150 300
+pagesize -pg 1 -db -bbox -sgen -140 0 440 380
+"
+}
+

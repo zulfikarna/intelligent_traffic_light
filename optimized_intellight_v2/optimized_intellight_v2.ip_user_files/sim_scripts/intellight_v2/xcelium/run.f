@@ -9,6 +9,13 @@
   "D:/Program/Vivado/2022.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
   "D:/Program/Vivado/2022.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
+-makelib xcelium_lib/xpm -sv \
+  "D:/Program/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "D:/Program/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+-endlib
+-makelib xcelium_lib/xpm \
+  "D:/Program/Vivado/2022.1/data/ip/xpm/xpm_VCOMP.vhd" \
+-endlib
 -makelib xcelium_lib/axi_infrastructure_v1_1_0 \
   "../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 -endlib
@@ -84,7 +91,6 @@
   "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v" \
   "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/CU.v" \
   "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/MII.v" \
-  "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/MOI.v" \
   "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/PG.v" \
   "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/QA.v" \
   "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/RD.v" \
@@ -92,8 +98,8 @@
   "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/file_arith.v" \
   "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/file_max.v" \
   "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/file_mux.v" \
-  "../../../bd/intellight_v2/ipshared/ef8d/hdl/intellight_database_v1_0_S00_AXI.v" \
-  "../../../bd/intellight_v2/ipshared/ef8d/hdl/intellight_database_v1_0.v" \
+  "../../../bd/intellight_v2/ipshared/9820/hdl/intellight_database_v1_0_S00_AXI.v" \
+  "../../../bd/intellight_v2/ipshared/9820/hdl/intellight_database_v1_0.v" \
   "../../../bd/intellight_v2/ip/intellight_v2_intellight_database_0_2/sim/intellight_v2_intellight_database_0_2.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_26 \

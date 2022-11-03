@@ -18,11 +18,11 @@ module multiply
     );
     
     wire [1:0] i, j, k; 
+    wire [Q_WIDTH-1:0] w0, w1, w2, w3, w4;
     assign i = (c[2])? 2'd1 : 2'd0; // if i==1, then times by 0.5
     assign j = (c[1])? 2'd2 : 2'd0; // if j==1, then times by 0.25 
     assign k = (c[0])? 2'd3 : 2'd0; // if k==1, then times by 0.125
     
-    wire [Q_WIDTH-1:0] w0, w1, w2, w3, w4;
     r_shift s0(.in0(in0),   .step(i),   .out0(w0));
     r_shift s1(.in0(in0),   .step(j),   .out0(w1));
     r_shift s3(.in0(in0),   .step(k),   .out0(w2));
@@ -55,6 +55,7 @@ module lfsr
     output wire [DATA_WIDTH-1:0] out0
     );
     // Register 
+    wire r_xnor;
     reg [DATA_WIDTH:1] r_lsfr;
     always@(posedge clk) begin
         if (rst) begin
@@ -63,7 +64,7 @@ module lfsr
             r_lsfr <= {r_lsfr[DATA_WIDTH-1:1], r_xnor};
         end
     end
-    wire r_xnor;
+    
     genvar i;
     generate 
         if (DATA_WIDTH == 4) begin 

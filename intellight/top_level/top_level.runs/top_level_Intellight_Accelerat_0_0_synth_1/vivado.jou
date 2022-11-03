@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Nov  3 19:55:44 2022
+# Process ID: 20748
+# Current directory: D:/intelligent_traffic_light/intellight/top_level/top_level.runs/top_level_Intellight_Accelerat_0_0_synth_1
+# Command line: vivado.exe -log top_level_Intellight_Accelerat_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_Intellight_Accelerat_0_0.tcl
+# Log file: D:/intelligent_traffic_light/intellight/top_level/top_level.runs/top_level_Intellight_Accelerat_0_0_synth_1/top_level_Intellight_Accelerat_0_0.vds
+# Journal file: D:/intelligent_traffic_light/intellight/top_level/top_level.runs/top_level_Intellight_Accelerat_0_0_synth_1\vivado.jou
+# Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
+#-----------------------------------------------------------
+source top_level_Intellight_Accelerat_0_0.tcl -notrace

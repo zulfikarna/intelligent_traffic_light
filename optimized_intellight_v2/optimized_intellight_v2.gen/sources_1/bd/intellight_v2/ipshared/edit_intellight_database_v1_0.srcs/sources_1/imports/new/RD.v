@@ -21,12 +21,12 @@ module RD // verified
     localparam N_ROAD = 4;
     
     wire [L_WIDTH-1:0] L [0:3];
+    wire signed [R_WIDTH-1:0] R_temp [0:3];
     assign L[0] = L0;
     assign L[1] = L1;
     assign L[2] = L2;
     assign L[3] = L3;
     
-    wire signed [R_WIDTH-1:0] R_temp [0:3];
     genvar i;
     generate 
         for (i = 0 ; i < N_ROAD; i = i + 1) begin 

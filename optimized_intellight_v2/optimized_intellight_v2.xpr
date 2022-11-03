@@ -67,13 +67,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="37"/>
-    <Option Name="WTModelSimExportSim" Val="37"/>
-    <Option Name="WTQuestaExportSim" Val="37"/>
+    <Option Name="WTXSimExportSim" Val="38"/>
+    <Option Name="WTModelSimExportSim" Val="38"/>
+    <Option Name="WTQuestaExportSim" Val="38"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="37"/>
-    <Option Name="WTRivieraExportSim" Val="37"/>
-    <Option Name="WTActivehdlExportSim" Val="37"/>
+    <Option Name="WTVcsExportSim" Val="38"/>
+    <Option Name="WTRivieraExportSim" Val="38"/>
+    <Option Name="WTActivehdlExportSim" Val="38"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -97,17 +97,17 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="action_ram.bd" FileRelPathName="ip/action_ram_blk_mem_gen_0_0/action_ram_blk_mem_gen_0_0.xci">
-          <Proxy FileSetName="action_ram_blk_mem_gen_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="action_ram.bd" FileRelPathName="ip/action_ram_action_ram_0_0/action_ram_action_ram_0_0.xci">
-          <Proxy FileSetName="action_ram_action_ram_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="action_ram.bd" FileRelPathName="ip/action_ram_action_ram_1_0/action_ram_action_ram_1_0.xci">
           <Proxy FileSetName="action_ram_action_ram_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="action_ram.bd" FileRelPathName="ip/action_ram_action_ram_0_1/action_ram_action_ram_0_1.xci">
           <Proxy FileSetName="action_ram_action_ram_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="action_ram.bd" FileRelPathName="ip/action_ram_action_ram_0_0/action_ram_action_ram_0_0.xci">
+          <Proxy FileSetName="action_ram_action_ram_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="action_ram.bd" FileRelPathName="ip/action_ram_blk_mem_gen_0_0/action_ram_blk_mem_gen_0_0.xci">
+          <Proxy FileSetName="action_ram_blk_mem_gen_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/action_ram/hdl/action_ram_wrapper.v">
@@ -123,44 +123,44 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_2_0/intellight_v2_comm_ram_2_0.xci">
-          <Proxy FileSetName="intellight_v2_comm_ram_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_bram_ctrl_1_0/intellight_v2_axi_bram_ctrl_1_0.xci">
-          <Proxy FileSetName="intellight_v2_axi_bram_ctrl_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_bram_ctrl_2_0/intellight_v2_axi_bram_ctrl_2_0.xci">
-          <Proxy FileSetName="intellight_v2_axi_bram_ctrl_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_bram_ctrl_0_0/intellight_v2_axi_bram_ctrl_0_0.xci">
-          <Proxy FileSetName="intellight_v2_axi_bram_ctrl_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_bram_ctrl_3_0/intellight_v2_axi_bram_ctrl_3_0.xci">
-          <Proxy FileSetName="intellight_v2_axi_bram_ctrl_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_0_0/intellight_v2_comm_ram_0_0.xci">
-          <Proxy FileSetName="intellight_v2_comm_ram_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_1_0/intellight_v2_comm_ram_1_0.xci">
-          <Proxy FileSetName="intellight_v2_comm_ram_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_3_0/intellight_v2_comm_ram_3_0.xci">
-          <Proxy FileSetName="intellight_v2_comm_ram_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_intellight_database_0_2/intellight_v2_intellight_database_0_2.xci">
-          <Proxy FileSetName="intellight_v2_intellight_database_0_2"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_processing_system7_0_1/intellight_v2_processing_system7_0_1.xci">
           <Proxy FileSetName="intellight_v2_processing_system7_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_rst_ps7_0_100M_0/intellight_v2_rst_ps7_0_100M_0.xci">
           <Proxy FileSetName="intellight_v2_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_bram_ctrl_0_0/intellight_v2_axi_bram_ctrl_0_0.xci">
+          <Proxy FileSetName="intellight_v2_axi_bram_ctrl_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_intc_0_0/intellight_v2_axi_intc_0_0.xci">
           <Proxy FileSetName="intellight_v2_axi_intc_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_xbar_0/intellight_v2_xbar_0.xci">
           <Proxy FileSetName="intellight_v2_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_0_0/intellight_v2_comm_ram_0_0.xci">
+          <Proxy FileSetName="intellight_v2_comm_ram_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_2_0/intellight_v2_comm_ram_2_0.xci">
+          <Proxy FileSetName="intellight_v2_comm_ram_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_3_0/intellight_v2_comm_ram_3_0.xci">
+          <Proxy FileSetName="intellight_v2_comm_ram_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_comm_ram_1_0/intellight_v2_comm_ram_1_0.xci">
+          <Proxy FileSetName="intellight_v2_comm_ram_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_bram_ctrl_1_0/intellight_v2_axi_bram_ctrl_1_0.xci">
+          <Proxy FileSetName="intellight_v2_axi_bram_ctrl_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_intellight_database_0_2/intellight_v2_intellight_database_0_2.xci">
+          <Proxy FileSetName="intellight_v2_intellight_database_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_bram_ctrl_3_0/intellight_v2_axi_bram_ctrl_3_0.xci">
+          <Proxy FileSetName="intellight_v2_axi_bram_ctrl_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="intellight_v2.bd" FileRelPathName="ip/intellight_v2_axi_bram_ctrl_2_0/intellight_v2_axi_bram_ctrl_2_0.xci">
+          <Proxy FileSetName="intellight_v2_axi_bram_ctrl_2_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/intellight_v2_wrapper.v">
@@ -673,7 +673,9 @@
     </Run>
     <Run Id="intellight_v2_intellight_database_0_2_synth_1" Type="Ft3:Synth" SrcSet="intellight_v2_intellight_database_0_2" Part="xc7z020clg400-1" ConstrsSet="intellight_v2_intellight_database_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/intellight_v2_intellight_database_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_v2_intellight_database_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/intellight_v2_intellight_database_0_2_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -973,7 +975,9 @@
     </Run>
     <Run Id="intellight_v2_intellight_database_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="intellight_v2_intellight_database_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="intellight_v2_intellight_database_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/intellight_v2_intellight_database_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/intellight_v2_intellight_database_0_2_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

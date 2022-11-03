@@ -40,8 +40,14 @@ module MII
     localparam  N_LEVEL = 2**(L_WIDTH/2);
     
     // 1. Address configuration
-    reg [S_WIDTH-1:0] S_reg0, S_reg1, S_reg2, S_reg3, S_reg4, S_reg5;
+    wire [Q_WIDTH*2*$clog2(L_WIDTH)-1:0] D;
+    wire wen0_temp, wen1_temp, wen2_temp, wen3_temp;
+    wire [WEN_WIDTH-1:0] wen_bram_temp;
     wire [ADDR_WIDTH-1:0] wr_addr_temp;
+    reg [A_WIDTH-1:0] A_reg [0:5];
+    reg [Q_WIDTH*2*$clog2(L_WIDTH)-1:0] D_reg [0:3];
+    reg [S_WIDTH-1:0] S_reg0, S_reg1, S_reg2, S_reg3, S_reg4, S_reg5;
+    
     always @(posedge clk) begin
         S_reg5 = S_reg4;
         S_reg5 = S_reg4;
@@ -56,8 +62,7 @@ module MII
     assign rd_addr = (S<<2)| {ADDR_WIDTH{1'b0}};
     assign wr_addr_temp = (S_reg3<<2) | {ADDR_WIDTH{1'b0}};
     
-    // 2. Action register
-    reg [A_WIDTH-1:0] A_reg [0:5];
+    // 2. Action register   
     always @(posedge clk) begin 
         A_reg[5] = A_reg[4];
         A_reg[4] = A_reg[3];
@@ -68,7 +73,6 @@ module MII
     end
     
     // 3. Write-Enable Configuration
-    wire [WEN_WIDTH-1:0] wen_bram_temp;
     wen_decoder #(.L_WIDTH(L_WIDTH)) decod0 
                  (.A(A_reg[1]), .wen(wen_bram_temp));
                  
@@ -77,7 +81,6 @@ module MII
     end
     
     // 4. Enable Configuration 
-    wire wen0_temp, wen1_temp, wen2_temp, wen3_temp;
     en_decoder #(.L_WIDTH(L_WIDTH)) decod1
                 (.A(A_reg[1]), .wen(wen_cu), .wen0(wen0_temp), .wen1(wen1_temp), .wen2(wen2_temp), .wen3(wen3_temp));
     always @(posedge clk) begin
@@ -88,12 +91,11 @@ module MII
     end
     
     // 5. Data Configuration 
-    wire [Q_WIDTH*2*$clog2(L_WIDTH)-1:0] D;
     assign D = (A_road==2'd0)? Droad0:
                (A_road==2'd1)? Droad1: 
                (A_road==2'd2)? Droad2: 
                (A_road==2'd3)? Droad3: {Q_WIDTH*4{1'bx}};
-    reg [Q_WIDTH*2*$clog2(L_WIDTH)-1:0] D_reg [0:3];
+    
     always @(posedge clk) begin
         D_reg[3] = D_reg[2];
         D_reg[2] = D_reg[1];

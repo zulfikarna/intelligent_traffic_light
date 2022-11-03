@@ -31,10 +31,18 @@ module PG
     localparam  N_LEVEL = 2**(L_WIDTH/2);
     
     // Registers 
+    wire [Q_WIDTH*N_LEVEL-1:0] D;
+    wire signed [Q_WIDTH-1:0] Q [0:N_LEVEL-1];
+    wire signed [Q_WIDTH-1:0] Q_max;
+    wire [A_DUR_WIDTH-1:0] A_dur_gred;
+    wire [A_DUR_WIDTH-1:0] A_dur_rand;
+    wire [A_DUR_WIDTH-1:0] random;
+    wire [A_WIDTH-1:0] A_gred;
+    wire [A_WIDTH-1:0] A_rand;
     reg signed [Q_WIDTH-1:0] Q_max_reg0;  
-     
     reg A_sel_reg0;  
     reg [A_ROAD_WIDTH-1:0] A_road_reg0; 
+    reg signed [Q_WIDTH-1:0] Q_reg0 [0:N_LEVEL-1];  
     always @(posedge clk) begin
         if(rst)begin
             A_road_reg0 <= {A_ROAD_WIDTH{1'b0}};
@@ -48,7 +56,6 @@ module PG
     end  
     
     genvar i;
-    reg signed [Q_WIDTH-1:0] Q_reg0 [0:N_LEVEL-1];  
     generate 
         for (i = 0; i < N_LEVEL; i = i + 1) begin
             always @(posedge clk) begin 
@@ -61,27 +68,20 @@ module PG
         end
     endgenerate
     
-    // Select data from BRAM  
-    wire [Q_WIDTH*N_LEVEL-1:0] D;
+    // Select data from BRAM 
     assign D = (A_road==2'd0)? Droad0:
                (A_road==2'd1)? Droad1: 
                (A_road==2'd2)? Droad2: 
                (A_road==2'd3)? Droad3: {Q_WIDTH*4{1'bx}};
     
     // Truncate data into Q-values
-    wire signed [Q_WIDTH-1:0] Q [0:N_LEVEL-1];
     generate 
         for (i = 0; i < N_LEVEL; i = i + 1) begin
             assign Q[i] = D[Q_WIDTH*(i+1)-1:Q_WIDTH*i];
         end
-    endgenerate
-//    assign Q[0] = D[Q_WIDTH-1:0];
-//    assign Q[1] = D[Q_WIDTH*2-1:Q_WIDTH];
-//    assign Q[2] = D[Q_WIDTH*3-1:Q_WIDTH*2];
-//    assign Q[3] = D[Q_WIDTH*4-1:Q_WIDTH*3];        
+    endgenerate   
     
     // Examine the maximum Q-value
-    wire signed [Q_WIDTH-1:0] Q_max;
     generate 
         if (N_LEVEL == 4) begin 
             max4to1 #(.DATA_WIDTH(Q_WIDTH))    max0(.in0(Q[0]), .in1(Q[1]), .in2(Q[2]), .in3(Q[3]),
@@ -94,7 +94,6 @@ module PG
     endgenerate
     
     // Greed duration action setting 
-    wire [A_DUR_WIDTH-1:0] A_dur_gred;
     generate 
         if (N_LEVEL == 4) begin 
             assign A_dur_gred =  (Q_reg0[0] == Q_max_reg0)? 4'd0:
@@ -114,14 +113,10 @@ module PG
     endgenerate
                 
     // Random duration action setting 
-    wire [A_DUR_WIDTH-1:0] A_dur_rand;
-    wire [A_DUR_WIDTH-1:0] random;
     lfsr #(.DATA_WIDTH(A_DUR_WIDTH)) rand(.clk(clk), .rst(rst), .seed({A_DUR_WIDTH{1'b0}}), .out0(random));
     assign A_dur_rand[A_DUR_WIDTH-1:0] = random[A_DUR_WIDTH-1:0];
    
     // Exploration-Exploitation deciding
-    wire [A_WIDTH-1:0] A_gred;
-    wire [A_WIDTH-1:0] A_rand;
     assign A_gred = {A_dur_gred, A_road_reg0};
     assign A_rand = {A_dur_rand, A_road_reg0};
     assign A = ((!A_sel)&(!mode))? A_rand  : A_gred;

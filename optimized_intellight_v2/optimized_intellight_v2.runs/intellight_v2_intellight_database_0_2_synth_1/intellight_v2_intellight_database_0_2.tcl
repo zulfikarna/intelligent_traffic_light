@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "intellight_v2_intellight_database_0_2_synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
@@ -81,6 +80,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/wt [current_project]
 set_property parent.project_path D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.xpr [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part www.digilentinc.com:pynq-z1:part0:1.0 [current_project]
