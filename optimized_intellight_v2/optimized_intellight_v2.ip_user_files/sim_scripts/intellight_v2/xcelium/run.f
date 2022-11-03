@@ -9,13 +9,6 @@
   "D:/Program/Vivado/2022.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
   "D:/Program/Vivado/2022.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
--makelib xcelium_lib/xpm -sv \
-  "D:/Program/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-  "D:/Program/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
--endlib
--makelib xcelium_lib/xpm \
-  "D:/Program/Vivado/2022.1/data/ip/xpm/xpm_VCOMP.vhd" \
--endlib
 -makelib xcelium_lib/axi_infrastructure_v1_1_0 \
   "../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 -endlib
@@ -88,16 +81,20 @@
   "../../../bd/intellight_v2/ip/intellight_v2_comm_ram_2_0/sim/intellight_v2_comm_ram_2_0.v" \
   "../../../bd/intellight_v2/ip/intellight_v2_comm_ram_3_0/sim/intellight_v2_comm_ram_3_0.v" \
   "../../../bd/intellight_v2/ip/intellight_v2_action_ram_wrapper_0_0/sim/intellight_v2_action_ram_wrapper_0_0.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_CU_0_0/sim/intellight_v2_CU_0_0.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_RD_0_0/sim/intellight_v2_RD_0_0.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_MOI_0_0/sim/intellight_v2_MOI_0_0.v" \
-  "../../../bd/intellight_v2/ipshared/9d86/hdl/intellight_database_v1_0_S00_AXI.v" \
-  "../../../bd/intellight_v2/ipshared/9d86/hdl/intellight_database_v1_0.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_intellight_database_0_1/sim/intellight_v2_intellight_database_0_1.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_MII_0_0/sim/intellight_v2_MII_0_0.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_SD_0_1/sim/intellight_v2_SD_0_1.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_QA_0_0/sim/intellight_v2_QA_0_0.v" \
-  "../../../bd/intellight_v2/ip/intellight_v2_PG_0_0/sim/intellight_v2_PG_0_0.v" \
+  "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v" \
+  "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/CU.v" \
+  "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/MII.v" \
+  "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/MOI.v" \
+  "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/PG.v" \
+  "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/QA.v" \
+  "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/RD.v" \
+  "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/SD.v" \
+  "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/file_arith.v" \
+  "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/file_max.v" \
+  "../../../bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/file_mux.v" \
+  "../../../bd/intellight_v2/ipshared/ef8d/hdl/intellight_database_v1_0_S00_AXI.v" \
+  "../../../bd/intellight_v2/ipshared/ef8d/hdl/intellight_database_v1_0.v" \
+  "../../../bd/intellight_v2/ip/intellight_v2_intellight_database_0_2/sim/intellight_v2_intellight_database_0_2.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_26 \
   "../../../../optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/90c8/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

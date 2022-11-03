@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log intellight_v2_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source intellight_v2_wrapper.tcl
+EAStep vivado -log Acceleratorx.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Acceleratorx.tcl

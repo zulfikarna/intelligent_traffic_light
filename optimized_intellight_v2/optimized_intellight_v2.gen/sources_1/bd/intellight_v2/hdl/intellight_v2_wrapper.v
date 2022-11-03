@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Wed Nov  2 16:27:54 2022
+//Date        : Thu Nov  3 17:52:20 2022
 //Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 //Command     : generate_target intellight_v2_wrapper.bd
 //Design      : intellight_v2_wrapper
@@ -31,12 +31,7 @@ module intellight_v2_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    finish,
-    idle,
-    wen0,
-    wen1,
-    wen2,
-    wen3);
+    finish);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -59,11 +54,6 @@ module intellight_v2_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   output finish;
-  output idle;
-  output wen0;
-  output wen1;
-  output wen2;
-  output wen3;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -87,11 +77,6 @@ module intellight_v2_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire finish;
-  wire idle;
-  wire wen0;
-  wire wen1;
-  wire wen2;
-  wire wen3;
 
   intellight_v2 intellight_v2_i
        (.DDR_addr(DDR_addr),
@@ -115,10 +100,5 @@ module intellight_v2_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .finish(finish),
-        .idle(idle),
-        .wen0(wen0),
-        .wen1(wen1),
-        .wen2(wen2),
-        .wen3(wen3));
+        .finish(finish));
 endmodule

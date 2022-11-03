@@ -1,56 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1667300975" LaunchIncrCheckpoint="$PPRDIR/synth_1/PG.dcp">
-  <File Type="PA-TCL" Name="intellight_v2_wrapper.tcl"/>
-  <File Type="REPORTS-TCL" Name="intellight_v2_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="intellight_v2_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="intellight_v2_wrapper_utilization_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1667474816" LaunchIncrCheckpoint="$PPRDIR/synth_1/PG.dcp">
+  <File Type="PA-TCL" Name="Acceleratorx.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Acceleratorx_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Acceleratorx_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Acceleratorx.vds"/>
+  <File Type="RDS-UTIL" Name="Acceleratorx_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="intellight_v2_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="intellight_v2_wrapper.dcp"/>
+  <File Type="RDS-DCP" Name="Acceleratorx.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Acceleratorx_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Acceleratorx_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/bd/action_ram/action_ram.bd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PGENDIR/sources_1/bd/action_ram/hdl/action_ram_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/file_arith.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/CU.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/RD.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/parameters.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/MOI.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -64,7 +25,42 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/MOI.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PG.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/QA.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RD.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/SD.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/file_arith.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -85,15 +81,24 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/QA.v">
+    <File Path="$PSRCDIR/sources_1/new/Accelerator.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/PG.v">
+    <File Path="$PSRCDIR/sources_1/bd/action_ram/action_ram.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/action_ram/hdl/action_ram_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -101,6 +106,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/intellight_v2/intellight_v2.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -108,6 +114,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/hdl/intellight_v2_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PGENDIR/sources_1/bd/intellight_v2/hdl/intellight_v2_wrapper.v"/>
         <Attr Name="ImportTime" Val="1667377278"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -115,9 +122,25 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/accelerator/accelerator.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/accelerator/hdl/accelerator_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="intellight_v2_wrapper"/>
+      <Option Name="TopModule" Val="Acceleratorx"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -151,12 +174,12 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_processing_system7_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_axi_intc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_axi_bram_ctrl_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_axi_intc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_axi_bram_ctrl_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="action_ram_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="action_ram_action_ram_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="action_ram_action_ram_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="action_ram_action_ram_0_0"/>
@@ -166,13 +189,5 @@
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_comm_ram_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_comm_ram_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_comm_ram_3_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_action_ram_wrapper_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_RD_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_SD_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_intellight_database_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_MOI_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_QA_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_CU_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_MII_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_PG_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_intellight_database_0_2"/>
 </GenRun>

@@ -1,6 +1,222 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Thu Nov  3 17:51:56 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'intellight_v2_intellight_database_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of intellight_v2_intellight_database_0_2 (xilinx.com:user:intellight_database:1.0) from (Rev. 14) to (Rev. 15)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'intellight_v2_intellight_database_0_2'. These changes may impact your design.
+
+
+-Upgrade has added port 'finish'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Thu Nov  3 17:41:13 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'intellight_v2_intellight_database_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of intellight_v2_intellight_database_0_2 (xilinx.com:user:intellight_database:1.0) from (Rev. 13) to (Rev. 14)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'intellight_v2_intellight_database_0_2'. These changes may impact your design.
+
+
+-Upgrade has added port 'Dnew'
+
+-Upgrade has added port 'Droad0'
+
+-Upgrade has added port 'Droad1'
+
+-Upgrade has added port 'Droad2'
+
+-Upgrade has added port 'Droad3'
+
+-Upgrade has added port 'rd_addr'
+
+-Upgrade has added port 'wen0'
+
+-Upgrade has added port 'wen1'
+
+-Upgrade has added port 'wen2'
+
+-Upgrade has added port 'wen3'
+
+-Upgrade has added port 'wen_bram'
+
+-Upgrade has added port 'wr_addr'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Thu Nov  3 17:15:08 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'intellight_v2_intellight_database_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of intellight_v2_intellight_database_0_1 (xilinx.com:user:intellight_database:1.0) from (Rev. 8) to (Rev. 13)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'intellight_v2_intellight_database_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed port 'L_dec'
+
+-Upgrade has removed port 'L_inc_a'
+
+-Upgrade has removed port 'L_inc_b'
+
+-Upgrade has removed port 'L_inc_c'
+
+-Upgrade has removed port 'L_inc_d'
+
+-Upgrade has removed port 'Q_00'
+
+-Upgrade has removed port 'Q_01'
+
+-Upgrade has removed port 'Q_02'
+
+-Upgrade has removed port 'Q_03'
+
+-Upgrade has removed port 'Q_10'
+
+-Upgrade has removed port 'Q_11'
+
+-Upgrade has removed port 'Q_12'
+
+-Upgrade has removed port 'Q_13'
+
+-Upgrade has removed port 'Q_20'
+
+-Upgrade has removed port 'Q_21'
+
+-Upgrade has removed port 'Q_22'
+
+-Upgrade has removed port 'Q_23'
+
+-Upgrade has removed port 'Q_30'
+
+-Upgrade has removed port 'Q_31'
+
+-Upgrade has removed port 'Q_32'
+
+-Upgrade has removed port 'Q_33'
+
+-Upgrade has removed port 'S_sim'
+
+-Upgrade has removed port 'alpha'
+
+-Upgrade has removed port 'gamma'
+
+-Upgrade has removed port 'max_episode'
+
+-Upgrade has removed port 'max_step'
+
+-Upgrade has removed port 'mode'
+
+-Upgrade has removed port 'run'
+
+-Upgrade has removed port 'seed'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Thu Nov  3 14:57:31 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'intellight_v2_Acceleratorx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of intellight_v2_Acceleratorx_0_0 (xilinx.com:user:Acceleratorx:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Thu Nov  3 14:53:38 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'intellight_v2_Acceleratorx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of intellight_v2_Acceleratorx_0_0 (xilinx.com:user:Acceleratorx:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
 | Date         : Mon Oct 31 15:39:04 2022
 | Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

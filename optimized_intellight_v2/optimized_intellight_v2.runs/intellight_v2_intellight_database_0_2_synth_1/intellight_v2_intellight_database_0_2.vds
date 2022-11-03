@@ -1,0 +1,54 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Nov  3 17:52:47 2022
+# Process ID: 5808
+# Current directory: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_intellight_database_0_2_synth_1
+# Command line: vivado.exe -log intellight_v2_intellight_database_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source intellight_v2_intellight_database_0_2.tcl
+# Log file: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_intellight_database_0_2_synth_1/intellight_v2_intellight_database_0_2.vds
+# Journal file: D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_intellight_database_0_2_synth_1\vivado.jou
+# Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
+#-----------------------------------------------------------
+source intellight_v2_intellight_database_0_2.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 865.074 ; gain = 96.613
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/optimized_intellight_v2'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'd:/intelligent_traffic_light/optimized_intellight_v2' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.runs/intellight_v2_intellight_database_0_2_synth_1'.)
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'd:/intelligent_traffic_light/ip_repo/intellight_database/intellight_database_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program/Vivado/2022.1/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 1390.633 ; gain = 525.293
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/ip 
+Command: synth_design -top intellight_v2_intellight_database_0_2 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18060
+ERROR: [Synth 8-36] 'Q_00' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:128]
+ERROR: [Synth 8-36] 'Q_01' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:129]
+ERROR: [Synth 8-36] 'Q_02' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:130]
+ERROR: [Synth 8-36] 'Q_03' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:131]
+ERROR: [Synth 8-36] 'Q_10' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:132]
+ERROR: [Synth 8-36] 'Q_11' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:133]
+ERROR: [Synth 8-36] 'Q_12' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:134]
+ERROR: [Synth 8-36] 'Q_13' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:135]
+ERROR: [Synth 8-36] 'Q_20' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:136]
+ERROR: [Synth 8-36] 'Q_21' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:137]
+ERROR: [Synth 8-36] 'Q_22' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:138]
+ERROR: [Synth 8-36] 'Q_23' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:139]
+ERROR: [Synth 8-36] 'Q_30' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:140]
+ERROR: [Synth 8-36] 'Q_31' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:141]
+ERROR: [Synth 8-36] 'Q_32' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:142]
+ERROR: [Synth 8-36] 'Q_33' is not declared [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:143]
+INFO: [Synth 8-8750] module 'Acceleratorx' ignored due to previous errors [d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v:283]
+Failed to read verilog 'd:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ipshared/edit_intellight_database_v1_0.srcs/sources_1/imports/new/Accelerator.v'
+INFO: [Common 17-83] Releasing license: Synthesis
+11 Infos, 3 Warnings, 0 Critical Warnings and 17 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  3 17:53:40 2022...

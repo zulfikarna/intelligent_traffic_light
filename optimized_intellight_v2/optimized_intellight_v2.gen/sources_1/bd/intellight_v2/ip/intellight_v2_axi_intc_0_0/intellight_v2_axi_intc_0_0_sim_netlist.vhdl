@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Thu Sep 29 11:09:43 2022
+-- Date        : Thu Nov  3 17:54:20 2022
 -- Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.gen/sources_1/bd/intellight_v2/ip/intellight_v2_axi_intc_0_0/intellight_v2_axi_intc_0_0_sim_netlist.vhdl
@@ -844,7 +844,6 @@ entity intellight_v2_axi_intc_0_0_intc_core is
     mer : out STD_LOGIC;
     irq : out STD_LOGIC;
     ier : out STD_LOGIC;
-    intr : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_aclk : in STD_LOGIC;
     \REG_GEN[0].IAR_NORMAL_MODE_GEN.iar_reg[0]_1\ : in STD_LOGIC;
     \mer_int_reg[1]_0\ : in STD_LOGIC;
@@ -855,6 +854,7 @@ entity intellight_v2_axi_intc_0_0_intc_core is
     s_axi_wdata : in STD_LOGIC_VECTOR ( 0 to 0 );
     Bus_RNW_reg : in STD_LOGIC;
     p_18_in : in STD_LOGIC;
+    intr : in STD_LOGIC_VECTOR ( 0 to 0 );
     p_16_in : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -862,6 +862,9 @@ entity intellight_v2_axi_intc_0_0_intc_core is
 end intellight_v2_axi_intc_0_0_intc_core;
 
 architecture STRUCTURE of intellight_v2_axi_intc_0_0_intc_core is
+  signal \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff\ : STD_LOGIC_VECTOR ( 0 to 1 );
+  attribute async_reg : string;
+  attribute async_reg of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff\ : signal is "true";
   signal \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0\ : STD_LOGIC;
   signal \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1\ : STD_LOGIC;
   signal \IPR_GEN.ipr[0]_i_1_n_0\ : STD_LOGIC;
@@ -882,6 +885,12 @@ architecture STRUCTURE of intellight_v2_axi_intc_0_0_intc_core is
   signal \^p_0_in\ : STD_LOGIC;
   signal \^s_axi_aresetn_0\ : STD_LOGIC;
   signal \^sie\ : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[0]\ : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[0]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[1]\ : label is "yes";
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \IRQ_LEVEL_GEN.IRQ_LEVEL_NORMAL_ON_AXI_CLK_GEN.Irq_i_1\ : label is "soft_lutpair18";
   attribute SOFT_HLUTNM of \REG_GEN[0].ier[0]_i_2\ : label is "soft_lutpair18";
@@ -904,13 +913,35 @@ begin
       Q => \^cie\,
       R => '0'
     );
+\INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => intr(0),
+      Q => \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff\(0),
+      R => '0'
+    );
+\INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff\(0),
+      Q => \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff\(1),
+      R => '0'
+    );
 \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"0000AE00"
     )
         port map (
       I0 => hw_intr,
-      I1 => intr(0),
+      I1 => \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff\(1),
       I2 => \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1\,
       I3 => s_axi_aresetn,
       I4 => \^reg_gen[0].iar_normal_mode_gen.iar_reg[0]_0\,
@@ -928,7 +959,7 @@ begin
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => intr(0),
+      D => \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff\(1),
       Q => \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1\,
       R => \^s_axi_aresetn_0\
     );
@@ -2045,7 +2076,7 @@ entity intellight_v2_axi_intc_0_0_axi_intc is
   attribute C_ADDR_WIDTH : integer;
   attribute C_ADDR_WIDTH of intellight_v2_axi_intc_0_0_axi_intc : entity is 32;
   attribute C_ASYNC_INTR : integer;
-  attribute C_ASYNC_INTR of intellight_v2_axi_intc_0_0_axi_intc : entity is -2;
+  attribute C_ASYNC_INTR of intellight_v2_axi_intc_0_0_axi_intc : entity is -1;
   attribute C_CASCADE_MASTER : integer;
   attribute C_CASCADE_MASTER of intellight_v2_axi_intc_0_0_axi_intc : entity is 0;
   attribute C_DISABLE_SYNCHRONIZERS : integer;
@@ -2379,7 +2410,7 @@ architecture STRUCTURE of intellight_v2_axi_intc_0_0 is
   attribute C_ADDR_WIDTH : integer;
   attribute C_ADDR_WIDTH of U0 : label is 32;
   attribute C_ASYNC_INTR : integer;
-  attribute C_ASYNC_INTR of U0 : label is -2;
+  attribute C_ASYNC_INTR of U0 : label is -1;
   attribute C_CASCADE_MASTER : integer;
   attribute C_CASCADE_MASTER of U0 : label is 0;
   attribute C_DISABLE_SYNCHRONIZERS : integer;

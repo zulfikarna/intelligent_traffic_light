@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1667474659" LaunchIncrCheckpoint="$PPRDIR/../edit_intellight_database_v1_0.srcs/utils_1/imports/synth_1/intellight_database_v1_0.dcp">
+  <File Type="PA-TCL" Name="intellight_database_v1_0.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="intellight_database_v1_0_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="intellight_database_v1_0_reports.tcl"/>
+  <File Type="RDS-RDS" Name="intellight_database_v1_0.vds"/>
+  <File Type="RDS-UTIL" Name="intellight_database_v1_0_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="intellight_database_v1_0_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="intellight_database_v1_0.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="intellight_database_v1_0_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="intellight_database_v1_0_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/new/Accelerator.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/Accelerator.v"/>
+        <Attr Name="ImportTime" Val="1667457787"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/CU.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/CU.v"/>
+        <Attr Name="ImportTime" Val="1667468388"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/MII.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/MII.v"/>
+        <Attr Name="ImportTime" Val="1667468410"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/PG.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/PG.v"/>
+        <Attr Name="ImportTime" Val="1667468381"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/QA.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/QA.v"/>
+        <Attr Name="ImportTime" Val="1667301503"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/RD.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/RD.v"/>
+        <Attr Name="ImportTime" Val="1667469582"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/SD.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/SD.v"/>
+        <Attr Name="ImportTime" Val="1667386969"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/file_arith.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_arith.v"/>
+        <Attr Name="ImportTime" Val="1667301126"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/file_max.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_max.v"/>
+        <Attr Name="ImportTime" Val="1667291681"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/file_mux.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../optimized_intellight_v2/optimized_intellight_v2.srcs/sources_1/new/file_mux.v"/>
+        <Attr Name="ImportTime" Val="1667291406"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/intellight_database_1.0/hdl/intellight_database_v1_0_S00_AXI.v">
+      <FileInfo>
+        <Attr Name="Library" Val=""/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/intellight_database_1.0/hdl/intellight_database_v1_0.v">
+      <FileInfo>
+        <Attr Name="Library" Val=""/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/intellight_database_1.0/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="intellight_database_v1_0"/>
+      <Option Name="TopRTLFile" Val="$PPRDIR/intellight_database_1.0/hdl/intellight_database_v1_0.v"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PPRDIR/../edit_intellight_database_v1_0.srcs/utils_1/imports/synth_1/intellight_database_v1_0.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

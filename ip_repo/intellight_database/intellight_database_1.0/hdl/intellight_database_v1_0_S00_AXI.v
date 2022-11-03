@@ -4,9 +4,11 @@
 	module intellight_database_v1_0_S00_AXI #
 	(
 		// Users to add parameters here
-		parameter integer Q_WIDTH = 16,
-		parameter integer L_WIDTH = 8,
-
+        parameter integer L_WIDTH = 4,
+        parameter integer R_WIDTH = 16,
+        parameter integer Q_WIDTH = 16,
+        parameter integer CTR_WIDTH = 16,
+        parameter integer ADDR_WIDTH = 32,
 		// User parameters ends
 		// Do not modify the parameters beyond this line
 
@@ -17,17 +19,12 @@
 	)
 	(
         // Users to add ports here 
-		output wire mode, run,
-		output wire [2:0] alpha, gamma,
-		output wire [15:0] max_step, max_episode,
-		output wire [15:0] seed,
-		output wire [L_WIDTH*2-1:0] S_sim,
-		output wire [L_WIDTH*4-1:0] L_inc_a, L_inc_b, L_inc_c, L_inc_d, L_dec,
-		input wire [Q_WIDTH-1:0] Q_00, Q_01, Q_02, Q_03,
-		input wire [Q_WIDTH-1:0] Q_10, Q_11, Q_12, Q_13,
-		input wire [Q_WIDTH-1:0] Q_20, Q_21, Q_22, Q_23,
-		input wire [Q_WIDTH-1:0] Q_30, Q_31, Q_32, Q_33,
-
+		input wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0] Droad0, Droad1, Droad2, Droad3, 
+		output wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0] Dnew,
+		output wire[ADDR_WIDTH-1:0] rd_addr, wr_addr,
+		output wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0] wen_bram,
+		output wire wen0, wen1, wen2, wen3,
+		output wire finish,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -93,6 +90,63 @@
 		input wire  S_AXI_RREADY
 	);
 	localparam S_WIDTH = 2*L_WIDTH;
+	wire mode, run;
+    wire [2:0] alpha, gamma;
+    wire [CTR_WIDTH-1:0] max_step, max_episode;
+    wire [CTR_WIDTH-1:0] seed;
+    wire [L_WIDTH*2-1:0] S_sim;
+    wire [L_WIDTH*4-1:0] L_inc_a, L_inc_b, L_inc_c, L_inc_d, L_dec;
+    assign mode = slv_reg0[0];
+	assign run = slv_reg0[1];
+	assign alpha = slv_reg0[4:2];
+	assign gamma = slv_reg0[7:5];
+	assign max_step = slv_reg1[15:0];
+	assign max_episode = slv_reg1[31:16];
+	assign seed = slv_reg2[15:0];
+	assign L_inc_a = slv_reg3;
+	assign L_inc_b = slv_reg4;
+	assign L_inc_c = slv_reg5;
+	assign L_inc_d = slv_reg6;
+	assign L_dec = slv_reg7;
+	assign S_sim = slv_reg8;
+	// Add user logic here
+	Acceleratorx #(
+	   .L_WIDTH(L_WIDTH),
+	   .R_WIDTH(R_WIDTH),
+       .Q_WIDTH(Q_WIDTH),
+	   .CTR_WIDTH(CTR_WIDTH),
+       .ADDR_WIDTH(ADDR_WIDTH)
+	) accelerator (
+        .clk(S_AXI_ACLK),
+        .rst(!S_AXI_ARESETN),
+        .Droad0(Droad0),
+        .Droad1(Droad1),
+        .Droad2(Droad2),
+        .Droad3(Droad3),
+        .D_new(D_new),
+        .rd_addr(rd_addr),
+        .wr_addr(wr_addr),
+        .wen_bram(wen_bram),
+        .wen0(wen0),
+        .wen1(wen1),
+        .wen2(wen2),
+        .wen3(wen3),
+        .mode(mode),
+        .run(run),
+        .alpha(alpha),
+        .gamma(gamma),
+        .max_step(max_step),
+        .max_episode(max_episode),
+        .seed(seed),
+        .S_sim(S_sim),
+        .L_inc_a(L_inc_a),
+        .L_inc_b(L_inc_b),
+        .L_inc_c(L_inc_c),
+        .L_inc_d(L_inc_d),
+        .L_dec(L_dec),
+        .finish(finish),
+        .idle(idle) 
+      );
 	
 	// AXI4LITE signals
 	reg [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
@@ -156,7 +210,6 @@
 	reg	 aw_en;
 
 	// I/O Connections assignments
-
 	assign S_AXI_AWREADY	= axi_awready;
 	assign S_AXI_WREADY	= axi_wready;
 	assign S_AXI_BRESP	= axi_bresp;
@@ -278,22 +331,22 @@
 	      slv_reg30 <= 0;
 	      slv_reg31 <= 0;
 	   end else begin
-	      slv_reg16 <= Q_00;
-	      slv_reg17 <= Q_01;
-	      slv_reg18 <= Q_02;
-	      slv_reg19 <= Q_03;
-	      slv_reg20 <= Q_10;
-	      slv_reg21 <= Q_11;
-	      slv_reg22 <= Q_12;
-	      slv_reg23 <= Q_13;
-	      slv_reg24 <= Q_20;
-	      slv_reg25 <= Q_21;
-	      slv_reg26 <= Q_22;
-	      slv_reg27 <= Q_23;
-	      slv_reg28 <= Q_30;
-	      slv_reg29 <= Q_31;
-	      slv_reg30 <= Q_32;
-	      slv_reg31 <= Q_33;
+	      slv_reg16 <= {32{1'b0}};
+	      slv_reg17 <= {32{1'b0}};
+	      slv_reg18 <= {32{1'b0}};
+	      slv_reg19 <= {32{1'b0}};
+	      slv_reg20 <= {32{1'b0}};
+	      slv_reg21 <= {32{1'b0}};
+	      slv_reg22 <= {32{1'b0}};
+	      slv_reg23 <= {32{1'b0}};
+	      slv_reg24 <= {32{1'b0}};
+	      slv_reg25 <= {32{1'b0}};
+	      slv_reg26 <= {32{1'b0}};
+	      slv_reg27 <= {32{1'b0}};
+	      slv_reg28 <= {32{1'b0}};
+	      slv_reg29 <= {32{1'b0}};
+	      slv_reg30 <= {32{1'b0}};
+	      slv_reg31 <= {32{1'b0}};
 	   end 
 	end 
     
@@ -759,19 +812,7 @@
 	end    
 
 	// Add user logic here 
-	assign mode = slv_reg0[0];
-	assign run = slv_reg0[1];
-	assign alpha = slv_reg0[4:2];
-	assign gamma = slv_reg0[7:5];
-	assign max_step = slv_reg1[15:0];
-	assign max_episode = slv_reg1[31:16];
-	assign seed = slv_reg2[15:0];
-	assign L_inc_a = slv_reg3;
-	assign L_inc_b = slv_reg4;
-	assign L_inc_c = slv_reg5;
-	assign L_inc_d = slv_reg6;
-	assign L_dec = slv_reg7;
-	assign S_sim = slv_reg8;
+
 	// User logic ends
 
 	endmodule

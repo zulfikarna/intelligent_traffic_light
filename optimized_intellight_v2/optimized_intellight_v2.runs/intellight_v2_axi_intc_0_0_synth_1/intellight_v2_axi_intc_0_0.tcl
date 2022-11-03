@@ -70,7 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "intellight_v2_axi_intc_0_0_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
+set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -82,11 +82,14 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/wt [current_project]
 set_property parent.project_path D:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part www.digilentinc.com:pynq-z1:part0:1.0 [current_project]
-set_property ip_repo_paths d:/intelligent_traffic_light/ip_repo [current_project]
+set_property ip_repo_paths {
+  d:/intelligent_traffic_light/optimized_intellight_v2
+  d:/intelligent_traffic_light/ip_repo/intellight_database/intellight_database_1.0
+  d:/intelligent_traffic_light/ip_repo
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo d:/intelligent_traffic_light/optimized_intellight_v2/optimized_intellight_v2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

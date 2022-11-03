@@ -1,89 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_2" LaunchPart="xc7z020clg400-1" LaunchTime="1667301821">
-  <File Type="PA-TCL" Name="intellight_v2_wrapper.tcl"/>
-  <File Type="REPORTS-TCL" Name="intellight_v2_wrapper_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="intellight_v2_wrapper.msk"/>
-  <File Type="RDI-RDI" Name="intellight_v2_wrapper.vdi"/>
-  <File Type="BG-BIT" Name="intellight_v2_wrapper.bit"/>
-  <File Type="BG-DRC" Name="intellight_v2_wrapper.drc"/>
-  <File Type="BG-BGN" Name="intellight_v2_wrapper.bgn"/>
-  <File Type="BG-BIN" Name="intellight_v2_wrapper.bin"/>
-  <File Type="BITSTR-RBT" Name="intellight_v2_wrapper.rbt"/>
-  <File Type="BITSTR-NKY" Name="intellight_v2_wrapper.nky"/>
-  <File Type="BITSTR-BMM" Name="intellight_v2_wrapper_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="intellight_v2_wrapper.mmi"/>
-  <File Type="BITSTR-SYSDEF" Name="intellight_v2_wrapper.sysdef"/>
+<GenRun Id="impl_2" LaunchPart="xc7z020clg400-1" LaunchTime="1667474893">
+  <File Type="ROUTE-PWR" Name="Acceleratorx_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Acceleratorx.tcl"/>
+  <File Type="BITSTR-MMI" Name="Acceleratorx.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Acceleratorx_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Acceleratorx_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="Acceleratorx_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Acceleratorx_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="Acceleratorx_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Acceleratorx_opt.dcp"/>
+  <File Type="OPT-DRC" Name="Acceleratorx_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Acceleratorx.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Acceleratorx_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Acceleratorx_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Acceleratorx_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Acceleratorx_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Acceleratorx_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Acceleratorx_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Acceleratorx_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Acceleratorx_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Acceleratorx_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Acceleratorx_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Acceleratorx_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="Acceleratorx.bin"/>
+  <File Type="PLACE-TIMING" Name="Acceleratorx_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Acceleratorx_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="Acceleratorx.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Acceleratorx_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Acceleratorx_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Acceleratorx_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="Acceleratorx.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="Acceleratorx_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Acceleratorx_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Acceleratorx_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Acceleratorx_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Acceleratorx_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Acceleratorx_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="Acceleratorx_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Acceleratorx_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Acceleratorx_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Acceleratorx_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Acceleratorx_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Acceleratorx_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Acceleratorx_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Acceleratorx_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Acceleratorx_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Acceleratorx_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Acceleratorx_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Acceleratorx_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Acceleratorx_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Acceleratorx_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Acceleratorx_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Acceleratorx_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Acceleratorx_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Acceleratorx_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Acceleratorx_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Acceleratorx_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Acceleratorx_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="Acceleratorx.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Acceleratorx_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Acceleratorx_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="Acceleratorx.nky"/>
+  <File Type="BITSTR-BMM" Name="Acceleratorx_bd.bmm"/>
+  <File Type="PDI-FILE" Name="Acceleratorx.pdi"/>
+  <File Type="RCFI_FILE" Name="Acceleratorx.rcfi"/>
+  <File Type="CFI_FILE" Name="Acceleratorx.cfi"/>
+  <File Type="RNPI_FILE" Name="Acceleratorx.rnpi"/>
+  <File Type="NPI_FILE" Name="Acceleratorx.npi"/>
+  <File Type="RBD_FILE" Name="Acceleratorx.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="intellight_v2_wrapper.ltx"/>
+  <File Type="BITSTR-LTX" Name="Acceleratorx.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="Acceleratorx.sysdef"/>
+  <File Type="BG-BGN" Name="Acceleratorx.bgn"/>
+  <File Type="BG-DRC" Name="Acceleratorx.drc"/>
+  <File Type="RDI-RDI" Name="Acceleratorx.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="OPT-HWDEF" Name="intellight_v2_wrapper.hwdef"/>
-  <File Type="ROUTE-RQS" Name="intellight_v2_wrapper_routed.rqs"/>
+  <File Type="ROUTE-RQS" Name="Acceleratorx_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="Acceleratorx_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="intellight_v2_wrapper_incremental_reuse_pre_placed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
-  <File Type="ROUTE-DCP" Name="intellight_v2_wrapper_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="intellight_v2_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="intellight_v2_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMING-PB" Name="intellight_v2_wrapper_timing_summary_routed.pb"/>
-  <File Type="OPT-DCP" Name="intellight_v2_wrapper_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="intellight_v2_wrapper_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="intellight_v2_wrapper_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="intellight_v2_wrapper_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="intellight_v2_wrapper_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="intellight_v2_wrapper_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="intellight_v2_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="PDI-FILE" Name="intellight_v2_wrapper.pdi"/>
-  <File Type="RCFI_FILE" Name="intellight_v2_wrapper.rcfi"/>
-  <File Type="CFI_FILE" Name="intellight_v2_wrapper.cfi"/>
-  <File Type="RNPI_FILE" Name="intellight_v2_wrapper.rnpi"/>
-  <File Type="NPI_FILE" Name="intellight_v2_wrapper.npi"/>
-  <File Type="RBD_FILE" Name="intellight_v2_wrapper.rbd"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="intellight_v2_wrapper_postroute_physopted.rqs"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/bd/action_ram/action_ram.bd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PGENDIR/sources_1/bd/action_ram/hdl/action_ram_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/file_arith.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/CU.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/RD.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/parameters.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/MOI.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -97,7 +95,42 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/MOI.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PG.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/QA.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RD.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/SD.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/file_arith.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -118,15 +151,24 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/QA.v">
+    <File Path="$PSRCDIR/sources_1/new/Accelerator.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/PG.v">
+    <File Path="$PSRCDIR/sources_1/bd/action_ram/action_ram.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/action_ram/hdl/action_ram_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -134,6 +176,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/intellight_v2/intellight_v2.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -141,6 +184,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/hdl/intellight_v2_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PGENDIR/sources_1/bd/intellight_v2/hdl/intellight_v2_wrapper.v"/>
         <Attr Name="ImportTime" Val="1667377278"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -148,9 +192,25 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/accelerator/accelerator.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/accelerator/hdl/accelerator_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="intellight_v2_wrapper"/>
+      <Option Name="TopModule" Val="Acceleratorx"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -190,15 +250,14 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_processing_system7_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_axi_intc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_axi_bram_ctrl_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_axi_intc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_axi_bram_ctrl_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="action_ram_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="action_ram_action_ram_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="action_ram_action_ram_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="action_ram_action_ram_0_0"/>
@@ -208,13 +267,5 @@
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_comm_ram_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_comm_ram_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="intellight_v2_comm_ram_3_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_action_ram_wrapper_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_RD_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_SD_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_intellight_database_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_MOI_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_MII_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_CU_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_PG_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_QA_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="intellight_v2_intellight_database_0_2"/>
 </GenRun>
