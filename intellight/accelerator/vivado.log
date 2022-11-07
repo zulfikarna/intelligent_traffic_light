@@ -2,10 +2,10 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Nov  3 19:43:56 2022
-# Process ID: 15992
+# Start of session at: Mon Nov  7 14:35:23 2022
+# Process ID: 22352
 # Current directory: D:/intelligent_traffic_light/intellight/accelerator
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17572 D:\intelligent_traffic_light\intellight\accelerator\edit_Intellight_Accelerator_v1_0.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1112 D:\intelligent_traffic_light\intellight\accelerator\edit_Intellight_Accelerator_v1_0.xpr
 # Log file: D:/intelligent_traffic_light/intellight/accelerator/vivado.log
 # Journal file: D:/intelligent_traffic_light/intellight/accelerator\vivado.jou
 # Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
@@ -57,46 +57,140 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program/Vivado/2022.1/data/ip'.
-open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1625.594 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 1645.762 ; gain = 0.000
 update_compile_order -fileset sources_1
-ipx::open_ipxact_file {D:\intelligent_traffic_light\intellight\accelerator\Intellight_Accelerator_1.0\component.xml}
-WARNING: [IP_Flow 19-5226] Project source file 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/component.xml' ignored by IP packager.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/CU.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/PG.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/QA.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/RD.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/SD.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_max.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/CU.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/PG.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/QA.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/RD.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/SD.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_max.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-ipx::merge_project_changes hdl_parameters [ipx::current_core]
-WARNING: [IP_Flow 19-5226] Project source file 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/component.xml' ignored by IP packager.
-INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
-set_property core_revision 5 [ipx::current_core]
-ipx::create_xgui_files [ipx::current_core]
-ipx::update_checksums [ipx::current_core]
-ipx::check_integrity [ipx::current_core]
-INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
-INFO: [IP_Flow 19-2187] The Product Guide file is missing.
-INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
-ipx::save_core [ipx::current_core]
-update_ip_catalog -rebuild -repo_path d:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0
-INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0'
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Intellight_Accelerator_v1_0'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Program/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Intellight_Accelerator_v1_0' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Intellight_Accelerator_v1_0_vlog.prj"
+ERROR: [XSIM 43-3255] File name is missing.
+ERROR: [XSIM 43-3217] Intellight_Accelerator_v1_0_vlog.prj (line 3): Incorrect project file syntax. Correct syntax is one of: vhdl <worklib> <file>, verilog <worklib> <file> [<file> ...] [[-d <macro>] ...] [[-i <include>] ...], or NOSORT. Presence of NOSORT on a line of its own disables file order sorting.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+set_property top SD_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'SD_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Program/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'SD_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj SD_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/SD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SD
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SD_tb
+ERROR: [VRFC 10-2989] 'A_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:28]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:28]
+ERROR: [VRFC 10-2989] 'S_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:29]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:29]
+ERROR: [VRFC 10-2989] 'ITV_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:30]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:30]
+ERROR: [VRFC 10-2989] 'ITV_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:31]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:31]
+ERROR: [VRFC 10-2989] 'S_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:32]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:32]
+ERROR: [VRFC 10-2989] 'A_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:65]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:65]
+ERROR: [VRFC 10-2989] 'S_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:69]
+ERROR: [VRFC 10-2989] 'A_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:72]
+ERROR: [VRFC 10-2989] 'A_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:78]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:78]
+ERROR: [VRFC 10-2989] 'A_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:79]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:79]
+ERROR: [VRFC 10-8530] module 'SD_tb' is ignored due to previous errors [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'SD_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Program/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'SD_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj SD_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/SD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SD
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SD_tb
+ERROR: [VRFC 10-2989] 'A_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:28]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:28]
+ERROR: [VRFC 10-2989] 'S_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:29]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:29]
+ERROR: [VRFC 10-2989] 'ITV_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:30]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:30]
+ERROR: [VRFC 10-2989] 'ITV_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:31]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:31]
+ERROR: [VRFC 10-2989] 'S_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:32]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:32]
+ERROR: [VRFC 10-2989] 'A_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:65]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:65]
+ERROR: [VRFC 10-2989] 'S_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:69]
+ERROR: [VRFC 10-2989] 'A_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:72]
+ERROR: [VRFC 10-2989] 'A_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:78]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:78]
+ERROR: [VRFC 10-2989] 'A_WIDTH' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:79]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:79]
+ERROR: [VRFC 10-8530] module 'SD_tb' is ignored due to previous errors [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'SD_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Program/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'SD_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj SD_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/SD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SD
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SD_tb
+ERROR: [VRFC 10-2989] 'o_lsfr' is not declared [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:88]
+ERROR: [VRFC 10-8530] module 'SD_tb' is ignored due to previous errors [D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/SD_tb.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Nov  3 19:44:28 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Nov  7 15:07:27 2022...
