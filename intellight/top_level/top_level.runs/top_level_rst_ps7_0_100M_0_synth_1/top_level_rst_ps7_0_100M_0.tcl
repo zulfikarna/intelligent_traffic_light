@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "top_level_rst_ps7_0_100M_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -91,7 +92,7 @@ set_property ip_output_repo d:/intelligent_traffic_light/intellight/top_level/to
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/top_level_rst_ps7_0_100M_0.xci
+read_ip -quiet D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/top_level_rst_ps7_0_100M_0.xci
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/top_level_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/top_level_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/top_level_rst_ps7_0_100M_0_ooc.xdc]

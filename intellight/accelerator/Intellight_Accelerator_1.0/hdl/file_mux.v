@@ -9,6 +9,16 @@
 // Description: Multiplexer Selector Logics
 //////////////////////////////////////////////////////////////////////////////////
 
+module mux2to1
+#(  parameter integer DATA_WIDTH = 16)(
+    input   wire [DATA_WIDTH-1:0] in0, in1,
+    input   wire sel,
+    output  wire [DATA_WIDTH-1:0] out0
+    );
+    assign  out0 =  (sel==1'b0)? in0:
+                    (sel==1'b1)? in1: {DATA_WIDTH{1'bX}};
+endmodule
+
 module mux4to1
 #(  parameter integer DATA_WIDTH = 16)(
     input   wire [DATA_WIDTH-1:0] in0, in1, in2, in3,
