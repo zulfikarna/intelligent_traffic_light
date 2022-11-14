@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Thu Nov  3 19:55:38 2022
+//Date        : Mon Nov 14 18:55:14 2022
 //Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 //Command     : generate_target Q_Matrix_inst_0.bd
 //Design      : Q_Matrix_inst_0
@@ -11,11 +11,11 @@
 
 (* CORE_GENERATION_INFO = "Q_Matrix_inst_0,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Q_Matrix_inst_0,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=D_/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/Q_Matrix/Q_Matrix.bd,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Q_Matrix_inst_0.hwdef" *) 
 module Q_Matrix_inst_0
-   (Dnew,
-    Droad0,
-    Droad1,
-    Droad2,
-    Droad3,
+   (D_new,
+    D_road0,
+    D_road1,
+    D_road2,
+    D_road3,
     clk,
     rd_addr,
     rst,
@@ -25,14 +25,14 @@ module Q_Matrix_inst_0
     wen2,
     wen3,
     wr_addr);
-  input [63:0]Dnew;
-  output [63:0]Droad0;
-  output [63:0]Droad1;
-  output [63:0]Droad2;
-  output [63:0]Droad3;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN top_level_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk;
+  input [63:0]D_new;
+  output [63:0]D_road0;
+  output [63:0]D_road1;
+  output [63:0]D_road2;
+  output [63:0]D_road3;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN top_level_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk;
   input [31:0]rd_addr;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RST, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input rst;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RST, INSERT_VIP 0, POLARITY ACTIVE_HIGH" *) input rst;
   input [7:0]wen;
   input wen0;
   input wen1;
@@ -57,14 +57,14 @@ module Q_Matrix_inst_0
   wire wen3_1;
   wire [0:0]xlconstant_0_dout;
 
-  assign Droad0[63:0] = action_ram_0_doutb;
-  assign Droad1[63:0] = action_ram_1_doutb;
-  assign Droad2[63:0] = action_ram_2_doutb;
-  assign Droad3[63:0] = action_ram_3_doutb;
+  assign D_road0[63:0] = action_ram_0_doutb;
+  assign D_road1[63:0] = action_ram_1_doutb;
+  assign D_road2[63:0] = action_ram_2_doutb;
+  assign D_road3[63:0] = action_ram_3_doutb;
   assign addra_0_1 = wr_addr[31:0];
   assign addrb_0_1 = rd_addr[31:0];
   assign clka_0_1 = clk;
-  assign dina_0_1 = Dnew[63:0];
+  assign dina_0_1 = D_new[63:0];
   assign rsta_0_1 = rst;
   assign wea_0_1 = wen[7:0];
   assign wen0_1 = wen0;

@@ -1,0 +1,15 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module test(
+    input wire clk,
+    input wire [31:0] data_in,
+    output reg [31:0] data_out
+    );
+    
+    always begin 
+       data_out <= repeat(7)@(posedge clk) data_in;
+    end
+endmodule

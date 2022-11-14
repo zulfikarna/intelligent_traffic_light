@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov  3 19:55:38 2022" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Nov 14 18:55:14 2022" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="www.digilentinc.com:pynq-z1:part0:1.0" DEVICE="7z020" NAME="top_level" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -159,7 +159,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="5" FULLNAME="/Intellight_Accelerat_0" HWVERSION="1.0" INSTANCE="Intellight_Accelerat_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Intellight_Accelerator" VLNV="xilinx.com:user:Intellight_Accelerator:1.0">
+    <MODULE COREREVISION="14" FULLNAME="/Intellight_Accelerat_0" HWVERSION="1.0" INSTANCE="Intellight_Accelerat_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Intellight_Accelerator" VLNV="xilinx.com:user:Intellight_Accelerator:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -178,29 +178,29 @@
         <PARAMETER NAME="C_S00_AXI_HIGHADDR" VALUE="0x43C0FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="63" NAME="Droad0" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_Droad0">
+        <PORT DIR="I" LEFT="63" NAME="D_road0" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_D_road0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Q_Matrix_0" PORT="Droad0"/>
+            <CONNECTION INSTANCE="Q_Matrix_0" PORT="D_road0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="63" NAME="Droad1" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_Droad1">
+        <PORT DIR="I" LEFT="63" NAME="D_road1" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_D_road1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Q_Matrix_0" PORT="Droad1"/>
+            <CONNECTION INSTANCE="Q_Matrix_0" PORT="D_road1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="63" NAME="Droad2" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_Droad2">
+        <PORT DIR="I" LEFT="63" NAME="D_road2" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_D_road2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Q_Matrix_0" PORT="Droad2"/>
+            <CONNECTION INSTANCE="Q_Matrix_0" PORT="D_road2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="63" NAME="Droad3" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_Droad3">
+        <PORT DIR="I" LEFT="63" NAME="D_road3" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_D_road3">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Q_Matrix_0" PORT="Droad3"/>
+            <CONNECTION INSTANCE="Q_Matrix_0" PORT="D_road3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="63" NAME="Dnew" RIGHT="0" SIGIS="undef" SIGNAME="Intellight_Accelerat_0_Dnew">
+        <PORT DIR="O" LEFT="63" NAME="D_new" RIGHT="0" SIGIS="undef" SIGNAME="Intellight_Accelerat_0_D_new">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Q_Matrix_0" PORT="Dnew"/>
+            <CONNECTION INSTANCE="Q_Matrix_0" PORT="D_new"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="rd_addr" RIGHT="0" SIGIS="undef" SIGNAME="Intellight_Accelerat_0_rd_addr">
@@ -243,7 +243,7 @@
             <CONNECTION INSTANCE="axi_intc_0" PORT="intr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s00_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="s00_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
@@ -356,7 +356,7 @@
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="8"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
@@ -419,32 +419,7 @@
         <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="63" NAME="Dnew" RIGHT="0" SIGIS="undef" SIGNAME="Intellight_Accelerat_0_Dnew">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="Dnew"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="63" NAME="Droad0" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_Droad0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="Droad0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="63" NAME="Droad1" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_Droad1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="Droad1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="63" NAME="Droad2" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_Droad2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="Droad2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="63" NAME="Droad3" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_Droad3">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="Droad3"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
@@ -454,7 +429,11 @@
             <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="rd_addr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_reset"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="7" NAME="wen" RIGHT="0" SIGIS="undef" SIGNAME="Intellight_Accelerat_0_wen_bram">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="wen_bram"/>
@@ -483,6 +462,31 @@
         <PORT DIR="I" LEFT="31" NAME="wr_addr" RIGHT="0" SIGIS="undef" SIGNAME="Intellight_Accelerat_0_wr_addr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="wr_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="D_new" RIGHT="0" SIGIS="undef" SIGNAME="Intellight_Accelerat_0_D_new">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="D_new"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="D_road0" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_D_road0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="D_road0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="D_road1" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_D_road1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="D_road1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="D_road2" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_D_road2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="D_road2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="D_road3" RIGHT="0" SIGIS="undef" SIGNAME="Q_Matrix_0_D_road3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="D_road3"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -2018,7 +2022,7 @@
         <PARAMETER NAME="Component_Name" VALUE="top_level_axi_intc_0_0"/>
         <PARAMETER NAME="Sense_of_IRQ_Level_Type" VALUE="Active_High"/>
         <PARAMETER NAME="Sense_of_IRQ_Edge_Type" VALUE="Rising"/>
-        <PARAMETER NAME="C_S_AXI_ACLK_FREQ_MHZ" VALUE="100.0"/>
+        <PARAMETER NAME="C_S_AXI_ACLK_FREQ_MHZ" VALUE="50.0"/>
         <PARAMETER NAME="C_PROCESSOR_CLK_FREQ_MHZ" VALUE="100.0"/>
         <PARAMETER NAME="C_IRQ_CONNECTION" VALUE="1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -2027,7 +2031,7 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4180FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
@@ -2137,7 +2141,7 @@
         <BUSINTERFACE BUSNAME="ps7_0_axi_periph_M00_AXI" DATAWIDTH="32" NAME="s_axi" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="9"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
@@ -2378,7 +2382,7 @@
         <PARAMETER NAME="PCW_TTC1_CLK2_PERIPHERAL_FREQMHZ" VALUE="133.333333"/>
         <PARAMETER NAME="PCW_PCAP_PERIPHERAL_FREQMHZ" VALUE="200"/>
         <PARAMETER NAME="PCW_TPIU_PERIPHERAL_FREQMHZ" VALUE="200"/>
-        <PARAMETER NAME="PCW_FPGA0_PERIPHERAL_FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PCW_FPGA0_PERIPHERAL_FREQMHZ" VALUE="50"/>
         <PARAMETER NAME="PCW_FPGA1_PERIPHERAL_FREQMHZ" VALUE="50"/>
         <PARAMETER NAME="PCW_FPGA2_PERIPHERAL_FREQMHZ" VALUE="50"/>
         <PARAMETER NAME="PCW_FPGA3_PERIPHERAL_FREQMHZ" VALUE="50"/>
@@ -2402,7 +2406,7 @@
         <PARAMETER NAME="PCW_ACT_TTC_PERIPHERAL_FREQMHZ" VALUE="50"/>
         <PARAMETER NAME="PCW_ACT_PCAP_PERIPHERAL_FREQMHZ" VALUE="200.000000"/>
         <PARAMETER NAME="PCW_ACT_TPIU_PERIPHERAL_FREQMHZ" VALUE="200.000000"/>
-        <PARAMETER NAME="PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ" VALUE="50.000000"/>
         <PARAMETER NAME="PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ" VALUE="10.000000"/>
         <PARAMETER NAME="PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ" VALUE="10.000000"/>
         <PARAMETER NAME="PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ" VALUE="10.000000"/>
@@ -2412,7 +2416,7 @@
         <PARAMETER NAME="PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ" VALUE="108.333336"/>
         <PARAMETER NAME="PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ" VALUE="108.333336"/>
         <PARAMETER NAME="PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ" VALUE="108.333336"/>
-        <PARAMETER NAME="PCW_CLK0_FREQ" VALUE="100000000"/>
+        <PARAMETER NAME="PCW_CLK0_FREQ" VALUE="50000000"/>
         <PARAMETER NAME="PCW_CLK1_FREQ" VALUE="10000000"/>
         <PARAMETER NAME="PCW_CLK2_FREQ" VALUE="10000000"/>
         <PARAMETER NAME="PCW_CLK3_FREQ" VALUE="10000000"/>
@@ -2430,7 +2434,7 @@
         <PARAMETER NAME="PCW_FCLK1_PERIPHERAL_DIVISOR0" VALUE="1"/>
         <PARAMETER NAME="PCW_FCLK2_PERIPHERAL_DIVISOR0" VALUE="1"/>
         <PARAMETER NAME="PCW_FCLK3_PERIPHERAL_DIVISOR0" VALUE="1"/>
-        <PARAMETER NAME="PCW_FCLK0_PERIPHERAL_DIVISOR1" VALUE="2"/>
+        <PARAMETER NAME="PCW_FCLK0_PERIPHERAL_DIVISOR1" VALUE="4"/>
         <PARAMETER NAME="PCW_FCLK1_PERIPHERAL_DIVISOR1" VALUE="1"/>
         <PARAMETER NAME="PCW_FCLK2_PERIPHERAL_DIVISOR1" VALUE="1"/>
         <PARAMETER NAME="PCW_FCLK3_PERIPHERAL_DIVISOR1" VALUE="1"/>
@@ -2646,7 +2650,7 @@
         <PARAMETER NAME="PCW_GP0_EN_MODIFIABLE_TXN" VALUE="1"/>
         <PARAMETER NAME="PCW_GP1_EN_MODIFIABLE_TXN" VALUE="1"/>
         <PARAMETER NAME="PCW_IMPORT_BOARD_PRESET" VALUE="None"/>
-        <PARAMETER NAME="PCW_PERIPHERAL_BOARD_PRESET" VALUE="None"/>
+        <PARAMETER NAME="PCW_PERIPHERAL_BOARD_PRESET" VALUE="part0"/>
         <PARAMETER NAME="PCW_PRESET_BANK0_VOLTAGE" VALUE="LVCMOS 3.3V"/>
         <PARAMETER NAME="PCW_PRESET_BANK1_VOLTAGE" VALUE="LVCMOS 1.8V"/>
         <PARAMETER NAME="PCW_UIPARAM_DDR_ENABLE" VALUE="1"/>
@@ -3268,7 +3272,7 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_AXI_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="M_AXI_GP0_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="M_AXI_GP0_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
@@ -3333,7 +3337,7 @@
             <CONNECTION INSTANCE="axi_intc_0" PORT="irq"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="FCLK_CLK0" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+        <PORT CLKFREQUENCY="50000000" DIR="O" NAME="FCLK_CLK0" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
@@ -3515,7 +3519,7 @@
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="8"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="12"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
@@ -4439,7 +4443,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
@@ -4454,7 +4458,11 @@
         <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
         <PORT DIR="O" NAME="mb_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Q_Matrix_0" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
           <CONNECTIONS>

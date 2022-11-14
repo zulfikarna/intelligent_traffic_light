@@ -1,0 +1,13 @@
+0.7
+2020.2
+Apr 18 2022
+16:05:34
+D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v,1668424552,verilog,,D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/imports/sim/MII_tb.v,,MII,,,,,,,,
+D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/PG.v,1668162395,verilog,,D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v,,PG,,,,,,,,
+D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v,1667474600,verilog,,D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_max.v,,lfsr;multiply;r_shift,,,,,,,,
+D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_max.v,1668162355,verilog,,D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/imports/sim/PG_tb.v,,max2to1;max4to1;max8to1,,,,,,,,
+D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,,,,,,,
+D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/imports/sim/MII_tb.v,1668424356,verilog,,,,MII_tb,,,,,,,,
+D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/imports/sim/PG_tb.v,1668419896,verilog,,,,PG_tb,,,,,,,,
+D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/test_tb.v,1668167331,verilog,,,,test_tb,,,,,,,,
+D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sources_1/new/test.v,1668167854,verilog,,D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/new/test_tb.v,,test,,,,,,,,

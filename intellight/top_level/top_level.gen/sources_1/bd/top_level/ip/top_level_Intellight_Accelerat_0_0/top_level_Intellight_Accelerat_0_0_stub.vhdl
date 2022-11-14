@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Thu Nov  3 19:56:43 2022
+-- Date        : Mon Nov 14 18:53:16 2022
 -- Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_Intellight_Accelerat_0_0/top_level_Intellight_Accelerat_0_0_stub.vhdl
@@ -14,11 +14,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity top_level_Intellight_Accelerat_0_0 is
   Port ( 
-    Droad0 : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    Droad1 : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    Droad2 : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    Droad3 : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    Dnew : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    D_road0 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    D_road1 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    D_road2 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    D_road3 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    D_new : out STD_LOGIC_VECTOR ( 63 downto 0 );
     rd_addr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     wr_addr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     wen_bram : out STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -56,7 +56,7 @@ architecture stub of top_level_Intellight_Accelerat_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "Droad0[63:0],Droad1[63:0],Droad2[63:0],Droad3[63:0],Dnew[63:0],rd_addr[31:0],wr_addr[31:0],wen_bram[7:0],wen0,wen1,wen2,wen3,finish,s00_axi_aclk,s00_axi_aresetn,s00_axi_awaddr[7:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[7:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready";
+attribute black_box_pad_pin of stub : architecture is "D_road0[63:0],D_road1[63:0],D_road2[63:0],D_road3[63:0],D_new[63:0],rd_addr[31:0],wr_addr[31:0],wen_bram[7:0],wen0,wen1,wen2,wen3,finish,s00_axi_aclk,s00_axi_aresetn,s00_axi_awaddr[7:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[7:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "Intellight_Accelerator_v1_0,Vivado 2022.1";
 begin

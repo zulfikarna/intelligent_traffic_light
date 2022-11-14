@@ -116,31 +116,6 @@
           }
         },
         "ports": {
-          "Dnew": {
-            "direction": "I",
-            "left": "63",
-            "right": "0"
-          },
-          "Droad0": {
-            "direction": "O",
-            "left": "63",
-            "right": "0"
-          },
-          "Droad1": {
-            "direction": "O",
-            "left": "63",
-            "right": "0"
-          },
-          "Droad2": {
-            "direction": "O",
-            "left": "63",
-            "right": "0"
-          },
-          "Droad3": {
-            "direction": "O",
-            "left": "63",
-            "right": "0"
-          },
           "clk": {
             "type": "clk",
             "direction": "I",
@@ -150,7 +125,7 @@
                 "value_src": "default_prop"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "50000000",
                 "value_src": "user_prop"
               },
               "FREQ_TOLERANCE_HZ": {
@@ -181,8 +156,8 @@
                 "value_src": "strong"
               },
               "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "strong"
+                "value": "ACTIVE_HIGH",
+                "value_src": "const_prop"
               }
             }
           },
@@ -207,6 +182,31 @@
             "direction": "I",
             "left": "31",
             "right": "0"
+          },
+          "D_new": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          },
+          "D_road0": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "D_road1": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "D_road2": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "D_road3": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
           }
         },
         "post_compiled_compname": "Q_Matrix_inst_0",
@@ -214,7 +214,7 @@
         "variant_info": {
           "Q_Matrix.bd": {
             "scoped_diagram": "Q_Matrix_inst_0.bd",
-            "design_checksum": "0xBF3504D4",
+            "design_checksum": "0x53DE68C2",
             "ref_name": "Q_Matrix",
             "ref_subinst_path": "top_level_Q_Matrix_0",
             "ref_type": "Block Design",
@@ -262,7 +262,7 @@
             "value": "10.000000"
           },
           "PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "100.000000"
+            "value": "50.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -346,7 +346,7 @@
             "value": "0"
           },
           "PCW_CLK0_FREQ": {
-            "value": "100000000"
+            "value": "50000000"
           },
           "PCW_CLK1_FREQ": {
             "value": "10000000"
@@ -658,7 +658,7 @@
             "value": "TRUE"
           },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "100"
+            "value": "50"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "50"
@@ -1357,7 +1357,7 @@
             "value": "200"
           },
           "PCW_PERIPHERAL_BOARD_PRESET": {
-            "value": "None"
+            "value": "part0"
           },
           "PCW_PLL_BYPASSMODE_ENABLE": {
             "value": "0"
@@ -1481,6 +1481,18 @@
           },
           "PCW_SPI_PERIPHERAL_VALID": {
             "value": "0"
+          },
+          "PCW_S_AXI_HP0_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP1_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP2_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP3_DATA_WIDTH": {
+            "value": "64"
           },
           "PCW_TPIU_PERIPHERAL_CLKSRC": {
             "value": "External"
@@ -2426,10 +2438,10 @@
       }
     },
     "nets": {
-      "Intellight_Accelerat_0_Dnew": {
+      "D_new_1": {
         "ports": [
-          "Intellight_Accelerat_0/Dnew",
-          "Q_Matrix_0/Dnew"
+          "Intellight_Accelerat_0/D_new",
+          "Q_Matrix_0/D_new"
         ]
       },
       "Intellight_Accelerat_0_finish": {
@@ -2480,28 +2492,28 @@
           "Q_Matrix_0/wr_addr"
         ]
       },
-      "Q_Matrix_0_Droad0": {
+      "Q_Matrix_0_D_road0": {
         "ports": [
-          "Q_Matrix_0/Droad0",
-          "Intellight_Accelerat_0/Droad0"
+          "Q_Matrix_0/D_road0",
+          "Intellight_Accelerat_0/D_road0"
         ]
       },
-      "Q_Matrix_0_Droad1": {
+      "Q_Matrix_0_D_road1": {
         "ports": [
-          "Q_Matrix_0/Droad1",
-          "Intellight_Accelerat_0/Droad1"
+          "Q_Matrix_0/D_road1",
+          "Intellight_Accelerat_0/D_road1"
         ]
       },
-      "Q_Matrix_0_Droad2": {
+      "Q_Matrix_0_D_road2": {
         "ports": [
-          "Q_Matrix_0/Droad2",
-          "Intellight_Accelerat_0/Droad2"
+          "Q_Matrix_0/D_road2",
+          "Intellight_Accelerat_0/D_road2"
         ]
       },
-      "Q_Matrix_0_Droad3": {
+      "Q_Matrix_0_D_road3": {
         "ports": [
-          "Q_Matrix_0/Droad3",
-          "Intellight_Accelerat_0/Droad3"
+          "Q_Matrix_0/D_road3",
+          "Intellight_Accelerat_0/D_road3"
         ]
       },
       "axi_intc_0_irq": {
@@ -2539,6 +2551,12 @@
           "ps7_0_axi_periph/ARESETN",
           "ps7_0_axi_periph/M01_ARESETN",
           "Intellight_Accelerat_0/s00_axi_aresetn"
+        ]
+      },
+      "rst_ps7_0_100M_peripheral_reset": {
+        "ports": [
+          "rst_ps7_0_100M/peripheral_reset",
+          "Q_Matrix_0/rst"
         ]
       }
     },

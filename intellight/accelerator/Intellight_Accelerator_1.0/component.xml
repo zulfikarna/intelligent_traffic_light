@@ -266,7 +266,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c150408d</spirit:value>
+            <spirit:value>9b01f035</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -282,7 +282,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c150408d</spirit:value>
+            <spirit:value>9b01f035</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -338,14 +338,29 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2e9e936f</spirit:value>
+            <spirit:value>e0e70bb0</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_testbench</spirit:name>
+        <spirit:displayName>Test Bench</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation.testbench</spirit:envIdentifier>
+        <spirit:modelName>MII_tb</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_testbench_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f81ff32e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
     </spirit:views>
     <spirit:ports>
       <spirit:port>
-        <spirit:name>Droad0</spirit:name>
+        <spirit:name>D_road0</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -362,7 +377,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>Droad1</spirit:name>
+        <spirit:name>D_road1</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -379,7 +394,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>Droad2</spirit:name>
+        <spirit:name>D_road2</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -396,7 +411,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>Droad3</spirit:name>
+        <spirit:name>D_road3</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -413,7 +428,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>Dnew</spirit:name>
+        <spirit:name>D_new</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -961,7 +976,7 @@
       <spirit:file>
         <spirit:name>hdl/Intellight_Accelerator_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_e56f4390</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_27df7664</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1071,6 +1086,16 @@
         <spirit:userFileType>LOGO</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_testbench_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../edit_Intellight_Accelerator_v1_0.srcs/sim_1/imports/sim/MII_tb.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
   </spirit:fileSets>
   <spirit:description>Accelerator for intelligent traffic light control system based on Q-Learning</spirit:description>
   <spirit:parameters>
@@ -1163,15 +1188,15 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>Intellight_Accelerator_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>5</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-11-03T12:44:23Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>14</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-11-14T11:24:31Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="88917eeb"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="28102ac4"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="13ca46aa"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="9fe6e484"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="c88b1909"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="39ece660"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="fa213743"/>
     </xilinx:packagingInfo>

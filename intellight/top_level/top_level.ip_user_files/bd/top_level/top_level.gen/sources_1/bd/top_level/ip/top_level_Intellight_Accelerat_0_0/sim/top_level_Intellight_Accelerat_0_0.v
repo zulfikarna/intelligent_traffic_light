@@ -48,17 +48,17 @@
 
 
 // IP VLNV: xilinx.com:user:Intellight_Accelerator:1.0
-// IP Revision: 5
+// IP Revision: 14
 
 `timescale 1ns/1ps
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_level_Intellight_Accelerat_0_0 (
-  Droad0,
-  Droad1,
-  Droad2,
-  Droad3,
-  Dnew,
+  D_road0,
+  D_road1,
+  D_road2,
+  D_road3,
+  D_new,
   rd_addr,
   wr_addr,
   wen_bram,
@@ -90,11 +90,11 @@ module top_level_Intellight_Accelerat_0_0 (
   s00_axi_rready
 );
 
-input wire [63 : 0] Droad0;
-input wire [63 : 0] Droad1;
-input wire [63 : 0] Droad2;
-input wire [63 : 0] Droad3;
-output wire [63 : 0] Dnew;
+input wire [63 : 0] D_road0;
+input wire [63 : 0] D_road1;
+input wire [63 : 0] D_road2;
+input wire [63 : 0] D_road3;
+output wire [63 : 0] D_new;
 output wire [31 : 0] rd_addr;
 output wire [31 : 0] wr_addr;
 output wire [7 : 0] wen_bram;
@@ -159,11 +159,11 @@ input wire s00_axi_rready;
     .CTR_WIDTH(16),
     .ADDR_WIDTH(32)
   ) inst (
-    .Droad0(Droad0),
-    .Droad1(Droad1),
-    .Droad2(Droad2),
-    .Droad3(Droad3),
-    .Dnew(Dnew),
+    .D_road0(D_road0),
+    .D_road1(D_road1),
+    .D_road2(D_road2),
+    .D_road3(D_road3),
+    .D_new(D_new),
     .rd_addr(rd_addr),
     .wr_addr(wr_addr),
     .wen_bram(wen_bram),

@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Thu Nov  3 19:55:37 2022
+//Date        : Mon Nov 14 18:51:59 2022
 //Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -637,7 +637,7 @@ module top_level
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
 
-  wire [63:0]Intellight_Accelerat_0_Dnew;
+  wire [63:0]D_new_1;
   wire Intellight_Accelerat_0_finish;
   wire [31:0]Intellight_Accelerat_0_rd_addr;
   wire Intellight_Accelerat_0_wen0;
@@ -646,10 +646,10 @@ module top_level
   wire Intellight_Accelerat_0_wen3;
   wire [7:0]Intellight_Accelerat_0_wen_bram;
   wire [31:0]Intellight_Accelerat_0_wr_addr;
-  wire [63:0]Q_Matrix_0_Droad0;
-  wire [63:0]Q_Matrix_0_Droad1;
-  wire [63:0]Q_Matrix_0_Droad2;
-  wire [63:0]Q_Matrix_0_Droad3;
+  wire [63:0]Q_Matrix_0_D_road0;
+  wire [63:0]Q_Matrix_0_D_road1;
+  wire [63:0]Q_Matrix_0_D_road2;
+  wire [63:0]Q_Matrix_0_D_road3;
   wire axi_intc_0_irq;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
@@ -749,13 +749,14 @@ module top_level
   wire [3:0]ps7_0_axi_periph_M01_AXI_WSTRB;
   wire ps7_0_axi_periph_M01_AXI_WVALID;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
+  wire [0:0]rst_ps7_0_100M_peripheral_reset;
 
   top_level_Intellight_Accelerat_0_0 Intellight_Accelerat_0
-       (.Dnew(Intellight_Accelerat_0_Dnew),
-        .Droad0(Q_Matrix_0_Droad0),
-        .Droad1(Q_Matrix_0_Droad1),
-        .Droad2(Q_Matrix_0_Droad2),
-        .Droad3(Q_Matrix_0_Droad3),
+       (.D_new(D_new_1),
+        .D_road0(Q_Matrix_0_D_road0),
+        .D_road1(Q_Matrix_0_D_road1),
+        .D_road2(Q_Matrix_0_D_road2),
+        .D_road3(Q_Matrix_0_D_road3),
         .finish(Intellight_Accelerat_0_finish),
         .rd_addr(Intellight_Accelerat_0_rd_addr),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
@@ -786,14 +787,14 @@ module top_level
         .wen_bram(Intellight_Accelerat_0_wen_bram),
         .wr_addr(Intellight_Accelerat_0_wr_addr));
   Q_Matrix_inst_0 Q_Matrix_0
-       (.Dnew(Intellight_Accelerat_0_Dnew),
-        .Droad0(Q_Matrix_0_Droad0),
-        .Droad1(Q_Matrix_0_Droad1),
-        .Droad2(Q_Matrix_0_Droad2),
-        .Droad3(Q_Matrix_0_Droad3),
+       (.D_new(D_new_1),
+        .D_road0(Q_Matrix_0_D_road0),
+        .D_road1(Q_Matrix_0_D_road1),
+        .D_road2(Q_Matrix_0_D_road2),
+        .D_road3(Q_Matrix_0_D_road3),
         .clk(processing_system7_0_FCLK_CLK0),
         .rd_addr(Intellight_Accelerat_0_rd_addr),
-        .rst(1'b0),
+        .rst(rst_ps7_0_100M_peripheral_reset),
         .wen(Intellight_Accelerat_0_wen_bram),
         .wen0(Intellight_Accelerat_0_wen0),
         .wen1(Intellight_Accelerat_0_wen1),
@@ -976,6 +977,7 @@ module top_level
         .ext_reset_in(processing_system7_0_FCLK_RESET0_N),
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .peripheral_reset(rst_ps7_0_100M_peripheral_reset),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
 endmodule
 
