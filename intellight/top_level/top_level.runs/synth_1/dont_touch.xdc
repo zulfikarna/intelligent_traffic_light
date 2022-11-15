@@ -22,7 +22,19 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_r
 # IP: bd/top_level/ip/top_level_Intellight_Accelerat_0_0/top_level_Intellight_Accelerat_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_Intellight_Accelerat_0_0 || ORIG_REF_NAME==top_level_Intellight_Accelerat_0_0} -quiet] -quiet
 
+# IP: bd/top_level/ip/top_level_auto_pc_4/top_level_auto_pc_4.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_auto_pc_4 || ORIG_REF_NAME==top_level_auto_pc_4} -quiet] -quiet
+
 # IP: bd/top_level/ip/top_level_auto_pc_0/top_level_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_auto_pc_0 || ORIG_REF_NAME==top_level_auto_pc_0} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_auto_pc_1/top_level_auto_pc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_auto_pc_1 || ORIG_REF_NAME==top_level_auto_pc_1} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_auto_pc_2/top_level_auto_pc_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_auto_pc_2 || ORIG_REF_NAME==top_level_auto_pc_2} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_auto_pc_3/top_level_auto_pc_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_auto_pc_3 || ORIG_REF_NAME==top_level_auto_pc_3} -quiet] -quiet
 
 # XDC: d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/top_level_ooc.xdc

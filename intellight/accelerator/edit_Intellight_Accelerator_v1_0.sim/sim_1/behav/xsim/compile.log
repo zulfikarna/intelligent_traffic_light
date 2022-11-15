@@ -1,7 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module MII
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'D' is not allowed [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v:45]
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'A_road' is not allowed [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v:49]
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'A_dur' is not allowed [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v:50]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sim_1/imports/sim/MII_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module MII_tb

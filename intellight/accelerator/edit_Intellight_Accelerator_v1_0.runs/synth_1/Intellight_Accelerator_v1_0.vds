@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Mon Nov 14 17:57:42 2022
-# Process ID: 13588
+# Start of session at: Tue Nov 15 11:23:44 2022
+# Process ID: 15324
 # Current directory: D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1
 # Command line: vivado.exe -log Intellight_Accelerator_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Intellight_Accelerator_v1_0.tcl
 # Log file: D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1/Intellight_Accelerator_v1_0.vds
@@ -27,9 +27,10 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12800
+INFO: [Synth 8-7075] Helper process launched with PID 2544
+WARNING: [Synth 8-9971] redeclaration of ansi port 'D' is not allowed [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v:46]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Intellight_Accelerator_v1_0' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0.v:4]
 INFO: [Synth 8-6157] synthesizing module 'Intellight_Accelerator_v1_0_S00_AXI' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:4]
@@ -40,7 +41,7 @@ INFO: [Synth 8-6157] synthesizing module 'Intellight_Accelerator_v1_0_S00_AXI' [
 	Parameter ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-226] default block is never used [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:1119]
+INFO: [Synth 8-226] default block is never used [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:1199]
 INFO: [Synth 8-6157] synthesizing module 'Accelerator' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v:12]
 	Parameter L_WIDTH bound to: 4 - type: integer 
 	Parameter R_WIDTH bound to: 16 - type: integer 
@@ -48,18 +49,25 @@ INFO: [Synth 8-6157] synthesizing module 'Accelerator' [D:/intelligent_traffic_l
 	Parameter CTR_WIDTH bound to: 16 - type: integer 
 	Parameter ADDR_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'CU' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/CU.v:12]
-	Parameter R_WIDTH bound to: 16 - type: integer 
 	Parameter CTR_WIDTH bound to: 16 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'lfsr' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v:50]
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'lfsr' (0#1) [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v:50]
+WARNING: [Synth 8-689] width (17) of port connection 'seed' does not match port width (16) of module 'lfsr' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/CU.v:70]
 INFO: [Synth 8-6155] done synthesizing module 'CU' (0#1) [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/CU.v:12]
+WARNING: [Synth 8-7071] port 'debug_cs' of module 'CU' is unconnected for instance 'CU_0' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v:70]
+WARNING: [Synth 8-7071] port 'debug_ns' of module 'CU' is unconnected for instance 'CU_0' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v:70]
+WARNING: [Synth 8-7023] instance 'CU_0' of module 'CU' has 13 connections declared, but only 11 given [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v:70]
 INFO: [Synth 8-6157] synthesizing module 'MII' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v:12]
 	Parameter L_WIDTH bound to: 4 - type: integer 
 	Parameter Q_WIDTH bound to: 16 - type: integer 
 	Parameter R_WIDTH bound to: 16 - type: integer 
 	Parameter ADDR_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'MII' (0#1) [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v:12]
+WARNING: [Synth 8-7071] port 'D' of module 'MII' is unconnected for instance 'MII_0' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v:88]
+WARNING: [Synth 8-7071] port 'A_road' of module 'MII' is unconnected for instance 'MII_0' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v:88]
+WARNING: [Synth 8-7071] port 'A_dur' of module 'MII' is unconnected for instance 'MII_0' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v:88]
+WARNING: [Synth 8-7023] instance 'MII_0' of module 'MII' has 21 connections declared, but only 18 given [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v:88]
 INFO: [Synth 8-6157] synthesizing module 'PG' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/PG.v:12]
 	Parameter L_WIDTH bound to: 4 - type: integer 
 	Parameter Q_WIDTH bound to: 16 - type: integer 
@@ -74,9 +82,9 @@ INFO: [Synth 8-6157] synthesizing module 'QA' [D:/intelligent_traffic_light/inte
 	Parameter L_WIDTH bound to: 4 - type: integer 
 	Parameter Q_WIDTH bound to: 16 - type: integer 
 	Parameter R_WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'mux4to1' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v:12]
+INFO: [Synth 8-6157] synthesizing module 'mux4to1' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v:22]
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux4to1' (0#1) [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'mux4to1' (0#1) [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v:22]
 INFO: [Synth 8-6157] synthesizing module 'multiply' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v:12]
 INFO: [Synth 8-6157] synthesizing module 'r_shift' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v:35]
 INFO: [Synth 8-6155] done synthesizing module 'r_shift' (0#1) [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v:35]
@@ -92,22 +100,22 @@ INFO: [Synth 8-6155] done synthesizing module 'SD' (0#1) [D:/intelligent_traffic
 INFO: [Synth 8-6155] done synthesizing module 'Accelerator' (0#1) [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'Intellight_Accelerator_v1_0_S00_AXI' (0#1) [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'Intellight_Accelerator_v1_0' (0#1) [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0.v:4]
-WARNING: [Synth 8-3848] Net slv_reg48 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:163]
-WARNING: [Synth 8-3848] Net slv_reg49 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:164]
-WARNING: [Synth 8-3848] Net slv_reg50 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:165]
-WARNING: [Synth 8-3848] Net slv_reg51 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:166]
-WARNING: [Synth 8-3848] Net slv_reg52 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:167]
-WARNING: [Synth 8-3848] Net slv_reg53 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:168]
-WARNING: [Synth 8-3848] Net slv_reg54 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:169]
-WARNING: [Synth 8-3848] Net slv_reg55 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:170]
-WARNING: [Synth 8-3848] Net slv_reg56 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:171]
-WARNING: [Synth 8-3848] Net slv_reg57 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:172]
-WARNING: [Synth 8-3848] Net slv_reg58 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:173]
-WARNING: [Synth 8-3848] Net slv_reg59 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:174]
-WARNING: [Synth 8-3848] Net slv_reg60 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:175]
-WARNING: [Synth 8-3848] Net slv_reg61 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:176]
-WARNING: [Synth 8-3848] Net slv_reg62 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:177]
-WARNING: [Synth 8-3848] Net slv_reg63 in module/entity Intellight_Accelerator_v1_0_S00_AXI does not have driver. [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:178]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg49_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:382]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg50_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:383]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg51_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:384]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg52_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:385]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg53_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:386]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg54_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:387]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg55_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:388]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg56_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:389]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg57_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:390]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg58_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:391]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg59_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:392]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg60_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:393]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg61_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:394]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg62_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:395]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg63_reg was removed.  [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:396]
+WARNING: [Synth 8-7129] Port seed[16] in module CU is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
@@ -115,17 +123,17 @@ WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module Intellight_Accelerator_v1
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'CU'
@@ -133,24 +141,24 @@ INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'CU'
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
                   S_IDLE |                  000000000000001 |                            01111
-                  S_INIT |                  000000000000010 |                            10000
-                    S_L0 |                  000000000000100 |                            00000
-                    S_L1 |                  000000000001000 |                            00001
-                    S_L2 |                  000000000010000 |                            00010
-                    S_L3 |                  000000000100000 |                            00011
-                    S_L4 |                  000000001000000 |                            00100
-                    S_L5 |                  000000010000000 |                            00101
-                    S_L6 |                  000000100000000 |                            00110
-                    S_L7 |                  000001000000000 |                            00111
-                    S_L8 |                  000010000000000 |                            01000
-                    S_L9 |                  000100000000000 |                            01001
-                   S_L10 |                  001000000000000 |                            01010
-                   S_L11 |                  010000000000000 |                            01011
-                  S_DONE |                  100000000000000 |                            10001
+                  S_INIT |                  000000100000000 |                            10000
+                    S_L0 |                  000000000000010 |                            00000
+                    S_L1 |                  000000000000100 |                            00001
+                    S_L2 |                  010000000000000 |                            00010
+                    S_L3 |                  000010000000000 |                            00011
+                    S_L4 |                  000100000000000 |                            00100
+                    S_L5 |                  000001000000000 |                            00101
+                    S_L6 |                  000000010000000 |                            00110
+                    S_L7 |                  000000000100000 |                            00111
+                    S_L8 |                  000000001000000 |                            01000
+                    S_L9 |                  000000000001000 |                            01001
+                   S_L10 |                  000000000010000 |                            01010
+                   S_L11 |                  100000000000000 |                            01011
+                  S_DONE |                  001000000000000 |                            10001
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'cs_reg' using encoding 'one-hot' in module 'CU'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -168,7 +176,7 @@ Detailed RTL Component Info :
 	   4 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               64 Bit    Registers := 4     
-	               32 Bit    Registers := 49    
+	               32 Bit    Registers := 50    
 	               16 Bit    Registers := 21    
 	                8 Bit    Registers := 7     
 	                4 Bit    Registers := 8     
@@ -184,12 +192,12 @@ Detailed RTL Component Info :
 	   2 Input   15 Bit        Muxes := 4     
 	   2 Input    8 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 18    
-	  15 Input    5 Bit        Muxes := 2     
+	  15 Input    5 Bit        Muxes := 3     
 	   3 Input    5 Bit        Muxes := 4     
 	   2 Input    4 Bit        Muxes := 5     
 	   4 Input    4 Bit        Muxes := 5     
 	   2 Input    3 Bit        Muxes := 2     
-	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 8     
 	   2 Input    1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -208,6 +216,7 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port seed[16] in module CU is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
@@ -215,20 +224,20 @@ WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module Intellight_Accelerator_v1
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -246,37 +255,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -309,12 +318,12 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    60|
-|3     |LUT1   |     4|
-|4     |LUT2   |   156|
-|5     |LUT3   |   105|
-|6     |LUT4   |   275|
-|7     |LUT5   |    43|
-|8     |LUT6   |   878|
+|3     |LUT1   |     3|
+|4     |LUT2   |   162|
+|5     |LUT3   |   104|
+|6     |LUT4   |   273|
+|7     |LUT5   |    38|
+|8     |LUT6   |   874|
 |9     |MUXF7  |   160|
 |10    |MUXF8  |    64|
 |11    |SRL16E |    72|
@@ -328,43 +337,43 @@ Report Instance Areas:
 +------+-------------------------------------------+------------------------------------+------+
 |      |Instance                                   |Module                              |Cells |
 +------+-------------------------------------------+------------------------------------+------+
-|1     |top                                        |                                    |  4179|
-|2     |  Intellight_Accelerator_v1_0_S00_AXI_inst |Intellight_Accelerator_v1_0_S00_AXI |  3685|
-|3     |    accelerator_0                          |Accelerator                         |  1638|
-|4     |      CU_0                                 |CU                                  |   215|
+|1     |top                                        |                                    |  4172|
+|2     |  Intellight_Accelerator_v1_0_S00_AXI_inst |Intellight_Accelerator_v1_0_S00_AXI |  3678|
+|3     |    accelerator_0                          |Accelerator                         |  1631|
+|4     |      CU_0                                 |CU                                  |   212|
 |5     |        rand                               |lfsr                                |    48|
 |6     |      MII_0                                |MII                                 |   440|
-|7     |      PG_0                                 |PG                                  |   628|
+|7     |      PG_0                                 |PG                                  |   621|
 |8     |        max0                               |max4to1_0                           |   176|
-|9     |        rand                               |lfsr__parameterized0                |    26|
+|9     |        rand                               |lfsr__parameterized0                |    32|
 |10    |      QA_0                                 |QA                                  |   309|
 |11    |        max0                               |max4to1                             |     4|
 |12    |        mul1                               |multiply                            |    62|
 |13    |        mux0                               |mux4to1                             |    16|
 |14    |      RD_0                                 |RD                                  |     7|
-|15    |      SD_0                                 |SD                                  |    39|
+|15    |      SD_0                                 |SD                                  |    42|
 +------+-------------------------------------------+------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1294.996 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1294.652 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Synthesis finished with 0 errors, 0 critical warnings and 39 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1294.996 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1294.996 ; gain = 0.000
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1294.996 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 284 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1294.652 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1294.996 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 79a133b0
+Synth Design complete, checksum: 9485a816
 INFO: [Common 17-83] Releasing license: Synthesis
-52 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
+52 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1294.652 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1294.996 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1/Intellight_Accelerator_v1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Intellight_Accelerator_v1_0_utilization_synth.rpt -pb Intellight_Accelerator_v1_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 14 17:58:23 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 15 11:24:20 2022...

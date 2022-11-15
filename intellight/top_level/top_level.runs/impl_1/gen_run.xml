@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1668426920">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1668486559">
   <File Type="ROUTE-PWR" Name="top_level_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="top_level_wrapper.tcl"/>
   <File Type="BITSTR-MMI" Name="top_level_wrapper.mmi"/>
@@ -103,6 +103,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/Q_Matrix_AXI/Q_Matrix_AXI.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top_level_wrapper"/>
@@ -141,11 +149,20 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Q_Matrix_inst_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_Intellight_Accelerat_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Q_Matrix_AXI_inst_0_axi_aram_ctrl_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_axi_intc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Q_Matrix_AXI_inst_0_action_ram_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Q_Matrix_AXI_inst_0_action_ram_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Q_Matrix_AXI_inst_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Q_Matrix_AXI_inst_0_action_ram_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Q_Matrix_AXI_inst_0_action_ram_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Q_Matrix_AXI_inst_0_axi_aram_ctrl_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Q_Matrix_AXI_inst_0_axi_aram_ctrl_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Q_Matrix_inst_0_action_ram_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_Intellight_Accelerat_0_0"/>
 </GenRun>

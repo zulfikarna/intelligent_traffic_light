@@ -135,10 +135,10 @@
             "value": "True_Dual_Port_RAM"
           },
           "Operating_Mode_A": {
-            "value": "READ_FIRST"
+            "value": "WRITE_FIRST"
           },
           "Operating_Mode_B": {
-            "value": "READ_FIRST"
+            "value": "WRITE_FIRST"
           },
           "Port_B_Clock": {
             "value": "100"
@@ -483,14 +483,14 @@
       "rsta_0_1": {
         "ports": [
           "rst",
-          "action_ram_0/rsta",
-          "action_ram_0/rstb",
           "action_ram_1/rsta",
           "action_ram_1/rstb",
           "action_ram_2/rsta",
           "action_ram_2/rstb",
           "action_ram_3/rsta",
-          "action_ram_3/rstb"
+          "action_ram_3/rstb",
+          "action_ram_0/rstb",
+          "action_ram_0/rsta"
         ]
       },
       "wea_0_1": {

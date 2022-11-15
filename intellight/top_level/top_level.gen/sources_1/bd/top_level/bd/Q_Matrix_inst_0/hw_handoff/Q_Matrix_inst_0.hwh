@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Nov 14 18:55:14 2022" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Nov 15 11:25:39 2022" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="www.digilentinc.com:pynq-z1:part0:1.0" DEVICE="7z020" NAME="Q_Matrix_inst_0" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -26,14 +26,14 @@
     </PORT>
     <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_rst">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="action_ram_0" PORT="rsta"/>
-        <CONNECTION INSTANCE="action_ram_0" PORT="rstb"/>
         <CONNECTION INSTANCE="action_ram_1" PORT="rsta"/>
         <CONNECTION INSTANCE="action_ram_1" PORT="rstb"/>
         <CONNECTION INSTANCE="action_ram_2" PORT="rsta"/>
         <CONNECTION INSTANCE="action_ram_2" PORT="rstb"/>
         <CONNECTION INSTANCE="action_ram_3" PORT="rsta"/>
         <CONNECTION INSTANCE="action_ram_3" PORT="rstb"/>
+        <CONNECTION INSTANCE="action_ram_0" PORT="rstb"/>
+        <CONNECTION INSTANCE="action_ram_0" PORT="rsta"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="7" NAME="wen" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_wen">
@@ -138,7 +138,7 @@
         <PARAMETER NAME="C_HAS_REGCEA" VALUE="0"/>
         <PARAMETER NAME="C_USE_BYTE_WEA" VALUE="1"/>
         <PARAMETER NAME="C_WEA_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="C_WRITE_MODE_A" VALUE="READ_FIRST"/>
+        <PARAMETER NAME="C_WRITE_MODE_A" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="C_WRITE_WIDTH_A" VALUE="64"/>
         <PARAMETER NAME="C_READ_WIDTH_A" VALUE="64"/>
         <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="256"/>
@@ -152,7 +152,7 @@
         <PARAMETER NAME="C_HAS_REGCEB" VALUE="0"/>
         <PARAMETER NAME="C_USE_BYTE_WEB" VALUE="1"/>
         <PARAMETER NAME="C_WEB_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="C_WRITE_MODE_B" VALUE="READ_FIRST"/>
+        <PARAMETER NAME="C_WRITE_MODE_B" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="C_WRITE_WIDTH_B" VALUE="64"/>
         <PARAMETER NAME="C_READ_WIDTH_B" VALUE="64"/>
         <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="256"/>
@@ -184,7 +184,7 @@
         <PARAMETER NAME="C_DISABLE_WARN_BHV_RANGE" VALUE="0"/>
         <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="2"/>
         <PARAMETER NAME="C_COUNT_18K_BRAM" VALUE="0"/>
-        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     12.574801 mW"/>
+        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     11.859801 mW"/>
         <PARAMETER NAME="Component_Name" VALUE="Q_Matrix_inst_0_action_ram_0_0"/>
         <PARAMETER NAME="Interface_Type" VALUE="Native"/>
         <PARAMETER NAME="AXI_Type" VALUE="AXI4_Full"/>
@@ -213,11 +213,11 @@
         <PARAMETER NAME="Write_Width_A" VALUE="64"/>
         <PARAMETER NAME="Write_Depth_A" VALUE="256"/>
         <PARAMETER NAME="Read_Width_A" VALUE="64"/>
-        <PARAMETER NAME="Operating_Mode_A" VALUE="READ_FIRST"/>
+        <PARAMETER NAME="Operating_Mode_A" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="Enable_A" VALUE="Use_ENA_Pin"/>
         <PARAMETER NAME="Write_Width_B" VALUE="64"/>
         <PARAMETER NAME="Read_Width_B" VALUE="64"/>
-        <PARAMETER NAME="Operating_Mode_B" VALUE="READ_FIRST"/>
+        <PARAMETER NAME="Operating_Mode_B" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="Enable_B" VALUE="Use_ENB_Pin"/>
         <PARAMETER NAME="Register_PortA_Output_of_Memory_Primitives" VALUE="false"/>
         <PARAMETER NAME="Register_PortA_Output_of_Memory_Core" VALUE="false"/>

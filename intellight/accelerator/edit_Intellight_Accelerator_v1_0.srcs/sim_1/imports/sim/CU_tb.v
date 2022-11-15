@@ -3,27 +3,22 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module CU_tb
-#(  parameter S_WIDTH = 12,
-    parameter A_WIDTH = 4,
-    parameter RND_WIDTH = 16,
-    parameter CTR_WIDTH = 16
+#(  parameter integer CTR_WIDTH = 16
     ) ();
     reg clk, rst, run, mode;
     reg [CTR_WIDTH-1:0] max_step;
     reg [CTR_WIDTH-1:0] max_episode;
-    reg [RND_WIDTH-1:0] seed;
+    reg [CTR_WIDTH-1:0] seed;
     wire A_sel;
-    wire [A_WIDTH-1:0] A_rand;
-    wire [S_WIDTH-1:0] S0;
-    wire PG;
-    wire QA;
-    wire SD;
-    wire RD;
-    wire [CTR_WIDTH-1:0] wire_step;
-    wire [CTR_WIDTH-1:0] wire_episode;
-    wire [CTR_WIDTH-1:0] wire_epsilon;
-    wire [4:0] wire_cs;
-    wire [4:0] wire_ns;
+//    wire PG;
+//    wire QA;
+//    wire SD;
+//    wire RD;
+//    wire [CTR_WIDTH-1:0] wire_step;
+//    wire [CTR_WIDTH-1:0] wire_episode;
+//    wire [CTR_WIDTH-1:0] wire_epsilon;
+    wire [4:0] debug_cs;
+    wire [4:0] debug_ns;
     wire finish;
     wire wen;
     wire idle; 
@@ -51,7 +46,7 @@ module CU_tb
         S_L14    = 5'd14,
         S_DONE   = 5'd17;  
     
-    CU dut(
+    CU #(.CTR_WIDTH(CTR_WIDTH)) dut(
         .clk(clk),
         .rst(rst),
         .run(run),
@@ -60,17 +55,16 @@ module CU_tb
         .max_episode(max_episode),
         .seed(seed),
         .A_sel(A_sel),
-        .A_rand(A_rand),
-        .S0(S0),
-        .PG(PG),
-        .QA(QA),
-        .SD(SD),
-        .RD(RD),
-        .wire_step(wire_step),
-        .wire_episode(wire_episode),
-        .wire_epsilon(wire_epsilon),
-        .wire_cs(wire_cs),
-        .wire_ns(wire_ns),
+//        .S0(S0),
+//        .PG(PG),
+//        .QA(QA),
+//        .SD(SD),
+//        .RD(RD),
+//        .wire_step(wire_step),
+//        .wire_episode(wire_episode),
+//        .wire_epsilon(wire_epsilon),
+        .debug_cs(debug_cs),
+        .debug_ns(debug_ns),
         .finish(finish),
         .wen(wen),
         .idle(idle));
@@ -87,14 +81,14 @@ module CU_tb
     end
     
     initial begin
-        seed = 16'd612;
-        max_step = 16'd256;
+        seed        = $random;
+        max_step    = 16'd256;
         max_episode = 16'd100;
-        mode = 1'b0;
+        mode        = 1'b0;
     end
     
     always @(posedge clk) begin
-        if (wire_cs == S_L11) begin
+        if (debug_cs == S_L11) begin
             #100;
             run = 1'b0;
         end else begin 
