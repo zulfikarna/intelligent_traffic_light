@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.705882",
-   "Default View_TopLeft":"-147,20",
+   "Default View_TopLeft":"-147,407",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
@@ -31,22 +31,22 @@ preplace netloc addra_0_1 1 0 2 NJ 560 350
 preplace netloc clka_0_1 1 0 2 20 110 360
 preplace netloc dina_0_1 1 0 2 NJ 520 370
 preplace netloc rsta_0_1 1 0 2 NJ 600 320
+preplace netloc s_axi_aresetn_0_1 1 0 1 0 220n
 preplace netloc wea_0_1 1 0 2 NJ 620 330
 preplace netloc wen0_1 1 0 2 10J 120 320J
 preplace netloc wen1_1 1 0 2 30J 360 340J
 preplace netloc wen2_1 1 0 2 NJ 860 310J
 preplace netloc wen3_1 1 0 2 NJ 580 310J
-preplace netloc s_axi_aresetn_0_1 1 0 1 0 220n
-preplace netloc axi_aram_ctrl_0_BRAM_PORTA 1 1 1 N 200
-preplace netloc axi_aram_ctrl_1_BRAM_PORTA 1 1 1 N 440
-preplace netloc axi_aram_ctrl_2_BRAM_PORTA 1 1 1 NJ 940
-preplace netloc axi_aram_ctrl_3_BRAM_PORTA 1 1 1 NJ 700
 preplace netloc S_AXI_0_1 1 0 1 NJ 420
 preplace netloc S_AXI_1_1 1 0 1 NJ 180
 preplace netloc S_AXI_2_1 1 0 1 NJ 920
 preplace netloc S_AXI_3_1 1 0 1 NJ 680
+preplace netloc axi_aram_ctrl_0_BRAM_PORTA 1 1 1 N 200
+preplace netloc axi_aram_ctrl_1_BRAM_PORTA 1 1 1 N 440
+preplace netloc axi_aram_ctrl_2_BRAM_PORTA 1 1 1 NJ 940
+preplace netloc axi_aram_ctrl_3_BRAM_PORTA 1 1 1 NJ 700
 levelinfo -pg 1 -20 170 500 640
 pagesize -pg 1 -db -bbox -sgen -160 0 640 1020
 "
 }
-
+0

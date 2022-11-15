@@ -561,7 +561,7 @@
         "inst_hier_path": "action_ram_0",
         "parameters": {
           "Assume_Synchronous_Clk": {
-            "value": "false"
+            "value": "true"
           },
           "EN_SAFETY_CKT": {
             "value": "true"
@@ -626,7 +626,7 @@
         "inst_hier_path": "action_ram_1",
         "parameters": {
           "Assume_Synchronous_Clk": {
-            "value": "false"
+            "value": "true"
           },
           "EN_SAFETY_CKT": {
             "value": "true"
@@ -691,7 +691,7 @@
         "inst_hier_path": "action_ram_2",
         "parameters": {
           "Assume_Synchronous_Clk": {
-            "value": "false"
+            "value": "true"
           },
           "EN_SAFETY_CKT": {
             "value": "true"
@@ -756,7 +756,7 @@
         "inst_hier_path": "action_ram_3",
         "parameters": {
           "Assume_Synchronous_Clk": {
-            "value": "false"
+            "value": "true"
           },
           "EN_SAFETY_CKT": {
             "value": "true"

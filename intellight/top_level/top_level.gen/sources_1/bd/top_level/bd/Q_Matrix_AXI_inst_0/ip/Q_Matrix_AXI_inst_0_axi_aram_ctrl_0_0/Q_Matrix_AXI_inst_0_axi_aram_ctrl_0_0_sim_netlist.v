@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Tue Nov 15 10:10:35 2022
+// Date        : Tue Nov 15 10:10:34 2022
 // Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_AXI_inst_0/ip/Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0/Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0 -prefix
+//               Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_ Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_sim_netlist.v
 // Design      : Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -255,7 +255,7 @@ endmodule
 (* C_READ_LATENCY = "1" *) (* C_SINGLE_PORT_BRAM = "1" *) (* C_S_AXI_ADDR_WIDTH = "13" *) 
 (* C_S_AXI_CTRL_ADDR_WIDTH = "32" *) (* C_S_AXI_CTRL_DATA_WIDTH = "32" *) (* C_S_AXI_DATA_WIDTH = "32" *) 
 (* C_S_AXI_ID_WIDTH = "1" *) (* C_S_AXI_PROTOCOL = "AXI4" *) (* C_S_AXI_SUPPORTS_NARROW_BURST = "0" *) 
-(* ORIG_REF_NAME = "axi_bram_ctrl" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* downgradeipidentifiedwarnings = "yes" *) 
 module Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_axi_bram_ctrl
    (s_axi_aclk,
     s_axi_aresetn,
@@ -567,7 +567,6 @@ module Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_axi_bram_ctrl
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_bram_ctrl_top" *) 
 module Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_axi_bram_ctrl_top
    (\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg ,
     \GEN_NO_RD_CMD_OPT.axi_rlast_int_reg ,
@@ -694,7 +693,6 @@ module Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_axi_bram_ctrl_top
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "full_axi" *) 
 module Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_full_axi
    (\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg ,
     \GEN_NO_RD_CMD_OPT.axi_rlast_int_reg ,
@@ -1081,7 +1079,6 @@ module Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_full_axi
         .\save_init_bram_addr_ld_reg[3] (SR));
 endmodule
 
-(* ORIG_REF_NAME = "rd_chnl" *) 
 module Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_rd_chnl
    (s_axi_aresetn_0,
     s_axi_rdata,
@@ -3296,7 +3293,6 @@ module Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_rd_chnl
         .O(s_axi_rready_0));
 endmodule
 
-(* ORIG_REF_NAME = "sng_port_arb" *) 
 module Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_sng_port_arb
    (s_axi_awready,
     s_axi_arready,
@@ -3608,7 +3604,6 @@ module Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_sng_port_arb
         .O(ar_active_re));
 endmodule
 
-(* ORIG_REF_NAME = "wr_chnl" *) 
 module Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_wr_chnl
    (aw_active_d1,
     bram_wrdata_a,
@@ -4365,7 +4360,6 @@ module Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_wr_chnl
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "wrap_brst" *) 
 module Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_wrap_brst
    (curr_fixed_burst_reg_reg,
     curr_wrap_burst_reg_reg,

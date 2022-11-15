@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:Intellight_Accelerator:1.0
-// IP Revision: 15
+// IP Revision: 21
 
 `timescale 1ns/1ps
 

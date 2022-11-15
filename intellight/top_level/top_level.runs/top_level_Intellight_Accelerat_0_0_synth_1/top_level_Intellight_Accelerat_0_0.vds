@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Tue Nov 15 11:25:49 2022
-# Process ID: 9464
+# Start of session at: Tue Nov 15 15:45:35 2022
+# Process ID: 17200
 # Current directory: D:/intelligent_traffic_light/intellight/top_level/top_level.runs/top_level_Intellight_Accelerat_0_0_synth_1
 # Command line: vivado.exe -log top_level_Intellight_Accelerat_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_Intellight_Accelerat_0_0.tcl
 # Log file: D:/intelligent_traffic_light/intellight/top_level/top_level.runs/top_level_Intellight_Accelerat_0_0_synth_1/top_level_Intellight_Accelerat_0_0.vds
@@ -11,7 +11,6 @@
 # Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
 #-----------------------------------------------------------
 source top_level_Intellight_Accelerat_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1294.188 ; gain = 10.391
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program/Vivado/2022.1/data/ip'.
@@ -22,114 +21,199 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1252
-WARNING: [Synth 8-9971] redeclaration of ansi port 'D' is not allowed [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/MII.v:46]
+INFO: [Synth 8-7075] Helper process launched with PID 10104
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1294.188 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1284.801 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_level_Intellight_Accelerat_0_0' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_Intellight_Accelerat_0_0/synth/top_level_Intellight_Accelerat_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'Intellight_Accelerator_v1_0' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0.v:4]
-INFO: [Synth 8-6157] synthesizing module 'Intellight_Accelerator_v1_0_S00_AXI' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-226] default block is never used [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:1199]
-INFO: [Synth 8-6157] synthesizing module 'Accelerator' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Accelerator.v:12]
-INFO: [Synth 8-6157] synthesizing module 'CU' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/CU.v:12]
-INFO: [Synth 8-6157] synthesizing module 'lfsr' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/file_arith.v:50]
-INFO: [Synth 8-6155] done synthesizing module 'lfsr' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/file_arith.v:50]
-WARNING: [Synth 8-689] width (17) of port connection 'seed' does not match port width (16) of module 'lfsr' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/CU.v:70]
-INFO: [Synth 8-6155] done synthesizing module 'CU' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/CU.v:12]
-WARNING: [Synth 8-7071] port 'debug_cs' of module 'CU' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Accelerator.v:70]
-WARNING: [Synth 8-7071] port 'debug_ns' of module 'CU' is unconnected for instance 'CU_0' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Accelerator.v:70]
-WARNING: [Synth 8-7023] instance 'CU_0' of module 'CU' has 13 connections declared, but only 11 given [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Accelerator.v:70]
-INFO: [Synth 8-6157] synthesizing module 'MII' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/MII.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'MII' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/MII.v:12]
-WARNING: [Synth 8-7071] port 'D' of module 'MII' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Accelerator.v:88]
-WARNING: [Synth 8-7071] port 'A_road' of module 'MII' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Accelerator.v:88]
-WARNING: [Synth 8-7071] port 'A_dur' of module 'MII' is unconnected for instance 'MII_0' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Accelerator.v:88]
-WARNING: [Synth 8-7023] instance 'MII_0' of module 'MII' has 21 connections declared, but only 18 given [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Accelerator.v:88]
-INFO: [Synth 8-6157] synthesizing module 'PG' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/PG.v:12]
-INFO: [Synth 8-6157] synthesizing module 'max4to1' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/file_max.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'max4to1' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/file_max.v:22]
-INFO: [Synth 8-6157] synthesizing module 'lfsr__parameterized0' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/file_arith.v:50]
-INFO: [Synth 8-6155] done synthesizing module 'lfsr__parameterized0' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/file_arith.v:50]
-INFO: [Synth 8-6155] done synthesizing module 'PG' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/PG.v:12]
-INFO: [Synth 8-6157] synthesizing module 'QA' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/QA.v:12]
-INFO: [Synth 8-6157] synthesizing module 'mux4to1' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/file_mux.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'mux4to1' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/file_mux.v:22]
-INFO: [Synth 8-6157] synthesizing module 'multiply' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/file_arith.v:12]
-INFO: [Synth 8-6157] synthesizing module 'r_shift' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/file_arith.v:35]
-INFO: [Synth 8-6155] done synthesizing module 'r_shift' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/file_arith.v:35]
-INFO: [Synth 8-6155] done synthesizing module 'multiply' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/file_arith.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'QA' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/QA.v:12]
-INFO: [Synth 8-6157] synthesizing module 'RD' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/RD.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'RD' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/RD.v:12]
-INFO: [Synth 8-6157] synthesizing module 'SD' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/SD.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'SD' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/SD.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'Accelerator' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Accelerator.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'Intellight_Accelerator_v1_0_S00_AXI' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'Intellight_Accelerator_v1_0' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'Intellight_Accelerator_v1_0' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'Intellight_Accelerator_v1_0_S00_AXI' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:1199]
+INFO: [Synth 8-6157] synthesizing module 'Accelerator' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Accelerator.v:12]
+INFO: [Synth 8-6157] synthesizing module 'CU' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/CU.v:12]
+INFO: [Synth 8-6157] synthesizing module 'lfsr' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/file_arith.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/file_arith.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'CU' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/CU.v:12]
+INFO: [Synth 8-6157] synthesizing module 'MII' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/MII.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'MII' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/MII.v:12]
+INFO: [Synth 8-6157] synthesizing module 'PG' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/PG.v:12]
+INFO: [Synth 8-6157] synthesizing module 'max4to1' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/file_max.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'max4to1' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/file_max.v:22]
+INFO: [Synth 8-6157] synthesizing module 'lfsr__parameterized0' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/file_arith.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr__parameterized0' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/file_arith.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'PG' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/PG.v:12]
+INFO: [Synth 8-6157] synthesizing module 'QA' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/QA.v:12]
+INFO: [Synth 8-6157] synthesizing module 'mux4to1' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/file_mux.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'mux4to1' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/file_mux.v:22]
+INFO: [Synth 8-6157] synthesizing module 'multiply' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/file_arith.v:12]
+INFO: [Synth 8-6157] synthesizing module 'r_shift' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/file_arith.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'r_shift' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/file_arith.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'multiply' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/file_arith.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'QA' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/QA.v:12]
+INFO: [Synth 8-6157] synthesizing module 'RD' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/RD.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'RD' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/RD.v:12]
+INFO: [Synth 8-6157] synthesizing module 'SD' [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/SD.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'SD' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/SD.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'Accelerator' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Accelerator.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'Intellight_Accelerator_v1_0_S00_AXI' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'Intellight_Accelerator_v1_0' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'top_level_Intellight_Accelerat_0_0' (0#1) [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_Intellight_Accelerat_0_0/synth/top_level_Intellight_Accelerat_0_0.v:53]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg49_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:382]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg50_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:383]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg51_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:384]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg52_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:385]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg53_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:386]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg54_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:387]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg55_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:388]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg56_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:389]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg57_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:390]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg58_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:391]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg59_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:392]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg60_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:393]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg61_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:394]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg62_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:395]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg63_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/3b42/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:396]
-WARNING: [Synth 8-7129] Port seed[16] in module CU is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-6014] Unused sequential element slv_reg49_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:382]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg50_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:383]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg51_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:384]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg52_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:385]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg53_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:386]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg54_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:387]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg55_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:388]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg56_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:389]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg57_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:390]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg58_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:391]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg59_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:392]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg60_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:393]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg61_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:394]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg62_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:395]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg63_reg was removed.  [d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ipshared/fa2e/hdl/Intellight_Accelerator_v1_0_S00_AXI.v:396]
+WARNING: [Synth 8-7129] Port D_road2[63] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[62] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[61] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[60] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[59] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[58] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[57] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[56] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[55] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[54] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[53] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[52] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[51] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[50] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[49] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[48] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[47] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[46] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[45] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[44] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[43] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[42] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[41] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[40] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[39] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[38] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[37] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[36] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[35] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[34] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[33] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[32] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[31] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[30] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[29] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[28] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[27] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[26] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[25] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[24] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[23] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[22] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[21] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[20] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[19] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[18] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[17] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[16] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[15] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[14] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[13] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[12] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[11] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[10] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[9] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[8] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[7] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[6] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[5] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[4] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[3] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[2] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[1] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road2[0] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[63] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[62] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[61] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[60] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[59] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[58] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[57] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[56] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[55] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[54] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[53] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[52] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[51] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[50] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[49] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[48] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[47] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[46] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[45] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[44] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[43] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[42] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[41] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[40] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[39] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[38] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[37] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[36] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[35] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[34] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[33] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[32] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[31] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[30] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[29] in module MII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_road3[28] in module MII is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1307.090 ; gain = 12.902
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1305.426 ; gain = 20.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1307.090 ; gain = 12.902
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1305.426 ; gain = 20.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1307.090 ; gain = 12.902
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1305.426 ; gain = 20.625
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.118 . Memory (MB): peak = 1307.090 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 1305.426 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1399.734 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1396.531 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.405 . Memory (MB): peak = 1400.074 ; gain = 0.340
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.347 . Memory (MB): peak = 1396.918 ; gain = 0.387
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'CU'
 ---------------------------------------------------------------------------------------------------
@@ -153,7 +237,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'CU'
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'cs_reg' using encoding 'one-hot' in module 'CU'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -177,21 +261,22 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   4 Input   64 Bit        Muxes := 3     
+	   2 Input   64 Bit        Muxes := 1     
+	   4 Input   64 Bit        Muxes := 2     
 	   2 Input   32 Bit        Muxes := 65    
 	  32 Input   32 Bit        Muxes := 32    
-	   2 Input   16 Bit        Muxes := 38    
+	   2 Input   16 Bit        Muxes := 36    
 	   4 Input   16 Bit        Muxes := 1     
 	  15 Input   15 Bit        Muxes := 1     
 	   2 Input   15 Bit        Muxes := 4     
 	   2 Input    8 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 18    
-	  15 Input    5 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 15    
+	  15 Input    5 Bit        Muxes := 1     
 	   3 Input    5 Bit        Muxes := 4     
 	   2 Input    4 Bit        Muxes := 5     
 	   4 Input    4 Bit        Muxes := 5     
-	   2 Input    3 Bit        Muxes := 2     
-	   2 Input    2 Bit        Muxes := 8     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 5     
 	   2 Input    1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -209,33 +294,26 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port seed[16] in module CU is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module Intellight_Accelerator_v1_0_S00_AXI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -253,37 +331,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -315,42 +393,42 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |CARRY4 |    60|
-|2     |LUT1   |     3|
-|3     |LUT2   |   162|
-|4     |LUT3   |   104|
-|5     |LUT4   |   273|
-|6     |LUT5   |    38|
-|7     |LUT6   |   874|
+|2     |LUT1   |     4|
+|3     |LUT2   |   156|
+|4     |LUT3   |   195|
+|5     |LUT4   |   211|
+|6     |LUT5   |    45|
+|7     |LUT6   |   810|
 |8     |MUXF7  |   160|
 |9     |MUXF8  |    64|
 |10    |SRL16E |    72|
-|11    |FDRE   |  1850|
+|11    |FDRE   |  1844|
 |12    |FDSE   |    18|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1396.918 ; gain = 112.117
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1400.074 ; gain = 12.902
-Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 1400.074 ; gain = 105.887
+Synthesis finished with 0 errors, 0 critical warnings and 135 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 1396.918 ; gain = 20.625
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1396.918 ; gain = 112.117
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1400.074 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1396.918 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 284 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1400.074 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1396.918 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 54fbfbf5
+Synth Design complete, checksum: 50d57efd
 INFO: [Common 17-83] Releasing license: Synthesis
-53 Infos, 39 Warnings, 0 Critical Warnings and 0 Errors encountered.
+54 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 1400.074 ; gain = 105.887
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:50 . Memory (MB): peak = 1396.918 ; gain = 112.117
 INFO: [Common 17-1381] The checkpoint 'D:/intelligent_traffic_light/intellight/top_level/top_level.runs/top_level_Intellight_Accelerat_0_0_synth_1/top_level_Intellight_Accelerat_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_level_Intellight_Accelerat_0_0, cache-ID = 6353749fee5250cc
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_level_Intellight_Accelerat_0_0, cache-ID = 3c713d0d1cf12ffa
 INFO: [Coretcl 2-1174] Renamed 15 cell refs.
 INFO: [Common 17-1381] The checkpoint 'D:/intelligent_traffic_light/intellight/top_level/top_level.runs/top_level_Intellight_Accelerat_0_0_synth_1/top_level_Intellight_Accelerat_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_level_Intellight_Accelerat_0_0_utilization_synth.rpt -pb top_level_Intellight_Accelerat_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Nov 15 11:26:53 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 15 15:46:37 2022...
