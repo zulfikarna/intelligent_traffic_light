@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="40">
   <CompositeFile CompositeFileTopName="top_level" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1668501927"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1668501927"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1668501927"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1668501927"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1669028197"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1669028197"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1669028197"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1669028197"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\top_level.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -61,25 +61,12 @@
           <BDFile BDFilePath="bd\Q_Matrix_inst_0\Q_Matrix_inst_0.bd" BDFileset="Q_Matrix_inst_0" BDSourceFile="..\..\..\..\top_level.srcs\sources_1\bd\Q_Matrix\Q_Matrix.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
         </VariantsCollection>
       </BlockContainer>
-      <BlockContainer InstPath="/Q_Matrix_AXI_0" IsPR="false" State="Generated">
-        <ActiveVariantSynth FileName="bd\Q_Matrix_AXI_inst_0\Q_Matrix_AXI_inst_0.bd"/>
-        <ActiveVariantSim FileName="bd\Q_Matrix_AXI_inst_0\Q_Matrix_AXI_inst_0.bd"/>
-        <VariantsCollection>
-          <BDFile BDFilePath="bd\Q_Matrix_AXI_inst_0\Q_Matrix_AXI_inst_0.bd" BDFileset="Q_Matrix_AXI_inst_0" BDSourceFile="..\..\..\..\top_level.srcs\sources_1\bd\Q_Matrix_AXI\Q_Matrix_AXI.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
-        </VariantsCollection>
-      </BlockContainer>
     </BlockContainerCollection>
     <ReferenceCollection>
       <ModuleReference TargetName="Q_Matrix" Type="Block Design" SubInstancePath="top_level_Q_Matrix_0">
         <TopFile Name="..\..\..\..\top_level.srcs\sources_1\bd\Q_Matrix\Q_Matrix.bd"/>
         <FileCollection>
           <File Name="..\..\..\..\top_level.srcs\sources_1\bd\Q_Matrix\Q_Matrix.bd"/>
-        </FileCollection>
-      </ModuleReference>
-      <ModuleReference TargetName="Q_Matrix_AXI" Type="Block Design" SubInstancePath="top_level_Q_Matrix_AXI_0">
-        <TopFile Name="..\..\..\..\top_level.srcs\sources_1\bd\Q_Matrix_AXI\Q_Matrix_AXI.bd"/>
-        <FileCollection>
-          <File Name="..\..\..\..\top_level.srcs\sources_1\bd\Q_Matrix_AXI\Q_Matrix_AXI.bd"/>
         </FileCollection>
       </ModuleReference>
     </ReferenceCollection>

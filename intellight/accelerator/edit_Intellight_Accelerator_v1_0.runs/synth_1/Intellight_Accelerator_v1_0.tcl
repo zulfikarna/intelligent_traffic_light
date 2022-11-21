@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
 set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
@@ -90,10 +89,11 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+  D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sources_1/imports/hdl/AGENT.v
   D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v
   D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/CU.v
+  D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/ENV.v
   D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v
-  D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/PG.v
   D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/QA.v
   D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/RD.v
   D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/SD.v

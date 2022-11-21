@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -98,17 +97,6 @@ set_property used_in_implementation false [get_files -all d:/intelligent_traffic
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_inst_0/ip/Q_Matrix_inst_0_action_ram_3_0/Q_Matrix_inst_0_action_ram_3_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all D:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_inst_0/Q_Matrix_inst_0_ooc.xdc]
 
-add_files D:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_AXI_inst_0/Q_Matrix_AXI_inst_0.bd
-set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_AXI_inst_0/ip/Q_Matrix_AXI_inst_0_action_ram_0_0/Q_Matrix_AXI_inst_0_action_ram_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_AXI_inst_0/ip/Q_Matrix_AXI_inst_0_action_ram_1_0/Q_Matrix_AXI_inst_0_action_ram_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_AXI_inst_0/ip/Q_Matrix_AXI_inst_0_action_ram_2_0/Q_Matrix_AXI_inst_0_action_ram_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_AXI_inst_0/ip/Q_Matrix_AXI_inst_0_action_ram_3_0/Q_Matrix_AXI_inst_0_action_ram_3_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_AXI_inst_0/ip/Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0/Q_Matrix_AXI_inst_0_axi_aram_ctrl_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_AXI_inst_0/ip/Q_Matrix_AXI_inst_0_axi_aram_ctrl_1_0/Q_Matrix_AXI_inst_0_axi_aram_ctrl_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_AXI_inst_0/ip/Q_Matrix_AXI_inst_0_axi_aram_ctrl_2_0/Q_Matrix_AXI_inst_0_axi_aram_ctrl_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_AXI_inst_0/ip/Q_Matrix_AXI_inst_0_axi_aram_ctrl_3_0/Q_Matrix_AXI_inst_0_axi_aram_ctrl_3_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all D:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_AXI_inst_0/Q_Matrix_AXI_inst_0_ooc.xdc]
-
 add_files D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_axi_intc_0_0/top_level_axi_intc_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_axi_intc_0_0/top_level_axi_intc_0_0_clocks.xdc]
@@ -118,11 +106,9 @@ set_property used_in_implementation false [get_files -all d:/intelligent_traffic
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/top_level_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/top_level_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/top_level_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_auto_pc_4/top_level_auto_pc_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_auto_pc_2/top_level_auto_pc_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_auto_pc_0/top_level_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_auto_pc_1/top_level_auto_pc_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_auto_pc_2/top_level_auto_pc_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_auto_pc_3/top_level_auto_pc_3_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/top_level_ooc.xdc]
 
 OPTRACE "Adding files" END { }
@@ -134,8 +120,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/constrs_1/new/constraint_151122.xdc
-set_property used_in_implementation false [get_files D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/constrs_1/new/constraint_151122.xdc]
+read_xdc D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/constrs_1/imports/top_level/PYNQ-Z1_C.xdc
+set_property used_in_implementation false [get_files D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/constrs_1/imports/top_level/PYNQ-Z1_C.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

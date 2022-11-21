@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xC36DE653FD91BB9E",
+      "boundary_crc": "0xC36DE6535799B03F",
       "design_src": "D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/Q_Matrix/Q_Matrix.bd",
       "device": "xc7z020clg400-1",
       "name": "Q_Matrix_inst_0",
@@ -20,6 +20,31 @@
       "const_1_1bit": ""
     },
     "ports": {
+      "D_new": {
+        "direction": "I",
+        "left": "63",
+        "right": "0"
+      },
+      "D_road0": {
+        "direction": "O",
+        "left": "63",
+        "right": "0"
+      },
+      "D_road1": {
+        "direction": "O",
+        "left": "63",
+        "right": "0"
+      },
+      "D_road2": {
+        "direction": "O",
+        "left": "63",
+        "right": "0"
+      },
+      "D_road3": {
+        "direction": "O",
+        "left": "63",
+        "right": "0"
+      },
       "clk": {
         "type": "clk",
         "direction": "I",
@@ -29,7 +54,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "50000000",
+            "value": "100000000",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -85,31 +110,6 @@
       "wr_addr": {
         "direction": "I",
         "left": "31",
-        "right": "0"
-      },
-      "D_new": {
-        "direction": "I",
-        "left": "63",
-        "right": "0"
-      },
-      "D_road0": {
-        "direction": "O",
-        "left": "63",
-        "right": "0"
-      },
-      "D_road1": {
-        "direction": "O",
-        "left": "63",
-        "right": "0"
-      },
-      "D_road2": {
-        "direction": "O",
-        "left": "63",
-        "right": "0"
-      },
-      "D_road3": {
-        "direction": "O",
-        "left": "63",
         "right": "0"
       }
     },

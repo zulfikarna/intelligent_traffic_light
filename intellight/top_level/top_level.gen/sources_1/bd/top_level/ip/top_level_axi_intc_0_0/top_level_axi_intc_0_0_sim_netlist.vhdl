@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Mon Nov 14 18:56:56 2022
+-- Date        : Mon Nov 21 15:14:12 2022
 -- Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_axi_intc_0_0/top_level_axi_intc_0_0_sim_netlist.vhdl
@@ -833,8 +833,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_level_axi_intc_0_0_intc_core is
   port (
-    s_axi_aresetn_0 : out STD_LOGIC;
     ivr : out STD_LOGIC;
+    s_axi_aresetn_0 : out STD_LOGIC;
     ipr : out STD_LOGIC_VECTOR ( 0 to 0 );
     \REG_GEN[0].IAR_NORMAL_MODE_GEN.iar_reg[0]_0\ : out STD_LOGIC;
     p_0_in : out STD_LOGIC;
@@ -844,7 +844,6 @@ entity top_level_axi_intc_0_0_intc_core is
     mer : out STD_LOGIC;
     irq : out STD_LOGIC;
     ier : out STD_LOGIC;
-    intr : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_aclk : in STD_LOGIC;
     \REG_GEN[0].IAR_NORMAL_MODE_GEN.iar_reg[0]_1\ : in STD_LOGIC;
     \mer_int_reg[1]_0\ : in STD_LOGIC;
@@ -855,6 +854,7 @@ entity top_level_axi_intc_0_0_intc_core is
     s_axi_wdata : in STD_LOGIC_VECTOR ( 0 to 0 );
     Bus_RNW_reg : in STD_LOGIC;
     p_18_in : in STD_LOGIC;
+    intr : in STD_LOGIC_VECTOR ( 0 to 0 );
     p_16_in : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -862,8 +862,7 @@ entity top_level_axi_intc_0_0_intc_core is
 end top_level_axi_intc_0_0_intc_core;
 
 architecture STRUCTURE of top_level_axi_intc_0_0_intc_core is
-  signal \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0\ : STD_LOGIC;
-  signal \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1\ : STD_LOGIC;
+  signal \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1_n_0\ : STD_LOGIC;
   signal \IPR_GEN.ipr[0]_i_1_n_0\ : STD_LOGIC;
   signal \IRQ_LEVEL_GEN.IRQ_LEVEL_NORMAL_ON_AXI_CLK_GEN.Irq_i_1_n_0\ : STD_LOGIC;
   signal \IVR_GEN.ivr[0]_i_1_n_0\ : STD_LOGIC;
@@ -883,8 +882,10 @@ architecture STRUCTURE of top_level_axi_intc_0_0_intc_core is
   signal \^s_axi_aresetn_0\ : STD_LOGIC;
   signal \^sie\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1\ : label is "soft_lutpair19";
   attribute SOFT_HLUTNM of \IRQ_LEVEL_GEN.IRQ_LEVEL_NORMAL_ON_AXI_CLK_GEN.Irq_i_1\ : label is "soft_lutpair18";
   attribute SOFT_HLUTNM of \REG_GEN[0].ier[0]_i_2\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \REG_GEN[0].isr[0]_i_1\ : label is "soft_lutpair19";
 begin
   \REG_GEN[0].IAR_NORMAL_MODE_GEN.iar_reg[0]_0\ <= \^reg_gen[0].iar_normal_mode_gen.iar_reg[0]_0\;
   cie <= \^cie\;
@@ -904,33 +905,24 @@ begin
       Q => \^cie\,
       R => '0'
     );
-\INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1\: unisim.vcomponents.LUT5
+\INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0000AE00"
+      INIT => X"00E0"
     )
         port map (
       I0 => hw_intr,
       I1 => intr(0),
-      I2 => \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1\,
-      I3 => s_axi_aresetn,
-      I4 => \^reg_gen[0].iar_normal_mode_gen.iar_reg[0]_0\,
-      O => \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0\
+      I2 => s_axi_aresetn,
+      I3 => \^reg_gen[0].iar_normal_mode_gen.iar_reg[0]_0\,
+      O => \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1_n_0\
     );
-\INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr_reg[0]\: unisim.vcomponents.FDRE
+\INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0\,
+      D => \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1_n_0\,
       Q => hw_intr,
       R => '0'
-    );
-\INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1_reg\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => intr(0),
-      Q => \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1\,
-      R => \^s_axi_aresetn_0\
     );
 \IPR_GEN.ipr[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -2079,7 +2071,7 @@ entity top_level_axi_intc_0_0_axi_intc is
   attribute C_KIND_OF_EDGE : integer;
   attribute C_KIND_OF_EDGE of top_level_axi_intc_0_0_axi_intc : entity is -1;
   attribute C_KIND_OF_INTR : integer;
-  attribute C_KIND_OF_INTR of top_level_axi_intc_0_0_axi_intc : entity is -1;
+  attribute C_KIND_OF_INTR of top_level_axi_intc_0_0_axi_intc : entity is -2;
   attribute C_KIND_OF_LVL : integer;
   attribute C_KIND_OF_LVL of top_level_axi_intc_0_0_axi_intc : entity is -1;
   attribute C_MB_CLK_NOT_CONNECTED : integer;
@@ -2117,7 +2109,7 @@ architecture STRUCTURE of top_level_axi_intc_0_0_axi_intc is
   signal AXI_LITE_IPIF_I_n_15 : STD_LOGIC;
   signal AXI_LITE_IPIF_I_n_16 : STD_LOGIC;
   signal AXI_LITE_IPIF_I_n_6 : STD_LOGIC;
-  signal INTC_CORE_I_n_0 : STD_LOGIC;
+  signal INTC_CORE_I_n_1 : STD_LOGIC;
   signal INTC_CORE_I_n_3 : STD_LOGIC;
   signal \I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg\ : STD_LOGIC;
   signal \I_SLAVE_ATTACHMENT/I_DECODER/p_16_in\ : STD_LOGIC;
@@ -2245,7 +2237,7 @@ AXI_LITE_IPIF_I: entity work.top_level_axi_intc_0_0_axi_lite_ipif
       p_0_in => p_0_in,
       p_16_in => \I_SLAVE_ATTACHMENT/I_DECODER/p_16_in\,
       p_18_in => \I_SLAVE_ATTACHMENT/I_DECODER/p_18_in\,
-      rst_reg => INTC_CORE_I_n_0,
+      rst_reg => INTC_CORE_I_n_1,
       s_axi_aclk => s_axi_aclk,
       s_axi_araddr(6 downto 0) => s_axi_araddr(8 downto 2),
       s_axi_aresetn => s_axi_aresetn,
@@ -2293,7 +2285,7 @@ INTC_CORE_I: entity work.top_level_axi_intc_0_0_intc_core
       p_18_in => \I_SLAVE_ATTACHMENT/I_DECODER/p_18_in\,
       s_axi_aclk => s_axi_aclk,
       s_axi_aresetn => s_axi_aresetn,
-      s_axi_aresetn_0 => INTC_CORE_I_n_0,
+      s_axi_aresetn_0 => INTC_CORE_I_n_1,
       s_axi_wdata(0) => s_axi_wdata(0),
       sie => sie
     );
@@ -2303,7 +2295,7 @@ ip2bus_rdack_int_d1_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => Or128_vec2stdlogic19_out,
       Q => ip2bus_rdack_int_d1,
-      R => INTC_CORE_I_n_0
+      R => INTC_CORE_I_n_1
     );
 ip2bus_rdack_reg: unisim.vcomponents.FDRE
      port map (
@@ -2311,7 +2303,7 @@ ip2bus_rdack_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => ip2bus_rdack_prev2,
       Q => ip2bus_rdack,
-      R => INTC_CORE_I_n_0
+      R => INTC_CORE_I_n_1
     );
 ip2bus_wrack_int_d1_reg: unisim.vcomponents.FDRE
      port map (
@@ -2319,7 +2311,7 @@ ip2bus_wrack_int_d1_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => Or128_vec2stdlogic,
       Q => ip2bus_wrack_int_d1,
-      R => INTC_CORE_I_n_0
+      R => INTC_CORE_I_n_1
     );
 ip2bus_wrack_reg: unisim.vcomponents.FDRE
      port map (
@@ -2327,7 +2319,7 @@ ip2bus_wrack_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => ip2bus_wrack_prev2,
       Q => ip2bus_wrack,
-      R => INTC_CORE_I_n_0
+      R => INTC_CORE_I_n_1
     );
 end STRUCTURE;
 library IEEE;
@@ -2413,7 +2405,7 @@ architecture STRUCTURE of top_level_axi_intc_0_0 is
   attribute C_KIND_OF_EDGE : integer;
   attribute C_KIND_OF_EDGE of U0 : label is -1;
   attribute C_KIND_OF_INTR : integer;
-  attribute C_KIND_OF_INTR of U0 : label is -1;
+  attribute C_KIND_OF_INTR of U0 : label is -2;
   attribute C_KIND_OF_LVL : integer;
   attribute C_KIND_OF_LVL of U0 : label is -1;
   attribute C_MB_CLK_NOT_CONNECTED : integer;
@@ -2445,7 +2437,7 @@ architecture STRUCTURE of top_level_axi_intc_0_0 is
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of irq : signal is "XIL_INTERFACENAME interrupt_irq, SENSITIVITY LEVEL_HIGH, PORTWIDTH 1";
   attribute x_interface_info of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 s_axi_aclk CLK";
-  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME s_axi_aclk, ASSOCIATED_BUSIF s_axi, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_level_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME s_axi_aclk, ASSOCIATED_BUSIF s_axi, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_level_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 s_resetn RST";
   attribute x_interface_parameter of s_axi_aresetn : signal is "XIL_INTERFACENAME s_resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute x_interface_info of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 s_axi ARREADY";
@@ -2462,7 +2454,7 @@ architecture STRUCTURE of top_level_axi_intc_0_0 is
   attribute x_interface_parameter of intr : signal is "XIL_INTERFACENAME interrupt_input, SENSITIVITY LEVEL_HIGH, PORTWIDTH 1";
   attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 s_axi ARADDR";
   attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 s_axi AWADDR";
-  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 50000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN top_level_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN top_level_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 s_axi BRESP";
   attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 s_axi RDATA";
   attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 s_axi RRESP";
