@@ -58,7 +58,11 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="pynq-z1"/>
+<<<<<<< HEAD
+    <Option Name="WTXSimLaunchSim" Val="185"/>
+=======
     <Option Name="WTXSimLaunchSim" Val="83"/>
+>>>>>>> parent of ae750207 (shfcuidtf7)
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -211,8 +215,19 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/Intellight_Accelerator_1.0/sim/ENV_tb.v">
+<<<<<<< HEAD
+      <File Path="$PPRDIR/Intellight_Accelerator_1.0/sim/Accelerator_tb.v">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/sim/CU_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/Intellight_Accelerator_1.0/sim/CU_tb.v"/>
+          <Attr Name="ImportTime" Val="1667300854"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -226,21 +241,62 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/imports/sim/MII_tb.v">
+      <File Path="$PSRCDIR/sim_1/imports/sim/QA_tb.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/Intellight_Accelerator_1.0/sim/MII_tb.v"/>
-          <Attr Name="ImportTime" Val="1667300866"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/Intellight_Accelerator_1.0/sim/QA_tb.v"/>
+          <Attr Name="ImportTime" Val="1667300874"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/imports/sim/CU_tb.v">
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
+      <File Path="$PPRDIR/Intellight_Accelerator_1.0/sim/ENV_tb.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+<<<<<<< HEAD
+      <File Path="$PSRCDIR/sim_1/imports/sim/RD_tb.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/Intellight_Accelerator_1.0/sim/CU_tb.v"/>
-          <Attr Name="ImportTime" Val="1667300854"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/Intellight_Accelerator_1.0/sim/RD_tb.v"/>
+          <Attr Name="ImportTime" Val="1667300881"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/sim/SD_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/Intellight_Accelerator_1.0/sim/SD_tb.v"/>
+          <Attr Name="ImportTime" Val="1667300817"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/Intellight_Accelerator_1.0/sim/Intellight_tb.v">
+=======
+      <File Path="$PPRDIR/Intellight_Accelerator_1.0/sim/AGENT_tb.v">
+>>>>>>> parent of ae750207 (shfcuidtf7)
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/sim/MII_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/Intellight_Accelerator_1.0/sim/MII_tb.v"/>
+          <Attr Name="ImportTime" Val="1667300866"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -306,7 +362,11 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
+<<<<<<< HEAD
+        <Option Name="TopModule" Val="Accelerator_tb"/>
+=======
         <Option Name="TopModule" Val="ENV_tb"/>
+>>>>>>> parent of ae750207 (shfcuidtf7)
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>

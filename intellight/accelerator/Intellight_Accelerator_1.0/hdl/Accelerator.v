@@ -16,8 +16,12 @@ module Accelerator
         parameter integer CTR_WIDTH = 16,
         parameter integer ADDR_WIDTH = 32)
    (  
-      input     wire                                clk, mode, rst, run,
+      output    wire [L_WIDTH*2-1:0]  DEBUG_0_S,
+      output    wire [L_WIDTH/2+1:0]  DEBUG_0_A,
+      output    wire [Q_WIDTH-1:0]    DEBUG_0_Q_new,
+      output    wire [Q_WIDTH*2**(L_WIDTH/2)-1:0]   DEBUG_0_D,
       
+      input     wire                                clk, mode, rst, run,
       input     wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0] D_road0, D_road1, D_road2, D_road3,
       input     wire [L_WIDTH*4-1:0]                L_dec, L_inc_a, L_inc_b, L_inc_c, L_inc_d,
       input     wire [L_WIDTH*2-1:0]                S_sim,
@@ -27,8 +31,10 @@ module Accelerator
       input     wire [CTR_WIDTH-1:0]                seed,
       output    wire [ADDR_WIDTH-1:0]               rd_addr, wr_addr,
       output    wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0] D_new,
-      output    wire                                wen0, wen1, wen2, wen3,
-      output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]wen_bram,
+      output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]wen_bram0,
+      output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]wen_bram1,
+      output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]wen_bram2,
+      output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]wen_bram3,
       output    wire                                finish, idle);
 
     localparam  N_ROAD          = 4,
@@ -64,11 +70,14 @@ module Accelerator
   wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0]   MII_0_D_new;
   wire [ADDR_WIDTH-1:0]                 MII_0_RD_ADDR;
   wire [ADDR_WIDTH-1:0]                 MII_0_WR_ADDR;
-  wire MII_0_en0;
-  wire MII_0_en1;
-  wire MII_0_en2;
-  wire MII_0_en3;
-  wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0] MII_0_wen_bram;
+//  wire MII_0_en0;
+//  wire MII_0_en1;
+//  wire MII_0_en2;
+//  wire MII_0_en3;
+  wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0] MII_0_wen_bram0;
+  wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0] MII_0_wen_bram1;
+  wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0] MII_0_wen_bram2;
+  wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0] MII_0_wen_bram3;
   wire [R_WIDTH-1:0]ENV_0_R;
   wire [L_WIDTH*2-1:0]ENV_0_S;
   wire [Q_WIDTH-1:0] AGENT_0_Q_new;
@@ -95,14 +104,20 @@ module Accelerator
   assign finish     = CU_0_finish;
   assign idle       = CU_0_idle;
   assign D_new      = MII_0_D_new;
-  assign wen_bram   = MII_0_wen_bram;
-  assign wen0       = MII_0_en0;
-  assign wen1       = MII_0_en1;
-  assign wen2       = MII_0_en2;
-  assign wen3       = MII_0_en3;
+  assign wen_bram0  = MII_0_wen_bram0;
+  assign wen_bram1  = MII_0_wen_bram1;
+  assign wen_bram2  = MII_0_wen_bram2;
+  assign wen_bram3  = MII_0_wen_bram3;
   assign rd_addr    = MII_0_RD_ADDR;
   assign wr_addr    = MII_0_WR_ADDR;
+<<<<<<< HEAD
+  assign DEBUG_0_S = ENV_0_S;
+  assign DEBUG_0_A = AGENT_0_A;
+  assign DEBUG_0_D = AGENT_0_D;
+  assign DEBUG_0_Q_new = AGENT_0_Q_new;
+=======
 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   
   AGENT #(  .L_WIDTH(L_WIDTH),
             .Q_WIDTH(Q_WIDTH),
@@ -156,12 +171,11 @@ module Accelerator
         // Output
         .rd_addr(MII_0_RD_ADDR),
         .wr_addr(MII_0_WR_ADDR),
-        .wen_bram(MII_0_wen_bram),
-        .D_new(MII_0_D_new),
-        .wen0(MII_0_en0),
-        .wen1(MII_0_en1),
-        .wen2(MII_0_en2),
-        .wen3(MII_0_en3)
+        .wen_bram0(MII_0_wen_bram0),
+        .wen_bram1(MII_0_wen_bram1),
+        .wen_bram2(MII_0_wen_bram2),
+        .wen_bram3(MII_0_wen_bram3),
+        .D_new(MII_0_D_new)
         );
   
   ENV #(.L_WIDTH(L_WIDTH),

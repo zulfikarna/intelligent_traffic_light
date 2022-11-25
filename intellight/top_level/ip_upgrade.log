@@ -1,6 +1,563 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+<<<<<<< HEAD
+| Date         : Thu Nov 24 15:58:42 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_Intellight_Accelerat_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_Intellight_Accelerat_0_0 (xilinx.com:user:Intellight_Accelerator:1.0) from (Rev. 42) to (Rev. 43)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Nov 23 16:44:04 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_Intellight_Accelerat_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of top_level_Intellight_Accelerat_0_0 (xilinx.com:user:Intellight_Accelerator:1.0) from (Rev. 41) to (Rev. 42)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'top_level_Intellight_Accelerat_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'D_new' width 64 differs from original width 16
+
+-Upgraded port 'D_road0' width 64 differs from original width 16
+
+-Upgraded port 'D_road1' width 64 differs from original width 16
+
+-Upgraded port 'D_road2' width 64 differs from original width 16
+
+-Upgraded port 'D_road3' width 64 differs from original width 16
+
+-Upgraded port 'wen_bram0' width 8 differs from original width 2
+
+-Upgraded port 'wen_bram1' width 8 differs from original width 2
+
+-Upgraded port 'wen_bram2' width 8 differs from original width 2
+
+-Upgraded port 'wen_bram3' width 8 differs from original width 2
+
+
+3. Customization warnings
+-------------------------
+
+The normal upgrade process failed due to validation failures in the given configuration. Attempting partial upgrade to set as many user parameters as possible. Please check the parameters whose values were not applied.
+
+Unable to set the value '0' on parameter 'L_WIDTH' due to the following failure - 
+Value '0' is out of the range for parameter 'L_WIDTH(L_WIDTH)' for BD Cell 'top_level_Intellight_Accelerat_0_0' . Valid values are - 2, 4, 6
+. Restoring to an old valid value of '4'
+
+Parameter 'N_LEVEL' is no longer present on the upgraded IP 'top_level_Intellight_Accelerat_0_0', and cannot be set to '4'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:Intellight_Accelerator:1.0 -user_name top_level_Intellight_Accelerat_0_0
+set_property -dict "\
+  CONFIG.C_S00_AXI_ADDR_WIDTH {8} \
+  CONFIG.C_S00_AXI_BASEADDR {0xFFFFFFFF} \
+  CONFIG.C_S00_AXI_DATA_WIDTH {32} \
+  CONFIG.C_S00_AXI_HIGHADDR {0x00000000} \
+  CONFIG.Component_Name {top_level_Intellight_Accelerat_0_0} \
+  CONFIG.L_WIDTH {0} \
+  CONFIG.Q_WIDTH {16} \
+  CONFIG.R_WIDTH {16} \
+  CONFIG.S00_AXI.ADDR_WIDTH {8} \
+  CONFIG.S00_AXI.ARUSER_WIDTH {0} \
+  CONFIG.S00_AXI.AWUSER_WIDTH {0} \
+  CONFIG.S00_AXI.BUSER_WIDTH {0} \
+  CONFIG.S00_AXI.CLK_DOMAIN {top_level_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.S00_AXI.DATA_WIDTH {32} \
+  CONFIG.S00_AXI.FREQ_HZ {100000000} \
+  CONFIG.S00_AXI.HAS_BRESP {1} \
+  CONFIG.S00_AXI.HAS_BURST {0} \
+  CONFIG.S00_AXI.HAS_CACHE {0} \
+  CONFIG.S00_AXI.HAS_LOCK {0} \
+  CONFIG.S00_AXI.HAS_PROT {1} \
+  CONFIG.S00_AXI.HAS_QOS {0} \
+  CONFIG.S00_AXI.HAS_REGION {0} \
+  CONFIG.S00_AXI.HAS_RRESP {1} \
+  CONFIG.S00_AXI.HAS_WSTRB {1} \
+  CONFIG.S00_AXI.ID_WIDTH {0} \
+  CONFIG.S00_AXI.INSERT_VIP {0} \
+  CONFIG.S00_AXI.MAX_BURST_LENGTH {1} \
+  CONFIG.S00_AXI.NUM_READ_OUTSTANDING {8} \
+  CONFIG.S00_AXI.NUM_READ_THREADS {1} \
+  CONFIG.S00_AXI.NUM_WRITE_OUTSTANDING {8} \
+  CONFIG.S00_AXI.NUM_WRITE_THREADS {1} \
+  CONFIG.S00_AXI.PHASE {0.0} \
+  CONFIG.S00_AXI.PROTOCOL {AXI4LITE} \
+  CONFIG.S00_AXI.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.S00_AXI.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.S00_AXI.RUSER_WIDTH {0} \
+  CONFIG.S00_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.S00_AXI.WIZ_DATA_WIDTH {32} \
+  CONFIG.S00_AXI.WIZ_NUM_REG {64} \
+  CONFIG.S00_AXI.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.S00_AXI.WUSER_WIDTH {0} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_BUSIF {S00_AXI} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_PORT {} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_RESET {s00_axi_aresetn} \
+  CONFIG.S00_AXI_CLK.CLK_DOMAIN {top_level_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.S00_AXI_CLK.FREQ_HZ {100000000} \
+  CONFIG.S00_AXI_CLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.S00_AXI_CLK.INSERT_VIP {0} \
+  CONFIG.S00_AXI_CLK.PHASE {0.0} \
+  CONFIG.S00_AXI_RST.INSERT_VIP {0} \
+  CONFIG.S00_AXI_RST.POLARITY {ACTIVE_LOW} \
+  CONFIG.clk.ASSOCIATED_BUSIF {} \
+  CONFIG.clk.ASSOCIATED_PORT {} \
+  CONFIG.clk.ASSOCIATED_RESET {} \
+  CONFIG.clk.CLK_DOMAIN {top_level_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.clk.FREQ_HZ {100000000} \
+  CONFIG.clk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.clk.INSERT_VIP {0} \
+  CONFIG.clk.PHASE {0.0} \
+  CONFIG.rst.INSERT_VIP {0} \
+  CONFIG.rst.POLARITY {ACTIVE_HIGH} " [get_ips top_level_Intellight_Accelerat_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Nov 23 16:39:52 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_Intellight_Accelerat_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_Intellight_Accelerat_0_0 (xilinx.com:user:Intellight_Accelerator:1.0) from (Rev. 40) to (Rev. 41)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Nov 23 16:27:36 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_Intellight_Accelerat_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of top_level_Intellight_Accelerat_0_0 (xilinx.com:user:Intellight_Accelerator:1.0) from (Rev. 39) to (Rev. 40)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'top_level_Intellight_Accelerat_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'D_new' width 16 differs from original width 64
+
+-Upgraded port 'D_road0' width 16 differs from original width 64
+
+-Upgraded port 'D_road1' width 16 differs from original width 64
+
+-Upgraded port 'D_road2' width 16 differs from original width 64
+
+-Upgraded port 'D_road3' width 16 differs from original width 64
+
+-Upgraded port 'wen_bram0' width 2 differs from original width 8
+
+-Upgraded port 'wen_bram1' width 2 differs from original width 8
+
+-Upgraded port 'wen_bram2' width 2 differs from original width 8
+
+-Upgraded port 'wen_bram3' width 2 differs from original width 8
+
+
+3. Customization warnings
+-------------------------
+
+An attempt to modify the value of disabled parameter 'L_WIDTH' from '0' to '4' has been ignored for IP 'top_level_Intellight_Accelerat_0_0'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:Intellight_Accelerator:1.0 -user_name top_level_Intellight_Accelerat_0_0
+set_property -dict "\
+  CONFIG.ADDR_WIDTH {32} \
+  CONFIG.CTR_WIDTH {16} \
+  CONFIG.C_S00_AXI_ADDR_WIDTH {8} \
+  CONFIG.C_S00_AXI_BASEADDR {0xFFFFFFFF} \
+  CONFIG.C_S00_AXI_DATA_WIDTH {32} \
+  CONFIG.C_S00_AXI_HIGHADDR {0x00000000} \
+  CONFIG.Component_Name {top_level_Intellight_Accelerat_0_0} \
+  CONFIG.L_WIDTH {4} \
+  CONFIG.Q_WIDTH {16} \
+  CONFIG.R_WIDTH {16} \
+  CONFIG.S00_AXI.ADDR_WIDTH {8} \
+  CONFIG.S00_AXI.ARUSER_WIDTH {0} \
+  CONFIG.S00_AXI.AWUSER_WIDTH {0} \
+  CONFIG.S00_AXI.BUSER_WIDTH {0} \
+  CONFIG.S00_AXI.CLK_DOMAIN {top_level_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.S00_AXI.DATA_WIDTH {32} \
+  CONFIG.S00_AXI.FREQ_HZ {100000000} \
+  CONFIG.S00_AXI.HAS_BRESP {1} \
+  CONFIG.S00_AXI.HAS_BURST {0} \
+  CONFIG.S00_AXI.HAS_CACHE {0} \
+  CONFIG.S00_AXI.HAS_LOCK {0} \
+  CONFIG.S00_AXI.HAS_PROT {1} \
+  CONFIG.S00_AXI.HAS_QOS {0} \
+  CONFIG.S00_AXI.HAS_REGION {0} \
+  CONFIG.S00_AXI.HAS_RRESP {1} \
+  CONFIG.S00_AXI.HAS_WSTRB {1} \
+  CONFIG.S00_AXI.ID_WIDTH {0} \
+  CONFIG.S00_AXI.INSERT_VIP {0} \
+  CONFIG.S00_AXI.MAX_BURST_LENGTH {1} \
+  CONFIG.S00_AXI.NUM_READ_OUTSTANDING {8} \
+  CONFIG.S00_AXI.NUM_READ_THREADS {1} \
+  CONFIG.S00_AXI.NUM_WRITE_OUTSTANDING {8} \
+  CONFIG.S00_AXI.NUM_WRITE_THREADS {1} \
+  CONFIG.S00_AXI.PHASE {0.0} \
+  CONFIG.S00_AXI.PROTOCOL {AXI4LITE} \
+  CONFIG.S00_AXI.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.S00_AXI.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.S00_AXI.RUSER_WIDTH {0} \
+  CONFIG.S00_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.S00_AXI.WIZ_DATA_WIDTH {32} \
+  CONFIG.S00_AXI.WIZ_NUM_REG {64} \
+  CONFIG.S00_AXI.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.S00_AXI.WUSER_WIDTH {0} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_BUSIF {S00_AXI} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_PORT {} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_RESET {s00_axi_aresetn} \
+  CONFIG.S00_AXI_CLK.CLK_DOMAIN {top_level_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.S00_AXI_CLK.FREQ_HZ {100000000} \
+  CONFIG.S00_AXI_CLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.S00_AXI_CLK.INSERT_VIP {0} \
+  CONFIG.S00_AXI_CLK.PHASE {0.0} \
+  CONFIG.S00_AXI_RST.INSERT_VIP {0} \
+  CONFIG.S00_AXI_RST.POLARITY {ACTIVE_LOW} \
+  CONFIG.clk.ASSOCIATED_BUSIF {} \
+  CONFIG.clk.ASSOCIATED_PORT {} \
+  CONFIG.clk.ASSOCIATED_RESET {} \
+  CONFIG.clk.CLK_DOMAIN {top_level_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.clk.FREQ_HZ {100000000} \
+  CONFIG.clk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.clk.INSERT_VIP {0} \
+  CONFIG.clk.PHASE {0.0} \
+  CONFIG.rst.INSERT_VIP {0} \
+  CONFIG.rst.POLARITY {ACTIVE_HIGH} " [get_ips top_level_Intellight_Accelerat_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Nov 23 14:47:49 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_Intellight_Accelerat_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of top_level_Intellight_Accelerat_0_0 (xilinx.com:user:Intellight_Accelerator:1.0) from (Rev. 38) to (Rev. 39)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'top_level_Intellight_Accelerat_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'wen0'
+
+-Upgrade has removed port 'wen1'
+
+-Upgrade has removed port 'wen2'
+
+-Upgrade has removed port 'wen3'
+
+-Upgrade has removed port 'wen_bram'
+
+-Upgrade has added port 'wen_bram0'
+
+-Upgrade has added port 'wen_bram1'
+
+-Upgrade has added port 'wen_bram2'
+
+-Upgrade has added port 'wen_bram3'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Nov 23 11:01:26 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_Intellight_Accelerat_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_Intellight_Accelerat_0_0 (xilinx.com:user:Intellight_Accelerator:1.0) from (Rev. 37) to (Rev. 38)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Nov 23 10:19:07 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_Intellight_Accelerat_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_Intellight_Accelerat_0_0 (xilinx.com:user:Intellight_Accelerator:1.0) from (Rev. 36) to (Rev. 37)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Nov 23 09:36:34 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_Intellight_Accelerat_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_Intellight_Accelerat_0_0 (xilinx.com:user:Intellight_Accelerator:1.0) from (Rev. 35) to (Rev. 36)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Tue Nov 22 16:20:57 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_Intellight_Accelerat_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_Intellight_Accelerat_0_0 (xilinx.com:user:Intellight_Accelerator:1.0) from (Rev. 34) to (Rev. 35)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Tue Nov 22 14:11:20 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_Intellight_Accelerat_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_Intellight_Accelerat_0_0 (xilinx.com:user:Intellight_Accelerator:1.0) from (Rev. 33) to (Rev. 34)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Tue Nov 22 14:01:35 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_Intellight_Accelerat_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of top_level_Intellight_Accelerat_0_0 (xilinx.com:user:Intellight_Accelerator:1.0) from (Rev. 32) to (Rev. 33)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'top_level_Intellight_Accelerat_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'idle'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Tue Nov 22 13:02:38 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_Intellight_Accelerat_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_Intellight_Accelerat_0_0 (xilinx.com:user:Intellight_Accelerator:1.0 (Rev. 32)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Tue Nov 22 11:08:04 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_Intellight_Accelerat_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_Intellight_Accelerat_0_0 (xilinx.com:user:Intellight_Accelerator:1.0) from (Rev. 30) to (Rev. 32)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Tue Nov 22 11:03:35 2022
+| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_Intellight_Accelerat_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_Intellight_Accelerat_0_0 (xilinx.com:user:Intellight_Accelerator:1.0) from (Rev. 29) to (Rev. 30)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
 | Date         : Mon Nov 21 17:56:11 2022
 | Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

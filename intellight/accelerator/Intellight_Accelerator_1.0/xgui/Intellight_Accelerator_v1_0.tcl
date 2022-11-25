@@ -1,31 +1,52 @@
+
+# Loading additional proc with user specified bodies to compute parameter values.
+source [file join [file dirname [file dirname [info script]]] gui/Intellight_Accelerator_v1_0.gtcl]
+
 # Definitional proc to organize widgets for parameters.
 proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
-  ipgui::add_param $IPINST -name "C_S00_AXI_DATA_WIDTH" -parent ${Page_0} -widget comboBox
-  ipgui::add_param $IPINST -name "C_S00_AXI_ADDR_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S00_AXI_BASEADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S00_AXI_HIGHADDR" -parent ${Page_0}
 
+  ipgui::add_param $IPINST -name "L_WIDTH" -widget comboBox
+  ipgui::add_param $IPINST -name "R_WIDTH"
+  ipgui::add_param $IPINST -name "Q_WIDTH" -widget comboBox
+  ipgui::add_param $IPINST -name "C_S00_AXI_DATA_WIDTH"
+  ipgui::add_param $IPINST -name "C_S00_AXI_ADDR_WIDTH"
 
 }
 
-proc update_PARAM_VALUE.ADDR_WIDTH { PARAM_VALUE.ADDR_WIDTH } {
-	# Procedure called to update ADDR_WIDTH when any of the dependent parameters in the arguments change
+proc update_PARAM_VALUE.R_WIDTH { PARAM_VALUE.R_WIDTH PARAM_VALUE.Q_WIDTH } {
+	# Procedure called to update R_WIDTH when any of the dependent parameters in the arguments change
+	
+	set R_WIDTH ${PARAM_VALUE.R_WIDTH}
+	set Q_WIDTH ${PARAM_VALUE.Q_WIDTH}
+	set values(Q_WIDTH) [get_property value $Q_WIDTH]
+	set_property value [gen_USERPARAMETER_R_WIDTH_VALUE $values(Q_WIDTH)] $R_WIDTH
 }
 
-proc validate_PARAM_VALUE.ADDR_WIDTH { PARAM_VALUE.ADDR_WIDTH } {
-	# Procedure called to validate ADDR_WIDTH
+proc validate_PARAM_VALUE.R_WIDTH { PARAM_VALUE.R_WIDTH } {
+	# Procedure called to validate R_WIDTH
 	return true
 }
 
-proc update_PARAM_VALUE.CTR_WIDTH { PARAM_VALUE.CTR_WIDTH } {
-	# Procedure called to update CTR_WIDTH when any of the dependent parameters in the arguments change
+proc update_PARAM_VALUE.C_S00_AXI_ADDR_WIDTH { PARAM_VALUE.C_S00_AXI_ADDR_WIDTH } {
+	# Procedure called to update C_S00_AXI_ADDR_WIDTH when any of the dependent parameters in the arguments change
 }
 
-proc validate_PARAM_VALUE.CTR_WIDTH { PARAM_VALUE.CTR_WIDTH } {
-	# Procedure called to validate CTR_WIDTH
+proc validate_PARAM_VALUE.C_S00_AXI_ADDR_WIDTH { PARAM_VALUE.C_S00_AXI_ADDR_WIDTH } {
+	# Procedure called to validate C_S00_AXI_ADDR_WIDTH
+	return true
+}
+
+proc update_PARAM_VALUE.C_S00_AXI_DATA_WIDTH { PARAM_VALUE.C_S00_AXI_DATA_WIDTH } {
+	# Procedure called to update C_S00_AXI_DATA_WIDTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.C_S00_AXI_DATA_WIDTH { PARAM_VALUE.C_S00_AXI_DATA_WIDTH } {
+	# Procedure called to validate C_S00_AXI_DATA_WIDTH
 	return true
 }
 
@@ -44,33 +65,6 @@ proc update_PARAM_VALUE.Q_WIDTH { PARAM_VALUE.Q_WIDTH } {
 
 proc validate_PARAM_VALUE.Q_WIDTH { PARAM_VALUE.Q_WIDTH } {
 	# Procedure called to validate Q_WIDTH
-	return true
-}
-
-proc update_PARAM_VALUE.R_WIDTH { PARAM_VALUE.R_WIDTH } {
-	# Procedure called to update R_WIDTH when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.R_WIDTH { PARAM_VALUE.R_WIDTH } {
-	# Procedure called to validate R_WIDTH
-	return true
-}
-
-proc update_PARAM_VALUE.C_S00_AXI_DATA_WIDTH { PARAM_VALUE.C_S00_AXI_DATA_WIDTH } {
-	# Procedure called to update C_S00_AXI_DATA_WIDTH when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.C_S00_AXI_DATA_WIDTH { PARAM_VALUE.C_S00_AXI_DATA_WIDTH } {
-	# Procedure called to validate C_S00_AXI_DATA_WIDTH
-	return true
-}
-
-proc update_PARAM_VALUE.C_S00_AXI_ADDR_WIDTH { PARAM_VALUE.C_S00_AXI_ADDR_WIDTH } {
-	# Procedure called to update C_S00_AXI_ADDR_WIDTH when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.C_S00_AXI_ADDR_WIDTH { PARAM_VALUE.C_S00_AXI_ADDR_WIDTH } {
-	# Procedure called to validate C_S00_AXI_ADDR_WIDTH
 	return true
 }
 
@@ -93,16 +87,6 @@ proc validate_PARAM_VALUE.C_S00_AXI_HIGHADDR { PARAM_VALUE.C_S00_AXI_HIGHADDR } 
 }
 
 
-proc update_MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH { MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH PARAM_VALUE.C_S00_AXI_DATA_WIDTH } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.C_S00_AXI_DATA_WIDTH}] ${MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH}
-}
-
-proc update_MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH { MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH PARAM_VALUE.C_S00_AXI_ADDR_WIDTH } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.C_S00_AXI_ADDR_WIDTH}] ${MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH}
-}
-
 proc update_MODELPARAM_VALUE.L_WIDTH { MODELPARAM_VALUE.L_WIDTH PARAM_VALUE.L_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.L_WIDTH}] ${MODELPARAM_VALUE.L_WIDTH}
@@ -118,13 +102,25 @@ proc update_MODELPARAM_VALUE.Q_WIDTH { MODELPARAM_VALUE.Q_WIDTH PARAM_VALUE.Q_WI
 	set_property value [get_property value ${PARAM_VALUE.Q_WIDTH}] ${MODELPARAM_VALUE.Q_WIDTH}
 }
 
-proc update_MODELPARAM_VALUE.CTR_WIDTH { MODELPARAM_VALUE.CTR_WIDTH PARAM_VALUE.CTR_WIDTH } {
+proc update_MODELPARAM_VALUE.CTR_WIDTH { MODELPARAM_VALUE.CTR_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.CTR_WIDTH}] ${MODELPARAM_VALUE.CTR_WIDTH}
+	# WARNING: There is no corresponding user parameter named "CTR_WIDTH". Setting updated value from the model parameter.
+set_property value 16 ${MODELPARAM_VALUE.CTR_WIDTH}
 }
 
-proc update_MODELPARAM_VALUE.ADDR_WIDTH { MODELPARAM_VALUE.ADDR_WIDTH PARAM_VALUE.ADDR_WIDTH } {
+proc update_MODELPARAM_VALUE.ADDR_WIDTH { MODELPARAM_VALUE.ADDR_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.ADDR_WIDTH}] ${MODELPARAM_VALUE.ADDR_WIDTH}
+	# WARNING: There is no corresponding user parameter named "ADDR_WIDTH". Setting updated value from the model parameter.
+set_property value 32 ${MODELPARAM_VALUE.ADDR_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH { MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH PARAM_VALUE.C_S00_AXI_DATA_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.C_S00_AXI_DATA_WIDTH}] ${MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH { MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH PARAM_VALUE.C_S00_AXI_ADDR_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.C_S00_AXI_ADDR_WIDTH}] ${MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH}
 }
 

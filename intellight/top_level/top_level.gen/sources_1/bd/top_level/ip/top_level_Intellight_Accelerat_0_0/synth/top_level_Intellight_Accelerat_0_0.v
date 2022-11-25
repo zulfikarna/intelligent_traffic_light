@@ -48,11 +48,19 @@
 
 
 // IP VLNV: xilinx.com:user:Intellight_Accelerator:1.0
+<<<<<<< HEAD
+// IP Revision: 43
+
+(* X_CORE_INFO = "Intellight_Accelerator_v1_0,Vivado 2022.1" *)
+(* CHECK_LICENSE_TYPE = "top_level_Intellight_Accelerat_0_0,Intellight_Accelerator_v1_0,{}" *)
+(* CORE_GENERATION_INFO = "top_level_Intellight_Accelerat_0_0,Intellight_Accelerator_v1_0,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Intellight_Accelerator,x_ipVersion=1.0,x_ipCoreRevision=43,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,L_WIDTH=4,R_WIDTH=16,Q_WIDTH=16,CTR_WIDTH=16,ADDR_WIDTH=32,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=8}" *)
+=======
 // IP Revision: 29
 
 (* X_CORE_INFO = "Intellight_Accelerator_v1_0,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "top_level_Intellight_Accelerat_0_0,Intellight_Accelerator_v1_0,{}" *)
 (* CORE_GENERATION_INFO = "top_level_Intellight_Accelerat_0_0,Intellight_Accelerator_v1_0,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Intellight_Accelerator,x_ipVersion=1.0,x_ipCoreRevision=29,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=8,L_WIDTH=4,R_WIDTH=16,Q_WIDTH=16,CTR_WIDTH=16,ADDR_WIDTH=32}" *)
+>>>>>>> parent of ae750207 (shfcuidtf7)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_level_Intellight_Accelerat_0_0 (
   clk,
@@ -64,11 +72,10 @@ module top_level_Intellight_Accelerat_0_0 (
   D_new,
   rd_addr,
   wr_addr,
-  wen_bram,
-  wen0,
-  wen1,
-  wen2,
-  wen3,
+  wen_bram0,
+  wen_bram1,
+  wen_bram2,
+  wen_bram3,
   finish,
   s00_axi_aclk,
   s00_axi_aresetn,
@@ -106,11 +113,10 @@ input wire [63 : 0] D_road3;
 output wire [63 : 0] D_new;
 output wire [31 : 0] rd_addr;
 output wire [31 : 0] wr_addr;
-output wire [7 : 0] wen_bram;
-output wire wen0;
-output wire wen1;
-output wire wen2;
-output wire wen3;
+output wire [7 : 0] wen_bram0;
+output wire [7 : 0] wen_bram1;
+output wire [7 : 0] wen_bram2;
+output wire [7 : 0] wen_bram3;
 output wire finish;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_level_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *)
@@ -160,13 +166,13 @@ tem7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE
 input wire s00_axi_rready;
 
   Intellight_Accelerator_v1_0 #(
-    .C_S00_AXI_DATA_WIDTH(32),  // Width of S_AXI data bus
-    .C_S00_AXI_ADDR_WIDTH(8),  // Width of S_AXI address bus
     .L_WIDTH(4),
     .R_WIDTH(16),
     .Q_WIDTH(16),
     .CTR_WIDTH(16),
-    .ADDR_WIDTH(32)
+    .ADDR_WIDTH(32),
+    .C_S00_AXI_DATA_WIDTH(32),
+    .C_S00_AXI_ADDR_WIDTH(8)
   ) inst (
     .clk(clk),
     .rst(rst),
@@ -177,11 +183,10 @@ input wire s00_axi_rready;
     .D_new(D_new),
     .rd_addr(rd_addr),
     .wr_addr(wr_addr),
-    .wen_bram(wen_bram),
-    .wen0(wen0),
-    .wen1(wen1),
-    .wen2(wen2),
-    .wen3(wen3),
+    .wen_bram0(wen_bram0),
+    .wen_bram1(wen_bram1),
+    .wen_bram2(wen_bram2),
+    .wen_bram3(wen_bram3),
     .finish(finish),
     .s00_axi_aclk(s00_axi_aclk),
     .s00_axi_aresetn(s00_axi_aresetn),

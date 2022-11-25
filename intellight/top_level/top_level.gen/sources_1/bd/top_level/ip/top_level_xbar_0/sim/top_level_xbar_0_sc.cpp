@@ -62,11 +62,16 @@ top_level_xbar_0_sc::top_level_xbar_0_sc(const sc_core::sc_module_name& nm) : sc
   // initialize module
     xsc::common_cpp::properties model_param_props;
     model_param_props.addLong("C_NUM_SLAVE_SLOTS", "1");
+<<<<<<< HEAD
+    model_param_props.addLong("C_NUM_MASTER_SLOTS", "2");
+    model_param_props.addLong("C_AXI_ID_WIDTH", "1");
+=======
     model_param_props.addLong("C_NUM_MASTER_SLOTS", "5");
     model_param_props.addLong("C_AXI_ID_WIDTH", "12");
+>>>>>>> parent of ae750207 (shfcuidtf7)
     model_param_props.addLong("C_AXI_ADDR_WIDTH", "32");
     model_param_props.addLong("C_AXI_DATA_WIDTH", "32");
-    model_param_props.addLong("C_AXI_PROTOCOL", "0");
+    model_param_props.addLong("C_AXI_PROTOCOL", "2");
     model_param_props.addLong("C_NUM_ADDR_RANGES", "1");
     model_param_props.addLong("C_AXI_SUPPORTS_USER_SIGNALS", "0");
     model_param_props.addLong("C_AXI_AWUSER_WIDTH", "1");
@@ -74,9 +79,24 @@ top_level_xbar_0_sc::top_level_xbar_0_sc(const sc_core::sc_module_name& nm) : sc
     model_param_props.addLong("C_AXI_WUSER_WIDTH", "1");
     model_param_props.addLong("C_AXI_RUSER_WIDTH", "1");
     model_param_props.addLong("C_AXI_BUSER_WIDTH", "1");
-    model_param_props.addLong("C_R_REGISTER", "0");
-    model_param_props.addLong("C_CONNECTIVITY_MODE", "1");
+    model_param_props.addLong("C_R_REGISTER", "1");
+    model_param_props.addLong("C_CONNECTIVITY_MODE", "0");
     model_param_props.addString("C_FAMILY", "zynq");
+<<<<<<< HEAD
+    model_param_props.addBitString("C_M_AXI_BASE_ADDR", "00000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000001100000000000000000000000", 128);
+    model_param_props.addBitString("C_M_AXI_ADDR_WIDTH", "0000000000000000000000000001000000000000000000000000000000010000", 64);
+    model_param_props.addBitString("C_S_AXI_BASE_ID", "00000000000000000000000000000000", 32);
+    model_param_props.addBitString("C_S_AXI_THREAD_ID_WIDTH", "00000000000000000000000000000000", 32);
+    model_param_props.addBitString("C_M_AXI_WRITE_CONNECTIVITY", "0000000000000000000000000000000100000000000000000000000000000001", 64);
+    model_param_props.addBitString("C_M_AXI_READ_CONNECTIVITY", "0000000000000000000000000000000100000000000000000000000000000001", 64);
+    model_param_props.addBitString("C_S_AXI_SINGLE_THREAD", "00000000000000000000000000000001", 32);
+    model_param_props.addBitString("C_S_AXI_WRITE_ACCEPTANCE", "00000000000000000000000000000001", 32);
+    model_param_props.addBitString("C_S_AXI_READ_ACCEPTANCE", "00000000000000000000000000000001", 32);
+    model_param_props.addBitString("C_M_AXI_WRITE_ISSUING", "0000000000000000000000000000000100000000000000000000000000000001", 64);
+    model_param_props.addBitString("C_M_AXI_READ_ISSUING", "0000000000000000000000000000000100000000000000000000000000000001", 64);
+    model_param_props.addBitString("C_S_AXI_ARB_PRIORITY", "00000000000000000000000000000000", 32);
+    model_param_props.addBitString("C_M_AXI_SECURE", "0000000000000000000000000000000000000000000000000000000000000000", 64);
+=======
     model_param_props.addBitString("C_M_AXI_BASE_ADDR", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000001100000000000000000000000", 320);
     model_param_props.addBitString("C_M_AXI_ADDR_WIDTH", "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000010000", 160);
     model_param_props.addBitString("C_S_AXI_BASE_ID", "00000000000000000000000000000000", 32);
@@ -90,6 +110,7 @@ top_level_xbar_0_sc::top_level_xbar_0_sc(const sc_core::sc_module_name& nm) : sc
     model_param_props.addBitString("C_M_AXI_READ_ISSUING", "0000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000", 160);
     model_param_props.addBitString("C_S_AXI_ARB_PRIORITY", "00000000000000000000000000000000", 32);
     model_param_props.addBitString("C_M_AXI_SECURE", "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", 160);
+>>>>>>> parent of ae750207 (shfcuidtf7)
     model_param_props.addString("COMPONENT_NAME", "top_level_xbar_0");
 
   mp_impl = new axi_crossbar("inst", model_param_props);
@@ -101,12 +122,15 @@ top_level_xbar_0_sc::top_level_xbar_0_sc(const sc_core::sc_module_name& nm) : sc
   initiator_0_wr_socket = mp_impl->initiator_0_wr_socket;
   initiator_1_rd_socket = mp_impl->initiator_1_rd_socket;
   initiator_1_wr_socket = mp_impl->initiator_1_wr_socket;
+<<<<<<< HEAD
+=======
   initiator_2_rd_socket = mp_impl->initiator_2_rd_socket;
   initiator_2_wr_socket = mp_impl->initiator_2_wr_socket;
   initiator_3_rd_socket = mp_impl->initiator_3_rd_socket;
   initiator_3_wr_socket = mp_impl->initiator_3_wr_socket;
   initiator_4_rd_socket = mp_impl->initiator_4_rd_socket;
   initiator_4_wr_socket = mp_impl->initiator_4_wr_socket;
+>>>>>>> parent of ae750207 (shfcuidtf7)
 }
 
 top_level_xbar_0_sc::~top_level_xbar_0_sc()

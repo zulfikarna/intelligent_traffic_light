@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Nov 23 11:19:39 2022
+# Process ID: 16660
+# Current directory: D:/intelligent_traffic_light/intellight/database/edit_database_v1_0.runs/synth_1
+# Command line: vivado.exe -log database_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source database_v1_0.tcl
+# Log file: D:/intelligent_traffic_light/intellight/database/edit_database_v1_0.runs/synth_1/database_v1_0.vds
+# Journal file: D:/intelligent_traffic_light/intellight/database/edit_database_v1_0.runs/synth_1\vivado.jou
+# Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
+#-----------------------------------------------------------
+source database_v1_0.tcl -notrace

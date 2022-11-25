@@ -1,7 +1,11 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+<<<<<<< HEAD
+| Date             : Thu Nov 24 16:10:22 2022
+=======
 | Date             : Mon Nov 21 18:01:17 2022
+>>>>>>> parent of ae750207 (shfcuidtf7)
 | Host             : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 | Command          : report_power -file top_level_wrapper_power_routed.rpt -pb top_level_wrapper_power_summary_routed.pb -rpx top_level_wrapper_power_routed.rpx
 | Design           : top_level_wrapper
@@ -30,6 +34,16 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
+<<<<<<< HEAD
+| Total On-Chip Power (W)  | 1.478        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.340        |
+| Device Static (W)        | 0.137        |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 68.0         |
+| Junction Temperature (C) | 42.0         |
+=======
 | Total On-Chip Power (W)  | 1.463        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
@@ -38,6 +52,7 @@ Table of Contents
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 68.1         |
 | Junction Temperature (C) | 41.9         |
+>>>>>>> parent of ae750207 (shfcuidtf7)
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,6 +67,21 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
+<<<<<<< HEAD
+| Clocks                  |     0.011 |        3 |       --- |             --- |
+| Slice Logic             |     0.012 |     5143 |       --- |             --- |
+|   LUT as Logic          |     0.010 |     1584 |     53200 |            2.98 |
+|   Register              |    <0.001 |     2575 |    106400 |            2.42 |
+|   CARRY4                |    <0.001 |       72 |     13300 |            0.54 |
+|   F7/F8 Muxes           |    <0.001 |      224 |     53200 |            0.42 |
+|   LUT as Shift Register |    <0.001 |       74 |     17400 |            0.43 |
+|   Others                |     0.000 |      278 |       --- |             --- |
+| Signals                 |     0.023 |     4032 |       --- |             --- |
+| Block RAM               |     0.039 |       16 |       140 |           11.43 |
+| PS7                     |     1.256 |        1 |       --- |             --- |
+| Static Power            |     0.137 |          |           |                 |
+| Total                   |     1.478 |          |           |                 |
+=======
 | Clocks                  |     0.013 |        3 |       --- |             --- |
 | Slice Logic             |     0.015 |     7556 |       --- |             --- |
 |   LUT as Logic          |     0.013 |     2549 |     53200 |            4.79 |
@@ -65,6 +95,7 @@ Table of Contents
 | PS7                     |     1.256 |        1 |       --- |             --- |
 | Static Power            |     0.136 |          |           |                 |
 | Total                   |     1.463 |          |           |                 |
+>>>>>>> parent of ae750207 (shfcuidtf7)
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +105,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+<<<<<<< HEAD
+| Vccint    |       1.000 |     0.096 |       0.082 |      0.014 |       NA    | Unspecified | NA         |
+=======
 | Vccint    |       1.000 |     0.083 |       0.069 |      0.014 |       NA    | Unspecified | NA         |
+>>>>>>> parent of ae750207 (shfcuidtf7)
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -83,7 +118,11 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+<<<<<<< HEAD
+| Vccbram   |       1.000 |     0.005 |       0.003 |      0.002 |       NA    | Unspecified | NA         |
+=======
 | Vccbram   |       1.000 |     0.003 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
+>>>>>>> parent of ae750207 (shfcuidtf7)
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -150,6 +189,21 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
+<<<<<<< HEAD
+| top_level_wrapper          |     1.340 |
+|   top_level_i              |     1.340 |
+|     Intellight_Accelerat_0 |     0.034 |
+|       inst                 |     0.034 |
+|     Q_Matrix_0             |     0.044 |
+|       action_ram_0         |     0.012 |
+|       action_ram_1         |     0.011 |
+|       action_ram_2         |     0.011 |
+|       action_ram_3         |     0.010 |
+|     processing_system7_0   |     1.257 |
+|       inst                 |     1.257 |
+|     ps7_0_axi_periph       |     0.005 |
+|       s00_couplers         |     0.004 |
+=======
 | top_level_wrapper          |     1.327 |
 |   top_level_i              |     1.327 |
 |     Intellight_Accelerat_0 |     0.031 |
@@ -165,6 +219,7 @@ Table of Contents
 |       m00_couplers         |     0.004 |
 |       m01_couplers         |     0.004 |
 |       xbar                 |     0.006 |
+>>>>>>> parent of ae750207 (shfcuidtf7)
 +----------------------------+-----------+
 
 

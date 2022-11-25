@@ -84,7 +84,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part www.digilentinc.com:pynq-z1:part0:1.0 [current_project]
-set_property ip_repo_paths d:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0 [current_project]
+set_property ip_repo_paths {
+  d:/intelligent_traffic_light/intellight/database/database_1.0
+  d:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo d:/intelligent_traffic_light/intellight/top_level/top_level.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

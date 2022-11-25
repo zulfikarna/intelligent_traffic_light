@@ -46,6 +46,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../database/database_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../accelerator/Intellight_Accelerator_1.0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
@@ -65,6 +66,15 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
+<<<<<<< HEAD
+    <Option Name="WTXSimExportSim" Val="53"/>
+    <Option Name="WTModelSimExportSim" Val="53"/>
+    <Option Name="WTQuestaExportSim" Val="53"/>
+    <Option Name="WTIesExportSim" Val="0"/>
+    <Option Name="WTVcsExportSim" Val="53"/>
+    <Option Name="WTRivieraExportSim" Val="53"/>
+    <Option Name="WTActivehdlExportSim" Val="53"/>
+=======
     <Option Name="WTXSimExportSim" Val="35"/>
     <Option Name="WTModelSimExportSim" Val="35"/>
     <Option Name="WTQuestaExportSim" Val="35"/>
@@ -72,6 +82,7 @@
     <Option Name="WTVcsExportSim" Val="35"/>
     <Option Name="WTRivieraExportSim" Val="35"/>
     <Option Name="WTActivehdlExportSim" Val="35"/>
+>>>>>>> parent of ae750207 (shfcuidtf7)
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -95,8 +106,13 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+<<<<<<< HEAD
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_action_ram_1_1/top_level_action_ram_1_1.xci">
+          <Proxy FileSetName="top_level_action_ram_1_1"/>
+=======
         <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_xbar_0/top_level_xbar_0.xci">
           <Proxy FileSetName="top_level_xbar_0"/>
+>>>>>>> parent of ae750207 (shfcuidtf7)
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_processing_system7_0_0/top_level_processing_system7_0_0.xci">
           <Proxy FileSetName="top_level_processing_system7_0_0"/>
@@ -104,6 +120,21 @@
         <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_axi_intc_0_0/top_level_axi_intc_0_0.xci">
           <Proxy FileSetName="top_level_axi_intc_0_0"/>
         </CompFileExtendedInfo>
+<<<<<<< HEAD
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_processing_system7_0_0/top_level_processing_system7_0_0.xci">
+          <Proxy FileSetName="top_level_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_action_ram_0_1/top_level_action_ram_0_1.xci">
+          <Proxy FileSetName="top_level_action_ram_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_action_ram_3_1/top_level_action_ram_3_1.xci">
+          <Proxy FileSetName="top_level_action_ram_3_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_action_ram_2_1/top_level_action_ram_2_1.xci">
+          <Proxy FileSetName="top_level_action_ram_2_1"/>
+        </CompFileExtendedInfo>
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
         <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_Intellight_Accelerat_0_0/top_level_Intellight_Accelerat_0_0.xci">
           <Proxy FileSetName="top_level_Intellight_Accelerat_0_0"/>
         </CompFileExtendedInfo>
@@ -194,9 +225,15 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="top_level_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_xbar_0" RelGenDir="$PGENDIR/top_level_xbar_0">
+    <FileSet Name="top_level_action_ram_2_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_action_ram_2_1" RelGenDir="$PGENDIR/top_level_action_ram_2_1">
       <Config>
-        <Option Name="TopModule" Val="top_level_xbar_0"/>
+        <Option Name="TopModule" Val="top_level_action_ram_2_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_level_action_ram_3_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_action_ram_3_1" RelGenDir="$PGENDIR/top_level_action_ram_3_1">
+      <Config>
+        <Option Name="TopModule" Val="top_level_action_ram_3_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -209,7 +246,17 @@
         </FileInfo>
       </File>
       <Config>
+<<<<<<< HEAD
+        <Option Name="TopModule" Val="top_level_action_ram_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_level_action_ram_1_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_action_ram_1_1" RelGenDir="$PGENDIR/top_level_action_ram_1_1">
+      <Config>
+        <Option Name="TopModule" Val="top_level_action_ram_1_1"/>
+=======
         <Option Name="TopModule" Val="Q_Matrix_inst_0"/>
+>>>>>>> parent of ae750207 (shfcuidtf7)
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -269,7 +316,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="top_level_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_xbar_0" Part="xc7z020clg400-1" ConstrsSet="top_level_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_xbar_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_xbar_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_xbar_0_synth_1">
+    <Run Id="top_level_action_ram_2_1_synth_1" Type="Ft3:Synth" SrcSet="top_level_action_ram_2_1" Part="xc7z020clg400-1" ConstrsSet="top_level_action_ram_2_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_action_ram_2_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_action_ram_2_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_action_ram_2_1_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
@@ -279,6 +326,39 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="top_level_action_ram_3_1_synth_1" Type="Ft3:Synth" SrcSet="top_level_action_ram_3_1" Part="xc7z020clg400-1" ConstrsSet="top_level_action_ram_3_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_action_ram_3_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_action_ram_3_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_action_ram_3_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+<<<<<<< HEAD
+    <Run Id="top_level_action_ram_0_1_synth_1" Type="Ft3:Synth" SrcSet="top_level_action_ram_0_1" Part="xc7z020clg400-1" ConstrsSet="top_level_action_ram_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_action_ram_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_action_ram_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_action_ram_0_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_level_action_ram_1_1_synth_1" Type="Ft3:Synth" SrcSet="top_level_action_ram_1_1" Part="xc7z020clg400-1" ConstrsSet="top_level_action_ram_1_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_action_ram_1_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_action_ram_1_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_action_ram_1_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
     <Run Id="top_level_Intellight_Accelerat_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_Intellight_Accelerat_0_0" Part="xc7z020clg400-1" ConstrsSet="top_level_Intellight_Accelerat_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_Intellight_Accelerat_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_Intellight_Accelerat_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_Intellight_Accelerat_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
@@ -343,7 +423,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="top_level_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="top_level_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_xbar_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_xbar_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_xbar_0_impl_1">
+    <Run Id="top_level_action_ram_2_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="top_level_action_ram_2_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_action_ram_2_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_action_ram_2_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_action_ram_2_1_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
@@ -360,6 +440,60 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="top_level_action_ram_3_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="top_level_action_ram_3_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_action_ram_3_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_action_ram_3_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_action_ram_3_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+<<<<<<< HEAD
+    <Run Id="top_level_action_ram_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="top_level_action_ram_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_action_ram_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_action_ram_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_action_ram_0_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_level_action_ram_1_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="top_level_action_ram_1_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_action_ram_1_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_action_ram_1_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_action_ram_1_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
     <Run Id="top_level_Intellight_Accelerat_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="top_level_Intellight_Accelerat_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_Intellight_Accelerat_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_Intellight_Accelerat_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_Intellight_Accelerat_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">

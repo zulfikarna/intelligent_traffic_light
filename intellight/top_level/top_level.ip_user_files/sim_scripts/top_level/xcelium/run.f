@@ -88,6 +88,31 @@
   "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/sim/top_level_rst_ps7_0_100M_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
+<<<<<<< HEAD
+  "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_action_ram_0_1/sim/top_level_action_ram_0_1.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_action_ram_1_1/sim/top_level_action_ram_1_1.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_action_ram_2_1/sim/top_level_action_ram_2_1.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_action_ram_3_1/sim/top_level_action_ram_3_1.v" \
+-endlib
+-makelib xcelium_lib/xlconstant_v1_1_7 \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_const_0_8bit_0/sim/top_level_const_0_8bit_0.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/AGENT.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/Accelerator.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/CU.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/ENV.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/Intellight_Accelerator_v1_0_S00_AXI.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/MII.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/QA.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/RD.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/SD.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/file_arith.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/file_max.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/file_mux.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/Intellight_Accelerator_v1_0.v" \
+=======
   "../../../../top_level.gen/sources_1/bd/top_level/ipshared/edit_Intellight_Accelerator_v1_0.srcs/sources_1/imports/hdl/AGENT.v" \
   "../../../../top_level.gen/sources_1/bd/top_level/ipshared/18d4/hdl/Accelerator.v" \
   "../../../../top_level.gen/sources_1/bd/top_level/ipshared/18d4/hdl/CU.v" \
@@ -101,15 +126,14 @@
   "../../../../top_level.gen/sources_1/bd/top_level/ipshared/18d4/hdl/file_max.v" \
   "../../../../top_level.gen/sources_1/bd/top_level/ipshared/18d4/hdl/file_mux.v" \
   "../../../../top_level.gen/sources_1/bd/top_level/ipshared/18d4/hdl/Intellight_Accelerator_v1_0.v" \
+>>>>>>> parent of ae750207 (shfcuidtf7)
   "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_Intellight_Accelerat_0_0/sim/top_level_Intellight_Accelerat_0_0.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_26 \
   "../../../../top_level.gen/sources_1/bd/top_level/ipshared/90c8/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_auto_pc_2/sim/top_level_auto_pc_2.v" \
   "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_auto_pc_0/sim/top_level_auto_pc_0.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_auto_pc_1/sim/top_level_auto_pc_1.v" \
   "../../../../top_level.gen/sources_1/bd/top_level/sim/top_level.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

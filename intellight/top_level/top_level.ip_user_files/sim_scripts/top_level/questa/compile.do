@@ -18,6 +18,11 @@ vlib questa_lib/msim/axi_data_fifo_v2_1_25
 vlib questa_lib/msim/axi_crossbar_v2_1_27
 vlib questa_lib/msim/lib_cdc_v1_0_2
 vlib questa_lib/msim/proc_sys_reset_v5_0_13
+<<<<<<< HEAD
+vlib questa_lib/msim/blk_mem_gen_v8_4_5
+vlib questa_lib/msim/xlconstant_v1_1_7
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
 vlib questa_lib/msim/axi_protocol_converter_v2_1_26
 
 vmap xilinx_vip questa_lib/msim/xilinx_vip
@@ -37,6 +42,11 @@ vmap axi_data_fifo_v2_1_25 questa_lib/msim/axi_data_fifo_v2_1_25
 vmap axi_crossbar_v2_1_27 questa_lib/msim/axi_crossbar_v2_1_27
 vmap lib_cdc_v1_0_2 questa_lib/msim/lib_cdc_v1_0_2
 vmap proc_sys_reset_v5_0_13 questa_lib/msim/proc_sys_reset_v5_0_13
+<<<<<<< HEAD
+vmap blk_mem_gen_v8_4_5 questa_lib/msim/blk_mem_gen_v8_4_5
+vmap xlconstant_v1_1_7 questa_lib/msim/xlconstant_v1_1_7
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
 vmap axi_protocol_converter_v2_1_26 questa_lib/msim/axi_protocol_converter_v2_1_26
 
 vlog -work xilinx_vip  -incr -mfcu -sv -L axi_vip_v1_1_12 -L processing_system7_vip_v1_0_14 -L xilinx_vip "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
@@ -129,6 +139,31 @@ vcom -work xil_defaultlib  -93 \
 "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/sim/top_level_rst_ps7_0_100M_0.vhd" \
 
 vlog -work xil_defaultlib  -incr -mfcu "+incdir+../../../../top_level.gen/sources_1/bd/top_level/ipshared/ec67/hdl" "+incdir+../../../../top_level.gen/sources_1/bd/top_level/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
+<<<<<<< HEAD
+"../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_action_ram_0_1/sim/top_level_action_ram_0_1.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_action_ram_1_1/sim/top_level_action_ram_1_1.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_action_ram_2_1/sim/top_level_action_ram_2_1.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_action_ram_3_1/sim/top_level_action_ram_3_1.v" \
+
+vlog -work xlconstant_v1_1_7  -incr -mfcu "+incdir+../../../../top_level.gen/sources_1/bd/top_level/ipshared/ec67/hdl" "+incdir+../../../../top_level.gen/sources_1/bd/top_level/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../top_level.gen/sources_1/bd/top_level/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -incr -mfcu "+incdir+../../../../top_level.gen/sources_1/bd/top_level/ipshared/ec67/hdl" "+incdir+../../../../top_level.gen/sources_1/bd/top_level/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_const_0_8bit_0/sim/top_level_const_0_8bit_0.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/AGENT.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/Accelerator.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/CU.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/ENV.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/Intellight_Accelerator_v1_0_S00_AXI.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/MII.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/QA.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/RD.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/SD.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/file_arith.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/file_max.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/file_mux.v" \
+"../../../../top_level.gen/sources_1/bd/top_level/ipshared/27b9/hdl/Intellight_Accelerator_v1_0.v" \
+=======
 "../../../../top_level.gen/sources_1/bd/top_level/ipshared/edit_Intellight_Accelerator_v1_0.srcs/sources_1/imports/hdl/AGENT.v" \
 "../../../../top_level.gen/sources_1/bd/top_level/ipshared/18d4/hdl/Accelerator.v" \
 "../../../../top_level.gen/sources_1/bd/top_level/ipshared/18d4/hdl/CU.v" \
@@ -142,15 +177,14 @@ vlog -work xil_defaultlib  -incr -mfcu "+incdir+../../../../top_level.gen/source
 "../../../../top_level.gen/sources_1/bd/top_level/ipshared/18d4/hdl/file_max.v" \
 "../../../../top_level.gen/sources_1/bd/top_level/ipshared/18d4/hdl/file_mux.v" \
 "../../../../top_level.gen/sources_1/bd/top_level/ipshared/18d4/hdl/Intellight_Accelerator_v1_0.v" \
+>>>>>>> parent of ae750207 (shfcuidtf7)
 "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_Intellight_Accelerat_0_0/sim/top_level_Intellight_Accelerat_0_0.v" \
 
 vlog -work axi_protocol_converter_v2_1_26  -incr -mfcu "+incdir+../../../../top_level.gen/sources_1/bd/top_level/ipshared/ec67/hdl" "+incdir+../../../../top_level.gen/sources_1/bd/top_level/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
 "../../../../top_level.gen/sources_1/bd/top_level/ipshared/90c8/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib  -incr -mfcu "+incdir+../../../../top_level.gen/sources_1/bd/top_level/ipshared/ec67/hdl" "+incdir+../../../../top_level.gen/sources_1/bd/top_level/ipshared/5765/hdl" "+incdir+D:/Program/Vivado/2022.1/data/xilinx_vip/include" \
-"../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_auto_pc_2/sim/top_level_auto_pc_2.v" \
 "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_auto_pc_0/sim/top_level_auto_pc_0.v" \
-"../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_auto_pc_1/sim/top_level_auto_pc_1.v" \
 "../../../../top_level.gen/sources_1/bd/top_level/sim/top_level.v" \
 
 vlog -work xil_defaultlib \

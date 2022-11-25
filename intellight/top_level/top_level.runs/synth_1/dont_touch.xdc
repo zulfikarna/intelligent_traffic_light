@@ -21,16 +21,28 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_p
 # IP: bd/top_level/ip/top_level_rst_ps7_0_100M_0/top_level_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_rst_ps7_0_100M_0 || ORIG_REF_NAME==top_level_rst_ps7_0_100M_0} -quiet] -quiet
 
+<<<<<<< HEAD
+# IP: bd/top_level/ip/top_level_action_ram_0_1/top_level_action_ram_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_action_ram_0_1 || ORIG_REF_NAME==top_level_action_ram_0_1} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_action_ram_1_1/top_level_action_ram_1_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_action_ram_1_1 || ORIG_REF_NAME==top_level_action_ram_1_1} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_action_ram_2_1/top_level_action_ram_2_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_action_ram_2_1 || ORIG_REF_NAME==top_level_action_ram_2_1} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_action_ram_3_1/top_level_action_ram_3_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_action_ram_3_1 || ORIG_REF_NAME==top_level_action_ram_3_1} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_const_0_8bit_0/top_level_const_0_8bit_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_const_0_8bit_0 || ORIG_REF_NAME==top_level_const_0_8bit_0} -quiet] -quiet
+
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
 # IP: bd/top_level/ip/top_level_Intellight_Accelerat_0_0/top_level_Intellight_Accelerat_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_Intellight_Accelerat_0_0 || ORIG_REF_NAME==top_level_Intellight_Accelerat_0_0} -quiet] -quiet
 
-# IP: bd/top_level/ip/top_level_auto_pc_2/top_level_auto_pc_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_auto_pc_2 || ORIG_REF_NAME==top_level_auto_pc_2} -quiet] -quiet
-
 # IP: bd/top_level/ip/top_level_auto_pc_0/top_level_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_auto_pc_0 || ORIG_REF_NAME==top_level_auto_pc_0} -quiet] -quiet
-
-# IP: bd/top_level/ip/top_level_auto_pc_1/top_level_auto_pc_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_auto_pc_1 || ORIG_REF_NAME==top_level_auto_pc_1} -quiet] -quiet
 
 # XDC: d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/top_level_ooc.xdc

@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
+<<<<<<< HEAD
+    <Process Command="vivado.bat" Owner="USER" Host="DESKTOP-FRUK6JR" Pid="17128" HostCore="6" HostMemory="08532004864">
+=======
     <Process Command="vivado.bat" Owner="USER" Host="DESKTOP-FRUK6JR" Pid="15948" HostCore="6" HostMemory="08532004864">
+>>>>>>> parent of ae750207 (shfcuidtf7)
     </Process>
 </ProcessHandle>

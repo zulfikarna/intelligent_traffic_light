@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1669280819" LaunchIncrCheckpoint="$PPRDIR/top_level/top_level.srcs/utils_1/imports/synth_1/top_level_wrapper.dcp">
+=======
 <GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1669028300" LaunchIncrCheckpoint="$PPRDIR/top_level/top_level.srcs/utils_1/imports/synth_1/top_level_wrapper.dcp">
+>>>>>>> parent of ae750207 (shfcuidtf7)
   <File Type="PA-TCL" Name="top_level_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_level_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_level_wrapper_reports.tcl"/>
@@ -82,6 +86,12 @@
   <BlockFileSet Type="BlockSrcs" Name="top_level_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_Intellight_Accelerat_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_axi_intc_0_0"/>
+<<<<<<< HEAD
+  <BlockFileSet Type="BlockSrcs" Name="top_level_action_ram_2_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_action_ram_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_action_ram_1_1"/>
+=======
   <BlockFileSet Type="BlockSrcs" Name="top_level_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Q_Matrix_inst_0"/>
+>>>>>>> parent of ae750207 (shfcuidtf7)
 </GenRun>

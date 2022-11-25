@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Nov 23 12:08:55 2022
+# Process ID: 6820
+# Current directory: D:/intelligent_traffic_light/intellight/prototype
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15320 D:\intelligent_traffic_light\intellight\prototype\prototype.xpr
+# Log file: D:/intelligent_traffic_light/intellight/prototype/vivado.log
+# Journal file: D:/intelligent_traffic_light/intellight/prototype\vivado.jou
+# Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/intelligent_traffic_light/intellight/prototype/prototype.xpr
+update_module_reference Intellight_Accelerator_0_0
+update_compile_order -fileset sources_1
+regenerate_bd_layout
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+delete_bd_objs [get_bd_nets database_0_S_sim] [get_bd_nets database_0_gamma] [get_bd_nets Accelerator_0_rd_addr] [get_bd_nets database_0_mode] [get_bd_nets action_ram_2_doutb] [get_bd_nets database_0_seed] [get_bd_nets Accelerator_0_idle] [get_bd_nets action_ram_0_doutb] [get_bd_nets action_ram_1_doutb] [get_bd_nets action_ram_3_doutb] [get_bd_nets database_0_L_inc_a] [get_bd_nets database_0_L_inc_d] [get_bd_nets database_0_max_episode] [get_bd_nets database_0_max_step] [get_bd_nets database_0_run] [get_bd_nets database_0_L_dec] [get_bd_nets database_0_L_inc_b] [get_bd_nets database_0_L_inc_c] [get_bd_nets database_0_alpha] [get_bd_cells Accelerator_0]
+update_compile_order -fileset sources_1
+undo
+update_compile_order -fileset sources_1
+save_bd_design

@@ -18,6 +18,19 @@
         "s00_couplers": {
           "auto_pc": ""
         },
+<<<<<<< HEAD
+        "m00_couplers": {},
+        "m01_couplers": {}
+      },
+      "rst_ps7_0_100M": "",
+      "Q_Matrix_0": {
+        "action_ram_0": "",
+        "action_ram_1": "",
+        "action_ram_2": "",
+        "action_ram_3": "",
+        "const_0_8bit": ""
+      },
+=======
         "m00_couplers": {
           "auto_pc": ""
         },
@@ -30,6 +43,7 @@
       },
       "rst_ps7_0_100M": "",
       "Q_Matrix_0": "",
+>>>>>>> parent of ae750207 (shfcuidtf7)
       "Intellight_Accelerat_0": ""
     },
     "interface_ports": {
@@ -1880,7 +1894,11 @@
         "xci_name": "top_level_ps7_0_axi_periph_0",
         "parameters": {
           "NUM_MI": {
+<<<<<<< HEAD
+            "value": "2"
+=======
             "value": "5"
+>>>>>>> parent of ae750207 (shfcuidtf7)
           }
         },
         "interface_ports": {
@@ -1898,6 +1916,8 @@
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+<<<<<<< HEAD
+=======
           },
           "M02_AXI": {
             "mode": "Master",
@@ -1913,6 +1933,7 @@
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+>>>>>>> parent of ae750207 (shfcuidtf7)
           }
         },
         "ports": {
@@ -1976,6 +1997,8 @@
           "M01_ARESETN": {
             "type": "rst",
             "direction": "I"
+<<<<<<< HEAD
+=======
           },
           "M02_ACLK": {
             "type": "clk",
@@ -2024,6 +2047,7 @@
           "M04_ARESETN": {
             "type": "rst",
             "direction": "I"
+>>>>>>> parent of ae750207 (shfcuidtf7)
           }
         },
         "components": {
@@ -2034,7 +2058,11 @@
             "inst_hier_path": "ps7_0_axi_periph/xbar",
             "parameters": {
               "NUM_MI": {
+<<<<<<< HEAD
+                "value": "2"
+=======
                 "value": "5"
+>>>>>>> parent of ae750207 (shfcuidtf7)
               },
               "NUM_SI": {
                 "value": "1"
@@ -2049,10 +2077,14 @@
                 "mode": "Slave",
                 "bridges": [
                   "M00_AXI",
+<<<<<<< HEAD
+                  "M01_AXI"
+=======
                   "M01_AXI",
                   "M02_AXI",
                   "M03_AXI",
                   "M04_AXI"
+>>>>>>> parent of ae750207 (shfcuidtf7)
                 ]
               }
             }
@@ -2107,12 +2139,12 @@
             "components": {
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
-                "xci_name": "top_level_auto_pc_2",
-                "xci_path": "ip\\top_level_auto_pc_2\\top_level_auto_pc_2.xci",
+                "xci_name": "top_level_auto_pc_0",
+                "xci_path": "ip\\top_level_auto_pc_0\\top_level_auto_pc_0.xci",
                 "inst_hier_path": "ps7_0_axi_periph/s00_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
-                    "value": "AXI4"
+                    "value": "AXI4LITE"
                   },
                   "SI_PROTOCOL": {
                     "value": "AXI3"
@@ -2205,56 +2237,11 @@
                 "direction": "I"
               }
             },
-            "components": {
-              "auto_pc": {
-                "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
-                "xci_name": "top_level_auto_pc_0",
-                "xci_path": "ip\\top_level_auto_pc_0\\top_level_auto_pc_0.xci",
-                "inst_hier_path": "ps7_0_axi_periph/m00_couplers/auto_pc",
-                "parameters": {
-                  "MI_PROTOCOL": {
-                    "value": "AXI4LITE"
-                  },
-                  "SI_PROTOCOL": {
-                    "value": "AXI4"
-                  }
-                },
-                "interface_ports": {
-                  "S_AXI": {
-                    "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                    "mode": "Slave",
-                    "bridges": [
-                      "M_AXI"
-                    ]
-                  }
-                }
-              }
-            },
             "interface_nets": {
-              "auto_pc_to_m00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
-              "m00_couplers_to_auto_pc": {
+              "m00_couplers_to_m00_couplers": {
                 "interface_ports": [
                   "S_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              }
-            },
-            "nets": {
-              "S_ACLK_1": {
-                "ports": [
-                  "S_ACLK",
-                  "auto_pc/aclk"
-                ]
-              },
-              "S_ARESETN_1": {
-                "ports": [
-                  "S_ARESETN",
-                  "auto_pc/aresetn"
+                  "M_AXI"
                 ]
               }
             }
@@ -2306,32 +2293,10 @@
                 "direction": "I"
               }
             },
-            "components": {
-              "auto_pc": {
-                "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
-                "xci_name": "top_level_auto_pc_1",
-                "xci_path": "ip\\top_level_auto_pc_1\\top_level_auto_pc_1.xci",
-                "inst_hier_path": "ps7_0_axi_periph/m01_couplers/auto_pc",
-                "parameters": {
-                  "MI_PROTOCOL": {
-                    "value": "AXI4LITE"
-                  },
-                  "SI_PROTOCOL": {
-                    "value": "AXI4"
-                  }
-                },
-                "interface_ports": {
-                  "S_AXI": {
-                    "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                    "mode": "Slave",
-                    "bridges": [
-                      "M_AXI"
-                    ]
-                  }
-                }
-              }
-            },
             "interface_nets": {
+<<<<<<< HEAD
+              "m01_couplers_to_m01_couplers": {
+=======
               "auto_pc_to_m01_couplers": {
                 "interface_ports": [
                   "M_AXI",
@@ -2521,6 +2486,7 @@
             },
             "interface_nets": {
               "m04_couplers_to_m04_couplers": {
+>>>>>>> parent of ae750207 (shfcuidtf7)
                 "interface_ports": [
                   "S_AXI",
                   "M_AXI"
@@ -2542,6 +2508,8 @@
               "m01_couplers/M_AXI"
             ]
           },
+<<<<<<< HEAD
+=======
           "m02_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M02_AXI",
@@ -2560,6 +2528,7 @@
               "m04_couplers/M_AXI"
             ]
           },
+>>>>>>> parent of ae750207 (shfcuidtf7)
           "ps7_0_axi_periph_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
@@ -2583,6 +2552,8 @@
               "xbar/M01_AXI",
               "m01_couplers/S_AXI"
             ]
+<<<<<<< HEAD
+=======
           },
           "xbar_to_m02_couplers": {
             "interface_ports": [
@@ -2601,6 +2572,7 @@
               "xbar/M04_AXI",
               "m04_couplers/S_AXI"
             ]
+>>>>>>> parent of ae750207 (shfcuidtf7)
           }
         },
         "nets": {
@@ -2612,6 +2584,10 @@
               "s00_couplers/M_ACLK",
               "m00_couplers/M_ACLK",
               "m01_couplers/M_ACLK",
+<<<<<<< HEAD
+              "m00_couplers/S_ACLK",
+              "m01_couplers/S_ACLK"
+=======
               "m02_couplers/M_ACLK",
               "m03_couplers/M_ACLK",
               "m04_couplers/M_ACLK",
@@ -2620,6 +2596,7 @@
               "m02_couplers/S_ACLK",
               "m03_couplers/S_ACLK",
               "m04_couplers/S_ACLK"
+>>>>>>> parent of ae750207 (shfcuidtf7)
             ]
           },
           "ps7_0_axi_periph_ARESETN_net": {
@@ -2630,6 +2607,10 @@
               "s00_couplers/M_ARESETN",
               "m00_couplers/M_ARESETN",
               "m01_couplers/M_ARESETN",
+<<<<<<< HEAD
+              "m00_couplers/S_ARESETN",
+              "m01_couplers/S_ARESETN"
+=======
               "m02_couplers/M_ARESETN",
               "m03_couplers/M_ARESETN",
               "m04_couplers/M_ARESETN",
@@ -2638,6 +2619,7 @@
               "m02_couplers/S_ARESETN",
               "m03_couplers/S_ARESETN",
               "m04_couplers/S_ARESETN"
+>>>>>>> parent of ae750207 (shfcuidtf7)
             ]
           }
         }
@@ -2670,6 +2652,22 @@
           }
         },
         "ports": {
+<<<<<<< HEAD
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
           "D_new": {
             "direction": "I",
             "left": "63",
@@ -2695,6 +2693,9 @@
             "left": "63",
             "right": "0"
           },
+<<<<<<< HEAD
+          "wea0": {
+=======
           "clk": {
             "type": "clk",
             "direction": "I",
@@ -2741,10 +2742,439 @@
             }
           },
           "wen": {
+>>>>>>> parent of ae750207 (shfcuidtf7)
             "direction": "I",
             "left": "7",
             "right": "0"
           },
+<<<<<<< HEAD
+          "wea1": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "wea2": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "wea3": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          }
+        },
+        "components": {
+          "action_ram_0": {
+            "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+            "xci_name": "top_level_action_ram_0_1",
+            "xci_path": "ip\\top_level_action_ram_0_1\\top_level_action_ram_0_1.xci",
+            "inst_hier_path": "Q_Matrix_0/action_ram_0",
+            "parameters": {
+              "Assume_Synchronous_Clk": {
+                "value": "true"
+              },
+              "EN_SAFETY_CKT": {
+                "value": "true"
+              },
+              "Enable_32bit_Address": {
+                "value": "true"
+              },
+              "Enable_A": {
+                "value": "Always_Enabled"
+              },
+              "Enable_B": {
+                "value": "Always_Enabled"
+              },
+              "Memory_Type": {
+                "value": "True_Dual_Port_RAM"
+              },
+              "Operating_Mode_A": {
+                "value": "READ_FIRST"
+              },
+              "Operating_Mode_B": {
+                "value": "READ_FIRST"
+              },
+              "Port_B_Clock": {
+                "value": "100"
+              },
+              "Port_B_Enable_Rate": {
+                "value": "100"
+              },
+              "Port_B_Write_Rate": {
+                "value": "50"
+              },
+              "Read_Width_A": {
+                "value": "64"
+              },
+              "Read_Width_B": {
+                "value": "64"
+              },
+              "Register_PortA_Output_of_Memory_Primitives": {
+                "value": "false"
+              },
+              "Register_PortB_Output_of_Memory_Primitives": {
+                "value": "false"
+              },
+              "Use_RSTA_Pin": {
+                "value": "true"
+              },
+              "Use_RSTB_Pin": {
+                "value": "true"
+              },
+              "Write_Depth_A": {
+                "value": "2048"
+              },
+              "Write_Width_A": {
+                "value": "64"
+              },
+              "Write_Width_B": {
+                "value": "64"
+              },
+              "use_bram_block": {
+                "value": "Stand_Alone"
+              }
+            }
+          },
+          "action_ram_1": {
+            "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+            "xci_name": "top_level_action_ram_1_1",
+            "xci_path": "ip\\top_level_action_ram_1_1\\top_level_action_ram_1_1.xci",
+            "inst_hier_path": "Q_Matrix_0/action_ram_1",
+            "parameters": {
+              "Assume_Synchronous_Clk": {
+                "value": "true"
+              },
+              "EN_SAFETY_CKT": {
+                "value": "true"
+              },
+              "Enable_32bit_Address": {
+                "value": "true"
+              },
+              "Enable_A": {
+                "value": "Always_Enabled"
+              },
+              "Enable_B": {
+                "value": "Always_Enabled"
+              },
+              "Memory_Type": {
+                "value": "True_Dual_Port_RAM"
+              },
+              "Operating_Mode_A": {
+                "value": "READ_FIRST"
+              },
+              "Operating_Mode_B": {
+                "value": "READ_FIRST"
+              },
+              "Port_B_Clock": {
+                "value": "100"
+              },
+              "Port_B_Enable_Rate": {
+                "value": "100"
+              },
+              "Port_B_Write_Rate": {
+                "value": "50"
+              },
+              "Read_Width_A": {
+                "value": "64"
+              },
+              "Read_Width_B": {
+                "value": "64"
+              },
+              "Register_PortA_Output_of_Memory_Primitives": {
+                "value": "false"
+              },
+              "Register_PortB_Output_of_Memory_Primitives": {
+                "value": "false"
+              },
+              "Use_RSTA_Pin": {
+                "value": "true"
+              },
+              "Use_RSTB_Pin": {
+                "value": "true"
+              },
+              "Write_Depth_A": {
+                "value": "2048"
+              },
+              "Write_Width_A": {
+                "value": "64"
+              },
+              "Write_Width_B": {
+                "value": "64"
+              },
+              "use_bram_block": {
+                "value": "Stand_Alone"
+              }
+            }
+          },
+          "action_ram_2": {
+            "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+            "xci_name": "top_level_action_ram_2_1",
+            "xci_path": "ip\\top_level_action_ram_2_1\\top_level_action_ram_2_1.xci",
+            "inst_hier_path": "Q_Matrix_0/action_ram_2",
+            "parameters": {
+              "Assume_Synchronous_Clk": {
+                "value": "true"
+              },
+              "EN_SAFETY_CKT": {
+                "value": "true"
+              },
+              "Enable_32bit_Address": {
+                "value": "true"
+              },
+              "Enable_A": {
+                "value": "Always_Enabled"
+              },
+              "Enable_B": {
+                "value": "Always_Enabled"
+              },
+              "Memory_Type": {
+                "value": "True_Dual_Port_RAM"
+              },
+              "Operating_Mode_A": {
+                "value": "READ_FIRST"
+              },
+              "Operating_Mode_B": {
+                "value": "READ_FIRST"
+              },
+              "Port_B_Clock": {
+                "value": "100"
+              },
+              "Port_B_Enable_Rate": {
+                "value": "100"
+              },
+              "Port_B_Write_Rate": {
+                "value": "50"
+              },
+              "Read_Width_A": {
+                "value": "64"
+              },
+              "Read_Width_B": {
+                "value": "64"
+              },
+              "Register_PortA_Output_of_Memory_Primitives": {
+                "value": "false"
+              },
+              "Register_PortB_Output_of_Memory_Primitives": {
+                "value": "false"
+              },
+              "Use_RSTA_Pin": {
+                "value": "true"
+              },
+              "Use_RSTB_Pin": {
+                "value": "true"
+              },
+              "Write_Depth_A": {
+                "value": "2048"
+              },
+              "Write_Width_A": {
+                "value": "64"
+              },
+              "Write_Width_B": {
+                "value": "64"
+              },
+              "use_bram_block": {
+                "value": "Stand_Alone"
+              }
+            }
+          },
+          "action_ram_3": {
+            "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+            "xci_name": "top_level_action_ram_3_1",
+            "xci_path": "ip\\top_level_action_ram_3_1\\top_level_action_ram_3_1.xci",
+            "inst_hier_path": "Q_Matrix_0/action_ram_3",
+            "parameters": {
+              "Assume_Synchronous_Clk": {
+                "value": "true"
+              },
+              "EN_SAFETY_CKT": {
+                "value": "true"
+              },
+              "Enable_32bit_Address": {
+                "value": "true"
+              },
+              "Enable_A": {
+                "value": "Always_Enabled"
+              },
+              "Enable_B": {
+                "value": "Always_Enabled"
+              },
+              "Memory_Type": {
+                "value": "True_Dual_Port_RAM"
+              },
+              "Operating_Mode_A": {
+                "value": "READ_FIRST"
+              },
+              "Operating_Mode_B": {
+                "value": "READ_FIRST"
+              },
+              "Port_B_Clock": {
+                "value": "100"
+              },
+              "Port_B_Enable_Rate": {
+                "value": "100"
+              },
+              "Port_B_Write_Rate": {
+                "value": "50"
+              },
+              "Read_Width_A": {
+                "value": "64"
+              },
+              "Read_Width_B": {
+                "value": "64"
+              },
+              "Register_PortA_Output_of_Memory_Primitives": {
+                "value": "false"
+              },
+              "Register_PortB_Output_of_Memory_Primitives": {
+                "value": "false"
+              },
+              "Use_RSTA_Pin": {
+                "value": "true"
+              },
+              "Use_RSTB_Pin": {
+                "value": "true"
+              },
+              "Write_Depth_A": {
+                "value": "2048"
+              },
+              "Write_Width_A": {
+                "value": "64"
+              },
+              "Write_Width_B": {
+                "value": "64"
+              },
+              "use_bram_block": {
+                "value": "Stand_Alone"
+              }
+            }
+          },
+          "const_0_8bit": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "top_level_const_0_8bit_0",
+            "xci_path": "ip\\top_level_const_0_8bit_0\\top_level_const_0_8bit_0.xci",
+            "inst_hier_path": "Q_Matrix_0/const_0_8bit",
+            "parameters": {
+              "CONST_VAL": {
+                "value": "0"
+              },
+              "CONST_WIDTH": {
+                "value": "8"
+              }
+            }
+          }
+        },
+        "nets": {
+          "action_ram_0_doutb": {
+            "ports": [
+              "action_ram_0/doutb",
+              "D_road0"
+            ]
+          },
+          "action_ram_1_doutb": {
+            "ports": [
+              "action_ram_1/doutb",
+              "D_road1"
+            ]
+          },
+          "action_ram_2_doutb": {
+            "ports": [
+              "action_ram_2/doutb",
+              "D_road2"
+            ]
+          },
+          "action_ram_3_doutb": {
+            "ports": [
+              "action_ram_3/doutb",
+              "D_road3"
+            ]
+          },
+          "addra_0_1": {
+            "ports": [
+              "wr_addr",
+              "action_ram_1/addra",
+              "action_ram_2/addra",
+              "action_ram_3/addra",
+              "action_ram_0/addra"
+            ]
+          },
+          "addrb_0_1": {
+            "ports": [
+              "rd_addr",
+              "action_ram_1/addrb",
+              "action_ram_2/addrb",
+              "action_ram_3/addrb",
+              "action_ram_0/addrb"
+            ]
+          },
+          "clka_0_1": {
+            "ports": [
+              "clk",
+              "action_ram_0/clkb",
+              "action_ram_1/clka",
+              "action_ram_1/clkb",
+              "action_ram_2/clka",
+              "action_ram_2/clkb",
+              "action_ram_3/clka",
+              "action_ram_3/clkb",
+              "action_ram_0/clka"
+            ]
+          },
+          "const_0_4bit_dout": {
+            "ports": [
+              "const_0_8bit/dout",
+              "action_ram_0/web",
+              "action_ram_1/web",
+              "action_ram_2/web",
+              "action_ram_3/web"
+            ]
+          },
+          "dina_0_1": {
+            "ports": [
+              "D_new",
+              "action_ram_1/dina",
+              "action_ram_2/dina",
+              "action_ram_3/dina",
+              "action_ram_0/dina"
+            ]
+          },
+          "rsta_0_1": {
+            "ports": [
+              "rst",
+              "action_ram_1/rsta",
+              "action_ram_1/rstb",
+              "action_ram_2/rsta",
+              "action_ram_2/rstb",
+              "action_ram_3/rsta",
+              "action_ram_3/rstb",
+              "action_ram_0/rstb",
+              "action_ram_0/rsta"
+            ]
+          },
+          "wea0_1": {
+            "ports": [
+              "wea0",
+              "action_ram_0/wea"
+            ]
+          },
+          "wea1_1": {
+            "ports": [
+              "wea1",
+              "action_ram_1/wea"
+            ]
+          },
+          "wea2_1": {
+            "ports": [
+              "wea2",
+              "action_ram_2/wea"
+            ]
+          },
+          "wea3_1": {
+            "ports": [
+              "wea3",
+              "action_ram_3/wea"
+            ]
+=======
           "wen0": {
             "direction": "I"
           },
@@ -2774,6 +3204,7 @@
             "ref_type": "Block Design",
             "source_type": "all",
             "active": "all"
+>>>>>>> parent of ae750207 (shfcuidtf7)
           }
         }
       },
@@ -2781,7 +3212,15 @@
         "vlnv": "xilinx.com:user:Intellight_Accelerator:1.0",
         "xci_name": "top_level_Intellight_Accelerat_0_0",
         "xci_path": "ip\\top_level_Intellight_Accelerat_0_0\\top_level_Intellight_Accelerat_0_0.xci",
-        "inst_hier_path": "Intellight_Accelerat_0"
+        "inst_hier_path": "Intellight_Accelerat_0",
+        "parameters": {
+          "L_WIDTH": {
+            "value": "4"
+          },
+          "Q_WIDTH": {
+            "value": "16"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -2829,28 +3268,48 @@
           "axi_intc_0/intr"
         ]
       },
-      "Intellight_Accelerat_0_wen0": {
+      "Intellight_Accelerat_0_wen_bram0": {
         "ports": [
+<<<<<<< HEAD
+          "Intellight_Accelerat_0/wen_bram0",
+          "Q_Matrix_0/wea0"
+=======
           "Intellight_Accelerat_0/wen0",
           "Q_Matrix_0/wen0"
+>>>>>>> parent of ae750207 (shfcuidtf7)
         ]
       },
-      "Intellight_Accelerat_0_wen1": {
+      "Intellight_Accelerat_0_wen_bram1": {
         "ports": [
+<<<<<<< HEAD
+          "Intellight_Accelerat_0/wen_bram1",
+          "Q_Matrix_0/wea1"
+=======
           "Intellight_Accelerat_0/wen1",
           "Q_Matrix_0/wen1"
+>>>>>>> parent of ae750207 (shfcuidtf7)
         ]
       },
-      "Intellight_Accelerat_0_wen2": {
+      "Intellight_Accelerat_0_wen_bram2": {
         "ports": [
+<<<<<<< HEAD
+          "Intellight_Accelerat_0/wen_bram2",
+          "Q_Matrix_0/wea2"
+=======
           "Intellight_Accelerat_0/wen2",
           "Q_Matrix_0/wen2"
+>>>>>>> parent of ae750207 (shfcuidtf7)
         ]
       },
-      "Intellight_Accelerat_0_wen3": {
+      "Intellight_Accelerat_0_wen_bram3": {
         "ports": [
+<<<<<<< HEAD
+          "Intellight_Accelerat_0/wen_bram3",
+          "Q_Matrix_0/wea3"
+=======
           "Intellight_Accelerat_0/wen3",
           "Q_Matrix_0/wen3"
+>>>>>>> parent of ae750207 (shfcuidtf7)
         ]
       },
       "Q_Matrix_0_D_road0": {
@@ -2893,9 +3352,12 @@
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
           "ps7_0_axi_periph/M01_ACLK",
+<<<<<<< HEAD
+=======
           "ps7_0_axi_periph/M02_ACLK",
           "ps7_0_axi_periph/M03_ACLK",
           "ps7_0_axi_periph/M04_ACLK",
+>>>>>>> parent of ae750207 (shfcuidtf7)
           "Q_Matrix_0/clk",
           "Intellight_Accelerat_0/clk",
           "Intellight_Accelerat_0/s00_axi_aclk"
@@ -2928,6 +3390,11 @@
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
           "ps7_0_axi_periph/M01_ARESETN",
+<<<<<<< HEAD
+          "Intellight_Accelerat_0/s00_axi_aresetn"
+        ]
+      },
+=======
           "ps7_0_axi_periph/M02_ARESETN",
           "ps7_0_axi_periph/M03_ARESETN",
           "ps7_0_axi_periph/M04_ARESETN",
@@ -2940,6 +3407,7 @@
           "Q_Matrix_0/wen"
         ]
       },
+>>>>>>> parent of ae750207 (shfcuidtf7)
       "wr_addr_1": {
         "ports": [
           "Intellight_Accelerat_0/wr_addr",

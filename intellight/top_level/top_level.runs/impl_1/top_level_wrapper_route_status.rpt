@@ -1,11 +1,19 @@
 Design Route Status
                                                :      # nets :
    ------------------------------------------- : ----------- :
+<<<<<<< HEAD
+   # of logical nets.......................... :        6444 :
+       # of nets not needing routing.......... :        2278 :
+           # of internally routed nets........ :        2278 :
+       # of routable nets..................... :        4166 :
+           # of fully routed nets............. :        4166 :
+=======
    # of logical nets.......................... :       12092 :
        # of nets not needing routing.......... :        6294 :
            # of internally routed nets........ :        6294 :
        # of routable nets..................... :        5798 :
            # of fully routed nets............. :        5798 :
+>>>>>>> parent of ae750207 (shfcuidtf7)
        # of nets with routing errors.......... :           0 :
    ------------------------------------------- : ----------- :
 

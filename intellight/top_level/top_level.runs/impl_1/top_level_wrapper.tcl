@@ -132,7 +132,10 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir D:/intelligent_traffic_light/intellight/top_level/top_level.cache/wt [current_project]
   set_property parent.project_path D:/intelligent_traffic_light/intellight/top_level/top_level.xpr [current_project]
-  set_property ip_repo_paths D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0 [current_project]
+  set_property ip_repo_paths {
+  D:/intelligent_traffic_light/intellight/database/database_1.0
+  D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0
+} [current_project]
   update_ip_catalog
   set_property ip_output_repo D:/intelligent_traffic_light/intellight/top_level/top_level.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Nov 23 14:58:13 2022
+# Process ID: 8440
+# Current directory: D:/intelligent_traffic_light/intellight/top_level/top_level.runs/top_level_action_ram_1_1_synth_1
+# Command line: vivado.exe -log top_level_action_ram_1_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_action_ram_1_1.tcl
+# Log file: D:/intelligent_traffic_light/intellight/top_level/top_level.runs/top_level_action_ram_1_1_synth_1/top_level_action_ram_1_1.vds
+# Journal file: D:/intelligent_traffic_light/intellight/top_level/top_level.runs/top_level_action_ram_1_1_synth_1\vivado.jou
+# Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
+#-----------------------------------------------------------
+source top_level_action_ram_1_1.tcl -notrace

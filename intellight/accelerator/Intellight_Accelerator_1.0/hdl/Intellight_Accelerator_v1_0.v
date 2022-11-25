@@ -21,9 +21,17 @@
 		input     wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0]     D_road0, D_road1, D_road2, D_road3, 
 		output    wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0]     D_new,
 		output    wire [ADDR_WIDTH-1:0]                   rd_addr, wr_addr,
+<<<<<<< HEAD
+		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram0,
+		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram1,
+		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram2,
+		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram3,
+		output    wire                                    finish, idle,
+=======
 		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram,
 		output    wire                                    wen0, wen1, wen2, wen3,
 		output    wire                                    finish,
+>>>>>>> parent of ae750207 (shfcuidtf7)
 		// User ports ends
 		// Do not modify the ports beyond this line
 		// Ports of Axi Slave Bus Interface S00_AXI
@@ -68,11 +76,10 @@
         .D_new(D_new),
         .rd_addr(rd_addr),
         .wr_addr(wr_addr),
-        .wen_bram(wen_bram),
-        .wen0(wen0),
-        .wen1(wen1),
-        .wen2(wen2),
-        .wen3(wen3),
+        .wen_bram0(wen_bram0),
+        .wen_bram1(wen_bram1),
+        .wen_bram2(wen_bram2),
+        .wen_bram3(wen_bram3),
         .finish(finish),
         .S_AXI_ACLK(s00_axi_aclk),
         .S_AXI_ARESETN(s00_axi_aresetn),
@@ -98,7 +105,7 @@
 	);
 
 	// Add user logic here
-
+    ///
 	// User logic ends
 
 	endmodule

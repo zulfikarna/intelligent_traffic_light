@@ -33,7 +33,7 @@ module CU // verified
 //    output wire [4:0] debug_ns,
     output wire finish,
     output reg wen,
-    output reg idle 
+    output wire idle 
     );
     // State variable for FSM implementation 
     localparam
@@ -137,7 +137,7 @@ module CU // verified
             end else begin 
                 episode = max_episode;
             end
-        end else if (cs == S_L11) begin
+        end else if (cs == S_L10) begin
             episode = episode + 1'b1;
         end else begin
             episode = episode;
@@ -207,18 +207,10 @@ module CU // verified
                 ctrl_sig = 4'b0000;       
         endcase
     end
-    
-    // Idle signal generator
-    always @(posedge clk) begin 
-        if (cs == S_IDLE) begin
-            idle = 1'b1;
-        end else begin
-            idle = 1'b0;
-        end
-    end
-    
+        
     // Finish signal generator 
-    assign finish = (ns==S_DONE);
+    assign idle     = (cs==S_IDLE);
+    assign finish   = (ns==S_DONE);
     
     // Random numbers for Policy Generator 
     always @(posedge clk) begin

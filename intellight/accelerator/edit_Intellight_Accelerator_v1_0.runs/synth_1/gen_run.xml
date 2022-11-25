@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1669194979" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Intellight_Accelerator_v1_0.dcp">
+=======
 <GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1669028005" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Intellight_Accelerator_v1_0.dcp">
+>>>>>>> parent of ae750207 (shfcuidtf7)
   <File Type="PA-TCL" Name="Intellight_Accelerator_v1_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Intellight_Accelerator_v1_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Intellight_Accelerator_v1_0_reports.tcl"/>
@@ -11,10 +15,15 @@
   <File Type="VDS-TIMING-PB" Name="Intellight_Accelerator_v1_0_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+<<<<<<< HEAD
+    <File Path="$PPRDIR/Intellight_Accelerator_1.0/hdl/AGENT.v">
+      <FileInfo>
+=======
     <File Path="$PSRCDIR/sources_1/imports/hdl/AGENT.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/Intellight_Accelerator_1.0/hdl/AGENT.v"/>
         <Attr Name="ImportTime" Val="1668997523"/>
+>>>>>>> parent of ae750207 (shfcuidtf7)
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -109,6 +118,8 @@
     <File Path="$PPRDIR/Intellight_Accelerator_1.0/component.xml">
       <FileInfo SFType="IPXACT"/>
     </File>
+<<<<<<< HEAD
+=======
     <File Path="$PSRCDIR/sources_1/imports/hdl/test.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -119,6 +130,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+>>>>>>> parent of ae750207 (shfcuidtf7)
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="Intellight_Accelerator_v1_0"/>

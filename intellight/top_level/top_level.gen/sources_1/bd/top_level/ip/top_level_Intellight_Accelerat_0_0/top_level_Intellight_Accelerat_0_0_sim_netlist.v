@@ -1,7 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+<<<<<<< HEAD
+// Date        : Thu Nov 24 16:00:24 2022
+=======
 // Date        : Mon Nov 21 17:57:45 2022
+>>>>>>> parent of ae750207 (shfcuidtf7)
 // Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_Intellight_Accelerat_0_0/top_level_Intellight_Accelerat_0_0_sim_netlist.v
@@ -24,11 +28,10 @@ module top_level_Intellight_Accelerat_0_0
     D_new,
     rd_addr,
     wr_addr,
-    wen_bram,
-    wen0,
-    wen1,
-    wen2,
-    wen3,
+    wen_bram0,
+    wen_bram1,
+    wen_bram2,
+    wen_bram3,
     finish,
     s00_axi_aclk,
     s00_axi_aresetn,
@@ -60,11 +63,10 @@ module top_level_Intellight_Accelerat_0_0
   output [63:0]D_new;
   output [31:0]rd_addr;
   output [31:0]wr_addr;
-  output [7:0]wen_bram;
-  output wen0;
-  output wen1;
-  output wen2;
-  output wen3;
+  output [7:0]wen_bram0;
+  output [7:0]wen_bram1;
+  output [7:0]wen_bram2;
+  output [7:0]wen_bram3;
   output finish;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_level_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s00_axi_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s00_axi_aresetn;
@@ -115,10 +117,18 @@ module top_level_Intellight_Accelerat_0_0
   wire s00_axi_wready;
   wire [3:0]s00_axi_wstrb;
   wire s00_axi_wvalid;
+<<<<<<< HEAD
+  wire [6:0]\^wen_bram0 ;
+  wire [6:0]\^wen_bram1 ;
+  wire [6:0]\^wen_bram2 ;
+  wire [6:0]\^wen_bram3 ;
+  wire [10:3]\^wr_addr ;
+=======
   wire wen0;
   wire wen1;
   wire [2:0]\^wen_bram ;
   wire [9:2]\^wr_addr ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
 
   assign rd_addr[31] = \<const0> ;
   assign rd_addr[30] = \<const0> ;
@@ -149,6 +159,40 @@ module top_level_Intellight_Accelerat_0_0
   assign s00_axi_bresp[0] = \<const0> ;
   assign s00_axi_rresp[1] = \<const0> ;
   assign s00_axi_rresp[0] = \<const0> ;
+<<<<<<< HEAD
+  assign wen_bram0[7] = \^wen_bram0 [6];
+  assign wen_bram0[6] = \^wen_bram0 [6];
+  assign wen_bram0[5] = \^wen_bram0 [4];
+  assign wen_bram0[4] = \^wen_bram0 [4];
+  assign wen_bram0[3] = \^wen_bram0 [2];
+  assign wen_bram0[2] = \^wen_bram0 [2];
+  assign wen_bram0[1] = \^wen_bram0 [0];
+  assign wen_bram0[0] = \^wen_bram0 [0];
+  assign wen_bram1[7] = \^wen_bram1 [6];
+  assign wen_bram1[6] = \^wen_bram1 [6];
+  assign wen_bram1[5] = \^wen_bram1 [4];
+  assign wen_bram1[4] = \^wen_bram1 [4];
+  assign wen_bram1[3] = \^wen_bram1 [2];
+  assign wen_bram1[2] = \^wen_bram1 [2];
+  assign wen_bram1[1] = \^wen_bram1 [0];
+  assign wen_bram1[0] = \^wen_bram1 [0];
+  assign wen_bram2[7] = \^wen_bram2 [6];
+  assign wen_bram2[6] = \^wen_bram2 [6];
+  assign wen_bram2[5] = \^wen_bram2 [4];
+  assign wen_bram2[4] = \^wen_bram2 [4];
+  assign wen_bram2[3] = \^wen_bram2 [2];
+  assign wen_bram2[2] = \^wen_bram2 [2];
+  assign wen_bram2[1] = \^wen_bram2 [0];
+  assign wen_bram2[0] = \^wen_bram2 [0];
+  assign wen_bram3[7] = \^wen_bram3 [6];
+  assign wen_bram3[6] = \^wen_bram3 [6];
+  assign wen_bram3[5] = \^wen_bram3 [4];
+  assign wen_bram3[4] = \^wen_bram3 [4];
+  assign wen_bram3[3] = \^wen_bram3 [2];
+  assign wen_bram3[2] = \^wen_bram3 [2];
+  assign wen_bram3[1] = \^wen_bram3 [0];
+  assign wen_bram3[0] = \^wen_bram3 [0];
+=======
   assign wen2 = \<const0> ;
   assign wen3 = \<const0> ;
   assign wen_bram[7] = \<const0> ;
@@ -159,6 +203,7 @@ module top_level_Intellight_Accelerat_0_0
   assign wen_bram[2] = \^wen_bram [2];
   assign wen_bram[1] = \^wen_bram [0];
   assign wen_bram[0] = \^wen_bram [0];
+>>>>>>> parent of ae750207 (shfcuidtf7)
   assign wr_addr[31] = \<const0> ;
   assign wr_addr[30] = \<const0> ;
   assign wr_addr[29] = \<const0> ;
@@ -214,20 +259,76 @@ module top_level_Intellight_Accelerat_0_0
         .s00_axi_wdata(s00_axi_wdata),
         .s00_axi_wstrb(s00_axi_wstrb),
         .s00_axi_wvalid(s00_axi_wvalid),
+<<<<<<< HEAD
+        .wen_bram0({\^wen_bram0 [6],\^wen_bram0 [4],\^wen_bram0 [2],\^wen_bram0 [0]}),
+        .wen_bram1({\^wen_bram1 [6],\^wen_bram1 [4],\^wen_bram1 [2],\^wen_bram1 [0]}),
+        .wen_bram2({\^wen_bram2 [6],\^wen_bram2 [4],\^wen_bram2 [2],\^wen_bram2 [0]}),
+        .wen_bram3({\^wen_bram3 [6],\^wen_bram3 [4],\^wen_bram3 [2],\^wen_bram3 [0]}),
+=======
         .wen0(wen0),
         .wen1(wen1),
         .wen_bram(\^wen_bram [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .wr_addr(\^wr_addr ));
 endmodule
 
 (* ORIG_REF_NAME = "AGENT" *) 
 module top_level_Intellight_Accelerat_0_0_AGENT
+<<<<<<< HEAD
+   (D,
+    O,
+    \Q_act_reg_reg[2][7] ,
+    \Q_act_reg_reg[2][11] ,
+    \Q_act_reg_reg[2][14] ,
+    DI,
+    SD_0_L3,
+    SD_0_L2,
+    SD_0_L1,
+    S,
+    SD_0_L0,
+    \L_curr_reg[0][3] ,
+    \L_curr_reg[0][3]_0 ,
+    rd_addr,
+    \slv_reg7_reg[4] ,
+    \slv_reg3_reg[4] ,
+    \slv_reg3_reg[5] ,
+    \slv_reg7_reg[14] ,
+    \A_road_reg[1]_0 ,
+    \slv_reg3_reg[6] ,
+    \slv_reg6_reg[4] ,
+    \r_lsfr_reg[2] ,
+    \r_lsfr_reg[1] ,
+    \slv_reg4_reg[4] ,
+    \slv_reg4_reg[5] ,
+    \slv_reg4_reg[6] ,
+    \slv_reg5_reg[4] ,
+    \slv_reg5_reg[5] ,
+    \slv_reg7_reg[1] ,
+    \slv_reg7_reg[7] ,
+    \slv_reg5_reg[6] ,
+    rst,
+    clk,
+    \L_curr_reg[0][3]_1 ,
+    \L_curr_reg[0][3]_2 ,
+    Q,
+    \rd_addr[10] ,
+    x__0_carry__2,
+    \L_curr_reg[0][1] ,
+    \L_curr_reg[0][2] ,
+    \L_curr_reg[0][3]_3 ,
+    \L_curr_reg[3][3] ,
+    \L_curr_reg[3][3]_0 ,
+    \L_curr_reg[3][1] ,
+    \L_curr_reg[3][2] ,
+    \L_curr_reg[3][3]_1 ,
+=======
    (AGENT_0_Q_new,
     D,
     SD_0_L1,
     SD_0_L2,
     \r_lsfr_reg[2] ,
     \r_lsfr_reg[1] ,
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \L_curr_reg[1][3] ,
     \slv_reg7_reg[7] ,
     \L_curr_reg[1][2] ,
@@ -249,6 +350,20 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     \R[2]_i_2_0 ,
     Q,
     \L_curr_reg[1][3]_0 ,
+<<<<<<< HEAD
+    \L_curr_reg[1][3]_1 ,
+    \L_curr_reg[1][1] ,
+    \L_curr_reg[1][2] ,
+    \L_curr_reg[1][3]_2 ,
+    \L_curr_reg[2][3] ,
+    \L_curr_reg[2][3]_0 ,
+    \L_curr_reg[2][3]_1 ,
+    \L_curr_reg[2][1] ,
+    \L_curr_reg[2][2] ,
+    \L_curr_reg[2][3]_2 ,
+    R0__2_carry__0_i_9,
+    \rd_addr[4]_INST_0_i_3 ,
+=======
     \L_curr_reg[0][3]_0 ,
     \L_curr_reg[2][3]_0 ,
     \rd_addr[9] ,
@@ -283,9 +398,75 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     \R[2]_i_6_0 ,
     \rd_addr[3]_INST_0_i_3 ,
     D_road2,
+>>>>>>> parent of ae750207 (shfcuidtf7)
     D_road0,
-    D_road3,
     D_road1,
+<<<<<<< HEAD
+    D_road2,
+    D_road3,
+    \A_reg_reg[0][3] ,
+    \R_reg0_reg[15] );
+  output [63:0]D;
+  output [3:0]O;
+  output [3:0]\Q_act_reg_reg[2][7] ;
+  output [3:0]\Q_act_reg_reg[2][11] ;
+  output [3:0]\Q_act_reg_reg[2][14] ;
+  output [2:0]DI;
+  output [3:0]SD_0_L3;
+  output [3:0]SD_0_L2;
+  output [3:0]SD_0_L1;
+  output [2:0]S;
+  output [3:0]SD_0_L0;
+  output [1:0]\L_curr_reg[0][3] ;
+  output [2:0]\L_curr_reg[0][3]_0 ;
+  output [7:0]rd_addr;
+  output \slv_reg7_reg[4] ;
+  output \slv_reg3_reg[4] ;
+  output \slv_reg3_reg[5] ;
+  output \slv_reg7_reg[14] ;
+  output [1:0]\A_road_reg[1]_0 ;
+  output \slv_reg3_reg[6] ;
+  output \slv_reg6_reg[4] ;
+  output \r_lsfr_reg[2] ;
+  output \r_lsfr_reg[1] ;
+  output \slv_reg4_reg[4] ;
+  output \slv_reg4_reg[5] ;
+  output \slv_reg4_reg[6] ;
+  output \slv_reg5_reg[4] ;
+  output \slv_reg5_reg[5] ;
+  output \slv_reg7_reg[1] ;
+  output \slv_reg7_reg[7] ;
+  output \slv_reg5_reg[6] ;
+  input rst;
+  input clk;
+  input \L_curr_reg[0][3]_1 ;
+  input \L_curr_reg[0][3]_2 ;
+  input [3:0]Q;
+  input [7:0]\rd_addr[10] ;
+  input [6:0]x__0_carry__2;
+  input \L_curr_reg[0][1] ;
+  input \L_curr_reg[0][2] ;
+  input [15:0]\L_curr_reg[0][3]_3 ;
+  input \L_curr_reg[3][3] ;
+  input [3:0]\L_curr_reg[3][3]_0 ;
+  input \L_curr_reg[3][1] ;
+  input \L_curr_reg[3][2] ;
+  input [15:0]\L_curr_reg[3][3]_1 ;
+  input \L_curr_reg[1][3] ;
+  input [3:0]\L_curr_reg[1][3]_0 ;
+  input \L_curr_reg[1][3]_1 ;
+  input \L_curr_reg[1][1] ;
+  input \L_curr_reg[1][2] ;
+  input [15:0]\L_curr_reg[1][3]_2 ;
+  input \L_curr_reg[2][3] ;
+  input [3:0]\L_curr_reg[2][3]_0 ;
+  input \L_curr_reg[2][3]_1 ;
+  input \L_curr_reg[2][1] ;
+  input \L_curr_reg[2][2] ;
+  input [15:0]\L_curr_reg[2][3]_2 ;
+  input R0__2_carry__0_i_9;
+  input [15:0]\rd_addr[4]_INST_0_i_3 ;
+=======
     rst,
     \A_reg_reg[0][2] ,
     clk,
@@ -351,9 +532,16 @@ module top_level_Intellight_Accelerat_0_0_AGENT
   input \R[2]_i_6_0 ;
   input [15:0]\rd_addr[3]_INST_0_i_3 ;
   input [63:0]D_road2;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   input [63:0]D_road0;
-  input [63:0]D_road3;
   input [63:0]D_road1;
+<<<<<<< HEAD
+  input [63:0]D_road2;
+  input [63:0]D_road3;
+  input \A_reg_reg[0][3] ;
+  input [5:0]\R_reg0_reg[15] ;
+
+=======
   input rst;
   input \A_reg_reg[0][2] ;
   input clk;
@@ -361,6 +549,7 @@ module top_level_Intellight_Accelerat_0_0_AGENT
 
   wire [1:1]AGENT_0_A;
   wire [15:0]AGENT_0_Q_new;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire A_dur_gred1_carry__0_i_1_n_0;
   wire A_dur_gred1_carry__0_i_2_n_0;
   wire A_dur_gred1_carry__0_n_2;
@@ -402,13 +591,32 @@ module top_level_Intellight_Accelerat_0_0_AGENT
   wire A_dur_gred3_carry_n_1;
   wire A_dur_gred3_carry_n_2;
   wire A_dur_gred3_carry_n_3;
+<<<<<<< HEAD
+  wire \A_reg_reg[0][3] ;
+  wire [1:0]\A_road_reg[1]_0 ;
+  wire [63:0]D;
+  wire [2:0]DI;
+=======
   wire \A_reg_reg[0][2] ;
   wire [6:0]D;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [63:0]D_road0;
   wire [63:0]D_road1;
   wire [63:0]D_road2;
   wire [63:0]D_road3;
   wire [1:0]D_sel;
+<<<<<<< HEAD
+  wire \L_curr[3][1]_i_2_n_0 ;
+  wire \L_curr_reg[0][1] ;
+  wire \L_curr_reg[0][2] ;
+  wire [1:0]\L_curr_reg[0][3] ;
+  wire [2:0]\L_curr_reg[0][3]_0 ;
+  wire \L_curr_reg[0][3]_1 ;
+  wire \L_curr_reg[0][3]_2 ;
+  wire [15:0]\L_curr_reg[0][3]_3 ;
+  wire \L_curr_reg[1][1] ;
+  wire \L_curr_reg[1][2] ;
+=======
   wire \L_curr[0][1]_i_5_n_0 ;
   wire \L_curr[1][1]_i_4_n_0 ;
   wire \L_curr[2][1]_i_4_n_0 ;
@@ -422,6 +630,7 @@ module top_level_Intellight_Accelerat_0_0_AGENT
   wire \L_curr_reg[1][1] ;
   wire \L_curr_reg[1][2] ;
   wire \L_curr_reg[1][2]_0 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \L_curr_reg[1][3] ;
   wire [3:0]\L_curr_reg[1][3]_0 ;
   wire \L_curr_reg[1][3]_1 ;
@@ -436,8 +645,14 @@ module top_level_Intellight_Accelerat_0_0_AGENT
   wire \L_curr_reg[3][1] ;
   wire \L_curr_reg[3][2] ;
   wire \L_curr_reg[3][3] ;
+<<<<<<< HEAD
+  wire [3:0]\L_curr_reg[3][3]_0 ;
+  wire [15:0]\L_curr_reg[3][3]_1 ;
+  wire [3:0]O;
+=======
   wire \L_curr_reg[3][3]_0 ;
   wire [15:0]\L_curr_reg[3][3]_1 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [3:0]Q;
   wire QA_0_n_16;
   wire QA_0_n_17;
@@ -507,9 +722,18 @@ module top_level_Intellight_Accelerat_0_0_AGENT
   wire [15:0]\Q[2]_15 ;
   wire [15:0]\Q[3]_16 ;
   wire [15:0]Q_act;
+  wire [3:0]\Q_act_reg_reg[2][11] ;
+  wire [3:0]\Q_act_reg_reg[2][14] ;
+  wire [3:0]\Q_act_reg_reg[2][7] ;
   wire [15:15]Q_max;
   wire [14:0]Q_max__0;
   wire [15:0]Q_max_temp;
+<<<<<<< HEAD
+  wire R0__2_carry__0_i_15_n_0;
+  wire R0__2_carry__0_i_9;
+  wire [5:0]\R_reg0_reg[15] ;
+  wire [2:0]S;
+=======
   wire \R[14]_i_17 ;
   wire \R[14]_i_17_0 ;
   wire \R[14]_i_21_n_0 ;
@@ -537,6 +761,7 @@ module top_level_Intellight_Accelerat_0_0_AGENT
   wire \R[2]_i_6_0 ;
   wire [6:0]\R_reg0_reg[14] ;
   wire \R_reg[14] ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [3:0]SD_0_L0;
   wire [3:0]SD_0_L1;
   wire [3:0]SD_0_L2;
@@ -558,10 +783,61 @@ module top_level_Intellight_Accelerat_0_0_AGENT
   wire \genblk1[0].Q_reg[0][0][7]_i_1_n_0 ;
   wire \genblk1[0].Q_reg[0][0][8]_i_1_n_0 ;
   wire \genblk1[0].Q_reg[0][0][9]_i_1_n_0 ;
+<<<<<<< HEAD
+  wire \genblk1[1].Q_reg[1][0][0]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][10]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][11]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][12]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][13]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][14]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][15]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][1]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][2]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][3]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][4]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][5]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][6]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][7]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][8]_i_1_n_0 ;
+  wire \genblk1[1].Q_reg[1][0][9]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][0]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][10]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][11]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][12]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][13]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][14]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][15]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][1]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][2]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][3]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][4]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][5]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][6]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][7]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][8]_i_1_n_0 ;
+  wire \genblk1[2].Q_reg[2][0][9]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][0]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][10]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][11]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][12]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][13]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][14]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][15]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][1]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][2]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][3]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][4]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][5]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][6]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][7]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][8]_i_1_n_0 ;
+  wire \genblk1[3].Q_reg[3][0][9]_i_1_n_0 ;
+=======
   wire [15:0]\genblk1[0].Q_reg_reg[0][0]_6 ;
   wire [15:0]\genblk1[1].Q_reg_reg[1][0]_5 ;
   wire [15:0]\genblk1[2].Q_reg_reg[2][0]_4 ;
   wire [15:0]\genblk1[3].Q_reg_reg[3][0]_7 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire i__carry__0_i_1__1_n_0;
   wire i__carry__0_i_2__0_n_0;
   wire i__carry_i_1__0_n_0;
@@ -569,6 +845,27 @@ module top_level_Intellight_Accelerat_0_0_AGENT
   wire i__carry_i_3__0_n_0;
   wire i__carry_i_4__0_n_0;
   wire p_0_in;
+<<<<<<< HEAD
+  wire \r_lsfr_reg[1] ;
+  wire \r_lsfr_reg[2] ;
+  wire [7:0]rd_addr;
+  wire [7:0]\rd_addr[10] ;
+  wire \rd_addr[10]_INST_0_i_5_n_0 ;
+  wire \rd_addr[10]_INST_0_i_6_n_0 ;
+  wire \rd_addr[10]_INST_0_i_7_n_0 ;
+  wire \rd_addr[10]_INST_0_i_9_n_0 ;
+  wire \rd_addr[3]_INST_0_i_5_n_0 ;
+  wire [15:0]\rd_addr[4]_INST_0_i_3 ;
+  wire \rd_addr[4]_INST_0_i_5_n_0 ;
+  wire \rd_addr[4]_INST_0_i_7_n_0 ;
+  wire \rd_addr[5]_INST_0_i_5_n_0 ;
+  wire \rd_addr[6]_INST_0_i_5_n_0 ;
+  wire \rd_addr[6]_INST_0_i_7_n_0 ;
+  wire \rd_addr[7]_INST_0_i_5_n_0 ;
+  wire \rd_addr[8]_INST_0_i_5_n_0 ;
+  wire \rd_addr[8]_INST_0_i_7_n_0 ;
+  wire \rd_addr[9]_INST_0_i_6_n_0 ;
+=======
   wire [1:0]\r_lsfr_reg[1] ;
   wire \r_lsfr_reg[2] ;
   wire [7:0]rd_addr;
@@ -592,14 +889,29 @@ module top_level_Intellight_Accelerat_0_0_AGENT
   wire \rd_addr[9]_INST_0_i_5_n_0 ;
   wire \rd_addr[9]_INST_0_i_7_n_0 ;
   wire \rd_addr[9]_INST_0_i_9_n_0 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire rst;
   wire \slv_reg3_reg[4] ;
+  wire \slv_reg3_reg[5] ;
+  wire \slv_reg3_reg[6] ;
   wire \slv_reg4_reg[4] ;
+<<<<<<< HEAD
+  wire \slv_reg4_reg[5] ;
+  wire \slv_reg4_reg[6] ;
+  wire \slv_reg5_reg[4] ;
+  wire \slv_reg5_reg[5] ;
+  wire \slv_reg5_reg[6] ;
+  wire \slv_reg6_reg[4] ;
+  wire \slv_reg7_reg[14] ;
+  wire \slv_reg7_reg[1] ;
+  wire \slv_reg7_reg[4] ;
+=======
   wire \slv_reg5_reg[0] ;
   wire \slv_reg6_reg[4] ;
   wire \slv_reg7_reg[12] ;
   wire \slv_reg7_reg[13] ;
   wire \slv_reg7_reg[6] ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \slv_reg7_reg[7] ;
   wire temp01_carry__0_i_1_n_0;
   wire temp01_carry__0_i_2_n_0;
@@ -648,10 +960,17 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     A_dur_gred1_carry__0_i_2
        (.I0(\genblk1[0].Q_reg_reg[0][0]_6 [14]),
         .I1(Q_max__0[14]),
+<<<<<<< HEAD
+        .I2(D[13]),
+        .I3(Q_max__0[13]),
+        .I4(Q_max__0[12]),
+        .I5(D[12]),
+=======
         .I2(\genblk1[0].Q_reg_reg[0][0]_6 [12]),
         .I3(Q_max__0[12]),
         .I4(Q_max__0[13]),
         .I5(\genblk1[0].Q_reg_reg[0][0]_6 [13]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(A_dur_gred1_carry__0_i_2_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
@@ -678,20 +997,34 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     A_dur_gred1_carry_i_3
        (.I0(\genblk1[0].Q_reg_reg[0][0]_6 [5]),
         .I1(Q_max__0[5]),
+<<<<<<< HEAD
+        .I2(D[4]),
+        .I3(Q_max__0[4]),
+        .I4(Q_max__0[3]),
+        .I5(D[3]),
+=======
         .I2(\genblk1[0].Q_reg_reg[0][0]_6 [4]),
         .I3(Q_max__0[4]),
         .I4(Q_max__0[3]),
         .I5(\genblk1[0].Q_reg_reg[0][0]_6 [3]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(A_dur_gred1_carry_i_3_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     A_dur_gred1_carry_i_4
        (.I0(\genblk1[0].Q_reg_reg[0][0]_6 [2]),
         .I1(Q_max__0[2]),
+<<<<<<< HEAD
+        .I2(D[0]),
+        .I3(Q_max__0[0]),
+        .I4(Q_max__0[1]),
+        .I5(D[1]),
+=======
         .I2(\genblk1[0].Q_reg_reg[0][0]_6 [1]),
         .I3(Q_max__0[1]),
         .I4(Q_max__0[0]),
         .I5(\genblk1[0].Q_reg_reg[0][0]_6 [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(A_dur_gred1_carry_i_4_n_0));
   CARRY4 A_dur_gred2_carry
        (.CI(1'b0),
@@ -718,20 +1051,34 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     A_dur_gred2_carry__0_i_2
        (.I0(\genblk1[1].Q_reg_reg[1][0]_5 [14]),
         .I1(Q_max__0[14]),
+<<<<<<< HEAD
+        .I2(D[28]),
+        .I3(Q_max__0[12]),
+        .I4(Q_max__0[13]),
+        .I5(D[29]),
+=======
         .I2(\genblk1[1].Q_reg_reg[1][0]_5 [12]),
         .I3(Q_max__0[12]),
         .I4(Q_max__0[13]),
         .I5(\genblk1[1].Q_reg_reg[1][0]_5 [13]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(A_dur_gred2_carry__0_i_2_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     A_dur_gred2_carry_i_1
        (.I0(\genblk1[1].Q_reg_reg[1][0]_5 [11]),
         .I1(Q_max__0[11]),
+<<<<<<< HEAD
+        .I2(D[26]),
+        .I3(Q_max__0[10]),
+        .I4(Q_max__0[9]),
+        .I5(D[25]),
+=======
         .I2(\genblk1[1].Q_reg_reg[1][0]_5 [9]),
         .I3(Q_max__0[9]),
         .I4(Q_max__0[10]),
         .I5(\genblk1[1].Q_reg_reg[1][0]_5 [10]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(A_dur_gred2_carry_i_1_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
@@ -748,20 +1095,34 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     A_dur_gred2_carry_i_3
        (.I0(\genblk1[1].Q_reg_reg[1][0]_5 [5]),
         .I1(Q_max__0[5]),
+<<<<<<< HEAD
+        .I2(D[20]),
+        .I3(Q_max__0[4]),
+        .I4(Q_max__0[3]),
+        .I5(D[19]),
+=======
         .I2(\genblk1[1].Q_reg_reg[1][0]_5 [4]),
         .I3(Q_max__0[4]),
         .I4(Q_max__0[3]),
         .I5(\genblk1[1].Q_reg_reg[1][0]_5 [3]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(A_dur_gred2_carry_i_3_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     A_dur_gred2_carry_i_4
        (.I0(\genblk1[1].Q_reg_reg[1][0]_5 [2]),
         .I1(Q_max__0[2]),
+<<<<<<< HEAD
+        .I2(D[17]),
+        .I3(Q_max__0[1]),
+        .I4(Q_max__0[0]),
+        .I5(D[16]),
+=======
         .I2(\genblk1[1].Q_reg_reg[1][0]_5 [0]),
         .I3(Q_max__0[0]),
         .I4(Q_max__0[1]),
         .I5(\genblk1[1].Q_reg_reg[1][0]_5 [1]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(A_dur_gred2_carry_i_4_n_0));
   CARRY4 \A_dur_gred2_inferred__0/i__carry 
        (.CI(1'b0),
@@ -847,6 +1208,20 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I4(Q_max__0[0]),
         .I5(\genblk1[2].Q_reg_reg[2][0]_4 [0]),
         .O(A_dur_gred3_carry_i_4_n_0));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  LUT1 #(
+    .INIT(2'h1)) 
+    \A_road[0]_i_1 
+       (.I0(\A_road_reg[1]_0 [0]),
+        .O(D_sel[0]));
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \A_road[1]_i_1 
+       (.I0(\A_road_reg[1]_0 [1]),
+        .I1(\A_road_reg[1]_0 [0]),
+=======
   (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT1 #(
     .INIT(2'h1)) 
@@ -859,22 +1234,100 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     \A_road[1]_i_1 
        (.I0(AGENT_0_A),
         .I1(\r_lsfr_reg[1] [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_sel[1]));
   FDRE \A_road_reg[0] 
        (.C(clk),
         .CE(1'b1),
         .D(D_sel[0]),
+<<<<<<< HEAD
+        .Q(\A_road_reg[1]_0 [0]),
+=======
         .Q(\r_lsfr_reg[1] [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \A_road_reg[1] 
        (.C(clk),
         .CE(1'b1),
         .D(D_sel[1]),
+<<<<<<< HEAD
+        .Q(\A_road_reg[1]_0 [1]),
+=======
         .Q(AGENT_0_A),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   LUT6 #(
-    .INIT(64'h55000F3355FF0F33)) 
+    .INIT(64'h3300550F33FF550F)) 
     \L_curr[0][0]_i_2 
+<<<<<<< HEAD
+       (.I0(\rd_addr[4]_INST_0_i_3 [4]),
+        .I1(\rd_addr[4]_INST_0_i_3 [12]),
+        .I2(\rd_addr[4]_INST_0_i_3 [0]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\rd_addr[4]_INST_0_i_3 [8]),
+        .O(\slv_reg7_reg[4] ));
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \L_curr[0][0]_i_3 
+       (.I0(\L_curr_reg[0][3]_3 [4]),
+        .I1(\L_curr_reg[0][3]_3 [12]),
+        .I2(\L_curr_reg[0][3]_3 [0]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[0][3]_3 [8]),
+        .O(\slv_reg3_reg[4] ));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \L_curr[0][1]_i_2 
+       (.I0(\L_curr_reg[0][3]_3 [5]),
+        .I1(\L_curr_reg[0][3]_3 [13]),
+        .I2(\L_curr_reg[0][3]_3 [1]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[0][3]_3 [9]),
+        .O(\slv_reg3_reg[5] ));
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \L_curr[1][0]_i_2 
+       (.I0(\L_curr_reg[1][3]_2 [4]),
+        .I1(\L_curr_reg[1][3]_2 [12]),
+        .I2(\L_curr_reg[1][3]_2 [0]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[1][3]_2 [8]),
+        .O(\slv_reg4_reg[4] ));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \L_curr[1][1]_i_2 
+       (.I0(\L_curr_reg[1][3]_2 [5]),
+        .I1(\L_curr_reg[1][3]_2 [13]),
+        .I2(\L_curr_reg[1][3]_2 [1]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[1][3]_2 [9]),
+        .O(\slv_reg4_reg[5] ));
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \L_curr[2][0]_i_2 
+       (.I0(\L_curr_reg[2][3]_2 [4]),
+        .I1(\L_curr_reg[2][3]_2 [12]),
+        .I2(\L_curr_reg[2][3]_2 [0]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[2][3]_2 [8]),
+        .O(\slv_reg5_reg[4] ));
+  LUT6 #(
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
+    \L_curr[2][1]_i_2 
+       (.I0(\L_curr_reg[2][3]_2 [5]),
+        .I1(\L_curr_reg[2][3]_2 [13]),
+        .I2(\L_curr_reg[2][3]_2 [1]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[2][3]_2 [9]),
+        .O(\slv_reg5_reg[5] ));
+=======
        (.I0(\rd_addr[3]_INST_0_i_3 [12]),
         .I1(\rd_addr[3]_INST_0_i_3 [0]),
         .I2(\rd_addr[3]_INST_0_i_3 [4]),
@@ -952,18 +1405,34 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I4(AGENT_0_A),
         .I5(\L_curr_reg[2][3]_2 [9]),
         .O(\L_curr[2][1]_i_4_n_0 ));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'h3300550F33FF550F)) 
     \L_curr[3][0]_i_2 
        (.I0(\L_curr_reg[3][3]_1 [4]),
         .I1(\L_curr_reg[3][3]_1 [12]),
         .I2(\L_curr_reg[3][3]_1 [0]),
+<<<<<<< HEAD
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+=======
         .I3(\r_lsfr_reg[1] [0]),
         .I4(AGENT_0_A),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I5(\L_curr_reg[3][3]_1 [8]),
         .O(\slv_reg6_reg[4] ));
   LUT6 #(
     .INIT(64'hCCFFAAF0CC00AAF0)) 
+<<<<<<< HEAD
+    \L_curr[3][1]_i_2 
+       (.I0(\L_curr_reg[3][3]_1 [5]),
+        .I1(\L_curr_reg[3][3]_1 [13]),
+        .I2(\L_curr_reg[3][3]_1 [1]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[3][3]_1 [9]),
+        .O(\L_curr[3][1]_i_2_n_0 ));
+=======
     \L_curr[3][1]_i_4 
        (.I0(\L_curr_reg[3][3]_1 [5]),
         .I1(\L_curr_reg[3][3]_1 [13]),
@@ -972,13 +1441,30 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I4(AGENT_0_A),
         .I5(\L_curr_reg[3][3]_1 [9]),
         .O(\L_curr[3][1]_i_4_n_0 ));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   top_level_Intellight_Accelerat_0_0_QA QA_0
-       (.AGENT_0_Q_new(AGENT_0_Q_new),
-        .D(Q_act),
+       (.D(Q_act),
         .D_road0(D_road0[31:24]),
         .\D_road0[24] (QA_0_n_23),
         .\D_road0[27] (QA_0_n_20),
         .D_road1(D_road1[31:24]),
+<<<<<<< HEAD
+        .\D_road1[24] (QA_0_n_23),
+        .\D_road1[25] (QA_0_n_22),
+        .\D_road1[31] (QA_0_n_16),
+        .D_road2(D_road2[31:24]),
+        .D_road3(D_road3[31:24]),
+        .\D_road3[26] (QA_0_n_21),
+        .\D_road3[27] (QA_0_n_20),
+        .\D_road3[28] (QA_0_n_19),
+        .\D_road3[29] (QA_0_n_18),
+        .O(O),
+        .Q(\A_road_reg[1]_0 ),
+        .\Q_act_reg_reg[2][11]_0 (\Q_act_reg_reg[2][11] ),
+        .\Q_act_reg_reg[2][14]_0 (\Q_act_reg_reg[2][14] ),
+        .\Q_act_reg_reg[2][7]_0 (\Q_act_reg_reg[2][7] ),
+        .\R_reg0_reg[15]_0 (\R_reg0_reg[15] ),
+=======
         .\D_road1[25] (QA_0_n_22),
         .\D_road1[26] (QA_0_n_21),
         .\D_road1[29] (QA_0_n_18),
@@ -989,6 +1475,7 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .\D_road3[28] (QA_0_n_19),
         .Q({AGENT_0_A,\r_lsfr_reg[1] [0]}),
         .\R_reg0_reg[14]_0 (\R_reg0_reg[14] ),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .clk(clk),
         .rst(rst),
         .x__0_carry__2_0(x__0_carry__2[6:1]),
@@ -997,30 +1484,57 @@ module top_level_Intellight_Accelerat_0_0_AGENT
        (.D(Q_max_temp),
         .DI({temp01_carry__0_i_1_n_0,temp01_carry__0_i_2_n_0,temp01_carry__0_i_3_n_0,temp01_carry__0_i_4_n_0}),
         .D_road0({D_road0[63:32],D_road0[23:0]}),
+<<<<<<< HEAD
+        .D_road0_16_sp_1(QA_max0_n_39),
+        .D_road0_1_sp_1(QA_max0_n_36),
+        .D_road0_34_sp_1(QA_max0_n_67),
+        .D_road0_36_sp_1(QA_max0_n_63),
+        .D_road0_42_sp_1(QA_max0_n_51),
+        .D_road0_43_sp_1(QA_max0_n_48),
+        .D_road0_4_sp_1(QA_max0_n_29),
+        .D_road0_7_sp_1(QA_max0_n_24),
+=======
         .D_road0_1_sp_1(QA_max0_n_36),
         .D_road0_2_sp_1(QA_max0_n_33),
         .D_road0_54_sp_1(QA_max0_n_58),
         .D_road0_55_sp_1(QA_max0_n_57),
         .D_road0_8_sp_1(QA_max0_n_23),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .D_road1({D_road1[63:32],D_road1[23:0]}),
         .\D_road1[56] (QA_max0_n_54),
         .\D_road1[57] (QA_max0_n_53),
         .\D_road1[58] (QA_max0_n_50),
         .\D_road1[61] (QA_max0_n_45),
+<<<<<<< HEAD
+        .\D_road1[62] (QA_max0_n_42),
+=======
         .\D_road1[63] (QA_max0_n_41),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .D_road1_0_sp_1(QA_max0_n_37),
         .D_road1_10_sp_1(QA_max0_n_21),
         .D_road1_11_sp_1(QA_max0_n_20),
         .D_road1_12_sp_1(QA_max0_n_19),
         .D_road1_14_sp_1(QA_max0_n_1),
+<<<<<<< HEAD
+        .D_road1_18_sp_1(QA_max0_n_35),
+        .D_road1_20_sp_1(QA_max0_n_31),
+=======
         .D_road1_15_sp_1(QA_max0_n_0),
         .D_road1_16_sp_1(QA_max0_n_39),
         .D_road1_19_sp_1(QA_max0_n_34),
         .D_road1_21_sp_1(QA_max0_n_30),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .D_road1_22_sp_1(QA_max0_n_27),
         .D_road1_32_sp_1(QA_max0_n_71),
         .D_road1_33_sp_1(QA_max0_n_68),
         .D_road1_35_sp_1(QA_max0_n_64),
+<<<<<<< HEAD
+        .D_road1_37_sp_1(QA_max0_n_60),
+        .D_road1_39_sp_1(QA_max0_n_56),
+        .D_road1_3_sp_1(QA_max0_n_32),
+        .D_road1_40_sp_1(QA_max0_n_55),
+        .D_road1_44_sp_1(QA_max0_n_47),
+=======
         .D_road1_36_sp_1(QA_max0_n_63),
         .D_road1_38_sp_1(QA_max0_n_59),
         .D_road1_3_sp_1(QA_max0_n_32),
@@ -1028,6 +1542,7 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .D_road1_43_sp_1(QA_max0_n_48),
         .D_road1_44_sp_1(QA_max0_n_47),
         .D_road1_45_sp_1(QA_max0_n_44),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .D_road1_46_sp_1(QA_max0_n_43),
         .D_road1_47_sp_1(QA_max0_n_40),
         .D_road1_4_sp_1(QA_max0_n_29),
@@ -1035,7 +1550,11 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .D_road1_52_sp_1(QA_max0_n_62),
         .D_road1_53_sp_1(QA_max0_n_61),
         .D_road1_5_sp_1(QA_max0_n_28),
+<<<<<<< HEAD
+        .D_road1_8_sp_1(QA_max0_n_23),
+=======
         .D_road1_6_sp_1(QA_max0_n_25),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .D_road1_9_sp_1(QA_max0_n_22),
         .D_road2({D_road2[63:32],D_road2[23:0]}),
         .D_road3({D_road3[63:32],D_road3[23:0]}),
@@ -1043,10 +1562,22 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .\D_road3[60] (QA_max0_n_46),
         .\D_road3[62] (QA_max0_n_42),
         .D_road3_13_sp_1(QA_max0_n_18),
+        .D_road3_15_sp_1(QA_max0_n_0),
         .D_road3_17_sp_1(QA_max0_n_38),
         .D_road3_18_sp_1(QA_max0_n_35),
         .D_road3_20_sp_1(QA_max0_n_31),
         .D_road3_23_sp_1(QA_max0_n_26),
+<<<<<<< HEAD
+        .D_road3_2_sp_1(QA_max0_n_33),
+        .D_road3_38_sp_1(QA_max0_n_59),
+        .D_road3_41_sp_1(QA_max0_n_52),
+        .D_road3_45_sp_1(QA_max0_n_44),
+        .D_road3_49_sp_1(QA_max0_n_69),
+        .D_road3_54_sp_1(QA_max0_n_58),
+        .D_road3_55_sp_1(QA_max0_n_57),
+        .D_road3_6_sp_1(QA_max0_n_25),
+        .Q(\A_road_reg[1]_0 ),
+=======
         .D_road3_34_sp_1(QA_max0_n_67),
         .D_road3_37_sp_1(QA_max0_n_60),
         .D_road3_39_sp_1(QA_max0_n_56),
@@ -1057,6 +1588,7 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .D_road3_50_sp_1(QA_max0_n_66),
         .D_road3_7_sp_1(QA_max0_n_24),
         .Q({AGENT_0_A,\r_lsfr_reg[1] [0]}),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .\Q_max_reg[10] (QA_0_n_21),
         .\Q_max_reg[11] (QA_0_n_20),
         .\Q_max_reg[12] (QA_0_n_19),
@@ -1162,6 +1694,18 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .D(Q_max_temp[9]),
         .Q(Q_max__0[9]),
         .R(rst));
+<<<<<<< HEAD
+  LUT6 #(
+    .INIT(64'h6966696669669969)) 
+    R0__2_carry__0_i_15
+       (.I0(\slv_reg7_reg[14] ),
+        .I1(Q[2]),
+        .I2(Q[1]),
+        .I3(\slv_reg7_reg[1] ),
+        .I4(\slv_reg7_reg[4] ),
+        .I5(Q[0]),
+        .O(R0__2_carry__0_i_15_n_0));
+=======
   (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'h96)) 
@@ -1294,12 +1838,18 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I1(\rd_addr[9]_INST_0_i_10_n_0 ),
         .I2(Q[2]),
         .O(\R[2]_i_18_n_0 ));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[0].Q_reg[0][0][0]_i_1 
        (.I0(D_road2[0]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(D_road0[0]),
         .I4(D_road3[0]),
         .I5(D_road1[0]),
@@ -1308,8 +1858,13 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[0].Q_reg[0][0][10]_i_1 
        (.I0(D_road2[10]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(D_road0[10]),
         .I4(D_road3[10]),
         .I5(D_road1[10]),
@@ -1318,8 +1873,13 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[0].Q_reg[0][0][11]_i_1 
        (.I0(D_road2[11]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(D_road0[11]),
         .I4(D_road3[11]),
         .I5(D_road1[11]),
@@ -1328,13 +1888,27 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[0].Q_reg[0][0][12]_i_1 
        (.I0(D_road2[12]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(D_road0[12]),
         .I4(D_road3[12]),
         .I5(D_road1[12]),
         .O(\genblk1[0].Q_reg[0][0][12]_i_1_n_0 ));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'hEFEC2F2CE3E02320)) 
+    \genblk1[0].Q_reg[0][0][13]_i_1 
+       (.I0(D_road2[13]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[13]),
+        .I4(D_road0[13]),
+=======
     .INIT(64'hFE3ECE0EF232C202)) 
     \genblk1[0].Q_reg[0][0][13]_i_1 
        (.I0(D_road1[13]),
@@ -1342,39 +1916,69 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[13]),
         .I4(D_road2[13]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I5(D_road3[13]),
         .O(\genblk1[0].Q_reg[0][0][13]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[0].Q_reg[0][0][14]_i_1 
        (.I0(D_road2[14]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(D_road0[14]),
         .I4(D_road3[14]),
         .I5(D_road1[14]),
         .O(\genblk1[0].Q_reg[0][0][14]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hEF2FE323EC2CE020)) 
+    .INIT(64'hBFBC8F8CB3B08380)) 
     \genblk1[0].Q_reg[0][0][15]_i_1 
+<<<<<<< HEAD
+       (.I0(D_road0[15]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[15]),
+        .I4(D_road2[15]),
+        .I5(D_road3[15]),
+=======
        (.I0(D_road2[15]),
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[15]),
         .I4(D_road3[15]),
         .I5(D_road1[15]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(\genblk1[0].Q_reg[0][0][15]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hEFECE3E02F2C2320)) 
     \genblk1[0].Q_reg[0][0][1]_i_1 
        (.I0(D_road2[1]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(D_road1[1]),
         .I4(D_road3[1]),
         .I5(D_road0[1]),
         .O(\genblk1[0].Q_reg[0][0][1]_i_1_n_0 ));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'hEFEC2F2CE3E02320)) 
+    \genblk1[0].Q_reg[0][0][2]_i_1 
+       (.I0(D_road2[2]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[2]),
+        .I4(D_road0[2]),
+        .I5(D_road3[2]),
+=======
     .INIT(64'hEFECE3E02F2C2320)) 
     \genblk1[0].Q_reg[0][0][2]_i_1 
        (.I0(D_road2[2]),
@@ -1383,13 +1987,19 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I3(D_road1[2]),
         .I4(D_road3[2]),
         .I5(D_road0[2]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(\genblk1[0].Q_reg[0][0][2]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[0].Q_reg[0][0][3]_i_1 
        (.I0(D_road2[3]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(D_road0[3]),
         .I4(D_road3[3]),
         .I5(D_road1[3]),
@@ -1398,18 +2008,31 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[0].Q_reg[0][0][4]_i_1 
        (.I0(D_road2[4]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[4]),
+        .I4(D_road3[4]),
+        .I5(D_road0[4]),
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[4]),
         .I4(D_road3[4]),
         .I5(D_road1[4]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(\genblk1[0].Q_reg[0][0][4]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[0].Q_reg[0][0][5]_i_1 
        (.I0(D_road2[5]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(D_road0[5]),
         .I4(D_road3[5]),
         .I5(D_road1[5]),
@@ -1417,16 +2040,43 @@ module top_level_Intellight_Accelerat_0_0_AGENT
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[0].Q_reg[0][0][6]_i_1 
+<<<<<<< HEAD
+       (.I0(D_road1[6]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[6]),
+        .I4(D_road2[6]),
+        .I5(D_road3[6]),
+=======
        (.I0(D_road2[6]),
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[6]),
         .I4(D_road3[6]),
         .I5(D_road1[6]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(\genblk1[0].Q_reg[0][0][6]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFE3ECE0EF232C202)) 
+    .INIT(64'hEFECE3E02F2C2320)) 
     \genblk1[0].Q_reg[0][0][7]_i_1 
+<<<<<<< HEAD
+       (.I0(D_road2[7]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[7]),
+        .I4(D_road3[7]),
+        .I5(D_road0[7]),
+        .O(\genblk1[0].Q_reg[0][0][7]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEF2FE323EC2CE020)) 
+    \genblk1[0].Q_reg[0][0][8]_i_1 
+       (.I0(D_road2[8]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[8]),
+        .I4(D_road3[8]),
+        .I5(D_road1[8]),
+=======
        (.I0(D_road1[7]),
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
@@ -1443,13 +2093,19 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I3(D_road1[8]),
         .I4(D_road3[8]),
         .I5(D_road0[8]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(\genblk1[0].Q_reg[0][0][8]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[0].Q_reg[0][0][9]_i_1 
        (.I0(D_road2[9]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(D_road0[9]),
         .I4(D_road3[9]),
         .I5(D_road1[9]),
@@ -1458,102 +2114,194 @@ module top_level_Intellight_Accelerat_0_0_AGENT
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][0]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[0]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][10] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][10]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[10]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [10]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][11] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][11]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[11]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [11]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][12] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][12]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[12]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [12]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][13] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][13]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[13]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [13]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][14] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][14]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[14]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][15] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][15]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[15]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [15]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][1] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][1]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[1]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [1]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][2] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][2]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[2]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [2]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][3] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][3]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[3]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [3]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][4] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][4]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[4]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [4]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][5] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][5]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[5]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [5]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][6] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][6]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[6]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [6]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][7] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][7]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[7]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [7]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][8] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][8]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[8]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [8]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[0].Q_reg_reg[0][0][9] 
        (.C(clk),
         .CE(1'b1),
         .D(\genblk1[0].Q_reg[0][0][9]_i_1_n_0 ),
+<<<<<<< HEAD
+        .Q(D[9]),
+=======
         .Q(\genblk1[0].Q_reg_reg[0][0]_6 [9]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[1].Q_reg[1][0][0]_i_1 
        (.I0(D_road2[16]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[16]),
+        .I4(D_road3[16]),
+        .I5(D_road0[16]),
+        .O(\genblk1[1].Q_reg[1][0][0]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hBFBC8F8CB3B08380)) 
+    \genblk1[1].Q_reg[1][0][10]_i_1 
+       (.I0(D_road0[26]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[26]),
+        .I4(D_road2[26]),
+        .I5(D_road3[26]),
+        .O(\genblk1[1].Q_reg[1][0][10]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFE3ECE0EF232C202)) 
+    \genblk1[1].Q_reg[1][0][11]_i_1 
+       (.I0(D_road1[27]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[27]),
+        .I4(D_road2[27]),
+        .I5(D_road3[27]),
+        .O(\genblk1[1].Q_reg[1][0][11]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[16]),
@@ -1580,19 +2328,38 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I4(D_road3[27]),
         .I5(D_road0[27]),
         .O(\Q[1]_14 [11]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hFE3ECE0EF232C202)) 
     \genblk1[1].Q_reg[1][0][12]_i_1 
        (.I0(D_road1[28]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[28]),
+        .I4(D_road2[28]),
+        .I5(D_road3[28]),
+        .O(\genblk1[1].Q_reg[1][0][12]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[28]),
         .I4(D_road2[28]),
         .I5(D_road3[28]),
         .O(\Q[1]_14 [12]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[1].Q_reg[1][0][13]_i_1 
+<<<<<<< HEAD
+       (.I0(D_road0[29]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[29]),
+        .I4(D_road2[29]),
+        .I5(D_road3[29]),
+        .O(\genblk1[1].Q_reg[1][0][13]_i_1_n_0 ));
+=======
        (.I0(D_road2[29]),
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
@@ -1600,30 +2367,97 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I4(D_road3[29]),
         .I5(D_road1[29]),
         .O(\Q[1]_14 [13]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[1].Q_reg[1][0][14]_i_1 
        (.I0(D_road2[30]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[30]),
+        .I4(D_road3[30]),
+        .I5(D_road0[30]),
+        .O(\genblk1[1].Q_reg[1][0][14]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[30]),
         .I4(D_road3[30]),
         .I5(D_road1[30]),
         .O(\Q[1]_14 [14]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[1].Q_reg[1][0][15]_i_1 
        (.I0(D_road2[31]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[31]),
+        .I4(D_road3[31]),
+        .I5(D_road1[31]),
+        .O(\genblk1[1].Q_reg[1][0][15]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[31]),
         .I4(D_road3[31]),
         .I5(D_road1[31]),
         .O(\Q[1]_14 [15]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hFE3ECE0EF232C202)) 
     \genblk1[1].Q_reg[1][0][1]_i_1 
        (.I0(D_road1[17]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[17]),
+        .I4(D_road2[17]),
+        .I5(D_road3[17]),
+        .O(\genblk1[1].Q_reg[1][0][1]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEF2FE323EC2CE020)) 
+    \genblk1[1].Q_reg[1][0][2]_i_1 
+       (.I0(D_road2[18]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[18]),
+        .I4(D_road3[18]),
+        .I5(D_road1[18]),
+        .O(\genblk1[1].Q_reg[1][0][2]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hBFBC8F8CB3B08380)) 
+    \genblk1[1].Q_reg[1][0][3]_i_1 
+       (.I0(D_road0[19]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[19]),
+        .I4(D_road2[19]),
+        .I5(D_road3[19]),
+        .O(\genblk1[1].Q_reg[1][0][3]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEF2FE323EC2CE020)) 
+    \genblk1[1].Q_reg[1][0][4]_i_1 
+       (.I0(D_road2[20]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[20]),
+        .I4(D_road3[20]),
+        .I5(D_road1[20]),
+        .O(\genblk1[1].Q_reg[1][0][4]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hBFBC8F8CB3B08380)) 
+    \genblk1[1].Q_reg[1][0][5]_i_1 
+       (.I0(D_road0[21]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[21]),
+        .I4(D_road2[21]),
+        .I5(D_road3[21]),
+        .O(\genblk1[1].Q_reg[1][0][5]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[17]),
@@ -1670,40 +2504,81 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I4(D_road3[21]),
         .I5(D_road1[21]),
         .O(\Q[1]_14 [5]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[1].Q_reg[1][0][6]_i_1 
        (.I0(D_road2[22]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[22]),
+        .I4(D_road3[22]),
+        .I5(D_road1[22]),
+        .O(\genblk1[1].Q_reg[1][0][6]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[22]),
         .I4(D_road3[22]),
         .I5(D_road1[22]),
         .O(\Q[1]_14 [6]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hBFBC8F8CB3B08380)) 
     \genblk1[1].Q_reg[1][0][7]_i_1 
        (.I0(D_road0[23]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[23]),
+        .I4(D_road2[23]),
+        .I5(D_road3[23]),
+        .O(\genblk1[1].Q_reg[1][0][7]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road1[23]),
         .I4(D_road2[23]),
         .I5(D_road3[23]),
         .O(\Q[1]_14 [7]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEFECE3E02F2C2320)) 
     \genblk1[1].Q_reg[1][0][8]_i_1 
        (.I0(D_road2[24]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[24]),
+        .I4(D_road3[24]),
+        .I5(D_road1[24]),
+        .O(\genblk1[1].Q_reg[1][0][8]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road1[24]),
         .I4(D_road3[24]),
         .I5(D_road0[24]),
         .O(\Q[1]_14 [8]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[1].Q_reg[1][0][9]_i_1 
        (.I0(D_road2[25]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[25]),
+        .I4(D_road3[25]),
+        .I5(D_road1[25]),
+        .O(\genblk1[1].Q_reg[1][0][9]_i_1_n_0 ));
+  FDRE \genblk1[1].Q_reg_reg[1][0][0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[1].Q_reg[1][0][0]_i_1_n_0 ),
+        .Q(D[16]),
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[25]),
@@ -1715,171 +2590,328 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .CE(1'b1),
         .D(\Q[1]_14 [0]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][10] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][10]_i_1_n_0 ),
+        .Q(D[26]),
+=======
         .D(\Q[1]_14 [10]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [10]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][11] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][11]_i_1_n_0 ),
+        .Q(D[27]),
+=======
         .D(\Q[1]_14 [11]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [11]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][12] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][12]_i_1_n_0 ),
+        .Q(D[28]),
+=======
         .D(\Q[1]_14 [12]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [12]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][13] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][13]_i_1_n_0 ),
+        .Q(D[29]),
+=======
         .D(\Q[1]_14 [13]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [13]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][14] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][14]_i_1_n_0 ),
+        .Q(D[30]),
+=======
         .D(\Q[1]_14 [14]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][15] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][15]_i_1_n_0 ),
+        .Q(D[31]),
+=======
         .D(\Q[1]_14 [15]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [15]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][1] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][1]_i_1_n_0 ),
+        .Q(D[17]),
+=======
         .D(\Q[1]_14 [1]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [1]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][2] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][2]_i_1_n_0 ),
+        .Q(D[18]),
+=======
         .D(\Q[1]_14 [2]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [2]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][3] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][3]_i_1_n_0 ),
+        .Q(D[19]),
+=======
         .D(\Q[1]_14 [3]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [3]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][4] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][4]_i_1_n_0 ),
+        .Q(D[20]),
+=======
         .D(\Q[1]_14 [4]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [4]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][5] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][5]_i_1_n_0 ),
+        .Q(D[21]),
+=======
         .D(\Q[1]_14 [5]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [5]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][6] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][6]_i_1_n_0 ),
+        .Q(D[22]),
+=======
         .D(\Q[1]_14 [6]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [6]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][7] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][7]_i_1_n_0 ),
+        .Q(D[23]),
+=======
         .D(\Q[1]_14 [7]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [7]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][8] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][8]_i_1_n_0 ),
+        .Q(D[24]),
+=======
         .D(\Q[1]_14 [8]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [8]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[1].Q_reg_reg[1][0][9] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[1].Q_reg[1][0][9]_i_1_n_0 ),
+        .Q(D[25]),
+=======
         .D(\Q[1]_14 [9]),
         .Q(\genblk1[1].Q_reg_reg[1][0]_5 [9]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[2].Q_reg[2][0][0]_i_1 
        (.I0(D_road2[32]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[32]),
+        .I4(D_road3[32]),
+        .I5(D_road1[32]),
+        .O(\genblk1[2].Q_reg[2][0][0]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[32]),
         .I4(D_road3[32]),
         .I5(D_road1[32]),
         .O(\Q[2]_15 [0]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEFEC2F2CE3E02320)) 
     \genblk1[2].Q_reg[2][0][10]_i_1 
        (.I0(D_road2[42]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[42]),
+        .I4(D_road3[42]),
+        .I5(D_road0[42]),
+        .O(\genblk1[2].Q_reg[2][0][10]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road1[42]),
         .I4(D_road0[42]),
         .I5(D_road3[42]),
         .O(\Q[2]_15 [10]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
-    .INIT(64'hEF2FE323EC2CE020)) 
+    .INIT(64'hEFECE3E02F2C2320)) 
     \genblk1[2].Q_reg[2][0][11]_i_1 
        (.I0(D_road2[43]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[43]),
+        .I4(D_road3[43]),
+        .I5(D_road0[43]),
+        .O(\genblk1[2].Q_reg[2][0][11]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[43]),
         .I4(D_road3[43]),
         .I5(D_road1[43]),
         .O(\Q[2]_15 [11]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[2].Q_reg[2][0][12]_i_1 
        (.I0(D_road2[44]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[44]),
+        .I4(D_road3[44]),
+        .I5(D_road1[44]),
+        .O(\genblk1[2].Q_reg[2][0][12]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[44]),
         .I4(D_road3[44]),
         .I5(D_road1[44]),
         .O(\Q[2]_15 [12]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[2].Q_reg[2][0][13]_i_1 
        (.I0(D_road2[45]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[45]),
+        .I4(D_road0[45]),
+        .I5(D_road3[45]),
+        .O(\genblk1[2].Q_reg[2][0][13]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[45]),
         .I4(D_road3[45]),
         .I5(D_road1[45]),
         .O(\Q[2]_15 [13]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[2].Q_reg[2][0][14]_i_1 
        (.I0(D_road2[46]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[46]),
+        .I4(D_road3[46]),
+        .I5(D_road1[46]),
+        .O(\genblk1[2].Q_reg[2][0][14]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[46]),
         .I4(D_road3[46]),
         .I5(D_road1[46]),
         .O(\Q[2]_15 [14]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[2].Q_reg[2][0][15]_i_1 
        (.I0(D_road2[47]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[47]),
+        .I4(D_road3[47]),
+        .I5(D_road1[47]),
+        .O(\genblk1[2].Q_reg[2][0][15]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[47]),
         .I4(D_road3[47]),
         .I5(D_road1[47]),
         .O(\Q[2]_15 [15]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[2].Q_reg[2][0][1]_i_1 
        (.I0(D_road2[33]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[33]),
+        .I4(D_road3[33]),
+        .I5(D_road1[33]),
+        .O(\genblk1[2].Q_reg[2][0][1]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEFECE3E02F2C2320)) 
+    \genblk1[2].Q_reg[2][0][2]_i_1 
+       (.I0(D_road2[34]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[34]),
+        .I4(D_road3[34]),
+        .I5(D_road0[34]),
+        .O(\genblk1[2].Q_reg[2][0][2]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[33]),
@@ -1896,16 +2928,36 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I4(D_road2[34]),
         .I5(D_road3[34]),
         .O(\Q[2]_15 [2]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[2].Q_reg[2][0][3]_i_1 
        (.I0(D_road2[35]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[35]),
+        .I4(D_road3[35]),
+        .I5(D_road1[35]),
+        .O(\genblk1[2].Q_reg[2][0][3]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEFECE3E02F2C2320)) 
+    \genblk1[2].Q_reg[2][0][4]_i_1 
+       (.I0(D_road2[36]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[36]),
+        .I4(D_road3[36]),
+        .I5(D_road0[36]),
+        .O(\genblk1[2].Q_reg[2][0][4]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[35]),
         .I4(D_road3[35]),
         .I5(D_road1[35]),
         .O(\Q[2]_15 [3]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[2].Q_reg[2][0][4]_i_1 
@@ -1920,15 +2972,33 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     .INIT(64'hEFEC2F2CE3E02320)) 
     \genblk1[2].Q_reg[2][0][5]_i_1 
        (.I0(D_road2[37]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[37]),
+        .I4(D_road3[37]),
+        .I5(D_road1[37]),
+        .O(\genblk1[2].Q_reg[2][0][5]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road1[37]),
         .I4(D_road0[37]),
         .I5(D_road3[37]),
         .O(\Q[2]_15 [5]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[2].Q_reg[2][0][6]_i_1 
+<<<<<<< HEAD
+       (.I0(D_road1[38]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[38]),
+        .I4(D_road2[38]),
+        .I5(D_road3[38]),
+        .O(\genblk1[2].Q_reg[2][0][6]_i_1_n_0 ));
+=======
        (.I0(D_road2[38]),
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
@@ -1936,9 +3006,44 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I4(D_road3[38]),
         .I5(D_road1[38]),
         .O(\Q[2]_15 [6]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
-    .INIT(64'hFE3ECE0EF232C202)) 
+    .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[2].Q_reg[2][0][7]_i_1 
+<<<<<<< HEAD
+       (.I0(D_road2[39]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[39]),
+        .I4(D_road3[39]),
+        .I5(D_road1[39]),
+        .O(\genblk1[2].Q_reg[2][0][7]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEF2FE323EC2CE020)) 
+    \genblk1[2].Q_reg[2][0][8]_i_1 
+       (.I0(D_road2[40]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[40]),
+        .I4(D_road3[40]),
+        .I5(D_road1[40]),
+        .O(\genblk1[2].Q_reg[2][0][8]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hBFBC8F8CB3B08380)) 
+    \genblk1[2].Q_reg[2][0][9]_i_1 
+       (.I0(D_road0[41]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[41]),
+        .I4(D_road2[41]),
+        .I5(D_road3[41]),
+        .O(\genblk1[2].Q_reg[2][0][9]_i_1_n_0 ));
+  FDRE \genblk1[2].Q_reg_reg[2][0][0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[2].Q_reg[2][0][0]_i_1_n_0 ),
+        .Q(D[32]),
+=======
        (.I0(D_road1[39]),
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
@@ -1971,100 +3076,185 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .CE(1'b1),
         .D(\Q[2]_15 [0]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][10] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][10]_i_1_n_0 ),
+        .Q(D[42]),
+=======
         .D(\Q[2]_15 [10]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [10]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][11] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][11]_i_1_n_0 ),
+        .Q(D[43]),
+=======
         .D(\Q[2]_15 [11]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [11]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][12] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][12]_i_1_n_0 ),
+        .Q(D[44]),
+=======
         .D(\Q[2]_15 [12]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [12]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][13] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][13]_i_1_n_0 ),
+        .Q(D[45]),
+=======
         .D(\Q[2]_15 [13]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [13]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][14] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][14]_i_1_n_0 ),
+        .Q(D[46]),
+=======
         .D(\Q[2]_15 [14]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][15] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][15]_i_1_n_0 ),
+        .Q(D[47]),
+=======
         .D(\Q[2]_15 [15]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [15]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][1] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][1]_i_1_n_0 ),
+        .Q(D[33]),
+=======
         .D(\Q[2]_15 [1]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [1]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][2] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][2]_i_1_n_0 ),
+        .Q(D[34]),
+=======
         .D(\Q[2]_15 [2]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [2]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][3] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][3]_i_1_n_0 ),
+        .Q(D[35]),
+=======
         .D(\Q[2]_15 [3]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [3]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][4] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][4]_i_1_n_0 ),
+        .Q(D[36]),
+=======
         .D(\Q[2]_15 [4]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [4]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][5] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][5]_i_1_n_0 ),
+        .Q(D[37]),
+=======
         .D(\Q[2]_15 [5]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [5]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][6] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][6]_i_1_n_0 ),
+        .Q(D[38]),
+=======
         .D(\Q[2]_15 [6]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [6]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][7] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][7]_i_1_n_0 ),
+        .Q(D[39]),
+=======
         .D(\Q[2]_15 [7]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [7]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][8] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][8]_i_1_n_0 ),
+        .Q(D[40]),
+=======
         .D(\Q[2]_15 [8]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [8]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[2].Q_reg_reg[2][0][9] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[2].Q_reg[2][0][9]_i_1_n_0 ),
+        .Q(D[41]),
+=======
         .D(\Q[2]_15 [9]),
         .Q(\genblk1[2].Q_reg_reg[2][0]_4 [9]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   LUT6 #(
     .INIT(64'hFE3ECE0EF232C202)) 
     \genblk1[3].Q_reg[3][0][0]_i_1 
+<<<<<<< HEAD
+       (.I0(D_road2[48]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[48]),
+        .I4(D_road3[48]),
+        .I5(D_road1[48]),
+        .O(\genblk1[3].Q_reg[3][0][0]_i_1_n_0 ));
+=======
        (.I0(D_road1[48]),
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
@@ -2072,10 +3262,29 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I4(D_road2[48]),
         .I5(D_road3[48]),
         .O(\Q[3]_16 [0]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[3].Q_reg[3][0][10]_i_1 
        (.I0(D_road2[58]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[58]),
+        .I4(D_road3[58]),
+        .I5(D_road1[58]),
+        .O(\genblk1[3].Q_reg[3][0][10]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEF2FEC2CE323E020)) 
+    \genblk1[3].Q_reg[3][0][11]_i_1 
+       (.I0(D_road2[59]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[59]),
+        .I4(D_road1[59]),
+        .I5(D_road3[59]),
+        .O(\genblk1[3].Q_reg[3][0][11]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[58]),
@@ -2092,16 +3301,36 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I4(D_road2[59]),
         .I5(D_road3[59]),
         .O(\Q[3]_16 [11]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hFE3ECE0EF232C202)) 
     \genblk1[3].Q_reg[3][0][12]_i_1 
        (.I0(D_road1[60]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[60]),
+        .I4(D_road2[60]),
+        .I5(D_road3[60]),
+        .O(\genblk1[3].Q_reg[3][0][12]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEF2FE323EC2CE020)) 
+    \genblk1[3].Q_reg[3][0][13]_i_1 
+       (.I0(D_road2[61]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[61]),
+        .I4(D_road3[61]),
+        .I5(D_road1[61]),
+        .O(\genblk1[3].Q_reg[3][0][13]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[60]),
         .I4(D_road2[60]),
         .I5(D_road3[60]),
         .O(\Q[3]_16 [12]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[3].Q_reg[3][0][13]_i_1 
@@ -2116,15 +3345,33 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     .INIT(64'hEFEC2F2CE3E02320)) 
     \genblk1[3].Q_reg[3][0][14]_i_1 
        (.I0(D_road2[62]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[62]),
+        .I4(D_road3[62]),
+        .I5(D_road1[62]),
+        .O(\genblk1[3].Q_reg[3][0][14]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road1[62]),
         .I4(D_road0[62]),
         .I5(D_road3[62]),
         .O(\Q[3]_16 [14]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[3].Q_reg[3][0][15]_i_1 
+<<<<<<< HEAD
+       (.I0(D_road0[63]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[63]),
+        .I4(D_road2[63]),
+        .I5(D_road3[63]),
+        .O(\genblk1[3].Q_reg[3][0][15]_i_1_n_0 ));
+=======
        (.I0(D_road2[63]),
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
@@ -2132,19 +3379,38 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I4(D_road3[63]),
         .I5(D_road1[63]),
         .O(\Q[3]_16 [15]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hFE3ECE0EF232C202)) 
     \genblk1[3].Q_reg[3][0][1]_i_1 
        (.I0(D_road1[49]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[49]),
+        .I4(D_road2[49]),
+        .I5(D_road3[49]),
+        .O(\genblk1[3].Q_reg[3][0][1]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[49]),
         .I4(D_road2[49]),
         .I5(D_road3[49]),
         .O(\Q[3]_16 [1]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hFE3ECE0EF232C202)) 
     \genblk1[3].Q_reg[3][0][2]_i_1 
+<<<<<<< HEAD
+       (.I0(D_road2[50]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[50]),
+        .I4(D_road3[50]),
+        .I5(D_road1[50]),
+        .O(\genblk1[3].Q_reg[3][0][2]_i_1_n_0 ));
+=======
        (.I0(D_road1[50]),
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
@@ -2152,30 +3418,67 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I4(D_road2[50]),
         .I5(D_road3[50]),
         .O(\Q[3]_16 [2]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[3].Q_reg[3][0][3]_i_1 
        (.I0(D_road2[51]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[51]),
+        .I4(D_road3[51]),
+        .I5(D_road1[51]),
+        .O(\genblk1[3].Q_reg[3][0][3]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[51]),
         .I4(D_road3[51]),
         .I5(D_road1[51]),
         .O(\Q[3]_16 [3]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[3].Q_reg[3][0][4]_i_1 
        (.I0(D_road2[52]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[52]),
+        .I4(D_road3[52]),
+        .I5(D_road1[52]),
+        .O(\genblk1[3].Q_reg[3][0][4]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[52]),
         .I4(D_road3[52]),
         .I5(D_road1[52]),
         .O(\Q[3]_16 [4]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[3].Q_reg[3][0][5]_i_1 
        (.I0(D_road2[53]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[53]),
+        .I4(D_road3[53]),
+        .I5(D_road1[53]),
+        .O(\genblk1[3].Q_reg[3][0][5]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hBFBC8F8CB3B08380)) 
+    \genblk1[3].Q_reg[3][0][6]_i_1 
+       (.I0(D_road0[54]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[54]),
+        .I4(D_road2[54]),
+        .I5(D_road3[54]),
+        .O(\genblk1[3].Q_reg[3][0][6]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[53]),
@@ -2192,9 +3495,19 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I4(D_road3[54]),
         .I5(D_road0[54]),
         .O(\Q[3]_16 [6]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEFECE3E02F2C2320)) 
     \genblk1[3].Q_reg[3][0][7]_i_1 
+<<<<<<< HEAD
+       (.I0(D_road0[55]),
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road1[55]),
+        .I4(D_road2[55]),
+        .I5(D_road3[55]),
+        .O(\genblk1[3].Q_reg[3][0][7]_i_1_n_0 ));
+=======
        (.I0(D_road2[55]),
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
@@ -2202,20 +3515,43 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I4(D_road3[55]),
         .I5(D_road0[55]),
         .O(\Q[3]_16 [7]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[3].Q_reg[3][0][8]_i_1 
        (.I0(D_road2[56]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[56]),
+        .I4(D_road3[56]),
+        .I5(D_road1[56]),
+        .O(\genblk1[3].Q_reg[3][0][8]_i_1_n_0 ));
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[56]),
         .I4(D_road3[56]),
         .I5(D_road1[56]),
         .O(\Q[3]_16 [8]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'hEF2FE323EC2CE020)) 
     \genblk1[3].Q_reg[3][0][9]_i_1 
        (.I0(D_road2[57]),
+<<<<<<< HEAD
+        .I1(\A_road_reg[1]_0 [1]),
+        .I2(\A_road_reg[1]_0 [0]),
+        .I3(D_road0[57]),
+        .I4(D_road3[57]),
+        .I5(D_road1[57]),
+        .O(\genblk1[3].Q_reg[3][0][9]_i_1_n_0 ));
+  FDRE \genblk1[3].Q_reg_reg[3][0][0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\genblk1[3].Q_reg[3][0][0]_i_1_n_0 ),
+        .Q(D[48]),
+=======
         .I1(AGENT_0_A),
         .I2(\r_lsfr_reg[1] [0]),
         .I3(D_road0[57]),
@@ -2227,96 +3563,172 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .CE(1'b1),
         .D(\Q[3]_16 [0]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][10] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][10]_i_1_n_0 ),
+        .Q(D[58]),
+=======
         .D(\Q[3]_16 [10]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [10]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][11] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][11]_i_1_n_0 ),
+        .Q(D[59]),
+=======
         .D(\Q[3]_16 [11]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [11]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][12] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][12]_i_1_n_0 ),
+        .Q(D[60]),
+=======
         .D(\Q[3]_16 [12]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [12]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][13] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][13]_i_1_n_0 ),
+        .Q(D[61]),
+=======
         .D(\Q[3]_16 [13]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [13]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][14] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][14]_i_1_n_0 ),
+        .Q(D[62]),
+=======
         .D(\Q[3]_16 [14]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][15] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][15]_i_1_n_0 ),
+        .Q(D[63]),
+=======
         .D(\Q[3]_16 [15]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [15]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][1] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][1]_i_1_n_0 ),
+        .Q(D[49]),
+=======
         .D(\Q[3]_16 [1]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [1]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][2] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][2]_i_1_n_0 ),
+        .Q(D[50]),
+=======
         .D(\Q[3]_16 [2]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [2]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][3] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][3]_i_1_n_0 ),
+        .Q(D[51]),
+=======
         .D(\Q[3]_16 [3]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [3]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][4] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][4]_i_1_n_0 ),
+        .Q(D[52]),
+=======
         .D(\Q[3]_16 [4]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [4]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][5] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][5]_i_1_n_0 ),
+        .Q(D[53]),
+=======
         .D(\Q[3]_16 [5]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [5]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][6] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][6]_i_1_n_0 ),
+        .Q(D[54]),
+=======
         .D(\Q[3]_16 [6]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [6]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][7] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][7]_i_1_n_0 ),
+        .Q(D[55]),
+=======
         .D(\Q[3]_16 [7]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [7]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][8] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][8]_i_1_n_0 ),
+        .Q(D[56]),
+=======
         .D(\Q[3]_16 [8]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [8]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \genblk1[3].Q_reg_reg[3][0][9] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\genblk1[3].Q_reg[3][0][9]_i_1_n_0 ),
+        .Q(D[57]),
+=======
         .D(\Q[3]_16 [9]),
         .Q(\genblk1[3].Q_reg_reg[3][0]_7 [9]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   LUT2 #(
     .INIT(4'h9)) 
@@ -2339,20 +3751,34 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     i__carry_i_1__0
        (.I0(\genblk1[3].Q_reg_reg[3][0]_7 [11]),
         .I1(Q_max__0[11]),
+<<<<<<< HEAD
+        .I2(D[58]),
+        .I3(Q_max__0[10]),
+        .I4(Q_max__0[9]),
+        .I5(D[57]),
+=======
         .I2(\genblk1[3].Q_reg_reg[3][0]_7 [9]),
         .I3(Q_max__0[9]),
         .I4(Q_max__0[10]),
         .I5(\genblk1[3].Q_reg_reg[3][0]_7 [10]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(i__carry_i_1__0_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_2__0
        (.I0(\genblk1[3].Q_reg_reg[3][0]_7 [8]),
         .I1(Q_max__0[8]),
+<<<<<<< HEAD
+        .I2(D[54]),
+        .I3(Q_max__0[6]),
+        .I4(Q_max__0[7]),
+        .I5(D[55]),
+=======
         .I2(\genblk1[3].Q_reg_reg[3][0]_7 [6]),
         .I3(Q_max__0[6]),
         .I4(Q_max__0[7]),
         .I5(\genblk1[3].Q_reg_reg[3][0]_7 [7]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(i__carry_i_2__0_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
@@ -2369,6 +3795,78 @@ module top_level_Intellight_Accelerat_0_0_AGENT
     i__carry_i_4__0
        (.I0(\genblk1[3].Q_reg_reg[3][0]_7 [2]),
         .I1(Q_max__0[2]),
+<<<<<<< HEAD
+        .I2(D[48]),
+        .I3(Q_max__0[0]),
+        .I4(Q_max__0[1]),
+        .I5(D[49]),
+        .O(i__carry_i_4__0_n_0));
+  top_level_Intellight_Accelerat_0_0_lfsr rand
+       (.\A_reg_reg[0][2] (A_dur_gred3_carry__0_n_2),
+        .\A_reg_reg[0][2]_0 (A_dur_gred2_carry__0_n_2),
+        .\A_reg_reg[0][2]_1 (A_dur_gred1_carry__0_n_2),
+        .\A_reg_reg[0][3] (\A_reg_reg[0][3] ),
+        .CO(p_0_in),
+        .D(Q_act),
+        .DI(DI),
+        .\L_curr_reg[0][0] (\slv_reg3_reg[4] ),
+        .\L_curr_reg[0][1] (\slv_reg3_reg[5] ),
+        .\L_curr_reg[0][1]_0 (\L_curr_reg[0][1] ),
+        .\L_curr_reg[0][2] (SD_0_L0[2]),
+        .\L_curr_reg[0][2]_0 (\L_curr_reg[0][2] ),
+        .\L_curr_reg[0][2]_1 (\slv_reg3_reg[6] ),
+        .\L_curr_reg[0][2]_2 (\rd_addr[3]_INST_0_i_5_n_0 ),
+        .\L_curr_reg[0][2]_3 (\rd_addr[4]_INST_0_i_7_n_0 ),
+        .\L_curr_reg[0][3] (\L_curr_reg[0][3] ),
+        .\L_curr_reg[0][3]_0 (SD_0_L0[3]),
+        .\L_curr_reg[0][3]_1 (\L_curr_reg[0][3]_0 ),
+        .\L_curr_reg[0][3]_2 (\L_curr_reg[0][3]_1 ),
+        .\L_curr_reg[0][3]_3 (\L_curr_reg[0][3]_2 ),
+        .\L_curr_reg[0][3]_4 (\rd_addr[4]_INST_0_i_5_n_0 ),
+        .\L_curr_reg[1][0] (\slv_reg4_reg[4] ),
+        .\L_curr_reg[1][1] (\slv_reg4_reg[5] ),
+        .\L_curr_reg[1][1]_0 (\L_curr_reg[1][1] ),
+        .\L_curr_reg[1][2] (SD_0_L1[2]),
+        .\L_curr_reg[1][2]_0 (\L_curr_reg[1][2] ),
+        .\L_curr_reg[1][2]_1 (\slv_reg4_reg[6] ),
+        .\L_curr_reg[1][2]_2 (\rd_addr[5]_INST_0_i_5_n_0 ),
+        .\L_curr_reg[1][2]_3 (\rd_addr[6]_INST_0_i_7_n_0 ),
+        .\L_curr_reg[1][3] (SD_0_L1[3]),
+        .\L_curr_reg[1][3]_0 (\L_curr_reg[1][3] ),
+        .\L_curr_reg[1][3]_1 (\L_curr_reg[1][3]_0 ),
+        .\L_curr_reg[1][3]_2 (\rd_addr[6]_INST_0_i_5_n_0 ),
+        .\L_curr_reg[1][3]_3 (\L_curr_reg[1][3]_1 ),
+        .\L_curr_reg[2][0] (\slv_reg7_reg[4] ),
+        .\L_curr_reg[2][0]_0 (\slv_reg5_reg[4] ),
+        .\L_curr_reg[2][1] (\slv_reg5_reg[5] ),
+        .\L_curr_reg[2][1]_0 (\L_curr_reg[2][1] ),
+        .\L_curr_reg[2][1]_1 (\slv_reg7_reg[1] ),
+        .\L_curr_reg[2][2] (SD_0_L2[2]),
+        .\L_curr_reg[2][2]_0 (\slv_reg7_reg[14] ),
+        .\L_curr_reg[2][2]_1 (\L_curr_reg[2][2] ),
+        .\L_curr_reg[2][2]_2 (\slv_reg7_reg[7] ),
+        .\L_curr_reg[2][2]_3 (\rd_addr[8]_INST_0_i_7_n_0 ),
+        .\L_curr_reg[2][2]_4 (\slv_reg5_reg[6] ),
+        .\L_curr_reg[2][2]_5 (\rd_addr[7]_INST_0_i_5_n_0 ),
+        .\L_curr_reg[2][3] (SD_0_L2[3]),
+        .\L_curr_reg[2][3]_0 (\L_curr_reg[2][3] ),
+        .\L_curr_reg[2][3]_1 (\L_curr_reg[2][3]_0 ),
+        .\L_curr_reg[2][3]_2 (\rd_addr[8]_INST_0_i_5_n_0 ),
+        .\L_curr_reg[2][3]_3 (\L_curr_reg[2][3]_1 ),
+        .\L_curr_reg[3][0] (\slv_reg6_reg[4] ),
+        .\L_curr_reg[3][1] (\L_curr[3][1]_i_2_n_0 ),
+        .\L_curr_reg[3][1]_0 (\L_curr_reg[3][1] ),
+        .\L_curr_reg[3][2] (SD_0_L3[2]),
+        .\L_curr_reg[3][2]_0 (\L_curr_reg[3][2] ),
+        .\L_curr_reg[3][2]_1 (\rd_addr[10]_INST_0_i_9_n_0 ),
+        .\L_curr_reg[3][2]_2 (\rd_addr[9]_INST_0_i_6_n_0 ),
+        .\L_curr_reg[3][2]_3 (\rd_addr[10]_INST_0_i_7_n_0 ),
+        .\L_curr_reg[3][3] (SD_0_L3[3]),
+        .\L_curr_reg[3][3]_0 (\L_curr_reg[3][3] ),
+        .\L_curr_reg[3][3]_1 (\L_curr_reg[3][3]_0 ),
+        .\L_curr_reg[3][3]_2 (\rd_addr[10]_INST_0_i_5_n_0 ),
+        .\L_curr_reg[3][3]_3 (\rd_addr[10]_INST_0_i_6_n_0 ),
+=======
         .I2(\genblk1[3].Q_reg_reg[3][0]_7 [0]),
         .I3(Q_max__0[0]),
         .I4(Q_max__0[1]),
@@ -2439,6 +3937,7 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .\L_curr_reg[3][3]_0 (\rd_addr[9]_INST_0_i_4_n_0 ),
         .\L_curr_reg[3][3]_1 (\rd_addr[9]_INST_0_i_5_n_0 ),
         .\L_curr_reg[3][3]_2 (\L_curr_reg[3][3]_0 ),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .Q(Q),
         .\Q_act_reg_reg[0][0] (QA_max0_n_39),
         .\Q_act_reg_reg[0][0]_0 (QA_max0_n_70),
@@ -2449,17 +3948,17 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .\Q_act_reg_reg[0][10]_1 (QA_max0_n_21),
         .\Q_act_reg_reg[0][10]_2 (QA_max0_n_51),
         .\Q_act_reg_reg[0][11] (QA_0_n_20),
-        .\Q_act_reg_reg[0][11]_0 (QA_max0_n_49),
+        .\Q_act_reg_reg[0][11]_0 (QA_max0_n_48),
         .\Q_act_reg_reg[0][11]_1 (QA_max0_n_20),
-        .\Q_act_reg_reg[0][11]_2 (QA_max0_n_48),
+        .\Q_act_reg_reg[0][11]_2 (QA_max0_n_49),
         .\Q_act_reg_reg[0][12] (QA_0_n_19),
         .\Q_act_reg_reg[0][12]_0 (QA_max0_n_47),
         .\Q_act_reg_reg[0][12]_1 (QA_max0_n_19),
         .\Q_act_reg_reg[0][12]_2 (QA_max0_n_46),
         .\Q_act_reg_reg[0][13] (QA_0_n_18),
-        .\Q_act_reg_reg[0][13]_0 (QA_max0_n_45),
+        .\Q_act_reg_reg[0][13]_0 (QA_max0_n_44),
         .\Q_act_reg_reg[0][13]_1 (QA_max0_n_18),
-        .\Q_act_reg_reg[0][13]_2 (QA_max0_n_44),
+        .\Q_act_reg_reg[0][13]_2 (QA_max0_n_45),
         .\Q_act_reg_reg[0][14] (QA_0_n_17),
         .\Q_act_reg_reg[0][14]_0 (QA_max0_n_42),
         .\Q_act_reg_reg[0][14]_1 (QA_max0_n_1),
@@ -2469,9 +3968,9 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .\Q_act_reg_reg[0][15]_1 (QA_max0_n_0),
         .\Q_act_reg_reg[0][15]_2 (QA_max0_n_40),
         .\Q_act_reg_reg[0][1] (QA_max0_n_38),
-        .\Q_act_reg_reg[0][1]_0 (QA_max0_n_69),
+        .\Q_act_reg_reg[0][1]_0 (QA_max0_n_68),
         .\Q_act_reg_reg[0][1]_1 (QA_max0_n_36),
-        .\Q_act_reg_reg[0][1]_2 (QA_max0_n_68),
+        .\Q_act_reg_reg[0][1]_2 (QA_max0_n_69),
         .\Q_act_reg_reg[0][2] (QA_max0_n_35),
         .\Q_act_reg_reg[0][2]_0 (QA_max0_n_66),
         .\Q_act_reg_reg[0][2]_1 (QA_max0_n_33),
@@ -2497,13 +3996,221 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .\Q_act_reg_reg[0][7]_1 (QA_max0_n_24),
         .\Q_act_reg_reg[0][7]_2 (QA_max0_n_56),
         .\Q_act_reg_reg[0][8] (QA_0_n_23),
-        .\Q_act_reg_reg[0][8]_0 (QA_max0_n_55),
+        .\Q_act_reg_reg[0][8]_0 (QA_max0_n_54),
         .\Q_act_reg_reg[0][8]_1 (QA_max0_n_23),
-        .\Q_act_reg_reg[0][8]_2 (QA_max0_n_54),
+        .\Q_act_reg_reg[0][8]_2 (QA_max0_n_55),
         .\Q_act_reg_reg[0][9] (QA_0_n_22),
         .\Q_act_reg_reg[0][9]_0 (QA_max0_n_52),
         .\Q_act_reg_reg[0][9]_1 (QA_max0_n_22),
         .\Q_act_reg_reg[0][9]_2 (QA_max0_n_53),
+<<<<<<< HEAD
+        .R0__2_carry__0_i_3_0(R0__2_carry__0_i_15_n_0),
+        .R0__2_carry__0_i_9_0(R0__2_carry__0_i_9),
+        .S(S),
+        .SD_0_L0(SD_0_L0[1:0]),
+        .SD_0_L1(SD_0_L1[1:0]),
+        .SD_0_L2(SD_0_L2[1:0]),
+        .SD_0_L3(SD_0_L3[1:0]),
+        .clk(clk),
+        .\r_lsfr_reg[1]_0 (\r_lsfr_reg[1] ),
+        .\r_lsfr_reg[2]_0 (\r_lsfr_reg[2] ),
+        .rd_addr(rd_addr),
+        .\rd_addr[10] (\rd_addr[10] ),
+        .\rd_addr[4] (x__0_carry__2[0]),
+        .rst(rst));
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \rd_addr[10]_INST_0_i_5 
+       (.I0(\L_curr_reg[3][3]_1 [7]),
+        .I1(\L_curr_reg[3][3]_1 [15]),
+        .I2(\L_curr_reg[3][3]_1 [3]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[3][3]_1 [11]),
+        .O(\rd_addr[10]_INST_0_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h51F70000FFFF51F7)) 
+    \rd_addr[10]_INST_0_i_6 
+       (.I0(\L_curr[3][1]_i_2_n_0 ),
+        .I1(\L_curr_reg[3][3]_0 [0]),
+        .I2(\slv_reg6_reg[4] ),
+        .I3(\L_curr_reg[3][3]_0 [1]),
+        .I4(\rd_addr[10]_INST_0_i_9_n_0 ),
+        .I5(\L_curr_reg[3][3]_0 [2]),
+        .O(\rd_addr[10]_INST_0_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFD444D4440000)) 
+    \rd_addr[10]_INST_0_i_7 
+       (.I0(\slv_reg7_reg[1] ),
+        .I1(\L_curr_reg[3][3]_0 [1]),
+        .I2(\slv_reg7_reg[4] ),
+        .I3(\L_curr_reg[3][3]_0 [0]),
+        .I4(\slv_reg7_reg[14] ),
+        .I5(\L_curr_reg[3][3]_0 [2]),
+        .O(\rd_addr[10]_INST_0_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \rd_addr[10]_INST_0_i_8 
+       (.I0(\rd_addr[4]_INST_0_i_3 [7]),
+        .I1(\rd_addr[4]_INST_0_i_3 [15]),
+        .I2(\rd_addr[4]_INST_0_i_3 [3]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\rd_addr[4]_INST_0_i_3 [11]),
+        .O(\slv_reg7_reg[7] ));
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \rd_addr[10]_INST_0_i_9 
+       (.I0(\L_curr_reg[3][3]_1 [6]),
+        .I1(\L_curr_reg[3][3]_1 [14]),
+        .I2(\L_curr_reg[3][3]_1 [2]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[3][3]_1 [10]),
+        .O(\rd_addr[10]_INST_0_i_9_n_0 ));
+  LUT4 #(
+    .INIT(16'h51F7)) 
+    \rd_addr[3]_INST_0_i_5 
+       (.I0(\slv_reg3_reg[5] ),
+        .I1(Q[0]),
+        .I2(\slv_reg3_reg[4] ),
+        .I3(Q[1]),
+        .O(\rd_addr[3]_INST_0_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \rd_addr[4]_INST_0_i_5 
+       (.I0(\L_curr_reg[0][3]_3 [7]),
+        .I1(\L_curr_reg[0][3]_3 [15]),
+        .I2(\L_curr_reg[0][3]_3 [3]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[0][3]_3 [11]),
+        .O(\rd_addr[4]_INST_0_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hEE8E8E888E888E88)) 
+    \rd_addr[4]_INST_0_i_7 
+       (.I0(\slv_reg7_reg[14] ),
+        .I1(Q[2]),
+        .I2(\slv_reg7_reg[1] ),
+        .I3(Q[1]),
+        .I4(\slv_reg7_reg[4] ),
+        .I5(Q[0]),
+        .O(\rd_addr[4]_INST_0_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \rd_addr[4]_INST_0_i_8 
+       (.I0(\L_curr_reg[0][3]_3 [6]),
+        .I1(\L_curr_reg[0][3]_3 [14]),
+        .I2(\L_curr_reg[0][3]_3 [2]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[0][3]_3 [10]),
+        .O(\slv_reg3_reg[6] ));
+  LUT4 #(
+    .INIT(16'h51F7)) 
+    \rd_addr[5]_INST_0_i_5 
+       (.I0(\slv_reg4_reg[5] ),
+        .I1(\L_curr_reg[1][3]_0 [0]),
+        .I2(\slv_reg4_reg[4] ),
+        .I3(\L_curr_reg[1][3]_0 [1]),
+        .O(\rd_addr[5]_INST_0_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \rd_addr[6]_INST_0_i_5 
+       (.I0(\L_curr_reg[1][3]_2 [7]),
+        .I1(\L_curr_reg[1][3]_2 [15]),
+        .I2(\L_curr_reg[1][3]_2 [3]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[1][3]_2 [11]),
+        .O(\rd_addr[6]_INST_0_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFD444D4440000)) 
+    \rd_addr[6]_INST_0_i_7 
+       (.I0(\slv_reg7_reg[1] ),
+        .I1(\L_curr_reg[1][3]_0 [1]),
+        .I2(\slv_reg7_reg[4] ),
+        .I3(\L_curr_reg[1][3]_0 [0]),
+        .I4(\slv_reg7_reg[14] ),
+        .I5(\L_curr_reg[1][3]_0 [2]),
+        .O(\rd_addr[6]_INST_0_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \rd_addr[6]_INST_0_i_8 
+       (.I0(\L_curr_reg[1][3]_2 [6]),
+        .I1(\L_curr_reg[1][3]_2 [14]),
+        .I2(\L_curr_reg[1][3]_2 [2]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[1][3]_2 [10]),
+        .O(\slv_reg4_reg[6] ));
+  LUT4 #(
+    .INIT(16'h51F7)) 
+    \rd_addr[7]_INST_0_i_5 
+       (.I0(\slv_reg5_reg[5] ),
+        .I1(\L_curr_reg[2][3]_0 [0]),
+        .I2(\slv_reg5_reg[4] ),
+        .I3(\L_curr_reg[2][3]_0 [1]),
+        .O(\rd_addr[7]_INST_0_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h5533000F5533FF0F)) 
+    \rd_addr[8]_INST_0_i_5 
+       (.I0(\L_curr_reg[2][3]_2 [15]),
+        .I1(\L_curr_reg[2][3]_2 [11]),
+        .I2(\L_curr_reg[2][3]_2 [3]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[2][3]_2 [7]),
+        .O(\rd_addr[8]_INST_0_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFD444D4440000)) 
+    \rd_addr[8]_INST_0_i_7 
+       (.I0(\slv_reg7_reg[1] ),
+        .I1(\L_curr_reg[2][3]_0 [1]),
+        .I2(\slv_reg7_reg[4] ),
+        .I3(\L_curr_reg[2][3]_0 [0]),
+        .I4(\slv_reg7_reg[14] ),
+        .I5(\L_curr_reg[2][3]_0 [2]),
+        .O(\rd_addr[8]_INST_0_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \rd_addr[8]_INST_0_i_8 
+       (.I0(\L_curr_reg[2][3]_2 [6]),
+        .I1(\L_curr_reg[2][3]_2 [14]),
+        .I2(\L_curr_reg[2][3]_2 [2]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\L_curr_reg[2][3]_2 [10]),
+        .O(\slv_reg5_reg[6] ));
+  LUT6 #(
+    .INIT(64'h5533000F5533FF0F)) 
+    \rd_addr[9]_INST_0_i_5 
+       (.I0(\rd_addr[4]_INST_0_i_3 [14]),
+        .I1(\rd_addr[4]_INST_0_i_3 [10]),
+        .I2(\rd_addr[4]_INST_0_i_3 [2]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\rd_addr[4]_INST_0_i_3 [6]),
+        .O(\slv_reg7_reg[14] ));
+  LUT4 #(
+    .INIT(16'h51F7)) 
+    \rd_addr[9]_INST_0_i_6 
+       (.I0(\L_curr[3][1]_i_2_n_0 ),
+        .I1(\L_curr_reg[3][3]_0 [0]),
+        .I2(\slv_reg6_reg[4] ),
+        .I3(\L_curr_reg[3][3]_0 [1]),
+        .O(\rd_addr[9]_INST_0_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'hF0CCFFAAF0CC00AA)) 
+    \rd_addr[9]_INST_0_i_7 
+       (.I0(\rd_addr[4]_INST_0_i_3 [1]),
+        .I1(\rd_addr[4]_INST_0_i_3 [9]),
+        .I2(\rd_addr[4]_INST_0_i_3 [13]),
+        .I3(\A_road_reg[1]_0 [0]),
+        .I4(\A_road_reg[1]_0 [1]),
+        .I5(\rd_addr[4]_INST_0_i_3 [5]),
+        .O(\slv_reg7_reg[1] ));
+=======
         .\R[14]_i_17_0 (\R[14]_i_21_n_0 ),
         .\R[14]_i_17_1 (\L_curr_reg[0][3] ),
         .\R[14]_i_17_2 (\R[14]_i_17 ),
@@ -2751,6 +4458,7 @@ module top_level_Intellight_Accelerat_0_0_AGENT
         .I2(\slv_reg6_reg[4] ),
         .I3(Q[0]),
         .O(\rd_addr[9]_INST_0_i_9_n_0 ));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT4 #(
     .INIT(16'h44D4)) 
     temp01_carry__0_i_1
@@ -2821,51 +4529,140 @@ endmodule
 module top_level_Intellight_Accelerat_0_0_Accelerator
    (rd_addr,
     wr_addr,
+<<<<<<< HEAD
+    idle,
+    finish,
+    wen_bram3,
+    wen_bram2,
+    wen_bram0,
+    wen_bram1,
+    D_new,
+=======
     D_new,
     \A_reg_reg[2][0] ,
     finish,
     wen0,
     wen1,
     wen_bram,
+>>>>>>> parent of ae750207 (shfcuidtf7)
     rst,
     clk,
     Q,
     \rd_addr[9] ,
     x__0_carry__2,
     \L_curr_reg[0][3] ,
+<<<<<<< HEAD
+    \L_curr_reg[3][3] ,
+    \L_curr_reg[1][3] ,
+    \L_curr_reg[2][3] ,
+    \rd_addr[4]_INST_0_i_3 ,
+=======
     \L_curr_reg[1][3] ,
     \L_curr_reg[2][3] ,
     \L_curr_reg[3][3] ,
     \rd_addr[3]_INST_0_i_3 ,
     D_road2,
+>>>>>>> parent of ae750207 (shfcuidtf7)
     D_road0,
-    D_road3,
     D_road1,
+    D_road2,
+    D_road3,
     \r_lsfr_reg[16] );
   output [7:0]rd_addr;
   output [7:0]wr_addr;
+<<<<<<< HEAD
+  output idle;
+  output finish;
+  output [3:0]wen_bram3;
+  output [3:0]wen_bram2;
+  output [3:0]wen_bram0;
+  output [3:0]wen_bram1;
+  output [63:0]D_new;
+=======
   output [63:0]D_new;
   output \A_reg_reg[2][0] ;
   output finish;
   output wen0;
   output wen1;
   output [0:0]wen_bram;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   input rst;
   input clk;
   input [31:0]Q;
   input [7:0]\rd_addr[9] ;
   input [7:0]x__0_carry__2;
   input [15:0]\L_curr_reg[0][3] ;
+<<<<<<< HEAD
+  input [15:0]\L_curr_reg[3][3] ;
+  input [15:0]\L_curr_reg[1][3] ;
+  input [15:0]\L_curr_reg[2][3] ;
+  input [15:0]\rd_addr[4]_INST_0_i_3 ;
+=======
   input [15:0]\L_curr_reg[1][3] ;
   input [15:0]\L_curr_reg[2][3] ;
   input [15:0]\L_curr_reg[3][3] ;
   input [15:0]\rd_addr[3]_INST_0_i_3 ;
   input [63:0]D_road2;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   input [63:0]D_road0;
-  input [63:0]D_road3;
   input [63:0]D_road1;
+  input [63:0]D_road2;
+  input [63:0]D_road3;
   input [15:0]\r_lsfr_reg[16] ;
 
+<<<<<<< HEAD
+  wire AGENT_0_n_102;
+  wire AGENT_0_n_103;
+  wire AGENT_0_n_104;
+  wire AGENT_0_n_105;
+  wire AGENT_0_n_106;
+  wire AGENT_0_n_115;
+  wire AGENT_0_n_116;
+  wire AGENT_0_n_117;
+  wire AGENT_0_n_118;
+  wire AGENT_0_n_119;
+  wire AGENT_0_n_120;
+  wire AGENT_0_n_121;
+  wire AGENT_0_n_122;
+  wire AGENT_0_n_123;
+  wire AGENT_0_n_124;
+  wire AGENT_0_n_125;
+  wire AGENT_0_n_126;
+  wire AGENT_0_n_127;
+  wire AGENT_0_n_128;
+  wire AGENT_0_n_129;
+  wire AGENT_0_n_130;
+  wire AGENT_0_n_131;
+  wire AGENT_0_n_132;
+  wire AGENT_0_n_64;
+  wire AGENT_0_n_65;
+  wire AGENT_0_n_66;
+  wire AGENT_0_n_67;
+  wire AGENT_0_n_68;
+  wire AGENT_0_n_69;
+  wire AGENT_0_n_70;
+  wire AGENT_0_n_71;
+  wire AGENT_0_n_72;
+  wire AGENT_0_n_73;
+  wire AGENT_0_n_74;
+  wire AGENT_0_n_75;
+  wire AGENT_0_n_76;
+  wire AGENT_0_n_77;
+  wire AGENT_0_n_78;
+  wire AGENT_0_n_79;
+  wire AGENT_0_n_80;
+  wire AGENT_0_n_81;
+  wire AGENT_0_n_82;
+  wire AGENT_0_n_95;
+  wire AGENT_0_n_96;
+  wire AGENT_0_n_97;
+  wire [1:0]A_road;
+  wire CU_0_n_0;
+  wire CU_0_n_1;
+  wire CU_0_n_2;
+  wire CU_0_n_4;
+  wire CU_0_n_6;
+=======
   wire [2:0]AGENT_0_A;
   wire [15:0]AGENT_0_Q_new;
   wire AGENT_0_n_16;
@@ -2893,13 +4690,25 @@ module top_level_Intellight_Accelerat_0_0_Accelerator
   wire \A_reg_reg[2][0] ;
   wire A_road;
   wire CU_0_n_0;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [63:0]D_new;
   wire [63:0]D_road0;
   wire [63:0]D_road1;
   wire [63:0]D_road2;
   wire [63:0]D_road3;
-  wire [14:0]ENV_0_R;
+  wire [15:10]ENV_0_R;
   wire ENV_0_n_0;
+<<<<<<< HEAD
+  wire ENV_0_n_11;
+  wire ENV_0_n_16;
+  wire ENV_0_n_17;
+  wire ENV_0_n_18;
+  wire ENV_0_n_19;
+  wire ENV_0_n_20;
+  wire ENV_0_n_21;
+  wire ENV_0_n_22;
+  wire ENV_0_n_23;
+=======
   wire ENV_0_n_12;
   wire ENV_0_n_13;
   wire ENV_0_n_18;
@@ -2908,10 +4717,15 @@ module top_level_Intellight_Accelerat_0_0_Accelerator
   wire ENV_0_n_25;
   wire ENV_0_n_26;
   wire ENV_0_n_27;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire ENV_0_n_28;
   wire ENV_0_n_29;
   wire ENV_0_n_30;
   wire ENV_0_n_31;
+<<<<<<< HEAD
+  wire ENV_0_n_5;
+  wire ENV_0_n_6;
+=======
   wire ENV_0_n_32;
   wire ENV_0_n_33;
   wire ENV_0_n_34;
@@ -2925,6 +4739,7 @@ module top_level_Intellight_Accelerat_0_0_Accelerator
   wire ENV_0_n_5;
   wire ENV_0_n_6;
   wire ENV_0_n_7;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [15:0]\L_curr_reg[0][3] ;
   wire [3:0]\L_curr_reg[0]_10 ;
   wire [15:0]\L_curr_reg[1][3] ;
@@ -2940,6 +4755,22 @@ module top_level_Intellight_Accelerat_0_0_Accelerator
   wire [3:0]SD_0_L3;
   wire clk;
   wire finish;
+<<<<<<< HEAD
+  wire [15:0]\genblk1[0].Q_reg_reg[0][0]_12 ;
+  wire [15:0]\genblk1[1].Q_reg_reg[1][0]_13 ;
+  wire [15:0]\genblk1[2].Q_reg_reg[2][0]_14 ;
+  wire [15:0]\genblk1[3].Q_reg_reg[3][0]_15 ;
+  wire idle;
+  wire [15:0]\r_lsfr_reg[16] ;
+  wire [7:0]rd_addr;
+  wire [7:0]\rd_addr[10] ;
+  wire [15:0]\rd_addr[4]_INST_0_i_3 ;
+  wire rst;
+  wire [3:0]wen_bram0;
+  wire [3:0]wen_bram1;
+  wire [3:0]wen_bram2;
+  wire [3:0]wen_bram3;
+=======
   wire [15:0]\r_lsfr_reg[16] ;
   wire [7:0]rd_addr;
   wire [15:0]\rd_addr[3]_INST_0_i_3 ;
@@ -2948,17 +4779,59 @@ module top_level_Intellight_Accelerat_0_0_Accelerator
   wire wen0;
   wire wen1;
   wire [0:0]wen_bram;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [7:0]wr_addr;
   wire [7:0]x__0_carry__2;
 
   top_level_Intellight_Accelerat_0_0_AGENT AGENT_0
+<<<<<<< HEAD
+       (.\A_reg_reg[0][3] (CU_0_n_4),
+        .\A_road_reg[1]_0 ({AGENT_0_n_119,AGENT_0_n_120}),
+        .D({\genblk1[3].Q_reg_reg[3][0]_15 ,\genblk1[2].Q_reg_reg[2][0]_14 ,\genblk1[1].Q_reg_reg[1][0]_13 ,\genblk1[0].Q_reg_reg[0][0]_12 }),
+        .DI({AGENT_0_n_80,AGENT_0_n_81,AGENT_0_n_82}),
+=======
        (.AGENT_0_Q_new(AGENT_0_Q_new),
         .\A_reg_reg[0][2] (CU_0_n_0),
         .D({AGENT_0_n_16,AGENT_0_n_17,AGENT_0_n_18,AGENT_0_n_19,AGENT_0_n_20,AGENT_0_n_21,AGENT_0_n_22}),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .D_road0(D_road0),
         .D_road1(D_road1),
         .D_road2(D_road2),
         .D_road3(D_road3),
+<<<<<<< HEAD
+        .\L_curr_reg[0][1] (ENV_0_n_5),
+        .\L_curr_reg[0][2] (ENV_0_n_18),
+        .\L_curr_reg[0][3] ({AGENT_0_n_102,AGENT_0_n_103}),
+        .\L_curr_reg[0][3]_0 ({AGENT_0_n_104,AGENT_0_n_105,AGENT_0_n_106}),
+        .\L_curr_reg[0][3]_1 (ENV_0_n_17),
+        .\L_curr_reg[0][3]_2 (ENV_0_n_0),
+        .\L_curr_reg[0][3]_3 (\L_curr_reg[0][3] ),
+        .\L_curr_reg[1][1] (ENV_0_n_16),
+        .\L_curr_reg[1][2] (ENV_0_n_22),
+        .\L_curr_reg[1][3] (ENV_0_n_21),
+        .\L_curr_reg[1][3]_0 (\L_curr_reg[1]_9 ),
+        .\L_curr_reg[1][3]_1 (ENV_0_n_11),
+        .\L_curr_reg[1][3]_2 (\L_curr_reg[1][3] ),
+        .\L_curr_reg[2][1] (ENV_0_n_31),
+        .\L_curr_reg[2][2] (ENV_0_n_28),
+        .\L_curr_reg[2][3] (ENV_0_n_23),
+        .\L_curr_reg[2][3]_0 (\L_curr_reg[2]_10 ),
+        .\L_curr_reg[2][3]_1 (ENV_0_n_30),
+        .\L_curr_reg[2][3]_2 (\L_curr_reg[2][3] ),
+        .\L_curr_reg[3][1] (ENV_0_n_6),
+        .\L_curr_reg[3][2] (ENV_0_n_20),
+        .\L_curr_reg[3][3] (ENV_0_n_19),
+        .\L_curr_reg[3][3]_0 (\L_curr_reg[3]_11 ),
+        .\L_curr_reg[3][3]_1 (\L_curr_reg[3][3] ),
+        .O({AGENT_0_n_64,AGENT_0_n_65,AGENT_0_n_66,AGENT_0_n_67}),
+        .Q(\L_curr_reg[0]_8 ),
+        .\Q_act_reg_reg[2][11] ({AGENT_0_n_72,AGENT_0_n_73,AGENT_0_n_74,AGENT_0_n_75}),
+        .\Q_act_reg_reg[2][14] ({AGENT_0_n_76,AGENT_0_n_77,AGENT_0_n_78,AGENT_0_n_79}),
+        .\Q_act_reg_reg[2][7] ({AGENT_0_n_68,AGENT_0_n_69,AGENT_0_n_70,AGENT_0_n_71}),
+        .R0__2_carry__0_i_9(ENV_0_n_29),
+        .\R_reg0_reg[15] (ENV_0_R),
+        .S({AGENT_0_n_95,AGENT_0_n_96,AGENT_0_n_97}),
+=======
         .\L_curr_reg[0][1] (ENV_0_n_34),
         .\L_curr_reg[0][2] (ENV_0_n_25),
         .\L_curr_reg[0][3] (AGENT_0_n_58),
@@ -3000,11 +4873,42 @@ module top_level_Intellight_Accelerat_0_0_Accelerator
         .\R[2]_i_6_0 (ENV_0_n_40),
         .\R_reg0_reg[14] ({ENV_0_R[14],ENV_0_R[5:0]}),
         .\R_reg[14] (ENV_0_n_5),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .SD_0_L0(SD_0_L0),
         .SD_0_L1(SD_0_L1),
         .SD_0_L2(SD_0_L2),
         .SD_0_L3(SD_0_L3),
         .clk(clk),
+<<<<<<< HEAD
+        .\r_lsfr_reg[1] (AGENT_0_n_124),
+        .\r_lsfr_reg[2] (AGENT_0_n_123),
+        .rd_addr(rd_addr),
+        .\rd_addr[10] (\rd_addr[10] ),
+        .\rd_addr[4]_INST_0_i_3 (\rd_addr[4]_INST_0_i_3 ),
+        .rst(rst),
+        .\slv_reg3_reg[4] (AGENT_0_n_116),
+        .\slv_reg3_reg[5] (AGENT_0_n_117),
+        .\slv_reg3_reg[6] (AGENT_0_n_121),
+        .\slv_reg4_reg[4] (AGENT_0_n_125),
+        .\slv_reg4_reg[5] (AGENT_0_n_126),
+        .\slv_reg4_reg[6] (AGENT_0_n_127),
+        .\slv_reg5_reg[4] (AGENT_0_n_128),
+        .\slv_reg5_reg[5] (AGENT_0_n_129),
+        .\slv_reg5_reg[6] (AGENT_0_n_132),
+        .\slv_reg6_reg[4] (AGENT_0_n_122),
+        .\slv_reg7_reg[14] (AGENT_0_n_118),
+        .\slv_reg7_reg[1] (AGENT_0_n_130),
+        .\slv_reg7_reg[4] (AGENT_0_n_115),
+        .\slv_reg7_reg[7] (AGENT_0_n_131),
+        .x__0_carry__2({x__0_carry__2[7:2],x__0_carry__2[0]}));
+  top_level_Intellight_Accelerat_0_0_CU CU_0
+       (.\A_reg_reg[2][2] (CU_0_n_1),
+        .\A_reg_reg[2][2]_0 (CU_0_n_6),
+        .\A_reg_reg[2][3] (CU_0_n_0),
+        .\FSM_onehot_cs_reg[0]_0 (idle),
+        .\FSM_onehot_cs_reg[0]_1 (x__0_carry__2[1:0]),
+        .\FSM_onehot_cs_reg[14]_0 (CU_0_n_2),
+=======
         .\r_lsfr_reg[1] ({AGENT_0_A[2],AGENT_0_A[0]}),
         .\r_lsfr_reg[2] (AGENT_0_n_31),
         .rd_addr(rd_addr),
@@ -3023,11 +4927,82 @@ module top_level_Intellight_Accelerat_0_0_Accelerator
   top_level_Intellight_Accelerat_0_0_CU CU_0
        (.A_road(A_road),
         .\FSM_onehot_cs_reg[0]_0 (x__0_carry__2[1:0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .Q(Q),
         .clk(clk),
         .finish(finish),
         .\r_lsfr_reg[16] (\r_lsfr_reg[16] ),
         .rst(rst),
+<<<<<<< HEAD
+        .\slv_reg0_reg[0] (CU_0_n_4),
+        .\wen_bram3[6] (A_road));
+  top_level_Intellight_Accelerat_0_0_ENV ENV_0
+       (.D(SD_0_L0),
+        .DI({AGENT_0_n_80,AGENT_0_n_81,AGENT_0_n_82}),
+        .\L_curr_reg[0][0] (ENV_0_n_5),
+        .\L_curr_reg[0][0]_0 (ENV_0_n_18),
+        .\L_curr_reg[0][0]_1 (ENV_0_n_29),
+        .\L_curr_reg[0][1] (AGENT_0_n_116),
+        .\L_curr_reg[0][2] (ENV_0_n_0),
+        .\L_curr_reg[0][3] (ENV_0_n_17),
+        .\L_curr_reg[0][3]_0 (AGENT_0_n_121),
+        .\L_curr_reg[0][3]_1 (AGENT_0_n_117),
+        .\L_curr_reg[1][0] (ENV_0_n_16),
+        .\L_curr_reg[1][0]_0 (ENV_0_n_22),
+        .\L_curr_reg[1][1] (AGENT_0_n_125),
+        .\L_curr_reg[1][2] (ENV_0_n_11),
+        .\L_curr_reg[1][3] (\L_curr_reg[1]_9 ),
+        .\L_curr_reg[1][3]_0 (ENV_0_n_21),
+        .\L_curr_reg[1][3]_1 (AGENT_0_n_127),
+        .\L_curr_reg[1][3]_2 (AGENT_0_n_126),
+        .\L_curr_reg[1][3]_3 (SD_0_L1),
+        .\L_curr_reg[2][0] (ENV_0_n_28),
+        .\L_curr_reg[2][0]_0 (ENV_0_n_31),
+        .\L_curr_reg[2][1] (AGENT_0_n_128),
+        .\L_curr_reg[2][2] (ENV_0_n_30),
+        .\L_curr_reg[2][2]_0 (AGENT_0_n_115),
+        .\L_curr_reg[2][2]_1 (AGENT_0_n_130),
+        .\L_curr_reg[2][3] (ENV_0_n_23),
+        .\L_curr_reg[2][3]_0 (\L_curr_reg[2]_10 ),
+        .\L_curr_reg[2][3]_1 (AGENT_0_n_131),
+        .\L_curr_reg[2][3]_2 (AGENT_0_n_118),
+        .\L_curr_reg[2][3]_3 (AGENT_0_n_132),
+        .\L_curr_reg[2][3]_4 (AGENT_0_n_129),
+        .\L_curr_reg[2][3]_5 (SD_0_L2),
+        .\L_curr_reg[3][0] (ENV_0_n_6),
+        .\L_curr_reg[3][0]_0 (ENV_0_n_20),
+        .\L_curr_reg[3][1] (AGENT_0_n_122),
+        .\L_curr_reg[3][3] (\L_curr_reg[3]_11 ),
+        .\L_curr_reg[3][3]_0 (ENV_0_n_19),
+        .\L_curr_reg[3][3]_1 (SD_0_L3),
+        .Q(\L_curr_reg[0]_8 ),
+        .\R_reg[15] (ENV_0_R),
+        .\R_reg[15]_0 ({AGENT_0_n_102,AGENT_0_n_103}),
+        .\R_reg[15]_1 ({AGENT_0_n_104,AGENT_0_n_105,AGENT_0_n_106}),
+        .S({AGENT_0_n_95,AGENT_0_n_96,AGENT_0_n_97}),
+        .clk(clk),
+        .rst(rst));
+  top_level_Intellight_Accelerat_0_0_MII MII_0
+       (.D({AGENT_0_n_123,AGENT_0_n_124,AGENT_0_n_119,AGENT_0_n_120}),
+        .D_new(D_new),
+        .\D_new[55] ({AGENT_0_n_68,AGENT_0_n_69,AGENT_0_n_70,AGENT_0_n_71}),
+        .\D_new[59] ({AGENT_0_n_72,AGENT_0_n_73,AGENT_0_n_74,AGENT_0_n_75}),
+        .\D_new[63] ({AGENT_0_n_76,AGENT_0_n_77,AGENT_0_n_78,AGENT_0_n_79}),
+        .\D_reg_reg[1][63]_0 ({\genblk1[3].Q_reg_reg[3][0]_15 ,\genblk1[2].Q_reg_reg[2][0]_14 ,\genblk1[1].Q_reg_reg[1][0]_13 ,\genblk1[0].Q_reg_reg[0][0]_12 }),
+        .O({AGENT_0_n_64,AGENT_0_n_65,AGENT_0_n_66,AGENT_0_n_67}),
+        .Q(A_road),
+        .clk(clk),
+        .rd_addr(rd_addr),
+        .rst(rst),
+        .wen_bram0(wen_bram0),
+        .\wen_bram0[6] (CU_0_n_1),
+        .wen_bram1(wen_bram1),
+        .\wen_bram1[6] (CU_0_n_2),
+        .wen_bram2(wen_bram2),
+        .wen_bram2_0_sp_1(CU_0_n_6),
+        .wen_bram3(wen_bram3),
+        .\wen_bram3[6] (CU_0_n_0),
+=======
         .\slv_reg0_reg[0] (CU_0_n_0),
         .wen0(wen0),
         .wen1(wen1));
@@ -3098,11 +5073,38 @@ module top_level_Intellight_Accelerat_0_0_Accelerator
         .rd_addr(rd_addr),
         .rst(rst),
         .wen_bram(wen_bram),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .wr_addr(wr_addr));
 endmodule
 
 (* ORIG_REF_NAME = "CU" *) 
 module top_level_Intellight_Accelerat_0_0_CU
+<<<<<<< HEAD
+   (\A_reg_reg[2][3] ,
+    \A_reg_reg[2][2] ,
+    \FSM_onehot_cs_reg[14]_0 ,
+    \FSM_onehot_cs_reg[0]_0 ,
+    \slv_reg0_reg[0] ,
+    finish,
+    \A_reg_reg[2][2]_0 ,
+    Q,
+    clk,
+    \wen_bram3[6] ,
+    \FSM_onehot_cs_reg[0]_1 ,
+    \r_lsfr_reg[16] ,
+    rst);
+  output \A_reg_reg[2][3] ;
+  output \A_reg_reg[2][2] ;
+  output \FSM_onehot_cs_reg[14]_0 ;
+  output [0:0]\FSM_onehot_cs_reg[0]_0 ;
+  output \slv_reg0_reg[0] ;
+  output finish;
+  output \A_reg_reg[2][2]_0 ;
+  input [31:0]Q;
+  input clk;
+  input [1:0]\wen_bram3[6] ;
+  input [1:0]\FSM_onehot_cs_reg[0]_1 ;
+=======
    (\slv_reg0_reg[0] ,
     finish,
     wen0,
@@ -3120,11 +5122,18 @@ module top_level_Intellight_Accelerat_0_0_CU
   input [31:0]Q;
   input clk;
   input [1:0]\FSM_onehot_cs_reg[0]_0 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   input [15:0]\r_lsfr_reg[16] ;
   input rst;
   input A_road;
 
+<<<<<<< HEAD
+  wire \A_reg_reg[2][2] ;
+  wire \A_reg_reg[2][2]_0 ;
+  wire \A_reg_reg[2][3] ;
+=======
   wire A_road;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire A_sel0_carry__0_n_0;
   wire A_sel0_carry__0_n_1;
   wire A_sel0_carry__0_n_2;
@@ -3139,16 +5148,18 @@ module top_level_Intellight_Accelerat_0_0_CU
   wire \FSM_onehot_cs[12]_i_1_n_0 ;
   wire \FSM_onehot_cs[7]_i_1_n_0 ;
   wire \FSM_onehot_cs[8]_i_1_n_0 ;
-  wire [1:0]\FSM_onehot_cs_reg[0]_0 ;
+  wire \FSM_onehot_cs[9]_i_1_n_0 ;
+  wire [0:0]\FSM_onehot_cs_reg[0]_0 ;
+  wire [1:0]\FSM_onehot_cs_reg[0]_1 ;
+  wire \FSM_onehot_cs_reg[14]_0 ;
   wire \FSM_onehot_cs_reg_n_0_[10] ;
   wire \FSM_onehot_cs_reg_n_0_[11] ;
   wire \FSM_onehot_cs_reg_n_0_[12] ;
   wire \FSM_onehot_cs_reg_n_0_[13] ;
-  wire \FSM_onehot_cs_reg_n_0_[14] ;
   wire \FSM_onehot_cs_reg_n_0_[1] ;
   wire \FSM_onehot_cs_reg_n_0_[2] ;
   wire \FSM_onehot_cs_reg_n_0_[7] ;
-  wire \FSM_onehot_cs_reg_n_0_[8] ;
+  wire \FSM_onehot_cs_reg_n_0_[9] ;
   wire [31:0]Q;
   wire clk;
   wire [15:0]episode;
@@ -3222,9 +5233,6 @@ module top_level_Intellight_Accelerat_0_0_CU
   wire finish_INST_0_i_1_n_0;
   wire finish_INST_0_i_2_n_0;
   wire finish_INST_0_i_3_n_0;
-  wire finish_INST_0_i_4_n_0;
-  wire finish_INST_0_i_5_n_0;
-  wire finish_INST_0_i_6_n_0;
   wire i__carry__0_i_1__0_n_0;
   wire i__carry__0_i_2__1_n_0;
   wire i__carry__0_i_3__0_n_0;
@@ -3241,7 +5249,11 @@ module top_level_Intellight_Accelerat_0_0_CU
   wire i__carry_i_6__0_n_0;
   wire i__carry_i_7__0_n_0;
   wire i__carry_i_8__0_n_0;
+<<<<<<< HEAD
+  wire [15:1]in6;
+=======
   wire [15:1]in10;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire ns1_carry__0_i_1_n_0;
   wire ns1_carry__0_i_2_n_0;
   wire ns1_carry__0_i_3_n_0;
@@ -3331,9 +5343,14 @@ module top_level_Intellight_Accelerat_0_0_CU
   wire \step_reg[8]_i_1_n_5 ;
   wire \step_reg[8]_i_1_n_6 ;
   wire \step_reg[8]_i_1_n_7 ;
+<<<<<<< HEAD
+  wire \wen_bram0[6]_INST_0_i_2_n_0 ;
+  wire [1:0]\wen_bram3[6] ;
+=======
   wire wen0;
   wire wen0_INST_0_i_1_n_0;
   wire wen1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [3:0]NLW_A_sel0_carry_O_UNCONNECTED;
   wire [3:0]NLW_A_sel0_carry__0_O_UNCONNECTED;
   wire [3:0]NLW_A_sel0_carry__1_CO_UNCONNECTED;
@@ -3349,8 +5366,13 @@ module top_level_Intellight_Accelerat_0_0_CU
 
   LUT2 #(
     .INIT(4'h1)) 
+<<<<<<< HEAD
+    \A_reg[0][3]_i_2 
+       (.I0(\FSM_onehot_cs_reg[0]_1 [0]),
+=======
     \A_reg[0][2]_i_2 
        (.I0(\FSM_onehot_cs_reg[0]_0 [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I1(CU_0_A_sel),
         .O(\slv_reg0_reg[0] ));
   CARRY4 A_sel0_carry
@@ -3380,6 +5402,14 @@ module top_level_Intellight_Accelerat_0_0_CU
         .D(A_sel0_carry__1_n_7),
         .Q(CU_0_A_sel),
         .R(1'b0));
+<<<<<<< HEAD
+  LUT3 #(
+    .INIT(8'h54)) 
+    \FSM_onehot_cs[0]_i_1 
+       (.I0(\FSM_onehot_cs_reg[0]_1 [1]),
+        .I1(\FSM_onehot_cs_reg_n_0_[12] ),
+        .I2(\FSM_onehot_cs_reg[0]_0 ),
+=======
   (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'h32)) 
@@ -3387,31 +5417,44 @@ module top_level_Intellight_Accelerat_0_0_CU
        (.I0(\FSM_onehot_cs_reg_n_0_[12] ),
         .I1(\FSM_onehot_cs_reg[0]_0 [1]),
         .I2(epsilon),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(\FSM_onehot_cs[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT4 #(
     .INIT(16'hF444)) 
     \FSM_onehot_cs[12]_i_1 
        (.I0(\ns1_inferred__0/i__carry__0_n_0 ),
-        .I1(\FSM_onehot_cs_reg_n_0_[14] ),
+        .I1(epsilon),
         .I2(\FSM_onehot_cs_reg_n_0_[12] ),
-        .I3(\FSM_onehot_cs_reg[0]_0 [1]),
+        .I3(\FSM_onehot_cs_reg[0]_1 [1]),
         .O(\FSM_onehot_cs[12]_i_1_n_0 ));
+<<<<<<< HEAD
+=======
   (* SOFT_HLUTNM = "soft_lutpair44" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT2 #(
     .INIT(4'h2)) 
     \FSM_onehot_cs[7]_i_1 
-       (.I0(step),
+       (.I0(\FSM_onehot_cs_reg_n_0_[9] ),
         .I1(ns1_carry__0_n_0),
         .O(\FSM_onehot_cs[7]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT4 #(
     .INIT(16'hF888)) 
     \FSM_onehot_cs[8]_i_1 
-       (.I0(epsilon),
-        .I1(\FSM_onehot_cs_reg[0]_0 [1]),
-        .I2(\FSM_onehot_cs_reg_n_0_[14] ),
+       (.I0(\FSM_onehot_cs_reg[0]_0 ),
+        .I1(\FSM_onehot_cs_reg[0]_1 [1]),
+        .I2(epsilon),
         .I3(\ns1_inferred__0/i__carry__0_n_0 ),
         .O(\FSM_onehot_cs[8]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  LUT3 #(
+    .INIT(8'hEA)) 
+    \FSM_onehot_cs[9]_i_1 
+       (.I0(\FSM_onehot_cs_reg_n_0_[11] ),
+        .I1(\FSM_onehot_cs_reg_n_0_[9] ),
+        .I2(ns1_carry__0_n_0),
+        .O(\FSM_onehot_cs[9]_i_1_n_0 ));
   (* FSM_ENCODED_STATES = "S_L0:000000000000010,S_L7:000000000100000,S_L9:000000000001000,S_L6:000000010000000,S_L8:000000001000000,S_IDLE:000000000000001,S_L5:000001000000000,S_L4:000100000000000,S_L3:000010000000000,S_L2:010000000000000,S_DONE:001000000000000,S_INIT:000000100000000,S_L11:100000000000000,S_L10:000000000010000,S_L1:000000000000100" *) 
   FDSE #(
     .INIT(1'b1)) 
@@ -3419,7 +5462,7 @@ module top_level_Intellight_Accelerat_0_0_CU
        (.C(clk),
         .CE(1'b1),
         .D(\FSM_onehot_cs[0]_i_1_n_0 ),
-        .Q(epsilon),
+        .Q(\FSM_onehot_cs_reg[0]_0 ),
         .S(rst));
   (* FSM_ENCODED_STATES = "S_L0:000000000000010,S_L7:000000000100000,S_L9:000000000001000,S_L6:000000010000000,S_L8:000000001000000,S_IDLE:000000000000001,S_L5:000001000000000,S_L4:000100000000000,S_L3:000010000000000,S_L2:010000000000000,S_DONE:001000000000000,S_INIT:000000100000000,S_L11:100000000000000,S_L10:000000000010000,S_L1:000000000000100" *) 
   FDRE #(
@@ -3464,7 +5507,7 @@ module top_level_Intellight_Accelerat_0_0_CU
        (.C(clk),
         .CE(1'b1),
         .D(p_3_in),
-        .Q(\FSM_onehot_cs_reg_n_0_[14] ),
+        .Q(epsilon),
         .R(rst));
   (* FSM_ENCODED_STATES = "S_L0:000000000000010,S_L7:000000000100000,S_L9:000000000001000,S_L6:000000010000000,S_L8:000000001000000,S_IDLE:000000000000001,S_L5:000001000000000,S_L4:000100000000000,S_L3:000010000000000,S_L2:010000000000000,S_DONE:001000000000000,S_INIT:000000100000000,S_L11:100000000000000,S_L10:000000000010000,S_L1:000000000000100" *) 
   FDRE #(
@@ -3472,7 +5515,7 @@ module top_level_Intellight_Accelerat_0_0_CU
     \FSM_onehot_cs_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .D(\FSM_onehot_cs_reg_n_0_[8] ),
+        .D(step),
         .Q(\FSM_onehot_cs_reg_n_0_[1] ),
         .R(rst));
   (* FSM_ENCODED_STATES = "S_L0:000000000000010,S_L7:000000000100000,S_L9:000000000001000,S_L6:000000010000000,S_L8:000000001000000,S_IDLE:000000000000001,S_L5:000001000000000,S_L4:000100000000000,S_L3:000010000000000,S_L2:010000000000000,S_DONE:001000000000000,S_INIT:000000100000000,S_L11:100000000000000,S_L10:000000000010000,S_L1:000000000000100" *) 
@@ -3536,7 +5579,7 @@ module top_level_Intellight_Accelerat_0_0_CU
        (.C(clk),
         .CE(1'b1),
         .D(\FSM_onehot_cs[8]_i_1_n_0 ),
-        .Q(\FSM_onehot_cs_reg_n_0_[8] ),
+        .Q(step),
         .R(rst));
   (* FSM_ENCODED_STATES = "S_L0:000000000000010,S_L7:000000000100000,S_L9:000000000001000,S_L6:000000010000000,S_L8:000000001000000,S_IDLE:000000000000001,S_L5:000001000000000,S_L4:000100000000000,S_L3:000010000000000,S_L2:010000000000000,S_DONE:001000000000000,S_INIT:000000100000000,S_L11:100000000000000,S_L10:000000000010000,S_L1:000000000000100" *) 
   FDRE #(
@@ -3544,15 +5587,15 @@ module top_level_Intellight_Accelerat_0_0_CU
     \FSM_onehot_cs_reg[9] 
        (.C(clk),
         .CE(1'b1),
-        .D(finish_INST_0_i_2_n_0),
-        .Q(step),
+        .D(\FSM_onehot_cs[9]_i_1_n_0 ),
+        .Q(\FSM_onehot_cs_reg_n_0_[9] ),
         .R(rst));
   (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT3 #(
     .INIT(8'h8B)) 
     \episode[0]_i_1 
        (.I0(Q[16]),
-        .I1(epsilon),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
         .I2(\episode_reg_n_0_[0] ),
         .O(episode[0]));
   (* SOFT_HLUTNM = "soft_lutpair48" *) 
@@ -3560,132 +5603,132 @@ module top_level_Intellight_Accelerat_0_0_CU
     .INIT(8'hB8)) 
     \episode[10]_i_1 
        (.I0(Q[26]),
-        .I1(epsilon),
-        .I2(in10[10]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[10]),
         .O(episode[10]));
   (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \episode[11]_i_1 
        (.I0(Q[27]),
-        .I1(epsilon),
-        .I2(in10[11]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[11]),
         .O(episode[11]));
   (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \episode[12]_i_1 
        (.I0(Q[28]),
-        .I1(epsilon),
-        .I2(in10[12]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[12]),
         .O(episode[12]));
   (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \episode[13]_i_1 
        (.I0(Q[29]),
-        .I1(epsilon),
-        .I2(in10[13]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[13]),
         .O(episode[13]));
   (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \episode[14]_i_1 
        (.I0(Q[30]),
-        .I1(epsilon),
-        .I2(in10[14]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[14]),
         .O(episode[14]));
   LUT2 #(
     .INIT(4'h2)) 
     \episode[15]_i_1 
-       (.I0(epsilon),
-        .I1(\FSM_onehot_cs_reg[0]_0 [0]),
+       (.I0(\FSM_onehot_cs_reg[0]_0 ),
+        .I1(\FSM_onehot_cs_reg[0]_1 [0]),
         .O(\episode[15]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hE)) 
     \episode[15]_i_2 
-       (.I0(\FSM_onehot_cs_reg_n_0_[14] ),
-        .I1(epsilon),
+       (.I0(\FSM_onehot_cs_reg[0]_0 ),
+        .I1(p_3_in),
         .O(\episode[15]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \episode[15]_i_3 
        (.I0(Q[31]),
-        .I1(epsilon),
-        .I2(in10[15]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[15]),
         .O(episode[15]));
   (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \episode[1]_i_1 
        (.I0(Q[17]),
-        .I1(epsilon),
-        .I2(in10[1]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[1]),
         .O(episode[1]));
   (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \episode[2]_i_1 
        (.I0(Q[18]),
-        .I1(epsilon),
-        .I2(in10[2]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[2]),
         .O(episode[2]));
   (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \episode[3]_i_1 
        (.I0(Q[19]),
-        .I1(epsilon),
-        .I2(in10[3]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[3]),
         .O(episode[3]));
   (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \episode[4]_i_1 
        (.I0(Q[20]),
-        .I1(epsilon),
-        .I2(in10[4]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[4]),
         .O(episode[4]));
   (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \episode[5]_i_1 
        (.I0(Q[21]),
-        .I1(epsilon),
-        .I2(in10[5]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[5]),
         .O(episode[5]));
   (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \episode[6]_i_1 
        (.I0(Q[22]),
-        .I1(epsilon),
-        .I2(in10[6]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[6]),
         .O(episode[6]));
   (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \episode[7]_i_1 
        (.I0(Q[23]),
-        .I1(epsilon),
-        .I2(in10[7]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[7]),
         .O(episode[7]));
   (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \episode[8]_i_1 
        (.I0(Q[24]),
-        .I1(epsilon),
-        .I2(in10[8]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[8]),
         .O(episode[8]));
   (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \episode[9]_i_1 
        (.I0(Q[25]),
-        .I1(epsilon),
-        .I2(in10[9]),
+        .I1(\FSM_onehot_cs_reg[0]_0 ),
+        .I2(in6[9]),
         .O(episode[9]));
   FDRE \episode_reg[0] 
        (.C(clk),
@@ -3717,7 +5760,7 @@ module top_level_Intellight_Accelerat_0_0_CU
         .CO({\episode_reg[12]_i_2_n_0 ,\episode_reg[12]_i_2_n_1 ,\episode_reg[12]_i_2_n_2 ,\episode_reg[12]_i_2_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(in10[12:9]),
+        .O(in6[12:9]),
         .S({\episode_reg_n_0_[12] ,\episode_reg_n_0_[11] ,\episode_reg_n_0_[10] ,\episode_reg_n_0_[9] }));
   FDRE \episode_reg[13] 
        (.C(clk),
@@ -3743,7 +5786,7 @@ module top_level_Intellight_Accelerat_0_0_CU
         .CO({\NLW_episode_reg[15]_i_4_CO_UNCONNECTED [3:2],\episode_reg[15]_i_4_n_2 ,\episode_reg[15]_i_4_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_episode_reg[15]_i_4_O_UNCONNECTED [3],in10[15:13]}),
+        .O({\NLW_episode_reg[15]_i_4_O_UNCONNECTED [3],in6[15:13]}),
         .S({1'b0,\episode_reg_n_0_[15] ,\episode_reg_n_0_[14] ,\episode_reg_n_0_[13] }));
   FDRE \episode_reg[1] 
        (.C(clk),
@@ -3775,7 +5818,7 @@ module top_level_Intellight_Accelerat_0_0_CU
         .CO({\episode_reg[4]_i_2_n_0 ,\episode_reg[4]_i_2_n_1 ,\episode_reg[4]_i_2_n_2 ,\episode_reg[4]_i_2_n_3 }),
         .CYINIT(\episode_reg_n_0_[0] ),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(in10[4:1]),
+        .O(in6[4:1]),
         .S({\episode_reg_n_0_[4] ,\episode_reg_n_0_[3] ,\episode_reg_n_0_[2] ,\episode_reg_n_0_[1] }));
   FDRE \episode_reg[5] 
        (.C(clk),
@@ -3807,7 +5850,7 @@ module top_level_Intellight_Accelerat_0_0_CU
         .CO({\episode_reg[8]_i_2_n_0 ,\episode_reg[8]_i_2_n_1 ,\episode_reg[8]_i_2_n_2 ,\episode_reg[8]_i_2_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(in10[8:5]),
+        .O(in6[8:5]),
         .S({\episode_reg_n_0_[8] ,\episode_reg_n_0_[7] ,\episode_reg_n_0_[6] ,\episode_reg_n_0_[5] }));
   FDRE \episode_reg[9] 
        (.C(clk),
@@ -3945,101 +5988,142 @@ module top_level_Intellight_Accelerat_0_0_CU
         .O(epsilon0_carry_i_4_n_0));
   FDRE \epsilon_reg[0] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[0]),
         .Q(epsilon__0[0]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[10] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[10]),
         .Q(epsilon__0[10]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[11] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[11]),
         .Q(epsilon__0[11]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[12] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[12]),
         .Q(epsilon__0[12]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[13] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[13]),
         .Q(epsilon__0[13]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[14] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[14]),
         .Q(epsilon__0[14]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[15] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[15]),
         .Q(epsilon__0[15]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[1] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[1]),
         .Q(epsilon__0[1]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[2] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[2]),
         .Q(epsilon__0[2]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[3] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[3]),
         .Q(epsilon__0[3]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[4] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[4]),
         .Q(epsilon__0[4]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[5] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[5]),
         .Q(epsilon__0[5]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[6] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[6]),
         .Q(epsilon__0[6]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[7] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[7]),
         .Q(epsilon__0[7]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[8] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[8]),
         .Q(epsilon__0[8]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
   FDRE \epsilon_reg[9] 
        (.C(clk),
-        .CE(\FSM_onehot_cs_reg_n_0_[14] ),
+        .CE(epsilon),
         .D(epsilon0[9]),
         .Q(epsilon__0[9]),
-        .R(epsilon));
+        .R(\FSM_onehot_cs_reg[0]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT5 #(
+<<<<<<< HEAD
+    .INIT(32'h0000FEEE)) 
+    finish_INST_0
+       (.I0(finish_INST_0_i_1_n_0),
+        .I1(\FSM_onehot_cs_reg_n_0_[11] ),
+        .I2(\FSM_onehot_cs_reg_n_0_[9] ),
+        .I3(ns1_carry__0_n_0),
+        .I4(finish_INST_0_i_2_n_0),
+        .O(finish));
+  LUT6 #(
+    .INIT(64'hFFFEFFFEFFFFFFFE)) 
+    finish_INST_0_i_1
+       (.I0(\FSM_onehot_cs_reg_n_0_[7] ),
+        .I1(p_1_in),
+        .I2(\FSM_onehot_cs_reg_n_0_[12] ),
+        .I3(\FSM_onehot_cs_reg_n_0_[1] ),
+        .I4(epsilon),
+        .I5(\ns1_inferred__0/i__carry__0_n_0 ),
+        .O(finish_INST_0_i_1_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF7777775F)) 
+    finish_INST_0_i_2
+       (.I0(\wen_bram0[6]_INST_0_i_2_n_0 ),
+        .I1(\FSM_onehot_cs_reg[0]_1 [1]),
+        .I2(epsilon),
+        .I3(\FSM_onehot_cs_reg[0]_0 ),
+        .I4(\FSM_onehot_cs_reg_n_0_[12] ),
+        .I5(finish_INST_0_i_3_n_0),
+        .O(finish_INST_0_i_2_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    finish_INST_0_i_3
+       (.I0(\FSM_onehot_cs_reg_n_0_[11] ),
+        .I1(\FSM_onehot_cs_reg_n_0_[9] ),
+        .I2(\FSM_onehot_cs_reg_n_0_[13] ),
+        .I3(\FSM_onehot_cs_reg_n_0_[10] ),
+        .I4(\FSM_onehot_cs_reg_n_0_[2] ),
+        .I5(p_2_in),
+        .O(finish_INST_0_i_3_n_0));
+=======
     .INIT(32'h0E000000)) 
     finish_INST_0
        (.I0(finish_INST_0_i_1_n_0),
@@ -4102,6 +6186,7 @@ module top_level_Intellight_Accelerat_0_0_CU
         .I2(\FSM_onehot_cs_reg_n_0_[12] ),
         .I3(\FSM_onehot_cs_reg[0]_0 [1]),
         .O(finish_INST_0_i_6_n_0));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT4 #(
     .INIT(16'h2B22)) 
     i__carry__0_i_1__0
@@ -4406,10 +6491,10 @@ module top_level_Intellight_Accelerat_0_0_CU
         .O(\step[0]_i_2_n_0 ));
   FDRE \step_reg[0] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[0]_i_1_n_7 ),
         .Q(step_reg[0]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \step_reg[0]_i_1 
        (.CI(1'b0),
@@ -4420,22 +6505,22 @@ module top_level_Intellight_Accelerat_0_0_CU
         .S({step_reg[3:1],\step[0]_i_2_n_0 }));
   FDRE \step_reg[10] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[8]_i_1_n_5 ),
         .Q(step_reg[10]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   FDRE \step_reg[11] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[8]_i_1_n_4 ),
         .Q(step_reg[11]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   FDRE \step_reg[12] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[12]_i_1_n_7 ),
         .Q(step_reg[12]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \step_reg[12]_i_1 
        (.CI(\step_reg[8]_i_1_n_0 ),
@@ -4446,46 +6531,46 @@ module top_level_Intellight_Accelerat_0_0_CU
         .S(step_reg[15:12]));
   FDRE \step_reg[13] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[12]_i_1_n_6 ),
         .Q(step_reg[13]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   FDRE \step_reg[14] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[12]_i_1_n_5 ),
         .Q(step_reg[14]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   FDRE \step_reg[15] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[12]_i_1_n_4 ),
         .Q(step_reg[15]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   FDRE \step_reg[1] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[0]_i_1_n_6 ),
         .Q(step_reg[1]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   FDRE \step_reg[2] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[0]_i_1_n_5 ),
         .Q(step_reg[2]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   FDRE \step_reg[3] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[0]_i_1_n_4 ),
         .Q(step_reg[3]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   FDRE \step_reg[4] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[4]_i_1_n_7 ),
         .Q(step_reg[4]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \step_reg[4]_i_1 
        (.CI(\step_reg[0]_i_1_n_0 ),
@@ -4496,28 +6581,28 @@ module top_level_Intellight_Accelerat_0_0_CU
         .S(step_reg[7:4]));
   FDRE \step_reg[5] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[4]_i_1_n_6 ),
         .Q(step_reg[5]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   FDRE \step_reg[6] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[4]_i_1_n_5 ),
         .Q(step_reg[6]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   FDRE \step_reg[7] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[4]_i_1_n_4 ),
         .Q(step_reg[7]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   FDRE \step_reg[8] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[8]_i_1_n_7 ),
         .Q(step_reg[8]),
-        .R(\FSM_onehot_cs_reg_n_0_[8] ));
+        .R(step));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \step_reg[8]_i_1 
        (.CI(\step_reg[4]_i_1_n_0 ),
@@ -4528,9 +6613,61 @@ module top_level_Intellight_Accelerat_0_0_CU
         .S(step_reg[11:8]));
   FDRE \step_reg[9] 
        (.C(clk),
-        .CE(step),
+        .CE(\FSM_onehot_cs_reg_n_0_[9] ),
         .D(\step_reg[8]_i_1_n_6 ),
         .Q(step_reg[9]),
+<<<<<<< HEAD
+        .R(step));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  LUT5 #(
+    .INIT(32'h00005551)) 
+    \wen_bram0[6]_INST_0_i_1 
+       (.I0(\wen_bram3[6] [0]),
+        .I1(\wen_bram0[6]_INST_0_i_2_n_0 ),
+        .I2(epsilon),
+        .I3(\FSM_onehot_cs_reg_n_0_[9] ),
+        .I4(\wen_bram3[6] [1]),
+        .O(\A_reg_reg[2][2] ));
+  LUT5 #(
+    .INIT(32'h00000001)) 
+    \wen_bram0[6]_INST_0_i_2 
+       (.I0(\FSM_onehot_cs_reg_n_0_[7] ),
+        .I1(p_1_in),
+        .I2(p_3_in),
+        .I3(p_2_in),
+        .I4(p_0_in),
+        .O(\wen_bram0[6]_INST_0_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  LUT5 #(
+    .INIT(32'hFF02FFFF)) 
+    \wen_bram1[6]_INST_0_i_1 
+       (.I0(\wen_bram0[6]_INST_0_i_2_n_0 ),
+        .I1(epsilon),
+        .I2(\FSM_onehot_cs_reg_n_0_[9] ),
+        .I3(\wen_bram3[6] [1]),
+        .I4(\wen_bram3[6] [0]),
+        .O(\FSM_onehot_cs_reg[14]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  LUT5 #(
+    .INIT(32'hBBBBBBFB)) 
+    \wen_bram2[6]_INST_0_i_1 
+       (.I0(\wen_bram3[6] [0]),
+        .I1(\wen_bram3[6] [1]),
+        .I2(\wen_bram0[6]_INST_0_i_2_n_0 ),
+        .I3(epsilon),
+        .I4(\FSM_onehot_cs_reg_n_0_[9] ),
+        .O(\A_reg_reg[2][2]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  LUT5 #(
+    .INIT(32'h555DFFFF)) 
+    \wen_bram3[6]_INST_0_i_1 
+       (.I0(\wen_bram3[6] [1]),
+        .I1(\wen_bram0[6]_INST_0_i_2_n_0 ),
+        .I2(epsilon),
+        .I3(\FSM_onehot_cs_reg_n_0_[9] ),
+        .I4(\wen_bram3[6] [0]),
+        .O(\A_reg_reg[2][3] ));
+=======
         .R(\FSM_onehot_cs_reg_n_0_[8] ));
   (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT5 #(
@@ -4561,10 +6698,103 @@ module top_level_Intellight_Accelerat_0_0_CU
         .I3(p_2_in),
         .I4(wen0_INST_0_i_1_n_0),
         .O(wen1));
+>>>>>>> parent of ae750207 (shfcuidtf7)
 endmodule
 
 (* ORIG_REF_NAME = "ENV" *) 
 module top_level_Intellight_Accelerat_0_0_ENV
+<<<<<<< HEAD
+   (\L_curr_reg[0][2] ,
+    Q,
+    \L_curr_reg[0][0] ,
+    \L_curr_reg[3][0] ,
+    \L_curr_reg[3][3] ,
+    \L_curr_reg[1][2] ,
+    \L_curr_reg[1][3] ,
+    \L_curr_reg[1][0] ,
+    \L_curr_reg[0][3] ,
+    \L_curr_reg[0][0]_0 ,
+    \L_curr_reg[3][3]_0 ,
+    \L_curr_reg[3][0]_0 ,
+    \L_curr_reg[1][3]_0 ,
+    \L_curr_reg[1][0]_0 ,
+    \L_curr_reg[2][3] ,
+    \L_curr_reg[2][3]_0 ,
+    \L_curr_reg[2][0] ,
+    \L_curr_reg[0][0]_1 ,
+    \L_curr_reg[2][2] ,
+    \L_curr_reg[2][0]_0 ,
+    \R_reg[15] ,
+    DI,
+    S,
+    \R_reg[15]_0 ,
+    \R_reg[15]_1 ,
+    \L_curr_reg[0][3]_0 ,
+    \L_curr_reg[0][3]_1 ,
+    \L_curr_reg[0][1] ,
+    \L_curr_reg[3][1] ,
+    \L_curr_reg[1][3]_1 ,
+    \L_curr_reg[1][3]_2 ,
+    \L_curr_reg[1][1] ,
+    \L_curr_reg[2][3]_1 ,
+    \L_curr_reg[2][3]_2 ,
+    \L_curr_reg[2][2]_0 ,
+    \L_curr_reg[2][2]_1 ,
+    \L_curr_reg[2][3]_3 ,
+    \L_curr_reg[2][3]_4 ,
+    \L_curr_reg[2][1] ,
+    rst,
+    D,
+    clk,
+    \L_curr_reg[1][3]_3 ,
+    \L_curr_reg[2][3]_5 ,
+    \L_curr_reg[3][3]_1 );
+  output \L_curr_reg[0][2] ;
+  output [3:0]Q;
+  output \L_curr_reg[0][0] ;
+  output \L_curr_reg[3][0] ;
+  output [3:0]\L_curr_reg[3][3] ;
+  output \L_curr_reg[1][2] ;
+  output [3:0]\L_curr_reg[1][3] ;
+  output \L_curr_reg[1][0] ;
+  output \L_curr_reg[0][3] ;
+  output \L_curr_reg[0][0]_0 ;
+  output \L_curr_reg[3][3]_0 ;
+  output \L_curr_reg[3][0]_0 ;
+  output \L_curr_reg[1][3]_0 ;
+  output \L_curr_reg[1][0]_0 ;
+  output \L_curr_reg[2][3] ;
+  output [3:0]\L_curr_reg[2][3]_0 ;
+  output \L_curr_reg[2][0] ;
+  output \L_curr_reg[0][0]_1 ;
+  output \L_curr_reg[2][2] ;
+  output \L_curr_reg[2][0]_0 ;
+  output [5:0]\R_reg[15] ;
+  input [2:0]DI;
+  input [2:0]S;
+  input [1:0]\R_reg[15]_0 ;
+  input [2:0]\R_reg[15]_1 ;
+  input \L_curr_reg[0][3]_0 ;
+  input \L_curr_reg[0][3]_1 ;
+  input \L_curr_reg[0][1] ;
+  input \L_curr_reg[3][1] ;
+  input \L_curr_reg[1][3]_1 ;
+  input \L_curr_reg[1][3]_2 ;
+  input \L_curr_reg[1][1] ;
+  input \L_curr_reg[2][3]_1 ;
+  input \L_curr_reg[2][3]_2 ;
+  input \L_curr_reg[2][2]_0 ;
+  input \L_curr_reg[2][2]_1 ;
+  input \L_curr_reg[2][3]_3 ;
+  input \L_curr_reg[2][3]_4 ;
+  input \L_curr_reg[2][1] ;
+  input rst;
+  input [3:0]D;
+  input clk;
+  input [3:0]\L_curr_reg[1][3]_3 ;
+  input [3:0]\L_curr_reg[2][3]_5 ;
+  input [3:0]\L_curr_reg[3][3]_1 ;
+=======
    (\L_curr_reg[0][3] ,
     Q,
     \L_curr_reg[0][0] ,
@@ -4673,38 +6903,78 @@ module top_level_Intellight_Accelerat_0_0_ENV
   input [3:0]\L_curr_reg[2][3]_2 ;
   input [3:0]\L_curr_reg[3][3]_4 ;
   input [6:0]\R_reg[14]_0 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
 
   wire [3:0]D;
+  wire [2:0]DI;
   wire \L_curr_reg[0][0] ;
   wire \L_curr_reg[0][0]_0 ;
   wire \L_curr_reg[0][0]_1 ;
+<<<<<<< HEAD
+  wire \L_curr_reg[0][1] ;
+  wire \L_curr_reg[0][2] ;
+  wire \L_curr_reg[0][3] ;
+  wire \L_curr_reg[0][3]_0 ;
+  wire \L_curr_reg[0][3]_1 ;
+=======
   wire \L_curr_reg[0][0]_2 ;
   wire \L_curr_reg[0][1] ;
   wire \L_curr_reg[0][3] ;
   wire \L_curr_reg[0][3]_0 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \L_curr_reg[1][0] ;
   wire \L_curr_reg[1][0]_0 ;
   wire \L_curr_reg[1][0]_1 ;
   wire \L_curr_reg[1][1] ;
   wire \L_curr_reg[1][2] ;
+<<<<<<< HEAD
+  wire [3:0]\L_curr_reg[1][3] ;
+  wire \L_curr_reg[1][3]_0 ;
+  wire \L_curr_reg[1][3]_1 ;
+  wire \L_curr_reg[1][3]_2 ;
+  wire [3:0]\L_curr_reg[1][3]_3 ;
+=======
   wire \L_curr_reg[1][3] ;
   wire [3:0]\L_curr_reg[1][3]_0 ;
   wire \L_curr_reg[1][3]_1 ;
   wire [3:0]\L_curr_reg[1][3]_2 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \L_curr_reg[2][0] ;
   wire \L_curr_reg[2][0]_0 ;
   wire \L_curr_reg[2][0]_1 ;
   wire \L_curr_reg[2][1] ;
   wire \L_curr_reg[2][2] ;
+<<<<<<< HEAD
+  wire \L_curr_reg[2][2]_0 ;
+  wire \L_curr_reg[2][2]_1 ;
+  wire \L_curr_reg[2][3] ;
+  wire [3:0]\L_curr_reg[2][3]_0 ;
+  wire \L_curr_reg[2][3]_1 ;
+  wire \L_curr_reg[2][3]_2 ;
+  wire \L_curr_reg[2][3]_3 ;
+  wire \L_curr_reg[2][3]_4 ;
+  wire [3:0]\L_curr_reg[2][3]_5 ;
+=======
   wire \L_curr_reg[2][3] ;
   wire [3:0]\L_curr_reg[2][3]_0 ;
   wire \L_curr_reg[2][3]_1 ;
   wire [3:0]\L_curr_reg[2][3]_2 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \L_curr_reg[3][0] ;
   wire \L_curr_reg[3][0]_0 ;
   wire \L_curr_reg[3][0]_1 ;
   wire \L_curr_reg[3][0]_2 ;
   wire \L_curr_reg[3][1] ;
+<<<<<<< HEAD
+  wire [3:0]\L_curr_reg[3][3] ;
+  wire \L_curr_reg[3][3]_0 ;
+  wire [3:0]\L_curr_reg[3][3]_1 ;
+  wire [3:0]Q;
+  wire [5:0]\R_reg[15] ;
+  wire [1:0]\R_reg[15]_0 ;
+  wire [2:0]\R_reg[15]_1 ;
+  wire [2:0]S;
+=======
   wire \L_curr_reg[3][1]_0 ;
   wire \L_curr_reg[3][2] ;
   wire \L_curr_reg[3][3] ;
@@ -4726,22 +6996,34 @@ module top_level_Intellight_Accelerat_0_0_ENV
   wire \R[2]_i_7 ;
   wire [6:0]\R_reg[14] ;
   wire [6:0]\R_reg[14]_0 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire clk;
   wire rst;
 
   top_level_Intellight_Accelerat_0_0_RD RD_0
-       (.\R_reg[14]_0 (\R_reg[14] ),
-        .\R_reg[14]_1 (\R_reg[14]_0 ),
+       (.DI(DI),
+        .\R_reg[15]_0 (\R_reg[15] ),
+        .\R_reg[15]_1 (\R_reg[15]_0 ),
+        .\R_reg[15]_2 (\R_reg[15]_1 ),
+        .S(S),
         .clk(clk));
   top_level_Intellight_Accelerat_0_0_SD SD_0
        (.D(D),
         .\L_curr_reg[0][0]_0 (\L_curr_reg[0][0] ),
         .\L_curr_reg[0][0]_1 (\L_curr_reg[0][0]_0 ),
         .\L_curr_reg[0][0]_2 (\L_curr_reg[0][0]_1 ),
+<<<<<<< HEAD
+        .\L_curr_reg[0][1]_0 (\L_curr_reg[0][1] ),
+        .\L_curr_reg[0][2]_0 (\L_curr_reg[0][2] ),
+        .\L_curr_reg[0][3]_0 (\L_curr_reg[0][3] ),
+        .\L_curr_reg[0][3]_1 (\L_curr_reg[0][3]_0 ),
+        .\L_curr_reg[0][3]_2 (\L_curr_reg[0][3]_1 ),
+=======
         .\L_curr_reg[0][0]_3 (\L_curr_reg[0][0]_2 ),
         .\L_curr_reg[0][1]_0 (\L_curr_reg[0][1] ),
         .\L_curr_reg[0][3]_0 (\L_curr_reg[0][3] ),
         .\L_curr_reg[0][3]_1 (\L_curr_reg[0][3]_0 ),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .\L_curr_reg[1][0]_0 (\L_curr_reg[1][0] ),
         .\L_curr_reg[1][0]_1 (\L_curr_reg[1][0]_0 ),
         .\L_curr_reg[1][0]_2 (\L_curr_reg[1][0]_1 ),
@@ -4751,28 +7033,44 @@ module top_level_Intellight_Accelerat_0_0_ENV
         .\L_curr_reg[1][3]_1 (\L_curr_reg[1][3]_0 ),
         .\L_curr_reg[1][3]_2 (\L_curr_reg[1][3]_1 ),
         .\L_curr_reg[1][3]_3 (\L_curr_reg[1][3]_2 ),
+<<<<<<< HEAD
+        .\L_curr_reg[1][3]_4 (\L_curr_reg[1][3]_3 ),
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .\L_curr_reg[2][0]_0 (\L_curr_reg[2][0] ),
         .\L_curr_reg[2][0]_1 (\L_curr_reg[2][0]_0 ),
         .\L_curr_reg[2][0]_2 (\L_curr_reg[2][0]_1 ),
         .\L_curr_reg[2][1]_0 (\L_curr_reg[2][1] ),
         .\L_curr_reg[2][2]_0 (\L_curr_reg[2][2] ),
+<<<<<<< HEAD
+        .\L_curr_reg[2][2]_1 (\L_curr_reg[2][2]_0 ),
+        .\L_curr_reg[2][2]_2 (\L_curr_reg[2][2]_1 ),
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .\L_curr_reg[2][3]_0 (\L_curr_reg[2][3] ),
         .\L_curr_reg[2][3]_1 (\L_curr_reg[2][3]_0 ),
         .\L_curr_reg[2][3]_2 (\L_curr_reg[2][3]_1 ),
         .\L_curr_reg[2][3]_3 (\L_curr_reg[2][3]_2 ),
+<<<<<<< HEAD
+        .\L_curr_reg[2][3]_4 (\L_curr_reg[2][3]_3 ),
+        .\L_curr_reg[2][3]_5 (\L_curr_reg[2][3]_4 ),
+        .\L_curr_reg[2][3]_6 (\L_curr_reg[2][3]_5 ),
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .\L_curr_reg[3][0]_0 (\L_curr_reg[3][0] ),
         .\L_curr_reg[3][0]_1 (\L_curr_reg[3][0]_0 ),
         .\L_curr_reg[3][0]_2 (\L_curr_reg[3][0]_1 ),
         .\L_curr_reg[3][0]_3 (\L_curr_reg[3][0]_2 ),
         .\L_curr_reg[3][1]_0 (\L_curr_reg[3][1] ),
-        .\L_curr_reg[3][1]_1 (\L_curr_reg[3][1]_0 ),
-        .\L_curr_reg[3][2]_0 (\L_curr_reg[3][2] ),
         .\L_curr_reg[3][3]_0 (\L_curr_reg[3][3] ),
         .\L_curr_reg[3][3]_1 (\L_curr_reg[3][3]_0 ),
         .\L_curr_reg[3][3]_2 (\L_curr_reg[3][3]_1 ),
+<<<<<<< HEAD
+=======
         .\L_curr_reg[3][3]_3 (\L_curr_reg[3][3]_2 ),
         .\L_curr_reg[3][3]_4 (\L_curr_reg[3][3]_3 ),
         .\L_curr_reg[3][3]_5 (\L_curr_reg[3][3]_4 ),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .Q(Q),
         .\R[14]_i_12_0 (\R[14]_i_12 ),
         .\R[14]_i_17 (\R[14]_i_17 ),
@@ -4792,12 +7090,22 @@ endmodule
 module top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0
    (rd_addr,
     wr_addr,
+<<<<<<< HEAD
+    idle,
+    finish,
+    wen_bram3,
+    wen_bram2,
+    wen_bram0,
+    wen_bram1,
+    D_new,
+=======
     D_new,
     \A_reg_reg[2][0] ,
     finish,
     wen0,
     wen1,
     wen_bram,
+>>>>>>> parent of ae750207 (shfcuidtf7)
     S_AXI_WREADY,
     S_AXI_AWREADY,
     S_AXI_ARREADY,
@@ -4807,10 +7115,10 @@ module top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0
     rst,
     clk,
     s00_axi_wstrb,
-    D_road2,
     D_road0,
-    D_road3,
     D_road1,
+    D_road2,
+    D_road3,
     s00_axi_aclk,
     s00_axi_awaddr,
     s00_axi_wdata,
@@ -4823,12 +7131,22 @@ module top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0
     s00_axi_rready);
   output [7:0]rd_addr;
   output [7:0]wr_addr;
+<<<<<<< HEAD
+  output idle;
+  output finish;
+  output [3:0]wen_bram3;
+  output [3:0]wen_bram2;
+  output [3:0]wen_bram0;
+  output [3:0]wen_bram1;
+  output [63:0]D_new;
+=======
   output [63:0]D_new;
   output \A_reg_reg[2][0] ;
   output finish;
   output wen0;
   output wen1;
   output [0:0]wen_bram;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   output S_AXI_WREADY;
   output S_AXI_AWREADY;
   output S_AXI_ARREADY;
@@ -4838,10 +7156,10 @@ module top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0
   input rst;
   input clk;
   input [3:0]s00_axi_wstrb;
-  input [63:0]D_road2;
   input [63:0]D_road0;
-  input [63:0]D_road3;
   input [63:0]D_road1;
+  input [63:0]D_road2;
+  input [63:0]D_road3;
   input s00_axi_aclk;
   input [5:0]s00_axi_awaddr;
   input [31:0]s00_axi_wdata;
@@ -4885,9 +7203,16 @@ module top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0
   wire [31:0]s00_axi_wdata;
   wire [3:0]s00_axi_wstrb;
   wire s00_axi_wvalid;
+<<<<<<< HEAD
+  wire [3:0]wen_bram0;
+  wire [3:0]wen_bram1;
+  wire [3:0]wen_bram2;
+  wire [3:0]wen_bram3;
+=======
   wire wen0;
   wire wen1;
   wire [0:0]wen_bram;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [7:0]wr_addr;
 
   top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0_S00_AXI Intellight_Accelerator_v1_0_S00_AXI_inst
@@ -4897,7 +7222,12 @@ module top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0
         .D_road1(D_road1),
         .D_road2(D_road2),
         .D_road3(D_road3),
+<<<<<<< HEAD
+        .Q(idle),
+        .aw_en_reg_0(Intellight_Accelerator_v1_0_S00_AXI_inst_n_20),
+=======
         .aw_en_reg_0(Intellight_Accelerator_v1_0_S00_AXI_inst_n_84),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .aw_en_reg_1(aw_en_i_1_n_0),
         .axi_arready_reg_0(S_AXI_ARREADY),
         .axi_awready_reg_0(S_AXI_AWREADY),
@@ -4920,9 +7250,16 @@ module top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0
         .s00_axi_wdata(s00_axi_wdata),
         .s00_axi_wstrb(s00_axi_wstrb),
         .s00_axi_wvalid(s00_axi_wvalid),
+<<<<<<< HEAD
+        .wen_bram0(wen_bram0),
+        .wen_bram1(wen_bram1),
+        .wen_bram2(wen_bram2),
+        .wen_bram3(wen_bram3),
+=======
         .wen0(wen0),
         .wen1(wen1),
         .wen_bram(wen_bram),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .wr_addr(wr_addr));
   LUT6 #(
     .INIT(64'hF0FFFFFF88888888)) 
@@ -4971,11 +7308,21 @@ module top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0_S00_AXI
     aw_en_reg_0,
     s00_axi_rvalid,
     s00_axi_rdata,
+<<<<<<< HEAD
+    Q,
+    finish,
+    wen_bram3,
+    wen_bram2,
+    wen_bram0,
+    wen_bram1,
+    D_new,
+=======
     \A_reg_reg[2][0] ,
     finish,
     wen0,
     wen1,
     wen_bram,
+>>>>>>> parent of ae750207 (shfcuidtf7)
     rst,
     clk,
     p_0_in,
@@ -5004,11 +7351,21 @@ module top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0_S00_AXI
   output aw_en_reg_0;
   output s00_axi_rvalid;
   output [31:0]s00_axi_rdata;
+<<<<<<< HEAD
+  output [0:0]Q;
+  output finish;
+  output [3:0]wen_bram3;
+  output [3:0]wen_bram2;
+  output [3:0]wen_bram0;
+  output [3:0]wen_bram1;
+  output [63:0]D_new;
+=======
   output \A_reg_reg[2][0] ;
   output finish;
   output wen0;
   output wen1;
   output [0:0]wen_bram;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   input rst;
   input clk;
   input p_0_in;
@@ -5034,7 +7391,15 @@ module top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0_S00_AXI
   wire [63:0]D_road1;
   wire [63:0]D_road2;
   wire [63:0]D_road3;
+<<<<<<< HEAD
+  wire [2:0]INPUT_0_alpha;
+  wire [2:0]INPUT_0_gamma;
+  wire [15:0]INPUT_0_max_episode;
+  wire INPUT_0_run;
+  wire [0:0]Q;
+=======
   wire [2:0]alpha;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire aw_en_reg_0;
   wire aw_en_reg_1;
   wire \axi_araddr_reg[2]_rep__0_n_0 ;
@@ -5612,8 +7977,11 @@ module top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0_S00_AXI
   wire axi_wready_reg_0;
   wire clk;
   wire finish;
+<<<<<<< HEAD
+=======
   wire [2:0]gamma;
   wire [15:0]max_episode;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire p_0_in;
   wire [31:5]p_1_in;
   wire [7:0]rd_addr;
@@ -5868,9 +8236,16 @@ module top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0_S00_AXI
   wire \slv_reg9[31]_i_1_n_0 ;
   wire \slv_reg9[7]_i_1_n_0 ;
   wire slv_reg_rden;
+<<<<<<< HEAD
+  wire [3:0]wen_bram0;
+  wire [3:0]wen_bram1;
+  wire [3:0]wen_bram2;
+  wire [3:0]wen_bram3;
+=======
   wire wen0;
   wire wen1;
   wire [0:0]wen_bram;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [7:0]wr_addr;
 
   top_level_Intellight_Accelerat_0_0_Accelerator accelerator_0
@@ -5887,6 +8262,18 @@ module top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0_S00_AXI
         .Q({max_episode,\slv_reg1_reg_n_0_[15] ,\slv_reg1_reg_n_0_[14] ,\slv_reg1_reg_n_0_[13] ,\slv_reg1_reg_n_0_[12] ,\slv_reg1_reg_n_0_[11] ,\slv_reg1_reg_n_0_[10] ,\slv_reg1_reg_n_0_[9] ,\slv_reg1_reg_n_0_[8] ,\slv_reg1_reg_n_0_[7] ,\slv_reg1_reg_n_0_[6] ,\slv_reg1_reg_n_0_[5] ,\slv_reg1_reg_n_0_[4] ,\slv_reg1_reg_n_0_[3] ,\slv_reg1_reg_n_0_[2] ,\slv_reg1_reg_n_0_[1] ,\slv_reg1_reg_n_0_[0] }),
         .clk(clk),
         .finish(finish),
+<<<<<<< HEAD
+        .idle(Q),
+        .\r_lsfr_reg[16] (slv_reg2),
+        .rd_addr(rd_addr),
+        .\rd_addr[10] (slv_reg8),
+        .\rd_addr[4]_INST_0_i_3 (slv_reg7),
+        .rst(rst),
+        .wen_bram0(wen_bram0),
+        .wen_bram1(wen_bram1),
+        .wen_bram2(wen_bram2),
+        .wen_bram3(wen_bram3),
+=======
         .\r_lsfr_reg[16] (slv_reg2),
         .rd_addr(rd_addr),
         .\rd_addr[3]_INST_0_i_3 (slv_reg7),
@@ -5895,6 +8282,7 @@ module top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0_S00_AXI
         .wen0(wen0),
         .wen1(wen1),
         .wen_bram(wen_bram),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .wr_addr(wr_addr),
         .x__0_carry__2({gamma,alpha,run,\slv_reg0_reg_n_0_[0] }));
   FDSE aw_en_reg
@@ -19865,6 +22253,10 @@ endmodule
 (* ORIG_REF_NAME = "MII" *) 
 module top_level_Intellight_Accelerat_0_0_MII
    (wr_addr,
+    wen_bram3,
+    wen_bram2,
+    wen_bram0,
+    wen_bram1,
     D_new,
     A_road,
     wen_bram,
@@ -19872,12 +22264,61 @@ module top_level_Intellight_Accelerat_0_0_MII
     rst,
     clk,
     rd_addr,
+<<<<<<< HEAD
+    \wen_bram3[6] ,
+    wen_bram2_0_sp_1,
+    \wen_bram0[6] ,
+    \wen_bram1[6] ,
+    O,
+    \D_new[55] ,
+    \D_new[59] ,
+    \D_new[63] ,
+    D,
+    \D_reg_reg[1][63]_0 );
+=======
     D_road1,
     D_road0,
     AGENT_0_Q_new,
     \A_reg_reg[0][2]_0 );
+>>>>>>> parent of ae750207 (shfcuidtf7)
   output [7:0]wr_addr;
+  output [3:0]wen_bram3;
+  output [3:0]wen_bram2;
+  output [3:0]wen_bram0;
+  output [3:0]wen_bram1;
   output [63:0]D_new;
+<<<<<<< HEAD
+  output [1:0]Q;
+  input rst;
+  input clk;
+  input [7:0]rd_addr;
+  input \wen_bram3[6] ;
+  input wen_bram2_0_sp_1;
+  input \wen_bram0[6] ;
+  input \wen_bram1[6] ;
+  input [3:0]O;
+  input [3:0]\D_new[55] ;
+  input [3:0]\D_new[59] ;
+  input [3:0]\D_new[63] ;
+  input [3:0]D;
+  input [63:0]\D_reg_reg[1][63]_0 ;
+
+  wire [3:0]\A_reg_reg[0]_3 ;
+  wire [3:0]\A_reg_reg[1]_4 ;
+  wire \A_reg_reg_n_0_[2][0] ;
+  wire \A_reg_reg_n_0_[2][1] ;
+  wire [3:0]D;
+  wire [63:0]D_new;
+  wire [3:0]\D_new[55] ;
+  wire [3:0]\D_new[59] ;
+  wire [3:0]\D_new[63] ;
+  wire [63:0]\D_reg_reg[1][63]_0 ;
+  wire [63:0]\D_reg_reg[1]_5 ;
+  wire [63:0]\D_reg_reg[2]_6 ;
+  wire [63:0]\D_reg_reg[3]_7 ;
+  wire [3:0]O;
+  wire [1:0]Q;
+=======
   output A_road;
   output [0:0]wen_bram;
   output \A_reg_reg[2][0]_0 ;
@@ -20092,6 +22533,7 @@ module top_level_Intellight_Accelerat_0_0_MII
   wire D_reg_reg_gate_n_0;
   wire [63:0]D_road0;
   wire [63:0]D_road1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \S_reg_reg[2][0]_srl3___inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_1_n_0 ;
   wire \S_reg_reg[2][1]_srl3___inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_1_n_0 ;
   wire \S_reg_reg[2][2]_srl3___inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_1_n_0 ;
@@ -20123,9 +22565,21 @@ module top_level_Intellight_Accelerat_0_0_MII
   wire clk;
   wire [7:0]rd_addr;
   wire rst;
+<<<<<<< HEAD
+  wire [3:0]wen_bram0;
+  wire \wen_bram0[6] ;
+  wire [3:0]wen_bram1;
+  wire \wen_bram1[6] ;
+  wire [3:0]wen_bram2;
+  wire wen_bram2_0_sn_1;
+  wire [3:0]wen_bram3;
+  wire \wen_bram3[6] ;
+=======
   wire [0:0]wen_bram;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [7:0]wr_addr;
 
+  assign wen_bram2_0_sn_1 = wen_bram2_0_sp_1;
   FDRE \A_reg_reg[0][0] 
        (.C(clk),
         .CE(1'b1),
@@ -20153,12 +22607,42 @@ module top_level_Intellight_Accelerat_0_0_MII
   FDRE \A_reg_reg[2][0] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\A_reg_reg[1]_4 [0]),
+        .Q(\A_reg_reg_n_0_[2][0] ),
+        .R(rst));
+  FDRE \A_reg_reg[2][1] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\A_reg_reg[1]_4 [1]),
+        .Q(\A_reg_reg_n_0_[2][1] ),
+=======
         .D(\A_reg_reg[1]_9 [0]),
         .Q(\A_reg_reg[2][0]_0 ),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .R(rst));
   FDRE \A_reg_reg[2][2] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\A_reg_reg[1]_4 [2]),
+        .Q(Q[0]),
+        .R(rst));
+  FDRE \A_reg_reg[2][3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\A_reg_reg[1]_4 [3]),
+        .Q(Q[1]),
+        .R(rst));
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  LUT4 #(
+    .INIT(16'hFE02)) 
+    \D_new[0]_INST_0 
+       (.I0(O[0]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [0]),
+=======
         .D(\A_reg_reg[1]_9 [2]),
         .Q(A_road),
         .R(rst));
@@ -20169,195 +22653,687 @@ module top_level_Intellight_Accelerat_0_0_MII
        (.I0(\D_reg_reg[3]_0 [0]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(AGENT_0_Q_new[0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[0]));
   (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[10]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[59] [2]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [10]),
+=======
        (.I0(\D_reg_reg[3]_0 [10]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(AGENT_0_Q_new[10]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[10]));
   (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[11]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[59] [3]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [11]),
+=======
        (.I0(\D_reg_reg[3]_0 [11]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(AGENT_0_Q_new[11]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[11]));
   (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[12]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[63] [0]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [12]),
+=======
        (.I0(\D_reg_reg[3]_0 [12]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(AGENT_0_Q_new[12]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[12]));
   (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[13]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[63] [1]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [13]),
+=======
        (.I0(\D_reg_reg[3]_0 [13]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(AGENT_0_Q_new[13]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[13]));
   (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[14]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[63] [2]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [14]),
+=======
        (.I0(\D_reg_reg[3]_0 [14]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(AGENT_0_Q_new[14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[14]));
   (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[15]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[63] [3]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [15]),
+=======
        (.I0(\D_reg_reg[3]_0 [15]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(AGENT_0_Q_new[15]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[15]));
   (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[16]_INST_0 
+<<<<<<< HEAD
+       (.I0(O[0]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [16]),
+=======
        (.I0(AGENT_0_Q_new[0]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [16]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[16]));
   (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[17]_INST_0 
+<<<<<<< HEAD
+       (.I0(O[1]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [17]),
+=======
        (.I0(AGENT_0_Q_new[1]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [17]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[17]));
   (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[18]_INST_0 
+<<<<<<< HEAD
+       (.I0(O[2]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [18]),
+=======
        (.I0(AGENT_0_Q_new[2]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [18]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[18]));
   (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[19]_INST_0 
+<<<<<<< HEAD
+       (.I0(O[3]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [19]),
+=======
        (.I0(AGENT_0_Q_new[3]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [19]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[19]));
   (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[1]_INST_0 
+<<<<<<< HEAD
+       (.I0(O[1]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [1]),
+=======
        (.I0(\D_reg_reg[3]_0 [1]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(AGENT_0_Q_new[1]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[1]));
   (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[20]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[55] [0]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [20]),
+=======
        (.I0(AGENT_0_Q_new[4]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [20]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[20]));
   (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[21]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[55] [1]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [21]),
+=======
        (.I0(AGENT_0_Q_new[5]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [21]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[21]));
   (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[22]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[55] [2]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [22]),
+=======
        (.I0(AGENT_0_Q_new[6]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [22]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[22]));
   (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[23]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[55] [3]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [23]),
+=======
        (.I0(AGENT_0_Q_new[7]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [23]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[23]));
   (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[24]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[59] [0]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [24]),
+=======
        (.I0(AGENT_0_Q_new[8]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [24]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[24]));
   (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[25]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[59] [1]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [25]),
+=======
        (.I0(AGENT_0_Q_new[9]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [25]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[25]));
   (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[26]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[59] [2]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [26]),
+=======
        (.I0(AGENT_0_Q_new[10]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [26]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[26]));
   (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[27]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[59] [3]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [27]),
+=======
        (.I0(AGENT_0_Q_new[11]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [27]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[27]));
   (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[28]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[63] [0]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [28]),
+=======
        (.I0(AGENT_0_Q_new[12]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [28]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[28]));
   (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[29]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[63] [1]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [29]),
+=======
        (.I0(AGENT_0_Q_new[13]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [29]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[29]));
   (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[2]_INST_0 
+<<<<<<< HEAD
+       (.I0(O[2]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [2]),
+=======
        (.I0(\D_reg_reg[3]_0 [2]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(AGENT_0_Q_new[2]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[2]));
   (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[30]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[63] [2]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [30]),
+=======
        (.I0(AGENT_0_Q_new[14]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [30]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[30]));
   (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[31]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[63] [3]),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .I3(\D_reg_reg[3]_7 [31]),
+        .O(D_new[31]));
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[32]_INST_0 
+       (.I0(O[0]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [32]),
+        .O(D_new[32]));
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[33]_INST_0 
+       (.I0(O[1]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [33]),
+        .O(D_new[33]));
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[34]_INST_0 
+       (.I0(O[2]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [34]),
+        .O(D_new[34]));
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[35]_INST_0 
+       (.I0(O[3]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [35]),
+        .O(D_new[35]));
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[36]_INST_0 
+       (.I0(\D_new[55] [0]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [36]),
+        .O(D_new[36]));
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[37]_INST_0 
+       (.I0(\D_new[55] [1]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [37]),
+        .O(D_new[37]));
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[38]_INST_0 
+       (.I0(\D_new[55] [2]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [38]),
+        .O(D_new[38]));
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[39]_INST_0 
+       (.I0(\D_new[55] [3]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [39]),
+        .O(D_new[39]));
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  LUT4 #(
+    .INIT(16'hFE02)) 
+    \D_new[3]_INST_0 
+       (.I0(O[3]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [3]),
+        .O(D_new[3]));
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[40]_INST_0 
+       (.I0(\D_new[59] [0]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [40]),
+        .O(D_new[40]));
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[41]_INST_0 
+       (.I0(\D_new[59] [1]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [41]),
+        .O(D_new[41]));
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[42]_INST_0 
+       (.I0(\D_new[59] [2]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [42]),
+        .O(D_new[42]));
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[43]_INST_0 
+       (.I0(\D_new[59] [3]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [43]),
+        .O(D_new[43]));
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[44]_INST_0 
+       (.I0(\D_new[63] [0]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [44]),
+        .O(D_new[44]));
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[45]_INST_0 
+       (.I0(\D_new[63] [1]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [45]),
+        .O(D_new[45]));
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[46]_INST_0 
+       (.I0(\D_new[63] [2]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [46]),
+        .O(D_new[46]));
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \D_new[47]_INST_0 
+       (.I0(\D_new[63] [3]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [47]),
+        .O(D_new[47]));
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[48]_INST_0 
+       (.I0(O[0]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [48]),
+        .O(D_new[48]));
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[49]_INST_0 
+       (.I0(O[1]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [49]),
+        .O(D_new[49]));
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  LUT4 #(
+    .INIT(16'hFE02)) 
+    \D_new[4]_INST_0 
+       (.I0(\D_new[55] [0]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [4]),
+        .O(D_new[4]));
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[50]_INST_0 
+       (.I0(O[2]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [50]),
+        .O(D_new[50]));
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[51]_INST_0 
+       (.I0(O[3]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [51]),
+        .O(D_new[51]));
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[52]_INST_0 
+       (.I0(\D_new[55] [0]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [52]),
+        .O(D_new[52]));
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[53]_INST_0 
+       (.I0(\D_new[55] [1]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [53]),
+        .O(D_new[53]));
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[54]_INST_0 
+       (.I0(\D_new[55] [2]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [54]),
+        .O(D_new[54]));
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[55]_INST_0 
+       (.I0(\D_new[55] [3]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [55]),
+        .O(D_new[55]));
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[56]_INST_0 
+       (.I0(\D_new[59] [0]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [56]),
+        .O(D_new[56]));
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[57]_INST_0 
+       (.I0(\D_new[59] [1]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [57]),
+        .O(D_new[57]));
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[58]_INST_0 
+       (.I0(\D_new[59] [2]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [58]),
+        .O(D_new[58]));
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[59]_INST_0 
+       (.I0(\D_new[59] [3]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [59]),
+        .O(D_new[59]));
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  LUT4 #(
+    .INIT(16'hFE02)) 
+    \D_new[5]_INST_0 
+       (.I0(\D_new[55] [1]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [5]),
+        .O(D_new[5]));
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[60]_INST_0 
+       (.I0(\D_new[63] [0]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [60]),
+        .O(D_new[60]));
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[61]_INST_0 
+       (.I0(\D_new[63] [1]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [61]),
+        .O(D_new[61]));
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[62]_INST_0 
+       (.I0(\D_new[63] [2]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [62]),
+        .O(D_new[62]));
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    \D_new[63]_INST_0 
+       (.I0(\D_new[63] [3]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [63]),
+        .O(D_new[63]));
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  LUT4 #(
+    .INIT(16'hFE02)) 
+    \D_new[6]_INST_0 
+       (.I0(\D_new[55] [2]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [6]),
+=======
        (.I0(AGENT_0_Q_new[15]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(\D_reg_reg[3]_0 [31]),
@@ -20393,30 +23369,52 @@ module top_level_Intellight_Accelerat_0_0_MII
        (.I0(\D_reg_reg[3]_0 [6]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(AGENT_0_Q_new[6]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[6]));
   (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[7]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[55] [3]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [7]),
+=======
        (.I0(\D_reg_reg[3]_0 [7]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(AGENT_0_Q_new[7]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[7]));
   (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[8]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[59] [0]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [8]),
+=======
        (.I0(\D_reg_reg[3]_0 [8]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(AGENT_0_Q_new[8]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[8]));
   (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \D_new[9]_INST_0 
+<<<<<<< HEAD
+       (.I0(\D_new[59] [1]),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .I3(\D_reg_reg[3]_7 [9]),
+=======
        (.I0(\D_reg_reg[3]_0 [9]),
         .I1(\A_reg_reg[2][0]_0 ),
         .I2(AGENT_0_Q_new[9]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(D_new[9]));
   (* srl_bus_name = "\inst/Intellight_Accelerator_v1_0_S00_AXI_inst/accelerator_0/MII_0/D_reg_reg[1] " *) 
   (* srl_name = "\inst/Intellight_Accelerator_v1_0_S00_AXI_inst/accelerator_0/MII_0/D_reg_reg[1][0]_srl2___inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_0 " *) 
@@ -23034,56 +26032,88 @@ module top_level_Intellight_Accelerat_0_0_MII
         .D(S_reg_reg_gate_n_0),
         .Q(wr_addr[7]),
         .R(rst));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair112" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT2 #(
     .INIT(4'h8)) 
     S_reg_reg_gate
        (.I0(\S_reg_reg[3][7]_inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_2_n_0 ),
         .I1(S_reg_reg_r_2_n_0),
         .O(S_reg_reg_gate_n_0));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair112" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT2 #(
     .INIT(4'h8)) 
     S_reg_reg_gate__0
        (.I0(\S_reg_reg[3][6]_inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_2_n_0 ),
         .I1(S_reg_reg_r_2_n_0),
         .O(S_reg_reg_gate__0_n_0));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair113" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT2 #(
     .INIT(4'h8)) 
     S_reg_reg_gate__1
        (.I0(\S_reg_reg[3][5]_inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_2_n_0 ),
         .I1(S_reg_reg_r_2_n_0),
         .O(S_reg_reg_gate__1_n_0));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair113" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT2 #(
     .INIT(4'h8)) 
     S_reg_reg_gate__2
        (.I0(\S_reg_reg[3][4]_inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_2_n_0 ),
         .I1(S_reg_reg_r_2_n_0),
         .O(S_reg_reg_gate__2_n_0));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair114" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT2 #(
     .INIT(4'h8)) 
     S_reg_reg_gate__3
        (.I0(\S_reg_reg[3][3]_inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_2_n_0 ),
         .I1(S_reg_reg_r_2_n_0),
         .O(S_reg_reg_gate__3_n_0));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair114" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT2 #(
     .INIT(4'h8)) 
     S_reg_reg_gate__4
        (.I0(\S_reg_reg[3][2]_inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_2_n_0 ),
         .I1(S_reg_reg_r_2_n_0),
         .O(S_reg_reg_gate__4_n_0));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair115" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT2 #(
     .INIT(4'h8)) 
     S_reg_reg_gate__5
        (.I0(\S_reg_reg[3][1]_inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_2_n_0 ),
         .I1(S_reg_reg_r_2_n_0),
         .O(S_reg_reg_gate__5_n_0));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair115" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT2 #(
     .INIT(4'h8)) 
     S_reg_reg_gate__6
@@ -23114,24 +26144,165 @@ module top_level_Intellight_Accelerat_0_0_MII
         .D(S_reg_reg_r_1_n_0),
         .Q(S_reg_reg_r_2_n_0),
         .R(rst));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  LUT3 #(
+    .INIT(8'h02)) 
+    \wen_bram0[0]_INST_0 
+       (.I0(\wen_bram0[6] ),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .O(wen_bram0[0]));
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  LUT3 #(
+    .INIT(8'h20)) 
+    \wen_bram0[2]_INST_0 
+       (.I0(\wen_bram0[6] ),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\A_reg_reg_n_0_[2][0] ),
+        .O(wen_bram0[1]));
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  LUT3 #(
+    .INIT(8'h20)) 
+    \wen_bram0[4]_INST_0 
+       (.I0(\wen_bram0[6] ),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .O(wen_bram0[2]));
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \wen_bram0[6]_INST_0 
+       (.I0(\wen_bram0[6] ),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\A_reg_reg_n_0_[2][1] ),
+        .O(wen_bram0[3]));
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  LUT3 #(
+    .INIT(8'h01)) 
+    \wen_bram1[0]_INST_0 
+       (.I0(\A_reg_reg_n_0_[2][0] ),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\wen_bram1[6] ),
+        .O(wen_bram1[0]));
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \wen_bram1[2]_INST_0 
+       (.I0(\A_reg_reg_n_0_[2][1] ),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\wen_bram1[6] ),
+        .O(wen_bram1[1]));
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \wen_bram1[4]_INST_0 
+       (.I0(\A_reg_reg_n_0_[2][0] ),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\wen_bram1[6] ),
+        .O(wen_bram1[2]));
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    \wen_bram1[6]_INST_0 
+       (.I0(\A_reg_reg_n_0_[2][0] ),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\wen_bram1[6] ),
+        .O(wen_bram1[3]));
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  LUT3 #(
+    .INIT(8'h01)) 
+    \wen_bram2[0]_INST_0 
+       (.I0(\A_reg_reg_n_0_[2][0] ),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(wen_bram2_0_sn_1),
+        .O(wen_bram2[0]));
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \wen_bram2[2]_INST_0 
+       (.I0(\A_reg_reg_n_0_[2][1] ),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(wen_bram2_0_sn_1),
+        .O(wen_bram2[1]));
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \wen_bram2[4]_INST_0 
+       (.I0(\A_reg_reg_n_0_[2][0] ),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(wen_bram2_0_sn_1),
+        .O(wen_bram2[2]));
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    \wen_bram2[6]_INST_0 
+       (.I0(\A_reg_reg_n_0_[2][0] ),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(wen_bram2_0_sn_1),
+        .O(wen_bram2[3]));
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  LUT3 #(
+    .INIT(8'h01)) 
+    \wen_bram3[0]_INST_0 
+       (.I0(\A_reg_reg_n_0_[2][0] ),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\wen_bram3[6] ),
+        .O(wen_bram3[0]));
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \wen_bram3[2]_INST_0 
+       (.I0(\A_reg_reg_n_0_[2][1] ),
+        .I1(\A_reg_reg_n_0_[2][0] ),
+        .I2(\wen_bram3[6] ),
+        .O(wen_bram3[1]));
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \wen_bram3[4]_INST_0 
+       (.I0(\A_reg_reg_n_0_[2][0] ),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\wen_bram3[6] ),
+        .O(wen_bram3[2]));
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    \wen_bram3[6]_INST_0 
+       (.I0(\A_reg_reg_n_0_[2][0] ),
+        .I1(\A_reg_reg_n_0_[2][1] ),
+        .I2(\wen_bram3[6] ),
+        .O(wen_bram3[3]));
+=======
   LUT1 #(
     .INIT(2'h1)) 
     \wen_bram[0]_INST_0 
        (.I0(\A_reg_reg[2][0]_0 ),
         .O(wen_bram));
+>>>>>>> parent of ae750207 (shfcuidtf7)
 endmodule
 
 (* ORIG_REF_NAME = "QA" *) 
 module top_level_Intellight_Accelerat_0_0_QA
-   (AGENT_0_Q_new,
+   (O,
+    \Q_act_reg_reg[2][7]_0 ,
+    \Q_act_reg_reg[2][11]_0 ,
+    \Q_act_reg_reg[2][14]_0 ,
     \D_road1[31] ,
     \D_road1[30] ,
     \D_road1[29] ,
     \D_road3[28] ,
+<<<<<<< HEAD
+    \D_road3[27] ,
+    \D_road3[26] ,
+    \D_road1[25] ,
+    \D_road1[24] ,
+=======
     \D_road0[27] ,
     \D_road1[26] ,
     \D_road1[25] ,
     \D_road0[24] ,
+>>>>>>> parent of ae750207 (shfcuidtf7)
     D_road1,
     D_road3,
     D_road0,
@@ -23142,16 +26313,26 @@ module top_level_Intellight_Accelerat_0_0_QA
     rst,
     D,
     clk,
-    \R_reg0_reg[14]_0 );
-  output [15:0]AGENT_0_Q_new;
+    \R_reg0_reg[15]_0 );
+  output [3:0]O;
+  output [3:0]\Q_act_reg_reg[2][7]_0 ;
+  output [3:0]\Q_act_reg_reg[2][11]_0 ;
+  output [3:0]\Q_act_reg_reg[2][14]_0 ;
   output \D_road1[31] ;
   output \D_road1[30] ;
   output \D_road1[29] ;
   output \D_road3[28] ;
+<<<<<<< HEAD
+  output \D_road3[27] ;
+  output \D_road3[26] ;
+  output \D_road1[25] ;
+  output \D_road1[24] ;
+=======
   output \D_road0[27] ;
   output \D_road1[26] ;
   output \D_road1[25] ;
   output \D_road0[24] ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   input [7:0]D_road1;
   input [7:0]D_road3;
   input [7:0]D_road0;
@@ -23162,14 +26343,25 @@ module top_level_Intellight_Accelerat_0_0_QA
   input rst;
   input [15:0]D;
   input clk;
-  input [6:0]\R_reg0_reg[14]_0 ;
+  input [5:0]\R_reg0_reg[15]_0 ;
 
-  wire [15:0]AGENT_0_Q_new;
   wire [15:0]D;
   wire [7:0]D_road0;
   wire \D_road0[24] ;
   wire \D_road0[27] ;
   wire [7:0]D_road1;
+<<<<<<< HEAD
+  wire \D_road1[24] ;
+  wire \D_road1[25] ;
+  wire \D_road1[31] ;
+  wire [7:0]D_road2;
+  wire [7:0]D_road3;
+  wire \D_road3[26] ;
+  wire \D_road3[27] ;
+  wire \D_road3[28] ;
+  wire \D_road3[29] ;
+  wire [3:0]O;
+=======
   wire \D_road1[25] ;
   wire \D_road1[26] ;
   wire \D_road1[29] ;
@@ -23178,6 +26370,7 @@ module top_level_Intellight_Accelerat_0_0_QA
   wire [7:0]D_road2;
   wire [7:0]D_road3;
   wire \D_road3[28] ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [1:0]Q;
   wire QA_mul1_n_0;
   wire QA_mul1_n_1;
@@ -23195,9 +26388,18 @@ module top_level_Intellight_Accelerat_0_0_QA
   wire QA_mul1_n_7;
   wire QA_mul1_n_8;
   wire QA_mul1_n_9;
+<<<<<<< HEAD
+  wire [15:0]\Q_act_reg_reg[0]_0 ;
+  wire [15:0]\Q_act_reg_reg[1]_1 ;
+  wire [3:0]\Q_act_reg_reg[2][11]_0 ;
+  wire [3:0]\Q_act_reg_reg[2][14]_0 ;
+  wire [3:0]\Q_act_reg_reg[2][7]_0 ;
+  wire [15:0]\Q_act_reg_reg[2]_2 ;
+=======
   wire [15:0]\Q_act_reg_reg[0]_1 ;
   wire [15:0]\Q_act_reg_reg[1]_2 ;
   wire [15:0]\Q_act_reg_reg[2]_3 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [15:0]Q_gamma;
   wire Q_new_carry__0_n_0;
   wire Q_new_carry__0_n_1;
@@ -23214,8 +26416,8 @@ module top_level_Intellight_Accelerat_0_0_QA
   wire Q_new_carry_n_1;
   wire Q_new_carry_n_2;
   wire Q_new_carry_n_3;
-  wire [14:0]R_reg0;
-  wire [6:0]\R_reg0_reg[14]_0 ;
+  wire [15:10]R_reg0;
+  wire [5:0]\R_reg0_reg[15]_0 ;
   wire clk;
   wire rst;
   wire [15:1]x;
@@ -23307,9 +26509,6 @@ module top_level_Intellight_Accelerat_0_0_QA
   wire x__45_carry__2_i_3_n_0;
   wire x__45_carry__2_i_4_n_0;
   wire x__45_carry__2_i_5_n_0;
-  wire x__45_carry__2_i_6_n_0;
-  wire x__45_carry__2_i_7_n_0;
-  wire x__45_carry__2_n_1;
   wire x__45_carry__2_n_2;
   wire x__45_carry__2_n_3;
   wire x__45_carry_i_1_n_0;
@@ -23319,6 +26518,7 @@ module top_level_Intellight_Accelerat_0_0_QA
   wire x__45_carry_i_5_n_0;
   wire x__45_carry_i_6_n_0;
   wire x__45_carry_i_7_n_0;
+  wire x__45_carry_i_8_n_0;
   wire x__45_carry_n_0;
   wire x__45_carry_n_1;
   wire x__45_carry_n_2;
@@ -23340,8 +26540,8 @@ module top_level_Intellight_Accelerat_0_0_QA
   wire \x_reg0_reg_n_0_[9] ;
   wire [3:3]NLW_Q_new_carry__2_CO_UNCONNECTED;
   wire [3:3]NLW_x__0_carry__2_CO_UNCONNECTED;
-  wire [0:0]NLW_x__45_carry_O_UNCONNECTED;
-  wire [3:3]NLW_x__45_carry__2_CO_UNCONNECTED;
+  wire [3:2]NLW_x__45_carry__2_CO_UNCONNECTED;
+  wire [3:3]NLW_x__45_carry__2_O_UNCONNECTED;
 
   top_level_Intellight_Accelerat_0_0_multiply QA_mul1
        (.Q(\Q_act_reg_reg[2]_3 ),
@@ -23650,6 +26850,17 @@ module top_level_Intellight_Accelerat_0_0_QA
         .I5(D_road2[2]),
         .O(\D_road1[26] ));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0F5533000F5533FF)) 
+    \Q_max[11]_i_3 
+       (.I0(D_road3[3]),
+        .I1(D_road2[3]),
+        .I2(D_road0[3]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road1[3]),
+        .O(\D_road3[27] ));
+=======
     .INIT(64'h5533000F5533FF0F)) 
     \Q_max[11]_i_3 
        (.I0(D_road0[3]),
@@ -23659,6 +26870,7 @@ module top_level_Intellight_Accelerat_0_0_QA
         .I4(Q[1]),
         .I5(D_road2[3]),
         .O(\D_road0[27] ));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'h0F5533000F5533FF)) 
     \Q_max[12]_i_3 
@@ -23724,74 +26936,88 @@ module top_level_Intellight_Accelerat_0_0_QA
        (.CI(1'b0),
         .CO({Q_new_carry_n_0,Q_new_carry_n_1,Q_new_carry_n_2,Q_new_carry_n_3}),
         .CYINIT(1'b1),
+<<<<<<< HEAD
+        .DI(\Q_act_reg_reg[2]_2 [3:0]),
+        .O(O),
+=======
         .DI(\Q_act_reg_reg[2]_3 [3:0]),
         .O(AGENT_0_Q_new[3:0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .S({QA_mul1_n_12,QA_mul1_n_13,QA_mul1_n_14,QA_mul1_n_15}));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 Q_new_carry__0
        (.CI(Q_new_carry_n_0),
         .CO({Q_new_carry__0_n_0,Q_new_carry__0_n_1,Q_new_carry__0_n_2,Q_new_carry__0_n_3}),
         .CYINIT(1'b0),
+<<<<<<< HEAD
+        .DI(\Q_act_reg_reg[2]_2 [7:4]),
+        .O(\Q_act_reg_reg[2][7]_0 ),
+=======
         .DI(\Q_act_reg_reg[2]_3 [7:4]),
         .O(AGENT_0_Q_new[7:4]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .S({QA_mul1_n_8,QA_mul1_n_9,QA_mul1_n_10,QA_mul1_n_11}));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 Q_new_carry__1
        (.CI(Q_new_carry__0_n_0),
         .CO({Q_new_carry__1_n_0,Q_new_carry__1_n_1,Q_new_carry__1_n_2,Q_new_carry__1_n_3}),
         .CYINIT(1'b0),
+<<<<<<< HEAD
+        .DI(\Q_act_reg_reg[2]_2 [11:8]),
+        .O(\Q_act_reg_reg[2][11]_0 ),
+=======
         .DI(\Q_act_reg_reg[2]_3 [11:8]),
         .O(AGENT_0_Q_new[11:8]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .S({QA_mul1_n_4,QA_mul1_n_5,QA_mul1_n_6,QA_mul1_n_7}));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 Q_new_carry__2
        (.CI(Q_new_carry__1_n_0),
         .CO({NLW_Q_new_carry__2_CO_UNCONNECTED[3],Q_new_carry__2_n_1,Q_new_carry__2_n_2,Q_new_carry__2_n_3}),
         .CYINIT(1'b0),
+<<<<<<< HEAD
+        .DI({1'b0,\Q_act_reg_reg[2]_2 [14:12]}),
+        .O(\Q_act_reg_reg[2][14]_0 ),
+=======
         .DI({1'b0,\Q_act_reg_reg[2]_3 [14:12]}),
         .O(AGENT_0_Q_new[15:12]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .S({QA_mul1_n_0,QA_mul1_n_1,QA_mul1_n_2,QA_mul1_n_3}));
-  FDRE \R_reg0_reg[0] 
+  FDRE \R_reg0_reg[10] 
        (.C(clk),
         .CE(1'b1),
-        .D(\R_reg0_reg[14]_0 [0]),
-        .Q(R_reg0[0]),
+        .D(\R_reg0_reg[15]_0 [0]),
+        .Q(R_reg0[10]),
+        .R(rst));
+  FDRE \R_reg0_reg[11] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\R_reg0_reg[15]_0 [1]),
+        .Q(R_reg0[11]),
+        .R(rst));
+  FDRE \R_reg0_reg[12] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\R_reg0_reg[15]_0 [2]),
+        .Q(R_reg0[12]),
+        .R(rst));
+  FDRE \R_reg0_reg[13] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\R_reg0_reg[15]_0 [3]),
+        .Q(R_reg0[13]),
         .R(rst));
   FDRE \R_reg0_reg[14] 
        (.C(clk),
         .CE(1'b1),
-        .D(\R_reg0_reg[14]_0 [6]),
+        .D(\R_reg0_reg[15]_0 [4]),
         .Q(R_reg0[14]),
         .R(rst));
-  FDRE \R_reg0_reg[1] 
+  FDRE \R_reg0_reg[15] 
        (.C(clk),
         .CE(1'b1),
-        .D(\R_reg0_reg[14]_0 [1]),
-        .Q(R_reg0[1]),
-        .R(rst));
-  FDRE \R_reg0_reg[2] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\R_reg0_reg[14]_0 [2]),
-        .Q(R_reg0[2]),
-        .R(rst));
-  FDRE \R_reg0_reg[3] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\R_reg0_reg[14]_0 [3]),
-        .Q(R_reg0[3]),
-        .R(rst));
-  FDRE \R_reg0_reg[4] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\R_reg0_reg[14]_0 [4]),
-        .Q(R_reg0[4]),
-        .R(rst));
-  FDRE \R_reg0_reg[5] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\R_reg0_reg[14]_0 [5]),
-        .Q(R_reg0[5]),
+        .D(\R_reg0_reg[15]_0 [5]),
+        .Q(R_reg0[15]),
         .R(rst));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 x__0_carry
@@ -24208,76 +27434,117 @@ module top_level_Intellight_Accelerat_0_0_QA
        (.CI(1'b0),
         .CO({x__45_carry_n_0,x__45_carry_n_1,x__45_carry_n_2,x__45_carry_n_3}),
         .CYINIT(1'b0),
-        .DI({x__45_carry_i_1_n_0,x__45_carry_i_2_n_0,x__45_carry_i_3_n_0,R_reg0[0]}),
-        .O({x[3:1],NLW_x__45_carry_O_UNCONNECTED[0]}),
-        .S({x__45_carry_i_4_n_0,x__45_carry_i_5_n_0,x__45_carry_i_6_n_0,x__45_carry_i_7_n_0}));
+        .DI({x__45_carry_i_1_n_0,x__45_carry_i_2_n_0,x__45_carry_i_3_n_0,x__45_carry_i_4_n_0}),
+        .O(x[4:1]),
+        .S({x__45_carry_i_5_n_0,x__45_carry_i_6_n_0,x__45_carry_i_7_n_0,x__45_carry_i_8_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 x__45_carry__0
        (.CI(x__45_carry_n_0),
         .CO({x__45_carry__0_n_0,x__45_carry__0_n_1,x__45_carry__0_n_2,x__45_carry__0_n_3}),
         .CYINIT(1'b0),
         .DI({x__45_carry__0_i_1_n_0,x__45_carry__0_i_2_n_0,x__45_carry__0_i_3_n_0,x__45_carry__0_i_4_n_0}),
-        .O(x[7:4]),
+        .O(x[8:5]),
         .S({x__45_carry__0_i_5_n_0,x__45_carry__0_i_6_n_0,x__45_carry__0_i_7_n_0,x__45_carry__0_i_8_n_0}));
-  LUT3 #(
-    .INIT(8'hB2)) 
+  LUT2 #(
+    .INIT(4'h2)) 
     x__45_carry__0_i_1
+<<<<<<< HEAD
+       (.I0(Q_gamma[7]),
+        .I1(\Q_act_reg_reg[1]_1 [7]),
+=======
        (.I0(R_reg0[14]),
         .I1(\Q_act_reg_reg[1]_2 [6]),
         .I2(Q_gamma[6]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__0_i_1_n_0));
-  LUT3 #(
-    .INIT(8'hB2)) 
+  LUT2 #(
+    .INIT(4'h2)) 
     x__45_carry__0_i_2
+<<<<<<< HEAD
+       (.I0(Q_gamma[6]),
+        .I1(\Q_act_reg_reg[1]_1 [6]),
+=======
        (.I0(R_reg0[5]),
         .I1(\Q_act_reg_reg[1]_2 [5]),
         .I2(Q_gamma[5]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__0_i_2_n_0));
-  LUT3 #(
-    .INIT(8'hB2)) 
+  LUT2 #(
+    .INIT(4'h2)) 
     x__45_carry__0_i_3
+<<<<<<< HEAD
+       (.I0(Q_gamma[5]),
+        .I1(\Q_act_reg_reg[1]_1 [5]),
+=======
        (.I0(R_reg0[4]),
         .I1(\Q_act_reg_reg[1]_2 [4]),
         .I2(Q_gamma[4]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__0_i_3_n_0));
-  LUT3 #(
-    .INIT(8'hB2)) 
+  LUT2 #(
+    .INIT(4'h2)) 
     x__45_carry__0_i_4
+<<<<<<< HEAD
+       (.I0(Q_gamma[4]),
+        .I1(\Q_act_reg_reg[1]_1 [4]),
+=======
        (.I0(R_reg0[3]),
         .I1(\Q_act_reg_reg[1]_2 [3]),
         .I2(Q_gamma[3]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__0_i_4_n_0));
   LUT4 #(
-    .INIT(16'h9669)) 
+    .INIT(16'hB44B)) 
     x__45_carry__0_i_5
        (.I0(\Q_act_reg_reg[1]_2 [7]),
         .I1(Q_gamma[7]),
-        .I2(R_reg0[14]),
-        .I3(x__45_carry__0_i_1_n_0),
+        .I2(Q_gamma[8]),
+        .I3(\Q_act_reg_reg[1]_1 [8]),
         .O(x__45_carry__0_i_5_n_0));
   LUT4 #(
-    .INIT(16'h9669)) 
+    .INIT(16'hB44B)) 
     x__45_carry__0_i_6
+<<<<<<< HEAD
+       (.I0(\Q_act_reg_reg[1]_1 [6]),
+        .I1(Q_gamma[6]),
+        .I2(Q_gamma[7]),
+        .I3(\Q_act_reg_reg[1]_1 [7]),
+=======
        (.I0(R_reg0[14]),
         .I1(\Q_act_reg_reg[1]_2 [6]),
         .I2(Q_gamma[6]),
         .I3(x__45_carry__0_i_2_n_0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__0_i_6_n_0));
   LUT4 #(
-    .INIT(16'h9669)) 
+    .INIT(16'hB44B)) 
     x__45_carry__0_i_7
+<<<<<<< HEAD
+       (.I0(\Q_act_reg_reg[1]_1 [5]),
+        .I1(Q_gamma[5]),
+        .I2(Q_gamma[6]),
+        .I3(\Q_act_reg_reg[1]_1 [6]),
+=======
        (.I0(R_reg0[5]),
         .I1(\Q_act_reg_reg[1]_2 [5]),
         .I2(Q_gamma[5]),
         .I3(x__45_carry__0_i_3_n_0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__0_i_7_n_0));
   LUT4 #(
-    .INIT(16'h9669)) 
+    .INIT(16'hB44B)) 
     x__45_carry__0_i_8
+<<<<<<< HEAD
+       (.I0(\Q_act_reg_reg[1]_1 [4]),
+        .I1(Q_gamma[4]),
+        .I2(Q_gamma[5]),
+        .I3(\Q_act_reg_reg[1]_1 [5]),
+=======
        (.I0(R_reg0[4]),
         .I1(\Q_act_reg_reg[1]_2 [4]),
         .I2(Q_gamma[4]),
         .I3(x__45_carry__0_i_4_n_0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__0_i_8_n_0));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 x__45_carry__1
@@ -24285,109 +27552,212 @@ module top_level_Intellight_Accelerat_0_0_QA
         .CO({x__45_carry__1_n_0,x__45_carry__1_n_1,x__45_carry__1_n_2,x__45_carry__1_n_3}),
         .CYINIT(1'b0),
         .DI({x__45_carry__1_i_1_n_0,x__45_carry__1_i_2_n_0,x__45_carry__1_i_3_n_0,x__45_carry__1_i_4_n_0}),
-        .O(x[11:8]),
+        .O(x[12:9]),
         .S({x__45_carry__1_i_5_n_0,x__45_carry__1_i_6_n_0,x__45_carry__1_i_7_n_0,x__45_carry__1_i_8_n_0}));
+  (* HLUTNM = "lutpair2" *) 
   LUT3 #(
-    .INIT(8'hD4)) 
+    .INIT(8'hB2)) 
     x__45_carry__1_i_1
+<<<<<<< HEAD
+       (.I0(R_reg0[11]),
+        .I1(\Q_act_reg_reg[1]_1 [11]),
+        .I2(Q_gamma[11]),
+=======
        (.I0(\Q_act_reg_reg[1]_2 [10]),
         .I1(Q_gamma[10]),
         .I2(R_reg0[14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__1_i_1_n_0));
+  (* HLUTNM = "lutpair1" *) 
   LUT3 #(
-    .INIT(8'hD4)) 
+    .INIT(8'hB2)) 
     x__45_carry__1_i_2
+<<<<<<< HEAD
+       (.I0(R_reg0[10]),
+        .I1(\Q_act_reg_reg[1]_1 [10]),
+        .I2(Q_gamma[10]),
+=======
        (.I0(\Q_act_reg_reg[1]_2 [9]),
         .I1(Q_gamma[9]),
         .I2(R_reg0[14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__1_i_2_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
+  (* HLUTNM = "lutpair0" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
     x__45_carry__1_i_3
+<<<<<<< HEAD
+       (.I0(Q_gamma[9]),
+        .I1(\Q_act_reg_reg[1]_1 [9]),
+=======
        (.I0(\Q_act_reg_reg[1]_2 [8]),
         .I1(Q_gamma[8]),
         .I2(R_reg0[14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__1_i_3_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
+  LUT2 #(
+    .INIT(4'h2)) 
     x__45_carry__1_i_4
+<<<<<<< HEAD
+       (.I0(Q_gamma[8]),
+        .I1(\Q_act_reg_reg[1]_1 [8]),
+=======
        (.I0(\Q_act_reg_reg[1]_2 [7]),
         .I1(Q_gamma[7]),
         .I2(R_reg0[14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__1_i_4_n_0));
+  (* HLUTNM = "lutpair3" *) 
   LUT4 #(
     .INIT(16'h9669)) 
     x__45_carry__1_i_5
+<<<<<<< HEAD
+       (.I0(R_reg0[12]),
+        .I1(\Q_act_reg_reg[1]_1 [12]),
+        .I2(Q_gamma[12]),
+=======
        (.I0(\Q_act_reg_reg[1]_2 [11]),
         .I1(Q_gamma[11]),
         .I2(R_reg0[14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(x__45_carry__1_i_1_n_0),
         .O(x__45_carry__1_i_5_n_0));
+  (* HLUTNM = "lutpair2" *) 
   LUT4 #(
     .INIT(16'h9669)) 
     x__45_carry__1_i_6
+<<<<<<< HEAD
+       (.I0(R_reg0[11]),
+        .I1(\Q_act_reg_reg[1]_1 [11]),
+        .I2(Q_gamma[11]),
+=======
        (.I0(\Q_act_reg_reg[1]_2 [10]),
         .I1(Q_gamma[10]),
         .I2(R_reg0[14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(x__45_carry__1_i_2_n_0),
         .O(x__45_carry__1_i_6_n_0));
+  (* HLUTNM = "lutpair1" *) 
   LUT4 #(
     .INIT(16'h9669)) 
     x__45_carry__1_i_7
+<<<<<<< HEAD
+       (.I0(R_reg0[10]),
+        .I1(\Q_act_reg_reg[1]_1 [10]),
+        .I2(Q_gamma[10]),
+=======
        (.I0(\Q_act_reg_reg[1]_2 [9]),
         .I1(Q_gamma[9]),
         .I2(R_reg0[14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(x__45_carry__1_i_3_n_0),
         .O(x__45_carry__1_i_7_n_0));
+  (* HLUTNM = "lutpair0" *) 
   LUT4 #(
-    .INIT(16'h9669)) 
+    .INIT(16'h9699)) 
     x__45_carry__1_i_8
+<<<<<<< HEAD
+       (.I0(Q_gamma[9]),
+        .I1(\Q_act_reg_reg[1]_1 [9]),
+        .I2(\Q_act_reg_reg[1]_1 [8]),
+        .I3(Q_gamma[8]),
+=======
        (.I0(\Q_act_reg_reg[1]_2 [8]),
         .I1(Q_gamma[8]),
         .I2(R_reg0[14]),
         .I3(x__45_carry__1_i_4_n_0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__1_i_8_n_0));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 x__45_carry__2
        (.CI(x__45_carry__1_n_0),
-        .CO({NLW_x__45_carry__2_CO_UNCONNECTED[3],x__45_carry__2_n_1,x__45_carry__2_n_2,x__45_carry__2_n_3}),
+        .CO({NLW_x__45_carry__2_CO_UNCONNECTED[3:2],x__45_carry__2_n_2,x__45_carry__2_n_3}),
         .CYINIT(1'b0),
-        .DI({1'b0,x__45_carry__2_i_1_n_0,x__45_carry__2_i_2_n_0,x__45_carry__2_i_3_n_0}),
-        .O(x[15:12]),
-        .S({x__45_carry__2_i_4_n_0,x__45_carry__2_i_5_n_0,x__45_carry__2_i_6_n_0,x__45_carry__2_i_7_n_0}));
+        .DI({1'b0,1'b0,x__45_carry__2_i_1_n_0,x__45_carry__2_i_2_n_0}),
+        .O({NLW_x__45_carry__2_O_UNCONNECTED[3],x[15:13]}),
+        .S({1'b0,x__45_carry__2_i_3_n_0,x__45_carry__2_i_4_n_0,x__45_carry__2_i_5_n_0}));
+  (* HLUTNM = "lutpair4" *) 
   LUT3 #(
-    .INIT(8'hD4)) 
+    .INIT(8'hB2)) 
     x__45_carry__2_i_1
+<<<<<<< HEAD
+       (.I0(R_reg0[13]),
+        .I1(\Q_act_reg_reg[1]_1 [13]),
+        .I2(Q_gamma[13]),
+=======
        (.I0(\Q_act_reg_reg[1]_2 [13]),
         .I1(Q_gamma[13]),
         .I2(R_reg0[14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__2_i_1_n_0));
+  (* HLUTNM = "lutpair3" *) 
   LUT3 #(
-    .INIT(8'hD4)) 
+    .INIT(8'hB2)) 
     x__45_carry__2_i_2
+<<<<<<< HEAD
+       (.I0(R_reg0[12]),
+        .I1(\Q_act_reg_reg[1]_1 [12]),
+        .I2(Q_gamma[12]),
+=======
        (.I0(\Q_act_reg_reg[1]_2 [12]),
         .I1(Q_gamma[12]),
         .I2(R_reg0[14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__2_i_2_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
+  LUT6 #(
+    .INIT(64'h9669969669699669)) 
     x__45_carry__2_i_3
+<<<<<<< HEAD
+       (.I0(R_reg0[15]),
+        .I1(\Q_act_reg_reg[1]_1 [15]),
+        .I2(Q_gamma[15]),
+        .I3(R_reg0[14]),
+        .I4(\Q_act_reg_reg[1]_1 [14]),
+        .I5(Q_gamma[14]),
+=======
        (.I0(\Q_act_reg_reg[1]_2 [11]),
         .I1(Q_gamma[11]),
         .I2(R_reg0[14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__2_i_3_n_0));
-  LUT5 #(
-    .INIT(32'h96999969)) 
+  LUT4 #(
+    .INIT(16'h9669)) 
     x__45_carry__2_i_4
+<<<<<<< HEAD
+       (.I0(x__45_carry__2_i_1_n_0),
+        .I1(R_reg0[14]),
+        .I2(\Q_act_reg_reg[1]_1 [14]),
+        .I3(Q_gamma[14]),
+=======
        (.I0(\Q_act_reg_reg[1]_2 [15]),
         .I1(Q_gamma[15]),
         .I2(Q_gamma[14]),
         .I3(\Q_act_reg_reg[1]_2 [14]),
         .I4(R_reg0[14]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry__2_i_4_n_0));
+  (* HLUTNM = "lutpair4" *) 
   LUT4 #(
     .INIT(16'h9669)) 
     x__45_carry__2_i_5
+<<<<<<< HEAD
+       (.I0(R_reg0[13]),
+        .I1(\Q_act_reg_reg[1]_1 [13]),
+        .I2(Q_gamma[13]),
+        .I3(x__45_carry__2_i_2_n_0),
+        .O(x__45_carry__2_i_5_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    x__45_carry_i_1
+       (.I0(Q_gamma[3]),
+        .I1(\Q_act_reg_reg[1]_1 [3]),
+        .O(x__45_carry_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    x__45_carry_i_2
+       (.I0(Q_gamma[2]),
+        .I1(\Q_act_reg_reg[1]_1 [2]),
+=======
        (.I0(x__45_carry__2_i_1_n_0),
         .I1(Q_gamma[14]),
         .I2(\Q_act_reg_reg[1]_2 [14]),
@@ -24422,10 +27792,45 @@ module top_level_Intellight_Accelerat_0_0_QA
        (.I0(R_reg0[1]),
         .I1(\Q_act_reg_reg[1]_2 [1]),
         .I2(Q_gamma[1]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry_i_2_n_0));
-  (* HLUTNM = "lutpair0" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    x__45_carry_i_3
+       (.I0(Q_gamma[1]),
+        .I1(\Q_act_reg_reg[1]_1 [1]),
+        .O(x__45_carry_i_3_n_0));
   LUT2 #(
     .INIT(4'hB)) 
+<<<<<<< HEAD
+    x__45_carry_i_4
+       (.I0(Q_gamma[0]),
+        .I1(\Q_act_reg_reg[1]_1 [0]),
+        .O(x__45_carry_i_4_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    x__45_carry_i_5
+       (.I0(\Q_act_reg_reg[1]_1 [3]),
+        .I1(Q_gamma[3]),
+        .I2(Q_gamma[4]),
+        .I3(\Q_act_reg_reg[1]_1 [4]),
+        .O(x__45_carry_i_5_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    x__45_carry_i_6
+       (.I0(\Q_act_reg_reg[1]_1 [2]),
+        .I1(Q_gamma[2]),
+        .I2(Q_gamma[3]),
+        .I3(\Q_act_reg_reg[1]_1 [3]),
+        .O(x__45_carry_i_6_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    x__45_carry_i_7
+       (.I0(\Q_act_reg_reg[1]_1 [1]),
+        .I1(Q_gamma[1]),
+        .I2(Q_gamma[2]),
+        .I3(\Q_act_reg_reg[1]_1 [2]),
+=======
     x__45_carry_i_3
        (.I0(Q_gamma[0]),
         .I1(\Q_act_reg_reg[1]_2 [0]),
@@ -24461,7 +27866,16 @@ module top_level_Intellight_Accelerat_0_0_QA
        (.I0(Q_gamma[0]),
         .I1(\Q_act_reg_reg[1]_2 [0]),
         .I2(R_reg0[0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(x__45_carry_i_7_n_0));
+  LUT4 #(
+    .INIT(16'h2DD2)) 
+    x__45_carry_i_8
+       (.I0(\Q_act_reg_reg[1]_1 [0]),
+        .I1(Q_gamma[0]),
+        .I2(Q_gamma[1]),
+        .I3(\Q_act_reg_reg[1]_1 [1]),
+        .O(x__45_carry_i_8_n_0));
   FDRE \x_reg0_reg[10] 
        (.C(clk),
         .CE(1'b1),
@@ -24556,63 +27970,179 @@ endmodule
 
 (* ORIG_REF_NAME = "RD" *) 
 module top_level_Intellight_Accelerat_0_0_RD
-   (\R_reg[14]_0 ,
-    \R_reg[14]_1 ,
+   (\R_reg[15]_0 ,
+    DI,
+    S,
+    \R_reg[15]_1 ,
+    \R_reg[15]_2 ,
     clk);
-  output [6:0]\R_reg[14]_0 ;
-  input [6:0]\R_reg[14]_1 ;
+  output [5:0]\R_reg[15]_0 ;
+  input [2:0]DI;
+  input [2:0]S;
+  input [1:0]\R_reg[15]_1 ;
+  input [2:0]\R_reg[15]_2 ;
   input clk;
 
-  wire [6:0]\R_reg[14]_0 ;
-  wire [6:0]\R_reg[14]_1 ;
+  wire [2:0]DI;
+  wire R0__2_carry__0_n_2;
+  wire R0__2_carry__0_n_3;
+  wire R0__2_carry__0_n_5;
+  wire R0__2_carry__0_n_6;
+  wire R0__2_carry__0_n_7;
+  wire R0__2_carry_n_0;
+  wire R0__2_carry_n_1;
+  wire R0__2_carry_n_2;
+  wire R0__2_carry_n_3;
+  wire R0__2_carry_n_4;
+  wire R0__2_carry_n_5;
+  wire R0__2_carry_n_6;
+  wire [5:0]\R_reg[15]_0 ;
+  wire [1:0]\R_reg[15]_1 ;
+  wire [2:0]\R_reg[15]_2 ;
+  wire [2:0]S;
   wire clk;
+  wire [0:0]NLW_R0__2_carry_O_UNCONNECTED;
+  wire [3:2]NLW_R0__2_carry__0_CO_UNCONNECTED;
+  wire [3:3]NLW_R0__2_carry__0_O_UNCONNECTED;
 
-  FDRE \R_reg[0] 
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 R0__2_carry
+       (.CI(1'b0),
+        .CO({R0__2_carry_n_0,R0__2_carry_n_1,R0__2_carry_n_2,R0__2_carry_n_3}),
+        .CYINIT(1'b0),
+        .DI({DI,1'b0}),
+        .O({R0__2_carry_n_4,R0__2_carry_n_5,R0__2_carry_n_6,NLW_R0__2_carry_O_UNCONNECTED[0]}),
+        .S({S,1'b0}));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 R0__2_carry__0
+       (.CI(R0__2_carry_n_0),
+        .CO({NLW_R0__2_carry__0_CO_UNCONNECTED[3:2],R0__2_carry__0_n_2,R0__2_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,\R_reg[15]_1 }),
+        .O({NLW_R0__2_carry__0_O_UNCONNECTED[3],R0__2_carry__0_n_5,R0__2_carry__0_n_6,R0__2_carry__0_n_7}),
+        .S({1'b0,\R_reg[15]_2 }));
+  FDRE \R_reg[10] 
        (.C(clk),
         .CE(1'b1),
-        .D(\R_reg[14]_1 [0]),
-        .Q(\R_reg[14]_0 [0]),
+        .D(R0__2_carry_n_6),
+        .Q(\R_reg[15]_0 [0]),
+        .R(1'b0));
+  FDRE \R_reg[11] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(R0__2_carry_n_5),
+        .Q(\R_reg[15]_0 [1]),
+        .R(1'b0));
+  FDRE \R_reg[12] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(R0__2_carry_n_4),
+        .Q(\R_reg[15]_0 [2]),
+        .R(1'b0));
+  FDRE \R_reg[13] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(R0__2_carry__0_n_7),
+        .Q(\R_reg[15]_0 [3]),
         .R(1'b0));
   FDRE \R_reg[14] 
        (.C(clk),
         .CE(1'b1),
-        .D(\R_reg[14]_1 [6]),
-        .Q(\R_reg[14]_0 [6]),
+        .D(R0__2_carry__0_n_6),
+        .Q(\R_reg[15]_0 [4]),
         .R(1'b0));
-  FDRE \R_reg[1] 
+  FDRE \R_reg[15] 
        (.C(clk),
         .CE(1'b1),
-        .D(\R_reg[14]_1 [1]),
-        .Q(\R_reg[14]_0 [1]),
-        .R(1'b0));
-  FDRE \R_reg[2] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\R_reg[14]_1 [2]),
-        .Q(\R_reg[14]_0 [2]),
-        .R(1'b0));
-  FDRE \R_reg[3] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\R_reg[14]_1 [3]),
-        .Q(\R_reg[14]_0 [3]),
-        .R(1'b0));
-  FDRE \R_reg[4] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\R_reg[14]_1 [4]),
-        .Q(\R_reg[14]_0 [4]),
-        .R(1'b0));
-  FDRE \R_reg[5] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\R_reg[14]_1 [5]),
-        .Q(\R_reg[14]_0 [5]),
+        .D(R0__2_carry__0_n_5),
+        .Q(\R_reg[15]_0 [5]),
         .R(1'b0));
 endmodule
 
 (* ORIG_REF_NAME = "SD" *) 
 module top_level_Intellight_Accelerat_0_0_SD
+<<<<<<< HEAD
+   (\L_curr_reg[0][2]_0 ,
+    Q,
+    \L_curr_reg[0][0]_0 ,
+    \L_curr_reg[3][0]_0 ,
+    \L_curr_reg[3][3]_0 ,
+    \L_curr_reg[1][2]_0 ,
+    \L_curr_reg[1][3]_0 ,
+    \L_curr_reg[1][0]_0 ,
+    \L_curr_reg[0][3]_0 ,
+    \L_curr_reg[0][0]_1 ,
+    \L_curr_reg[3][3]_1 ,
+    \L_curr_reg[3][0]_1 ,
+    \L_curr_reg[1][3]_1 ,
+    \L_curr_reg[1][0]_1 ,
+    \L_curr_reg[2][3]_0 ,
+    \L_curr_reg[2][3]_1 ,
+    \L_curr_reg[2][0]_0 ,
+    \L_curr_reg[0][0]_2 ,
+    \L_curr_reg[2][2]_0 ,
+    \L_curr_reg[2][0]_1 ,
+    \L_curr_reg[0][3]_1 ,
+    \L_curr_reg[0][3]_2 ,
+    \L_curr_reg[0][1]_0 ,
+    \L_curr_reg[3][1]_0 ,
+    \L_curr_reg[1][3]_2 ,
+    \L_curr_reg[1][3]_3 ,
+    \L_curr_reg[1][1]_0 ,
+    \L_curr_reg[2][3]_2 ,
+    \L_curr_reg[2][3]_3 ,
+    \L_curr_reg[2][2]_1 ,
+    \L_curr_reg[2][2]_2 ,
+    \L_curr_reg[2][3]_4 ,
+    \L_curr_reg[2][3]_5 ,
+    \L_curr_reg[2][1]_0 ,
+    rst,
+    D,
+    clk,
+    \L_curr_reg[1][3]_4 ,
+    \L_curr_reg[2][3]_6 ,
+    \L_curr_reg[3][3]_2 );
+  output \L_curr_reg[0][2]_0 ;
+  output [3:0]Q;
+  output \L_curr_reg[0][0]_0 ;
+  output \L_curr_reg[3][0]_0 ;
+  output [3:0]\L_curr_reg[3][3]_0 ;
+  output \L_curr_reg[1][2]_0 ;
+  output [3:0]\L_curr_reg[1][3]_0 ;
+  output \L_curr_reg[1][0]_0 ;
+  output \L_curr_reg[0][3]_0 ;
+  output \L_curr_reg[0][0]_1 ;
+  output \L_curr_reg[3][3]_1 ;
+  output \L_curr_reg[3][0]_1 ;
+  output \L_curr_reg[1][3]_1 ;
+  output \L_curr_reg[1][0]_1 ;
+  output \L_curr_reg[2][3]_0 ;
+  output [3:0]\L_curr_reg[2][3]_1 ;
+  output \L_curr_reg[2][0]_0 ;
+  output \L_curr_reg[0][0]_2 ;
+  output \L_curr_reg[2][2]_0 ;
+  output \L_curr_reg[2][0]_1 ;
+  input \L_curr_reg[0][3]_1 ;
+  input \L_curr_reg[0][3]_2 ;
+  input \L_curr_reg[0][1]_0 ;
+  input \L_curr_reg[3][1]_0 ;
+  input \L_curr_reg[1][3]_2 ;
+  input \L_curr_reg[1][3]_3 ;
+  input \L_curr_reg[1][1]_0 ;
+  input \L_curr_reg[2][3]_2 ;
+  input \L_curr_reg[2][3]_3 ;
+  input \L_curr_reg[2][2]_1 ;
+  input \L_curr_reg[2][2]_2 ;
+  input \L_curr_reg[2][3]_4 ;
+  input \L_curr_reg[2][3]_5 ;
+  input \L_curr_reg[2][1]_0 ;
+  input rst;
+  input [3:0]D;
+  input clk;
+  input [3:0]\L_curr_reg[1][3]_4 ;
+  input [3:0]\L_curr_reg[2][3]_6 ;
+  input [3:0]\L_curr_reg[3][3]_2 ;
+=======
    (\L_curr_reg[0][3]_0 ,
     Q,
     \L_curr_reg[0][0]_0 ,
@@ -24717,38 +28247,72 @@ module top_level_Intellight_Accelerat_0_0_SD
   input [3:0]\L_curr_reg[1][3]_3 ;
   input [3:0]\L_curr_reg[2][3]_3 ;
   input [3:0]\L_curr_reg[3][3]_5 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
 
   wire [3:0]D;
   wire \L_curr_reg[0][0]_0 ;
   wire \L_curr_reg[0][0]_1 ;
   wire \L_curr_reg[0][0]_2 ;
+<<<<<<< HEAD
+  wire \L_curr_reg[0][1]_0 ;
+  wire \L_curr_reg[0][2]_0 ;
+  wire \L_curr_reg[0][3]_0 ;
+  wire \L_curr_reg[0][3]_1 ;
+  wire \L_curr_reg[0][3]_2 ;
+=======
   wire \L_curr_reg[0][0]_3 ;
   wire \L_curr_reg[0][1]_0 ;
   wire \L_curr_reg[0][3]_0 ;
   wire \L_curr_reg[0][3]_1 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \L_curr_reg[1][0]_0 ;
   wire \L_curr_reg[1][0]_1 ;
   wire \L_curr_reg[1][0]_2 ;
   wire \L_curr_reg[1][1]_0 ;
   wire \L_curr_reg[1][2]_0 ;
+<<<<<<< HEAD
+  wire [3:0]\L_curr_reg[1][3]_0 ;
+  wire \L_curr_reg[1][3]_1 ;
+  wire \L_curr_reg[1][3]_2 ;
+  wire \L_curr_reg[1][3]_3 ;
+  wire [3:0]\L_curr_reg[1][3]_4 ;
+=======
   wire \L_curr_reg[1][3]_0 ;
   wire [3:0]\L_curr_reg[1][3]_1 ;
   wire \L_curr_reg[1][3]_2 ;
   wire [3:0]\L_curr_reg[1][3]_3 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \L_curr_reg[2][0]_0 ;
   wire \L_curr_reg[2][0]_1 ;
   wire \L_curr_reg[2][0]_2 ;
   wire \L_curr_reg[2][1]_0 ;
   wire \L_curr_reg[2][2]_0 ;
+<<<<<<< HEAD
+  wire \L_curr_reg[2][2]_1 ;
+  wire \L_curr_reg[2][2]_2 ;
+  wire \L_curr_reg[2][3]_0 ;
+  wire [3:0]\L_curr_reg[2][3]_1 ;
+  wire \L_curr_reg[2][3]_2 ;
+  wire \L_curr_reg[2][3]_3 ;
+  wire \L_curr_reg[2][3]_4 ;
+  wire \L_curr_reg[2][3]_5 ;
+  wire [3:0]\L_curr_reg[2][3]_6 ;
+=======
   wire \L_curr_reg[2][3]_0 ;
   wire [3:0]\L_curr_reg[2][3]_1 ;
   wire \L_curr_reg[2][3]_2 ;
   wire [3:0]\L_curr_reg[2][3]_3 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \L_curr_reg[3][0]_0 ;
   wire \L_curr_reg[3][0]_1 ;
   wire \L_curr_reg[3][0]_2 ;
   wire \L_curr_reg[3][0]_3 ;
   wire \L_curr_reg[3][1]_0 ;
+<<<<<<< HEAD
+  wire [3:0]\L_curr_reg[3][3]_0 ;
+  wire \L_curr_reg[3][3]_1 ;
+  wire [3:0]\L_curr_reg[3][3]_2 ;
+=======
   wire \L_curr_reg[3][1]_1 ;
   wire \L_curr_reg[3][2]_0 ;
   wire \L_curr_reg[3][3]_0 ;
@@ -24757,6 +28321,7 @@ module top_level_Intellight_Accelerat_0_0_SD
   wire \L_curr_reg[3][3]_3 ;
   wire \L_curr_reg[3][3]_4 ;
   wire [3:0]\L_curr_reg[3][3]_5 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [3:0]Q;
   wire \R[14]_i_12_0 ;
   wire \R[14]_i_17 ;
@@ -24779,6 +28344,36 @@ module top_level_Intellight_Accelerat_0_0_SD
   wire clk;
   wire rst;
 
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \L_curr[0][1]_i_3 
+       (.I0(Q[0]),
+        .I1(\L_curr_reg[0][1]_0 ),
+        .O(\L_curr_reg[0][0]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \L_curr[1][1]_i_3 
+       (.I0(\L_curr_reg[1][3]_0 [0]),
+        .I1(\L_curr_reg[1][1]_0 ),
+        .O(\L_curr_reg[1][0]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \L_curr[2][1]_i_3 
+       (.I0(\L_curr_reg[2][3]_1 [0]),
+        .I1(\L_curr_reg[2][1]_0 ),
+        .O(\L_curr_reg[2][0]_1 ));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \L_curr[3][1]_i_3 
+       (.I0(\L_curr_reg[3][3]_0 [0]),
+        .I1(\L_curr_reg[3][1]_0 ),
+        .O(\L_curr_reg[3][0]_0 ));
+=======
   (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT2 #(
     .INIT(4'hE)) 
@@ -24807,6 +28402,7 @@ module top_level_Intellight_Accelerat_0_0_SD
        (.I0(\L_curr_reg[3][3]_1 [0]),
         .I1(\L_curr_reg[3][1]_1 ),
         .O(\L_curr_reg[3][0]_3 ));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   FDSE \L_curr_reg[0][0] 
        (.C(clk),
         .CE(1'b1),
@@ -24834,72 +28430,154 @@ module top_level_Intellight_Accelerat_0_0_SD
   FDSE \L_curr_reg[1][0] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\L_curr_reg[1][3]_4 [0]),
+        .Q(\L_curr_reg[1][3]_0 [0]),
+=======
         .D(\L_curr_reg[1][3]_3 [0]),
         .Q(\L_curr_reg[1][3]_1 [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .S(rst));
   FDSE \L_curr_reg[1][1] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\L_curr_reg[1][3]_4 [1]),
+        .Q(\L_curr_reg[1][3]_0 [1]),
+=======
         .D(\L_curr_reg[1][3]_3 [1]),
         .Q(\L_curr_reg[1][3]_1 [1]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .S(rst));
   FDSE \L_curr_reg[1][2] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\L_curr_reg[1][3]_4 [2]),
+        .Q(\L_curr_reg[1][3]_0 [2]),
+=======
         .D(\L_curr_reg[1][3]_3 [2]),
         .Q(\L_curr_reg[1][3]_1 [2]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .S(rst));
   FDSE \L_curr_reg[1][3] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\L_curr_reg[1][3]_4 [3]),
+        .Q(\L_curr_reg[1][3]_0 [3]),
+=======
         .D(\L_curr_reg[1][3]_3 [3]),
         .Q(\L_curr_reg[1][3]_1 [3]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .S(rst));
   FDSE \L_curr_reg[2][0] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\L_curr_reg[2][3]_6 [0]),
+=======
         .D(\L_curr_reg[2][3]_3 [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .Q(\L_curr_reg[2][3]_1 [0]),
         .S(rst));
   FDSE \L_curr_reg[2][1] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\L_curr_reg[2][3]_6 [1]),
+=======
         .D(\L_curr_reg[2][3]_3 [1]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .Q(\L_curr_reg[2][3]_1 [1]),
         .S(rst));
   FDSE \L_curr_reg[2][2] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\L_curr_reg[2][3]_6 [2]),
+=======
         .D(\L_curr_reg[2][3]_3 [2]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .Q(\L_curr_reg[2][3]_1 [2]),
         .S(rst));
   FDSE \L_curr_reg[2][3] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\L_curr_reg[2][3]_6 [3]),
+=======
         .D(\L_curr_reg[2][3]_3 [3]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .Q(\L_curr_reg[2][3]_1 [3]),
         .S(rst));
   FDSE \L_curr_reg[3][0] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\L_curr_reg[3][3]_2 [0]),
+        .Q(\L_curr_reg[3][3]_0 [0]),
+=======
         .D(\L_curr_reg[3][3]_5 [0]),
         .Q(\L_curr_reg[3][3]_1 [0]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .S(rst));
   FDSE \L_curr_reg[3][1] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\L_curr_reg[3][3]_2 [1]),
+        .Q(\L_curr_reg[3][3]_0 [1]),
+=======
         .D(\L_curr_reg[3][3]_5 [1]),
         .Q(\L_curr_reg[3][3]_1 [1]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .S(rst));
   FDSE \L_curr_reg[3][2] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\L_curr_reg[3][3]_2 [2]),
+        .Q(\L_curr_reg[3][3]_0 [2]),
+=======
         .D(\L_curr_reg[3][3]_5 [2]),
         .Q(\L_curr_reg[3][3]_1 [2]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .S(rst));
   FDSE \L_curr_reg[3][3] 
        (.C(clk),
         .CE(1'b1),
+<<<<<<< HEAD
+        .D(\L_curr_reg[3][3]_2 [3]),
+        .Q(\L_curr_reg[3][3]_0 [3]),
+        .S(rst));
+  LUT6 #(
+    .INIT(64'hFFFFEF0EEF0E0000)) 
+    R0__2_carry__0_i_17
+       (.I0(Q[0]),
+        .I1(\L_curr_reg[2][2]_1 ),
+        .I2(\L_curr_reg[2][2]_2 ),
+        .I3(Q[1]),
+        .I4(\L_curr_reg[2][3]_3 ),
+        .I5(Q[2]),
+        .O(\L_curr_reg[0][0]_2 ));
+  LUT5 #(
+    .INIT(32'h66696999)) 
+    \rd_addr[10]_INST_0_i_3 
+       (.I0(\L_curr_reg[2][3]_2 ),
+        .I1(\L_curr_reg[3][3]_0 [3]),
+        .I2(\L_curr_reg[2][3]_3 ),
+        .I3(\L_curr_reg[3][3]_0 [2]),
+        .I4(\L_curr_reg[3][0]_1 ),
+        .O(\L_curr_reg[3][3]_1 ));
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  LUT4 #(
+    .INIT(16'hEF0E)) 
+    \rd_addr[3]_INST_0_i_4 
+       (.I0(Q[0]),
+        .I1(\L_curr_reg[2][2]_1 ),
+        .I2(\L_curr_reg[2][2]_2 ),
+=======
         .D(\L_curr_reg[3][3]_5 [3]),
         .Q(\L_curr_reg[3][3]_1 [3]),
         .S(rst));
@@ -25094,11 +28772,95 @@ module top_level_Intellight_Accelerat_0_0_SD
        (.I0(Q[0]),
         .I1(\L_curr_reg[3][1]_1 ),
         .I2(\L_curr_reg[3][2]_0 ),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(Q[1]),
         .O(\L_curr_reg[0][0]_1 ));
   (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT5 #(
     .INIT(32'h66696999)) 
+<<<<<<< HEAD
+    \rd_addr[4]_INST_0_i_3 
+       (.I0(\L_curr_reg[2][3]_2 ),
+        .I1(Q[3]),
+        .I2(Q[2]),
+        .I3(\L_curr_reg[2][3]_3 ),
+        .I4(\L_curr_reg[0][0]_1 ),
+        .O(\L_curr_reg[0][3]_0 ));
+  LUT6 #(
+    .INIT(64'hB2B2BBB22222B222)) 
+    \rd_addr[4]_INST_0_i_6 
+       (.I0(Q[2]),
+        .I1(\L_curr_reg[0][3]_1 ),
+        .I2(\L_curr_reg[0][3]_2 ),
+        .I3(Q[0]),
+        .I4(\L_curr_reg[0][1]_0 ),
+        .I5(Q[1]),
+        .O(\L_curr_reg[0][2]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  LUT4 #(
+    .INIT(16'hE0FE)) 
+    \rd_addr[5]_INST_0_i_4 
+       (.I0(\L_curr_reg[1][3]_0 [0]),
+        .I1(\L_curr_reg[2][2]_1 ),
+        .I2(\L_curr_reg[1][3]_0 [1]),
+        .I3(\L_curr_reg[2][2]_2 ),
+        .O(\L_curr_reg[1][0]_1 ));
+  LUT5 #(
+    .INIT(32'h66696999)) 
+    \rd_addr[6]_INST_0_i_3 
+       (.I0(\L_curr_reg[2][3]_2 ),
+        .I1(\L_curr_reg[1][3]_0 [3]),
+        .I2(\L_curr_reg[2][3]_3 ),
+        .I3(\L_curr_reg[1][3]_0 [2]),
+        .I4(\L_curr_reg[1][0]_1 ),
+        .O(\L_curr_reg[1][3]_1 ));
+  LUT6 #(
+    .INIT(64'hB2B2BBB22222B222)) 
+    \rd_addr[6]_INST_0_i_6 
+       (.I0(\L_curr_reg[1][3]_0 [2]),
+        .I1(\L_curr_reg[1][3]_2 ),
+        .I2(\L_curr_reg[1][3]_3 ),
+        .I3(\L_curr_reg[1][3]_0 [0]),
+        .I4(\L_curr_reg[1][1]_0 ),
+        .I5(\L_curr_reg[1][3]_0 [1]),
+        .O(\L_curr_reg[1][2]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  LUT4 #(
+    .INIT(16'hE0FE)) 
+    \rd_addr[7]_INST_0_i_4 
+       (.I0(\L_curr_reg[2][3]_1 [0]),
+        .I1(\L_curr_reg[2][2]_1 ),
+        .I2(\L_curr_reg[2][3]_1 [1]),
+        .I3(\L_curr_reg[2][2]_2 ),
+        .O(\L_curr_reg[2][0]_0 ));
+  LUT5 #(
+    .INIT(32'h66696999)) 
+    \rd_addr[8]_INST_0_i_3 
+       (.I0(\L_curr_reg[2][3]_2 ),
+        .I1(\L_curr_reg[2][3]_1 [3]),
+        .I2(\L_curr_reg[2][3]_3 ),
+        .I3(\L_curr_reg[2][3]_1 [2]),
+        .I4(\L_curr_reg[2][0]_0 ),
+        .O(\L_curr_reg[2][3]_0 ));
+  LUT6 #(
+    .INIT(64'hB2B2BBB22222B222)) 
+    \rd_addr[8]_INST_0_i_6 
+       (.I0(\L_curr_reg[2][3]_1 [2]),
+        .I1(\L_curr_reg[2][3]_4 ),
+        .I2(\L_curr_reg[2][3]_5 ),
+        .I3(\L_curr_reg[2][3]_1 [0]),
+        .I4(\L_curr_reg[2][1]_0 ),
+        .I5(\L_curr_reg[2][3]_1 [1]),
+        .O(\L_curr_reg[2][2]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  LUT4 #(
+    .INIT(16'hEF0E)) 
+    \rd_addr[9]_INST_0_i_4 
+       (.I0(\L_curr_reg[3][3]_0 [0]),
+        .I1(\L_curr_reg[2][2]_1 ),
+        .I2(\L_curr_reg[2][2]_2 ),
+        .I3(\L_curr_reg[3][3]_0 [1]),
+=======
     \rd_addr[3]_INST_0_i_3 
        (.I0(\L_curr_reg[3][3]_3 ),
         .I1(Q[3]),
@@ -25152,6 +28914,7 @@ module top_level_Intellight_Accelerat_0_0_SD
         .I1(\L_curr_reg[3][1]_1 ),
         .I2(\L_curr_reg[3][2]_0 ),
         .I3(\L_curr_reg[3][3]_1 [1]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(\L_curr_reg[3][0]_1 ));
   (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT5 #(
@@ -25167,6 +28930,80 @@ endmodule
 
 (* ORIG_REF_NAME = "lfsr" *) 
 module top_level_Intellight_Accelerat_0_0_lfsr
+<<<<<<< HEAD
+   (DI,
+    \L_curr_reg[3][2] ,
+    \L_curr_reg[2][2] ,
+    \L_curr_reg[1][2] ,
+    S,
+    \L_curr_reg[0][2] ,
+    \L_curr_reg[0][3] ,
+    \L_curr_reg[0][3]_0 ,
+    \L_curr_reg[0][3]_1 ,
+    \L_curr_reg[2][3] ,
+    rd_addr,
+    SD_0_L0,
+    \L_curr_reg[1][3] ,
+    \L_curr_reg[3][3] ,
+    SD_0_L3,
+    \r_lsfr_reg[2]_0 ,
+    \r_lsfr_reg[1]_0 ,
+    SD_0_L1,
+    SD_0_L2,
+    D,
+    R0__2_carry__0_i_3_0,
+    \L_curr_reg[0][3]_2 ,
+    \L_curr_reg[0][3]_3 ,
+    \L_curr_reg[0][3]_4 ,
+    Q,
+    \rd_addr[10] ,
+    \rd_addr[4] ,
+    \L_curr_reg[2][0] ,
+    \L_curr_reg[0][0] ,
+    \L_curr_reg[0][1] ,
+    \L_curr_reg[0][1]_0 ,
+    \L_curr_reg[0][2]_0 ,
+    \L_curr_reg[2][2]_0 ,
+    \L_curr_reg[0][2]_1 ,
+    \L_curr_reg[0][2]_2 ,
+    \L_curr_reg[3][3]_0 ,
+    \L_curr_reg[3][3]_1 ,
+    \L_curr_reg[3][3]_2 ,
+    \L_curr_reg[3][3]_3 ,
+    \L_curr_reg[3][0] ,
+    \L_curr_reg[3][1] ,
+    \L_curr_reg[3][1]_0 ,
+    \L_curr_reg[3][2]_0 ,
+    \L_curr_reg[3][2]_1 ,
+    \L_curr_reg[3][2]_2 ,
+    \L_curr_reg[1][3]_0 ,
+    \L_curr_reg[1][3]_1 ,
+    \L_curr_reg[1][3]_2 ,
+    \L_curr_reg[1][3]_3 ,
+    \L_curr_reg[1][0] ,
+    \L_curr_reg[1][1] ,
+    \L_curr_reg[1][1]_0 ,
+    \L_curr_reg[1][2]_0 ,
+    \L_curr_reg[1][2]_1 ,
+    \L_curr_reg[1][2]_2 ,
+    \L_curr_reg[2][3]_0 ,
+    \L_curr_reg[2][3]_1 ,
+    \L_curr_reg[2][3]_2 ,
+    \L_curr_reg[2][3]_3 ,
+    \L_curr_reg[2][0]_0 ,
+    \L_curr_reg[2][1] ,
+    \L_curr_reg[2][1]_0 ,
+    \L_curr_reg[2][2]_1 ,
+    \L_curr_reg[2][1]_1 ,
+    \L_curr_reg[0][2]_3 ,
+    R0__2_carry__0_i_9_0,
+    \L_curr_reg[2][2]_2 ,
+    \L_curr_reg[3][2]_3 ,
+    \L_curr_reg[1][2]_3 ,
+    \L_curr_reg[2][2]_3 ,
+    \L_curr_reg[2][2]_4 ,
+    \L_curr_reg[2][2]_5 ,
+=======
    (D,
     \L_curr_reg[1][3] ,
     \L_curr_reg[2][3] ,
@@ -25264,6 +29101,7 @@ module top_level_Intellight_Accelerat_0_0_lfsr
     \L_curr_reg[2][0]_0 ,
     \L_curr_reg[3][1]_4 ,
     \R[2]_i_6_5 ,
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg_reg[0][15] ,
     \Q_act_reg_reg[0][15]_0 ,
     \Q_act_reg_reg[0][15]_1 ,
@@ -25328,6 +29166,14 @@ module top_level_Intellight_Accelerat_0_0_lfsr
     \Q_act_reg_reg[0][0]_0 ,
     \Q_act_reg_reg[0][0]_1 ,
     \Q_act_reg_reg[0][0]_2 ,
+<<<<<<< HEAD
+    \A_reg_reg[0][3] ,
+    CO,
+    \A_reg_reg[0][2] ,
+    \A_reg_reg[0][2]_0 ,
+    \A_reg_reg[0][2]_1 ,
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
     rst,
     CO,
     \A_reg_reg[0][2] ,
@@ -25335,6 +29181,80 @@ module top_level_Intellight_Accelerat_0_0_lfsr
     \A_reg_reg[0][2]_1 ,
     \A_reg_reg[0][2]_2 ,
     clk);
+<<<<<<< HEAD
+  output [2:0]DI;
+  output \L_curr_reg[3][2] ;
+  output \L_curr_reg[2][2] ;
+  output \L_curr_reg[1][2] ;
+  output [2:0]S;
+  output \L_curr_reg[0][2] ;
+  output [1:0]\L_curr_reg[0][3] ;
+  output \L_curr_reg[0][3]_0 ;
+  output [2:0]\L_curr_reg[0][3]_1 ;
+  output \L_curr_reg[2][3] ;
+  output [7:0]rd_addr;
+  output [1:0]SD_0_L0;
+  output \L_curr_reg[1][3] ;
+  output \L_curr_reg[3][3] ;
+  output [1:0]SD_0_L3;
+  output \r_lsfr_reg[2]_0 ;
+  output \r_lsfr_reg[1]_0 ;
+  output [1:0]SD_0_L1;
+  output [1:0]SD_0_L2;
+  output [15:0]D;
+  input R0__2_carry__0_i_3_0;
+  input \L_curr_reg[0][3]_2 ;
+  input \L_curr_reg[0][3]_3 ;
+  input \L_curr_reg[0][3]_4 ;
+  input [3:0]Q;
+  input [7:0]\rd_addr[10] ;
+  input [0:0]\rd_addr[4] ;
+  input \L_curr_reg[2][0] ;
+  input \L_curr_reg[0][0] ;
+  input \L_curr_reg[0][1] ;
+  input \L_curr_reg[0][1]_0 ;
+  input \L_curr_reg[0][2]_0 ;
+  input \L_curr_reg[2][2]_0 ;
+  input \L_curr_reg[0][2]_1 ;
+  input \L_curr_reg[0][2]_2 ;
+  input \L_curr_reg[3][3]_0 ;
+  input [3:0]\L_curr_reg[3][3]_1 ;
+  input \L_curr_reg[3][3]_2 ;
+  input \L_curr_reg[3][3]_3 ;
+  input \L_curr_reg[3][0] ;
+  input \L_curr_reg[3][1] ;
+  input \L_curr_reg[3][1]_0 ;
+  input \L_curr_reg[3][2]_0 ;
+  input \L_curr_reg[3][2]_1 ;
+  input \L_curr_reg[3][2]_2 ;
+  input \L_curr_reg[1][3]_0 ;
+  input [3:0]\L_curr_reg[1][3]_1 ;
+  input \L_curr_reg[1][3]_2 ;
+  input \L_curr_reg[1][3]_3 ;
+  input \L_curr_reg[1][0] ;
+  input \L_curr_reg[1][1] ;
+  input \L_curr_reg[1][1]_0 ;
+  input \L_curr_reg[1][2]_0 ;
+  input \L_curr_reg[1][2]_1 ;
+  input \L_curr_reg[1][2]_2 ;
+  input \L_curr_reg[2][3]_0 ;
+  input [3:0]\L_curr_reg[2][3]_1 ;
+  input \L_curr_reg[2][3]_2 ;
+  input \L_curr_reg[2][3]_3 ;
+  input \L_curr_reg[2][0]_0 ;
+  input \L_curr_reg[2][1] ;
+  input \L_curr_reg[2][1]_0 ;
+  input \L_curr_reg[2][2]_1 ;
+  input \L_curr_reg[2][1]_1 ;
+  input \L_curr_reg[0][2]_3 ;
+  input R0__2_carry__0_i_9_0;
+  input \L_curr_reg[2][2]_2 ;
+  input \L_curr_reg[3][2]_3 ;
+  input \L_curr_reg[1][2]_3 ;
+  input \L_curr_reg[2][2]_3 ;
+  input \L_curr_reg[2][2]_4 ;
+  input \L_curr_reg[2][2]_5 ;
+=======
   output [6:0]D;
   output \L_curr_reg[1][3] ;
   output \L_curr_reg[2][3] ;
@@ -25432,6 +29352,7 @@ module top_level_Intellight_Accelerat_0_0_lfsr
   input \L_curr_reg[2][0]_0 ;
   input \L_curr_reg[3][1]_4 ;
   input \R[2]_i_6_5 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   input \Q_act_reg_reg[0][15] ;
   input \Q_act_reg_reg[0][15]_0 ;
   input \Q_act_reg_reg[0][15]_1 ;
@@ -25496,6 +29417,14 @@ module top_level_Intellight_Accelerat_0_0_lfsr
   input \Q_act_reg_reg[0][0]_0 ;
   input \Q_act_reg_reg[0][0]_1 ;
   input \Q_act_reg_reg[0][0]_2 ;
+<<<<<<< HEAD
+  input \A_reg_reg[0][3] ;
+  input [0:0]CO;
+  input [0:0]\A_reg_reg[0][2] ;
+  input [0:0]\A_reg_reg[0][2]_0 ;
+  input [0:0]\A_reg_reg[0][2]_1 ;
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
   input rst;
   input [0:0]CO;
   input [0:0]\A_reg_reg[0][2] ;
@@ -25508,6 +29437,17 @@ module top_level_Intellight_Accelerat_0_0_lfsr
   wire [0:0]\A_reg_reg[0][2] ;
   wire [0:0]\A_reg_reg[0][2]_0 ;
   wire [0:0]\A_reg_reg[0][2]_1 ;
+<<<<<<< HEAD
+  wire \A_reg_reg[0][3] ;
+  wire [0:0]CO;
+  wire [15:0]D;
+  wire [2:0]DI;
+  wire \L_curr[0][1]_i_4_n_0 ;
+  wire \L_curr[1][1]_i_4_n_0 ;
+  wire \L_curr[2][1]_i_4_n_0 ;
+  wire \L_curr[3][1]_i_4_n_0 ;
+  wire \L_curr_reg[0][0] ;
+=======
   wire \A_reg_reg[0][2]_2 ;
   wire [0:0]CO;
   wire [6:0]D;
@@ -25520,16 +29460,23 @@ module top_level_Intellight_Accelerat_0_0_lfsr
   wire \L_curr[3][1]_i_2_n_0 ;
   wire \L_curr_reg[0][0] ;
   wire \L_curr_reg[0][0]_0 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \L_curr_reg[0][1] ;
   wire \L_curr_reg[0][1]_0 ;
-  wire \L_curr_reg[0][1]_1 ;
   wire \L_curr_reg[0][2] ;
   wire \L_curr_reg[0][2]_0 ;
   wire \L_curr_reg[0][2]_1 ;
   wire \L_curr_reg[0][2]_2 ;
+<<<<<<< HEAD
+  wire \L_curr_reg[0][2]_3 ;
+  wire [1:0]\L_curr_reg[0][3] ;
+  wire \L_curr_reg[0][3]_0 ;
+  wire [2:0]\L_curr_reg[0][3]_1 ;
+=======
   wire \L_curr_reg[0][3] ;
   wire [3:0]\L_curr_reg[0][3]_0 ;
   wire \L_curr_reg[0][3]_1 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \L_curr_reg[0][3]_2 ;
   wire \L_curr_reg[0][3]_3 ;
   wire \L_curr_reg[0][3]_4 ;
@@ -25540,6 +29487,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
   wire \L_curr_reg[1][2] ;
   wire \L_curr_reg[1][2]_0 ;
   wire \L_curr_reg[1][2]_1 ;
+<<<<<<< HEAD
+  wire \L_curr_reg[1][2]_2 ;
+  wire \L_curr_reg[1][2]_3 ;
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \L_curr_reg[1][3] ;
   wire [3:0]\L_curr_reg[1][3]_0 ;
   wire \L_curr_reg[1][3]_1 ;
@@ -25549,23 +29501,32 @@ module top_level_Intellight_Accelerat_0_0_lfsr
   wire \L_curr_reg[2][0]_0 ;
   wire \L_curr_reg[2][1] ;
   wire \L_curr_reg[2][1]_0 ;
+  wire \L_curr_reg[2][1]_1 ;
   wire \L_curr_reg[2][2] ;
   wire \L_curr_reg[2][2]_0 ;
   wire \L_curr_reg[2][2]_1 ;
+<<<<<<< HEAD
+  wire \L_curr_reg[2][2]_2 ;
+  wire \L_curr_reg[2][2]_3 ;
+  wire \L_curr_reg[2][2]_4 ;
+  wire \L_curr_reg[2][2]_5 ;
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \L_curr_reg[2][3] ;
-  wire [3:0]\L_curr_reg[2][3]_0 ;
-  wire \L_curr_reg[2][3]_1 ;
+  wire \L_curr_reg[2][3]_0 ;
+  wire [3:0]\L_curr_reg[2][3]_1 ;
   wire \L_curr_reg[2][3]_2 ;
   wire \L_curr_reg[2][3]_3 ;
   wire \L_curr_reg[3][0] ;
-  wire \L_curr_reg[3][0]_0 ;
-  wire \L_curr_reg[3][0]_1 ;
   wire \L_curr_reg[3][1] ;
   wire \L_curr_reg[3][1]_0 ;
+<<<<<<< HEAD
+=======
   wire \L_curr_reg[3][1]_1 ;
   wire \L_curr_reg[3][1]_2 ;
   wire \L_curr_reg[3][1]_3 ;
   wire \L_curr_reg[3][1]_4 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \L_curr_reg[3][2] ;
   wire \L_curr_reg[3][2]_0 ;
   wire \L_curr_reg[3][2]_1 ;
@@ -25573,9 +29534,13 @@ module top_level_Intellight_Accelerat_0_0_lfsr
   wire \L_curr_reg[3][2]_3 ;
   wire \L_curr_reg[3][3] ;
   wire \L_curr_reg[3][3]_0 ;
-  wire \L_curr_reg[3][3]_1 ;
+  wire [3:0]\L_curr_reg[3][3]_1 ;
   wire \L_curr_reg[3][3]_2 ;
+<<<<<<< HEAD
+  wire \L_curr_reg[3][3]_3 ;
+=======
   wire \MII_0/p_0_in ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [3:0]Q;
   wire \Q_act_reg_reg[0][0] ;
   wire \Q_act_reg_reg[0][0]_0 ;
@@ -25641,6 +29606,29 @@ module top_level_Intellight_Accelerat_0_0_lfsr
   wire \Q_act_reg_reg[0][9]_0 ;
   wire \Q_act_reg_reg[0][9]_1 ;
   wire \Q_act_reg_reg[0][9]_2 ;
+<<<<<<< HEAD
+  wire R0__2_carry__0_i_10_n_0;
+  wire R0__2_carry__0_i_11_n_0;
+  wire R0__2_carry__0_i_12_n_0;
+  wire R0__2_carry__0_i_13_n_0;
+  wire R0__2_carry__0_i_14_n_0;
+  wire R0__2_carry__0_i_16_n_0;
+  wire R0__2_carry__0_i_3_0;
+  wire R0__2_carry__0_i_6_n_0;
+  wire R0__2_carry__0_i_7_n_0;
+  wire R0__2_carry__0_i_8_n_0;
+  wire R0__2_carry__0_i_9_0;
+  wire R0__2_carry__0_i_9_n_0;
+  wire R0__2_carry_i_10_n_0;
+  wire R0__2_carry_i_7_n_0;
+  wire R0__2_carry_i_8_n_0;
+  wire R0__2_carry_i_9_n_0;
+  wire [2:0]S;
+  wire [1:0]SD_0_L0;
+  wire [1:0]SD_0_L1;
+  wire [1:0]SD_0_L2;
+  wire [1:0]SD_0_L3;
+=======
   wire \R[14]_i_10_n_0 ;
   wire \R[14]_i_11_n_0 ;
   wire \R[14]_i_13_n_0 ;
@@ -25707,16 +29695,37 @@ module top_level_Intellight_Accelerat_0_0_lfsr
   wire \R_reg[14] ;
   wire [2:0]SD_0_L1;
   wire [2:0]SD_0_L2;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire clk;
   wire \r_lsfr_reg[1]_0 ;
   wire \r_lsfr_reg[2]_0 ;
   wire [7:0]rd_addr;
+<<<<<<< HEAD
+  wire [7:0]\rd_addr[10] ;
+  wire \rd_addr[10]_INST_0_i_2_n_0 ;
+  wire \rd_addr[10]_INST_0_i_4_n_0 ;
+=======
   wire [0:0]\rd_addr[2] ;
   wire \rd_addr[2]_INST_0_i_2_n_0 ;
   wire \rd_addr[2]_INST_0_i_4_n_0 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire \rd_addr[3]_INST_0_i_2_n_0 ;
-  wire \rd_addr[3]_INST_0_i_4_n_0 ;
+  wire \rd_addr[3]_INST_0_i_3_n_0 ;
+  wire [0:0]\rd_addr[4] ;
   wire \rd_addr[4]_INST_0_i_2_n_0 ;
+<<<<<<< HEAD
+  wire \rd_addr[4]_INST_0_i_4_n_0 ;
+  wire \rd_addr[5]_INST_0_i_2_n_0 ;
+  wire \rd_addr[5]_INST_0_i_3_n_0 ;
+  wire \rd_addr[6]_INST_0_i_2_n_0 ;
+  wire \rd_addr[6]_INST_0_i_4_n_0 ;
+  wire \rd_addr[7]_INST_0_i_2_n_0 ;
+  wire \rd_addr[7]_INST_0_i_3_n_0 ;
+  wire \rd_addr[8]_INST_0_i_2_n_0 ;
+  wire \rd_addr[8]_INST_0_i_4_n_0 ;
+  wire \rd_addr[9]_INST_0_i_2_n_0 ;
+  wire \rd_addr[9]_INST_0_i_3_n_0 ;
+=======
   wire \rd_addr[4]_INST_0_i_3_n_0 ;
   wire \rd_addr[4]_INST_0_i_5_n_0 ;
   wire \rd_addr[6]_INST_0_i_2_n_0 ;
@@ -25727,12 +29736,68 @@ module top_level_Intellight_Accelerat_0_0_lfsr
   wire [7:0]\rd_addr[9] ;
   wire \rd_addr[9]_INST_0_i_2_n_0 ;
   wire \rd_addr[9]_INST_0_i_6_n_0 ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire rst;
 
   LUT6 #(
     .INIT(64'h88888888BBBB88B8)) 
     \A_reg[0][2]_i_1 
        (.I0(A_dur_rand[0]),
+<<<<<<< HEAD
+        .I1(\A_reg_reg[0][3] ),
+        .I2(CO),
+        .I3(\A_reg_reg[0][2] ),
+        .I4(\A_reg_reg[0][2]_0 ),
+        .I5(\A_reg_reg[0][2]_1 ),
+        .O(\r_lsfr_reg[1]_0 ));
+  LUT6 #(
+    .INIT(64'h888888888888BBB8)) 
+    \A_reg[0][3]_i_1 
+       (.I0(A_dur_rand[1]),
+        .I1(\A_reg_reg[0][3] ),
+        .I2(\A_reg_reg[0][2] ),
+        .I3(CO),
+        .I4(\A_reg_reg[0][2]_1 ),
+        .I5(\A_reg_reg[0][2]_0 ),
+        .O(\r_lsfr_reg[2]_0 ));
+  LUT6 #(
+    .INIT(64'hFFAEEAAEEAFFEAAE)) 
+    \L_curr[0][0]_i_1 
+       (.I0(\rd_addr[3]_INST_0_i_2_n_0 ),
+        .I1(\rd_addr[4]_INST_0_i_2_n_0 ),
+        .I2(\L_curr_reg[2][0] ),
+        .I3(Q[0]),
+        .I4(\rd_addr[4]_INST_0_i_4_n_0 ),
+        .I5(\L_curr_reg[0][0] ),
+        .O(SD_0_L0[0]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFEAAEAEEA)) 
+    \L_curr[0][1]_i_1 
+       (.I0(\rd_addr[3]_INST_0_i_2_n_0 ),
+        .I1(\rd_addr[4]_INST_0_i_4_n_0 ),
+        .I2(Q[1]),
+        .I3(\L_curr_reg[0][1] ),
+        .I4(\L_curr_reg[0][1]_0 ),
+        .I5(\L_curr[0][1]_i_4_n_0 ),
+        .O(SD_0_L0[1]));
+  LUT5 #(
+    .INIT(32'h28282882)) 
+    \L_curr[0][1]_i_4 
+       (.I0(\rd_addr[4]_INST_0_i_2_n_0 ),
+        .I1(Q[1]),
+        .I2(\L_curr_reg[2][1]_1 ),
+        .I3(Q[0]),
+        .I4(\L_curr_reg[2][0] ),
+        .O(\L_curr[0][1]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFAEEAAEEAFFEAAE)) 
+    \L_curr[1][0]_i_1 
+       (.I0(\rd_addr[5]_INST_0_i_2_n_0 ),
+        .I1(\rd_addr[6]_INST_0_i_2_n_0 ),
+        .I2(\L_curr_reg[2][0] ),
+        .I3(\L_curr_reg[1][3]_1 [0]),
+        .I4(\rd_addr[6]_INST_0_i_4_n_0 ),
+=======
         .I1(\A_reg_reg[0][2]_2 ),
         .I2(\A_reg_reg[0][2] ),
         .I3(CO),
@@ -25777,6 +29842,7 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I2(\L_curr_reg[3][0]_1 ),
         .I3(\L_curr_reg[1][3]_0 [0]),
         .I4(\L_curr[1][0]_i_2_n_0 ),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I5(\L_curr_reg[1][0] ),
         .O(SD_0_L1[0]));
   (* SOFT_HLUTNM = "soft_lutpair15" *) 
@@ -25796,6 +29862,26 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I4(\L_curr_reg[3][1]_1 ),
         .I5(\L_curr_reg[1][1]_0 ),
         .O(SD_0_L1[1]));
+<<<<<<< HEAD
+  LUT5 #(
+    .INIT(32'h28282882)) 
+    \L_curr[1][1]_i_4 
+       (.I0(\rd_addr[6]_INST_0_i_2_n_0 ),
+        .I1(\L_curr_reg[1][3]_1 [1]),
+        .I2(\L_curr_reg[2][1]_1 ),
+        .I3(\L_curr_reg[1][3]_1 [0]),
+        .I4(\L_curr_reg[2][0] ),
+        .O(\L_curr[1][1]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFAEEAAEEAFFEAAE)) 
+    \L_curr[2][0]_i_1 
+       (.I0(\rd_addr[7]_INST_0_i_2_n_0 ),
+        .I1(\rd_addr[8]_INST_0_i_2_n_0 ),
+        .I2(\L_curr_reg[2][0] ),
+        .I3(\L_curr_reg[2][3]_1 [0]),
+        .I4(\rd_addr[8]_INST_0_i_4_n_0 ),
+        .I5(\L_curr_reg[2][0]_0 ),
+=======
   LUT6 #(
     .INIT(64'h02220DDD0DDD0222)) 
     \L_curr[1][1]_i_2 
@@ -25815,6 +29901,7 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I3(\L_curr_reg[2][3]_0 [0]),
         .I4(\L_curr[2][0]_i_2_n_0 ),
         .I5(\L_curr_reg[2][0] ),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(SD_0_L2[0]));
   (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
@@ -25826,6 +29913,24 @@ module top_level_Intellight_Accelerat_0_0_lfsr
   LUT6 #(
     .INIT(64'hFEEEEEFEEEFEFEEE)) 
     \L_curr[2][1]_i_1 
+<<<<<<< HEAD
+       (.I0(\rd_addr[7]_INST_0_i_2_n_0 ),
+        .I1(\rd_addr[8]_INST_0_i_4_n_0 ),
+        .I2(\L_curr_reg[2][3]_1 [1]),
+        .I3(\L_curr_reg[2][1] ),
+        .I4(\L_curr_reg[2][1]_0 ),
+        .I5(\L_curr[2][1]_i_4_n_0 ),
+        .O(SD_0_L2[1]));
+  LUT5 #(
+    .INIT(32'h28282882)) 
+    \L_curr[2][1]_i_4 
+       (.I0(\rd_addr[8]_INST_0_i_2_n_0 ),
+        .I1(\L_curr_reg[2][3]_1 [1]),
+        .I2(\L_curr_reg[2][1]_1 ),
+        .I3(\L_curr_reg[2][3]_1 [0]),
+        .I4(\L_curr_reg[2][0] ),
+        .O(\L_curr[2][1]_i_4_n_0 ));
+=======
        (.I0(\rd_addr[6]_INST_0_i_2_n_0 ),
         .I1(\L_curr[2][1]_i_2_n_0 ),
         .I2(\rd_addr[6]_INST_0_i_3_n_0 ),
@@ -25843,9 +29948,40 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I4(\L_curr_reg[2][3]_0 [1]),
         .I5(\L_curr_reg[2][1] ),
         .O(\L_curr[2][1]_i_2_n_0 ));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
-    .INIT(64'hEAAEFFAEEAAEEAFF)) 
+    .INIT(64'hFFAEEAAEEAFFEAAE)) 
     \L_curr[3][0]_i_1 
+<<<<<<< HEAD
+       (.I0(\rd_addr[9]_INST_0_i_2_n_0 ),
+        .I1(\rd_addr[10]_INST_0_i_2_n_0 ),
+        .I2(\L_curr_reg[2][0] ),
+        .I3(\L_curr_reg[3][3]_1 [0]),
+        .I4(\rd_addr[10]_INST_0_i_4_n_0 ),
+        .I5(\L_curr_reg[3][0] ),
+        .O(SD_0_L3[0]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFEAAEAEEA)) 
+    \L_curr[3][1]_i_1 
+       (.I0(\rd_addr[9]_INST_0_i_2_n_0 ),
+        .I1(\rd_addr[10]_INST_0_i_4_n_0 ),
+        .I2(\L_curr_reg[3][3]_1 [1]),
+        .I3(\L_curr_reg[3][1] ),
+        .I4(\L_curr_reg[3][1]_0 ),
+        .I5(\L_curr[3][1]_i_4_n_0 ),
+        .O(SD_0_L3[1]));
+  LUT5 #(
+    .INIT(32'h28282882)) 
+    \L_curr[3][1]_i_4 
+       (.I0(\rd_addr[10]_INST_0_i_2_n_0 ),
+        .I1(\L_curr_reg[3][3]_1 [1]),
+        .I2(\L_curr_reg[2][1]_1 ),
+        .I3(\L_curr_reg[3][3]_1 [0]),
+        .I4(\L_curr_reg[2][0] ),
+        .O(\L_curr[3][1]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h3355000F3355FF0F)) 
+=======
        (.I0(\rd_addr[8]_INST_0_i_2_n_0 ),
         .I1(\rd_addr[9]_INST_0_i_2_n_0 ),
         .I2(\L_curr_reg[3][0]_1 ),
@@ -25875,6 +30011,7 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .O(\L_curr[3][1]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h55330F0055330FFF)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][0]_i_1 
        (.I0(\Q_act_reg_reg[0][0] ),
         .I1(\Q_act_reg_reg[0][0]_0 ),
@@ -25884,7 +30021,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][0]_2 ),
         .O(\D_road1[31] [0]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0055330FFF55330F)) 
+=======
     .INIT(64'h55330F0055330FFF)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][10]_i_1 
        (.I0(\Q_act_reg_reg[0][10] ),
         .I1(\Q_act_reg_reg[0][10]_0 ),
@@ -25894,7 +30035,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][10]_2 ),
         .O(\D_road1[31] [10]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0055330FFF55330F)) 
+=======
     .INIT(64'h55330F0055330FFF)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][11]_i_1 
        (.I0(\Q_act_reg_reg[0][11] ),
         .I1(\Q_act_reg_reg[0][11]_0 ),
@@ -25904,7 +30049,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][11]_2 ),
         .O(\D_road1[31] [11]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0055330FFF55330F)) 
+=======
     .INIT(64'h55000F3355FF0F33)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][12]_i_1 
        (.I0(\Q_act_reg_reg[0][12] ),
         .I1(\Q_act_reg_reg[0][12]_0 ),
@@ -25914,7 +30063,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][12]_2 ),
         .O(\D_road1[31] [12]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0055330FFF55330F)) 
+=======
     .INIT(64'h55330F0055330FFF)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][13]_i_1 
        (.I0(\Q_act_reg_reg[0][13] ),
         .I1(\Q_act_reg_reg[0][13]_0 ),
@@ -25924,7 +30077,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][13]_2 ),
         .O(\D_road1[31] [13]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h3355000F3355FF0F)) 
+=======
     .INIT(64'h55330F0055330FFF)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][14]_i_1 
        (.I0(\Q_act_reg_reg[0][14] ),
         .I1(\Q_act_reg_reg[0][14]_0 ),
@@ -25934,7 +30091,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][14]_2 ),
         .O(\D_road1[31] [14]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0055330FFF55330F)) 
+=======
     .INIT(64'h55330F0055330FFF)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][15]_i_1 
        (.I0(\Q_act_reg_reg[0][15] ),
         .I1(\Q_act_reg_reg[0][15]_0 ),
@@ -25944,7 +30105,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][15]_2 ),
         .O(\D_road1[31] [15]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0055330FFF55330F)) 
+=======
     .INIT(64'h55330F0055330FFF)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][1]_i_1 
        (.I0(\Q_act_reg_reg[0][1] ),
         .I1(\Q_act_reg_reg[0][1]_0 ),
@@ -25954,7 +30119,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][1]_2 ),
         .O(\D_road1[31] [1]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h3355000F3355FF0F)) 
+=======
     .INIT(64'h55330F0055330FFF)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][2]_i_1 
        (.I0(\Q_act_reg_reg[0][2] ),
         .I1(\Q_act_reg_reg[0][2]_0 ),
@@ -25964,7 +30133,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][2]_2 ),
         .O(\D_road1[31] [2]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h3355000F3355FF0F)) 
+=======
     .INIT(64'h55330F0055330FFF)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][3]_i_1 
        (.I0(\Q_act_reg_reg[0][3] ),
         .I1(\Q_act_reg_reg[0][3]_0 ),
@@ -25974,7 +30147,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][3]_2 ),
         .O(\D_road1[31] [3]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h3355000F3355FF0F)) 
+=======
     .INIT(64'h55000F3355FF0F33)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][4]_i_1 
        (.I0(\Q_act_reg_reg[0][4] ),
         .I1(\Q_act_reg_reg[0][4]_0 ),
@@ -25984,7 +30161,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][4]_2 ),
         .O(\D_road1[31] [4]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0055330FFF55330F)) 
+=======
     .INIT(64'h55330F0055330FFF)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][5]_i_1 
        (.I0(\Q_act_reg_reg[0][5] ),
         .I1(\Q_act_reg_reg[0][5]_0 ),
@@ -25994,7 +30175,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][5]_2 ),
         .O(\D_road1[31] [5]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0055330FFF55330F)) 
+=======
     .INIT(64'h55000F3355FF0F33)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][6]_i_1 
        (.I0(\Q_act_reg_reg[0][6] ),
         .I1(\Q_act_reg_reg[0][6]_0 ),
@@ -26004,7 +30189,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][6]_2 ),
         .O(\D_road1[31] [6]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h3355000F3355FF0F)) 
+=======
     .INIT(64'h55330F0055330FFF)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][7]_i_1 
        (.I0(\Q_act_reg_reg[0][7] ),
         .I1(\Q_act_reg_reg[0][7]_0 ),
@@ -26014,7 +30203,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][7]_2 ),
         .O(\D_road1[31] [7]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h3355000F3355FF0F)) 
+=======
     .INIT(64'h55000F3355FF0F33)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][8]_i_1 
        (.I0(\Q_act_reg_reg[0][8] ),
         .I1(\Q_act_reg_reg[0][8]_0 ),
@@ -26024,7 +30217,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I5(\Q_act_reg_reg[0][8]_2 ),
         .O(\D_road1[31] [8]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0055330FFF55330F)) 
+=======
     .INIT(64'h55000F3355FF0F33)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][9]_i_1 
        (.I0(\Q_act_reg_reg[0][9] ),
         .I1(\Q_act_reg_reg[0][9]_0 ),
@@ -26032,6 +30229,222 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I3(\r_lsfr_reg[2]_0 ),
         .I4(\r_lsfr_reg[1]_0 ),
         .I5(\Q_act_reg_reg[0][9]_2 ),
+<<<<<<< HEAD
+        .O(D[9]));
+  LUT4 #(
+    .INIT(16'h5701)) 
+    R0__2_carry__0_i_1
+       (.I0(R0__2_carry__0_i_6_n_0),
+        .I1(\L_curr_reg[0][3]_0 ),
+        .I2(\L_curr_reg[0][2] ),
+        .I3(R0__2_carry__0_i_7_n_0),
+        .O(\L_curr_reg[0][3] [1]));
+  LUT6 #(
+    .INIT(64'h0000000002000303)) 
+    R0__2_carry__0_i_10
+       (.I0(R0__2_carry__0_i_3_0),
+        .I1(\rd_addr[3]_INST_0_i_3_n_0 ),
+        .I2(R0__2_carry__0_i_16_n_0),
+        .I3(\L_curr_reg[0][3]_2 ),
+        .I4(\rd_addr[4]_INST_0_i_2_n_0 ),
+        .I5(\rd_addr[3]_INST_0_i_2_n_0 ),
+        .O(R0__2_carry__0_i_10_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
+    R0__2_carry__0_i_11
+       (.I0(\L_curr_reg[2][2] ),
+        .I1(\L_curr_reg[2][3] ),
+        .O(R0__2_carry__0_i_11_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    R0__2_carry__0_i_12
+       (.I0(\L_curr_reg[1][2] ),
+        .I1(\L_curr_reg[1][3] ),
+        .O(R0__2_carry__0_i_12_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    R0__2_carry__0_i_13
+       (.I0(\L_curr_reg[3][2] ),
+        .I1(\L_curr_reg[3][3] ),
+        .O(R0__2_carry__0_i_13_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT5 #(
+    .INIT(32'h50040400)) 
+    R0__2_carry__0_i_14
+       (.I0(\rd_addr[4]_INST_0_i_4_n_0 ),
+        .I1(\L_curr_reg[0][2]_3 ),
+        .I2(R0__2_carry__0_i_9_0),
+        .I3(Q[3]),
+        .I4(\L_curr_reg[2][2]_2 ),
+        .O(R0__2_carry__0_i_14_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT4 #(
+    .INIT(16'h2882)) 
+    R0__2_carry__0_i_16
+       (.I0(\rd_addr[4]_INST_0_i_4_n_0 ),
+        .I1(Q[3]),
+        .I2(\L_curr_reg[0][3]_4 ),
+        .I3(\L_curr_reg[0][3]_3 ),
+        .O(R0__2_carry__0_i_16_n_0));
+  LUT5 #(
+    .INIT(32'h40FD4040)) 
+    R0__2_carry__0_i_2
+       (.I0(R0__2_carry_i_8_n_0),
+        .I1(R0__2_carry_i_9_n_0),
+        .I2(R0__2_carry_i_10_n_0),
+        .I3(\L_curr_reg[0][2] ),
+        .I4(\L_curr_reg[0][3]_0 ),
+        .O(\L_curr_reg[0][3] [0]));
+  LUT6 #(
+    .INIT(64'h6996966666696996)) 
+    R0__2_carry__0_i_3
+       (.I0(R0__2_carry__0_i_8_n_0),
+        .I1(R0__2_carry__0_i_9_n_0),
+        .I2(R0__2_carry__0_i_10_n_0),
+        .I3(R0__2_carry__0_i_11_n_0),
+        .I4(R0__2_carry__0_i_12_n_0),
+        .I5(R0__2_carry__0_i_13_n_0),
+        .O(\L_curr_reg[0][3]_1 [2]));
+  LUT6 #(
+    .INIT(64'h6559655965599AA6)) 
+    R0__2_carry__0_i_4
+       (.I0(\L_curr_reg[0][3] [1]),
+        .I1(R0__2_carry__0_i_13_n_0),
+        .I2(R0__2_carry__0_i_12_n_0),
+        .I3(R0__2_carry__0_i_11_n_0),
+        .I4(\L_curr_reg[0][3]_0 ),
+        .I5(\L_curr_reg[0][2] ),
+        .O(\L_curr_reg[0][3]_1 [1]));
+  LUT6 #(
+    .INIT(64'hA51E5AA55AA51E5A)) 
+    R0__2_carry__0_i_5
+       (.I0(\L_curr_reg[0][2] ),
+        .I1(\L_curr_reg[0][3]_0 ),
+        .I2(R0__2_carry__0_i_6_n_0),
+        .I3(R0__2_carry_i_8_n_0),
+        .I4(R0__2_carry_i_9_n_0),
+        .I5(R0__2_carry_i_10_n_0),
+        .O(\L_curr_reg[0][3]_1 [0]));
+  LUT6 #(
+    .INIT(64'hEEE1EEE1EEE1111E)) 
+    R0__2_carry__0_i_6
+       (.I0(\L_curr_reg[3][3] ),
+        .I1(\L_curr_reg[3][2] ),
+        .I2(\L_curr_reg[2][2] ),
+        .I3(\L_curr_reg[2][3] ),
+        .I4(\L_curr_reg[1][2] ),
+        .I5(\L_curr_reg[1][3] ),
+        .O(R0__2_carry__0_i_6_n_0));
+  LUT6 #(
+    .INIT(64'h020002002F220200)) 
+    R0__2_carry__0_i_7
+       (.I0(\L_curr_reg[1][3] ),
+        .I1(\L_curr_reg[1][2] ),
+        .I2(\L_curr_reg[2][2] ),
+        .I3(\L_curr_reg[2][3] ),
+        .I4(\L_curr_reg[3][3] ),
+        .I5(\L_curr_reg[3][2] ),
+        .O(R0__2_carry__0_i_7_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    R0__2_carry__0_i_8
+       (.I0(\L_curr_reg[3][3] ),
+        .I1(\L_curr_reg[1][3] ),
+        .O(R0__2_carry__0_i_8_n_0));
+  LUT6 #(
+    .INIT(64'h555555555565AAAA)) 
+    R0__2_carry__0_i_9
+       (.I0(\L_curr_reg[2][3] ),
+        .I1(\L_curr_reg[0][3]_3 ),
+        .I2(\L_curr_reg[0][3]_4 ),
+        .I3(Q[3]),
+        .I4(\rd_addr[4]_INST_0_i_4_n_0 ),
+        .I5(R0__2_carry__0_i_14_n_0),
+        .O(R0__2_carry__0_i_9_n_0));
+  LUT3 #(
+    .INIT(8'h20)) 
+    R0__2_carry_i_1
+       (.I0(R0__2_carry_i_7_n_0),
+        .I1(\L_curr_reg[0][2] ),
+        .I2(\L_curr_reg[0][3]_0 ),
+        .O(DI[2]));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    R0__2_carry_i_10
+       (.I0(\L_curr_reg[3][3] ),
+        .I1(\L_curr_reg[3][2] ),
+        .O(R0__2_carry_i_10_n_0));
+  LUT3 #(
+    .INIT(8'h9A)) 
+    R0__2_carry_i_2
+       (.I0(R0__2_carry_i_7_n_0),
+        .I1(\L_curr_reg[0][2] ),
+        .I2(\L_curr_reg[0][3]_0 ),
+        .O(DI[1]));
+  LUT3 #(
+    .INIT(8'h69)) 
+    R0__2_carry_i_3
+       (.I0(\L_curr_reg[3][2] ),
+        .I1(\L_curr_reg[2][2] ),
+        .I2(\L_curr_reg[1][2] ),
+        .O(DI[0]));
+  LUT6 #(
+    .INIT(64'h42BD4242BD42BDBD)) 
+    R0__2_carry_i_4
+       (.I0(R0__2_carry_i_8_n_0),
+        .I1(R0__2_carry_i_9_n_0),
+        .I2(R0__2_carry_i_10_n_0),
+        .I3(\L_curr_reg[0][2] ),
+        .I4(\L_curr_reg[0][3]_0 ),
+        .I5(DI[2]),
+        .O(S[2]));
+  LUT6 #(
+    .INIT(64'hD2D2D22DD22D2D2D)) 
+    R0__2_carry_i_5
+       (.I0(\L_curr_reg[0][3]_0 ),
+        .I1(\L_curr_reg[0][2] ),
+        .I2(R0__2_carry_i_7_n_0),
+        .I3(\L_curr_reg[3][2] ),
+        .I4(\L_curr_reg[2][2] ),
+        .I5(\L_curr_reg[1][2] ),
+        .O(S[1]));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    R0__2_carry_i_6
+       (.I0(\L_curr_reg[3][2] ),
+        .I1(\L_curr_reg[2][2] ),
+        .I2(\L_curr_reg[1][2] ),
+        .I3(\L_curr_reg[0][2] ),
+        .O(S[0]));
+  LUT6 #(
+    .INIT(64'h44B4BB4B44B444B4)) 
+    R0__2_carry_i_7
+       (.I0(\L_curr_reg[3][2] ),
+        .I1(\L_curr_reg[3][3] ),
+        .I2(\L_curr_reg[2][3] ),
+        .I3(\L_curr_reg[2][2] ),
+        .I4(\L_curr_reg[1][2] ),
+        .I5(\L_curr_reg[1][3] ),
+        .O(R0__2_carry_i_7_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
+    R0__2_carry_i_8
+       (.I0(\L_curr_reg[1][2] ),
+        .I1(\L_curr_reg[1][3] ),
+        .O(R0__2_carry_i_8_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    R0__2_carry_i_9
+       (.I0(\L_curr_reg[2][3] ),
+        .I1(\L_curr_reg[2][2] ),
+        .O(R0__2_carry_i_9_n_0));
+=======
         .O(\D_road1[31] [9]));
   LUT5 #(
     .INIT(32'hFFF60009)) 
@@ -26439,6 +30852,7 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I4(\R[14]_i_4_n_0 ),
         .I5(\R[14]_i_6_n_0 ),
         .O(D[5]));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT1 #(
     .INIT(2'h1)) 
     \r_lsfr[1]_i_1 
@@ -26456,6 +30870,155 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .D(A_dur_rand[0]),
         .Q(A_dur_rand[1]),
         .R(rst));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \rd_addr[10]_INST_0 
+       (.I0(\rd_addr[10] [7]),
+        .I1(\rd_addr[4] ),
+        .I2(\L_curr_reg[3][3] ),
+        .O(rd_addr[7]));
+  LUT6 #(
+    .INIT(64'hF222F2F2F2F2F2F2)) 
+    \rd_addr[10]_INST_0_i_1 
+       (.I0(\rd_addr[10]_INST_0_i_2_n_0 ),
+        .I1(\L_curr_reg[3][3]_0 ),
+        .I2(\rd_addr[10]_INST_0_i_4_n_0 ),
+        .I3(\L_curr_reg[3][3]_1 [3]),
+        .I4(\L_curr_reg[3][3]_2 ),
+        .I5(\L_curr_reg[3][3]_3 ),
+        .O(\L_curr_reg[3][3] ));
+  LUT5 #(
+    .INIT(32'hE8000000)) 
+    \rd_addr[10]_INST_0_i_2 
+       (.I0(\L_curr_reg[3][2]_3 ),
+        .I1(\L_curr_reg[3][3]_1 [3]),
+        .I2(\L_curr_reg[2][2]_2 ),
+        .I3(\r_lsfr_reg[1]_0 ),
+        .I4(\r_lsfr_reg[2]_0 ),
+        .O(\rd_addr[10]_INST_0_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    \rd_addr[10]_INST_0_i_4 
+       (.I0(\r_lsfr_reg[1]_0 ),
+        .I1(\r_lsfr_reg[2]_0 ),
+        .O(\rd_addr[10]_INST_0_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \rd_addr[3]_INST_0 
+       (.I0(\rd_addr[10] [0]),
+        .I1(\rd_addr[4] ),
+        .I2(\L_curr_reg[0][2] ),
+        .O(rd_addr[0]));
+  LUT6 #(
+    .INIT(64'hFEEEEEFEEEFEFEEE)) 
+    \rd_addr[3]_INST_0_i_1 
+       (.I0(\rd_addr[3]_INST_0_i_2_n_0 ),
+        .I1(\rd_addr[3]_INST_0_i_3_n_0 ),
+        .I2(\rd_addr[4]_INST_0_i_2_n_0 ),
+        .I3(\L_curr_reg[0][2]_0 ),
+        .I4(Q[2]),
+        .I5(\L_curr_reg[2][2]_0 ),
+        .O(\L_curr_reg[0][2] ));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT4 #(
+    .INIT(16'h80A8)) 
+    \rd_addr[3]_INST_0_i_2 
+       (.I0(\rd_addr[4]_INST_0_i_4_n_0 ),
+        .I1(\L_curr_reg[0][3]_3 ),
+        .I2(Q[3]),
+        .I3(\L_curr_reg[0][3]_4 ),
+        .O(\rd_addr[3]_INST_0_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'h8228)) 
+    \rd_addr[3]_INST_0_i_3 
+       (.I0(\rd_addr[4]_INST_0_i_4_n_0 ),
+        .I1(Q[2]),
+        .I2(\L_curr_reg[0][2]_1 ),
+        .I3(\L_curr_reg[0][2]_2 ),
+        .O(\rd_addr[3]_INST_0_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \rd_addr[4]_INST_0 
+       (.I0(\rd_addr[10] [1]),
+        .I1(\rd_addr[4] ),
+        .I2(\L_curr_reg[0][3]_0 ),
+        .O(rd_addr[1]));
+  LUT6 #(
+    .INIT(64'hF2F2F2F2F222F2F2)) 
+    \rd_addr[4]_INST_0_i_1 
+       (.I0(\rd_addr[4]_INST_0_i_2_n_0 ),
+        .I1(\L_curr_reg[0][3]_2 ),
+        .I2(\rd_addr[4]_INST_0_i_4_n_0 ),
+        .I3(Q[3]),
+        .I4(\L_curr_reg[0][3]_4 ),
+        .I5(\L_curr_reg[0][3]_3 ),
+        .O(\L_curr_reg[0][3]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT4 #(
+    .INIT(16'h00E8)) 
+    \rd_addr[4]_INST_0_i_2 
+       (.I0(\L_curr_reg[0][2]_3 ),
+        .I1(Q[3]),
+        .I2(\L_curr_reg[2][2]_2 ),
+        .I3(\rd_addr[4]_INST_0_i_4_n_0 ),
+        .O(\rd_addr[4]_INST_0_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \rd_addr[4]_INST_0_i_4 
+       (.I0(\r_lsfr_reg[1]_0 ),
+        .I1(\r_lsfr_reg[2]_0 ),
+        .O(\rd_addr[4]_INST_0_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \rd_addr[5]_INST_0 
+       (.I0(\rd_addr[10] [2]),
+        .I1(\rd_addr[4] ),
+        .I2(\L_curr_reg[1][2] ),
+        .O(rd_addr[2]));
+  LUT6 #(
+    .INIT(64'hFEEEEEFEEEFEFEEE)) 
+    \rd_addr[5]_INST_0_i_1 
+       (.I0(\rd_addr[5]_INST_0_i_2_n_0 ),
+        .I1(\rd_addr[5]_INST_0_i_3_n_0 ),
+        .I2(\rd_addr[6]_INST_0_i_2_n_0 ),
+        .I3(\L_curr_reg[1][2]_0 ),
+        .I4(\L_curr_reg[1][3]_1 [2]),
+        .I5(\L_curr_reg[2][2]_0 ),
+        .O(\L_curr_reg[1][2] ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT5 #(
+    .INIT(32'hD400D4D4)) 
+    \rd_addr[5]_INST_0_i_2 
+       (.I0(\L_curr_reg[1][3]_2 ),
+        .I1(\L_curr_reg[1][3]_1 [3]),
+        .I2(\L_curr_reg[1][3]_3 ),
+        .I3(\r_lsfr_reg[2]_0 ),
+        .I4(\r_lsfr_reg[1]_0 ),
+        .O(\rd_addr[5]_INST_0_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT5 #(
+    .INIT(32'hD00D0DD0)) 
+    \rd_addr[5]_INST_0_i_3 
+       (.I0(\r_lsfr_reg[1]_0 ),
+        .I1(\r_lsfr_reg[2]_0 ),
+        .I2(\L_curr_reg[1][3]_1 [2]),
+        .I3(\L_curr_reg[1][2]_1 ),
+        .I4(\L_curr_reg[1][2]_2 ),
+        .O(\rd_addr[5]_INST_0_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \rd_addr[6]_INST_0 
+       (.I0(\rd_addr[10] [3]),
+        .I1(\rd_addr[4] ),
+=======
   (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'hB8)) 
@@ -26581,6 +31144,7 @@ module top_level_Intellight_Accelerat_0_0_lfsr
     \rd_addr[5]_INST_0 
        (.I0(\rd_addr[9] [3]),
         .I1(\rd_addr[2] ),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I2(\L_curr_reg[1][3] ),
         .O(rd_addr[3]));
   LUT6 #(
@@ -26593,6 +31157,132 @@ module top_level_Intellight_Accelerat_0_0_lfsr
         .I4(\L_curr_reg[1][3]_2 ),
         .I5(\L_curr_reg[1][3]_3 ),
         .O(\L_curr_reg[1][3] ));
+<<<<<<< HEAD
+  LUT5 #(
+    .INIT(32'h00E80000)) 
+    \rd_addr[6]_INST_0_i_2 
+       (.I0(\L_curr_reg[1][2]_3 ),
+        .I1(\L_curr_reg[1][3]_1 [3]),
+        .I2(\L_curr_reg[2][2]_2 ),
+        .I3(\r_lsfr_reg[2]_0 ),
+        .I4(\r_lsfr_reg[1]_0 ),
+        .O(\rd_addr[6]_INST_0_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
+    \rd_addr[6]_INST_0_i_4 
+       (.I0(\r_lsfr_reg[2]_0 ),
+        .I1(\r_lsfr_reg[1]_0 ),
+        .O(\rd_addr[6]_INST_0_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \rd_addr[7]_INST_0 
+       (.I0(\rd_addr[10] [4]),
+        .I1(\rd_addr[4] ),
+        .I2(\L_curr_reg[2][2] ),
+        .O(rd_addr[4]));
+  LUT6 #(
+    .INIT(64'hFEEEEEFEEEFEFEEE)) 
+    \rd_addr[7]_INST_0_i_1 
+       (.I0(\rd_addr[7]_INST_0_i_2_n_0 ),
+        .I1(\rd_addr[7]_INST_0_i_3_n_0 ),
+        .I2(\rd_addr[8]_INST_0_i_2_n_0 ),
+        .I3(\L_curr_reg[2][2]_1 ),
+        .I4(\L_curr_reg[2][3]_1 [2]),
+        .I5(\L_curr_reg[2][2]_0 ),
+        .O(\L_curr_reg[2][2] ));
+  LUT5 #(
+    .INIT(32'hD400D4D4)) 
+    \rd_addr[7]_INST_0_i_2 
+       (.I0(\L_curr_reg[2][3]_2 ),
+        .I1(\L_curr_reg[2][3]_1 [3]),
+        .I2(\L_curr_reg[2][3]_3 ),
+        .I3(\r_lsfr_reg[1]_0 ),
+        .I4(\r_lsfr_reg[2]_0 ),
+        .O(\rd_addr[7]_INST_0_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'hD00D0DD0)) 
+    \rd_addr[7]_INST_0_i_3 
+       (.I0(\r_lsfr_reg[2]_0 ),
+        .I1(\r_lsfr_reg[1]_0 ),
+        .I2(\L_curr_reg[2][3]_1 [2]),
+        .I3(\L_curr_reg[2][2]_4 ),
+        .I4(\L_curr_reg[2][2]_5 ),
+        .O(\rd_addr[7]_INST_0_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \rd_addr[8]_INST_0 
+       (.I0(\rd_addr[10] [5]),
+        .I1(\rd_addr[4] ),
+        .I2(\L_curr_reg[2][3] ),
+        .O(rd_addr[5]));
+  LUT6 #(
+    .INIT(64'hF2F2F2F2F222F2F2)) 
+    \rd_addr[8]_INST_0_i_1 
+       (.I0(\rd_addr[8]_INST_0_i_2_n_0 ),
+        .I1(\L_curr_reg[2][3]_0 ),
+        .I2(\rd_addr[8]_INST_0_i_4_n_0 ),
+        .I3(\L_curr_reg[2][3]_1 [3]),
+        .I4(\L_curr_reg[2][3]_2 ),
+        .I5(\L_curr_reg[2][3]_3 ),
+        .O(\L_curr_reg[2][3] ));
+  LUT5 #(
+    .INIT(32'h00E80000)) 
+    \rd_addr[8]_INST_0_i_2 
+       (.I0(\L_curr_reg[2][2]_3 ),
+        .I1(\L_curr_reg[2][3]_1 [3]),
+        .I2(\L_curr_reg[2][2]_2 ),
+        .I3(\r_lsfr_reg[1]_0 ),
+        .I4(\r_lsfr_reg[2]_0 ),
+        .O(\rd_addr[8]_INST_0_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
+    \rd_addr[8]_INST_0_i_4 
+       (.I0(\r_lsfr_reg[1]_0 ),
+        .I1(\r_lsfr_reg[2]_0 ),
+        .O(\rd_addr[8]_INST_0_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \rd_addr[9]_INST_0 
+       (.I0(\rd_addr[10] [6]),
+        .I1(\rd_addr[4] ),
+        .I2(\L_curr_reg[3][2] ),
+        .O(rd_addr[6]));
+  LUT6 #(
+    .INIT(64'hFEEEEEFEEEFEFEEE)) 
+    \rd_addr[9]_INST_0_i_1 
+       (.I0(\rd_addr[9]_INST_0_i_2_n_0 ),
+        .I1(\rd_addr[9]_INST_0_i_3_n_0 ),
+        .I2(\rd_addr[10]_INST_0_i_2_n_0 ),
+        .I3(\L_curr_reg[3][2]_0 ),
+        .I4(\L_curr_reg[3][3]_1 [2]),
+        .I5(\L_curr_reg[2][2]_0 ),
+        .O(\L_curr_reg[3][2] ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT5 #(
+    .INIT(32'h00707077)) 
+    \rd_addr[9]_INST_0_i_2 
+       (.I0(\r_lsfr_reg[2]_0 ),
+        .I1(\r_lsfr_reg[1]_0 ),
+        .I2(\L_curr_reg[3][3]_1 [3]),
+        .I3(\L_curr_reg[3][3]_3 ),
+        .I4(\L_curr_reg[3][3]_2 ),
+        .O(\rd_addr[9]_INST_0_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT5 #(
+    .INIT(32'h70070770)) 
+    \rd_addr[9]_INST_0_i_3 
+       (.I0(\r_lsfr_reg[2]_0 ),
+        .I1(\r_lsfr_reg[1]_0 ),
+        .I2(\L_curr_reg[3][3]_1 [2]),
+        .I3(\L_curr_reg[3][2]_1 ),
+        .I4(\L_curr_reg[3][2]_2 ),
+        .O(\rd_addr[9]_INST_0_i_3_n_0 ));
+=======
   (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hB8)) 
@@ -26738,6 +31428,7 @@ module top_level_Intellight_Accelerat_0_0_lfsr
        (.I0(\r_lsfr_reg[1]_0 ),
         .I1(\r_lsfr_reg[2]_0 ),
         .O(\rd_addr[9]_INST_0_i_6_n_0 ));
+>>>>>>> parent of ae750207 (shfcuidtf7)
 endmodule
 
 (* ORIG_REF_NAME = "lfsr" *) 
@@ -26898,7 +31589,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr__parameterized0
         .I2(Q[0]),
         .I3(r_lsfr[1]),
         .O(S[0]));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair37" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \r_lsfr[10]_i_1 
@@ -26906,7 +31601,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr__parameterized0
         .I1(rst),
         .I2(r_lsfr[9]),
         .O(p_0_in__0[9]));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair36" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \r_lsfr[11]_i_1 
@@ -26914,7 +31613,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr__parameterized0
         .I1(rst),
         .I2(r_lsfr[10]),
         .O(p_0_in__0[10]));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair36" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \r_lsfr[12]_i_1 
@@ -26922,7 +31625,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr__parameterized0
         .I1(rst),
         .I2(r_lsfr[11]),
         .O(p_0_in__0[11]));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair35" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \r_lsfr[13]_i_1 
@@ -26930,7 +31637,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr__parameterized0
         .I1(rst),
         .I2(r_lsfr[12]),
         .O(p_0_in__0[12]));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair35" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \r_lsfr[14]_i_1 
@@ -26938,7 +31649,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr__parameterized0
         .I1(rst),
         .I2(r_lsfr[13]),
         .O(p_0_in__0[13]));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair34" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \r_lsfr[15]_i_1 
@@ -26946,7 +31661,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr__parameterized0
         .I1(rst),
         .I2(r_lsfr[14]),
         .O(p_0_in__0[14]));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair34" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \r_lsfr[16]_i_1 
@@ -26971,7 +31690,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr__parameterized0
         .I1(rst),
         .I2(r_lsfr[1]),
         .O(p_0_in__0[1]));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair40" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \r_lsfr[3]_i_1 
@@ -26979,7 +31702,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr__parameterized0
         .I1(rst),
         .I2(r_lsfr[2]),
         .O(p_0_in__0[2]));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair40" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \r_lsfr[4]_i_1 
@@ -26987,7 +31714,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr__parameterized0
         .I1(rst),
         .I2(r_lsfr[3]),
         .O(p_0_in__0[3]));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair39" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \r_lsfr[5]_i_1 
@@ -26995,7 +31726,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr__parameterized0
         .I1(rst),
         .I2(r_lsfr[4]),
         .O(p_0_in__0[4]));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair39" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \r_lsfr[6]_i_1 
@@ -27003,7 +31738,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr__parameterized0
         .I1(rst),
         .I2(r_lsfr[5]),
         .O(p_0_in__0[5]));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair38" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \r_lsfr[7]_i_1 
@@ -27011,7 +31750,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr__parameterized0
         .I1(rst),
         .I2(r_lsfr[6]),
         .O(p_0_in__0[6]));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair38" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \r_lsfr[8]_i_1 
@@ -27019,7 +31762,11 @@ module top_level_Intellight_Accelerat_0_0_lfsr__parameterized0
         .I1(rst),
         .I2(r_lsfr[7]),
         .O(p_0_in__0[7]));
+<<<<<<< HEAD
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+=======
   (* SOFT_HLUTNM = "soft_lutpair37" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \r_lsfr[9]_i_1 
@@ -27127,7 +31874,7 @@ endmodule
 
 (* ORIG_REF_NAME = "max4to1" *) 
 module top_level_Intellight_Accelerat_0_0_max4to1
-   (D_road1_15_sp_1,
+   (D_road3_15_sp_1,
     D_road1_14_sp_1,
     D,
     D_road3_13_sp_1,
@@ -27135,9 +31882,15 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     D_road1_11_sp_1,
     D_road1_10_sp_1,
     D_road1_9_sp_1,
+<<<<<<< HEAD
+    D_road1_8_sp_1,
+    D_road0_7_sp_1,
+    D_road3_6_sp_1,
+=======
     D_road0_8_sp_1,
     D_road3_7_sp_1,
     D_road1_6_sp_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
     D_road3_23_sp_1,
     D_road1_22_sp_1,
     D_road1_5_sp_1,
@@ -27145,14 +31898,30 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     D_road1_21_sp_1,
     D_road3_20_sp_1,
     D_road1_3_sp_1,
+<<<<<<< HEAD
+    D_road3_2_sp_1,
+    D_road3_19_sp_1,
+    D_road1_18_sp_1,
+=======
     D_road0_2_sp_1,
     D_road1_19_sp_1,
     D_road3_18_sp_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
     D_road0_1_sp_1,
     D_road1_0_sp_1,
     D_road3_17_sp_1,
     D_road1_16_sp_1,
     D_road1_47_sp_1,
+<<<<<<< HEAD
+    \D_road3[63] ,
+    \D_road1[62] ,
+    D_road1_46_sp_1,
+    D_road3_45_sp_1,
+    \D_road1[61] ,
+    \D_road3[60] ,
+    D_road1_44_sp_1,
+    D_road0_43_sp_1,
+=======
     \D_road1[63] ,
     \D_road3[62] ,
     D_road1_46_sp_1,
@@ -27161,25 +31930,40 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     \D_road3[60] ,
     D_road1_44_sp_1,
     D_road1_43_sp_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \D_road3[59] ,
     \D_road1[58] ,
     D_road3_42_sp_1,
     D_road1_41_sp_1,
     \D_road1[57] ,
     \D_road1[56] ,
+<<<<<<< HEAD
+    D_road1_40_sp_1,
+    D_road1_39_sp_1,
+    D_road3_55_sp_1,
+    D_road3_54_sp_1,
+    D_road3_38_sp_1,
+    D_road1_37_sp_1,
+=======
     D_road3_40_sp_1,
     D_road3_39_sp_1,
     D_road0_55_sp_1,
     D_road0_54_sp_1,
     D_road1_38_sp_1,
     D_road3_37_sp_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
     D_road1_53_sp_1,
     D_road1_52_sp_1,
     D_road1_36_sp_1,
     D_road1_35_sp_1,
     D_road1_51_sp_1,
+<<<<<<< HEAD
+    D_road1_50_sp_1,
+    D_road0_34_sp_1,
+=======
     D_road3_50_sp_1,
     D_road3_34_sp_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
     D_road1_33_sp_1,
     D_road3_49_sp_1,
     D_road3_48_sp_1,
@@ -27187,11 +31971,11 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     DI,
     S,
     \Q_max_reg[15] ,
-    D_road1,
     D_road3,
-    D_road0,
-    Q,
     D_road2,
+    D_road1,
+    Q,
+    D_road0,
     \Q_max_reg[14] ,
     \Q_max_reg[13] ,
     \Q_max_reg[12] ,
@@ -27199,7 +31983,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     \Q_max_reg[10] ,
     \Q_max_reg[9] ,
     \Q_max_reg[8] );
-  output D_road1_15_sp_1;
+  output D_road3_15_sp_1;
   output D_road1_14_sp_1;
   output [15:0]D;
   output D_road3_13_sp_1;
@@ -27207,9 +31991,15 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   output D_road1_11_sp_1;
   output D_road1_10_sp_1;
   output D_road1_9_sp_1;
+<<<<<<< HEAD
+  output D_road1_8_sp_1;
+  output D_road0_7_sp_1;
+  output D_road3_6_sp_1;
+=======
   output D_road0_8_sp_1;
   output D_road3_7_sp_1;
   output D_road1_6_sp_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   output D_road3_23_sp_1;
   output D_road1_22_sp_1;
   output D_road1_5_sp_1;
@@ -27217,14 +32007,30 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   output D_road1_21_sp_1;
   output D_road3_20_sp_1;
   output D_road1_3_sp_1;
+<<<<<<< HEAD
+  output D_road3_2_sp_1;
+  output D_road3_19_sp_1;
+  output D_road1_18_sp_1;
+=======
   output D_road0_2_sp_1;
   output D_road1_19_sp_1;
   output D_road3_18_sp_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   output D_road0_1_sp_1;
   output D_road1_0_sp_1;
   output D_road3_17_sp_1;
   output D_road1_16_sp_1;
   output D_road1_47_sp_1;
+<<<<<<< HEAD
+  output \D_road3[63] ;
+  output \D_road1[62] ;
+  output D_road1_46_sp_1;
+  output D_road3_45_sp_1;
+  output \D_road1[61] ;
+  output \D_road3[60] ;
+  output D_road1_44_sp_1;
+  output D_road0_43_sp_1;
+=======
   output \D_road1[63] ;
   output \D_road3[62] ;
   output D_road1_46_sp_1;
@@ -27233,25 +32039,40 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   output \D_road3[60] ;
   output D_road1_44_sp_1;
   output D_road1_43_sp_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   output \D_road3[59] ;
   output \D_road1[58] ;
   output D_road3_42_sp_1;
   output D_road1_41_sp_1;
   output \D_road1[57] ;
   output \D_road1[56] ;
+<<<<<<< HEAD
+  output D_road1_40_sp_1;
+  output D_road1_39_sp_1;
+  output D_road3_55_sp_1;
+  output D_road3_54_sp_1;
+  output D_road3_38_sp_1;
+  output D_road1_37_sp_1;
+=======
   output D_road3_40_sp_1;
   output D_road3_39_sp_1;
   output D_road0_55_sp_1;
   output D_road0_54_sp_1;
   output D_road1_38_sp_1;
   output D_road3_37_sp_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   output D_road1_53_sp_1;
   output D_road1_52_sp_1;
   output D_road1_36_sp_1;
   output D_road1_35_sp_1;
   output D_road1_51_sp_1;
+<<<<<<< HEAD
+  output D_road1_50_sp_1;
+  output D_road0_34_sp_1;
+=======
   output D_road3_50_sp_1;
   output D_road3_34_sp_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   output D_road1_33_sp_1;
   output D_road3_49_sp_1;
   output D_road3_48_sp_1;
@@ -27259,11 +32080,11 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   input [3:0]DI;
   input [3:0]S;
   input \Q_max_reg[15] ;
-  input [55:0]D_road1;
   input [55:0]D_road3;
-  input [55:0]D_road0;
-  input [1:0]Q;
   input [55:0]D_road2;
+  input [55:0]D_road1;
+  input [1:0]Q;
+  input [55:0]D_road0;
   input \Q_max_reg[14] ;
   input \Q_max_reg[13] ;
   input \Q_max_reg[12] ;
@@ -27275,30 +32096,57 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   wire [15:0]D;
   wire [3:0]DI;
   wire [55:0]D_road0;
+<<<<<<< HEAD
+  wire D_road0_16_sn_1;
+  wire D_road0_1_sn_1;
+  wire D_road0_34_sn_1;
+  wire D_road0_36_sn_1;
+  wire D_road0_42_sn_1;
+  wire D_road0_43_sn_1;
+  wire D_road0_4_sn_1;
+  wire D_road0_7_sn_1;
+=======
   wire D_road0_1_sn_1;
   wire D_road0_2_sn_1;
   wire D_road0_54_sn_1;
   wire D_road0_55_sn_1;
   wire D_road0_8_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [55:0]D_road1;
   wire \D_road1[56] ;
   wire \D_road1[57] ;
   wire \D_road1[58] ;
   wire \D_road1[61] ;
+<<<<<<< HEAD
+  wire \D_road1[62] ;
+=======
   wire \D_road1[63] ;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire D_road1_0_sn_1;
   wire D_road1_10_sn_1;
   wire D_road1_11_sn_1;
   wire D_road1_12_sn_1;
   wire D_road1_14_sn_1;
+<<<<<<< HEAD
+  wire D_road1_18_sn_1;
+  wire D_road1_20_sn_1;
+=======
   wire D_road1_15_sn_1;
   wire D_road1_16_sn_1;
   wire D_road1_19_sn_1;
   wire D_road1_21_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire D_road1_22_sn_1;
   wire D_road1_32_sn_1;
   wire D_road1_33_sn_1;
   wire D_road1_35_sn_1;
+<<<<<<< HEAD
+  wire D_road1_37_sn_1;
+  wire D_road1_39_sn_1;
+  wire D_road1_3_sn_1;
+  wire D_road1_40_sn_1;
+  wire D_road1_44_sn_1;
+=======
   wire D_road1_36_sn_1;
   wire D_road1_38_sn_1;
   wire D_road1_3_sn_1;
@@ -27306,6 +32154,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   wire D_road1_43_sn_1;
   wire D_road1_44_sn_1;
   wire D_road1_45_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire D_road1_46_sn_1;
   wire D_road1_47_sn_1;
   wire D_road1_4_sn_1;
@@ -27313,7 +32162,11 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   wire D_road1_52_sn_1;
   wire D_road1_53_sn_1;
   wire D_road1_5_sn_1;
+<<<<<<< HEAD
+  wire D_road1_8_sn_1;
+=======
   wire D_road1_6_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire D_road1_9_sn_1;
   wire [55:0]D_road2;
   wire [55:0]D_road3;
@@ -27321,10 +32174,21 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   wire \D_road3[60] ;
   wire \D_road3[62] ;
   wire D_road3_13_sn_1;
+  wire D_road3_15_sn_1;
   wire D_road3_17_sn_1;
   wire D_road3_18_sn_1;
   wire D_road3_20_sn_1;
   wire D_road3_23_sn_1;
+<<<<<<< HEAD
+  wire D_road3_2_sn_1;
+  wire D_road3_38_sn_1;
+  wire D_road3_41_sn_1;
+  wire D_road3_45_sn_1;
+  wire D_road3_49_sn_1;
+  wire D_road3_54_sn_1;
+  wire D_road3_55_sn_1;
+  wire D_road3_6_sn_1;
+=======
   wire D_road3_34_sn_1;
   wire D_road3_37_sn_1;
   wire D_road3_39_sn_1;
@@ -27334,6 +32198,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   wire D_road3_49_sn_1;
   wire D_road3_50_sn_1;
   wire D_road3_7_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wire [1:0]Q;
   wire \Q_max[0]_i_4_n_0 ;
   wire \Q_max[10]_i_4_n_0 ;
@@ -27460,24 +32325,47 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   wire [3:0]NLW_temp11_carry_O_UNCONNECTED;
   wire [3:0]NLW_temp11_carry__0_O_UNCONNECTED;
 
+<<<<<<< HEAD
+  assign D_road0_16_sp_1 = D_road0_16_sn_1;
+  assign D_road0_1_sp_1 = D_road0_1_sn_1;
+  assign D_road0_34_sp_1 = D_road0_34_sn_1;
+  assign D_road0_36_sp_1 = D_road0_36_sn_1;
+  assign D_road0_42_sp_1 = D_road0_42_sn_1;
+  assign D_road0_43_sp_1 = D_road0_43_sn_1;
+  assign D_road0_4_sp_1 = D_road0_4_sn_1;
+  assign D_road0_7_sp_1 = D_road0_7_sn_1;
+=======
   assign D_road0_1_sp_1 = D_road0_1_sn_1;
   assign D_road0_2_sp_1 = D_road0_2_sn_1;
   assign D_road0_54_sp_1 = D_road0_54_sn_1;
   assign D_road0_55_sp_1 = D_road0_55_sn_1;
   assign D_road0_8_sp_1 = D_road0_8_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   assign D_road1_0_sp_1 = D_road1_0_sn_1;
   assign D_road1_10_sp_1 = D_road1_10_sn_1;
   assign D_road1_11_sp_1 = D_road1_11_sn_1;
   assign D_road1_12_sp_1 = D_road1_12_sn_1;
   assign D_road1_14_sp_1 = D_road1_14_sn_1;
+<<<<<<< HEAD
+  assign D_road1_18_sp_1 = D_road1_18_sn_1;
+  assign D_road1_20_sp_1 = D_road1_20_sn_1;
+=======
   assign D_road1_15_sp_1 = D_road1_15_sn_1;
   assign D_road1_16_sp_1 = D_road1_16_sn_1;
   assign D_road1_19_sp_1 = D_road1_19_sn_1;
   assign D_road1_21_sp_1 = D_road1_21_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   assign D_road1_22_sp_1 = D_road1_22_sn_1;
   assign D_road1_32_sp_1 = D_road1_32_sn_1;
   assign D_road1_33_sp_1 = D_road1_33_sn_1;
   assign D_road1_35_sp_1 = D_road1_35_sn_1;
+<<<<<<< HEAD
+  assign D_road1_37_sp_1 = D_road1_37_sn_1;
+  assign D_road1_39_sp_1 = D_road1_39_sn_1;
+  assign D_road1_3_sp_1 = D_road1_3_sn_1;
+  assign D_road1_40_sp_1 = D_road1_40_sn_1;
+  assign D_road1_44_sp_1 = D_road1_44_sn_1;
+=======
   assign D_road1_36_sp_1 = D_road1_36_sn_1;
   assign D_road1_38_sp_1 = D_road1_38_sn_1;
   assign D_road1_3_sp_1 = D_road1_3_sn_1;
@@ -27485,6 +32373,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   assign D_road1_43_sp_1 = D_road1_43_sn_1;
   assign D_road1_44_sp_1 = D_road1_44_sn_1;
   assign D_road1_45_sp_1 = D_road1_45_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   assign D_road1_46_sp_1 = D_road1_46_sn_1;
   assign D_road1_47_sp_1 = D_road1_47_sn_1;
   assign D_road1_4_sp_1 = D_road1_4_sn_1;
@@ -27492,13 +32381,28 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   assign D_road1_52_sp_1 = D_road1_52_sn_1;
   assign D_road1_53_sp_1 = D_road1_53_sn_1;
   assign D_road1_5_sp_1 = D_road1_5_sn_1;
+<<<<<<< HEAD
+  assign D_road1_8_sp_1 = D_road1_8_sn_1;
+=======
   assign D_road1_6_sp_1 = D_road1_6_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   assign D_road1_9_sp_1 = D_road1_9_sn_1;
   assign D_road3_13_sp_1 = D_road3_13_sn_1;
+  assign D_road3_15_sp_1 = D_road3_15_sn_1;
   assign D_road3_17_sp_1 = D_road3_17_sn_1;
   assign D_road3_18_sp_1 = D_road3_18_sn_1;
   assign D_road3_20_sp_1 = D_road3_20_sn_1;
   assign D_road3_23_sp_1 = D_road3_23_sn_1;
+<<<<<<< HEAD
+  assign D_road3_2_sp_1 = D_road3_2_sn_1;
+  assign D_road3_38_sp_1 = D_road3_38_sn_1;
+  assign D_road3_41_sp_1 = D_road3_41_sn_1;
+  assign D_road3_45_sp_1 = D_road3_45_sn_1;
+  assign D_road3_49_sp_1 = D_road3_49_sn_1;
+  assign D_road3_54_sp_1 = D_road3_54_sn_1;
+  assign D_road3_55_sp_1 = D_road3_55_sn_1;
+  assign D_road3_6_sp_1 = D_road3_6_sn_1;
+=======
   assign D_road3_34_sp_1 = D_road3_34_sn_1;
   assign D_road3_37_sp_1 = D_road3_37_sn_1;
   assign D_road3_39_sp_1 = D_road3_39_sn_1;
@@ -27508,6 +32412,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   assign D_road3_49_sp_1 = D_road3_49_sn_1;
   assign D_road3_50_sp_1 = D_road3_50_sn_1;
   assign D_road3_7_sp_1 = D_road3_7_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'h0F5533000F5533FF)) 
     \Q_act_reg[0][0]_i_2 
@@ -27539,6 +32444,29 @@ module top_level_Intellight_Accelerat_0_0_max4to1
         .I5(D_road2[50]),
         .O(\D_road1[58] ));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h5533000F5533FF0F)) 
+    \Q_act_reg[0][11]_i_2 
+       (.I0(D_road0[35]),
+        .I1(D_road3[35]),
+        .I2(D_road1[35]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road2[35]),
+        .O(D_road0_43_sn_1));
+  LUT6 #(
+    .INIT(64'h0F5500330F55FF33)) 
+    \Q_act_reg[0][11]_i_3 
+       (.I0(D_road3[51]),
+        .I1(D_road1[51]),
+        .I2(D_road0[51]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road2[51]),
+        .O(\D_road3[59] ));
+  LUT6 #(
+    .INIT(64'h0F3300550F33FF55)) 
+=======
     .INIT(64'h3355000F3355FF0F)) 
     \Q_act_reg[0][10]_i_3 
        (.I0(D_road3[34]),
@@ -27570,6 +32498,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
         .O(D_road1_43_sn_1));
   LUT6 #(
     .INIT(64'h0F3300550F33FF55)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][12]_i_2 
        (.I0(D_road1[36]),
         .I1(D_road3[36]),
@@ -27584,6 +32513,18 @@ module top_level_Intellight_Accelerat_0_0_max4to1
        (.I0(D_road3[52]),
         .I1(D_road2[52]),
         .I2(D_road0[52]),
+<<<<<<< HEAD
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road1[52]),
+        .O(\D_road3[60] ));
+  LUT6 #(
+    .INIT(64'h3355000F3355FF0F)) 
+    \Q_act_reg[0][13]_i_2 
+       (.I0(D_road3[37]),
+        .I1(D_road0[37]),
+        .I2(D_road1[37]),
+=======
         .I3(Q[0]),
         .I4(Q[1]),
         .I5(D_road1[52]),
@@ -27604,12 +32545,27 @@ module top_level_Intellight_Accelerat_0_0_max4to1
        (.I0(D_road1[37]),
         .I1(D_road3[37]),
         .I2(D_road0[37]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(Q[0]),
         .I4(Q[1]),
         .I5(D_road2[37]),
         .O(D_road1_45_sn_1));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0F3300550F33FF55)) 
+    \Q_act_reg[0][13]_i_3 
+       (.I0(D_road1[53]),
+        .I1(D_road3[53]),
+        .I2(D_road0[53]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road2[53]),
+        .O(\D_road1[61] ));
+  LUT6 #(
+    .INIT(64'h0F3300550F33FF55)) 
+=======
     .INIT(64'h3355000F3355FF0F)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][14]_i_2 
        (.I0(D_road3[54]),
         .I1(D_road0[54]),
@@ -27649,8 +32605,32 @@ module top_level_Intellight_Accelerat_0_0_max4to1
         .I5(D_road2[39]),
         .O(D_road1_47_sn_1));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0055330FFF55330F)) 
+    \Q_act_reg[0][15]_i_3 
+       (.I0(D_road3[55]),
+        .I1(D_road2[55]),
+        .I2(D_road1[55]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road0[55]),
+        .O(\D_road3[63] ));
+  LUT6 #(
+    .INIT(64'h0F3300550F33FF55)) 
+=======
     .INIT(64'h0F5533000F5533FF)) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][1]_i_2 
+       (.I0(D_road1[25]),
+        .I1(D_road3[25]),
+        .I2(D_road0[25]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road2[25]),
+        .O(D_road1_33_sn_1));
+  LUT6 #(
+    .INIT(64'h0F5533000F5533FF)) 
+    \Q_act_reg[0][1]_i_3 
        (.I0(D_road3[41]),
         .I1(D_road2[41]),
         .I2(D_road0[41]),
@@ -27660,6 +32640,11 @@ module top_level_Intellight_Accelerat_0_0_max4to1
         .O(D_road3_49_sn_1));
   LUT6 #(
     .INIT(64'h0F3300550F33FF55)) 
+<<<<<<< HEAD
+    \Q_act_reg[0][2]_i_2 
+       (.I0(D_road1[42]),
+        .I1(D_road3[42]),
+=======
     \Q_act_reg[0][1]_i_3 
        (.I0(D_road1[25]),
         .I1(D_road3[25]),
@@ -27673,6 +32658,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     \Q_act_reg[0][2]_i_2 
        (.I0(D_road3[42]),
         .I1(D_road2[42]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I2(D_road0[42]),
         .I3(Q[0]),
         .I4(Q[1]),
@@ -27689,6 +32675,19 @@ module top_level_Intellight_Accelerat_0_0_max4to1
         .I5(D_road0[26]),
         .O(D_road3_34_sn_1));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h5533000F5533FF0F)) 
+    \Q_act_reg[0][2]_i_3 
+       (.I0(D_road0[26]),
+        .I1(D_road3[26]),
+        .I2(D_road1[26]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road2[26]),
+        .O(D_road0_34_sn_1));
+  LUT6 #(
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
     .INIT(64'h0F3300550F33FF55)) 
     \Q_act_reg[0][3]_i_2 
        (.I0(D_road1[43]),
@@ -27759,6 +32758,37 @@ module top_level_Intellight_Accelerat_0_0_max4to1
         .I5(D_road2[30]),
         .O(D_road1_38_sn_1));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0055330FFF55330F)) 
+    \Q_act_reg[0][6]_i_3 
+       (.I0(D_road3[46]),
+        .I1(D_road2[46]),
+        .I2(D_road1[46]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road0[46]),
+        .O(D_road3_54_sn_1));
+  LUT6 #(
+    .INIT(64'h0055330FFF55330F)) 
+    \Q_act_reg[0][7]_i_2 
+       (.I0(D_road3[47]),
+        .I1(D_road2[47]),
+        .I2(D_road1[47]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road0[47]),
+        .O(D_road3_55_sn_1));
+  LUT6 #(
+    .INIT(64'h0F3300550F33FF55)) 
+    \Q_act_reg[0][7]_i_3 
+       (.I0(D_road1[31]),
+        .I1(D_road3[31]),
+        .I2(D_road0[31]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road2[31]),
+        .O(D_road1_39_sn_1));
+=======
     .INIT(64'h5533000F5533FF0F)) 
     \Q_act_reg[0][6]_i_3 
        (.I0(D_road0[46]),
@@ -27798,9 +32828,10 @@ module top_level_Intellight_Accelerat_0_0_max4to1
         .I4(Q[1]),
         .I5(D_road1[32]),
         .O(D_road3_40_sn_1));
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT6 #(
     .INIT(64'h0F3300550F33FF55)) 
-    \Q_act_reg[0][8]_i_3 
+    \Q_act_reg[0][8]_i_2 
        (.I0(D_road1[48]),
         .I1(D_road3[48]),
         .I2(D_road0[48]),
@@ -27810,6 +32841,19 @@ module top_level_Intellight_Accelerat_0_0_max4to1
         .O(\D_road1[56] ));
   LUT6 #(
     .INIT(64'h0F3300550F33FF55)) 
+<<<<<<< HEAD
+    \Q_act_reg[0][8]_i_3 
+       (.I0(D_road1[32]),
+        .I1(D_road3[32]),
+        .I2(D_road0[32]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road2[32]),
+        .O(D_road1_40_sn_1));
+  LUT6 #(
+    .INIT(64'h0055330FFF55330F)) 
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg[0][9]_i_2 
        (.I0(D_road1[33]),
         .I1(D_road3[33]),
@@ -27918,7 +32962,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   LUT3 #(
     .INIT(8'hB8)) 
     \Q_max[11]_i_4 
-       (.I0(D_road1_43_sn_1),
+       (.I0(D_road0_43_sn_1),
         .I1(temp11),
         .I2(\D_road3[59] ),
         .O(\Q_max[11]_i_4_n_0 ));
@@ -27961,11 +33005,19 @@ module top_level_Intellight_Accelerat_0_0_max4to1
         .I5(\Q_max[13]_i_4_n_0 ),
         .O(D[13]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h3355000F3355FF0F)) 
+    \Q_max[13]_i_2 
+       (.I0(D_road3[13]),
+        .I1(D_road0[13]),
+        .I2(D_road1[13]),
+=======
     .INIT(64'h0F5533000F5533FF)) 
     \Q_max[13]_i_2 
        (.I0(D_road3[13]),
         .I1(D_road2[13]),
         .I2(D_road0[13]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(Q[0]),
         .I4(Q[1]),
         .I5(D_road1[13]),
@@ -28010,23 +33062,29 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     .INIT(64'h101F1010B0BFBFBF)) 
     \Q_max[15]_i_1 
        (.I0(\_inferred__0/i__carry__1_n_7 ),
-        .I1(D_road1_15_sn_1),
+        .I1(D_road3_15_sn_1),
         .I2(temp01),
         .I3(\Q_max_reg[15] ),
         .I4(_carry__0_n_0),
         .I5(\Q_max[15]_i_4_n_0 ),
         .O(D[15]));
   LUT6 #(
-    .INIT(64'h0F3300550F33FF55)) 
+    .INIT(64'h0055330FFF55330F)) 
     \Q_max[15]_i_2 
-       (.I0(D_road1[15]),
-        .I1(D_road3[15]),
-        .I2(D_road0[15]),
+       (.I0(D_road3[15]),
+        .I1(D_road2[15]),
+        .I2(D_road1[15]),
         .I3(Q[0]),
         .I4(Q[1]),
+<<<<<<< HEAD
+        .I5(D_road0[15]),
+        .O(D_road3_15_sn_1));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+=======
         .I5(D_road2[15]),
         .O(D_road1_15_sn_1));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \Q_max[15]_i_4 
@@ -28076,21 +33134,48 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     .INIT(64'h101F1010B0BFBFBF)) 
     \Q_max[2]_i_1 
        (.I0(\_inferred__0/i__carry__1_n_7 ),
+<<<<<<< HEAD
+        .I1(D_road3_2_sn_1),
+        .I2(temp01),
+        .I3(D_road1_18_sn_1),
+=======
         .I1(D_road0_2_sn_1),
         .I2(temp01),
         .I3(D_road3_18_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I4(_carry__0_n_0),
         .I5(\Q_max[2]_i_4_n_0 ),
         .O(D[2]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h3355000F3355FF0F)) 
+    \Q_max[2]_i_2 
+       (.I0(D_road3[2]),
+        .I1(D_road0[2]),
+=======
     .INIT(64'h5533000F5533FF0F)) 
     \Q_max[2]_i_2 
        (.I0(D_road0[2]),
         .I1(D_road3[2]),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I2(D_road1[2]),
         .I3(Q[0]),
         .I4(Q[1]),
         .I5(D_road2[2]),
+<<<<<<< HEAD
+        .O(D_road3_2_sn_1));
+  LUT6 #(
+    .INIT(64'h0F3300550F33FF55)) 
+    \Q_max[2]_i_3 
+       (.I0(D_road1[18]),
+        .I1(D_road3[18]),
+        .I2(D_road0[18]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road2[18]),
+        .O(D_road1_18_sn_1));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+=======
         .O(D_road0_2_sn_1));
   LUT6 #(
     .INIT(64'h0F5533000F5533FF)) 
@@ -28103,10 +33188,11 @@ module top_level_Intellight_Accelerat_0_0_max4to1
         .I5(D_road1[18]),
         .O(D_road3_18_sn_1));
   (* SOFT_HLUTNM = "soft_lutpair11" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \Q_max[2]_i_4 
-       (.I0(D_road3_34_sn_1),
+       (.I0(D_road0_34_sn_1),
         .I1(temp11),
         .I2(D_road3_50_sn_1),
         .O(\Q_max[2]_i_4_n_0 ));
@@ -28207,6 +33293,18 @@ module top_level_Intellight_Accelerat_0_0_max4to1
         .I5(D_road2[5]),
         .O(D_road1_5_sn_1));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0055330FFF55330F)) 
+    \Q_max[5]_i_3 
+       (.I0(D_road3[21]),
+        .I1(D_road2[21]),
+        .I2(D_road1[21]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road0[21]),
+        .O(D_road3_21_sn_1));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+=======
     .INIT(64'h0F3300550F33FF55)) 
     \Q_max[5]_i_3 
        (.I0(D_road1[21]),
@@ -28217,6 +33315,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
         .I5(D_road2[21]),
         .O(D_road1_21_sn_1));
   (* SOFT_HLUTNM = "soft_lutpair10" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \Q_max[5]_i_4 
@@ -28266,22 +33365,22 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     .INIT(64'h101F1010B0BFBFBF)) 
     \Q_max[7]_i_1 
        (.I0(\_inferred__0/i__carry__1_n_7 ),
-        .I1(D_road3_7_sn_1),
+        .I1(D_road0_7_sn_1),
         .I2(temp01),
         .I3(D_road3_23_sn_1),
         .I4(_carry__0_n_0),
         .I5(\Q_max[7]_i_4_n_0 ),
         .O(D[7]));
   LUT6 #(
-    .INIT(64'h0F5533000F5533FF)) 
+    .INIT(64'h5533000F5533FF0F)) 
     \Q_max[7]_i_2 
-       (.I0(D_road3[7]),
-        .I1(D_road2[7]),
-        .I2(D_road0[7]),
+       (.I0(D_road0[7]),
+        .I1(D_road3[7]),
+        .I2(D_road1[7]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(D_road1[7]),
-        .O(D_road3_7_sn_1));
+        .I5(D_road2[7]),
+        .O(D_road0_7_sn_1));
   LUT6 #(
     .INIT(64'h0055330FFF55330F)) 
     \Q_max[7]_i_3 
@@ -28296,7 +33395,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   LUT3 #(
     .INIT(8'hB8)) 
     \Q_max[7]_i_4 
-       (.I0(D_road3_39_sn_1),
+       (.I0(D_road1_39_sn_1),
         .I1(temp11),
         .I2(D_road0_55_sn_1),
         .O(\Q_max[7]_i_4_n_0 ));
@@ -28304,13 +33403,29 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     .INIT(64'h101F1010B0BFBFBF)) 
     \Q_max[8]_i_1 
        (.I0(\_inferred__0/i__carry__1_n_7 ),
+<<<<<<< HEAD
+        .I1(D_road1_8_sn_1),
+=======
         .I1(D_road0_8_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I2(temp01),
         .I3(\Q_max_reg[8] ),
         .I4(_carry__0_n_0),
         .I5(\Q_max[8]_i_4_n_0 ),
         .O(D[8]));
   LUT6 #(
+<<<<<<< HEAD
+    .INIT(64'h0F3300550F33FF55)) 
+    \Q_max[8]_i_2 
+       (.I0(D_road1[8]),
+        .I1(D_road3[8]),
+        .I2(D_road0[8]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(D_road2[8]),
+        .O(D_road1_8_sn_1));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+=======
     .INIT(64'h5533000F5533FF0F)) 
     \Q_max[8]_i_2 
        (.I0(D_road0[8]),
@@ -28321,6 +33436,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
         .I5(D_road2[8]),
         .O(D_road0_8_sn_1));
   (* SOFT_HLUTNM = "soft_lutpair8" *) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
   LUT3 #(
     .INIT(8'hB8)) 
     \Q_max[8]_i_4 
@@ -28458,7 +33574,11 @@ module top_level_Intellight_Accelerat_0_0_max4to1
        (.I0(D_road1_19_sn_1),
         .I1(\Q_max[3]_i_4_n_0 ),
         .I2(\Q_max[2]_i_4_n_0 ),
+<<<<<<< HEAD
+        .I3(D_road1_18_sn_1),
+=======
         .I3(D_road3_18_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(_carry_i_3_n_0));
   LUT4 #(
     .INIT(16'h44D4)) 
@@ -28490,7 +33610,11 @@ module top_level_Intellight_Accelerat_0_0_max4to1
        (.I0(\Q_max[3]_i_4_n_0 ),
         .I1(D_road1_19_sn_1),
         .I2(\Q_max[2]_i_4_n_0 ),
+<<<<<<< HEAD
+        .I3(D_road1_18_sn_1),
+=======
         .I3(D_road3_18_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(_carry_i_7_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
@@ -28525,7 +33649,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     .INIT(16'h44D4)) 
     i__carry__0_i_1
        (.I0(\Q_max[15]_i_4_n_0 ),
-        .I1(D_road1_15_sn_1),
+        .I1(D_road3_15_sn_1),
         .I2(\Q_max[14]_i_4_n_0 ),
         .I3(D_road1_14_sn_1),
         .O(i__carry__0_i_1_n_0));
@@ -28551,12 +33675,16 @@ module top_level_Intellight_Accelerat_0_0_max4to1
        (.I0(\Q_max[9]_i_4_n_0 ),
         .I1(D_road1_9_sn_1),
         .I2(\Q_max[8]_i_4_n_0 ),
+<<<<<<< HEAD
+        .I3(D_road1_8_sn_1),
+=======
         .I3(D_road0_8_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(i__carry__0_i_4_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry__0_i_5
-       (.I0(D_road1_15_sn_1),
+       (.I0(D_road3_15_sn_1),
         .I1(\Q_max[15]_i_4_n_0 ),
         .I2(D_road1_14_sn_1),
         .I3(\Q_max[14]_i_4_n_0 ),
@@ -28582,14 +33710,18 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     i__carry__0_i_8
        (.I0(D_road1_9_sn_1),
         .I1(\Q_max[9]_i_4_n_0 ),
+<<<<<<< HEAD
+        .I2(D_road1_8_sn_1),
+=======
         .I2(D_road0_8_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(\Q_max[8]_i_4_n_0 ),
         .O(i__carry__0_i_8_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
     i__carry_i_1
        (.I0(\Q_max[7]_i_4_n_0 ),
-        .I1(D_road3_7_sn_1),
+        .I1(D_road0_7_sn_1),
         .I2(\Q_max[6]_i_4_n_0 ),
         .I3(D_road1_6_sn_1),
         .O(i__carry_i_1_n_0));
@@ -28607,7 +33739,11 @@ module top_level_Intellight_Accelerat_0_0_max4to1
        (.I0(\Q_max[3]_i_4_n_0 ),
         .I1(D_road1_3_sn_1),
         .I2(\Q_max[2]_i_4_n_0 ),
+<<<<<<< HEAD
+        .I3(D_road3_2_sn_1),
+=======
         .I3(D_road0_2_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(i__carry_i_3_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
@@ -28620,7 +33756,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry_i_5
-       (.I0(D_road3_7_sn_1),
+       (.I0(D_road0_7_sn_1),
         .I1(\Q_max[7]_i_4_n_0 ),
         .I2(D_road1_6_sn_1),
         .I3(\Q_max[6]_i_4_n_0 ),
@@ -28638,7 +33774,11 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     i__carry_i_7
        (.I0(D_road1_3_sn_1),
         .I1(\Q_max[3]_i_4_n_0 ),
+<<<<<<< HEAD
+        .I2(D_road3_2_sn_1),
+=======
         .I2(D_road0_2_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(\Q_max[2]_i_4_n_0 ),
         .O(i__carry_i_7_n_0));
   LUT4 #(
@@ -28669,7 +33809,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     .INIT(16'h22B2)) 
     temp01_carry_i_1
        (.I0(D_road3_23_sn_1),
-        .I1(D_road3_7_sn_1),
+        .I1(D_road0_7_sn_1),
         .I2(D_road1_22_sn_1),
         .I3(D_road1_6_sn_1),
         .O(temp01_carry_i_1_n_0));
@@ -28686,8 +33826,13 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     temp01_carry_i_3
        (.I0(D_road1_19_sn_1),
         .I1(D_road1_3_sn_1),
+<<<<<<< HEAD
+        .I2(D_road1_18_sn_1),
+        .I3(D_road3_2_sn_1),
+=======
         .I2(D_road3_18_sn_1),
         .I3(D_road0_2_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(temp01_carry_i_3_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
@@ -28700,7 +33845,7 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   LUT4 #(
     .INIT(16'h9009)) 
     temp01_carry_i_5
-       (.I0(D_road3_7_sn_1),
+       (.I0(D_road0_7_sn_1),
         .I1(D_road3_23_sn_1),
         .I2(D_road1_6_sn_1),
         .I3(D_road1_22_sn_1),
@@ -28717,9 +33862,15 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     .INIT(16'h9009)) 
     temp01_carry_i_7
        (.I0(D_road1_3_sn_1),
+<<<<<<< HEAD
+        .I1(D_road3_19_sn_1),
+        .I2(D_road3_2_sn_1),
+        .I3(D_road1_18_sn_1),
+=======
         .I1(D_road1_19_sn_1),
         .I2(D_road0_2_sn_1),
         .I3(D_road3_18_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(temp01_carry_i_7_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
@@ -28750,13 +33901,21 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     temp11_carry__0_i_1
        (.I0(\D_road1[63] ),
         .I1(D_road1_47_sn_1),
+<<<<<<< HEAD
+        .I2(\D_road1[62] ),
+=======
         .I2(\D_road3[62] ),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(D_road1_46_sn_1),
         .O(temp11_carry__0_i_1_n_0));
   LUT4 #(
     .INIT(16'h44D4)) 
     temp11_carry__0_i_2
+<<<<<<< HEAD
+       (.I0(D_road3_45_sn_1),
+=======
        (.I0(D_road1_45_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I1(\D_road1[61] ),
         .I2(\D_road3[60] ),
         .I3(D_road1_44_sn_1),
@@ -28764,7 +33923,11 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   LUT4 #(
     .INIT(16'h44D4)) 
     temp11_carry__0_i_3
+<<<<<<< HEAD
+       (.I0(D_road0_43_sn_1),
+=======
        (.I0(D_road1_43_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I1(\D_road3[59] ),
         .I2(\D_road1[58] ),
         .I3(D_road3_42_sn_1),
@@ -28781,15 +33944,24 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     .INIT(16'h9009)) 
     temp11_carry__0_i_5
        (.I0(D_road1_47_sn_1),
+<<<<<<< HEAD
+        .I1(\D_road3[63] ),
+        .I2(\D_road1[62] ),
+=======
         .I1(\D_road1[63] ),
         .I2(\D_road3[62] ),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I3(D_road1_46_sn_1),
         .O(temp11_carry__0_i_5_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     temp11_carry__0_i_6
        (.I0(\D_road1[61] ),
+<<<<<<< HEAD
+        .I1(D_road3_45_sn_1),
+=======
         .I1(D_road1_45_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I2(\D_road3[60] ),
         .I3(D_road1_44_sn_1),
         .O(temp11_carry__0_i_6_n_0));
@@ -28797,7 +33969,11 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     .INIT(16'h9009)) 
     temp11_carry__0_i_7
        (.I0(\D_road3[59] ),
+<<<<<<< HEAD
+        .I1(D_road0_43_sn_1),
+=======
         .I1(D_road1_43_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .I2(\D_road1[58] ),
         .I3(D_road3_42_sn_1),
         .O(temp11_carry__0_i_7_n_0));
@@ -28812,10 +33988,17 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   LUT4 #(
     .INIT(16'h44D4)) 
     temp11_carry_i_1
+<<<<<<< HEAD
+       (.I0(D_road1_39_sn_1),
+        .I1(D_road3_55_sn_1),
+        .I2(D_road3_54_sn_1),
+        .I3(D_road3_38_sn_1),
+=======
        (.I0(D_road3_39_sn_1),
         .I1(D_road0_55_sn_1),
         .I2(D_road0_54_sn_1),
         .I3(D_road1_38_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(temp11_carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h44D4)) 
@@ -28830,8 +34013,13 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     temp11_carry_i_3
        (.I0(D_road1_35_sn_1),
         .I1(D_road1_51_sn_1),
+<<<<<<< HEAD
+        .I2(D_road1_50_sn_1),
+        .I3(D_road0_34_sn_1),
+=======
         .I2(D_road3_50_sn_1),
         .I3(D_road3_34_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(temp11_carry_i_3_n_0));
   LUT4 #(
     .INIT(16'h44D4)) 
@@ -28844,10 +34032,17 @@ module top_level_Intellight_Accelerat_0_0_max4to1
   LUT4 #(
     .INIT(16'h9009)) 
     temp11_carry_i_5
+<<<<<<< HEAD
+       (.I0(D_road3_55_sn_1),
+        .I1(D_road1_39_sn_1),
+        .I2(D_road3_54_sn_1),
+        .I3(D_road3_38_sn_1),
+=======
        (.I0(D_road0_55_sn_1),
         .I1(D_road3_39_sn_1),
         .I2(D_road0_54_sn_1),
         .I3(D_road1_38_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(temp11_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
@@ -28862,8 +34057,13 @@ module top_level_Intellight_Accelerat_0_0_max4to1
     temp11_carry_i_7
        (.I0(D_road1_51_sn_1),
         .I1(D_road1_35_sn_1),
+<<<<<<< HEAD
+        .I2(D_road1_50_sn_1),
+        .I3(D_road0_34_sn_1),
+=======
         .I2(D_road3_50_sn_1),
         .I3(D_road3_34_sn_1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
         .O(temp11_carry_i_7_n_0));
   LUT4 #(
     .INIT(16'h9009)) 

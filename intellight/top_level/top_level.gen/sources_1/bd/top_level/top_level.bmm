@@ -1,0 +1,29 @@
+WORKFLOW_OPERATION simulation,dialog;
+
+DEFINE_MEMORY_TYPE Q_Matrix_PS_action_ram_0_8K_2_MEM_DEVICE [0x0000000000002000] 64;
+DEFINE_MEMORY_TYPE Q_Matrix_PS_action_ram_1_8K_2_MEM_DEVICE [0x0000000000002000] 64;
+DEFINE_MEMORY_TYPE Q_Matrix_PS_action_ram_2_8K_2_MEM_DEVICE [0x0000000000002000] 64;
+DEFINE_MEMORY_TYPE Q_Matrix_PS_action_ram_3_8K_2_MEM_DEVICE [0x0000000000002000] 64;
+
+ADDRESS_MAP processing_system7_0 ARM 100 processing_system7_0
+   ADDRESS_SPACE Q_Matrix_PS_action_ram_0_8K_2_ADDR_SPACE Q_Matrix_PS_action_ram_0_8K_2_MEM_DEVICE  [0x0000000040000000:0x0000000040001FFF] Q_Matrix_PS/axi_aram_ctrl_0
+     BUS_BLOCK
+      Q_Matrix_PS_action_ram_0_8K_2_BUS_BLK [63:0] INPUT = "top_level_action_ram_0_0.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE Q_Matrix_PS_action_ram_1_8K_2_ADDR_SPACE Q_Matrix_PS_action_ram_1_8K_2_MEM_DEVICE  [0x0000000042000000:0x0000000042001FFF] Q_Matrix_PS/axi_aram_ctrl_1
+     BUS_BLOCK
+      Q_Matrix_PS_action_ram_1_8K_2_BUS_BLK [63:0] INPUT = "top_level_action_ram_1_0.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE Q_Matrix_PS_action_ram_2_8K_2_ADDR_SPACE Q_Matrix_PS_action_ram_2_8K_2_MEM_DEVICE  [0x0000000044000000:0x0000000044001FFF] Q_Matrix_PS/axi_aram_ctrl_2
+     BUS_BLOCK
+      Q_Matrix_PS_action_ram_2_8K_2_BUS_BLK [63:0] INPUT = "top_level_action_ram_2_0.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE Q_Matrix_PS_action_ram_3_8K_2_ADDR_SPACE Q_Matrix_PS_action_ram_3_8K_2_MEM_DEVICE  [0x0000000046000000:0x0000000046001FFF] Q_Matrix_PS/axi_aram_ctrl_3
+     BUS_BLOCK
+      Q_Matrix_PS_action_ram_3_8K_2_BUS_BLK [63:0] INPUT = "top_level_action_ram_3_0.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+END_ADDRESS_MAP;

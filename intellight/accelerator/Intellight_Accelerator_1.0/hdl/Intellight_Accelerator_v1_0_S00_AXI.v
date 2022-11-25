@@ -22,9 +22,17 @@
 		input     wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0]     D_road0, D_road1, D_road2, D_road3, 
 		output    wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0]     D_new,
 		output    wire [ADDR_WIDTH-1:0]                   rd_addr, wr_addr,
+<<<<<<< HEAD
+		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram0,
+		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram1,
+		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram2,
+		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram3,
+		output    wire                                    finish, idle,
+=======
 		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram,
 		output    wire                                    wen0, wen1, wen2, wen3,
 		output    wire                                    finish,
+>>>>>>> parent of ae750207 (shfcuidtf7)
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -89,7 +97,38 @@
     		// accept the read data and response information.
 		input wire  S_AXI_RREADY
 	);
+	
+    localparam  N_ROAD          = 4,
+                N_LEVEL         = 2**(L_WIDTH/2),
+                A_ROAD_WIDTH    = 2,
+                A_DUR_WIDTH     = L_WIDTH/2,
+                A_WIDTH         = A_ROAD_WIDTH + A_DUR_WIDTH,
+                S_WIDTH         = 2*L_WIDTH,
+                D_WIDTH         = Q_WIDTH*N_LEVEL; 
 
+    wire INPUT_0_mode, INPUT_0_run;
+	wire [2:0] INPUT_0_alpha, INPUT_0_gamma;
+	wire [CTR_WIDTH-1:0] INPUT_0_max_step, INPUT_0_max_episode, INPUT_0_seed;
+	wire [L_WIDTH*4-1:0] INPUT_0_L_inc_a, INPUT_0_L_inc_b, INPUT_0_L_inc_c, INPUT_0_L_inc_d, INPUT_0_L_dec;
+	wire [L_WIDTH*2-1:0] INPUT_0_S_sim;
+	wire [D_WIDTH-1:0]   INPUT_0_D_road0;
+	wire [D_WIDTH-1:0]   INPUT_0_D_road1;
+	wire [D_WIDTH-1:0]   INPUT_0_D_road2;
+	wire [D_WIDTH-1:0]   INPUT_0_D_road3;
+    wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0]     ACCELERATOR_0_D_new;
+    wire [ADDR_WIDTH-1:0]                   ACCELERATOR_0_rd_addr;
+    wire [ADDR_WIDTH-1:0]                   ACCELERATOR_0_wr_addr;
+    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   ACCELERATOR_0_wen_bram0;
+    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   ACCELERATOR_0_wen_bram1;
+    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   ACCELERATOR_0_wen_bram2;
+    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   ACCELERATOR_0_wen_bram3;
+//    wire                                    ACCELERATOR_0_wen0;
+//    wire                                    ACCELERATOR_0_wen1;
+//    wire                                    ACCELERATOR_0_wen2;
+//    wire                                    ACCELERATOR_0_wen3;
+    wire                                    ACCELERATOR_0_finish;
+    wire                                    ACCELERATOR_0_idle;
+	
 	// AXI4LITE signals
 	reg [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
 	reg  	axi_awready;
@@ -324,14 +363,14 @@
                   slv_reg62 <= 0;
                   slv_reg63 <= 0;
                end else begin
-                  slv_reg32 <= D_road0[Q_WIDTH*1-1:0];
-                  slv_reg33 <= D_road0[Q_WIDTH*2-1:Q_WIDTH];
-                  slv_reg34 <= D_road1[Q_WIDTH*1-1:0];
-                  slv_reg35 <= D_road1[Q_WIDTH*2-1:Q_WIDTH];
-                  slv_reg36 <= D_road2[Q_WIDTH*1-1:0];
-                  slv_reg37 <= D_road2[Q_WIDTH*2-1:Q_WIDTH];
-                  slv_reg38 <= D_road3[Q_WIDTH*1-1:0];
-                  slv_reg39 <= D_road3[Q_WIDTH*2-1:Q_WIDTH];
+                  slv_reg32 <= INPUT_0_D_road0[Q_WIDTH*1-1:0];
+                  slv_reg33 <= INPUT_0_D_road0[Q_WIDTH*2-1:Q_WIDTH];
+                  slv_reg34 <= INPUT_0_D_road1[Q_WIDTH*1-1:0];
+                  slv_reg35 <= INPUT_0_D_road1[Q_WIDTH*2-1:Q_WIDTH];
+                  slv_reg36 <= INPUT_0_D_road2[Q_WIDTH*1-1:0];
+                  slv_reg37 <= INPUT_0_D_road2[Q_WIDTH*2-1:Q_WIDTH];
+                  slv_reg38 <= INPUT_0_D_road3[Q_WIDTH*1-1:0];
+                  slv_reg39 <= INPUT_0_D_road3[Q_WIDTH*2-1:Q_WIDTH];
                   slv_reg40 <= 0;
                   slv_reg41 <= 0;
                   slv_reg42 <= 0;
@@ -396,22 +435,22 @@
                   slv_reg62 <= 0;
                   slv_reg63 <= 0;
                end else begin
-                  slv_reg32 <= D_road0[Q_WIDTH*1-1:0];
-                  slv_reg33 <= D_road0[Q_WIDTH*2-1:Q_WIDTH];
-                  slv_reg34 <= D_road0[Q_WIDTH*3-1:Q_WIDTH*2];
-                  slv_reg35 <= D_road0[Q_WIDTH*4-1:Q_WIDTH*3];
-                  slv_reg36 <= D_road1[Q_WIDTH*1-1:0];
-                  slv_reg37 <= D_road1[Q_WIDTH*2-1:Q_WIDTH];
-                  slv_reg38 <= D_road1[Q_WIDTH*3-1:Q_WIDTH*2];
-                  slv_reg39 <= D_road1[Q_WIDTH*4-1:Q_WIDTH*3];
-                  slv_reg40 <= D_road2[Q_WIDTH*1-1:0];
-                  slv_reg41 <= D_road2[Q_WIDTH*2-1:Q_WIDTH];
-                  slv_reg42 <= D_road2[Q_WIDTH*3-1:Q_WIDTH*2];
-                  slv_reg43 <= D_road2[Q_WIDTH*4-1:Q_WIDTH*3];
-                  slv_reg44 <= D_road3[Q_WIDTH*1-1:0];
-                  slv_reg45 <= D_road3[Q_WIDTH*2-1:Q_WIDTH];
-                  slv_reg46 <= D_road3[Q_WIDTH*3-1:Q_WIDTH*2];
-                  slv_reg47 <= D_road3[Q_WIDTH*4-1:Q_WIDTH*3];
+                  slv_reg32 <= INPUT_0_D_road0[Q_WIDTH*1-1:0];
+                  slv_reg33 <= INPUT_0_D_road0[Q_WIDTH*2-1:Q_WIDTH];
+                  slv_reg34 <= INPUT_0_D_road0[Q_WIDTH*3-1:Q_WIDTH*2];
+                  slv_reg35 <= INPUT_0_D_road0[Q_WIDTH*4-1:Q_WIDTH*3];
+                  slv_reg36 <= INPUT_0_D_road1[Q_WIDTH*1-1:0];
+                  slv_reg37 <= INPUT_0_D_road1[Q_WIDTH*2-1:Q_WIDTH];
+                  slv_reg38 <= INPUT_0_D_road1[Q_WIDTH*3-1:Q_WIDTH*2];
+                  slv_reg39 <= INPUT_0_D_road1[Q_WIDTH*4-1:Q_WIDTH*3];
+                  slv_reg40 <= INPUT_0_D_road2[Q_WIDTH*1-1:0];
+                  slv_reg41 <= INPUT_0_D_road2[Q_WIDTH*2-1:Q_WIDTH];
+                  slv_reg42 <= INPUT_0_D_road2[Q_WIDTH*3-1:Q_WIDTH*2];
+                  slv_reg43 <= INPUT_0_D_road2[Q_WIDTH*4-1:Q_WIDTH*3];
+                  slv_reg44 <= INPUT_0_D_road3[Q_WIDTH*1-1:0];
+                  slv_reg45 <= INPUT_0_D_road3[Q_WIDTH*2-1:Q_WIDTH];
+                  slv_reg46 <= INPUT_0_D_road3[Q_WIDTH*3-1:Q_WIDTH*2];
+                  slv_reg47 <= INPUT_0_D_road3[Q_WIDTH*4-1:Q_WIDTH*3];
                   slv_reg48 <= 0;
                   slv_reg49 <= 0;
                   slv_reg50 <= 0;
@@ -468,38 +507,38 @@
                   slv_reg62 <= 0;
                   slv_reg63 <= 0;
                end else begin
-                  slv_reg32 <= D_road0[Q_WIDTH*1-1:0];
-                  slv_reg33 <= D_road0[Q_WIDTH*2-1:Q_WIDTH];
-                  slv_reg34 <= D_road0[Q_WIDTH*3-1:Q_WIDTH*2];
-                  slv_reg35 <= D_road0[Q_WIDTH*4-1:Q_WIDTH*3];
-                  slv_reg36 <= D_road0[Q_WIDTH*5-1:Q_WIDTH*4];
-                  slv_reg37 <= D_road0[Q_WIDTH*6-1:Q_WIDTH*5];
-                  slv_reg38 <= D_road0[Q_WIDTH*7-1:Q_WIDTH*6];
-                  slv_reg39 <= D_road0[Q_WIDTH*8-1:Q_WIDTH*7];                
-                  slv_reg40 <= D_road1[Q_WIDTH*1-1:0];
-                  slv_reg41 <= D_road1[Q_WIDTH*2-1:Q_WIDTH];
-                  slv_reg42 <= D_road1[Q_WIDTH*3-1:Q_WIDTH*2];
-                  slv_reg43 <= D_road1[Q_WIDTH*4-1:Q_WIDTH*3];
-                  slv_reg44 <= D_road1[Q_WIDTH*5-1:Q_WIDTH*4];
-                  slv_reg45 <= D_road1[Q_WIDTH*6-1:Q_WIDTH*5];
-                  slv_reg46 <= D_road1[Q_WIDTH*7-1:Q_WIDTH*6];
-                  slv_reg47 <= D_road1[Q_WIDTH*8-1:Q_WIDTH*7];                  
-                  slv_reg48 <= D_road2[Q_WIDTH*1-1:0];
-                  slv_reg49 <= D_road2[Q_WIDTH*2-1:Q_WIDTH];
-                  slv_reg50 <= D_road2[Q_WIDTH*3-1:Q_WIDTH*2];
-                  slv_reg51 <= D_road2[Q_WIDTH*4-1:Q_WIDTH*3];
-                  slv_reg52 <= D_road2[Q_WIDTH*5-1:Q_WIDTH*4];
-                  slv_reg53 <= D_road2[Q_WIDTH*6-1:Q_WIDTH*5];
-                  slv_reg54 <= D_road2[Q_WIDTH*7-1:Q_WIDTH*6];
-                  slv_reg55 <= D_road2[Q_WIDTH*8-1:Q_WIDTH*7];
-                  slv_reg56 <= D_road3[Q_WIDTH*1-1:0];
-                  slv_reg57 <= D_road3[Q_WIDTH*2-1:Q_WIDTH];
-                  slv_reg58 <= D_road3[Q_WIDTH*3-1:Q_WIDTH*2];
-                  slv_reg59 <= D_road3[Q_WIDTH*4-1:Q_WIDTH*3];
-                  slv_reg60 <= D_road3[Q_WIDTH*5-1:Q_WIDTH*4];
-                  slv_reg61 <= D_road3[Q_WIDTH*6-1:Q_WIDTH*5];
-                  slv_reg62 <= D_road3[Q_WIDTH*7-1:Q_WIDTH*6];
-                  slv_reg63 <= D_road3[Q_WIDTH*8-1:Q_WIDTH*7];
+                  slv_reg32 <= INPUT_0_D_road0[Q_WIDTH*1-1:0];
+                  slv_reg33 <= INPUT_0_D_road0[Q_WIDTH*2-1:Q_WIDTH];
+                  slv_reg34 <= INPUT_0_D_road0[Q_WIDTH*3-1:Q_WIDTH*2];
+                  slv_reg35 <= INPUT_0_D_road0[Q_WIDTH*4-1:Q_WIDTH*3];
+                  slv_reg36 <= INPUT_0_D_road0[Q_WIDTH*5-1:Q_WIDTH*4];
+                  slv_reg37 <= INPUT_0_D_road0[Q_WIDTH*6-1:Q_WIDTH*5];
+                  slv_reg38 <= INPUT_0_D_road0[Q_WIDTH*7-1:Q_WIDTH*6];
+                  slv_reg39 <= INPUT_0_D_road0[Q_WIDTH*8-1:Q_WIDTH*7];                
+                  slv_reg40 <= INPUT_0_D_road1[Q_WIDTH*1-1:0];
+                  slv_reg41 <= INPUT_0_D_road1[Q_WIDTH*2-1:Q_WIDTH];
+                  slv_reg42 <= INPUT_0_D_road1[Q_WIDTH*3-1:Q_WIDTH*2];
+                  slv_reg43 <= INPUT_0_D_road1[Q_WIDTH*4-1:Q_WIDTH*3];
+                  slv_reg44 <= INPUT_0_D_road1[Q_WIDTH*5-1:Q_WIDTH*4];
+                  slv_reg45 <= INPUT_0_D_road1[Q_WIDTH*6-1:Q_WIDTH*5];
+                  slv_reg46 <= INPUT_0_D_road1[Q_WIDTH*7-1:Q_WIDTH*6];
+                  slv_reg47 <= INPUT_0_D_road1[Q_WIDTH*8-1:Q_WIDTH*7];                  
+                  slv_reg48 <= INPUT_0_D_road2[Q_WIDTH*1-1:0];
+                  slv_reg49 <= INPUT_0_D_road2[Q_WIDTH*2-1:Q_WIDTH];
+                  slv_reg50 <= INPUT_0_D_road2[Q_WIDTH*3-1:Q_WIDTH*2];
+                  slv_reg51 <= INPUT_0_D_road2[Q_WIDTH*4-1:Q_WIDTH*3];
+                  slv_reg52 <= INPUT_0_D_road2[Q_WIDTH*5-1:Q_WIDTH*4];
+                  slv_reg53 <= INPUT_0_D_road2[Q_WIDTH*6-1:Q_WIDTH*5];
+                  slv_reg54 <= INPUT_0_D_road2[Q_WIDTH*7-1:Q_WIDTH*6];
+                  slv_reg55 <= INPUT_0_D_road2[Q_WIDTH*8-1:Q_WIDTH*7];
+                  slv_reg56 <= INPUT_0_D_road3[Q_WIDTH*1-1:0];
+                  slv_reg57 <= INPUT_0_D_road3[Q_WIDTH*2-1:Q_WIDTH];
+                  slv_reg58 <= INPUT_0_D_road3[Q_WIDTH*3-1:Q_WIDTH*2];
+                  slv_reg59 <= INPUT_0_D_road3[Q_WIDTH*4-1:Q_WIDTH*3];
+                  slv_reg60 <= INPUT_0_D_road3[Q_WIDTH*5-1:Q_WIDTH*4];
+                  slv_reg61 <= INPUT_0_D_road3[Q_WIDTH*6-1:Q_WIDTH*5];
+                  slv_reg62 <= INPUT_0_D_road3[Q_WIDTH*7-1:Q_WIDTH*6];
+                  slv_reg63 <= INPUT_0_D_road3[Q_WIDTH*8-1:Q_WIDTH*7];
                end 
             end 
     endgenerate
@@ -1286,6 +1325,41 @@
 	end    
 
 	// Add user logic here
+<<<<<<< HEAD
+//	wire [15:0] DEBUG_0_o_lsfr;
+//	lfsr #(.DATA_WIDTH(16)) rand(.clk(clk), .rst(rst), .seed(INPUT_0_seed), .out0(DEBUG_0_o_lsfr));
+     
+    assign INPUT_0_mode        = slv_reg0[0];
+	assign INPUT_0_run         = slv_reg0[1];
+	assign INPUT_0_alpha       = slv_reg0[6:4];
+	assign INPUT_0_gamma       = slv_reg0[9:7];
+	assign INPUT_0_max_step    = slv_reg1[15:0];
+	assign INPUT_0_max_episode = slv_reg1[31:16];
+	assign INPUT_0_seed        = slv_reg2[15:0];
+	assign INPUT_0_L_inc_a     = slv_reg3;
+	assign INPUT_0_L_inc_b     = slv_reg4;
+	assign INPUT_0_L_inc_c     = slv_reg5;
+	assign INPUT_0_L_inc_d     = slv_reg6;
+//	assign INPUT_0_L_inc_a     = DEBUG_0_o_lsfr;
+//	assign INPUT_0_L_inc_b     = DEBUG_0_o_lsfr;
+//	assign INPUT_0_L_inc_c     = DEBUG_0_o_lsfr;
+//	assign INPUT_0_L_inc_d     = DEBUG_0_o_lsfr;
+	assign INPUT_0_L_dec       = slv_reg7;
+	assign INPUT_0_S_sim       = slv_reg8;
+	assign INPUT_0_D_road0     = D_road0;
+	assign INPUT_0_D_road1     = D_road1;
+	assign INPUT_0_D_road2     = D_road2;
+	assign INPUT_0_D_road3     = D_road3;
+    assign D_new    = ACCELERATOR_0_D_new;
+    assign rd_addr  = ACCELERATOR_0_rd_addr;
+    assign wr_addr  = ACCELERATOR_0_wr_addr;
+    assign wen_bram0= ACCELERATOR_0_wen_bram0;
+    assign wen_bram1= ACCELERATOR_0_wen_bram1;
+    assign wen_bram2= ACCELERATOR_0_wen_bram2;
+    assign wen_bram3= ACCELERATOR_0_wen_bram3;
+    assign finish   = ACCELERATOR_0_finish;
+    assign idle     = ACCELERATOR_0_idle;
+=======
 	wire mode, run;
 	wire [2:0] alpha, gamma;
 	wire [CTR_WIDTH-1:0] max_step, max_episode, seed;
@@ -1304,6 +1378,7 @@
 	assign L_inc_d     = slv_reg6;
 	assign L_dec       = slv_reg7;
 	assign S_sim       = slv_reg8;
+>>>>>>> parent of ae750207 (shfcuidtf7)
 	// Add user logic here
 	Accelerator #(
 	   .L_WIDTH(L_WIDTH),
@@ -1314,6 +1389,34 @@
 	) accelerator_0 (
         .clk(clk),
         .rst(rst),
+<<<<<<< HEAD
+        .mode(INPUT_0_mode),
+        .run(INPUT_0_run),
+        .alpha(INPUT_0_alpha),
+        .gamma(INPUT_0_gamma),
+        .max_step(INPUT_0_max_step),
+        .max_episode(INPUT_0_max_episode),
+        .seed(INPUT_0_seed),
+        .S_sim(INPUT_0_S_sim),
+        .L_inc_a(INPUT_0_L_inc_a),
+        .L_inc_b(INPUT_0_L_inc_b),
+        .L_inc_c(INPUT_0_L_inc_c),
+        .L_inc_d(INPUT_0_L_inc_d),
+        .L_dec(INPUT_0_L_dec),
+        .D_road0(INPUT_0_D_road0),
+        .D_road1(INPUT_0_D_road1),
+        .D_road2(INPUT_0_D_road2),
+        .D_road3(INPUT_0_D_road3),
+        .D_new(ACCELERATOR_0_D_new),
+        .rd_addr(ACCELERATOR_0_rd_addr),
+        .wr_addr(ACCELERATOR_0_wr_addr),
+        .wen_bram0(ACCELERATOR_0_wen_bram0),
+        .wen_bram1(ACCELERATOR_0_wen_bram1),
+        .wen_bram2(ACCELERATOR_0_wen_bram2),
+        .wen_bram3(ACCELERATOR_0_wen_bram3),
+        .finish(ACCELERATOR_0_finish),
+        .idle(ACCELERATOR_0_idle) 
+=======
         .D_road0(D_road0),
         .D_road1(D_road1),
         .D_road2(D_road2),
@@ -1341,7 +1444,9 @@
         .L_dec(L_dec),
         .finish(finish),
         .idle(idle) 
+>>>>>>> parent of ae750207 (shfcuidtf7)
       );
+
 	// User logic ends
 
 	endmodule

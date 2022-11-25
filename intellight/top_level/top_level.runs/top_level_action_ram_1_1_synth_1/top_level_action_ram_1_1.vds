@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Nov 23 14:58:13 2022
+# Process ID: 8440
+# Current directory: D:/intelligent_traffic_light/intellight/top_level/top_level.runs/top_level_action_ram_1_1_synth_1
+# Command line: vivado.exe -log top_level_action_ram_1_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_action_ram_1_1.tcl
+# Log file: D:/intelligent_traffic_light/intellight/top_level/top_level.runs/top_level_action_ram_1_1_synth_1/top_level_action_ram_1_1.vds
+# Journal file: D:/intelligent_traffic_light/intellight/top_level/top_level.runs/top_level_action_ram_1_1_synth_1\vivado.jou
+# Running On: DESKTOP-FRUK6JR, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 6, Host memory: 8532 MB
+#-----------------------------------------------------------
+source top_level_action_ram_1_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1345.781 ; gain = 578.688
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/intellight/database/database_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program/Vivado/2022.1/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP top_level_action_ram_1_1, cache-ID = 69aba880bfbe99e4.
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 23 14:58:26 2022...

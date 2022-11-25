@@ -1,7 +1,11 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+<<<<<<< HEAD
+| Date         : Thu Nov 24 16:09:21 2022
+=======
 | Date         : Mon Nov 21 18:00:26 2022
+>>>>>>> parent of ae750207 (shfcuidtf7)
 | Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_level_wrapper_utilization_placed.rpt -pb top_level_wrapper_utilization_placed.pb
 | Design       : top_level_wrapper
@@ -32,6 +36,15 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
+<<<<<<< HEAD
+| Slice LUTs                 | 1658 |     0 |          0 |     53200 |  3.12 |
+|   LUT as Logic             | 1584 |     0 |          0 |     53200 |  2.98 |
+|   LUT as Memory            |   74 |     0 |          0 |     17400 |  0.43 |
+|     LUT as Distributed RAM |    0 |     0 |            |           |       |
+|     LUT as Shift Register  |   74 |     0 |            |           |       |
+| Slice Registers            | 2575 |     0 |          0 |    106400 |  2.42 |
+|   Register as Flip Flop    | 2575 |     0 |          0 |    106400 |  2.42 |
+=======
 | Slice LUTs                 | 2746 |     0 |          0 |     53200 |  5.16 |
 |   LUT as Logic             | 2549 |     0 |          0 |     53200 |  4.79 |
 |   LUT as Memory            |  197 |     0 |          0 |     17400 |  1.13 |
@@ -39,8 +52,9 @@ Table of Contents
 |     LUT as Shift Register  |  197 |     0 |            |           |       |
 | Slice Registers            | 3503 |     0 |          0 |    106400 |  3.29 |
 |   Register as Flip Flop    | 3503 |     0 |          0 |    106400 |  3.29 |
+>>>>>>> parent of ae750207 (shfcuidtf7)
 |   Register as Latch        |    0 |     0 |          0 |    106400 |  0.00 |
-| F7 Muxes                   |  221 |     0 |          0 |     26600 |  0.83 |
+| F7 Muxes                   |  160 |     0 |          0 |     26600 |  0.60 |
 | F8 Muxes                   |   64 |     0 |          0 |     13300 |  0.48 |
 +----------------------------+------+-------+------------+-----------+-------+
 
@@ -59,8 +73,13 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
+<<<<<<< HEAD
+| 39    |          Yes |         Set |            - |
+| 2536  |          Yes |       Reset |            - |
+=======
 | 71    |          Yes |         Set |            - |
 | 3432  |          Yes |       Reset |            - |
+>>>>>>> parent of ae750207 (shfcuidtf7)
 +-------+--------------+-------------+--------------+
 
 
@@ -70,6 +89,27 @@ Table of Contents
 +--------------------------------------------+------+-------+------------+-----------+-------+
 |                  Site Type                 | Used | Fixed | Prohibited | Available | Util% |
 +--------------------------------------------+------+-------+------------+-----------+-------+
+<<<<<<< HEAD
+| Slice                                      |  910 |     0 |          0 |     13300 |  6.84 |
+|   SLICEL                                   |  580 |     0 |            |           |       |
+|   SLICEM                                   |  330 |     0 |            |           |       |
+| LUT as Logic                               | 1584 |     0 |          0 |     53200 |  2.98 |
+|   using O5 output only                     |    0 |       |            |           |       |
+|   using O6 output only                     | 1252 |       |            |           |       |
+|   using O5 and O6                          |  332 |       |            |           |       |
+| LUT as Memory                              |   74 |     0 |          0 |     17400 |  0.43 |
+|   LUT as Distributed RAM                   |    0 |     0 |            |           |       |
+|   LUT as Shift Register                    |   74 |     0 |            |           |       |
+|     using O5 output only                   |   12 |       |            |           |       |
+|     using O6 output only                   |   58 |       |            |           |       |
+|     using O5 and O6                        |    4 |       |            |           |       |
+| Slice Registers                            | 2575 |     0 |          0 |    106400 |  2.42 |
+|   Register driven from within the Slice    |  771 |       |            |           |       |
+|   Register driven from outside the Slice   | 1804 |       |            |           |       |
+|     LUT in front of the register is unused | 1382 |       |            |           |       |
+|     LUT in front of the register is used   |  422 |       |            |           |       |
+| Unique Control Sets                        |  175 |       |          0 |     13300 |  1.32 |
+=======
 | Slice                                      | 1291 |     0 |          0 |     13300 |  9.71 |
 |   SLICEL                                   |  831 |     0 |            |           |       |
 |   SLICEM                                   |  460 |     0 |            |           |       |
@@ -89,6 +129,7 @@ Table of Contents
 |     LUT in front of the register is unused | 1684 |       |            |           |       |
 |     LUT in front of the register is used   |  511 |       |            |           |       |
 | Unique Control Sets                        |  256 |       |          0 |     13300 |  1.92 |
+>>>>>>> parent of ae750207 (shfcuidtf7)
 +--------------------------------------------+------+-------+------------+-----------+-------+
 * * Note: Available Control Sets calculated as Slice * 1, Review the Control Sets Report for more information regarding control sets.
 
@@ -99,9 +140,15 @@ Table of Contents
 +-------------------+------+-------+------------+-----------+-------+
 |     Site Type     | Used | Fixed | Prohibited | Available | Util% |
 +-------------------+------+-------+------------+-----------+-------+
+<<<<<<< HEAD
+| Block RAM Tile    |   16 |     0 |          0 |       140 | 11.43 |
+|   RAMB36/FIFO*    |   16 |     0 |          0 |       140 | 11.43 |
+|     RAMB36E1 only |   16 |       |            |           |       |
+=======
 | Block RAM Tile    |    8 |     0 |          0 |       140 |  5.71 |
 |   RAMB36/FIFO*    |    8 |     0 |          0 |       140 |  5.71 |
 |     RAMB36E1 only |    8 |       |            |           |       |
+>>>>>>> parent of ae750207 (shfcuidtf7)
 |   RAMB18          |    0 |     0 |          0 |       280 |  0.00 |
 +-------------------+------+-------+------------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
@@ -179,6 +226,23 @@ Table of Contents
 +----------+------+----------------------+
 | Ref Name | Used |  Functional Category |
 +----------+------+----------------------+
+<<<<<<< HEAD
+| FDRE     | 2536 |         Flop & Latch |
+| LUT6     |  956 |                  LUT |
+| LUT3     |  332 |                  LUT |
+| LUT4     |  326 |                  LUT |
+| MUXF7    |  160 |                MuxFx |
+| LUT2     |  155 |                  LUT |
+| LUT5     |  131 |                  LUT |
+| BIBUF    |  130 |                   IO |
+| CARRY4   |   72 |           CarryLogic |
+| MUXF8    |   64 |                MuxFx |
+| SRLC32E  |   47 |   Distributed Memory |
+| FDSE     |   39 |         Flop & Latch |
+| SRL16E   |   31 |   Distributed Memory |
+| RAMB36E1 |   16 |         Block Memory |
+| LUT1     |   16 |                  LUT |
+=======
 | FDRE     | 3432 |         Flop & Latch |
 | LUT6     | 1363 |                  LUT |
 | LUT3     |  725 |                  LUT |
@@ -194,6 +258,7 @@ Table of Contents
 | MUXF8    |   64 |                MuxFx |
 | LUT1     |   47 |                  LUT |
 | RAMB36E1 |    8 |         Block Memory |
+>>>>>>> parent of ae750207 (shfcuidtf7)
 | PS7      |    1 | Specialized Resource |
 | BUFG     |    1 |                Clock |
 +----------+------+----------------------+
@@ -217,9 +282,17 @@ Table of Contents
 | top_level_rst_ps7_0_100M_0         |    1 |
 | top_level_processing_system7_0_0   |    1 |
 | top_level_axi_intc_0_0             |    1 |
+<<<<<<< HEAD
+| top_level_auto_pc_0                |    1 |
+| top_level_action_ram_3_1           |    1 |
+| top_level_action_ram_2_1           |    1 |
+| top_level_action_ram_1_1           |    1 |
+| top_level_action_ram_0_1           |    1 |
+=======
 | top_level_auto_pc_2                |    1 |
 | top_level_auto_pc_1                |    1 |
 | top_level_auto_pc_0                |    1 |
+>>>>>>> parent of ae750207 (shfcuidtf7)
 | top_level_Intellight_Accelerat_0_0 |    1 |
 | Q_Matrix_inst_0_action_ram_3_0     |    1 |
 | Q_Matrix_inst_0_action_ram_2_0     |    1 |

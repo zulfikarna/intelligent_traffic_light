@@ -1,7 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+<<<<<<< HEAD
+-- Date        : Thu Nov 24 16:00:24 2022
+=======
 -- Date        : Mon Nov 21 17:57:45 2022
+>>>>>>> parent of ae750207 (shfcuidtf7)
 -- Host        : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_Intellight_Accelerat_0_0/top_level_Intellight_Accelerat_0_0_sim_netlist.vhdl
@@ -17,7 +21,27 @@ use UNISIM.VCOMPONENTS.ALL;
 entity top_level_Intellight_Accelerat_0_0_MII is
   port (
     wr_addr : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    wen_bram3 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    wen_bram2 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    wen_bram0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    wen_bram1 : out STD_LOGIC_VECTOR ( 3 downto 0 );
     D_new : out STD_LOGIC_VECTOR ( 63 downto 0 );
+<<<<<<< HEAD
+    Q : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    rst : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    rd_addr : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    \wen_bram3[6]\ : in STD_LOGIC;
+    wen_bram2_0_sp_1 : in STD_LOGIC;
+    \wen_bram0[6]\ : in STD_LOGIC;
+    \wen_bram1[6]\ : in STD_LOGIC;
+    O : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \D_new[55]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \D_new[59]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \D_new[63]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    D : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \D_reg_reg[1][63]_0\ : in STD_LOGIC_VECTOR ( 63 downto 0 )
+=======
     A_road : out STD_LOGIC;
     wen_bram : out STD_LOGIC_VECTOR ( 0 to 0 );
     \A_reg_reg[2][0]_0\ : out STD_LOGIC;
@@ -28,12 +52,22 @@ entity top_level_Intellight_Accelerat_0_0_MII is
     D_road0 : in STD_LOGIC_VECTOR ( 63 downto 0 );
     AGENT_0_Q_new : in STD_LOGIC_VECTOR ( 15 downto 0 );
     \A_reg_reg[0][2]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
+>>>>>>> parent of ae750207 (shfcuidtf7)
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of top_level_Intellight_Accelerat_0_0_MII : entity is "MII";
 end top_level_Intellight_Accelerat_0_0_MII;
 
 architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_MII is
+<<<<<<< HEAD
+  signal \A_reg_reg[0]_3\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \A_reg_reg[1]_4\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \A_reg_reg_n_0_[2][0]\ : STD_LOGIC;
+  signal \A_reg_reg_n_0_[2][1]\ : STD_LOGIC;
+  signal \D_reg_reg[1]_5\ : STD_LOGIC_VECTOR ( 63 downto 0 );
+  signal \D_reg_reg[2]_6\ : STD_LOGIC_VECTOR ( 63 downto 0 );
+  signal \D_reg_reg[3]_7\ : STD_LOGIC_VECTOR ( 63 downto 0 );
+=======
   signal \A_reg_reg[0]_8\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \A_reg_reg[1]_9\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \^a_reg_reg[2][0]_0\ : STD_LOGIC;
@@ -232,6 +266,7 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_MII is
   signal \D_reg_reg_gate__8_n_0\ : STD_LOGIC;
   signal \D_reg_reg_gate__9_n_0\ : STD_LOGIC;
   signal D_reg_reg_gate_n_0 : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal \S_reg_reg[2][0]_srl3___inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_1_n_0\ : STD_LOGIC;
   signal \S_reg_reg[2][1]_srl3___inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_1_n_0\ : STD_LOGIC;
   signal \S_reg_reg[2][2]_srl3___inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_1_n_0\ : STD_LOGIC;
@@ -260,6 +295,7 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_MII is
   signal S_reg_reg_r_1_n_0 : STD_LOGIC;
   signal S_reg_reg_r_2_n_0 : STD_LOGIC;
   signal S_reg_reg_r_n_0 : STD_LOGIC;
+  signal wen_bram2_0_sn_1 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \D_new[0]_INST_0\ : label is "soft_lutpair111";
   attribute SOFT_HLUTNM of \D_new[10]_INST_0\ : label is "soft_lutpair101";
@@ -567,6 +603,34 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_MII is
   attribute srl_name of \S_reg_reg[2][6]_srl3___inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_1\ : label is "\inst/Intellight_Accelerator_v1_0_S00_AXI_inst/accelerator_0/MII_0/S_reg_reg[2][6]_srl3___inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_1 ";
   attribute srl_bus_name of \S_reg_reg[2][7]_srl3___inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_1\ : label is "\inst/Intellight_Accelerator_v1_0_S00_AXI_inst/accelerator_0/MII_0/S_reg_reg[2] ";
   attribute srl_name of \S_reg_reg[2][7]_srl3___inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_1\ : label is "\inst/Intellight_Accelerator_v1_0_S00_AXI_inst/accelerator_0/MII_0/S_reg_reg[2][7]_srl3___inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_1 ";
+<<<<<<< HEAD
+  attribute SOFT_HLUTNM of S_reg_reg_gate : label is "soft_lutpair95";
+  attribute SOFT_HLUTNM of \S_reg_reg_gate__0\ : label is "soft_lutpair95";
+  attribute SOFT_HLUTNM of \S_reg_reg_gate__1\ : label is "soft_lutpair96";
+  attribute SOFT_HLUTNM of \S_reg_reg_gate__2\ : label is "soft_lutpair96";
+  attribute SOFT_HLUTNM of \S_reg_reg_gate__3\ : label is "soft_lutpair97";
+  attribute SOFT_HLUTNM of \S_reg_reg_gate__4\ : label is "soft_lutpair97";
+  attribute SOFT_HLUTNM of \S_reg_reg_gate__5\ : label is "soft_lutpair98";
+  attribute SOFT_HLUTNM of \S_reg_reg_gate__6\ : label is "soft_lutpair98";
+  attribute SOFT_HLUTNM of \wen_bram0[0]_INST_0\ : label is "soft_lutpair92";
+  attribute SOFT_HLUTNM of \wen_bram0[2]_INST_0\ : label is "soft_lutpair92";
+  attribute SOFT_HLUTNM of \wen_bram0[4]_INST_0\ : label is "soft_lutpair91";
+  attribute SOFT_HLUTNM of \wen_bram0[6]_INST_0\ : label is "soft_lutpair91";
+  attribute SOFT_HLUTNM of \wen_bram1[0]_INST_0\ : label is "soft_lutpair94";
+  attribute SOFT_HLUTNM of \wen_bram1[2]_INST_0\ : label is "soft_lutpair94";
+  attribute SOFT_HLUTNM of \wen_bram1[4]_INST_0\ : label is "soft_lutpair93";
+  attribute SOFT_HLUTNM of \wen_bram1[6]_INST_0\ : label is "soft_lutpair93";
+  attribute SOFT_HLUTNM of \wen_bram2[0]_INST_0\ : label is "soft_lutpair89";
+  attribute SOFT_HLUTNM of \wen_bram2[2]_INST_0\ : label is "soft_lutpair89";
+  attribute SOFT_HLUTNM of \wen_bram2[4]_INST_0\ : label is "soft_lutpair90";
+  attribute SOFT_HLUTNM of \wen_bram2[6]_INST_0\ : label is "soft_lutpair90";
+  attribute SOFT_HLUTNM of \wen_bram3[0]_INST_0\ : label is "soft_lutpair88";
+  attribute SOFT_HLUTNM of \wen_bram3[2]_INST_0\ : label is "soft_lutpair88";
+  attribute SOFT_HLUTNM of \wen_bram3[4]_INST_0\ : label is "soft_lutpair87";
+  attribute SOFT_HLUTNM of \wen_bram3[6]_INST_0\ : label is "soft_lutpair87";
+begin
+  wen_bram2_0_sn_1 <= wen_bram2_0_sp_1;
+=======
   attribute SOFT_HLUTNM of S_reg_reg_gate : label is "soft_lutpair112";
   attribute SOFT_HLUTNM of \S_reg_reg_gate__0\ : label is "soft_lutpair112";
   attribute SOFT_HLUTNM of \S_reg_reg_gate__1\ : label is "soft_lutpair113";
@@ -578,6 +642,7 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_MII is
 begin
   \A_reg_reg[2][0]_0\ <= \^a_reg_reg[2][0]_0\;
   A_road <= \^a_road\;
+>>>>>>> parent of ae750207 (shfcuidtf7)
 \A_reg_reg[0][0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
@@ -614,26 +679,62 @@ begin
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \A_reg_reg[1]_4\(0),
+      Q => \A_reg_reg_n_0_[2][0]\,
+      R => rst
+    );
+\A_reg_reg[2][1]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => \A_reg_reg[1]_4\(1),
+      Q => \A_reg_reg_n_0_[2][1]\,
+=======
       D => \A_reg_reg[1]_9\(0),
       Q => \^a_reg_reg[2][0]_0\,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \A_reg_reg[2][2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \A_reg_reg[1]_4\(2),
+      Q => Q(0),
+      R => rst
+    );
+\A_reg_reg[2][3]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => \A_reg_reg[1]_4\(3),
+      Q => Q(1),
+      R => rst
+    );
+\D_new[0]_INST_0\: unisim.vcomponents.LUT4
+=======
       D => \A_reg_reg[1]_9\(2),
       Q => \^a_road\,
       R => rst
     );
 \D_new[0]_INST_0\: unisim.vcomponents.LUT3
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => O(0),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(0),
+=======
       I0 => \D_reg_reg[3]_0\(0),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(0)
     );
 \D_new[10]_INST_0\: unisim.vcomponents.LUT3
@@ -641,9 +742,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[59]\(2),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(10),
+=======
       I0 => \D_reg_reg[3]_0\(10),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(10),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(10)
     );
 \D_new[11]_INST_0\: unisim.vcomponents.LUT3
@@ -651,9 +759,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[59]\(3),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(11),
+=======
       I0 => \D_reg_reg[3]_0\(11),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(11),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(11)
     );
 \D_new[12]_INST_0\: unisim.vcomponents.LUT3
@@ -661,9 +776,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[63]\(0),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(12),
+=======
       I0 => \D_reg_reg[3]_0\(12),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(12),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(12)
     );
 \D_new[13]_INST_0\: unisim.vcomponents.LUT3
@@ -671,9 +793,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[63]\(1),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(13),
+=======
       I0 => \D_reg_reg[3]_0\(13),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(13),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(13)
     );
 \D_new[14]_INST_0\: unisim.vcomponents.LUT3
@@ -681,9 +810,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[63]\(2),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(14),
+=======
       I0 => \D_reg_reg[3]_0\(14),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(14)
     );
 \D_new[15]_INST_0\: unisim.vcomponents.LUT3
@@ -691,9 +827,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[63]\(3),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(15),
+=======
       I0 => \D_reg_reg[3]_0\(15),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(15),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(15)
     );
 \D_new[16]_INST_0\: unisim.vcomponents.LUT3
@@ -701,9 +844,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => O(0),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(16),
+=======
       I0 => AGENT_0_Q_new(0),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(16),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(16)
     );
 \D_new[17]_INST_0\: unisim.vcomponents.LUT3
@@ -711,9 +861,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => O(1),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(17),
+=======
       I0 => AGENT_0_Q_new(1),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(17),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(17)
     );
 \D_new[18]_INST_0\: unisim.vcomponents.LUT3
@@ -721,9 +878,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => O(2),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(18),
+=======
       I0 => AGENT_0_Q_new(2),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(18),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(18)
     );
 \D_new[19]_INST_0\: unisim.vcomponents.LUT3
@@ -731,9 +895,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => O(3),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(19),
+=======
       I0 => AGENT_0_Q_new(3),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(19),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(19)
     );
 \D_new[1]_INST_0\: unisim.vcomponents.LUT3
@@ -741,9 +912,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => O(1),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(1),
+=======
       I0 => \D_reg_reg[3]_0\(1),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(1)
     );
 \D_new[20]_INST_0\: unisim.vcomponents.LUT3
@@ -751,9 +929,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[55]\(0),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(20),
+=======
       I0 => AGENT_0_Q_new(4),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(20),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(20)
     );
 \D_new[21]_INST_0\: unisim.vcomponents.LUT3
@@ -761,9 +946,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[55]\(1),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(21),
+=======
       I0 => AGENT_0_Q_new(5),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(21),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(21)
     );
 \D_new[22]_INST_0\: unisim.vcomponents.LUT3
@@ -771,9 +963,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[55]\(2),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(22),
+=======
       I0 => AGENT_0_Q_new(6),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(22),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(22)
     );
 \D_new[23]_INST_0\: unisim.vcomponents.LUT3
@@ -781,9 +980,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[55]\(3),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(23),
+=======
       I0 => AGENT_0_Q_new(7),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(23),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(23)
     );
 \D_new[24]_INST_0\: unisim.vcomponents.LUT3
@@ -791,9 +997,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[59]\(0),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(24),
+=======
       I0 => AGENT_0_Q_new(8),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(24),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(24)
     );
 \D_new[25]_INST_0\: unisim.vcomponents.LUT3
@@ -801,9 +1014,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[59]\(1),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(25),
+=======
       I0 => AGENT_0_Q_new(9),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(25),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(25)
     );
 \D_new[26]_INST_0\: unisim.vcomponents.LUT3
@@ -811,9 +1031,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[59]\(2),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(26),
+=======
       I0 => AGENT_0_Q_new(10),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(26),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(26)
     );
 \D_new[27]_INST_0\: unisim.vcomponents.LUT3
@@ -821,9 +1048,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[59]\(3),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(27),
+=======
       I0 => AGENT_0_Q_new(11),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(27),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(27)
     );
 \D_new[28]_INST_0\: unisim.vcomponents.LUT3
@@ -831,9 +1065,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[63]\(0),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(28),
+=======
       I0 => AGENT_0_Q_new(12),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(28),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(28)
     );
 \D_new[29]_INST_0\: unisim.vcomponents.LUT3
@@ -841,9 +1082,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[63]\(1),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(29),
+=======
       I0 => AGENT_0_Q_new(13),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(29),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(29)
     );
 \D_new[2]_INST_0\: unisim.vcomponents.LUT3
@@ -851,9 +1099,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => O(2),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(2),
+=======
       I0 => \D_reg_reg[3]_0\(2),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(2),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(2)
     );
 \D_new[30]_INST_0\: unisim.vcomponents.LUT3
@@ -861,9 +1116,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[63]\(2),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(30),
+=======
       I0 => AGENT_0_Q_new(14),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(30),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(30)
     );
 \D_new[31]_INST_0\: unisim.vcomponents.LUT3
@@ -871,9 +1133,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[63]\(3),
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      I3 => \D_reg_reg[3]_7\(31),
+=======
       I0 => AGENT_0_Q_new(15),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => \D_reg_reg[3]_0\(31),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(31)
     );
 \D_new[3]_INST_0\: unisim.vcomponents.LUT3
@@ -881,9 +1150,104 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => O(0),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(32),
+      O => D_new(32)
+    );
+\D_new[33]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => O(1),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(33),
+      O => D_new(33)
+    );
+\D_new[34]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => O(2),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(34),
+      O => D_new(34)
+    );
+\D_new[35]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => O(3),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(35),
+      O => D_new(35)
+    );
+\D_new[36]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => \D_new[55]\(0),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(36),
+      O => D_new(36)
+    );
+\D_new[37]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => \D_new[55]\(1),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(37),
+      O => D_new(37)
+    );
+\D_new[38]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => \D_new[55]\(2),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(38),
+      O => D_new(38)
+    );
+\D_new[39]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => \D_new[55]\(3),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(39),
+      O => D_new(39)
+    );
+\D_new[3]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FE02"
+    )
+        port map (
+      I0 => O(3),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(3),
+=======
       I0 => \D_reg_reg[3]_0\(3),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(3),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(3)
     );
 \D_new[4]_INST_0\: unisim.vcomponents.LUT3
@@ -891,9 +1255,126 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[59]\(0),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(40),
+      O => D_new(40)
+    );
+\D_new[41]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => \D_new[59]\(1),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(41),
+      O => D_new(41)
+    );
+\D_new[42]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => \D_new[59]\(2),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(42),
+      O => D_new(42)
+    );
+\D_new[43]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => \D_new[59]\(3),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(43),
+      O => D_new(43)
+    );
+\D_new[44]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => \D_new[63]\(0),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(44),
+      O => D_new(44)
+    );
+\D_new[45]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => \D_new[63]\(1),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(45),
+      O => D_new(45)
+    );
+\D_new[46]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => \D_new[63]\(2),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(46),
+      O => D_new(46)
+    );
+\D_new[47]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => \D_new[63]\(3),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(47),
+      O => D_new(47)
+    );
+\D_new[48]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => O(0),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(48),
+      O => D_new(48)
+    );
+\D_new[49]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => O(1),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(49),
+      O => D_new(49)
+    );
+\D_new[4]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FE02"
+    )
+        port map (
+      I0 => \D_new[55]\(0),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(4),
+=======
       I0 => \D_reg_reg[3]_0\(4),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(4),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(4)
     );
 \D_new[5]_INST_0\: unisim.vcomponents.LUT3
@@ -901,9 +1382,126 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => O(2),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(50),
+      O => D_new(50)
+    );
+\D_new[51]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => O(3),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(51),
+      O => D_new(51)
+    );
+\D_new[52]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => \D_new[55]\(0),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(52),
+      O => D_new(52)
+    );
+\D_new[53]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => \D_new[55]\(1),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(53),
+      O => D_new(53)
+    );
+\D_new[54]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => \D_new[55]\(2),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(54),
+      O => D_new(54)
+    );
+\D_new[55]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => \D_new[55]\(3),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(55),
+      O => D_new(55)
+    );
+\D_new[56]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => \D_new[59]\(0),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(56),
+      O => D_new(56)
+    );
+\D_new[57]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => \D_new[59]\(1),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(57),
+      O => D_new(57)
+    );
+\D_new[58]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => \D_new[59]\(2),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(58),
+      O => D_new(58)
+    );
+\D_new[59]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => \D_new[59]\(3),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(59),
+      O => D_new(59)
+    );
+\D_new[5]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FE02"
+    )
+        port map (
+      I0 => \D_new[55]\(1),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(5),
+=======
       I0 => \D_reg_reg[3]_0\(5),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(5),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(5)
     );
 \D_new[6]_INST_0\: unisim.vcomponents.LUT3
@@ -911,9 +1509,60 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[63]\(0),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(60),
+      O => D_new(60)
+    );
+\D_new[61]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => \D_new[63]\(1),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(61),
+      O => D_new(61)
+    );
+\D_new[62]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => \D_new[63]\(2),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(62),
+      O => D_new(62)
+    );
+\D_new[63]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => \D_new[63]\(3),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(63),
+      O => D_new(63)
+    );
+\D_new[6]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FE02"
+    )
+        port map (
+      I0 => \D_new[55]\(2),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(6),
+=======
       I0 => \D_reg_reg[3]_0\(6),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(6),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(6)
     );
 \D_new[7]_INST_0\: unisim.vcomponents.LUT3
@@ -921,9 +1570,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[55]\(3),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(7),
+=======
       I0 => \D_reg_reg[3]_0\(7),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(7),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(7)
     );
 \D_new[8]_INST_0\: unisim.vcomponents.LUT3
@@ -931,9 +1587,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[59]\(0),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(8),
+=======
       I0 => \D_reg_reg[3]_0\(8),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(8),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(8)
     );
 \D_new[9]_INST_0\: unisim.vcomponents.LUT3
@@ -941,9 +1604,16 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \D_new[59]\(1),
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      I3 => \D_reg_reg[3]_7\(9),
+=======
       I0 => \D_reg_reg[3]_0\(9),
       I1 => \^a_reg_reg[2][0]_0\,
       I2 => AGENT_0_Q_new(9),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_new(9)
     );
 \D_reg_reg[1][0]_srl2___inst_Intellight_Accelerator_v1_0_S00_AXI_inst_accelerator_0_MII_0_S_reg_reg_r_0\: unisim.vcomponents.SRL16E
@@ -4210,6 +4880,167 @@ S_reg_reg_r_2: unisim.vcomponents.FDRE
       Q => S_reg_reg_r_2_n_0,
       R => rst
     );
+<<<<<<< HEAD
+\wen_bram0[0]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"02"
+    )
+        port map (
+      I0 => \wen_bram0[6]\,
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      O => wen_bram0(0)
+    );
+\wen_bram0[2]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"20"
+    )
+        port map (
+      I0 => \wen_bram0[6]\,
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \A_reg_reg_n_0_[2][0]\,
+      O => wen_bram0(1)
+    );
+\wen_bram0[4]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"20"
+    )
+        port map (
+      I0 => \wen_bram0[6]\,
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      O => wen_bram0(2)
+    );
+\wen_bram0[6]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => \wen_bram0[6]\,
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \A_reg_reg_n_0_[2][1]\,
+      O => wen_bram0(3)
+    );
+\wen_bram1[0]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"01"
+    )
+        port map (
+      I0 => \A_reg_reg_n_0_[2][0]\,
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \wen_bram1[6]\,
+      O => wen_bram1(0)
+    );
+\wen_bram1[2]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"04"
+    )
+        port map (
+      I0 => \A_reg_reg_n_0_[2][1]\,
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \wen_bram1[6]\,
+      O => wen_bram1(1)
+    );
+\wen_bram1[4]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"04"
+    )
+        port map (
+      I0 => \A_reg_reg_n_0_[2][0]\,
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \wen_bram1[6]\,
+      O => wen_bram1(2)
+    );
+\wen_bram1[6]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"08"
+    )
+        port map (
+      I0 => \A_reg_reg_n_0_[2][0]\,
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \wen_bram1[6]\,
+      O => wen_bram1(3)
+    );
+\wen_bram2[0]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"01"
+    )
+        port map (
+      I0 => \A_reg_reg_n_0_[2][0]\,
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => wen_bram2_0_sn_1,
+      O => wen_bram2(0)
+    );
+\wen_bram2[2]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"04"
+    )
+        port map (
+      I0 => \A_reg_reg_n_0_[2][1]\,
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => wen_bram2_0_sn_1,
+      O => wen_bram2(1)
+    );
+\wen_bram2[4]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"04"
+    )
+        port map (
+      I0 => \A_reg_reg_n_0_[2][0]\,
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => wen_bram2_0_sn_1,
+      O => wen_bram2(2)
+    );
+\wen_bram2[6]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"08"
+    )
+        port map (
+      I0 => \A_reg_reg_n_0_[2][0]\,
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => wen_bram2_0_sn_1,
+      O => wen_bram2(3)
+    );
+\wen_bram3[0]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"01"
+    )
+        port map (
+      I0 => \A_reg_reg_n_0_[2][0]\,
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \wen_bram3[6]\,
+      O => wen_bram3(0)
+    );
+\wen_bram3[2]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"04"
+    )
+        port map (
+      I0 => \A_reg_reg_n_0_[2][1]\,
+      I1 => \A_reg_reg_n_0_[2][0]\,
+      I2 => \wen_bram3[6]\,
+      O => wen_bram3(1)
+    );
+\wen_bram3[4]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"04"
+    )
+        port map (
+      I0 => \A_reg_reg_n_0_[2][0]\,
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \wen_bram3[6]\,
+      O => wen_bram3(2)
+    );
+\wen_bram3[6]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"08"
+    )
+        port map (
+      I0 => \A_reg_reg_n_0_[2][0]\,
+      I1 => \A_reg_reg_n_0_[2][1]\,
+      I2 => \wen_bram3[6]\,
+      O => wen_bram3(3)
+=======
 \wen_bram[0]_INST_0\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -4217,6 +5048,7 @@ S_reg_reg_r_2: unisim.vcomponents.FDRE
         port map (
       I0 => \^a_reg_reg[2][0]_0\,
       O => wen_bram(0)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 end STRUCTURE;
 library IEEE;
@@ -4225,8 +5057,11 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_level_Intellight_Accelerat_0_0_RD is
   port (
-    \R_reg[14]_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    \R_reg[14]_1\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    \R_reg[15]_0\ : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    DI : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \R_reg[15]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \R_reg[15]_2\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -4234,61 +5069,104 @@ entity top_level_Intellight_Accelerat_0_0_RD is
 end top_level_Intellight_Accelerat_0_0_RD;
 
 architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_RD is
+  signal \R0__2_carry__0_n_2\ : STD_LOGIC;
+  signal \R0__2_carry__0_n_3\ : STD_LOGIC;
+  signal \R0__2_carry__0_n_5\ : STD_LOGIC;
+  signal \R0__2_carry__0_n_6\ : STD_LOGIC;
+  signal \R0__2_carry__0_n_7\ : STD_LOGIC;
+  signal \R0__2_carry_n_0\ : STD_LOGIC;
+  signal \R0__2_carry_n_1\ : STD_LOGIC;
+  signal \R0__2_carry_n_2\ : STD_LOGIC;
+  signal \R0__2_carry_n_3\ : STD_LOGIC;
+  signal \R0__2_carry_n_4\ : STD_LOGIC;
+  signal \R0__2_carry_n_5\ : STD_LOGIC;
+  signal \R0__2_carry_n_6\ : STD_LOGIC;
+  signal \NLW_R0__2_carry_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \NLW_R0__2_carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
+  signal \NLW_R0__2_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  attribute ADDER_THRESHOLD : integer;
+  attribute ADDER_THRESHOLD of \R0__2_carry\ : label is 35;
+  attribute ADDER_THRESHOLD of \R0__2_carry__0\ : label is 35;
 begin
-\R_reg[0]\: unisim.vcomponents.FDRE
+\R0__2_carry\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \R0__2_carry_n_0\,
+      CO(2) => \R0__2_carry_n_1\,
+      CO(1) => \R0__2_carry_n_2\,
+      CO(0) => \R0__2_carry_n_3\,
+      CYINIT => '0',
+      DI(3 downto 1) => DI(2 downto 0),
+      DI(0) => '0',
+      O(3) => \R0__2_carry_n_4\,
+      O(2) => \R0__2_carry_n_5\,
+      O(1) => \R0__2_carry_n_6\,
+      O(0) => \NLW_R0__2_carry_O_UNCONNECTED\(0),
+      S(3 downto 1) => S(2 downto 0),
+      S(0) => '0'
+    );
+\R0__2_carry__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \R0__2_carry_n_0\,
+      CO(3 downto 2) => \NLW_R0__2_carry__0_CO_UNCONNECTED\(3 downto 2),
+      CO(1) => \R0__2_carry__0_n_2\,
+      CO(0) => \R0__2_carry__0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 2) => B"00",
+      DI(1 downto 0) => \R_reg[15]_1\(1 downto 0),
+      O(3) => \NLW_R0__2_carry__0_O_UNCONNECTED\(3),
+      O(2) => \R0__2_carry__0_n_5\,
+      O(1) => \R0__2_carry__0_n_6\,
+      O(0) => \R0__2_carry__0_n_7\,
+      S(3) => '0',
+      S(2 downto 0) => \R_reg[15]_2\(2 downto 0)
+    );
+\R_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \R_reg[14]_1\(0),
-      Q => \R_reg[14]_0\(0),
+      D => \R0__2_carry_n_6\,
+      Q => \R_reg[15]_0\(0),
+      R => '0'
+    );
+\R_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => \R0__2_carry_n_5\,
+      Q => \R_reg[15]_0\(1),
+      R => '0'
+    );
+\R_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => \R0__2_carry_n_4\,
+      Q => \R_reg[15]_0\(2),
+      R => '0'
+    );
+\R_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => \R0__2_carry__0_n_7\,
+      Q => \R_reg[15]_0\(3),
       R => '0'
     );
 \R_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \R_reg[14]_1\(6),
-      Q => \R_reg[14]_0\(6),
+      D => \R0__2_carry__0_n_6\,
+      Q => \R_reg[15]_0\(4),
       R => '0'
     );
-\R_reg[1]\: unisim.vcomponents.FDRE
+\R_reg[15]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \R_reg[14]_1\(1),
-      Q => \R_reg[14]_0\(1),
-      R => '0'
-    );
-\R_reg[2]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk,
-      CE => '1',
-      D => \R_reg[14]_1\(2),
-      Q => \R_reg[14]_0\(2),
-      R => '0'
-    );
-\R_reg[3]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk,
-      CE => '1',
-      D => \R_reg[14]_1\(3),
-      Q => \R_reg[14]_0\(3),
-      R => '0'
-    );
-\R_reg[4]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk,
-      CE => '1',
-      D => \R_reg[14]_1\(4),
-      Q => \R_reg[14]_0\(4),
-      R => '0'
-    );
-\R_reg[5]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk,
-      CE => '1',
-      D => \R_reg[14]_1\(5),
-      Q => \R_reg[14]_0\(5),
+      D => \R0__2_carry__0_n_5\,
+      Q => \R_reg[15]_0\(5),
       R => '0'
     );
 end STRUCTURE;
@@ -4298,6 +5176,48 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_level_Intellight_Accelerat_0_0_SD is
   port (
+<<<<<<< HEAD
+    \L_curr_reg[0][2]_0\ : out STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[0][0]_0\ : out STD_LOGIC;
+    \L_curr_reg[3][0]_0\ : out STD_LOGIC;
+    \L_curr_reg[3][3]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[1][2]_0\ : out STD_LOGIC;
+    \L_curr_reg[1][3]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[1][0]_0\ : out STD_LOGIC;
+    \L_curr_reg[0][3]_0\ : out STD_LOGIC;
+    \L_curr_reg[0][0]_1\ : out STD_LOGIC;
+    \L_curr_reg[3][3]_1\ : out STD_LOGIC;
+    \L_curr_reg[3][0]_1\ : out STD_LOGIC;
+    \L_curr_reg[1][3]_1\ : out STD_LOGIC;
+    \L_curr_reg[1][0]_1\ : out STD_LOGIC;
+    \L_curr_reg[2][3]_0\ : out STD_LOGIC;
+    \L_curr_reg[2][3]_1\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[2][0]_0\ : out STD_LOGIC;
+    \L_curr_reg[0][0]_2\ : out STD_LOGIC;
+    \L_curr_reg[2][2]_0\ : out STD_LOGIC;
+    \L_curr_reg[2][0]_1\ : out STD_LOGIC;
+    \L_curr_reg[0][3]_1\ : in STD_LOGIC;
+    \L_curr_reg[0][3]_2\ : in STD_LOGIC;
+    \L_curr_reg[0][1]_0\ : in STD_LOGIC;
+    \L_curr_reg[3][1]_0\ : in STD_LOGIC;
+    \L_curr_reg[1][3]_2\ : in STD_LOGIC;
+    \L_curr_reg[1][3]_3\ : in STD_LOGIC;
+    \L_curr_reg[1][1]_0\ : in STD_LOGIC;
+    \L_curr_reg[2][3]_2\ : in STD_LOGIC;
+    \L_curr_reg[2][3]_3\ : in STD_LOGIC;
+    \L_curr_reg[2][2]_1\ : in STD_LOGIC;
+    \L_curr_reg[2][2]_2\ : in STD_LOGIC;
+    \L_curr_reg[2][3]_4\ : in STD_LOGIC;
+    \L_curr_reg[2][3]_5\ : in STD_LOGIC;
+    \L_curr_reg[2][1]_0\ : in STD_LOGIC;
+    rst : in STD_LOGIC;
+    D : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    clk : in STD_LOGIC;
+    \L_curr_reg[1][3]_4\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[2][3]_6\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[3][3]_2\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
+=======
     \L_curr_reg[0][3]_0\ : out STD_LOGIC;
     Q : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \L_curr_reg[0][0]_0\ : out STD_LOGIC;
@@ -4350,6 +5270,7 @@ entity top_level_Intellight_Accelerat_0_0_SD is
     \L_curr_reg[1][3]_3\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \L_curr_reg[2][3]_3\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \L_curr_reg[3][3]_5\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
+>>>>>>> parent of ae750207 (shfcuidtf7)
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of top_level_Intellight_Accelerat_0_0_SD : entity is "SD";
@@ -4357,6 +5278,14 @@ end top_level_Intellight_Accelerat_0_0_SD;
 
 architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_SD is
   signal \^l_curr_reg[0][0]_1\ : STD_LOGIC;
+<<<<<<< HEAD
+  signal \^l_curr_reg[1][0]_1\ : STD_LOGIC;
+  signal \^l_curr_reg[1][3]_0\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \^l_curr_reg[2][0]_0\ : STD_LOGIC;
+  signal \^l_curr_reg[2][3]_1\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \^l_curr_reg[3][0]_1\ : STD_LOGIC;
+  signal \^l_curr_reg[3][3]_0\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+=======
   signal \^l_curr_reg[0][3]_0\ : STD_LOGIC;
   signal \^l_curr_reg[1][0]_1\ : STD_LOGIC;
   signal \^l_curr_reg[1][3]_0\ : STD_LOGIC;
@@ -4367,6 +5296,7 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_SD is
   signal \^l_curr_reg[3][0]_1\ : STD_LOGIC;
   signal \^l_curr_reg[3][3]_0\ : STD_LOGIC;
   signal \^l_curr_reg[3][3]_1\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal \^q\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \R[14]_i_28_n_0\ : STD_LOGIC;
   signal \R[14]_i_29_n_0\ : STD_LOGIC;
@@ -4377,6 +5307,24 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_SD is
   signal \R[2]_i_11_n_0\ : STD_LOGIC;
   signal \R[2]_i_12_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
+<<<<<<< HEAD
+  attribute SOFT_HLUTNM of \L_curr[0][1]_i_3\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \L_curr[1][1]_i_3\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \L_curr[2][1]_i_3\ : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \L_curr[3][1]_i_3\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \rd_addr[3]_INST_0_i_4\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \rd_addr[5]_INST_0_i_4\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \rd_addr[7]_INST_0_i_4\ : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \rd_addr[9]_INST_0_i_4\ : label is "soft_lutpair52";
+begin
+  \L_curr_reg[0][0]_1\ <= \^l_curr_reg[0][0]_1\;
+  \L_curr_reg[1][0]_1\ <= \^l_curr_reg[1][0]_1\;
+  \L_curr_reg[1][3]_0\(3 downto 0) <= \^l_curr_reg[1][3]_0\(3 downto 0);
+  \L_curr_reg[2][0]_0\ <= \^l_curr_reg[2][0]_0\;
+  \L_curr_reg[2][3]_1\(3 downto 0) <= \^l_curr_reg[2][3]_1\(3 downto 0);
+  \L_curr_reg[3][0]_1\ <= \^l_curr_reg[3][0]_1\;
+  \L_curr_reg[3][3]_0\(3 downto 0) <= \^l_curr_reg[3][3]_0\(3 downto 0);
+=======
   attribute SOFT_HLUTNM of \L_curr[0][1]_i_4\ : label is "soft_lutpair59";
   attribute SOFT_HLUTNM of \L_curr[1][1]_i_3\ : label is "soft_lutpair60";
   attribute SOFT_HLUTNM of \L_curr[2][1]_i_3\ : label is "soft_lutpair61";
@@ -4411,9 +5359,45 @@ begin
   \L_curr_reg[3][0]_1\ <= \^l_curr_reg[3][0]_1\;
   \L_curr_reg[3][3]_0\ <= \^l_curr_reg[3][3]_0\;
   \L_curr_reg[3][3]_1\(3 downto 0) <= \^l_curr_reg[3][3]_1\(3 downto 0);
+>>>>>>> parent of ae750207 (shfcuidtf7)
   Q(3 downto 0) <= \^q\(3 downto 0);
 \L_curr[0][1]_i_4\: unisim.vcomponents.LUT2
     generic map(
+<<<<<<< HEAD
+      INIT => X"2"
+    )
+        port map (
+      I0 => \^q\(0),
+      I1 => \L_curr_reg[0][1]_0\,
+      O => \L_curr_reg[0][0]_0\
+    );
+\L_curr[1][1]_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \^l_curr_reg[1][3]_0\(0),
+      I1 => \L_curr_reg[1][1]_0\,
+      O => \L_curr_reg[1][0]_0\
+    );
+\L_curr[2][1]_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \^l_curr_reg[2][3]_1\(0),
+      I1 => \L_curr_reg[2][1]_0\,
+      O => \L_curr_reg[2][0]_1\
+    );
+\L_curr[3][1]_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \^l_curr_reg[3][3]_0\(0),
+      I1 => \L_curr_reg[3][1]_0\,
+      O => \L_curr_reg[3][0]_0\
+=======
       INIT => X"E"
     )
         port map (
@@ -4447,6 +5431,7 @@ begin
       I0 => \^l_curr_reg[3][3]_1\(0),
       I1 => \L_curr_reg[3][1]_1\,
       O => \L_curr_reg[3][0]_3\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \L_curr_reg[0][0]\: unisim.vcomponents.FDSE
      port map (
@@ -4484,39 +5469,63 @@ begin
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \L_curr_reg[1][3]_4\(0),
+      Q => \^l_curr_reg[1][3]_0\(0),
+=======
       D => \L_curr_reg[1][3]_3\(0),
       Q => \^l_curr_reg[1][3]_1\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       S => rst
     );
 \L_curr_reg[1][1]\: unisim.vcomponents.FDSE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \L_curr_reg[1][3]_4\(1),
+      Q => \^l_curr_reg[1][3]_0\(1),
+=======
       D => \L_curr_reg[1][3]_3\(1),
       Q => \^l_curr_reg[1][3]_1\(1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       S => rst
     );
 \L_curr_reg[1][2]\: unisim.vcomponents.FDSE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \L_curr_reg[1][3]_4\(2),
+      Q => \^l_curr_reg[1][3]_0\(2),
+=======
       D => \L_curr_reg[1][3]_3\(2),
       Q => \^l_curr_reg[1][3]_1\(2),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       S => rst
     );
 \L_curr_reg[1][3]\: unisim.vcomponents.FDSE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \L_curr_reg[1][3]_4\(3),
+      Q => \^l_curr_reg[1][3]_0\(3),
+=======
       D => \L_curr_reg[1][3]_3\(3),
       Q => \^l_curr_reg[1][3]_1\(3),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       S => rst
     );
 \L_curr_reg[2][0]\: unisim.vcomponents.FDSE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \L_curr_reg[2][3]_6\(0),
+=======
       D => \L_curr_reg[2][3]_3\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       Q => \^l_curr_reg[2][3]_1\(0),
       S => rst
     );
@@ -4524,7 +5533,11 @@ begin
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \L_curr_reg[2][3]_6\(1),
+=======
       D => \L_curr_reg[2][3]_3\(1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       Q => \^l_curr_reg[2][3]_1\(1),
       S => rst
     );
@@ -4532,7 +5545,11 @@ begin
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \L_curr_reg[2][3]_6\(2),
+=======
       D => \L_curr_reg[2][3]_3\(2),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       Q => \^l_curr_reg[2][3]_1\(2),
       S => rst
     );
@@ -4540,7 +5557,11 @@ begin
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \L_curr_reg[2][3]_6\(3),
+=======
       D => \L_curr_reg[2][3]_3\(3),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       Q => \^l_curr_reg[2][3]_1\(3),
       S => rst
     );
@@ -4548,30 +5569,65 @@ begin
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \L_curr_reg[3][3]_2\(0),
+      Q => \^l_curr_reg[3][3]_0\(0),
+=======
       D => \L_curr_reg[3][3]_5\(0),
       Q => \^l_curr_reg[3][3]_1\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       S => rst
     );
 \L_curr_reg[3][1]\: unisim.vcomponents.FDSE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \L_curr_reg[3][3]_2\(1),
+      Q => \^l_curr_reg[3][3]_0\(1),
+=======
       D => \L_curr_reg[3][3]_5\(1),
       Q => \^l_curr_reg[3][3]_1\(1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       S => rst
     );
 \L_curr_reg[3][2]\: unisim.vcomponents.FDSE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \L_curr_reg[3][3]_2\(2),
+      Q => \^l_curr_reg[3][3]_0\(2),
+=======
       D => \L_curr_reg[3][3]_5\(2),
       Q => \^l_curr_reg[3][3]_1\(2),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       S => rst
     );
 \L_curr_reg[3][3]\: unisim.vcomponents.FDSE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \L_curr_reg[3][3]_2\(3),
+      Q => \^l_curr_reg[3][3]_0\(3),
+      S => rst
+    );
+\R0__2_carry__0_i_17\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFEF0EEF0E0000"
+    )
+        port map (
+      I0 => \^q\(0),
+      I1 => \L_curr_reg[2][2]_1\,
+      I2 => \L_curr_reg[2][2]_2\,
+      I3 => \^q\(1),
+      I4 => \L_curr_reg[2][3]_3\,
+      I5 => \^q\(2),
+      O => \L_curr_reg[0][0]_2\
+    );
+\rd_addr[10]_INST_0_i_3\: unisim.vcomponents.LUT5
+=======
       D => \L_curr_reg[3][3]_5\(3),
       Q => \^l_curr_reg[3][3]_1\(3),
       S => rst
@@ -4669,10 +5725,30 @@ begin
       O => \L_curr_reg[1][0]_0\
     );
 \R[14]_i_37\: unisim.vcomponents.LUT6
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
-      INIT => X"1117EEE8EEE81117"
+      INIT => X"66696999"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \L_curr_reg[2][3]_2\,
+      I1 => \^l_curr_reg[3][3]_0\(3),
+      I2 => \L_curr_reg[2][3]_3\,
+      I3 => \^l_curr_reg[3][3]_0\(2),
+      I4 => \^l_curr_reg[3][0]_1\,
+      O => \L_curr_reg[3][3]_1\
+    );
+\rd_addr[3]_INST_0_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"EF0E"
+    )
+        port map (
+      I0 => \^q\(0),
+      I1 => \L_curr_reg[2][2]_1\,
+      I2 => \L_curr_reg[2][2]_2\,
+      I3 => \^q\(1),
+      O => \^l_curr_reg[0][0]_1\
+=======
       I0 => \^l_curr_reg[1][3]_1\(1),
       I1 => \L_curr_reg[3][2]_0\,
       I2 => \L_curr_reg[3][1]_1\,
@@ -4706,12 +5782,45 @@ begin
       I4 => \L_curr_reg[3][3]_4\,
       I5 => \^l_curr_reg[3][3]_1\(2),
       O => \L_curr_reg[3][1]_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \R[14]_i_44\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \L_curr_reg[2][3]_2\,
+      I1 => \^q\(3),
+      I2 => \^q\(2),
+      I3 => \L_curr_reg[2][3]_3\,
+      I4 => \^l_curr_reg[0][0]_1\,
+      O => \L_curr_reg[0][3]_0\
+    );
+\rd_addr[4]_INST_0_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B2B2BBB22222B222"
+    )
+        port map (
+      I0 => \^q\(2),
+      I1 => \L_curr_reg[0][3]_1\,
+      I2 => \L_curr_reg[0][3]_2\,
+      I3 => \^q\(0),
+      I4 => \L_curr_reg[0][1]_0\,
+      I5 => \^q\(1),
+      O => \L_curr_reg[0][2]_0\
+    );
+\rd_addr[5]_INST_0_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"E0FE"
+    )
+        port map (
+      I0 => \^l_curr_reg[1][3]_0\(0),
+      I1 => \L_curr_reg[2][2]_1\,
+      I2 => \^l_curr_reg[1][3]_0\(1),
+      I3 => \L_curr_reg[2][2]_2\,
+      O => \^l_curr_reg[1][0]_1\
+=======
       I0 => \^l_curr_reg[2][3]_1\(3),
       I1 => \L_curr_reg[3][3]_3\,
       O => \^l_curr_reg[2][3]_0\
@@ -4724,12 +5833,45 @@ begin
       I0 => \^l_curr_reg[2][3]_1\(0),
       I1 => \R[14]_i_32_0\,
       O => \R[14]_i_46_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \R[14]_i_47\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \L_curr_reg[2][3]_2\,
+      I1 => \^l_curr_reg[1][3]_0\(3),
+      I2 => \L_curr_reg[2][3]_3\,
+      I3 => \^l_curr_reg[1][3]_0\(2),
+      I4 => \^l_curr_reg[1][0]_1\,
+      O => \L_curr_reg[1][3]_1\
+    );
+\rd_addr[6]_INST_0_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B2B2BBB22222B222"
+    )
+        port map (
+      I0 => \^l_curr_reg[1][3]_0\(2),
+      I1 => \L_curr_reg[1][3]_2\,
+      I2 => \L_curr_reg[1][3]_3\,
+      I3 => \^l_curr_reg[1][3]_0\(0),
+      I4 => \L_curr_reg[1][1]_0\,
+      I5 => \^l_curr_reg[1][3]_0\(1),
+      O => \L_curr_reg[1][2]_0\
+    );
+\rd_addr[7]_INST_0_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"E0FE"
+    )
+        port map (
+      I0 => \^l_curr_reg[2][3]_1\(0),
+      I1 => \L_curr_reg[2][2]_1\,
+      I2 => \^l_curr_reg[2][3]_1\(1),
+      I3 => \L_curr_reg[2][2]_2\,
+      O => \^l_curr_reg[2][0]_0\
+=======
       I0 => \^l_curr_reg[2][3]_1\(0),
       I1 => \L_curr_reg[3][1]_1\,
       O => \R[14]_i_47_n_0\
@@ -4742,12 +5884,23 @@ begin
       I0 => \^l_curr_reg[1][3]_1\(3),
       I1 => \L_curr_reg[3][3]_3\,
       O => \^l_curr_reg[1][3]_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \R[14]_i_52\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \L_curr_reg[2][3]_2\,
+      I1 => \^l_curr_reg[2][3]_1\(3),
+      I2 => \L_curr_reg[2][3]_3\,
+      I3 => \^l_curr_reg[2][3]_1\(2),
+      I4 => \^l_curr_reg[2][0]_0\,
+      O => \L_curr_reg[2][3]_0\
+    );
+\rd_addr[8]_INST_0_i_6\: unisim.vcomponents.LUT6
+=======
       I0 => \^l_curr_reg[1][3]_1\(0),
       I1 => \R[14]_i_35_0\,
       O => \R[14]_i_52_n_0\
@@ -4815,10 +5968,30 @@ begin
       O => \L_curr_reg[3][0]_0\
     );
 \rd_addr[2]_INST_0_i_3\: unisim.vcomponents.LUT4
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
-      INIT => X"FEE0"
+      INIT => X"B2B2BBB22222B222"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \^l_curr_reg[2][3]_1\(2),
+      I1 => \L_curr_reg[2][3]_4\,
+      I2 => \L_curr_reg[2][3]_5\,
+      I3 => \^l_curr_reg[2][3]_1\(0),
+      I4 => \L_curr_reg[2][1]_0\,
+      I5 => \^l_curr_reg[2][3]_1\(1),
+      O => \L_curr_reg[2][2]_0\
+    );
+\rd_addr[9]_INST_0_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"EF0E"
+    )
+        port map (
+      I0 => \^l_curr_reg[3][3]_0\(0),
+      I1 => \L_curr_reg[2][2]_1\,
+      I2 => \L_curr_reg[2][2]_2\,
+      I3 => \^l_curr_reg[3][3]_0\(1),
+=======
       I0 => \^q\(0),
       I1 => \L_curr_reg[3][1]_1\,
       I2 => \L_curr_reg[3][2]_0\,
@@ -4894,6 +6067,7 @@ begin
       I1 => \L_curr_reg[3][1]_1\,
       I2 => \L_curr_reg[3][2]_0\,
       I3 => \^l_curr_reg[3][3]_1\(1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \^l_curr_reg[3][0]_1\
     );
 \rd_addr[9]_INST_0_i_3\: unisim.vcomponents.LUT5
@@ -4915,6 +6089,80 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_level_Intellight_Accelerat_0_0_lfsr is
   port (
+<<<<<<< HEAD
+    DI : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \L_curr_reg[3][2]\ : out STD_LOGIC;
+    \L_curr_reg[2][2]\ : out STD_LOGIC;
+    \L_curr_reg[1][2]\ : out STD_LOGIC;
+    S : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \L_curr_reg[0][2]\ : out STD_LOGIC;
+    \L_curr_reg[0][3]\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \L_curr_reg[0][3]_0\ : out STD_LOGIC;
+    \L_curr_reg[0][3]_1\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \L_curr_reg[2][3]\ : out STD_LOGIC;
+    rd_addr : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    SD_0_L0 : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \L_curr_reg[1][3]\ : out STD_LOGIC;
+    \L_curr_reg[3][3]\ : out STD_LOGIC;
+    SD_0_L3 : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \r_lsfr_reg[2]_0\ : out STD_LOGIC;
+    \r_lsfr_reg[1]_0\ : out STD_LOGIC;
+    SD_0_L1 : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    SD_0_L2 : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    \R0__2_carry__0_i_3_0\ : in STD_LOGIC;
+    \L_curr_reg[0][3]_2\ : in STD_LOGIC;
+    \L_curr_reg[0][3]_3\ : in STD_LOGIC;
+    \L_curr_reg[0][3]_4\ : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \rd_addr[10]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    \rd_addr[4]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \L_curr_reg[2][0]\ : in STD_LOGIC;
+    \L_curr_reg[0][0]\ : in STD_LOGIC;
+    \L_curr_reg[0][1]\ : in STD_LOGIC;
+    \L_curr_reg[0][1]_0\ : in STD_LOGIC;
+    \L_curr_reg[0][2]_0\ : in STD_LOGIC;
+    \L_curr_reg[2][2]_0\ : in STD_LOGIC;
+    \L_curr_reg[0][2]_1\ : in STD_LOGIC;
+    \L_curr_reg[0][2]_2\ : in STD_LOGIC;
+    \L_curr_reg[3][3]_0\ : in STD_LOGIC;
+    \L_curr_reg[3][3]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[3][3]_2\ : in STD_LOGIC;
+    \L_curr_reg[3][3]_3\ : in STD_LOGIC;
+    \L_curr_reg[3][0]\ : in STD_LOGIC;
+    \L_curr_reg[3][1]\ : in STD_LOGIC;
+    \L_curr_reg[3][1]_0\ : in STD_LOGIC;
+    \L_curr_reg[3][2]_0\ : in STD_LOGIC;
+    \L_curr_reg[3][2]_1\ : in STD_LOGIC;
+    \L_curr_reg[3][2]_2\ : in STD_LOGIC;
+    \L_curr_reg[1][3]_0\ : in STD_LOGIC;
+    \L_curr_reg[1][3]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[1][3]_2\ : in STD_LOGIC;
+    \L_curr_reg[1][3]_3\ : in STD_LOGIC;
+    \L_curr_reg[1][0]\ : in STD_LOGIC;
+    \L_curr_reg[1][1]\ : in STD_LOGIC;
+    \L_curr_reg[1][1]_0\ : in STD_LOGIC;
+    \L_curr_reg[1][2]_0\ : in STD_LOGIC;
+    \L_curr_reg[1][2]_1\ : in STD_LOGIC;
+    \L_curr_reg[1][2]_2\ : in STD_LOGIC;
+    \L_curr_reg[2][3]_0\ : in STD_LOGIC;
+    \L_curr_reg[2][3]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[2][3]_2\ : in STD_LOGIC;
+    \L_curr_reg[2][3]_3\ : in STD_LOGIC;
+    \L_curr_reg[2][0]_0\ : in STD_LOGIC;
+    \L_curr_reg[2][1]\ : in STD_LOGIC;
+    \L_curr_reg[2][1]_0\ : in STD_LOGIC;
+    \L_curr_reg[2][2]_1\ : in STD_LOGIC;
+    \L_curr_reg[2][1]_1\ : in STD_LOGIC;
+    \L_curr_reg[0][2]_3\ : in STD_LOGIC;
+    \R0__2_carry__0_i_9_0\ : in STD_LOGIC;
+    \L_curr_reg[2][2]_2\ : in STD_LOGIC;
+    \L_curr_reg[3][2]_3\ : in STD_LOGIC;
+    \L_curr_reg[1][2]_3\ : in STD_LOGIC;
+    \L_curr_reg[2][2]_3\ : in STD_LOGIC;
+    \L_curr_reg[2][2]_4\ : in STD_LOGIC;
+    \L_curr_reg[2][2]_5\ : in STD_LOGIC;
+=======
     D : out STD_LOGIC_VECTOR ( 6 downto 0 );
     \L_curr_reg[1][3]\ : out STD_LOGIC;
     \L_curr_reg[2][3]\ : out STD_LOGIC;
@@ -5012,6 +6260,7 @@ entity top_level_Intellight_Accelerat_0_0_lfsr is
     \L_curr_reg[2][0]_0\ : in STD_LOGIC;
     \L_curr_reg[3][1]_4\ : in STD_LOGIC;
     \R[2]_i_6_5\ : in STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \Q_act_reg_reg[0][15]\ : in STD_LOGIC;
     \Q_act_reg_reg[0][15]_0\ : in STD_LOGIC;
     \Q_act_reg_reg[0][15]_1\ : in STD_LOGIC;
@@ -5076,6 +6325,14 @@ entity top_level_Intellight_Accelerat_0_0_lfsr is
     \Q_act_reg_reg[0][0]_0\ : in STD_LOGIC;
     \Q_act_reg_reg[0][0]_1\ : in STD_LOGIC;
     \Q_act_reg_reg[0][0]_2\ : in STD_LOGIC;
+<<<<<<< HEAD
+    \A_reg_reg[0][3]\ : in STD_LOGIC;
+    CO : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \A_reg_reg[0][2]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \A_reg_reg[0][2]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \A_reg_reg[0][2]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
     rst : in STD_LOGIC;
     CO : in STD_LOGIC_VECTOR ( 0 to 0 );
     \A_reg_reg[0][2]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -5090,6 +6347,13 @@ end top_level_Intellight_Accelerat_0_0_lfsr;
 
 architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_lfsr is
   signal A_dur_rand : STD_LOGIC_VECTOR ( 1 downto 0 );
+<<<<<<< HEAD
+  signal \^di\ : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal \L_curr[0][1]_i_4_n_0\ : STD_LOGIC;
+  signal \L_curr[1][1]_i_4_n_0\ : STD_LOGIC;
+  signal \L_curr[2][1]_i_4_n_0\ : STD_LOGIC;
+  signal \L_curr[3][1]_i_4_n_0\ : STD_LOGIC;
+=======
   signal \L_curr[0][1]_i_2_n_0\ : STD_LOGIC;
   signal \L_curr[1][0]_i_2_n_0\ : STD_LOGIC;
   signal \L_curr[1][1]_i_2_n_0\ : STD_LOGIC;
@@ -5098,10 +6362,36 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_lfsr is
   signal \L_curr[3][1]_i_2_n_0\ : STD_LOGIC;
   signal \^l_curr_reg[0][0]\ : STD_LOGIC;
   signal \^l_curr_reg[0][1]\ : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal \^l_curr_reg[0][2]\ : STD_LOGIC;
-  signal \^l_curr_reg[0][3]\ : STD_LOGIC;
+  signal \^l_curr_reg[0][3]\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \^l_curr_reg[0][3]_0\ : STD_LOGIC;
+  signal \^l_curr_reg[1][2]\ : STD_LOGIC;
   signal \^l_curr_reg[1][3]\ : STD_LOGIC;
   signal \^l_curr_reg[2][3]\ : STD_LOGIC;
+<<<<<<< HEAD
+  signal \^l_curr_reg[3][2]\ : STD_LOGIC;
+  signal \^l_curr_reg[3][3]\ : STD_LOGIC;
+  signal \R0__2_carry__0_i_10_n_0\ : STD_LOGIC;
+  signal \R0__2_carry__0_i_11_n_0\ : STD_LOGIC;
+  signal \R0__2_carry__0_i_12_n_0\ : STD_LOGIC;
+  signal \R0__2_carry__0_i_13_n_0\ : STD_LOGIC;
+  signal \R0__2_carry__0_i_14_n_0\ : STD_LOGIC;
+  signal \R0__2_carry__0_i_16_n_0\ : STD_LOGIC;
+  signal \R0__2_carry__0_i_6_n_0\ : STD_LOGIC;
+  signal \R0__2_carry__0_i_7_n_0\ : STD_LOGIC;
+  signal \R0__2_carry__0_i_8_n_0\ : STD_LOGIC;
+  signal \R0__2_carry__0_i_9_n_0\ : STD_LOGIC;
+  signal \R0__2_carry_i_10_n_0\ : STD_LOGIC;
+  signal \R0__2_carry_i_7_n_0\ : STD_LOGIC;
+  signal \R0__2_carry_i_8_n_0\ : STD_LOGIC;
+  signal \R0__2_carry_i_9_n_0\ : STD_LOGIC;
+  signal \r_lsfr[1]_i_1_n_0\ : STD_LOGIC;
+  signal \^r_lsfr_reg[1]_0\ : STD_LOGIC;
+  signal \^r_lsfr_reg[2]_0\ : STD_LOGIC;
+  signal \rd_addr[10]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \rd_addr[10]_INST_0_i_4_n_0\ : STD_LOGIC;
+=======
   signal \^l_curr_reg[3][0]\ : STD_LOGIC;
   signal \^l_curr_reg[3][1]\ : STD_LOGIC;
   signal \^l_curr_reg[3][2]\ : STD_LOGIC;
@@ -5147,9 +6437,52 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_lfsr is
   signal \^r_lsfr_reg[2]_0\ : STD_LOGIC;
   signal \rd_addr[2]_INST_0_i_2_n_0\ : STD_LOGIC;
   signal \rd_addr[2]_INST_0_i_4_n_0\ : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal \rd_addr[3]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \rd_addr[3]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \rd_addr[3]_INST_0_i_3_n_0\ : STD_LOGIC;
   signal \rd_addr[4]_INST_0_i_2_n_0\ : STD_LOGIC;
+<<<<<<< HEAD
+  signal \rd_addr[4]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \rd_addr[5]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \rd_addr[5]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \rd_addr[6]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \rd_addr[6]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \rd_addr[7]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \rd_addr[7]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \rd_addr[8]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \rd_addr[8]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \rd_addr[9]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \rd_addr[9]_INST_0_i_3_n_0\ : STD_LOGIC;
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \R0__2_carry__0_i_11\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \R0__2_carry__0_i_13\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \R0__2_carry__0_i_14\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \R0__2_carry__0_i_16\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \R0__2_carry__0_i_8\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \R0__2_carry_i_10\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \R0__2_carry_i_8\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \R0__2_carry_i_9\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \rd_addr[10]_INST_0\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \rd_addr[10]_INST_0_i_4\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \rd_addr[3]_INST_0\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \rd_addr[3]_INST_0_i_2\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \rd_addr[4]_INST_0\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \rd_addr[4]_INST_0_i_2\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \rd_addr[4]_INST_0_i_4\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \rd_addr[5]_INST_0\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \rd_addr[5]_INST_0_i_2\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \rd_addr[5]_INST_0_i_3\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \rd_addr[6]_INST_0\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \rd_addr[6]_INST_0_i_4\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \rd_addr[7]_INST_0\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \rd_addr[8]_INST_0\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \rd_addr[8]_INST_0_i_4\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \rd_addr[9]_INST_0\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \rd_addr[9]_INST_0_i_2\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \rd_addr[9]_INST_0_i_3\ : label is "soft_lutpair19";
+begin
+  DI(2 downto 0) <= \^di\(2 downto 0);
+=======
   signal \rd_addr[4]_INST_0_i_3_n_0\ : STD_LOGIC;
   signal \rd_addr[4]_INST_0_i_5_n_0\ : STD_LOGIC;
   signal \rd_addr[6]_INST_0_i_2_n_0\ : STD_LOGIC;
@@ -5183,12 +6516,18 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_lfsr is
 begin
   \L_curr_reg[0][0]\ <= \^l_curr_reg[0][0]\;
   \L_curr_reg[0][1]\ <= \^l_curr_reg[0][1]\;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   \L_curr_reg[0][2]\ <= \^l_curr_reg[0][2]\;
-  \L_curr_reg[0][3]\ <= \^l_curr_reg[0][3]\;
+  \L_curr_reg[0][3]\(1 downto 0) <= \^l_curr_reg[0][3]\(1 downto 0);
+  \L_curr_reg[0][3]_0\ <= \^l_curr_reg[0][3]_0\;
+  \L_curr_reg[1][2]\ <= \^l_curr_reg[1][2]\;
   \L_curr_reg[1][3]\ <= \^l_curr_reg[1][3]\;
   \L_curr_reg[2][3]\ <= \^l_curr_reg[2][3]\;
+<<<<<<< HEAD
+=======
   \L_curr_reg[3][0]\ <= \^l_curr_reg[3][0]\;
   \L_curr_reg[3][1]\ <= \^l_curr_reg[3][1]\;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   \L_curr_reg[3][2]\ <= \^l_curr_reg[3][2]\;
   \L_curr_reg[3][3]\ <= \^l_curr_reg[3][3]\;
   SD_0_L1(2 downto 0) <= \^sd_0_l1\(2 downto 0);
@@ -5201,6 +6540,28 @@ begin
     )
         port map (
       I0 => A_dur_rand(0),
+<<<<<<< HEAD
+      I1 => \A_reg_reg[0][3]\,
+      I2 => CO(0),
+      I3 => \A_reg_reg[0][2]\(0),
+      I4 => \A_reg_reg[0][2]_0\(0),
+      I5 => \A_reg_reg[0][2]_1\(0),
+      O => \^r_lsfr_reg[1]_0\
+    );
+\A_reg[0][3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"888888888888BBB8"
+    )
+        port map (
+      I0 => A_dur_rand(1),
+      I1 => \A_reg_reg[0][3]\,
+      I2 => \A_reg_reg[0][2]\(0),
+      I3 => CO(0),
+      I4 => \A_reg_reg[0][2]_1\(0),
+      I5 => \A_reg_reg[0][2]_0\(0),
+      O => \^r_lsfr_reg[2]_0\
+    );
+=======
       I1 => \A_reg_reg[0][2]_2\,
       I2 => \A_reg_reg[0][2]\(0),
       I3 => CO(0),
@@ -5208,11 +6569,34 @@ begin
       I5 => \A_reg_reg[0][2]_0\(0),
       O => \^r_lsfr_reg[1]_0\
     );
+>>>>>>> parent of ae750207 (shfcuidtf7)
 \L_curr[0][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFAEEAAEEAFFEAAE"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \rd_addr[3]_INST_0_i_2_n_0\,
+      I1 => \rd_addr[4]_INST_0_i_2_n_0\,
+      I2 => \L_curr_reg[2][0]\,
+      I3 => Q(0),
+      I4 => \rd_addr[4]_INST_0_i_4_n_0\,
+      I5 => \L_curr_reg[0][0]\,
+      O => SD_0_L0(0)
+    );
+\L_curr[0][1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFEAAEAEEA"
+    )
+        port map (
+      I0 => \rd_addr[3]_INST_0_i_2_n_0\,
+      I1 => \rd_addr[4]_INST_0_i_4_n_0\,
+      I2 => Q(1),
+      I3 => \L_curr_reg[0][1]\,
+      I4 => \L_curr_reg[0][1]_0\,
+      I5 => \L_curr[0][1]_i_4_n_0\,
+      O => SD_0_L0(1)
+=======
       I0 => \rd_addr[2]_INST_0_i_2_n_0\,
       I1 => \rd_addr[3]_INST_0_i_2_n_0\,
       I2 => \L_curr_reg[3][0]_1\,
@@ -5233,9 +6617,21 @@ begin
       I4 => \L_curr_reg[3][1]_1\,
       I5 => \L_curr_reg[0][1]_1\,
       O => \^l_curr_reg[0][1]\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \L_curr[0][1]_i_2\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"28282882"
+    )
+        port map (
+      I0 => \rd_addr[4]_INST_0_i_2_n_0\,
+      I1 => Q(1),
+      I2 => \L_curr_reg[2][1]_1\,
+      I3 => Q(0),
+      I4 => \L_curr_reg[2][0]\,
+      O => \L_curr[0][1]_i_4_n_0\
+=======
       INIT => X"2202DD0DDD0D2202"
     )
         port map (
@@ -5246,17 +6642,26 @@ begin
       I4 => \L_curr_reg[0][3]_0\(1),
       I5 => \L_curr_reg[0][1]_0\,
       O => \L_curr[0][1]_i_2_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \L_curr[1][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFAEEAAEEAFFEAAE"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \rd_addr[5]_INST_0_i_2_n_0\,
+      I1 => \rd_addr[6]_INST_0_i_2_n_0\,
+      I2 => \L_curr_reg[2][0]\,
+      I3 => \L_curr_reg[1][3]_1\(0),
+      I4 => \rd_addr[6]_INST_0_i_4_n_0\,
+=======
       I0 => \rd_addr[4]_INST_0_i_2_n_0\,
       I1 => \rd_addr[4]_INST_0_i_3_n_0\,
       I2 => \L_curr_reg[3][0]_1\,
       I3 => \L_curr_reg[1][3]_0\(0),
       I4 => \L_curr[1][0]_i_2_n_0\,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I5 => \L_curr_reg[1][0]\,
       O => \^sd_0_l1\(0)
     );
@@ -5284,6 +6689,17 @@ begin
     );
 \L_curr[1][1]_i_2\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"28282882"
+    )
+        port map (
+      I0 => \rd_addr[6]_INST_0_i_2_n_0\,
+      I1 => \L_curr_reg[1][3]_1\(1),
+      I2 => \L_curr_reg[2][1]_1\,
+      I3 => \L_curr_reg[1][3]_1\(0),
+      I4 => \L_curr_reg[2][0]\,
+      O => \L_curr[1][1]_i_4_n_0\
+=======
       INIT => X"02220DDD0DDD0222"
     )
         port map (
@@ -5294,12 +6710,22 @@ begin
       I4 => \L_curr_reg[1][3]_0\(1),
       I5 => \L_curr_reg[1][1]\,
       O => \L_curr[1][1]_i_2_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \L_curr[2][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFAEEAAEEAFFEAAE"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \rd_addr[7]_INST_0_i_2_n_0\,
+      I1 => \rd_addr[8]_INST_0_i_2_n_0\,
+      I2 => \L_curr_reg[2][0]\,
+      I3 => \L_curr_reg[2][3]_1\(0),
+      I4 => \rd_addr[8]_INST_0_i_4_n_0\,
+      I5 => \L_curr_reg[2][0]_0\,
+      O => SD_0_L2(0)
+=======
       I0 => \rd_addr[6]_INST_0_i_2_n_0\,
       I1 => \rd_addr[6]_INST_0_i_3_n_0\,
       I2 => \L_curr_reg[3][0]_1\,
@@ -5316,12 +6742,22 @@ begin
       I0 => \^r_lsfr_reg[1]_0\,
       I1 => \^r_lsfr_reg[2]_0\,
       O => \L_curr[2][0]_i_2_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \L_curr[2][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FEEEEEFEEEFEFEEE"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \rd_addr[7]_INST_0_i_2_n_0\,
+      I1 => \rd_addr[8]_INST_0_i_4_n_0\,
+      I2 => \L_curr_reg[2][3]_1\(1),
+      I3 => \L_curr_reg[2][1]\,
+      I4 => \L_curr_reg[2][1]_0\,
+      I5 => \L_curr[2][1]_i_4_n_0\,
+      O => SD_0_L2(1)
+=======
       I0 => \rd_addr[6]_INST_0_i_2_n_0\,
       I1 => \L_curr[2][1]_i_2_n_0\,
       I2 => \rd_addr[6]_INST_0_i_3_n_0\,
@@ -5329,9 +6765,21 @@ begin
       I4 => \L_curr_reg[3][1]_1\,
       I5 => \L_curr_reg[2][1]_0\,
       O => \^sd_0_l2\(1)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \L_curr[2][1]_i_2\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"28282882"
+    )
+        port map (
+      I0 => \rd_addr[8]_INST_0_i_2_n_0\,
+      I1 => \L_curr_reg[2][3]_1\(1),
+      I2 => \L_curr_reg[2][1]_1\,
+      I3 => \L_curr_reg[2][3]_1\(0),
+      I4 => \L_curr_reg[2][0]\,
+      O => \L_curr[2][1]_i_4_n_0\
+=======
       INIT => X"2220DDD0DDD02220"
     )
         port map (
@@ -5342,12 +6790,51 @@ begin
       I4 => \L_curr_reg[2][3]_0\(1),
       I5 => \L_curr_reg[2][1]\,
       O => \L_curr[2][1]_i_2_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \L_curr[3][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAEFFAEEAAEEAFF"
+      INIT => X"FFAEEAAEEAFFEAAE"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \rd_addr[9]_INST_0_i_2_n_0\,
+      I1 => \rd_addr[10]_INST_0_i_2_n_0\,
+      I2 => \L_curr_reg[2][0]\,
+      I3 => \L_curr_reg[3][3]_1\(0),
+      I4 => \rd_addr[10]_INST_0_i_4_n_0\,
+      I5 => \L_curr_reg[3][0]\,
+      O => SD_0_L3(0)
+    );
+\L_curr[3][1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFEAAEAEEA"
+    )
+        port map (
+      I0 => \rd_addr[9]_INST_0_i_2_n_0\,
+      I1 => \rd_addr[10]_INST_0_i_4_n_0\,
+      I2 => \L_curr_reg[3][3]_1\(1),
+      I3 => \L_curr_reg[3][1]\,
+      I4 => \L_curr_reg[3][1]_0\,
+      I5 => \L_curr[3][1]_i_4_n_0\,
+      O => SD_0_L3(1)
+    );
+\L_curr[3][1]_i_4\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"28282882"
+    )
+        port map (
+      I0 => \rd_addr[10]_INST_0_i_2_n_0\,
+      I1 => \L_curr_reg[3][3]_1\(1),
+      I2 => \L_curr_reg[2][1]_1\,
+      I3 => \L_curr_reg[3][3]_1\(0),
+      I4 => \L_curr_reg[2][0]\,
+      O => \L_curr[3][1]_i_4_n_0\
+    );
+\Q_act_reg[0][0]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3355000F3355FF0F"
+=======
       I0 => \rd_addr[8]_INST_0_i_2_n_0\,
       I1 => \rd_addr[9]_INST_0_i_2_n_0\,
       I2 => \L_curr_reg[3][0]_1\,
@@ -5385,6 +6872,7 @@ begin
 \Q_act_reg[0][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"55330F0055330FFF"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][0]\,
@@ -5397,7 +6885,11 @@ begin
     );
 \Q_act_reg[0][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"0055330FFF55330F"
+=======
       INIT => X"55330F0055330FFF"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][10]\,
@@ -5410,7 +6902,11 @@ begin
     );
 \Q_act_reg[0][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"0055330FFF55330F"
+=======
       INIT => X"55330F0055330FFF"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][11]\,
@@ -5423,7 +6919,11 @@ begin
     );
 \Q_act_reg[0][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"0055330FFF55330F"
+=======
       INIT => X"55000F3355FF0F33"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][12]\,
@@ -5436,7 +6936,11 @@ begin
     );
 \Q_act_reg[0][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"0055330FFF55330F"
+=======
       INIT => X"55330F0055330FFF"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][13]\,
@@ -5449,7 +6953,11 @@ begin
     );
 \Q_act_reg[0][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"3355000F3355FF0F"
+=======
       INIT => X"55330F0055330FFF"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][14]\,
@@ -5462,7 +6970,11 @@ begin
     );
 \Q_act_reg[0][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"0055330FFF55330F"
+=======
       INIT => X"55330F0055330FFF"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][15]\,
@@ -5475,7 +6987,11 @@ begin
     );
 \Q_act_reg[0][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"0055330FFF55330F"
+=======
       INIT => X"55330F0055330FFF"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][1]\,
@@ -5488,7 +7004,11 @@ begin
     );
 \Q_act_reg[0][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"3355000F3355FF0F"
+=======
       INIT => X"55330F0055330FFF"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][2]\,
@@ -5501,7 +7021,11 @@ begin
     );
 \Q_act_reg[0][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"3355000F3355FF0F"
+=======
       INIT => X"55330F0055330FFF"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][3]\,
@@ -5514,7 +7038,11 @@ begin
     );
 \Q_act_reg[0][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"3355000F3355FF0F"
+=======
       INIT => X"55000F3355FF0F33"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][4]\,
@@ -5527,7 +7055,11 @@ begin
     );
 \Q_act_reg[0][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"0055330FFF55330F"
+=======
       INIT => X"55330F0055330FFF"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][5]\,
@@ -5540,7 +7072,11 @@ begin
     );
 \Q_act_reg[0][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"0055330FFF55330F"
+=======
       INIT => X"55000F3355FF0F33"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][6]\,
@@ -5553,7 +7089,11 @@ begin
     );
 \Q_act_reg[0][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"3355000F3355FF0F"
+=======
       INIT => X"55330F0055330FFF"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][7]\,
@@ -5566,7 +7106,11 @@ begin
     );
 \Q_act_reg[0][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"3355000F3355FF0F"
+=======
       INIT => X"55000F3355FF0F33"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][8]\,
@@ -5579,7 +7123,11 @@ begin
     );
 \Q_act_reg[0][9]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"0055330FFF55330F"
+=======
       INIT => X"55000F3355FF0F33"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \Q_act_reg_reg[0][9]\,
@@ -5590,6 +7138,81 @@ begin
       I5 => \Q_act_reg_reg[0][9]_2\,
       O => \D_road1[31]\(9)
     );
+<<<<<<< HEAD
+\R0__2_carry__0_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"5701"
+    )
+        port map (
+      I0 => \R0__2_carry__0_i_6_n_0\,
+      I1 => \^l_curr_reg[0][3]_0\,
+      I2 => \^l_curr_reg[0][2]\,
+      I3 => \R0__2_carry__0_i_7_n_0\,
+      O => \^l_curr_reg[0][3]\(1)
+    );
+\R0__2_carry__0_i_10\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000002000303"
+    )
+        port map (
+      I0 => \R0__2_carry__0_i_3_0\,
+      I1 => \rd_addr[3]_INST_0_i_3_n_0\,
+      I2 => \R0__2_carry__0_i_16_n_0\,
+      I3 => \L_curr_reg[0][3]_2\,
+      I4 => \rd_addr[4]_INST_0_i_2_n_0\,
+      I5 => \rd_addr[3]_INST_0_i_2_n_0\,
+      O => \R0__2_carry__0_i_10_n_0\
+    );
+\R0__2_carry__0_i_11\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \^l_curr_reg[2][2]\,
+      I1 => \^l_curr_reg[2][3]\,
+      O => \R0__2_carry__0_i_11_n_0\
+    );
+\R0__2_carry__0_i_12\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \^l_curr_reg[1][2]\,
+      I1 => \^l_curr_reg[1][3]\,
+      O => \R0__2_carry__0_i_12_n_0\
+    );
+\R0__2_carry__0_i_13\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \^l_curr_reg[3][2]\,
+      I1 => \^l_curr_reg[3][3]\,
+      O => \R0__2_carry__0_i_13_n_0\
+    );
+\R0__2_carry__0_i_14\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"50040400"
+    )
+        port map (
+      I0 => \rd_addr[4]_INST_0_i_4_n_0\,
+      I1 => \L_curr_reg[0][2]_3\,
+      I2 => \R0__2_carry__0_i_9_0\,
+      I3 => Q(3),
+      I4 => \L_curr_reg[2][2]_2\,
+      O => \R0__2_carry__0_i_14_n_0\
+    );
+\R0__2_carry__0_i_16\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"2882"
+    )
+        port map (
+      I0 => \rd_addr[4]_INST_0_i_4_n_0\,
+      I1 => Q(3),
+      I2 => \L_curr_reg[0][3]_4\,
+      I3 => \L_curr_reg[0][3]_3\,
+      O => \R0__2_carry__0_i_16_n_0\
+=======
 \R[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FFF60009"
@@ -5989,9 +7612,47 @@ begin
       I4 => \R[2]_i_5_n_0\,
       I5 => \R[2]_i_6_n_0\,
       O => \R[2]_i_2_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
-\R[2]_i_3\: unisim.vcomponents.LUT6
+\R0__2_carry__0_i_2\: unisim.vcomponents.LUT5
     generic map(
+<<<<<<< HEAD
+      INIT => X"40FD4040"
+    )
+        port map (
+      I0 => \R0__2_carry_i_8_n_0\,
+      I1 => \R0__2_carry_i_9_n_0\,
+      I2 => \R0__2_carry_i_10_n_0\,
+      I3 => \^l_curr_reg[0][2]\,
+      I4 => \^l_curr_reg[0][3]_0\,
+      O => \^l_curr_reg[0][3]\(0)
+    );
+\R0__2_carry__0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"6996966666696996"
+    )
+        port map (
+      I0 => \R0__2_carry__0_i_8_n_0\,
+      I1 => \R0__2_carry__0_i_9_n_0\,
+      I2 => \R0__2_carry__0_i_10_n_0\,
+      I3 => \R0__2_carry__0_i_11_n_0\,
+      I4 => \R0__2_carry__0_i_12_n_0\,
+      I5 => \R0__2_carry__0_i_13_n_0\,
+      O => \L_curr_reg[0][3]_1\(2)
+    );
+\R0__2_carry__0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"6559655965599AA6"
+    )
+        port map (
+      I0 => \^l_curr_reg[0][3]\(1),
+      I1 => \R0__2_carry__0_i_13_n_0\,
+      I2 => \R0__2_carry__0_i_12_n_0\,
+      I3 => \R0__2_carry__0_i_11_n_0\,
+      I4 => \^l_curr_reg[0][3]_0\,
+      I5 => \^l_curr_reg[0][2]\,
+      O => \L_curr_reg[0][3]_1\(1)
+=======
       INIT => X"FFFFFFFFFBFFFAFA"
     )
         port map (
@@ -6090,9 +7751,57 @@ begin
       I4 => \^l_curr_reg[3][1]\,
       I5 => \^l_curr_reg[3][0]\,
       O => \R[3]_i_2_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
-\R[4]_i_1\: unisim.vcomponents.LUT6
+\R0__2_carry__0_i_5\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"A51E5AA55AA51E5A"
+    )
+        port map (
+      I0 => \^l_curr_reg[0][2]\,
+      I1 => \^l_curr_reg[0][3]_0\,
+      I2 => \R0__2_carry__0_i_6_n_0\,
+      I3 => \R0__2_carry_i_8_n_0\,
+      I4 => \R0__2_carry_i_9_n_0\,
+      I5 => \R0__2_carry_i_10_n_0\,
+      O => \L_curr_reg[0][3]_1\(0)
+    );
+\R0__2_carry__0_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EEE1EEE1EEE1111E"
+    )
+        port map (
+      I0 => \^l_curr_reg[3][3]\,
+      I1 => \^l_curr_reg[3][2]\,
+      I2 => \^l_curr_reg[2][2]\,
+      I3 => \^l_curr_reg[2][3]\,
+      I4 => \^l_curr_reg[1][2]\,
+      I5 => \^l_curr_reg[1][3]\,
+      O => \R0__2_carry__0_i_6_n_0\
+    );
+\R0__2_carry__0_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"020002002F220200"
+    )
+        port map (
+      I0 => \^l_curr_reg[1][3]\,
+      I1 => \^l_curr_reg[1][2]\,
+      I2 => \^l_curr_reg[2][2]\,
+      I3 => \^l_curr_reg[2][3]\,
+      I4 => \^l_curr_reg[3][3]\,
+      I5 => \^l_curr_reg[3][2]\,
+      O => \R0__2_carry__0_i_7_n_0\
+    );
+\R0__2_carry__0_i_8\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => \^l_curr_reg[3][3]\,
+      I1 => \^l_curr_reg[1][3]\,
+      O => \R0__2_carry__0_i_8_n_0\
+=======
       INIT => X"6696696669669699"
     )
         port map (
@@ -6103,9 +7812,129 @@ begin
       I4 => \R[14]_i_2_n_0\,
       I5 => \R[14]_i_3_n_0\,
       O => D(4)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
-\R[5]_i_1\: unisim.vcomponents.LUT6
+\R0__2_carry__0_i_9\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"555555555565AAAA"
+    )
+        port map (
+      I0 => \^l_curr_reg[2][3]\,
+      I1 => \L_curr_reg[0][3]_3\,
+      I2 => \L_curr_reg[0][3]_4\,
+      I3 => Q(3),
+      I4 => \rd_addr[4]_INST_0_i_4_n_0\,
+      I5 => \R0__2_carry__0_i_14_n_0\,
+      O => \R0__2_carry__0_i_9_n_0\
+    );
+\R0__2_carry_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"20"
+    )
+        port map (
+      I0 => \R0__2_carry_i_7_n_0\,
+      I1 => \^l_curr_reg[0][2]\,
+      I2 => \^l_curr_reg[0][3]_0\,
+      O => \^di\(2)
+    );
+\R0__2_carry_i_10\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \^l_curr_reg[3][3]\,
+      I1 => \^l_curr_reg[3][2]\,
+      O => \R0__2_carry_i_10_n_0\
+    );
+\R0__2_carry_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \R0__2_carry_i_7_n_0\,
+      I1 => \^l_curr_reg[0][2]\,
+      I2 => \^l_curr_reg[0][3]_0\,
+      O => \^di\(1)
+    );
+\R0__2_carry_i_3\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"69"
+    )
+        port map (
+      I0 => \^l_curr_reg[3][2]\,
+      I1 => \^l_curr_reg[2][2]\,
+      I2 => \^l_curr_reg[1][2]\,
+      O => \^di\(0)
+    );
+\R0__2_carry_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"42BD4242BD42BDBD"
+    )
+        port map (
+      I0 => \R0__2_carry_i_8_n_0\,
+      I1 => \R0__2_carry_i_9_n_0\,
+      I2 => \R0__2_carry_i_10_n_0\,
+      I3 => \^l_curr_reg[0][2]\,
+      I4 => \^l_curr_reg[0][3]_0\,
+      I5 => \^di\(2),
+      O => S(2)
+    );
+\R0__2_carry_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"D2D2D22DD22D2D2D"
+    )
+        port map (
+      I0 => \^l_curr_reg[0][3]_0\,
+      I1 => \^l_curr_reg[0][2]\,
+      I2 => \R0__2_carry_i_7_n_0\,
+      I3 => \^l_curr_reg[3][2]\,
+      I4 => \^l_curr_reg[2][2]\,
+      I5 => \^l_curr_reg[1][2]\,
+      O => S(1)
+    );
+\R0__2_carry_i_6\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"6996"
+    )
+        port map (
+      I0 => \^l_curr_reg[3][2]\,
+      I1 => \^l_curr_reg[2][2]\,
+      I2 => \^l_curr_reg[1][2]\,
+      I3 => \^l_curr_reg[0][2]\,
+      O => S(0)
+    );
+\R0__2_carry_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"44B4BB4B44B444B4"
+    )
+        port map (
+      I0 => \^l_curr_reg[3][2]\,
+      I1 => \^l_curr_reg[3][3]\,
+      I2 => \^l_curr_reg[2][3]\,
+      I3 => \^l_curr_reg[2][2]\,
+      I4 => \^l_curr_reg[1][2]\,
+      I5 => \^l_curr_reg[1][3]\,
+      O => \R0__2_carry_i_7_n_0\
+    );
+\R0__2_carry_i_8\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => \^l_curr_reg[1][2]\,
+      I1 => \^l_curr_reg[1][3]\,
+      O => \R0__2_carry_i_8_n_0\
+    );
+\R0__2_carry_i_9\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \^l_curr_reg[2][3]\,
+      I1 => \^l_curr_reg[2][2]\,
+      O => \R0__2_carry_i_9_n_0\
+=======
       INIT => X"7000000FCFF7F770"
     )
         port map (
@@ -6116,6 +7945,7 @@ begin
       I4 => \R[14]_i_4_n_0\,
       I5 => \R[14]_i_6_n_0\,
       O => D(5)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \r_lsfr[1]_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -6146,13 +7976,32 @@ begin
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \rd_addr[10]\(7),
+      I1 => \rd_addr[4]\(0),
+      I2 => \^l_curr_reg[3][3]\,
+      O => rd_addr(7)
+=======
       I0 => \rd_addr[9]\(0),
       I1 => \rd_addr[2]\(0),
       I2 => \^l_curr_reg[0][2]\,
       O => rd_addr(0)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \rd_addr[2]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"F222F2F2F2F2F2F2"
+    )
+        port map (
+      I0 => \rd_addr[10]_INST_0_i_2_n_0\,
+      I1 => \L_curr_reg[3][3]_0\,
+      I2 => \rd_addr[10]_INST_0_i_4_n_0\,
+      I3 => \L_curr_reg[3][3]_1\(3),
+      I4 => \L_curr_reg[3][3]_2\,
+      I5 => \L_curr_reg[3][3]_3\,
+      O => \^l_curr_reg[3][3]\
+=======
       INIT => X"FFFFFFFFEAAEAEEA"
     )
         port map (
@@ -6187,12 +8036,53 @@ begin
       I3 => \L_curr_reg[0][2]_1\,
       I4 => \L_curr_reg[0][2]_2\,
       O => \rd_addr[2]_INST_0_i_4_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
+    );
+\rd_addr[10]_INST_0_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"E8000000"
+    )
+        port map (
+      I0 => \L_curr_reg[3][2]_3\,
+      I1 => \L_curr_reg[3][3]_1\(3),
+      I2 => \L_curr_reg[2][2]_2\,
+      I3 => \^r_lsfr_reg[1]_0\,
+      I4 => \^r_lsfr_reg[2]_0\,
+      O => \rd_addr[10]_INST_0_i_2_n_0\
+    );
+\rd_addr[10]_INST_0_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"7"
+    )
+        port map (
+      I0 => \^r_lsfr_reg[1]_0\,
+      I1 => \^r_lsfr_reg[2]_0\,
+      O => \rd_addr[10]_INST_0_i_4_n_0\
     );
 \rd_addr[3]_INST_0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \rd_addr[10]\(0),
+      I1 => \rd_addr[4]\(0),
+      I2 => \^l_curr_reg[0][2]\,
+      O => rd_addr(0)
+    );
+\rd_addr[3]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FEEEEEFEEEFEFEEE"
+    )
+        port map (
+      I0 => \rd_addr[3]_INST_0_i_2_n_0\,
+      I1 => \rd_addr[3]_INST_0_i_3_n_0\,
+      I2 => \rd_addr[4]_INST_0_i_2_n_0\,
+      I3 => \L_curr_reg[0][2]_0\,
+      I4 => Q(2),
+      I5 => \L_curr_reg[2][2]_0\,
+      O => \^l_curr_reg[0][2]\
+=======
       I0 => \rd_addr[9]\(1),
       I1 => \rd_addr[2]\(0),
       I2 => \^l_curr_reg[0][3]\,
@@ -6210,9 +8100,31 @@ begin
       I4 => \L_curr_reg[0][3]_2\,
       I5 => \L_curr_reg[0][3]_3\,
       O => \^l_curr_reg[0][3]\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
-\rd_addr[3]_INST_0_i_2\: unisim.vcomponents.LUT5
+\rd_addr[3]_INST_0_i_2\: unisim.vcomponents.LUT4
     generic map(
+<<<<<<< HEAD
+      INIT => X"80A8"
+    )
+        port map (
+      I0 => \rd_addr[4]_INST_0_i_4_n_0\,
+      I1 => \L_curr_reg[0][3]_3\,
+      I2 => Q(3),
+      I3 => \L_curr_reg[0][3]_4\,
+      O => \rd_addr[3]_INST_0_i_2_n_0\
+    );
+\rd_addr[3]_INST_0_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8228"
+    )
+        port map (
+      I0 => \rd_addr[4]_INST_0_i_4_n_0\,
+      I1 => Q(2),
+      I2 => \L_curr_reg[0][2]_1\,
+      I3 => \L_curr_reg[0][2]_2\,
+      O => \rd_addr[3]_INST_0_i_3_n_0\
+=======
       INIT => X"00E80000"
     )
         port map (
@@ -6231,22 +8143,175 @@ begin
       I0 => \^r_lsfr_reg[1]_0\,
       I1 => \^r_lsfr_reg[2]_0\,
       O => \rd_addr[3]_INST_0_i_4_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \rd_addr[4]_INST_0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \rd_addr[10]\(1),
+      I1 => \rd_addr[4]\(0),
+      I2 => \^l_curr_reg[0][3]_0\,
+      O => rd_addr(1)
+    );
+\rd_addr[4]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F2F2F2F2F222F2F2"
+    )
+        port map (
+      I0 => \rd_addr[4]_INST_0_i_2_n_0\,
+      I1 => \L_curr_reg[0][3]_2\,
+      I2 => \rd_addr[4]_INST_0_i_4_n_0\,
+      I3 => Q(3),
+      I4 => \L_curr_reg[0][3]_4\,
+      I5 => \L_curr_reg[0][3]_3\,
+      O => \^l_curr_reg[0][3]_0\
+    );
+\rd_addr[4]_INST_0_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"00E8"
+    )
+        port map (
+      I0 => \L_curr_reg[0][2]_3\,
+      I1 => Q(3),
+      I2 => \L_curr_reg[2][2]_2\,
+      I3 => \rd_addr[4]_INST_0_i_4_n_0\,
+      O => \rd_addr[4]_INST_0_i_2_n_0\
+    );
+\rd_addr[4]_INST_0_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \^r_lsfr_reg[1]_0\,
+      I1 => \^r_lsfr_reg[2]_0\,
+      O => \rd_addr[4]_INST_0_i_4_n_0\
+    );
+\rd_addr[5]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => \rd_addr[10]\(2),
+      I1 => \rd_addr[4]\(0),
+      I2 => \^l_curr_reg[1][2]\,
+      O => rd_addr(2)
+    );
+\rd_addr[5]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FEEEEEFEEEFEFEEE"
+    )
+        port map (
+      I0 => \rd_addr[5]_INST_0_i_2_n_0\,
+      I1 => \rd_addr[5]_INST_0_i_3_n_0\,
+      I2 => \rd_addr[6]_INST_0_i_2_n_0\,
+      I3 => \L_curr_reg[1][2]_0\,
+      I4 => \L_curr_reg[1][3]_1\(2),
+      I5 => \L_curr_reg[2][2]_0\,
+      O => \^l_curr_reg[1][2]\
+    );
+\rd_addr[5]_INST_0_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"D400D4D4"
+    )
+        port map (
+      I0 => \L_curr_reg[1][3]_2\,
+      I1 => \L_curr_reg[1][3]_1\(3),
+      I2 => \L_curr_reg[1][3]_3\,
+      I3 => \^r_lsfr_reg[2]_0\,
+      I4 => \^r_lsfr_reg[1]_0\,
+      O => \rd_addr[5]_INST_0_i_2_n_0\
+    );
+\rd_addr[5]_INST_0_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"D00D0DD0"
+    )
+        port map (
+      I0 => \^r_lsfr_reg[1]_0\,
+      I1 => \^r_lsfr_reg[2]_0\,
+      I2 => \L_curr_reg[1][3]_1\(2),
+      I3 => \L_curr_reg[1][2]_1\,
+      I4 => \L_curr_reg[1][2]_2\,
+      O => \rd_addr[5]_INST_0_i_3_n_0\
+    );
+\rd_addr[6]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => \rd_addr[10]\(3),
+      I1 => \rd_addr[4]\(0),
+      I2 => \^l_curr_reg[1][3]\,
+      O => rd_addr(3)
+    );
+\rd_addr[6]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F2F2F2F2F222F2F2"
+    )
+        port map (
+      I0 => \rd_addr[6]_INST_0_i_2_n_0\,
+      I1 => \L_curr_reg[1][3]_0\,
+      I2 => \rd_addr[6]_INST_0_i_4_n_0\,
+      I3 => \L_curr_reg[1][3]_1\(3),
+      I4 => \L_curr_reg[1][3]_2\,
+      I5 => \L_curr_reg[1][3]_3\,
+      O => \^l_curr_reg[1][3]\
+    );
+\rd_addr[6]_INST_0_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00E80000"
+    )
+        port map (
+      I0 => \L_curr_reg[1][2]_3\,
+      I1 => \L_curr_reg[1][3]_1\(3),
+      I2 => \L_curr_reg[2][2]_2\,
+      I3 => \^r_lsfr_reg[2]_0\,
+      I4 => \^r_lsfr_reg[1]_0\,
+      O => \rd_addr[6]_INST_0_i_2_n_0\
+    );
+\rd_addr[6]_INST_0_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => \^r_lsfr_reg[2]_0\,
+      I1 => \^r_lsfr_reg[1]_0\,
+      O => \rd_addr[6]_INST_0_i_4_n_0\
+    );
+\rd_addr[7]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => \rd_addr[10]\(4),
+      I1 => \rd_addr[4]\(0),
+      I2 => \^l_curr_reg[2][2]\,
+      O => rd_addr(4)
+    );
+\rd_addr[7]_INST_0_i_1\: unisim.vcomponents.LUT6
+=======
       I0 => \rd_addr[9]\(2),
       I1 => \rd_addr[2]\(0),
       I2 => \^sd_0_l1\(2),
       O => rd_addr(2)
     );
 \rd_addr[4]_INST_0_i_1\: unisim.vcomponents.LUT6
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
-      INIT => X"FFFFFFFFEAAEAEEA"
+      INIT => X"FEEEEEFEEEFEFEEE"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \rd_addr[7]_INST_0_i_2_n_0\,
+      I1 => \rd_addr[7]_INST_0_i_3_n_0\,
+      I2 => \rd_addr[8]_INST_0_i_2_n_0\,
+      I3 => \L_curr_reg[2][2]_1\,
+      I4 => \L_curr_reg[2][3]_1\(2),
+      I5 => \L_curr_reg[2][2]_0\,
+      O => \^l_curr_reg[2][2]\
+=======
       I0 => \rd_addr[4]_INST_0_i_2_n_0\,
       I1 => \rd_addr[4]_INST_0_i_3_n_0\,
       I2 => \L_curr_reg[1][3]_0\(2),
@@ -6254,15 +8319,72 @@ begin
       I4 => \L_curr_reg[1][2]\,
       I5 => \rd_addr[4]_INST_0_i_5_n_0\,
       O => \^sd_0_l1\(2)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \rd_addr[4]_INST_0_i_2\: unisim.vcomponents.LUT5
     generic map(
+<<<<<<< HEAD
+      INIT => X"D400D4D4"
+    )
+        port map (
+      I0 => \L_curr_reg[2][3]_2\,
+      I1 => \L_curr_reg[2][3]_1\(3),
+      I2 => \L_curr_reg[2][3]_3\,
+      I3 => \^r_lsfr_reg[1]_0\,
+      I4 => \^r_lsfr_reg[2]_0\,
+      O => \rd_addr[7]_INST_0_i_2_n_0\
+    );
+\rd_addr[7]_INST_0_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"D00D0DD0"
+    )
+        port map (
+      I0 => \^r_lsfr_reg[2]_0\,
+      I1 => \^r_lsfr_reg[1]_0\,
+      I2 => \L_curr_reg[2][3]_1\(2),
+      I3 => \L_curr_reg[2][2]_4\,
+      I4 => \L_curr_reg[2][2]_5\,
+      O => \rd_addr[7]_INST_0_i_3_n_0\
+    );
+\rd_addr[8]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => \rd_addr[10]\(5),
+      I1 => \rd_addr[4]\(0),
+      I2 => \^l_curr_reg[2][3]\,
+      O => rd_addr(5)
+    );
+\rd_addr[8]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F2F2F2F2F222F2F2"
+    )
+        port map (
+      I0 => \rd_addr[8]_INST_0_i_2_n_0\,
+      I1 => \L_curr_reg[2][3]_0\,
+      I2 => \rd_addr[8]_INST_0_i_4_n_0\,
+      I3 => \L_curr_reg[2][3]_1\(3),
+      I4 => \L_curr_reg[2][3]_2\,
+      I5 => \L_curr_reg[2][3]_3\,
+      O => \^l_curr_reg[2][3]\
+    );
+\rd_addr[8]_INST_0_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00E80000"
+    )
+        port map (
+      I0 => \L_curr_reg[2][2]_3\,
+      I1 => \L_curr_reg[2][3]_1\(3),
+      I2 => \L_curr_reg[2][2]_2\,
+=======
       INIT => X"008E8E8E"
     )
         port map (
       I0 => \L_curr_reg[1][3]_3\,
       I1 => \L_curr_reg[1][3]_0\(3),
       I2 => \L_curr_reg[1][3]_2\,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => \^r_lsfr_reg[1]_0\,
       I4 => \^r_lsfr_reg[2]_0\,
       O => \rd_addr[4]_INST_0_i_2_n_0\
@@ -6272,6 +8394,38 @@ begin
       INIT => X"D4000000"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \^r_lsfr_reg[1]_0\,
+      I1 => \^r_lsfr_reg[2]_0\,
+      O => \rd_addr[8]_INST_0_i_4_n_0\
+    );
+\rd_addr[9]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => \rd_addr[10]\(6),
+      I1 => \rd_addr[4]\(0),
+      I2 => \^l_curr_reg[3][2]\,
+      O => rd_addr(6)
+    );
+\rd_addr[9]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FEEEEEFEEEFEFEEE"
+    )
+        port map (
+      I0 => \rd_addr[9]_INST_0_i_2_n_0\,
+      I1 => \rd_addr[9]_INST_0_i_3_n_0\,
+      I2 => \rd_addr[10]_INST_0_i_2_n_0\,
+      I3 => \L_curr_reg[3][2]_0\,
+      I4 => \L_curr_reg[3][3]_1\(2),
+      I5 => \L_curr_reg[2][2]_0\,
+      O => \^l_curr_reg[3][2]\
+    );
+\rd_addr[9]_INST_0_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00707077"
+=======
       I0 => \L_curr_reg[1][0]_0\,
       I1 => \L_curr_reg[1][3]_0\(3),
       I2 => \L_curr_reg[3][1]_3\,
@@ -6282,10 +8436,21 @@ begin
 \rd_addr[4]_INST_0_i_5\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"07707007"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \^r_lsfr_reg[2]_0\,
       I1 => \^r_lsfr_reg[1]_0\,
+<<<<<<< HEAD
+      I2 => \L_curr_reg[3][3]_1\(3),
+      I3 => \L_curr_reg[3][3]_3\,
+      I4 => \L_curr_reg[3][3]_2\,
+      O => \rd_addr[9]_INST_0_i_2_n_0\
+    );
+\rd_addr[9]_INST_0_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"70070770"
+=======
       I2 => \L_curr_reg[1][3]_0\(2),
       I3 => \L_curr_reg[1][2]_0\,
       I4 => \L_curr_reg[1][2]_1\,
@@ -6364,10 +8529,17 @@ begin
 \rd_addr[6]_INST_0_i_5\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"0EE0E00E"
+>>>>>>> parent of ae750207 (shfcuidtf7)
     )
         port map (
       I0 => \^r_lsfr_reg[2]_0\,
       I1 => \^r_lsfr_reg[1]_0\,
+<<<<<<< HEAD
+      I2 => \L_curr_reg[3][3]_1\(2),
+      I3 => \L_curr_reg[3][2]_1\,
+      I4 => \L_curr_reg[3][2]_2\,
+      O => \rd_addr[9]_INST_0_i_3_n_0\
+=======
       I2 => \L_curr_reg[2][3]_0\(2),
       I3 => \L_curr_reg[2][2]_0\,
       I4 => \L_curr_reg[2][2]_1\,
@@ -6499,6 +8671,7 @@ begin
       I0 => \^r_lsfr_reg[1]_0\,
       I1 => \^r_lsfr_reg[2]_0\,
       O => \rd_addr[9]_INST_0_i_6_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 end STRUCTURE;
 library IEEE;
@@ -6524,6 +8697,22 @@ architecture STRUCTURE of \top_level_Intellight_Accelerat_0_0_lfsr__parameterize
   signal \p_0_in__0\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal r_lsfr : STD_LOGIC_VECTOR ( 16 downto 1 );
   attribute SOFT_HLUTNM : string;
+<<<<<<< HEAD
+  attribute SOFT_HLUTNM of \r_lsfr[10]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \r_lsfr[11]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \r_lsfr[12]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \r_lsfr[13]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \r_lsfr[14]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \r_lsfr[15]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \r_lsfr[16]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \r_lsfr[3]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \r_lsfr[4]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \r_lsfr[5]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \r_lsfr[6]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \r_lsfr[7]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \r_lsfr[8]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \r_lsfr[9]_i_1\ : label is "soft_lutpair35";
+=======
   attribute SOFT_HLUTNM of \r_lsfr[10]_i_1\ : label is "soft_lutpair37";
   attribute SOFT_HLUTNM of \r_lsfr[11]_i_1\ : label is "soft_lutpair36";
   attribute SOFT_HLUTNM of \r_lsfr[12]_i_1\ : label is "soft_lutpair36";
@@ -6538,6 +8727,7 @@ architecture STRUCTURE of \top_level_Intellight_Accelerat_0_0_lfsr__parameterize
   attribute SOFT_HLUTNM of \r_lsfr[7]_i_1\ : label is "soft_lutpair38";
   attribute SOFT_HLUTNM of \r_lsfr[8]_i_1\ : label is "soft_lutpair38";
   attribute SOFT_HLUTNM of \r_lsfr[9]_i_1\ : label is "soft_lutpair37";
+>>>>>>> parent of ae750207 (shfcuidtf7)
 begin
 \A_sel0_carry__0_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -7013,7 +9203,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_level_Intellight_Accelerat_0_0_max4to1 is
   port (
-    D_road1_15_sp_1 : out STD_LOGIC;
+    D_road3_15_sp_1 : out STD_LOGIC;
     D_road1_14_sp_1 : out STD_LOGIC;
     D : out STD_LOGIC_VECTOR ( 15 downto 0 );
     D_road3_13_sp_1 : out STD_LOGIC;
@@ -7021,9 +9211,15 @@ entity top_level_Intellight_Accelerat_0_0_max4to1 is
     D_road1_11_sp_1 : out STD_LOGIC;
     D_road1_10_sp_1 : out STD_LOGIC;
     D_road1_9_sp_1 : out STD_LOGIC;
+<<<<<<< HEAD
+    D_road1_8_sp_1 : out STD_LOGIC;
+    D_road0_7_sp_1 : out STD_LOGIC;
+    D_road3_6_sp_1 : out STD_LOGIC;
+=======
     D_road0_8_sp_1 : out STD_LOGIC;
     D_road3_7_sp_1 : out STD_LOGIC;
     D_road1_6_sp_1 : out STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
     D_road3_23_sp_1 : out STD_LOGIC;
     D_road1_22_sp_1 : out STD_LOGIC;
     D_road1_5_sp_1 : out STD_LOGIC;
@@ -7031,14 +9227,30 @@ entity top_level_Intellight_Accelerat_0_0_max4to1 is
     D_road1_21_sp_1 : out STD_LOGIC;
     D_road3_20_sp_1 : out STD_LOGIC;
     D_road1_3_sp_1 : out STD_LOGIC;
+<<<<<<< HEAD
+    D_road3_2_sp_1 : out STD_LOGIC;
+    D_road3_19_sp_1 : out STD_LOGIC;
+    D_road1_18_sp_1 : out STD_LOGIC;
+=======
     D_road0_2_sp_1 : out STD_LOGIC;
     D_road1_19_sp_1 : out STD_LOGIC;
     D_road3_18_sp_1 : out STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
     D_road0_1_sp_1 : out STD_LOGIC;
     D_road1_0_sp_1 : out STD_LOGIC;
     D_road3_17_sp_1 : out STD_LOGIC;
     D_road1_16_sp_1 : out STD_LOGIC;
     D_road1_47_sp_1 : out STD_LOGIC;
+<<<<<<< HEAD
+    \D_road3[63]\ : out STD_LOGIC;
+    \D_road1[62]\ : out STD_LOGIC;
+    D_road1_46_sp_1 : out STD_LOGIC;
+    D_road3_45_sp_1 : out STD_LOGIC;
+    \D_road1[61]\ : out STD_LOGIC;
+    \D_road3[60]\ : out STD_LOGIC;
+    D_road1_44_sp_1 : out STD_LOGIC;
+    D_road0_43_sp_1 : out STD_LOGIC;
+=======
     \D_road1[63]\ : out STD_LOGIC;
     \D_road3[62]\ : out STD_LOGIC;
     D_road1_46_sp_1 : out STD_LOGIC;
@@ -7047,25 +9259,40 @@ entity top_level_Intellight_Accelerat_0_0_max4to1 is
     \D_road3[60]\ : out STD_LOGIC;
     D_road1_44_sp_1 : out STD_LOGIC;
     D_road1_43_sp_1 : out STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \D_road3[59]\ : out STD_LOGIC;
     \D_road1[58]\ : out STD_LOGIC;
     D_road3_42_sp_1 : out STD_LOGIC;
     D_road1_41_sp_1 : out STD_LOGIC;
     \D_road1[57]\ : out STD_LOGIC;
     \D_road1[56]\ : out STD_LOGIC;
+<<<<<<< HEAD
+    D_road1_40_sp_1 : out STD_LOGIC;
+    D_road1_39_sp_1 : out STD_LOGIC;
+    D_road3_55_sp_1 : out STD_LOGIC;
+    D_road3_54_sp_1 : out STD_LOGIC;
+    D_road3_38_sp_1 : out STD_LOGIC;
+    D_road1_37_sp_1 : out STD_LOGIC;
+=======
     D_road3_40_sp_1 : out STD_LOGIC;
     D_road3_39_sp_1 : out STD_LOGIC;
     D_road0_55_sp_1 : out STD_LOGIC;
     D_road0_54_sp_1 : out STD_LOGIC;
     D_road1_38_sp_1 : out STD_LOGIC;
     D_road3_37_sp_1 : out STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
     D_road1_53_sp_1 : out STD_LOGIC;
     D_road1_52_sp_1 : out STD_LOGIC;
     D_road1_36_sp_1 : out STD_LOGIC;
     D_road1_35_sp_1 : out STD_LOGIC;
     D_road1_51_sp_1 : out STD_LOGIC;
+<<<<<<< HEAD
+    D_road1_50_sp_1 : out STD_LOGIC;
+    D_road0_34_sp_1 : out STD_LOGIC;
+=======
     D_road3_50_sp_1 : out STD_LOGIC;
     D_road3_34_sp_1 : out STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
     D_road1_33_sp_1 : out STD_LOGIC;
     D_road3_49_sp_1 : out STD_LOGIC;
     D_road3_48_sp_1 : out STD_LOGIC;
@@ -7073,11 +9300,11 @@ entity top_level_Intellight_Accelerat_0_0_max4to1 is
     DI : in STD_LOGIC_VECTOR ( 3 downto 0 );
     S : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \Q_max_reg[15]\ : in STD_LOGIC;
-    D_road1 : in STD_LOGIC_VECTOR ( 55 downto 0 );
     D_road3 : in STD_LOGIC_VECTOR ( 55 downto 0 );
-    D_road0 : in STD_LOGIC_VECTOR ( 55 downto 0 );
-    Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
     D_road2 : in STD_LOGIC_VECTOR ( 55 downto 0 );
+    D_road1 : in STD_LOGIC_VECTOR ( 55 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    D_road0 : in STD_LOGIC_VECTOR ( 55 downto 0 );
     \Q_max_reg[14]\ : in STD_LOGIC;
     \Q_max_reg[13]\ : in STD_LOGIC;
     \Q_max_reg[12]\ : in STD_LOGIC;
@@ -7091,29 +9318,56 @@ entity top_level_Intellight_Accelerat_0_0_max4to1 is
 end top_level_Intellight_Accelerat_0_0_max4to1;
 
 architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_max4to1 is
+<<<<<<< HEAD
+  signal D_road0_16_sn_1 : STD_LOGIC;
+  signal D_road0_1_sn_1 : STD_LOGIC;
+  signal D_road0_34_sn_1 : STD_LOGIC;
+  signal D_road0_36_sn_1 : STD_LOGIC;
+  signal D_road0_42_sn_1 : STD_LOGIC;
+  signal D_road0_43_sn_1 : STD_LOGIC;
+  signal D_road0_4_sn_1 : STD_LOGIC;
+  signal D_road0_7_sn_1 : STD_LOGIC;
+=======
   signal D_road0_1_sn_1 : STD_LOGIC;
   signal D_road0_2_sn_1 : STD_LOGIC;
   signal D_road0_54_sn_1 : STD_LOGIC;
   signal D_road0_55_sn_1 : STD_LOGIC;
   signal D_road0_8_sn_1 : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal \^d_road1[56]\ : STD_LOGIC;
   signal \^d_road1[57]\ : STD_LOGIC;
   signal \^d_road1[58]\ : STD_LOGIC;
   signal \^d_road1[61]\ : STD_LOGIC;
+<<<<<<< HEAD
+  signal \^d_road1[62]\ : STD_LOGIC;
+=======
   signal \^d_road1[63]\ : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal D_road1_0_sn_1 : STD_LOGIC;
   signal D_road1_10_sn_1 : STD_LOGIC;
   signal D_road1_11_sn_1 : STD_LOGIC;
   signal D_road1_12_sn_1 : STD_LOGIC;
   signal D_road1_14_sn_1 : STD_LOGIC;
+<<<<<<< HEAD
+  signal D_road1_18_sn_1 : STD_LOGIC;
+  signal D_road1_20_sn_1 : STD_LOGIC;
+=======
   signal D_road1_15_sn_1 : STD_LOGIC;
   signal D_road1_16_sn_1 : STD_LOGIC;
   signal D_road1_19_sn_1 : STD_LOGIC;
   signal D_road1_21_sn_1 : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal D_road1_22_sn_1 : STD_LOGIC;
   signal D_road1_32_sn_1 : STD_LOGIC;
   signal D_road1_33_sn_1 : STD_LOGIC;
   signal D_road1_35_sn_1 : STD_LOGIC;
+<<<<<<< HEAD
+  signal D_road1_37_sn_1 : STD_LOGIC;
+  signal D_road1_39_sn_1 : STD_LOGIC;
+  signal D_road1_3_sn_1 : STD_LOGIC;
+  signal D_road1_40_sn_1 : STD_LOGIC;
+  signal D_road1_44_sn_1 : STD_LOGIC;
+=======
   signal D_road1_36_sn_1 : STD_LOGIC;
   signal D_road1_38_sn_1 : STD_LOGIC;
   signal D_road1_3_sn_1 : STD_LOGIC;
@@ -7121,6 +9375,7 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_max4to1 is
   signal D_road1_43_sn_1 : STD_LOGIC;
   signal D_road1_44_sn_1 : STD_LOGIC;
   signal D_road1_45_sn_1 : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal D_road1_46_sn_1 : STD_LOGIC;
   signal D_road1_47_sn_1 : STD_LOGIC;
   signal D_road1_4_sn_1 : STD_LOGIC;
@@ -7128,16 +9383,31 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_max4to1 is
   signal D_road1_52_sn_1 : STD_LOGIC;
   signal D_road1_53_sn_1 : STD_LOGIC;
   signal D_road1_5_sn_1 : STD_LOGIC;
+<<<<<<< HEAD
+  signal D_road1_8_sn_1 : STD_LOGIC;
+=======
   signal D_road1_6_sn_1 : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal D_road1_9_sn_1 : STD_LOGIC;
   signal \^d_road3[59]\ : STD_LOGIC;
   signal \^d_road3[60]\ : STD_LOGIC;
   signal \^d_road3[62]\ : STD_LOGIC;
   signal D_road3_13_sn_1 : STD_LOGIC;
+  signal D_road3_15_sn_1 : STD_LOGIC;
   signal D_road3_17_sn_1 : STD_LOGIC;
   signal D_road3_18_sn_1 : STD_LOGIC;
   signal D_road3_20_sn_1 : STD_LOGIC;
   signal D_road3_23_sn_1 : STD_LOGIC;
+<<<<<<< HEAD
+  signal D_road3_2_sn_1 : STD_LOGIC;
+  signal D_road3_38_sn_1 : STD_LOGIC;
+  signal D_road3_41_sn_1 : STD_LOGIC;
+  signal D_road3_45_sn_1 : STD_LOGIC;
+  signal D_road3_49_sn_1 : STD_LOGIC;
+  signal D_road3_54_sn_1 : STD_LOGIC;
+  signal D_road3_55_sn_1 : STD_LOGIC;
+  signal D_road3_6_sn_1 : STD_LOGIC;
+=======
   signal D_road3_34_sn_1 : STD_LOGIC;
   signal D_road3_37_sn_1 : STD_LOGIC;
   signal D_road3_39_sn_1 : STD_LOGIC;
@@ -7147,6 +9417,7 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_max4to1 is
   signal D_road3_49_sn_1 : STD_LOGIC;
   signal D_road3_50_sn_1 : STD_LOGIC;
   signal D_road3_7_sn_1 : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal \Q_max[0]_i_4_n_0\ : STD_LOGIC;
   signal \Q_max[10]_i_4_n_0\ : STD_LOGIC;
   signal \Q_max[11]_i_4_n_0\ : STD_LOGIC;
@@ -7287,29 +9558,56 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_max4to1 is
   attribute COMPARATOR_THRESHOLD of temp11_carry : label is 11;
   attribute COMPARATOR_THRESHOLD of \temp11_carry__0\ : label is 11;
 begin
+<<<<<<< HEAD
+  D_road0_16_sp_1 <= D_road0_16_sn_1;
+  D_road0_1_sp_1 <= D_road0_1_sn_1;
+  D_road0_34_sp_1 <= D_road0_34_sn_1;
+  D_road0_36_sp_1 <= D_road0_36_sn_1;
+  D_road0_42_sp_1 <= D_road0_42_sn_1;
+  D_road0_43_sp_1 <= D_road0_43_sn_1;
+  D_road0_4_sp_1 <= D_road0_4_sn_1;
+  D_road0_7_sp_1 <= D_road0_7_sn_1;
+=======
   D_road0_1_sp_1 <= D_road0_1_sn_1;
   D_road0_2_sp_1 <= D_road0_2_sn_1;
   D_road0_54_sp_1 <= D_road0_54_sn_1;
   D_road0_55_sp_1 <= D_road0_55_sn_1;
   D_road0_8_sp_1 <= D_road0_8_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   \D_road1[56]\ <= \^d_road1[56]\;
   \D_road1[57]\ <= \^d_road1[57]\;
   \D_road1[58]\ <= \^d_road1[58]\;
   \D_road1[61]\ <= \^d_road1[61]\;
+<<<<<<< HEAD
+  \D_road1[62]\ <= \^d_road1[62]\;
+=======
   \D_road1[63]\ <= \^d_road1[63]\;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   D_road1_0_sp_1 <= D_road1_0_sn_1;
   D_road1_10_sp_1 <= D_road1_10_sn_1;
   D_road1_11_sp_1 <= D_road1_11_sn_1;
   D_road1_12_sp_1 <= D_road1_12_sn_1;
   D_road1_14_sp_1 <= D_road1_14_sn_1;
+<<<<<<< HEAD
+  D_road1_18_sp_1 <= D_road1_18_sn_1;
+  D_road1_20_sp_1 <= D_road1_20_sn_1;
+=======
   D_road1_15_sp_1 <= D_road1_15_sn_1;
   D_road1_16_sp_1 <= D_road1_16_sn_1;
   D_road1_19_sp_1 <= D_road1_19_sn_1;
   D_road1_21_sp_1 <= D_road1_21_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   D_road1_22_sp_1 <= D_road1_22_sn_1;
   D_road1_32_sp_1 <= D_road1_32_sn_1;
   D_road1_33_sp_1 <= D_road1_33_sn_1;
   D_road1_35_sp_1 <= D_road1_35_sn_1;
+<<<<<<< HEAD
+  D_road1_37_sp_1 <= D_road1_37_sn_1;
+  D_road1_39_sp_1 <= D_road1_39_sn_1;
+  D_road1_3_sp_1 <= D_road1_3_sn_1;
+  D_road1_40_sp_1 <= D_road1_40_sn_1;
+  D_road1_44_sp_1 <= D_road1_44_sn_1;
+=======
   D_road1_36_sp_1 <= D_road1_36_sn_1;
   D_road1_38_sp_1 <= D_road1_38_sn_1;
   D_road1_3_sp_1 <= D_road1_3_sn_1;
@@ -7317,6 +9615,7 @@ begin
   D_road1_43_sp_1 <= D_road1_43_sn_1;
   D_road1_44_sp_1 <= D_road1_44_sn_1;
   D_road1_45_sp_1 <= D_road1_45_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   D_road1_46_sp_1 <= D_road1_46_sn_1;
   D_road1_47_sp_1 <= D_road1_47_sn_1;
   D_road1_4_sp_1 <= D_road1_4_sn_1;
@@ -7324,16 +9623,31 @@ begin
   D_road1_52_sp_1 <= D_road1_52_sn_1;
   D_road1_53_sp_1 <= D_road1_53_sn_1;
   D_road1_5_sp_1 <= D_road1_5_sn_1;
+<<<<<<< HEAD
+  D_road1_8_sp_1 <= D_road1_8_sn_1;
+=======
   D_road1_6_sp_1 <= D_road1_6_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   D_road1_9_sp_1 <= D_road1_9_sn_1;
   \D_road3[59]\ <= \^d_road3[59]\;
   \D_road3[60]\ <= \^d_road3[60]\;
   \D_road3[62]\ <= \^d_road3[62]\;
   D_road3_13_sp_1 <= D_road3_13_sn_1;
+  D_road3_15_sp_1 <= D_road3_15_sn_1;
   D_road3_17_sp_1 <= D_road3_17_sn_1;
   D_road3_18_sp_1 <= D_road3_18_sn_1;
   D_road3_20_sp_1 <= D_road3_20_sn_1;
   D_road3_23_sp_1 <= D_road3_23_sn_1;
+<<<<<<< HEAD
+  D_road3_2_sp_1 <= D_road3_2_sn_1;
+  D_road3_38_sp_1 <= D_road3_38_sn_1;
+  D_road3_41_sp_1 <= D_road3_41_sn_1;
+  D_road3_45_sp_1 <= D_road3_45_sn_1;
+  D_road3_49_sp_1 <= D_road3_49_sn_1;
+  D_road3_54_sp_1 <= D_road3_54_sn_1;
+  D_road3_55_sp_1 <= D_road3_55_sn_1;
+  D_road3_6_sp_1 <= D_road3_6_sn_1;
+=======
   D_road3_34_sp_1 <= D_road3_34_sn_1;
   D_road3_37_sp_1 <= D_road3_37_sn_1;
   D_road3_39_sp_1 <= D_road3_39_sn_1;
@@ -7343,6 +9657,7 @@ begin
   D_road3_49_sp_1 <= D_road3_49_sn_1;
   D_road3_50_sp_1 <= D_road3_50_sn_1;
   D_road3_7_sp_1 <= D_road3_7_sn_1;
+>>>>>>> parent of ae750207 (shfcuidtf7)
 \Q_act_reg[0][0]_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0F5533000F5533FF"
@@ -7384,6 +9699,31 @@ begin
     );
 \Q_act_reg[0][10]_i_3\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"5533000F5533FF0F"
+    )
+        port map (
+      I0 => D_road0(35),
+      I1 => D_road3(35),
+      I2 => D_road1(35),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road2(35),
+      O => D_road0_43_sn_1
+    );
+\Q_act_reg[0][11]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F5500330F55FF33"
+    )
+        port map (
+      I0 => D_road3(51),
+      I1 => D_road1(51),
+      I2 => D_road0(51),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road2(51),
+      O => \^d_road3[59]\
+=======
       INIT => X"3355000F3355FF0F"
     )
         port map (
@@ -7420,6 +9760,7 @@ begin
       I4 => Q(1),
       I5 => D_road2(35),
       O => D_road1_43_sn_1
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \Q_act_reg[0][12]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -7435,6 +9776,7 @@ begin
       O => D_road1_44_sn_1
     );
 \Q_act_reg[0][12]_i_3\: unisim.vcomponents.LUT6
+<<<<<<< HEAD
     generic map(
       INIT => X"0F5533000F5533FF"
     )
@@ -7449,6 +9791,48 @@ begin
     );
 \Q_act_reg[0][13]_i_2\: unisim.vcomponents.LUT6
     generic map(
+      INIT => X"3355000F3355FF0F"
+    )
+        port map (
+      I0 => D_road3(37),
+      I1 => D_road0(37),
+      I2 => D_road1(37),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road2(37),
+      O => D_road3_45_sn_1
+    );
+\Q_act_reg[0][13]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F3300550F33FF55"
+    )
+        port map (
+      I0 => D_road1(53),
+      I1 => D_road3(53),
+      I2 => D_road0(53),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road2(53),
+      O => \^d_road1[61]\
+    );
+\Q_act_reg[0][14]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+=======
+    generic map(
+      INIT => X"0F5533000F5533FF"
+    )
+        port map (
+      I0 => D_road3(52),
+      I1 => D_road2(52),
+      I2 => D_road0(52),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road1(52),
+      O => \^d_road3[60]\
+    );
+\Q_act_reg[0][13]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+>>>>>>> parent of ae750207 (shfcuidtf7)
       INIT => X"0F3300550F33FF55"
     )
         port map (
@@ -7527,19 +9911,6 @@ begin
     );
 \Q_act_reg[0][1]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0F5533000F5533FF"
-    )
-        port map (
-      I0 => D_road3(41),
-      I1 => D_road2(41),
-      I2 => D_road0(41),
-      I3 => Q(0),
-      I4 => Q(1),
-      I5 => D_road1(41),
-      O => D_road3_49_sn_1
-    );
-\Q_act_reg[0][1]_i_3\: unisim.vcomponents.LUT6
-    generic map(
       INIT => X"0F3300550F33FF55"
     )
         port map (
@@ -7551,13 +9922,31 @@ begin
       I5 => D_road2(25),
       O => D_road1_33_sn_1
     );
-\Q_act_reg[0][2]_i_2\: unisim.vcomponents.LUT6
+\Q_act_reg[0][1]_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0F5533000F5533FF"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road3(41),
+      I1 => D_road2(41),
+      I2 => D_road0(41),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road1(41),
+      O => D_road3_49_sn_1
+    );
+\Q_act_reg[0][2]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F3300550F33FF55"
+    )
+        port map (
+      I0 => D_road1(42),
+      I1 => D_road3(42),
+=======
       I0 => D_road3(42),
       I1 => D_road2(42),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I2 => D_road0(42),
       I3 => Q(0),
       I4 => Q(1),
@@ -7566,6 +9955,18 @@ begin
     );
 \Q_act_reg[0][2]_i_3\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"5533000F5533FF0F"
+    )
+        port map (
+      I0 => D_road0(26),
+      I1 => D_road3(26),
+      I2 => D_road1(26),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road2(26),
+      O => D_road0_34_sn_1
+=======
       INIT => X"0055330FFF55330F"
     )
         port map (
@@ -7576,6 +9977,7 @@ begin
       I4 => Q(1),
       I5 => D_road0(26),
       O => D_road3_34_sn_1
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \Q_act_reg[0][3]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -7644,9 +10046,33 @@ begin
     );
 \Q_act_reg[0][5]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3355000F3355FF0F"
+      INIT => X"0055330FFF55330F"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road3(46),
+      I1 => D_road2(46),
+      I2 => D_road1(46),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road0(46),
+      O => D_road3_54_sn_1
+    );
+\Q_act_reg[0][7]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0055330FFF55330F"
+    )
+        port map (
+      I0 => D_road3(47),
+      I1 => D_road2(47),
+      I2 => D_road1(47),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road0(47),
+      O => D_road3_55_sn_1
+    );
+\Q_act_reg[0][7]_i_3\: unisim.vcomponents.LUT6
+=======
       I0 => D_road3(29),
       I1 => D_road0(29),
       I2 => D_road1(29),
@@ -7708,10 +10134,20 @@ begin
       O => D_road3_39_sn_1
     );
 \Q_act_reg[0][8]_i_2\: unisim.vcomponents.LUT6
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
       INIT => X"0F5533000F5533FF"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road1(31),
+      I1 => D_road3(31),
+      I2 => D_road0(31),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road2(31),
+      O => D_road1_39_sn_1
+=======
       I0 => D_road3(32),
       I1 => D_road2(32),
       I2 => D_road0(32),
@@ -7719,8 +10155,9 @@ begin
       I4 => Q(1),
       I5 => D_road1(32),
       O => D_road3_40_sn_1
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
-\Q_act_reg[0][8]_i_3\: unisim.vcomponents.LUT6
+\Q_act_reg[0][8]_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0F3300550F33FF55"
     )
@@ -7732,6 +10169,19 @@ begin
       I4 => Q(1),
       I5 => D_road2(48),
       O => \^d_road1[56]\
+    );
+\Q_act_reg[0][8]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F3300550F33FF55"
+    )
+        port map (
+      I0 => D_road1(32),
+      I1 => D_road3(32),
+      I2 => D_road0(32),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road2(32),
+      O => D_road1_40_sn_1
     );
 \Q_act_reg[0][9]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -7875,7 +10325,7 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => D_road1_43_sn_1,
+      I0 => D_road0_43_sn_1,
       I1 => temp11,
       I2 => \^d_road3[59]\,
       O => \Q_max[11]_i_4_n_0\
@@ -7931,12 +10381,21 @@ begin
     );
 \Q_max[13]_i_2\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"3355000F3355FF0F"
+    )
+        port map (
+      I0 => D_road3(13),
+      I1 => D_road0(13),
+      I2 => D_road1(13),
+=======
       INIT => X"0F5533000F5533FF"
     )
         port map (
       I0 => D_road3(13),
       I1 => D_road2(13),
       I2 => D_road0(13),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => Q(0),
       I4 => Q(1),
       I5 => D_road1(13),
@@ -7994,7 +10453,7 @@ begin
     )
         port map (
       I0 => \_inferred__0/i__carry__1_n_7\,
-      I1 => D_road1_15_sn_1,
+      I1 => D_road3_15_sn_1,
       I2 => temp01,
       I3 => \Q_max_reg[15]\,
       I4 => \_carry__0_n_0\,
@@ -8003,16 +10462,16 @@ begin
     );
 \Q_max[15]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0F3300550F33FF55"
+      INIT => X"0055330FFF55330F"
     )
         port map (
-      I0 => D_road1(15),
-      I1 => D_road3(15),
-      I2 => D_road0(15),
+      I0 => D_road3(15),
+      I1 => D_road2(15),
+      I2 => D_road1(15),
       I3 => Q(0),
       I4 => Q(1),
-      I5 => D_road2(15),
-      O => D_road1_15_sn_1
+      I5 => D_road0(15),
+      O => D_road3_15_sn_1
     );
 \Q_max[15]_i_4\: unisim.vcomponents.LUT3
     generic map(
@@ -8079,15 +10538,46 @@ begin
     )
         port map (
       I0 => \_inferred__0/i__carry__1_n_7\,
+<<<<<<< HEAD
+      I1 => D_road3_2_sn_1,
+      I2 => temp01,
+      I3 => D_road1_18_sn_1,
+=======
       I1 => D_road0_2_sn_1,
       I2 => temp01,
       I3 => D_road3_18_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I4 => \_carry__0_n_0\,
       I5 => \Q_max[2]_i_4_n_0\,
       O => D(2)
     );
 \Q_max[2]_i_2\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"3355000F3355FF0F"
+    )
+        port map (
+      I0 => D_road3(2),
+      I1 => D_road0(2),
+      I2 => D_road1(2),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road2(2),
+      O => D_road3_2_sn_1
+    );
+\Q_max[2]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F3300550F33FF55"
+    )
+        port map (
+      I0 => D_road1(18),
+      I1 => D_road3(18),
+      I2 => D_road0(18),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road2(18),
+      O => D_road1_18_sn_1
+=======
       INIT => X"5533000F5533FF0F"
     )
         port map (
@@ -8111,13 +10601,14 @@ begin
       I4 => Q(1),
       I5 => D_road1(18),
       O => D_road3_18_sn_1
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \Q_max[2]_i_4\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
         port map (
-      I0 => D_road3_34_sn_1,
+      I0 => D_road0_34_sn_1,
       I1 => temp11,
       I2 => D_road3_50_sn_1,
       O => \Q_max[2]_i_4_n_0\
@@ -8248,6 +10739,18 @@ begin
     );
 \Q_max[5]_i_3\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"0055330FFF55330F"
+    )
+        port map (
+      I0 => D_road3(21),
+      I1 => D_road2(21),
+      I2 => D_road1(21),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road0(21),
+      O => D_road3_21_sn_1
+=======
       INIT => X"0F3300550F33FF55"
     )
         port map (
@@ -8258,6 +10761,7 @@ begin
       I4 => Q(1),
       I5 => D_road2(21),
       O => D_road1_21_sn_1
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \Q_max[5]_i_4\: unisim.vcomponents.LUT3
     generic map(
@@ -8324,7 +10828,7 @@ begin
     )
         port map (
       I0 => \_inferred__0/i__carry__1_n_7\,
-      I1 => D_road3_7_sn_1,
+      I1 => D_road0_7_sn_1,
       I2 => temp01,
       I3 => D_road3_23_sn_1,
       I4 => \_carry__0_n_0\,
@@ -8333,16 +10837,16 @@ begin
     );
 \Q_max[7]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0F5533000F5533FF"
+      INIT => X"5533000F5533FF0F"
     )
         port map (
-      I0 => D_road3(7),
-      I1 => D_road2(7),
-      I2 => D_road0(7),
+      I0 => D_road0(7),
+      I1 => D_road3(7),
+      I2 => D_road1(7),
       I3 => Q(0),
       I4 => Q(1),
-      I5 => D_road1(7),
-      O => D_road3_7_sn_1
+      I5 => D_road2(7),
+      O => D_road0_7_sn_1
     );
 \Q_max[7]_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -8362,7 +10866,7 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => D_road3_39_sn_1,
+      I0 => D_road1_39_sn_1,
       I1 => temp11,
       I2 => D_road0_55_sn_1,
       O => \Q_max[7]_i_4_n_0\
@@ -8373,7 +10877,11 @@ begin
     )
         port map (
       I0 => \_inferred__0/i__carry__1_n_7\,
+<<<<<<< HEAD
+      I1 => D_road1_8_sn_1,
+=======
       I1 => D_road0_8_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I2 => temp01,
       I3 => \Q_max_reg[8]\,
       I4 => \_carry__0_n_0\,
@@ -8382,6 +10890,18 @@ begin
     );
 \Q_max[8]_i_2\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"0F3300550F33FF55"
+    )
+        port map (
+      I0 => D_road1(8),
+      I1 => D_road3(8),
+      I2 => D_road0(8),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road2(8),
+      O => D_road1_8_sn_1
+=======
       INIT => X"5533000F5533FF0F"
     )
         port map (
@@ -8392,6 +10912,7 @@ begin
       I4 => Q(1),
       I5 => D_road2(8),
       O => D_road0_8_sn_1
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \Q_max[8]_i_4\: unisim.vcomponents.LUT3
     generic map(
@@ -8593,7 +11114,11 @@ begin
       I0 => D_road1_19_sn_1,
       I1 => \Q_max[3]_i_4_n_0\,
       I2 => \Q_max[2]_i_4_n_0\,
+<<<<<<< HEAD
+      I3 => D_road1_18_sn_1,
+=======
       I3 => D_road3_18_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \_carry_i_3_n_0\
     );
 \_carry_i_4\: unisim.vcomponents.LUT4
@@ -8637,7 +11162,11 @@ begin
       I0 => \Q_max[3]_i_4_n_0\,
       I1 => D_road1_19_sn_1,
       I2 => \Q_max[2]_i_4_n_0\,
+<<<<<<< HEAD
+      I3 => D_road1_18_sn_1,
+=======
       I3 => D_road3_18_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \_carry_i_7_n_0\
     );
 \_carry_i_8\: unisim.vcomponents.LUT4
@@ -8703,7 +11232,7 @@ begin
     )
         port map (
       I0 => \Q_max[15]_i_4_n_0\,
-      I1 => D_road1_15_sn_1,
+      I1 => D_road3_15_sn_1,
       I2 => \Q_max[14]_i_4_n_0\,
       I3 => D_road1_14_sn_1,
       O => \i__carry__0_i_1_n_0\
@@ -8738,7 +11267,11 @@ begin
       I0 => \Q_max[9]_i_4_n_0\,
       I1 => D_road1_9_sn_1,
       I2 => \Q_max[8]_i_4_n_0\,
+<<<<<<< HEAD
+      I3 => D_road1_8_sn_1,
+=======
       I3 => D_road0_8_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \i__carry__0_i_4_n_0\
     );
 \i__carry__0_i_5\: unisim.vcomponents.LUT4
@@ -8746,7 +11279,7 @@ begin
       INIT => X"9009"
     )
         port map (
-      I0 => D_road1_15_sn_1,
+      I0 => D_road3_15_sn_1,
       I1 => \Q_max[15]_i_4_n_0\,
       I2 => D_road1_14_sn_1,
       I3 => \Q_max[14]_i_4_n_0\,
@@ -8781,7 +11314,11 @@ begin
         port map (
       I0 => D_road1_9_sn_1,
       I1 => \Q_max[9]_i_4_n_0\,
+<<<<<<< HEAD
+      I2 => D_road1_8_sn_1,
+=======
       I2 => D_road0_8_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => \Q_max[8]_i_4_n_0\,
       O => \i__carry__0_i_8_n_0\
     );
@@ -8791,7 +11328,7 @@ begin
     )
         port map (
       I0 => \Q_max[7]_i_4_n_0\,
-      I1 => D_road3_7_sn_1,
+      I1 => D_road0_7_sn_1,
       I2 => \Q_max[6]_i_4_n_0\,
       I3 => D_road1_6_sn_1,
       O => \i__carry_i_1_n_0\
@@ -8815,7 +11352,11 @@ begin
       I0 => \Q_max[3]_i_4_n_0\,
       I1 => D_road1_3_sn_1,
       I2 => \Q_max[2]_i_4_n_0\,
+<<<<<<< HEAD
+      I3 => D_road3_2_sn_1,
+=======
       I3 => D_road0_2_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \i__carry_i_3_n_0\
     );
 \i__carry_i_4\: unisim.vcomponents.LUT4
@@ -8834,7 +11375,7 @@ begin
       INIT => X"9009"
     )
         port map (
-      I0 => D_road3_7_sn_1,
+      I0 => D_road0_7_sn_1,
       I1 => \Q_max[7]_i_4_n_0\,
       I2 => D_road1_6_sn_1,
       I3 => \Q_max[6]_i_4_n_0\,
@@ -8858,7 +11399,11 @@ begin
         port map (
       I0 => D_road1_3_sn_1,
       I1 => \Q_max[3]_i_4_n_0\,
+<<<<<<< HEAD
+      I2 => D_road3_2_sn_1,
+=======
       I2 => D_road0_2_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => \Q_max[2]_i_4_n_0\,
       O => \i__carry_i_7_n_0\
     );
@@ -8909,7 +11454,7 @@ temp01_carry_i_1: unisim.vcomponents.LUT4
     )
         port map (
       I0 => D_road3_23_sn_1,
-      I1 => D_road3_7_sn_1,
+      I1 => D_road0_7_sn_1,
       I2 => D_road1_22_sn_1,
       I3 => D_road1_6_sn_1,
       O => temp01_carry_i_1_n_0
@@ -8932,8 +11477,13 @@ temp01_carry_i_3: unisim.vcomponents.LUT4
         port map (
       I0 => D_road1_19_sn_1,
       I1 => D_road1_3_sn_1,
+<<<<<<< HEAD
+      I2 => D_road1_18_sn_1,
+      I3 => D_road3_2_sn_1,
+=======
       I2 => D_road3_18_sn_1,
       I3 => D_road0_2_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => temp01_carry_i_3_n_0
     );
 temp01_carry_i_4: unisim.vcomponents.LUT4
@@ -8952,7 +11502,7 @@ temp01_carry_i_5: unisim.vcomponents.LUT4
       INIT => X"9009"
     )
         port map (
-      I0 => D_road3_7_sn_1,
+      I0 => D_road0_7_sn_1,
       I1 => D_road3_23_sn_1,
       I2 => D_road1_6_sn_1,
       I3 => D_road1_22_sn_1,
@@ -8975,9 +11525,15 @@ temp01_carry_i_7: unisim.vcomponents.LUT4
     )
         port map (
       I0 => D_road1_3_sn_1,
+<<<<<<< HEAD
+      I1 => D_road3_19_sn_1,
+      I2 => D_road3_2_sn_1,
+      I3 => D_road1_18_sn_1,
+=======
       I1 => D_road1_19_sn_1,
       I2 => D_road0_2_sn_1,
       I3 => D_road3_18_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => temp01_carry_i_7_n_0
     );
 temp01_carry_i_8: unisim.vcomponents.LUT4
@@ -9034,7 +11590,11 @@ temp11_carry: unisim.vcomponents.CARRY4
         port map (
       I0 => \^d_road1[63]\,
       I1 => D_road1_47_sn_1,
+<<<<<<< HEAD
+      I2 => \^d_road1[62]\,
+=======
       I2 => \^d_road3[62]\,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => D_road1_46_sn_1,
       O => \temp11_carry__0_i_1_n_0\
     );
@@ -9043,7 +11603,11 @@ temp11_carry: unisim.vcomponents.CARRY4
       INIT => X"44D4"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road3_45_sn_1,
+=======
       I0 => D_road1_45_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I1 => \^d_road1[61]\,
       I2 => \^d_road3[60]\,
       I3 => D_road1_44_sn_1,
@@ -9054,7 +11618,11 @@ temp11_carry: unisim.vcomponents.CARRY4
       INIT => X"44D4"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road0_43_sn_1,
+=======
       I0 => D_road1_43_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I1 => \^d_road3[59]\,
       I2 => \^d_road1[58]\,
       I3 => D_road3_42_sn_1,
@@ -9077,8 +11645,13 @@ temp11_carry: unisim.vcomponents.CARRY4
     )
         port map (
       I0 => D_road1_47_sn_1,
+<<<<<<< HEAD
+      I1 => \^d_road3[63]\,
+      I2 => \^d_road1[62]\,
+=======
       I1 => \^d_road1[63]\,
       I2 => \^d_road3[62]\,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => D_road1_46_sn_1,
       O => \temp11_carry__0_i_5_n_0\
     );
@@ -9088,7 +11661,11 @@ temp11_carry: unisim.vcomponents.CARRY4
     )
         port map (
       I0 => \^d_road1[61]\,
+<<<<<<< HEAD
+      I1 => D_road3_45_sn_1,
+=======
       I1 => D_road1_45_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I2 => \^d_road3[60]\,
       I3 => D_road1_44_sn_1,
       O => \temp11_carry__0_i_6_n_0\
@@ -9099,7 +11676,11 @@ temp11_carry: unisim.vcomponents.CARRY4
     )
         port map (
       I0 => \^d_road3[59]\,
+<<<<<<< HEAD
+      I1 => D_road0_43_sn_1,
+=======
       I1 => D_road1_43_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I2 => \^d_road1[58]\,
       I3 => D_road3_42_sn_1,
       O => \temp11_carry__0_i_7_n_0\
@@ -9120,10 +11701,17 @@ temp11_carry_i_1: unisim.vcomponents.LUT4
       INIT => X"44D4"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road1_39_sn_1,
+      I1 => D_road3_55_sn_1,
+      I2 => D_road3_54_sn_1,
+      I3 => D_road3_38_sn_1,
+=======
       I0 => D_road3_39_sn_1,
       I1 => D_road0_55_sn_1,
       I2 => D_road0_54_sn_1,
       I3 => D_road1_38_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => temp11_carry_i_1_n_0
     );
 temp11_carry_i_2: unisim.vcomponents.LUT4
@@ -9144,8 +11732,13 @@ temp11_carry_i_3: unisim.vcomponents.LUT4
         port map (
       I0 => D_road1_35_sn_1,
       I1 => D_road1_51_sn_1,
+<<<<<<< HEAD
+      I2 => D_road1_50_sn_1,
+      I3 => D_road0_34_sn_1,
+=======
       I2 => D_road3_50_sn_1,
       I3 => D_road3_34_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => temp11_carry_i_3_n_0
     );
 temp11_carry_i_4: unisim.vcomponents.LUT4
@@ -9164,10 +11757,17 @@ temp11_carry_i_5: unisim.vcomponents.LUT4
       INIT => X"9009"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road3_55_sn_1,
+      I1 => D_road1_39_sn_1,
+      I2 => D_road3_54_sn_1,
+      I3 => D_road3_38_sn_1,
+=======
       I0 => D_road0_55_sn_1,
       I1 => D_road3_39_sn_1,
       I2 => D_road0_54_sn_1,
       I3 => D_road1_38_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => temp11_carry_i_5_n_0
     );
 temp11_carry_i_6: unisim.vcomponents.LUT4
@@ -9188,8 +11788,13 @@ temp11_carry_i_7: unisim.vcomponents.LUT4
         port map (
       I0 => D_road1_51_sn_1,
       I1 => D_road1_35_sn_1,
+<<<<<<< HEAD
+      I2 => D_road1_50_sn_1,
+      I3 => D_road0_34_sn_1,
+=======
       I2 => D_road3_50_sn_1,
       I3 => D_road3_34_sn_1,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => temp11_carry_i_7_n_0
     );
 temp11_carry_i_8: unisim.vcomponents.LUT4
@@ -10005,6 +12610,19 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_level_Intellight_Accelerat_0_0_CU is
   port (
+<<<<<<< HEAD
+    \A_reg_reg[2][3]\ : out STD_LOGIC;
+    \A_reg_reg[2][2]\ : out STD_LOGIC;
+    \FSM_onehot_cs_reg[14]_0\ : out STD_LOGIC;
+    \FSM_onehot_cs_reg[0]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \slv_reg0_reg[0]\ : out STD_LOGIC;
+    finish : out STD_LOGIC;
+    \A_reg_reg[2][2]_0\ : out STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    clk : in STD_LOGIC;
+    \wen_bram3[6]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \FSM_onehot_cs_reg[0]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+=======
     \slv_reg0_reg[0]\ : out STD_LOGIC;
     finish : out STD_LOGIC;
     wen0 : out STD_LOGIC;
@@ -10012,6 +12630,7 @@ entity top_level_Intellight_Accelerat_0_0_CU is
     Q : in STD_LOGIC_VECTOR ( 31 downto 0 );
     clk : in STD_LOGIC;
     \FSM_onehot_cs_reg[0]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+>>>>>>> parent of ae750207 (shfcuidtf7)
     \r_lsfr_reg[16]\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     rst : in STD_LOGIC;
     A_road : in STD_LOGIC
@@ -10035,15 +12654,16 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_CU is
   signal \FSM_onehot_cs[12]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_cs[7]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_cs[8]_i_1_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_cs[9]_i_1_n_0\ : STD_LOGIC;
+  signal \^fsm_onehot_cs_reg[0]_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \FSM_onehot_cs_reg_n_0_[10]\ : STD_LOGIC;
   signal \FSM_onehot_cs_reg_n_0_[11]\ : STD_LOGIC;
   signal \FSM_onehot_cs_reg_n_0_[12]\ : STD_LOGIC;
   signal \FSM_onehot_cs_reg_n_0_[13]\ : STD_LOGIC;
-  signal \FSM_onehot_cs_reg_n_0_[14]\ : STD_LOGIC;
   signal \FSM_onehot_cs_reg_n_0_[1]\ : STD_LOGIC;
   signal \FSM_onehot_cs_reg_n_0_[2]\ : STD_LOGIC;
   signal \FSM_onehot_cs_reg_n_0_[7]\ : STD_LOGIC;
-  signal \FSM_onehot_cs_reg_n_0_[8]\ : STD_LOGIC;
+  signal \FSM_onehot_cs_reg_n_0_[9]\ : STD_LOGIC;
   signal episode : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \episode[15]_i_1_n_0\ : STD_LOGIC;
   signal \episode[15]_i_2_n_0\ : STD_LOGIC;
@@ -10114,9 +12734,6 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_CU is
   signal finish_INST_0_i_1_n_0 : STD_LOGIC;
   signal finish_INST_0_i_2_n_0 : STD_LOGIC;
   signal finish_INST_0_i_3_n_0 : STD_LOGIC;
-  signal finish_INST_0_i_4_n_0 : STD_LOGIC;
-  signal finish_INST_0_i_5_n_0 : STD_LOGIC;
-  signal finish_INST_0_i_6_n_0 : STD_LOGIC;
   signal \i__carry__0_i_1__0_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_2__1_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_3__0_n_0\ : STD_LOGIC;
@@ -10133,7 +12750,7 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_CU is
   signal \i__carry_i_6__0_n_0\ : STD_LOGIC;
   signal \i__carry_i_7__0_n_0\ : STD_LOGIC;
   signal \i__carry_i_8__0_n_0\ : STD_LOGIC;
-  signal in10 : STD_LOGIC_VECTOR ( 15 downto 1 );
+  signal in6 : STD_LOGIC_VECTOR ( 15 downto 1 );
   signal \ns1_carry__0_i_1_n_0\ : STD_LOGIC;
   signal \ns1_carry__0_i_2_n_0\ : STD_LOGIC;
   signal \ns1_carry__0_i_3_n_0\ : STD_LOGIC;
@@ -10220,7 +12837,11 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_CU is
   signal \step_reg[8]_i_1_n_5\ : STD_LOGIC;
   signal \step_reg[8]_i_1_n_6\ : STD_LOGIC;
   signal \step_reg[8]_i_1_n_7\ : STD_LOGIC;
+<<<<<<< HEAD
+  signal \wen_bram0[6]_INST_0_i_2_n_0\ : STD_LOGIC;
+=======
   signal wen0_INST_0_i_1_n_0 : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal NLW_A_sel0_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_A_sel0_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_A_sel0_carry__1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -10234,9 +12855,15 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_CU is
   signal \NLW_ns1_inferred__0/i__carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_step_reg[12]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
+<<<<<<< HEAD
+  attribute SOFT_HLUTNM of \FSM_onehot_cs[12]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \FSM_onehot_cs[8]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \FSM_onehot_cs[9]_i_1\ : label is "soft_lutpair41";
+=======
   attribute SOFT_HLUTNM of \FSM_onehot_cs[0]_i_1\ : label is "soft_lutpair43";
   attribute SOFT_HLUTNM of \FSM_onehot_cs[12]_i_1\ : label is "soft_lutpair42";
   attribute SOFT_HLUTNM of \FSM_onehot_cs[7]_i_1\ : label is "soft_lutpair44";
+>>>>>>> parent of ae750207 (shfcuidtf7)
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_cs_reg[0]\ : label is "S_L0:000000000000010,S_L7:000000000100000,S_L9:000000000001000,S_L6:000000010000000,S_L8:000000001000000,S_IDLE:000000000000001,S_L5:000001000000000,S_L4:000100000000000,S_L3:000010000000000,S_L2:010000000000000,S_DONE:001000000000000,S_INIT:000000100000000,S_L11:100000000000000,S_L10:000000000010000,S_L1:000000000000100";
   attribute FSM_ENCODED_STATES of \FSM_onehot_cs_reg[10]\ : label is "S_L0:000000000000010,S_L7:000000000100000,S_L9:000000000001000,S_L6:000000010000000,S_L8:000000001000000,S_IDLE:000000000000001,S_L5:000001000000000,S_L4:000100000000000,S_L3:000010000000000,S_L2:010000000000000,S_DONE:001000000000000,S_INIT:000000100000000,S_L11:100000000000000,S_L10:000000000010000,S_L1:000000000000100";
@@ -10278,8 +12905,12 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_CU is
   attribute ADDER_THRESHOLD of \epsilon0_carry__0\ : label is 35;
   attribute ADDER_THRESHOLD of \epsilon0_carry__1\ : label is 35;
   attribute ADDER_THRESHOLD of \epsilon0_carry__2\ : label is 35;
+<<<<<<< HEAD
+  attribute SOFT_HLUTNM of finish_INST_0 : label is "soft_lutpair41";
+=======
   attribute SOFT_HLUTNM of finish_INST_0_i_5 : label is "soft_lutpair43";
   attribute SOFT_HLUTNM of finish_INST_0_i_6 : label is "soft_lutpair42";
+>>>>>>> parent of ae750207 (shfcuidtf7)
   attribute COMPARATOR_THRESHOLD : integer;
   attribute COMPARATOR_THRESHOLD of ns1_carry : label is 11;
   attribute COMPARATOR_THRESHOLD of \ns1_carry__0\ : label is 11;
@@ -10289,16 +12920,26 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_CU is
   attribute ADDER_THRESHOLD of \step_reg[12]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \step_reg[4]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \step_reg[8]_i_1\ : label is 11;
+<<<<<<< HEAD
+  attribute SOFT_HLUTNM of \wen_bram0[6]_INST_0_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \wen_bram1[6]_INST_0_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \wen_bram2[6]_INST_0_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \wen_bram3[6]_INST_0_i_1\ : label is "soft_lutpair39";
+begin
+  \FSM_onehot_cs_reg[0]_0\(0) <= \^fsm_onehot_cs_reg[0]_0\(0);
+\A_reg[0][3]_i_2\: unisim.vcomponents.LUT2
+=======
   attribute SOFT_HLUTNM of wen0_INST_0 : label is "soft_lutpair41";
   attribute SOFT_HLUTNM of wen0_INST_0_i_1 : label is "soft_lutpair44";
   attribute SOFT_HLUTNM of wen1_INST_0 : label is "soft_lutpair41";
 begin
 \A_reg[0][2]_i_2\: unisim.vcomponents.LUT2
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => \FSM_onehot_cs_reg[0]_0\(0),
+      I0 => \FSM_onehot_cs_reg[0]_1\(0),
       I1 => CU_0_A_sel,
       O => \slv_reg0_reg[0]\
     );
@@ -10358,12 +12999,21 @@ A_sel_reg: unisim.vcomponents.FDRE
     );
 \FSM_onehot_cs[0]_i_1\: unisim.vcomponents.LUT3
     generic map(
+<<<<<<< HEAD
+      INIT => X"54"
+    )
+        port map (
+      I0 => \FSM_onehot_cs_reg[0]_1\(1),
+      I1 => \FSM_onehot_cs_reg_n_0_[12]\,
+      I2 => \^fsm_onehot_cs_reg[0]_0\(0),
+=======
       INIT => X"32"
     )
         port map (
       I0 => \FSM_onehot_cs_reg_n_0_[12]\,
       I1 => \FSM_onehot_cs_reg[0]_0\(1),
       I2 => epsilon,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \FSM_onehot_cs[0]_i_1_n_0\
     );
 \FSM_onehot_cs[12]_i_1\: unisim.vcomponents.LUT4
@@ -10372,9 +13022,9 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \ns1_inferred__0/i__carry__0_n_0\,
-      I1 => \FSM_onehot_cs_reg_n_0_[14]\,
+      I1 => epsilon,
       I2 => \FSM_onehot_cs_reg_n_0_[12]\,
-      I3 => \FSM_onehot_cs_reg[0]_0\(1),
+      I3 => \FSM_onehot_cs_reg[0]_1\(1),
       O => \FSM_onehot_cs[12]_i_1_n_0\
     );
 \FSM_onehot_cs[7]_i_1\: unisim.vcomponents.LUT2
@@ -10382,7 +13032,7 @@ A_sel_reg: unisim.vcomponents.FDRE
       INIT => X"2"
     )
         port map (
-      I0 => step,
+      I0 => \FSM_onehot_cs_reg_n_0_[9]\,
       I1 => \ns1_carry__0_n_0\,
       O => \FSM_onehot_cs[7]_i_1_n_0\
     );
@@ -10391,11 +13041,21 @@ A_sel_reg: unisim.vcomponents.FDRE
       INIT => X"F888"
     )
         port map (
-      I0 => epsilon,
-      I1 => \FSM_onehot_cs_reg[0]_0\(1),
-      I2 => \FSM_onehot_cs_reg_n_0_[14]\,
+      I0 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I1 => \FSM_onehot_cs_reg[0]_1\(1),
+      I2 => epsilon,
       I3 => \ns1_inferred__0/i__carry__0_n_0\,
       O => \FSM_onehot_cs[8]_i_1_n_0\
+    );
+\FSM_onehot_cs[9]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"EA"
+    )
+        port map (
+      I0 => \FSM_onehot_cs_reg_n_0_[11]\,
+      I1 => \FSM_onehot_cs_reg_n_0_[9]\,
+      I2 => \ns1_carry__0_n_0\,
+      O => \FSM_onehot_cs[9]_i_1_n_0\
     );
 \FSM_onehot_cs_reg[0]\: unisim.vcomponents.FDSE
     generic map(
@@ -10405,7 +13065,7 @@ A_sel_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => '1',
       D => \FSM_onehot_cs[0]_i_1_n_0\,
-      Q => epsilon,
+      Q => \^fsm_onehot_cs_reg[0]_0\(0),
       S => rst
     );
 \FSM_onehot_cs_reg[10]\: unisim.vcomponents.FDRE
@@ -10460,7 +13120,7 @@ A_sel_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => '1',
       D => p_3_in,
-      Q => \FSM_onehot_cs_reg_n_0_[14]\,
+      Q => epsilon,
       R => rst
     );
 \FSM_onehot_cs_reg[1]\: unisim.vcomponents.FDRE
@@ -10470,7 +13130,7 @@ A_sel_reg: unisim.vcomponents.FDRE
         port map (
       C => clk,
       CE => '1',
-      D => \FSM_onehot_cs_reg_n_0_[8]\,
+      D => step,
       Q => \FSM_onehot_cs_reg_n_0_[1]\,
       R => rst
     );
@@ -10548,7 +13208,7 @@ A_sel_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => '1',
       D => \FSM_onehot_cs[8]_i_1_n_0\,
-      Q => \FSM_onehot_cs_reg_n_0_[8]\,
+      Q => step,
       R => rst
     );
 \FSM_onehot_cs_reg[9]\: unisim.vcomponents.FDRE
@@ -10558,8 +13218,8 @@ A_sel_reg: unisim.vcomponents.FDRE
         port map (
       C => clk,
       CE => '1',
-      D => finish_INST_0_i_2_n_0,
-      Q => step,
+      D => \FSM_onehot_cs[9]_i_1_n_0\,
+      Q => \FSM_onehot_cs_reg_n_0_[9]\,
       R => rst
     );
 \episode[0]_i_1\: unisim.vcomponents.LUT3
@@ -10568,7 +13228,7 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(16),
-      I1 => epsilon,
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
       I2 => \episode_reg_n_0_[0]\,
       O => episode(0)
     );
@@ -10578,8 +13238,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(26),
-      I1 => epsilon,
-      I2 => in10(10),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(10),
       O => episode(10)
     );
 \episode[11]_i_1\: unisim.vcomponents.LUT3
@@ -10588,8 +13248,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(27),
-      I1 => epsilon,
-      I2 => in10(11),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(11),
       O => episode(11)
     );
 \episode[12]_i_1\: unisim.vcomponents.LUT3
@@ -10598,8 +13258,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(28),
-      I1 => epsilon,
-      I2 => in10(12),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(12),
       O => episode(12)
     );
 \episode[13]_i_1\: unisim.vcomponents.LUT3
@@ -10608,8 +13268,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(29),
-      I1 => epsilon,
-      I2 => in10(13),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(13),
       O => episode(13)
     );
 \episode[14]_i_1\: unisim.vcomponents.LUT3
@@ -10618,8 +13278,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(30),
-      I1 => epsilon,
-      I2 => in10(14),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(14),
       O => episode(14)
     );
 \episode[15]_i_1\: unisim.vcomponents.LUT2
@@ -10627,8 +13287,8 @@ A_sel_reg: unisim.vcomponents.FDRE
       INIT => X"2"
     )
         port map (
-      I0 => epsilon,
-      I1 => \FSM_onehot_cs_reg[0]_0\(0),
+      I0 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I1 => \FSM_onehot_cs_reg[0]_1\(0),
       O => \episode[15]_i_1_n_0\
     );
 \episode[15]_i_2\: unisim.vcomponents.LUT2
@@ -10636,8 +13296,8 @@ A_sel_reg: unisim.vcomponents.FDRE
       INIT => X"E"
     )
         port map (
-      I0 => \FSM_onehot_cs_reg_n_0_[14]\,
-      I1 => epsilon,
+      I0 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I1 => p_3_in,
       O => \episode[15]_i_2_n_0\
     );
 \episode[15]_i_3\: unisim.vcomponents.LUT3
@@ -10646,8 +13306,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(31),
-      I1 => epsilon,
-      I2 => in10(15),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(15),
       O => episode(15)
     );
 \episode[1]_i_1\: unisim.vcomponents.LUT3
@@ -10656,8 +13316,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(17),
-      I1 => epsilon,
-      I2 => in10(1),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(1),
       O => episode(1)
     );
 \episode[2]_i_1\: unisim.vcomponents.LUT3
@@ -10666,8 +13326,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(18),
-      I1 => epsilon,
-      I2 => in10(2),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(2),
       O => episode(2)
     );
 \episode[3]_i_1\: unisim.vcomponents.LUT3
@@ -10676,8 +13336,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(19),
-      I1 => epsilon,
-      I2 => in10(3),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(3),
       O => episode(3)
     );
 \episode[4]_i_1\: unisim.vcomponents.LUT3
@@ -10686,8 +13346,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(20),
-      I1 => epsilon,
-      I2 => in10(4),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(4),
       O => episode(4)
     );
 \episode[5]_i_1\: unisim.vcomponents.LUT3
@@ -10696,8 +13356,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(21),
-      I1 => epsilon,
-      I2 => in10(5),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(5),
       O => episode(5)
     );
 \episode[6]_i_1\: unisim.vcomponents.LUT3
@@ -10706,8 +13366,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(22),
-      I1 => epsilon,
-      I2 => in10(6),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(6),
       O => episode(6)
     );
 \episode[7]_i_1\: unisim.vcomponents.LUT3
@@ -10716,8 +13376,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(23),
-      I1 => epsilon,
-      I2 => in10(7),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(7),
       O => episode(7)
     );
 \episode[8]_i_1\: unisim.vcomponents.LUT3
@@ -10726,8 +13386,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(24),
-      I1 => epsilon,
-      I2 => in10(8),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(8),
       O => episode(8)
     );
 \episode[9]_i_1\: unisim.vcomponents.LUT3
@@ -10736,8 +13396,8 @@ A_sel_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => Q(25),
-      I1 => epsilon,
-      I2 => in10(9),
+      I1 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I2 => in6(9),
       O => episode(9)
     );
 \episode_reg[0]\: unisim.vcomponents.FDRE
@@ -10781,7 +13441,7 @@ A_sel_reg: unisim.vcomponents.FDRE
       CO(0) => \episode_reg[12]_i_2_n_3\,
       CYINIT => '0',
       DI(3 downto 0) => B"0000",
-      O(3 downto 0) => in10(12 downto 9),
+      O(3 downto 0) => in6(12 downto 9),
       S(3) => \episode_reg_n_0_[12]\,
       S(2) => \episode_reg_n_0_[11]\,
       S(1) => \episode_reg_n_0_[10]\,
@@ -10820,7 +13480,7 @@ A_sel_reg: unisim.vcomponents.FDRE
       CYINIT => '0',
       DI(3 downto 0) => B"0000",
       O(3) => \NLW_episode_reg[15]_i_4_O_UNCONNECTED\(3),
-      O(2 downto 0) => in10(15 downto 13),
+      O(2 downto 0) => in6(15 downto 13),
       S(3) => '0',
       S(2) => \episode_reg_n_0_[15]\,
       S(1) => \episode_reg_n_0_[14]\,
@@ -10867,7 +13527,7 @@ A_sel_reg: unisim.vcomponents.FDRE
       CO(0) => \episode_reg[4]_i_2_n_3\,
       CYINIT => \episode_reg_n_0_[0]\,
       DI(3 downto 0) => B"0000",
-      O(3 downto 0) => in10(4 downto 1),
+      O(3 downto 0) => in6(4 downto 1),
       S(3) => \episode_reg_n_0_[4]\,
       S(2) => \episode_reg_n_0_[3]\,
       S(1) => \episode_reg_n_0_[2]\,
@@ -10914,7 +13574,7 @@ A_sel_reg: unisim.vcomponents.FDRE
       CO(0) => \episode_reg[8]_i_2_n_3\,
       CYINIT => '0',
       DI(3 downto 0) => B"0000",
-      O(3 downto 0) => in10(8 downto 5),
+      O(3 downto 0) => in6(8 downto 5),
       S(3) => \episode_reg_n_0_[8]\,
       S(2) => \episode_reg_n_0_[7]\,
       S(1) => \episode_reg_n_0_[6]\,
@@ -11136,133 +13796,146 @@ epsilon0_carry_i_4: unisim.vcomponents.LUT2
 \epsilon_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(0),
       Q => \epsilon__0\(0),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(10),
       Q => \epsilon__0\(10),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(11),
       Q => \epsilon__0\(11),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[12]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(12),
       Q => \epsilon__0\(12),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(13),
       Q => \epsilon__0\(13),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(14),
       Q => \epsilon__0\(14),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[15]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(15),
       Q => \epsilon__0\(15),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(1),
       Q => \epsilon__0\(1),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(2),
       Q => \epsilon__0\(2),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(3),
       Q => \epsilon__0\(3),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(4),
       Q => \epsilon__0\(4),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(5),
       Q => \epsilon__0\(5),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(6),
       Q => \epsilon__0\(6),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(7),
       Q => \epsilon__0\(7),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(8),
       Q => \epsilon__0\(8),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 \epsilon_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \FSM_onehot_cs_reg_n_0_[14]\,
+      CE => epsilon,
       D => epsilon0(9),
       Q => \epsilon__0\(9),
-      R => epsilon
+      R => \^fsm_onehot_cs_reg[0]_0\(0)
     );
 finish_INST_0: unisim.vcomponents.LUT5
     generic map(
+<<<<<<< HEAD
+      INIT => X"0000FEEE"
+    )
+        port map (
+      I0 => finish_INST_0_i_1_n_0,
+      I1 => \FSM_onehot_cs_reg_n_0_[11]\,
+      I2 => \FSM_onehot_cs_reg_n_0_[9]\,
+      I3 => \ns1_carry__0_n_0\,
+      I4 => finish_INST_0_i_2_n_0,
+      O => finish
+    );
+finish_INST_0_i_1: unisim.vcomponents.LUT6
+=======
       INIT => X"0E000000"
     )
         port map (
@@ -11296,10 +13969,47 @@ finish_INST_0_i_2: unisim.vcomponents.LUT3
       O => finish_INST_0_i_2_n_0
     );
 finish_INST_0_i_3: unisim.vcomponents.LUT6
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
       INIT => X"FFFEFFFEFFFFFFFE"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \FSM_onehot_cs_reg_n_0_[7]\,
+      I1 => p_1_in,
+      I2 => \FSM_onehot_cs_reg_n_0_[12]\,
+      I3 => \FSM_onehot_cs_reg_n_0_[1]\,
+      I4 => epsilon,
+      I5 => \ns1_inferred__0/i__carry__0_n_0\,
+      O => finish_INST_0_i_1_n_0
+    );
+finish_INST_0_i_2: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFF7777775F"
+    )
+        port map (
+      I0 => \wen_bram0[6]_INST_0_i_2_n_0\,
+      I1 => \FSM_onehot_cs_reg[0]_1\(1),
+      I2 => epsilon,
+      I3 => \^fsm_onehot_cs_reg[0]_0\(0),
+      I4 => \FSM_onehot_cs_reg_n_0_[12]\,
+      I5 => finish_INST_0_i_3_n_0,
+      O => finish_INST_0_i_2_n_0
+    );
+finish_INST_0_i_3: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFFE"
+    )
+        port map (
+      I0 => \FSM_onehot_cs_reg_n_0_[11]\,
+      I1 => \FSM_onehot_cs_reg_n_0_[9]\,
+      I2 => \FSM_onehot_cs_reg_n_0_[13]\,
+      I3 => \FSM_onehot_cs_reg_n_0_[10]\,
+      I4 => \FSM_onehot_cs_reg_n_0_[2]\,
+      I5 => p_2_in,
+      O => finish_INST_0_i_3_n_0
+    );
+=======
       I0 => finish_INST_0_i_6_n_0,
       I1 => \FSM_onehot_cs_reg_n_0_[2]\,
       I2 => p_0_in,
@@ -11343,6 +14053,7 @@ finish_INST_0_i_6: unisim.vcomponents.LUT4
       I3 => \FSM_onehot_cs_reg[0]_0\(1),
       O => finish_INST_0_i_6_n_0
     );
+>>>>>>> parent of ae750207 (shfcuidtf7)
 \i__carry__0_i_1__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2B22"
@@ -11801,10 +14512,10 @@ rand: entity work.\top_level_Intellight_Accelerat_0_0_lfsr__parameterized0\
 \step_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[0]_i_1_n_7\,
       Q => step_reg(0),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[0]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -11825,26 +14536,26 @@ rand: entity work.\top_level_Intellight_Accelerat_0_0_lfsr__parameterized0\
 \step_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[8]_i_1_n_5\,
       Q => step_reg(10),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[8]_i_1_n_4\,
       Q => step_reg(11),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[12]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[12]_i_1_n_7\,
       Q => step_reg(12),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[12]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -11864,58 +14575,58 @@ rand: entity work.\top_level_Intellight_Accelerat_0_0_lfsr__parameterized0\
 \step_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[12]_i_1_n_6\,
       Q => step_reg(13),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[12]_i_1_n_5\,
       Q => step_reg(14),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[15]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[12]_i_1_n_4\,
       Q => step_reg(15),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[0]_i_1_n_6\,
       Q => step_reg(1),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[0]_i_1_n_5\,
       Q => step_reg(2),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[0]_i_1_n_4\,
       Q => step_reg(3),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[4]_i_1_n_7\,
       Q => step_reg(4),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[4]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -11935,34 +14646,34 @@ rand: entity work.\top_level_Intellight_Accelerat_0_0_lfsr__parameterized0\
 \step_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[4]_i_1_n_6\,
       Q => step_reg(5),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[4]_i_1_n_5\,
       Q => step_reg(6),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[4]_i_1_n_4\,
       Q => step_reg(7),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[8]_i_1_n_7\,
       Q => step_reg(8),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
 \step_reg[8]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -11982,11 +14693,72 @@ rand: entity work.\top_level_Intellight_Accelerat_0_0_lfsr__parameterized0\
 \step_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => step,
+      CE => \FSM_onehot_cs_reg_n_0_[9]\,
       D => \step_reg[8]_i_1_n_6\,
       Q => step_reg(9),
-      R => \FSM_onehot_cs_reg_n_0_[8]\
+      R => step
     );
+<<<<<<< HEAD
+\wen_bram0[6]_INST_0_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00005551"
+    )
+        port map (
+      I0 => \wen_bram3[6]\(0),
+      I1 => \wen_bram0[6]_INST_0_i_2_n_0\,
+      I2 => epsilon,
+      I3 => \FSM_onehot_cs_reg_n_0_[9]\,
+      I4 => \wen_bram3[6]\(1),
+      O => \A_reg_reg[2][2]\
+    );
+\wen_bram0[6]_INST_0_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00000001"
+    )
+        port map (
+      I0 => \FSM_onehot_cs_reg_n_0_[7]\,
+      I1 => p_1_in,
+      I2 => p_3_in,
+      I3 => p_2_in,
+      I4 => p_0_in,
+      O => \wen_bram0[6]_INST_0_i_2_n_0\
+    );
+\wen_bram1[6]_INST_0_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FF02FFFF"
+    )
+        port map (
+      I0 => \wen_bram0[6]_INST_0_i_2_n_0\,
+      I1 => epsilon,
+      I2 => \FSM_onehot_cs_reg_n_0_[9]\,
+      I3 => \wen_bram3[6]\(1),
+      I4 => \wen_bram3[6]\(0),
+      O => \FSM_onehot_cs_reg[14]_0\
+    );
+\wen_bram2[6]_INST_0_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"BBBBBBFB"
+    )
+        port map (
+      I0 => \wen_bram3[6]\(0),
+      I1 => \wen_bram3[6]\(1),
+      I2 => \wen_bram0[6]_INST_0_i_2_n_0\,
+      I3 => epsilon,
+      I4 => \FSM_onehot_cs_reg_n_0_[9]\,
+      O => \A_reg_reg[2][2]_0\
+    );
+\wen_bram3[6]_INST_0_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"555DFFFF"
+    )
+        port map (
+      I0 => \wen_bram3[6]\(1),
+      I1 => \wen_bram0[6]_INST_0_i_2_n_0\,
+      I2 => epsilon,
+      I3 => \FSM_onehot_cs_reg_n_0_[9]\,
+      I4 => \wen_bram3[6]\(0),
+      O => \A_reg_reg[2][3]\
+=======
 wen0_INST_0: unisim.vcomponents.LUT5
     generic map(
       INIT => X"55545555"
@@ -12021,6 +14793,7 @@ wen1_INST_0: unisim.vcomponents.LUT5
       I3 => p_2_in,
       I4 => wen0_INST_0_i_1_n_0,
       O => wen1
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 end STRUCTURE;
 library IEEE;
@@ -12029,6 +14802,53 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_level_Intellight_Accelerat_0_0_ENV is
   port (
+<<<<<<< HEAD
+    \L_curr_reg[0][2]\ : out STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[0][0]\ : out STD_LOGIC;
+    \L_curr_reg[3][0]\ : out STD_LOGIC;
+    \L_curr_reg[3][3]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[1][2]\ : out STD_LOGIC;
+    \L_curr_reg[1][3]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[1][0]\ : out STD_LOGIC;
+    \L_curr_reg[0][3]\ : out STD_LOGIC;
+    \L_curr_reg[0][0]_0\ : out STD_LOGIC;
+    \L_curr_reg[3][3]_0\ : out STD_LOGIC;
+    \L_curr_reg[3][0]_0\ : out STD_LOGIC;
+    \L_curr_reg[1][3]_0\ : out STD_LOGIC;
+    \L_curr_reg[1][0]_0\ : out STD_LOGIC;
+    \L_curr_reg[2][3]\ : out STD_LOGIC;
+    \L_curr_reg[2][3]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[2][0]\ : out STD_LOGIC;
+    \L_curr_reg[0][0]_1\ : out STD_LOGIC;
+    \L_curr_reg[2][2]\ : out STD_LOGIC;
+    \L_curr_reg[2][0]_0\ : out STD_LOGIC;
+    \R_reg[15]\ : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    DI : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \R_reg[15]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \R_reg[15]_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \L_curr_reg[0][3]_0\ : in STD_LOGIC;
+    \L_curr_reg[0][3]_1\ : in STD_LOGIC;
+    \L_curr_reg[0][1]\ : in STD_LOGIC;
+    \L_curr_reg[3][1]\ : in STD_LOGIC;
+    \L_curr_reg[1][3]_1\ : in STD_LOGIC;
+    \L_curr_reg[1][3]_2\ : in STD_LOGIC;
+    \L_curr_reg[1][1]\ : in STD_LOGIC;
+    \L_curr_reg[2][3]_1\ : in STD_LOGIC;
+    \L_curr_reg[2][3]_2\ : in STD_LOGIC;
+    \L_curr_reg[2][2]_0\ : in STD_LOGIC;
+    \L_curr_reg[2][2]_1\ : in STD_LOGIC;
+    \L_curr_reg[2][3]_3\ : in STD_LOGIC;
+    \L_curr_reg[2][3]_4\ : in STD_LOGIC;
+    \L_curr_reg[2][1]\ : in STD_LOGIC;
+    rst : in STD_LOGIC;
+    D : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    clk : in STD_LOGIC;
+    \L_curr_reg[1][3]_3\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[2][3]_5\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[3][3]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
+=======
     \L_curr_reg[0][3]\ : out STD_LOGIC;
     Q : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \L_curr_reg[0][0]\ : out STD_LOGIC;
@@ -12083,6 +14903,7 @@ entity top_level_Intellight_Accelerat_0_0_ENV is
     \L_curr_reg[2][3]_2\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \L_curr_reg[3][3]_4\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \R_reg[14]_0\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
+>>>>>>> parent of ae750207 (shfcuidtf7)
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of top_level_Intellight_Accelerat_0_0_ENV : entity is "ENV";
@@ -12092,8 +14913,11 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_ENV is
 begin
 RD_0: entity work.top_level_Intellight_Accelerat_0_0_RD
      port map (
-      \R_reg[14]_0\(6 downto 0) => \R_reg[14]\(6 downto 0),
-      \R_reg[14]_1\(6 downto 0) => \R_reg[14]_0\(6 downto 0),
+      DI(2 downto 0) => DI(2 downto 0),
+      \R_reg[15]_0\(5 downto 0) => \R_reg[15]\(5 downto 0),
+      \R_reg[15]_1\(1 downto 0) => \R_reg[15]_0\(1 downto 0),
+      \R_reg[15]_2\(2 downto 0) => \R_reg[15]_1\(2 downto 0),
+      S(2 downto 0) => S(2 downto 0),
       clk => clk
     );
 SD_0: entity work.top_level_Intellight_Accelerat_0_0_SD
@@ -12102,33 +14926,66 @@ SD_0: entity work.top_level_Intellight_Accelerat_0_0_SD
       \L_curr_reg[0][0]_0\ => \L_curr_reg[0][0]\,
       \L_curr_reg[0][0]_1\ => \L_curr_reg[0][0]_0\,
       \L_curr_reg[0][0]_2\ => \L_curr_reg[0][0]_1\,
+<<<<<<< HEAD
+      \L_curr_reg[0][1]_0\ => \L_curr_reg[0][1]\,
+      \L_curr_reg[0][2]_0\ => \L_curr_reg[0][2]\,
+      \L_curr_reg[0][3]_0\ => \L_curr_reg[0][3]\,
+      \L_curr_reg[0][3]_1\ => \L_curr_reg[0][3]_0\,
+      \L_curr_reg[0][3]_2\ => \L_curr_reg[0][3]_1\,
+=======
       \L_curr_reg[0][0]_3\ => \L_curr_reg[0][0]_2\,
       \L_curr_reg[0][1]_0\ => \L_curr_reg[0][1]\,
       \L_curr_reg[0][3]_0\ => \L_curr_reg[0][3]\,
       \L_curr_reg[0][3]_1\ => \L_curr_reg[0][3]_0\,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       \L_curr_reg[1][0]_0\ => \L_curr_reg[1][0]\,
       \L_curr_reg[1][0]_1\ => \L_curr_reg[1][0]_0\,
       \L_curr_reg[1][0]_2\ => \L_curr_reg[1][0]_1\,
       \L_curr_reg[1][1]_0\ => \L_curr_reg[1][1]\,
       \L_curr_reg[1][2]_0\ => \L_curr_reg[1][2]\,
+<<<<<<< HEAD
+      \L_curr_reg[1][3]_0\(3 downto 0) => \L_curr_reg[1][3]\(3 downto 0),
+      \L_curr_reg[1][3]_1\ => \L_curr_reg[1][3]_0\,
+      \L_curr_reg[1][3]_2\ => \L_curr_reg[1][3]_1\,
+      \L_curr_reg[1][3]_3\ => \L_curr_reg[1][3]_2\,
+      \L_curr_reg[1][3]_4\(3 downto 0) => \L_curr_reg[1][3]_3\(3 downto 0),
+=======
       \L_curr_reg[1][3]_0\ => \L_curr_reg[1][3]\,
       \L_curr_reg[1][3]_1\(3 downto 0) => \L_curr_reg[1][3]_0\(3 downto 0),
       \L_curr_reg[1][3]_2\ => \L_curr_reg[1][3]_1\,
       \L_curr_reg[1][3]_3\(3 downto 0) => \L_curr_reg[1][3]_2\(3 downto 0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       \L_curr_reg[2][0]_0\ => \L_curr_reg[2][0]\,
       \L_curr_reg[2][0]_1\ => \L_curr_reg[2][0]_0\,
       \L_curr_reg[2][0]_2\ => \L_curr_reg[2][0]_1\,
       \L_curr_reg[2][1]_0\ => \L_curr_reg[2][1]\,
       \L_curr_reg[2][2]_0\ => \L_curr_reg[2][2]\,
+<<<<<<< HEAD
+      \L_curr_reg[2][2]_1\ => \L_curr_reg[2][2]_0\,
+      \L_curr_reg[2][2]_2\ => \L_curr_reg[2][2]_1\,
+      \L_curr_reg[2][3]_0\ => \L_curr_reg[2][3]\,
+      \L_curr_reg[2][3]_1\(3 downto 0) => \L_curr_reg[2][3]_0\(3 downto 0),
+      \L_curr_reg[2][3]_2\ => \L_curr_reg[2][3]_1\,
+      \L_curr_reg[2][3]_3\ => \L_curr_reg[2][3]_2\,
+      \L_curr_reg[2][3]_4\ => \L_curr_reg[2][3]_3\,
+      \L_curr_reg[2][3]_5\ => \L_curr_reg[2][3]_4\,
+      \L_curr_reg[2][3]_6\(3 downto 0) => \L_curr_reg[2][3]_5\(3 downto 0),
+=======
       \L_curr_reg[2][3]_0\ => \L_curr_reg[2][3]\,
       \L_curr_reg[2][3]_1\(3 downto 0) => \L_curr_reg[2][3]_0\(3 downto 0),
       \L_curr_reg[2][3]_2\ => \L_curr_reg[2][3]_1\,
       \L_curr_reg[2][3]_3\(3 downto 0) => \L_curr_reg[2][3]_2\(3 downto 0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       \L_curr_reg[3][0]_0\ => \L_curr_reg[3][0]\,
       \L_curr_reg[3][0]_1\ => \L_curr_reg[3][0]_0\,
       \L_curr_reg[3][0]_2\ => \L_curr_reg[3][0]_1\,
       \L_curr_reg[3][0]_3\ => \L_curr_reg[3][0]_2\,
       \L_curr_reg[3][1]_0\ => \L_curr_reg[3][1]\,
+<<<<<<< HEAD
+      \L_curr_reg[3][3]_0\(3 downto 0) => \L_curr_reg[3][3]\(3 downto 0),
+      \L_curr_reg[3][3]_1\ => \L_curr_reg[3][3]_0\,
+      \L_curr_reg[3][3]_2\(3 downto 0) => \L_curr_reg[3][3]_1\(3 downto 0),
+=======
       \L_curr_reg[3][1]_1\ => \L_curr_reg[3][1]_0\,
       \L_curr_reg[3][2]_0\ => \L_curr_reg[3][2]\,
       \L_curr_reg[3][3]_0\ => \L_curr_reg[3][3]\,
@@ -12137,6 +14994,7 @@ SD_0: entity work.top_level_Intellight_Accelerat_0_0_SD
       \L_curr_reg[3][3]_3\ => \L_curr_reg[3][3]_2\,
       \L_curr_reg[3][3]_4\ => \L_curr_reg[3][3]_3\,
       \L_curr_reg[3][3]_5\(3 downto 0) => \L_curr_reg[3][3]_4\(3 downto 0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       Q(3 downto 0) => Q(3 downto 0),
       \R[14]_i_12_0\ => \R[14]_i_12\,
       \R[14]_i_17\ => \R[14]_i_17\,
@@ -12158,15 +15016,25 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_level_Intellight_Accelerat_0_0_QA is
   port (
-    AGENT_0_Q_new : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    O : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \Q_act_reg_reg[2][7]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \Q_act_reg_reg[2][11]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \Q_act_reg_reg[2][14]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \D_road1[31]\ : out STD_LOGIC;
     \D_road1[30]\ : out STD_LOGIC;
     \D_road1[29]\ : out STD_LOGIC;
     \D_road3[28]\ : out STD_LOGIC;
+<<<<<<< HEAD
+    \D_road3[27]\ : out STD_LOGIC;
+    \D_road3[26]\ : out STD_LOGIC;
+    \D_road1[25]\ : out STD_LOGIC;
+    \D_road1[24]\ : out STD_LOGIC;
+=======
     \D_road0[27]\ : out STD_LOGIC;
     \D_road1[26]\ : out STD_LOGIC;
     \D_road1[25]\ : out STD_LOGIC;
     \D_road0[24]\ : out STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
     D_road1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     D_road3 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     D_road0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -12177,7 +15045,7 @@ entity top_level_Intellight_Accelerat_0_0_QA is
     rst : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 15 downto 0 );
     clk : in STD_LOGIC;
-    \R_reg0_reg[14]_0\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
+    \R_reg0_reg[15]_0\ : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of top_level_Intellight_Accelerat_0_0_QA : entity is "QA";
@@ -12219,7 +15087,7 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_QA is
   signal Q_new_carry_n_1 : STD_LOGIC;
   signal Q_new_carry_n_2 : STD_LOGIC;
   signal Q_new_carry_n_3 : STD_LOGIC;
-  signal R_reg0 : STD_LOGIC_VECTOR ( 14 downto 0 );
+  signal R_reg0 : STD_LOGIC_VECTOR ( 15 downto 10 );
   signal x : STD_LOGIC_VECTOR ( 15 downto 1 );
   signal \x__0_carry__0_i_10_n_0\ : STD_LOGIC;
   signal \x__0_carry__0_i_11_n_0\ : STD_LOGIC;
@@ -12307,9 +15175,6 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_QA is
   signal \x__45_carry__2_i_3_n_0\ : STD_LOGIC;
   signal \x__45_carry__2_i_4_n_0\ : STD_LOGIC;
   signal \x__45_carry__2_i_5_n_0\ : STD_LOGIC;
-  signal \x__45_carry__2_i_6_n_0\ : STD_LOGIC;
-  signal \x__45_carry__2_i_7_n_0\ : STD_LOGIC;
-  signal \x__45_carry__2_n_1\ : STD_LOGIC;
   signal \x__45_carry__2_n_2\ : STD_LOGIC;
   signal \x__45_carry__2_n_3\ : STD_LOGIC;
   signal \x__45_carry_i_1_n_0\ : STD_LOGIC;
@@ -12319,6 +15184,7 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_QA is
   signal \x__45_carry_i_5_n_0\ : STD_LOGIC;
   signal \x__45_carry_i_6_n_0\ : STD_LOGIC;
   signal \x__45_carry_i_7_n_0\ : STD_LOGIC;
+  signal \x__45_carry_i_8_n_0\ : STD_LOGIC;
   signal \x__45_carry_n_0\ : STD_LOGIC;
   signal \x__45_carry_n_1\ : STD_LOGIC;
   signal \x__45_carry_n_2\ : STD_LOGIC;
@@ -12340,8 +15206,8 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_QA is
   signal \x_reg0_reg_n_0_[9]\ : STD_LOGIC;
   signal \NLW_Q_new_carry__2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal \NLW_x__0_carry__2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal \NLW_x__45_carry_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \NLW_x__45_carry__2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal \NLW_x__45_carry__2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
+  signal \NLW_x__45_carry__2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of Q_new_carry : label is 35;
   attribute ADDER_THRESHOLD of \Q_new_carry__0\ : label is 35;
@@ -12365,10 +15231,23 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_QA is
   attribute ADDER_THRESHOLD of \x__45_carry\ : label is 35;
   attribute ADDER_THRESHOLD of \x__45_carry__0\ : label is 35;
   attribute ADDER_THRESHOLD of \x__45_carry__1\ : label is 35;
-  attribute ADDER_THRESHOLD of \x__45_carry__2\ : label is 35;
   attribute HLUTNM : string;
+<<<<<<< HEAD
+  attribute HLUTNM of \x__45_carry__1_i_1\ : label is "lutpair2";
+  attribute HLUTNM of \x__45_carry__1_i_2\ : label is "lutpair1";
+  attribute HLUTNM of \x__45_carry__1_i_3\ : label is "lutpair0";
+  attribute HLUTNM of \x__45_carry__1_i_5\ : label is "lutpair3";
+  attribute HLUTNM of \x__45_carry__1_i_6\ : label is "lutpair2";
+  attribute HLUTNM of \x__45_carry__1_i_7\ : label is "lutpair1";
+  attribute HLUTNM of \x__45_carry__1_i_8\ : label is "lutpair0";
+  attribute ADDER_THRESHOLD of \x__45_carry__2\ : label is 35;
+  attribute HLUTNM of \x__45_carry__2_i_1\ : label is "lutpair4";
+  attribute HLUTNM of \x__45_carry__2_i_2\ : label is "lutpair3";
+  attribute HLUTNM of \x__45_carry__2_i_5\ : label is "lutpair4";
+=======
   attribute HLUTNM of \x__45_carry_i_3\ : label is "lutpair0";
   attribute HLUTNM of \x__45_carry_i_7\ : label is "lutpair0";
+>>>>>>> parent of ae750207 (shfcuidtf7)
 begin
 QA_mul1: entity work.top_level_Intellight_Accelerat_0_0_multiply
      port map (
@@ -12792,6 +15671,31 @@ QA_mul1: entity work.top_level_Intellight_Accelerat_0_0_multiply
     );
 \Q_max[10]_i_3\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"0055330FFF55330F"
+    )
+        port map (
+      I0 => D_road3(2),
+      I1 => D_road2(2),
+      I2 => D_road1(2),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road0(2),
+      O => \D_road3[26]\
+    );
+\Q_max[11]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F5533000F5533FF"
+    )
+        port map (
+      I0 => D_road3(3),
+      I1 => D_road2(3),
+      I2 => D_road0(3),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => D_road1(3),
+      O => \D_road3[27]\
+=======
       INIT => X"0F3300550F33FF55"
     )
         port map (
@@ -12815,6 +15719,7 @@ QA_mul1: entity work.top_level_Intellight_Accelerat_0_0_multiply
       I4 => Q(1),
       I5 => D_road2(3),
       O => \D_road0[27]\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \Q_max[12]_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -12902,8 +15807,13 @@ Q_new_carry: unisim.vcomponents.CARRY4
       CO(1) => Q_new_carry_n_2,
       CO(0) => Q_new_carry_n_3,
       CYINIT => '1',
+<<<<<<< HEAD
+      DI(3 downto 0) => \Q_act_reg_reg[2]_2\(3 downto 0),
+      O(3 downto 0) => O(3 downto 0),
+=======
       DI(3 downto 0) => \Q_act_reg_reg[2]_3\(3 downto 0),
       O(3 downto 0) => AGENT_0_Q_new(3 downto 0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       S(3) => QA_mul1_n_12,
       S(2) => QA_mul1_n_13,
       S(1) => QA_mul1_n_14,
@@ -12917,8 +15827,13 @@ Q_new_carry: unisim.vcomponents.CARRY4
       CO(1) => \Q_new_carry__0_n_2\,
       CO(0) => \Q_new_carry__0_n_3\,
       CYINIT => '0',
+<<<<<<< HEAD
+      DI(3 downto 0) => \Q_act_reg_reg[2]_2\(7 downto 4),
+      O(3 downto 0) => \Q_act_reg_reg[2][7]_0\(3 downto 0),
+=======
       DI(3 downto 0) => \Q_act_reg_reg[2]_3\(7 downto 4),
       O(3 downto 0) => AGENT_0_Q_new(7 downto 4),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       S(3) => QA_mul1_n_8,
       S(2) => QA_mul1_n_9,
       S(1) => QA_mul1_n_10,
@@ -12932,8 +15847,13 @@ Q_new_carry: unisim.vcomponents.CARRY4
       CO(1) => \Q_new_carry__1_n_2\,
       CO(0) => \Q_new_carry__1_n_3\,
       CYINIT => '0',
+<<<<<<< HEAD
+      DI(3 downto 0) => \Q_act_reg_reg[2]_2\(11 downto 8),
+      O(3 downto 0) => \Q_act_reg_reg[2][11]_0\(3 downto 0),
+=======
       DI(3 downto 0) => \Q_act_reg_reg[2]_3\(11 downto 8),
       O(3 downto 0) => AGENT_0_Q_new(11 downto 8),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       S(3) => QA_mul1_n_4,
       S(2) => QA_mul1_n_5,
       S(1) => QA_mul1_n_6,
@@ -12948,67 +15868,64 @@ Q_new_carry: unisim.vcomponents.CARRY4
       CO(0) => \Q_new_carry__2_n_3\,
       CYINIT => '0',
       DI(3) => '0',
+<<<<<<< HEAD
+      DI(2 downto 0) => \Q_act_reg_reg[2]_2\(14 downto 12),
+      O(3 downto 0) => \Q_act_reg_reg[2][14]_0\(3 downto 0),
+=======
       DI(2 downto 0) => \Q_act_reg_reg[2]_3\(14 downto 12),
       O(3 downto 0) => AGENT_0_Q_new(15 downto 12),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       S(3) => QA_mul1_n_0,
       S(2) => QA_mul1_n_1,
       S(1) => QA_mul1_n_2,
       S(0) => QA_mul1_n_3
     );
-\R_reg0_reg[0]\: unisim.vcomponents.FDRE
+\R_reg0_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \R_reg0_reg[14]_0\(0),
-      Q => R_reg0(0),
+      D => \R_reg0_reg[15]_0\(0),
+      Q => R_reg0(10),
+      R => rst
+    );
+\R_reg0_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => \R_reg0_reg[15]_0\(1),
+      Q => R_reg0(11),
+      R => rst
+    );
+\R_reg0_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => \R_reg0_reg[15]_0\(2),
+      Q => R_reg0(12),
+      R => rst
+    );
+\R_reg0_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => \R_reg0_reg[15]_0\(3),
+      Q => R_reg0(13),
       R => rst
     );
 \R_reg0_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \R_reg0_reg[14]_0\(6),
+      D => \R_reg0_reg[15]_0\(4),
       Q => R_reg0(14),
       R => rst
     );
-\R_reg0_reg[1]\: unisim.vcomponents.FDRE
+\R_reg0_reg[15]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \R_reg0_reg[14]_0\(1),
-      Q => R_reg0(1),
-      R => rst
-    );
-\R_reg0_reg[2]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk,
-      CE => '1',
-      D => \R_reg0_reg[14]_0\(2),
-      Q => R_reg0(2),
-      R => rst
-    );
-\R_reg0_reg[3]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk,
-      CE => '1',
-      D => \R_reg0_reg[14]_0\(3),
-      Q => R_reg0(3),
-      R => rst
-    );
-\R_reg0_reg[4]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk,
-      CE => '1',
-      D => \R_reg0_reg[14]_0\(4),
-      Q => R_reg0(4),
-      R => rst
-    );
-\R_reg0_reg[5]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk,
-      CE => '1',
-      D => \R_reg0_reg[14]_0\(5),
-      Q => R_reg0(5),
+      D => \R_reg0_reg[15]_0\(5),
+      Q => R_reg0(15),
       R => rst
     );
 \x__0_carry\: unisim.vcomponents.CARRY4
@@ -13588,13 +16505,12 @@ Q_new_carry: unisim.vcomponents.CARRY4
       DI(3) => \x__45_carry_i_1_n_0\,
       DI(2) => \x__45_carry_i_2_n_0\,
       DI(1) => \x__45_carry_i_3_n_0\,
-      DI(0) => R_reg0(0),
-      O(3 downto 1) => x(3 downto 1),
-      O(0) => \NLW_x__45_carry_O_UNCONNECTED\(0),
-      S(3) => \x__45_carry_i_4_n_0\,
-      S(2) => \x__45_carry_i_5_n_0\,
-      S(1) => \x__45_carry_i_6_n_0\,
-      S(0) => \x__45_carry_i_7_n_0\
+      DI(0) => \x__45_carry_i_4_n_0\,
+      O(3 downto 0) => x(4 downto 1),
+      S(3) => \x__45_carry_i_5_n_0\,
+      S(2) => \x__45_carry_i_6_n_0\,
+      S(1) => \x__45_carry_i_7_n_0\,
+      S(0) => \x__45_carry_i_8_n_0\
     );
 \x__45_carry__0\: unisim.vcomponents.CARRY4
      port map (
@@ -13608,94 +16524,135 @@ Q_new_carry: unisim.vcomponents.CARRY4
       DI(2) => \x__45_carry__0_i_2_n_0\,
       DI(1) => \x__45_carry__0_i_3_n_0\,
       DI(0) => \x__45_carry__0_i_4_n_0\,
-      O(3 downto 0) => x(7 downto 4),
+      O(3 downto 0) => x(8 downto 5),
       S(3) => \x__45_carry__0_i_5_n_0\,
       S(2) => \x__45_carry__0_i_6_n_0\,
       S(1) => \x__45_carry__0_i_7_n_0\,
       S(0) => \x__45_carry__0_i_8_n_0\
     );
-\x__45_carry__0_i_1\: unisim.vcomponents.LUT3
+\x__45_carry__0_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"B2"
+      INIT => X"2"
     )
         port map (
+<<<<<<< HEAD
+      I0 => Q_gamma(7),
+      I1 => \Q_act_reg_reg[1]_1\(7),
+=======
       I0 => R_reg0(14),
       I1 => \Q_act_reg_reg[1]_2\(6),
       I2 => Q_gamma(6),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__0_i_1_n_0\
     );
-\x__45_carry__0_i_2\: unisim.vcomponents.LUT3
+\x__45_carry__0_i_2\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"B2"
+      INIT => X"2"
     )
         port map (
+<<<<<<< HEAD
+      I0 => Q_gamma(6),
+      I1 => \Q_act_reg_reg[1]_1\(6),
+=======
       I0 => R_reg0(5),
       I1 => \Q_act_reg_reg[1]_2\(5),
       I2 => Q_gamma(5),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__0_i_2_n_0\
     );
-\x__45_carry__0_i_3\: unisim.vcomponents.LUT3
+\x__45_carry__0_i_3\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"B2"
+      INIT => X"2"
     )
         port map (
+<<<<<<< HEAD
+      I0 => Q_gamma(5),
+      I1 => \Q_act_reg_reg[1]_1\(5),
+=======
       I0 => R_reg0(4),
       I1 => \Q_act_reg_reg[1]_2\(4),
       I2 => Q_gamma(4),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__0_i_3_n_0\
     );
-\x__45_carry__0_i_4\: unisim.vcomponents.LUT3
+\x__45_carry__0_i_4\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"B2"
+      INIT => X"2"
     )
         port map (
+<<<<<<< HEAD
+      I0 => Q_gamma(4),
+      I1 => \Q_act_reg_reg[1]_1\(4),
+=======
       I0 => R_reg0(3),
       I1 => \Q_act_reg_reg[1]_2\(3),
       I2 => Q_gamma(3),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__0_i_4_n_0\
     );
 \x__45_carry__0_i_5\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"9669"
+      INIT => X"B44B"
     )
         port map (
       I0 => \Q_act_reg_reg[1]_2\(7),
       I1 => Q_gamma(7),
-      I2 => R_reg0(14),
-      I3 => \x__45_carry__0_i_1_n_0\,
+      I2 => Q_gamma(8),
+      I3 => \Q_act_reg_reg[1]_1\(8),
       O => \x__45_carry__0_i_5_n_0\
     );
 \x__45_carry__0_i_6\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"9669"
+      INIT => X"B44B"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \Q_act_reg_reg[1]_1\(6),
+      I1 => Q_gamma(6),
+      I2 => Q_gamma(7),
+      I3 => \Q_act_reg_reg[1]_1\(7),
+=======
       I0 => R_reg0(14),
       I1 => \Q_act_reg_reg[1]_2\(6),
       I2 => Q_gamma(6),
       I3 => \x__45_carry__0_i_2_n_0\,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__0_i_6_n_0\
     );
 \x__45_carry__0_i_7\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"9669"
+      INIT => X"B44B"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \Q_act_reg_reg[1]_1\(5),
+      I1 => Q_gamma(5),
+      I2 => Q_gamma(6),
+      I3 => \Q_act_reg_reg[1]_1\(6),
+=======
       I0 => R_reg0(5),
       I1 => \Q_act_reg_reg[1]_2\(5),
       I2 => Q_gamma(5),
       I3 => \x__45_carry__0_i_3_n_0\,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__0_i_7_n_0\
     );
 \x__45_carry__0_i_8\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"9669"
+      INIT => X"B44B"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \Q_act_reg_reg[1]_1\(4),
+      I1 => Q_gamma(4),
+      I2 => Q_gamma(5),
+      I3 => \Q_act_reg_reg[1]_1\(5),
+=======
       I0 => R_reg0(4),
       I1 => \Q_act_reg_reg[1]_2\(4),
       I2 => Q_gamma(4),
       I3 => \x__45_carry__0_i_4_n_0\,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__0_i_8_n_0\
     );
 \x__45_carry__1\: unisim.vcomponents.CARRY4
@@ -13710,7 +16667,7 @@ Q_new_carry: unisim.vcomponents.CARRY4
       DI(2) => \x__45_carry__1_i_2_n_0\,
       DI(1) => \x__45_carry__1_i_3_n_0\,
       DI(0) => \x__45_carry__1_i_4_n_0\,
-      O(3 downto 0) => x(11 downto 8),
+      O(3 downto 0) => x(12 downto 9),
       S(3) => \x__45_carry__1_i_5_n_0\,
       S(2) => \x__45_carry__1_i_6_n_0\,
       S(1) => \x__45_carry__1_i_7_n_0\,
@@ -13718,42 +16675,64 @@ Q_new_carry: unisim.vcomponents.CARRY4
     );
 \x__45_carry__1_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"D4"
+      INIT => X"B2"
     )
         port map (
+<<<<<<< HEAD
+      I0 => R_reg0(11),
+      I1 => \Q_act_reg_reg[1]_1\(11),
+      I2 => Q_gamma(11),
+=======
       I0 => \Q_act_reg_reg[1]_2\(10),
       I1 => Q_gamma(10),
       I2 => R_reg0(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__1_i_1_n_0\
     );
 \x__45_carry__1_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"D4"
+      INIT => X"B2"
     )
         port map (
+<<<<<<< HEAD
+      I0 => R_reg0(10),
+      I1 => \Q_act_reg_reg[1]_1\(10),
+      I2 => Q_gamma(10),
+=======
       I0 => \Q_act_reg_reg[1]_2\(9),
       I1 => Q_gamma(9),
       I2 => R_reg0(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__1_i_2_n_0\
     );
-\x__45_carry__1_i_3\: unisim.vcomponents.LUT3
+\x__45_carry__1_i_3\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"D4"
+      INIT => X"2"
     )
         port map (
+<<<<<<< HEAD
+      I0 => Q_gamma(9),
+      I1 => \Q_act_reg_reg[1]_1\(9),
+=======
       I0 => \Q_act_reg_reg[1]_2\(8),
       I1 => Q_gamma(8),
       I2 => R_reg0(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__1_i_3_n_0\
     );
-\x__45_carry__1_i_4\: unisim.vcomponents.LUT3
+\x__45_carry__1_i_4\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"D4"
+      INIT => X"2"
     )
         port map (
+<<<<<<< HEAD
+      I0 => Q_gamma(8),
+      I1 => \Q_act_reg_reg[1]_1\(8),
+=======
       I0 => \Q_act_reg_reg[1]_2\(7),
       I1 => Q_gamma(7),
       I2 => R_reg0(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__1_i_4_n_0\
     );
 \x__45_carry__1_i_5\: unisim.vcomponents.LUT4
@@ -13761,9 +16740,15 @@ Q_new_carry: unisim.vcomponents.CARRY4
       INIT => X"9669"
     )
         port map (
+<<<<<<< HEAD
+      I0 => R_reg0(12),
+      I1 => \Q_act_reg_reg[1]_1\(12),
+      I2 => Q_gamma(12),
+=======
       I0 => \Q_act_reg_reg[1]_2\(11),
       I1 => Q_gamma(11),
       I2 => R_reg0(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => \x__45_carry__1_i_1_n_0\,
       O => \x__45_carry__1_i_5_n_0\
     );
@@ -13772,9 +16757,15 @@ Q_new_carry: unisim.vcomponents.CARRY4
       INIT => X"9669"
     )
         port map (
+<<<<<<< HEAD
+      I0 => R_reg0(11),
+      I1 => \Q_act_reg_reg[1]_1\(11),
+      I2 => Q_gamma(11),
+=======
       I0 => \Q_act_reg_reg[1]_2\(10),
       I1 => Q_gamma(10),
       I2 => R_reg0(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => \x__45_carry__1_i_2_n_0\,
       O => \x__45_carry__1_i_6_n_0\
     );
@@ -13783,81 +16774,121 @@ Q_new_carry: unisim.vcomponents.CARRY4
       INIT => X"9669"
     )
         port map (
+<<<<<<< HEAD
+      I0 => R_reg0(10),
+      I1 => \Q_act_reg_reg[1]_1\(10),
+      I2 => Q_gamma(10),
+=======
       I0 => \Q_act_reg_reg[1]_2\(9),
       I1 => Q_gamma(9),
       I2 => R_reg0(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => \x__45_carry__1_i_3_n_0\,
       O => \x__45_carry__1_i_7_n_0\
     );
 \x__45_carry__1_i_8\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"9669"
+      INIT => X"9699"
     )
         port map (
+<<<<<<< HEAD
+      I0 => Q_gamma(9),
+      I1 => \Q_act_reg_reg[1]_1\(9),
+      I2 => \Q_act_reg_reg[1]_1\(8),
+      I3 => Q_gamma(8),
+=======
       I0 => \Q_act_reg_reg[1]_2\(8),
       I1 => Q_gamma(8),
       I2 => R_reg0(14),
       I3 => \x__45_carry__1_i_4_n_0\,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__1_i_8_n_0\
     );
 \x__45_carry__2\: unisim.vcomponents.CARRY4
      port map (
       CI => \x__45_carry__1_n_0\,
-      CO(3) => \NLW_x__45_carry__2_CO_UNCONNECTED\(3),
-      CO(2) => \x__45_carry__2_n_1\,
+      CO(3 downto 2) => \NLW_x__45_carry__2_CO_UNCONNECTED\(3 downto 2),
       CO(1) => \x__45_carry__2_n_2\,
       CO(0) => \x__45_carry__2_n_3\,
       CYINIT => '0',
-      DI(3) => '0',
-      DI(2) => \x__45_carry__2_i_1_n_0\,
-      DI(1) => \x__45_carry__2_i_2_n_0\,
-      DI(0) => \x__45_carry__2_i_3_n_0\,
-      O(3 downto 0) => x(15 downto 12),
-      S(3) => \x__45_carry__2_i_4_n_0\,
-      S(2) => \x__45_carry__2_i_5_n_0\,
-      S(1) => \x__45_carry__2_i_6_n_0\,
-      S(0) => \x__45_carry__2_i_7_n_0\
+      DI(3 downto 2) => B"00",
+      DI(1) => \x__45_carry__2_i_1_n_0\,
+      DI(0) => \x__45_carry__2_i_2_n_0\,
+      O(3) => \NLW_x__45_carry__2_O_UNCONNECTED\(3),
+      O(2 downto 0) => x(15 downto 13),
+      S(3) => '0',
+      S(2) => \x__45_carry__2_i_3_n_0\,
+      S(1) => \x__45_carry__2_i_4_n_0\,
+      S(0) => \x__45_carry__2_i_5_n_0\
     );
 \x__45_carry__2_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"D4"
+      INIT => X"B2"
     )
         port map (
+<<<<<<< HEAD
+      I0 => R_reg0(13),
+      I1 => \Q_act_reg_reg[1]_1\(13),
+      I2 => Q_gamma(13),
+=======
       I0 => \Q_act_reg_reg[1]_2\(13),
       I1 => Q_gamma(13),
       I2 => R_reg0(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__2_i_1_n_0\
     );
 \x__45_carry__2_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"D4"
+      INIT => X"B2"
     )
         port map (
+<<<<<<< HEAD
+      I0 => R_reg0(12),
+      I1 => \Q_act_reg_reg[1]_1\(12),
+      I2 => Q_gamma(12),
+=======
       I0 => \Q_act_reg_reg[1]_2\(12),
       I1 => Q_gamma(12),
       I2 => R_reg0(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__2_i_2_n_0\
     );
-\x__45_carry__2_i_3\: unisim.vcomponents.LUT3
+\x__45_carry__2_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"D4"
+      INIT => X"9669969669699669"
     )
         port map (
+<<<<<<< HEAD
+      I0 => R_reg0(15),
+      I1 => \Q_act_reg_reg[1]_1\(15),
+      I2 => Q_gamma(15),
+      I3 => R_reg0(14),
+      I4 => \Q_act_reg_reg[1]_1\(14),
+      I5 => Q_gamma(14),
+=======
       I0 => \Q_act_reg_reg[1]_2\(11),
       I1 => Q_gamma(11),
       I2 => R_reg0(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__2_i_3_n_0\
     );
-\x__45_carry__2_i_4\: unisim.vcomponents.LUT5
+\x__45_carry__2_i_4\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"96999969"
+      INIT => X"9669"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \x__45_carry__2_i_1_n_0\,
+      I1 => R_reg0(14),
+      I2 => \Q_act_reg_reg[1]_1\(14),
+      I3 => Q_gamma(14),
+=======
       I0 => \Q_act_reg_reg[1]_2\(15),
       I1 => Q_gamma(15),
       I2 => Q_gamma(14),
       I3 => \Q_act_reg_reg[1]_2\(14),
       I4 => R_reg0(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__2_i_4_n_0\
     );
 \x__45_carry__2_i_5\: unisim.vcomponents.LUT4
@@ -13865,17 +16896,28 @@ Q_new_carry: unisim.vcomponents.CARRY4
       INIT => X"9669"
     )
         port map (
+<<<<<<< HEAD
+      I0 => R_reg0(13),
+      I1 => \Q_act_reg_reg[1]_1\(13),
+      I2 => Q_gamma(13),
+      I3 => \x__45_carry__2_i_2_n_0\,
+=======
       I0 => \x__45_carry__2_i_1_n_0\,
       I1 => Q_gamma(14),
       I2 => \Q_act_reg_reg[1]_2\(14),
       I3 => R_reg0(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry__2_i_5_n_0\
     );
-\x__45_carry__2_i_6\: unisim.vcomponents.LUT4
+\x__45_carry_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"9669"
+      INIT => X"2"
     )
         port map (
+<<<<<<< HEAD
+      I0 => Q_gamma(3),
+      I1 => \Q_act_reg_reg[1]_1\(3),
+=======
       I0 => \Q_act_reg_reg[1]_2\(13),
       I1 => Q_gamma(13),
       I2 => R_reg0(14),
@@ -13901,24 +16943,42 @@ Q_new_carry: unisim.vcomponents.CARRY4
       I0 => R_reg0(2),
       I1 => \Q_act_reg_reg[1]_2\(2),
       I2 => Q_gamma(2),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry_i_1_n_0\
     );
-\x__45_carry_i_2\: unisim.vcomponents.LUT3
+\x__45_carry_i_2\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"B2"
+      INIT => X"2"
     )
         port map (
+<<<<<<< HEAD
+      I0 => Q_gamma(2),
+      I1 => \Q_act_reg_reg[1]_1\(2),
+=======
       I0 => R_reg0(1),
       I1 => \Q_act_reg_reg[1]_2\(1),
       I2 => Q_gamma(1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry_i_2_n_0\
     );
 \x__45_carry_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => Q_gamma(1),
+      I1 => \Q_act_reg_reg[1]_1\(1),
+      O => \x__45_carry_i_3_n_0\
+    );
+\x__45_carry_i_4\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"B"
     )
         port map (
       I0 => Q_gamma(0),
+<<<<<<< HEAD
+      I1 => \Q_act_reg_reg[1]_1\(0),
+=======
       I1 => \Q_act_reg_reg[1]_2\(0),
       O => \x__45_carry_i_3_n_0\
     );
@@ -13931,39 +16991,72 @@ Q_new_carry: unisim.vcomponents.CARRY4
       I1 => \Q_act_reg_reg[1]_2\(3),
       I2 => Q_gamma(3),
       I3 => \x__45_carry_i_1_n_0\,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry_i_4_n_0\
     );
 \x__45_carry_i_5\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"9669"
+      INIT => X"B44B"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \Q_act_reg_reg[1]_1\(3),
+      I1 => Q_gamma(3),
+      I2 => Q_gamma(4),
+      I3 => \Q_act_reg_reg[1]_1\(4),
+=======
       I0 => R_reg0(2),
       I1 => \Q_act_reg_reg[1]_2\(2),
       I2 => Q_gamma(2),
       I3 => \x__45_carry_i_2_n_0\,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry_i_5_n_0\
     );
 \x__45_carry_i_6\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"9669"
+      INIT => X"B44B"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \Q_act_reg_reg[1]_1\(2),
+      I1 => Q_gamma(2),
+      I2 => Q_gamma(3),
+      I3 => \Q_act_reg_reg[1]_1\(3),
+=======
       I0 => R_reg0(1),
       I1 => \Q_act_reg_reg[1]_2\(1),
       I2 => Q_gamma(1),
       I3 => \x__45_carry_i_3_n_0\,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry_i_6_n_0\
     );
-\x__45_carry_i_7\: unisim.vcomponents.LUT3
+\x__45_carry_i_7\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"96"
+      INIT => X"B44B"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \Q_act_reg_reg[1]_1\(1),
+      I1 => Q_gamma(1),
+      I2 => Q_gamma(2),
+      I3 => \Q_act_reg_reg[1]_1\(2),
+=======
       I0 => Q_gamma(0),
       I1 => \Q_act_reg_reg[1]_2\(0),
       I2 => R_reg0(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \x__45_carry_i_7_n_0\
+    );
+\x__45_carry_i_8\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"2DD2"
+    )
+        port map (
+      I0 => \Q_act_reg_reg[1]_1\(0),
+      I1 => Q_gamma(0),
+      I2 => Q_gamma(1),
+      I3 => \Q_act_reg_reg[1]_1\(1),
+      O => \x__45_carry_i_8_n_0\
     );
 \x_reg0_reg[10]\: unisim.vcomponents.FDRE
      port map (
@@ -14092,6 +17185,68 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_level_Intellight_Accelerat_0_0_AGENT is
   port (
+<<<<<<< HEAD
+    D : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    O : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \Q_act_reg_reg[2][7]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \Q_act_reg_reg[2][11]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \Q_act_reg_reg[2][14]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    DI : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    SD_0_L3 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    SD_0_L2 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    SD_0_L1 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    S : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    SD_0_L0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[0][3]\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \L_curr_reg[0][3]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    rd_addr : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    \slv_reg7_reg[4]\ : out STD_LOGIC;
+    \slv_reg3_reg[4]\ : out STD_LOGIC;
+    \slv_reg3_reg[5]\ : out STD_LOGIC;
+    \slv_reg7_reg[14]\ : out STD_LOGIC;
+    \A_road_reg[1]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \slv_reg3_reg[6]\ : out STD_LOGIC;
+    \slv_reg6_reg[4]\ : out STD_LOGIC;
+    \r_lsfr_reg[2]\ : out STD_LOGIC;
+    \r_lsfr_reg[1]\ : out STD_LOGIC;
+    \slv_reg4_reg[4]\ : out STD_LOGIC;
+    \slv_reg4_reg[5]\ : out STD_LOGIC;
+    \slv_reg4_reg[6]\ : out STD_LOGIC;
+    \slv_reg5_reg[4]\ : out STD_LOGIC;
+    \slv_reg5_reg[5]\ : out STD_LOGIC;
+    \slv_reg7_reg[1]\ : out STD_LOGIC;
+    \slv_reg7_reg[7]\ : out STD_LOGIC;
+    \slv_reg5_reg[6]\ : out STD_LOGIC;
+    rst : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    \L_curr_reg[0][3]_1\ : in STD_LOGIC;
+    \L_curr_reg[0][3]_2\ : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \rd_addr[10]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    \x__0_carry__2\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    \L_curr_reg[0][1]\ : in STD_LOGIC;
+    \L_curr_reg[0][2]\ : in STD_LOGIC;
+    \L_curr_reg[0][3]_3\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \L_curr_reg[3][3]\ : in STD_LOGIC;
+    \L_curr_reg[3][3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[3][1]\ : in STD_LOGIC;
+    \L_curr_reg[3][2]\ : in STD_LOGIC;
+    \L_curr_reg[3][3]_1\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \L_curr_reg[1][3]\ : in STD_LOGIC;
+    \L_curr_reg[1][3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[1][3]_1\ : in STD_LOGIC;
+    \L_curr_reg[1][1]\ : in STD_LOGIC;
+    \L_curr_reg[1][2]\ : in STD_LOGIC;
+    \L_curr_reg[1][3]_2\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \L_curr_reg[2][3]\ : in STD_LOGIC;
+    \L_curr_reg[2][3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \L_curr_reg[2][3]_1\ : in STD_LOGIC;
+    \L_curr_reg[2][1]\ : in STD_LOGIC;
+    \L_curr_reg[2][2]\ : in STD_LOGIC;
+    \L_curr_reg[2][3]_2\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \R0__2_carry__0_i_9\ : in STD_LOGIC;
+    \rd_addr[4]_INST_0_i_3\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
+=======
     AGENT_0_Q_new : out STD_LOGIC_VECTOR ( 15 downto 0 );
     D : out STD_LOGIC_VECTOR ( 6 downto 0 );
     SD_0_L1 : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -14153,20 +17308,30 @@ entity top_level_Intellight_Accelerat_0_0_AGENT is
     \R[2]_i_6_0\ : in STD_LOGIC;
     \rd_addr[3]_INST_0_i_3\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     D_road2 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+>>>>>>> parent of ae750207 (shfcuidtf7)
     D_road0 : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    D_road3 : in STD_LOGIC_VECTOR ( 63 downto 0 );
     D_road1 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+<<<<<<< HEAD
+    D_road2 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    D_road3 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    \A_reg_reg[0][3]\ : in STD_LOGIC;
+    \R_reg0_reg[15]\ : in STD_LOGIC_VECTOR ( 5 downto 0 )
+=======
     rst : in STD_LOGIC;
     \A_reg_reg[0][2]\ : in STD_LOGIC;
     clk : in STD_LOGIC;
     \R_reg0_reg[14]\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
+>>>>>>> parent of ae750207 (shfcuidtf7)
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of top_level_Intellight_Accelerat_0_0_AGENT : entity is "AGENT";
 end top_level_Intellight_Accelerat_0_0_AGENT;
 
 architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_AGENT is
+<<<<<<< HEAD
+=======
   signal AGENT_0_A : STD_LOGIC_VECTOR ( 1 to 1 );
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal \A_dur_gred1_carry__0_i_1_n_0\ : STD_LOGIC;
   signal \A_dur_gred1_carry__0_i_2_n_0\ : STD_LOGIC;
   signal \A_dur_gred1_carry__0_n_2\ : STD_LOGIC;
@@ -14208,6 +17373,12 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_AGENT is
   signal A_dur_gred3_carry_n_1 : STD_LOGIC;
   signal A_dur_gred3_carry_n_2 : STD_LOGIC;
   signal A_dur_gred3_carry_n_3 : STD_LOGIC;
+<<<<<<< HEAD
+  signal \^a_road_reg[1]_0\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \^d\ : STD_LOGIC_VECTOR ( 63 downto 0 );
+  signal D_sel : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \L_curr[3][1]_i_2_n_0\ : STD_LOGIC;
+=======
   signal D_sel : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \L_curr[0][1]_i_5_n_0\ : STD_LOGIC;
   signal \L_curr[1][1]_i_4_n_0\ : STD_LOGIC;
@@ -14219,6 +17390,7 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_AGENT is
   signal \^l_curr_reg[2][1]\ : STD_LOGIC;
   signal \^l_curr_reg[2][3]\ : STD_LOGIC;
   signal \^l_curr_reg[3][3]\ : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal QA_0_n_16 : STD_LOGIC;
   signal QA_0_n_17 : STD_LOGIC;
   signal QA_0_n_18 : STD_LOGIC;
@@ -14290,6 +17462,9 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_AGENT is
   signal Q_max : STD_LOGIC_VECTOR ( 15 to 15 );
   signal \Q_max__0\ : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal Q_max_temp : STD_LOGIC_VECTOR ( 15 downto 0 );
+<<<<<<< HEAD
+  signal \R0__2_carry__0_i_15_n_0\ : STD_LOGIC;
+=======
   signal \R[14]_i_21_n_0\ : STD_LOGIC;
   signal \R[14]_i_26_n_0\ : STD_LOGIC;
   signal \R[14]_i_27_n_0\ : STD_LOGIC;
@@ -14302,6 +17477,7 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_AGENT is
   signal \R[2]_i_15_n_0\ : STD_LOGIC;
   signal \R[2]_i_16_n_0\ : STD_LOGIC;
   signal \R[2]_i_18_n_0\ : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal \genblk1[0].Q_reg[0][0][0]_i_1_n_0\ : STD_LOGIC;
   signal \genblk1[0].Q_reg[0][0][10]_i_1_n_0\ : STD_LOGIC;
   signal \genblk1[0].Q_reg[0][0][11]_i_1_n_0\ : STD_LOGIC;
@@ -14318,10 +17494,61 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_AGENT is
   signal \genblk1[0].Q_reg[0][0][7]_i_1_n_0\ : STD_LOGIC;
   signal \genblk1[0].Q_reg[0][0][8]_i_1_n_0\ : STD_LOGIC;
   signal \genblk1[0].Q_reg[0][0][9]_i_1_n_0\ : STD_LOGIC;
+<<<<<<< HEAD
+  signal \genblk1[1].Q_reg[1][0][0]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][10]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][11]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][12]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][13]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][14]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][15]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][1]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][2]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][3]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][4]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][5]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][6]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][7]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][8]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[1].Q_reg[1][0][9]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][0]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][10]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][11]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][12]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][13]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][14]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][15]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][1]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][2]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][3]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][4]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][5]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][6]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][7]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][8]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[2].Q_reg[2][0][9]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][0]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][10]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][11]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][12]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][13]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][14]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][15]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][1]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][2]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][3]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][4]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][5]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][6]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][7]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][8]_i_1_n_0\ : STD_LOGIC;
+  signal \genblk1[3].Q_reg[3][0][9]_i_1_n_0\ : STD_LOGIC;
+=======
   signal \genblk1[0].Q_reg_reg[0][0]_6\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \genblk1[1].Q_reg_reg[1][0]_5\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \genblk1[2].Q_reg_reg[2][0]_4\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \genblk1[3].Q_reg_reg[3][0]_7\ : STD_LOGIC_VECTOR ( 15 downto 0 );
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal \i__carry__0_i_1__1_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_2__0_n_0\ : STD_LOGIC;
   signal \i__carry_i_1__0_n_0\ : STD_LOGIC;
@@ -14329,6 +17556,22 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_AGENT is
   signal \i__carry_i_3__0_n_0\ : STD_LOGIC;
   signal \i__carry_i_4__0_n_0\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC;
+<<<<<<< HEAD
+  signal \rd_addr[10]_INST_0_i_5_n_0\ : STD_LOGIC;
+  signal \rd_addr[10]_INST_0_i_6_n_0\ : STD_LOGIC;
+  signal \rd_addr[10]_INST_0_i_7_n_0\ : STD_LOGIC;
+  signal \rd_addr[10]_INST_0_i_9_n_0\ : STD_LOGIC;
+  signal \rd_addr[3]_INST_0_i_5_n_0\ : STD_LOGIC;
+  signal \rd_addr[4]_INST_0_i_5_n_0\ : STD_LOGIC;
+  signal \rd_addr[4]_INST_0_i_7_n_0\ : STD_LOGIC;
+  signal \rd_addr[5]_INST_0_i_5_n_0\ : STD_LOGIC;
+  signal \rd_addr[6]_INST_0_i_5_n_0\ : STD_LOGIC;
+  signal \rd_addr[6]_INST_0_i_7_n_0\ : STD_LOGIC;
+  signal \rd_addr[7]_INST_0_i_5_n_0\ : STD_LOGIC;
+  signal \rd_addr[8]_INST_0_i_5_n_0\ : STD_LOGIC;
+  signal \rd_addr[8]_INST_0_i_7_n_0\ : STD_LOGIC;
+  signal \rd_addr[9]_INST_0_i_6_n_0\ : STD_LOGIC;
+=======
   signal \^r_lsfr_reg[1]\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \rd_addr[3]_INST_0_i_5_n_0\ : STD_LOGIC;
   signal \rd_addr[3]_INST_0_i_6_n_0\ : STD_LOGIC;
@@ -14348,13 +17591,28 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_AGENT is
   signal \rd_addr[9]_INST_0_i_5_n_0\ : STD_LOGIC;
   signal \rd_addr[9]_INST_0_i_7_n_0\ : STD_LOGIC;
   signal \rd_addr[9]_INST_0_i_9_n_0\ : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal \^slv_reg3_reg[4]\ : STD_LOGIC;
+  signal \^slv_reg3_reg[5]\ : STD_LOGIC;
+  signal \^slv_reg3_reg[6]\ : STD_LOGIC;
   signal \^slv_reg4_reg[4]\ : STD_LOGIC;
+<<<<<<< HEAD
+  signal \^slv_reg4_reg[5]\ : STD_LOGIC;
+  signal \^slv_reg4_reg[6]\ : STD_LOGIC;
+  signal \^slv_reg5_reg[4]\ : STD_LOGIC;
+  signal \^slv_reg5_reg[5]\ : STD_LOGIC;
+  signal \^slv_reg5_reg[6]\ : STD_LOGIC;
+  signal \^slv_reg6_reg[4]\ : STD_LOGIC;
+  signal \^slv_reg7_reg[14]\ : STD_LOGIC;
+  signal \^slv_reg7_reg[1]\ : STD_LOGIC;
+  signal \^slv_reg7_reg[4]\ : STD_LOGIC;
+=======
   signal \^slv_reg5_reg[0]\ : STD_LOGIC;
   signal \^slv_reg6_reg[4]\ : STD_LOGIC;
   signal \^slv_reg7_reg[12]\ : STD_LOGIC;
   signal \^slv_reg7_reg[13]\ : STD_LOGIC;
   signal \^slv_reg7_reg[6]\ : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal \^slv_reg7_reg[7]\ : STD_LOGIC;
   signal \temp01_carry__0_i_1_n_0\ : STD_LOGIC;
   signal \temp01_carry__0_i_2_n_0\ : STD_LOGIC;
@@ -14377,6 +17635,13 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_AGENT is
   signal \NLW_A_dur_gred3_carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   signal \NLW_A_dur_gred3_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute SOFT_HLUTNM : string;
+<<<<<<< HEAD
+  attribute SOFT_HLUTNM of \A_road[0]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \A_road[1]_i_1\ : label is "soft_lutpair31";
+begin
+  \A_road_reg[1]_0\(1 downto 0) <= \^a_road_reg[1]_0\(1 downto 0);
+  D(63 downto 0) <= \^d\(63 downto 0);
+=======
   attribute SOFT_HLUTNM of \A_road[0]_i_1\ : label is "soft_lutpair33";
   attribute SOFT_HLUTNM of \A_road[1]_i_1\ : label is "soft_lutpair33";
   attribute SOFT_HLUTNM of \R[14]_i_21\ : label is "soft_lutpair28";
@@ -14407,13 +17672,28 @@ begin
   \L_curr_reg[2][3]\ <= \^l_curr_reg[2][3]\;
   \L_curr_reg[3][3]\ <= \^l_curr_reg[3][3]\;
   \r_lsfr_reg[1]\(1 downto 0) <= \^r_lsfr_reg[1]\(1 downto 0);
+>>>>>>> parent of ae750207 (shfcuidtf7)
   \slv_reg3_reg[4]\ <= \^slv_reg3_reg[4]\;
+  \slv_reg3_reg[5]\ <= \^slv_reg3_reg[5]\;
+  \slv_reg3_reg[6]\ <= \^slv_reg3_reg[6]\;
   \slv_reg4_reg[4]\ <= \^slv_reg4_reg[4]\;
+<<<<<<< HEAD
+  \slv_reg4_reg[5]\ <= \^slv_reg4_reg[5]\;
+  \slv_reg4_reg[6]\ <= \^slv_reg4_reg[6]\;
+  \slv_reg5_reg[4]\ <= \^slv_reg5_reg[4]\;
+  \slv_reg5_reg[5]\ <= \^slv_reg5_reg[5]\;
+  \slv_reg5_reg[6]\ <= \^slv_reg5_reg[6]\;
+  \slv_reg6_reg[4]\ <= \^slv_reg6_reg[4]\;
+  \slv_reg7_reg[14]\ <= \^slv_reg7_reg[14]\;
+  \slv_reg7_reg[1]\ <= \^slv_reg7_reg[1]\;
+  \slv_reg7_reg[4]\ <= \^slv_reg7_reg[4]\;
+=======
   \slv_reg5_reg[0]\ <= \^slv_reg5_reg[0]\;
   \slv_reg6_reg[4]\ <= \^slv_reg6_reg[4]\;
   \slv_reg7_reg[12]\ <= \^slv_reg7_reg[12]\;
   \slv_reg7_reg[13]\ <= \^slv_reg7_reg[13]\;
   \slv_reg7_reg[6]\ <= \^slv_reg7_reg[6]\;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   \slv_reg7_reg[7]\ <= \^slv_reg7_reg[7]\;
 A_dur_gred1_carry: unisim.vcomponents.CARRY4
      port map (
@@ -14459,10 +17739,17 @@ A_dur_gred1_carry: unisim.vcomponents.CARRY4
         port map (
       I0 => \genblk1[0].Q_reg_reg[0][0]_6\(14),
       I1 => \Q_max__0\(14),
+<<<<<<< HEAD
+      I2 => \^d\(13),
+      I3 => \Q_max__0\(13),
+      I4 => \Q_max__0\(12),
+      I5 => \^d\(12),
+=======
       I2 => \genblk1[0].Q_reg_reg[0][0]_6\(12),
       I3 => \Q_max__0\(12),
       I4 => \Q_max__0\(13),
       I5 => \genblk1[0].Q_reg_reg[0][0]_6\(13),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \A_dur_gred1_carry__0_i_2_n_0\
     );
 A_dur_gred1_carry_i_1: unisim.vcomponents.LUT6
@@ -14498,10 +17785,17 @@ A_dur_gred1_carry_i_3: unisim.vcomponents.LUT6
         port map (
       I0 => \genblk1[0].Q_reg_reg[0][0]_6\(5),
       I1 => \Q_max__0\(5),
+<<<<<<< HEAD
+      I2 => \^d\(4),
+      I3 => \Q_max__0\(4),
+      I4 => \Q_max__0\(3),
+      I5 => \^d\(3),
+=======
       I2 => \genblk1[0].Q_reg_reg[0][0]_6\(4),
       I3 => \Q_max__0\(4),
       I4 => \Q_max__0\(3),
       I5 => \genblk1[0].Q_reg_reg[0][0]_6\(3),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => A_dur_gred1_carry_i_3_n_0
     );
 A_dur_gred1_carry_i_4: unisim.vcomponents.LUT6
@@ -14511,10 +17805,17 @@ A_dur_gred1_carry_i_4: unisim.vcomponents.LUT6
         port map (
       I0 => \genblk1[0].Q_reg_reg[0][0]_6\(2),
       I1 => \Q_max__0\(2),
+<<<<<<< HEAD
+      I2 => \^d\(0),
+      I3 => \Q_max__0\(0),
+      I4 => \Q_max__0\(1),
+      I5 => \^d\(1),
+=======
       I2 => \genblk1[0].Q_reg_reg[0][0]_6\(1),
       I3 => \Q_max__0\(1),
       I4 => \Q_max__0\(0),
       I5 => \genblk1[0].Q_reg_reg[0][0]_6\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => A_dur_gred1_carry_i_4_n_0
     );
 A_dur_gred2_carry: unisim.vcomponents.CARRY4
@@ -14561,10 +17862,17 @@ A_dur_gred2_carry: unisim.vcomponents.CARRY4
         port map (
       I0 => \genblk1[1].Q_reg_reg[1][0]_5\(14),
       I1 => \Q_max__0\(14),
+<<<<<<< HEAD
+      I2 => \^d\(28),
+      I3 => \Q_max__0\(12),
+      I4 => \Q_max__0\(13),
+      I5 => \^d\(29),
+=======
       I2 => \genblk1[1].Q_reg_reg[1][0]_5\(12),
       I3 => \Q_max__0\(12),
       I4 => \Q_max__0\(13),
       I5 => \genblk1[1].Q_reg_reg[1][0]_5\(13),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \A_dur_gred2_carry__0_i_2_n_0\
     );
 A_dur_gred2_carry_i_1: unisim.vcomponents.LUT6
@@ -14574,10 +17882,17 @@ A_dur_gred2_carry_i_1: unisim.vcomponents.LUT6
         port map (
       I0 => \genblk1[1].Q_reg_reg[1][0]_5\(11),
       I1 => \Q_max__0\(11),
+<<<<<<< HEAD
+      I2 => \^d\(26),
+      I3 => \Q_max__0\(10),
+      I4 => \Q_max__0\(9),
+      I5 => \^d\(25),
+=======
       I2 => \genblk1[1].Q_reg_reg[1][0]_5\(9),
       I3 => \Q_max__0\(9),
       I4 => \Q_max__0\(10),
       I5 => \genblk1[1].Q_reg_reg[1][0]_5\(10),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => A_dur_gred2_carry_i_1_n_0
     );
 A_dur_gred2_carry_i_2: unisim.vcomponents.LUT6
@@ -14600,10 +17915,17 @@ A_dur_gred2_carry_i_3: unisim.vcomponents.LUT6
         port map (
       I0 => \genblk1[1].Q_reg_reg[1][0]_5\(5),
       I1 => \Q_max__0\(5),
+<<<<<<< HEAD
+      I2 => \^d\(20),
+      I3 => \Q_max__0\(4),
+      I4 => \Q_max__0\(3),
+      I5 => \^d\(19),
+=======
       I2 => \genblk1[1].Q_reg_reg[1][0]_5\(4),
       I3 => \Q_max__0\(4),
       I4 => \Q_max__0\(3),
       I5 => \genblk1[1].Q_reg_reg[1][0]_5\(3),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => A_dur_gred2_carry_i_3_n_0
     );
 A_dur_gred2_carry_i_4: unisim.vcomponents.LUT6
@@ -14613,10 +17935,17 @@ A_dur_gred2_carry_i_4: unisim.vcomponents.LUT6
         port map (
       I0 => \genblk1[1].Q_reg_reg[1][0]_5\(2),
       I1 => \Q_max__0\(2),
+<<<<<<< HEAD
+      I2 => \^d\(17),
+      I3 => \Q_max__0\(1),
+      I4 => \Q_max__0\(0),
+      I5 => \^d\(16),
+=======
       I2 => \genblk1[1].Q_reg_reg[1][0]_5\(0),
       I3 => \Q_max__0\(0),
       I4 => \Q_max__0\(1),
       I5 => \genblk1[1].Q_reg_reg[1][0]_5\(1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => A_dur_gred2_carry_i_4_n_0
     );
 \A_dur_gred2_inferred__0/i__carry\: unisim.vcomponents.CARRY4
@@ -14754,7 +18083,11 @@ A_dur_gred3_carry_i_4: unisim.vcomponents.LUT6
       INIT => X"1"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \^a_road_reg[1]_0\(0),
+=======
       I0 => \^r_lsfr_reg[1]\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_sel(0)
     );
 \A_road[1]_i_1\: unisim.vcomponents.LUT2
@@ -14762,8 +18095,13 @@ A_dur_gred3_carry_i_4: unisim.vcomponents.LUT6
       INIT => X"6"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \^a_road_reg[1]_0\(1),
+      I1 => \^a_road_reg[1]_0\(0),
+=======
       I0 => AGENT_0_A(1),
       I1 => \^r_lsfr_reg[1]\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => D_sel(1)
     );
 \A_road_reg[0]\: unisim.vcomponents.FDRE
@@ -14771,7 +18109,11 @@ A_dur_gred3_carry_i_4: unisim.vcomponents.LUT6
       C => clk,
       CE => '1',
       D => D_sel(0),
+<<<<<<< HEAD
+      Q => \^a_road_reg[1]_0\(0),
+=======
       Q => \^r_lsfr_reg[1]\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \A_road_reg[1]\: unisim.vcomponents.FDRE
@@ -14779,14 +18121,27 @@ A_dur_gred3_carry_i_4: unisim.vcomponents.LUT6
       C => clk,
       CE => '1',
       D => D_sel(1),
+<<<<<<< HEAD
+      Q => \^a_road_reg[1]_0\(1),
+=======
       Q => AGENT_0_A(1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \L_curr[0][0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"55000F3355FF0F33"
+      INIT => X"3300550F33FF550F"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \rd_addr[4]_INST_0_i_3\(4),
+      I1 => \rd_addr[4]_INST_0_i_3\(12),
+      I2 => \rd_addr[4]_INST_0_i_3\(0),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \rd_addr[4]_INST_0_i_3\(8),
+      O => \^slv_reg7_reg[4]\
+=======
       I0 => \rd_addr[3]_INST_0_i_3\(12),
       I1 => \rd_addr[3]_INST_0_i_3\(0),
       I2 => \rd_addr[3]_INST_0_i_3\(4),
@@ -14794,18 +18149,28 @@ A_dur_gred3_carry_i_4: unisim.vcomponents.LUT6
       I4 => AGENT_0_A(1),
       I5 => \rd_addr[3]_INST_0_i_3\(8),
       O => \^slv_reg7_reg[12]\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \L_curr[0][0]_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3300550F33FF550F"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \L_curr_reg[0][3]_3\(4),
+      I1 => \L_curr_reg[0][3]_3\(12),
+      I2 => \L_curr_reg[0][3]_3\(0),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[0][3]_3\(8),
+=======
       I0 => \L_curr_reg[0][3]_2\(4),
       I1 => \L_curr_reg[0][3]_2\(12),
       I2 => \L_curr_reg[0][3]_2\(0),
       I3 => \^r_lsfr_reg[1]\(0),
       I4 => AGENT_0_A(1),
       I5 => \L_curr_reg[0][3]_2\(8),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \^slv_reg3_reg[4]\
     );
 \L_curr[0][1]_i_3\: unisim.vcomponents.LUT6
@@ -14813,6 +18178,15 @@ A_dur_gred3_carry_i_4: unisim.vcomponents.LUT6
       INIT => X"55330F0055330FFF"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \L_curr_reg[0][3]_3\(5),
+      I1 => \L_curr_reg[0][3]_3\(13),
+      I2 => \L_curr_reg[0][3]_3\(1),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[0][3]_3\(9),
+      O => \^slv_reg3_reg[5]\
+=======
       I0 => \rd_addr[3]_INST_0_i_3\(13),
       I1 => \rd_addr[3]_INST_0_i_3\(9),
       I2 => \rd_addr[3]_INST_0_i_3\(5),
@@ -14820,6 +18194,7 @@ A_dur_gred3_carry_i_4: unisim.vcomponents.LUT6
       I4 => AGENT_0_A(1),
       I5 => \rd_addr[3]_INST_0_i_3\(1),
       O => \^slv_reg7_reg[13]\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \L_curr[0][1]_i_5\: unisim.vcomponents.LUT6
     generic map(
@@ -14842,8 +18217,13 @@ A_dur_gred3_carry_i_4: unisim.vcomponents.LUT6
       I0 => \L_curr_reg[1][3]_2\(4),
       I1 => \L_curr_reg[1][3]_2\(12),
       I2 => \L_curr_reg[1][3]_2\(0),
+<<<<<<< HEAD
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+=======
       I3 => \^r_lsfr_reg[1]\(0),
       I4 => AGENT_0_A(1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I5 => \L_curr_reg[1][3]_2\(8),
       O => \^slv_reg4_reg[4]\
     );
@@ -14875,9 +18255,44 @@ A_dur_gred3_carry_i_4: unisim.vcomponents.LUT6
     );
 \L_curr[2][1]_i_4\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFF0AACC00F0AA"
+      INIT => X"CCFFAAF0CC00AAF0"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \L_curr_reg[1][3]_2\(5),
+      I1 => \L_curr_reg[1][3]_2\(13),
+      I2 => \L_curr_reg[1][3]_2\(1),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[1][3]_2\(9),
+      O => \^slv_reg4_reg[5]\
+    );
+\L_curr[2][0]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3300550F33FF550F"
+    )
+        port map (
+      I0 => \L_curr_reg[2][3]_2\(4),
+      I1 => \L_curr_reg[2][3]_2\(12),
+      I2 => \L_curr_reg[2][3]_2\(0),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[2][3]_2\(8),
+      O => \^slv_reg5_reg[4]\
+    );
+\L_curr[2][1]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CCFFAAF0CC00AAF0"
+    )
+        port map (
+      I0 => \L_curr_reg[2][3]_2\(5),
+      I1 => \L_curr_reg[2][3]_2\(13),
+      I2 => \L_curr_reg[2][3]_2\(1),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[2][3]_2\(9),
+      O => \^slv_reg5_reg[5]\
+=======
       I0 => \L_curr_reg[2][3]_2\(1),
       I1 => \L_curr_reg[2][3]_2\(13),
       I2 => \L_curr_reg[2][3]_2\(5),
@@ -14885,6 +18300,7 @@ A_dur_gred3_carry_i_4: unisim.vcomponents.LUT6
       I4 => AGENT_0_A(1),
       I5 => \L_curr_reg[2][3]_2\(9),
       O => \L_curr[2][1]_i_4_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \L_curr[3][0]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -14894,12 +18310,21 @@ A_dur_gred3_carry_i_4: unisim.vcomponents.LUT6
       I0 => \L_curr_reg[3][3]_1\(4),
       I1 => \L_curr_reg[3][3]_1\(12),
       I2 => \L_curr_reg[3][3]_1\(0),
+<<<<<<< HEAD
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[3][3]_1\(8),
+      O => \^slv_reg6_reg[4]\
+    );
+\L_curr[3][1]_i_2\: unisim.vcomponents.LUT6
+=======
       I3 => \^r_lsfr_reg[1]\(0),
       I4 => AGENT_0_A(1),
       I5 => \L_curr_reg[3][3]_1\(8),
       O => \^slv_reg6_reg[4]\
     );
 \L_curr[3][1]_i_4\: unisim.vcomponents.LUT6
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
       INIT => X"CCFFAAF0CC00AAF0"
     )
@@ -14907,19 +18332,42 @@ A_dur_gred3_carry_i_4: unisim.vcomponents.LUT6
       I0 => \L_curr_reg[3][3]_1\(5),
       I1 => \L_curr_reg[3][3]_1\(13),
       I2 => \L_curr_reg[3][3]_1\(1),
+<<<<<<< HEAD
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[3][3]_1\(9),
+      O => \L_curr[3][1]_i_2_n_0\
+=======
       I3 => \^r_lsfr_reg[1]\(0),
       I4 => AGENT_0_A(1),
       I5 => \L_curr_reg[3][3]_1\(9),
       O => \L_curr[3][1]_i_4_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 QA_0: entity work.top_level_Intellight_Accelerat_0_0_QA
      port map (
-      AGENT_0_Q_new(15 downto 0) => AGENT_0_Q_new(15 downto 0),
       D(15 downto 0) => Q_act(15 downto 0),
       D_road0(7 downto 0) => D_road0(31 downto 24),
       \D_road0[24]\ => QA_0_n_23,
       \D_road0[27]\ => QA_0_n_20,
       D_road1(7 downto 0) => D_road1(31 downto 24),
+<<<<<<< HEAD
+      \D_road1[24]\ => QA_0_n_23,
+      \D_road1[25]\ => QA_0_n_22,
+      \D_road1[31]\ => QA_0_n_16,
+      D_road2(7 downto 0) => D_road2(31 downto 24),
+      D_road3(7 downto 0) => D_road3(31 downto 24),
+      \D_road3[26]\ => QA_0_n_21,
+      \D_road3[27]\ => QA_0_n_20,
+      \D_road3[28]\ => QA_0_n_19,
+      \D_road3[29]\ => QA_0_n_18,
+      O(3 downto 0) => O(3 downto 0),
+      Q(1 downto 0) => \^a_road_reg[1]_0\(1 downto 0),
+      \Q_act_reg_reg[2][11]_0\(3 downto 0) => \Q_act_reg_reg[2][11]\(3 downto 0),
+      \Q_act_reg_reg[2][14]_0\(3 downto 0) => \Q_act_reg_reg[2][14]\(3 downto 0),
+      \Q_act_reg_reg[2][7]_0\(3 downto 0) => \Q_act_reg_reg[2][7]\(3 downto 0),
+      \R_reg0_reg[15]_0\(5 downto 0) => \R_reg0_reg[15]\(5 downto 0),
+=======
       \D_road1[25]\ => QA_0_n_22,
       \D_road1[26]\ => QA_0_n_21,
       \D_road1[29]\ => QA_0_n_18,
@@ -14931,6 +18379,7 @@ QA_0: entity work.top_level_Intellight_Accelerat_0_0_QA
       Q(1) => AGENT_0_A(1),
       Q(0) => \^r_lsfr_reg[1]\(0),
       \R_reg0_reg[14]_0\(6 downto 0) => \R_reg0_reg[14]\(6 downto 0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       clk => clk,
       rst => rst,
       \x__0_carry__2_0\(5 downto 0) => \x__0_carry__2\(6 downto 1),
@@ -14946,31 +18395,58 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       DI(0) => \temp01_carry__0_i_4_n_0\,
       D_road0(55 downto 24) => D_road0(63 downto 32),
       D_road0(23 downto 0) => D_road0(23 downto 0),
+<<<<<<< HEAD
+      D_road0_16_sp_1 => QA_max0_n_39,
+      D_road0_1_sp_1 => QA_max0_n_36,
+      D_road0_34_sp_1 => QA_max0_n_67,
+      D_road0_36_sp_1 => QA_max0_n_63,
+      D_road0_42_sp_1 => QA_max0_n_51,
+      D_road0_43_sp_1 => QA_max0_n_48,
+      D_road0_4_sp_1 => QA_max0_n_29,
+      D_road0_7_sp_1 => QA_max0_n_24,
+=======
       D_road0_1_sp_1 => QA_max0_n_36,
       D_road0_2_sp_1 => QA_max0_n_33,
       D_road0_54_sp_1 => QA_max0_n_58,
       D_road0_55_sp_1 => QA_max0_n_57,
       D_road0_8_sp_1 => QA_max0_n_23,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       D_road1(55 downto 24) => D_road1(63 downto 32),
       D_road1(23 downto 0) => D_road1(23 downto 0),
       \D_road1[56]\ => QA_max0_n_54,
       \D_road1[57]\ => QA_max0_n_53,
       \D_road1[58]\ => QA_max0_n_50,
       \D_road1[61]\ => QA_max0_n_45,
+<<<<<<< HEAD
+      \D_road1[62]\ => QA_max0_n_42,
+=======
       \D_road1[63]\ => QA_max0_n_41,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       D_road1_0_sp_1 => QA_max0_n_37,
       D_road1_10_sp_1 => QA_max0_n_21,
       D_road1_11_sp_1 => QA_max0_n_20,
       D_road1_12_sp_1 => QA_max0_n_19,
       D_road1_14_sp_1 => QA_max0_n_1,
+<<<<<<< HEAD
+      D_road1_18_sp_1 => QA_max0_n_35,
+      D_road1_20_sp_1 => QA_max0_n_31,
+=======
       D_road1_15_sp_1 => QA_max0_n_0,
       D_road1_16_sp_1 => QA_max0_n_39,
       D_road1_19_sp_1 => QA_max0_n_34,
       D_road1_21_sp_1 => QA_max0_n_30,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       D_road1_22_sp_1 => QA_max0_n_27,
       D_road1_32_sp_1 => QA_max0_n_71,
       D_road1_33_sp_1 => QA_max0_n_68,
       D_road1_35_sp_1 => QA_max0_n_64,
+<<<<<<< HEAD
+      D_road1_37_sp_1 => QA_max0_n_60,
+      D_road1_39_sp_1 => QA_max0_n_56,
+      D_road1_3_sp_1 => QA_max0_n_32,
+      D_road1_40_sp_1 => QA_max0_n_55,
+      D_road1_44_sp_1 => QA_max0_n_47,
+=======
       D_road1_36_sp_1 => QA_max0_n_63,
       D_road1_38_sp_1 => QA_max0_n_59,
       D_road1_3_sp_1 => QA_max0_n_32,
@@ -14978,6 +18454,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       D_road1_43_sp_1 => QA_max0_n_48,
       D_road1_44_sp_1 => QA_max0_n_47,
       D_road1_45_sp_1 => QA_max0_n_44,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       D_road1_46_sp_1 => QA_max0_n_43,
       D_road1_47_sp_1 => QA_max0_n_40,
       D_road1_4_sp_1 => QA_max0_n_29,
@@ -14985,7 +18462,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       D_road1_52_sp_1 => QA_max0_n_62,
       D_road1_53_sp_1 => QA_max0_n_61,
       D_road1_5_sp_1 => QA_max0_n_28,
+<<<<<<< HEAD
+      D_road1_8_sp_1 => QA_max0_n_23,
+=======
       D_road1_6_sp_1 => QA_max0_n_25,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       D_road1_9_sp_1 => QA_max0_n_22,
       D_road2(55 downto 24) => D_road2(63 downto 32),
       D_road2(23 downto 0) => D_road2(23 downto 0),
@@ -14995,10 +18476,22 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       \D_road3[60]\ => QA_max0_n_46,
       \D_road3[62]\ => QA_max0_n_42,
       D_road3_13_sp_1 => QA_max0_n_18,
+      D_road3_15_sp_1 => QA_max0_n_0,
       D_road3_17_sp_1 => QA_max0_n_38,
       D_road3_18_sp_1 => QA_max0_n_35,
       D_road3_20_sp_1 => QA_max0_n_31,
       D_road3_23_sp_1 => QA_max0_n_26,
+<<<<<<< HEAD
+      D_road3_2_sp_1 => QA_max0_n_33,
+      D_road3_38_sp_1 => QA_max0_n_59,
+      D_road3_41_sp_1 => QA_max0_n_52,
+      D_road3_45_sp_1 => QA_max0_n_44,
+      D_road3_49_sp_1 => QA_max0_n_69,
+      D_road3_54_sp_1 => QA_max0_n_58,
+      D_road3_55_sp_1 => QA_max0_n_57,
+      D_road3_6_sp_1 => QA_max0_n_25,
+      Q(1 downto 0) => \^a_road_reg[1]_0\(1 downto 0),
+=======
       D_road3_34_sp_1 => QA_max0_n_67,
       D_road3_37_sp_1 => QA_max0_n_60,
       D_road3_39_sp_1 => QA_max0_n_56,
@@ -15010,6 +18503,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       D_road3_7_sp_1 => QA_max0_n_24,
       Q(1) => AGENT_0_A(1),
       Q(0) => \^r_lsfr_reg[1]\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       \Q_max_reg[10]\ => QA_0_n_21,
       \Q_max_reg[11]\ => QA_0_n_20,
       \Q_max_reg[12]\ => QA_0_n_19,
@@ -15151,11 +18645,24 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       Q => \Q_max__0\(9),
       R => rst
     );
+<<<<<<< HEAD
+\R0__2_carry__0_i_15\: unisim.vcomponents.LUT6
+=======
 \R[14]_i_21\: unisim.vcomponents.LUT3
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
-      INIT => X"96"
+      INIT => X"6966696669669969"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \^slv_reg7_reg[14]\,
+      I1 => Q(2),
+      I2 => Q(1),
+      I3 => \^slv_reg7_reg[1]\,
+      I4 => \^slv_reg7_reg[4]\,
+      I5 => Q(0),
+      O => \R0__2_carry__0_i_15_n_0\
+=======
       I0 => \rd_addr[3]_INST_0_i_8_n_0\,
       I1 => \rd_addr[3]_INST_0_i_9_n_0\,
       I2 => \L_curr_reg[0][3]_0\(2),
@@ -15318,6 +18825,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I1 => \rd_addr[9]_INST_0_i_10_n_0\,
       I2 => Q(2),
       O => \R[2]_i_18_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[0].Q_reg[0][0][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -15325,8 +18833,13 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(0),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => D_road0(0),
       I4 => D_road3(0),
       I5 => D_road1(0),
@@ -15338,8 +18851,13 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(10),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => D_road0(10),
       I4 => D_road3(10),
       I5 => D_road1(10),
@@ -15351,8 +18869,13 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(11),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => D_road0(11),
       I4 => D_road3(11),
       I5 => D_road1(11),
@@ -15364,8 +18887,13 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(12),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => D_road0(12),
       I4 => D_road3(12),
       I5 => D_road1(12),
@@ -15373,6 +18901,16 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     );
 \genblk1[0].Q_reg[0][0][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"EFEC2F2CE3E02320"
+    )
+        port map (
+      I0 => D_road2(13),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(13),
+      I4 => D_road0(13),
+=======
       INIT => X"FE3ECE0EF232C202"
     )
         port map (
@@ -15381,6 +18919,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(13),
       I4 => D_road2(13),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I5 => D_road3(13),
       O => \genblk1[0].Q_reg[0][0][13]_i_1_n_0\
     );
@@ -15390,8 +18929,13 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(14),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => D_road0(14),
       I4 => D_road3(14),
       I5 => D_road1(14),
@@ -15399,15 +18943,24 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     );
 \genblk1[0].Q_reg[0][0][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EF2FE323EC2CE020"
+      INIT => X"BFBC8F8CB3B08380"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road0(15),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(15),
+      I4 => D_road2(15),
+      I5 => D_road3(15),
+=======
       I0 => D_road2(15),
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(15),
       I4 => D_road3(15),
       I5 => D_road1(15),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \genblk1[0].Q_reg[0][0][15]_i_1_n_0\
     );
 \genblk1[0].Q_reg[0][0][1]_i_1\: unisim.vcomponents.LUT6
@@ -15416,8 +18969,13 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(1),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => D_road1(1),
       I4 => D_road3(1),
       I5 => D_road0(1),
@@ -15425,6 +18983,17 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     );
 \genblk1[0].Q_reg[0][0][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"EFEC2F2CE3E02320"
+    )
+        port map (
+      I0 => D_road2(2),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(2),
+      I4 => D_road0(2),
+      I5 => D_road3(2),
+=======
       INIT => X"EFECE3E02F2C2320"
     )
         port map (
@@ -15434,6 +19003,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I3 => D_road1(2),
       I4 => D_road3(2),
       I5 => D_road0(2),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \genblk1[0].Q_reg[0][0][2]_i_1_n_0\
     );
 \genblk1[0].Q_reg[0][0][3]_i_1\: unisim.vcomponents.LUT6
@@ -15442,8 +19012,13 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(3),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => D_road0(3),
       I4 => D_road3(3),
       I5 => D_road1(3),
@@ -15455,11 +19030,19 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(4),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(4),
+      I4 => D_road3(4),
+      I5 => D_road0(4),
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(4),
       I4 => D_road3(4),
       I5 => D_road1(4),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \genblk1[0].Q_reg[0][0][4]_i_1_n_0\
     );
 \genblk1[0].Q_reg[0][0][5]_i_1\: unisim.vcomponents.LUT6
@@ -15468,8 +19051,13 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(5),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => D_road0(5),
       I4 => D_road3(5),
       I5 => D_road1(5),
@@ -15480,29 +19068,58 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       INIT => X"EF2FE323EC2CE020"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road1(6),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(6),
+      I4 => D_road2(6),
+      I5 => D_road3(6),
+=======
       I0 => D_road2(6),
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(6),
       I4 => D_road3(6),
       I5 => D_road1(6),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \genblk1[0].Q_reg[0][0][6]_i_1_n_0\
     );
 \genblk1[0].Q_reg[0][0][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FE3ECE0EF232C202"
+      INIT => X"EFECE3E02F2C2320"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road2(7),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(7),
+      I4 => D_road3(7),
+      I5 => D_road0(7),
+=======
       I0 => D_road1(7),
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(7),
       I4 => D_road2(7),
       I5 => D_road3(7),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \genblk1[0].Q_reg[0][0][7]_i_1_n_0\
     );
 \genblk1[0].Q_reg[0][0][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
+<<<<<<< HEAD
+      INIT => X"EF2FE323EC2CE020"
+    )
+        port map (
+      I0 => D_road2(8),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(8),
+      I4 => D_road3(8),
+      I5 => D_road1(8),
+=======
       INIT => X"EFECE3E02F2C2320"
     )
         port map (
@@ -15512,6 +19129,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I3 => D_road1(8),
       I4 => D_road3(8),
       I5 => D_road0(8),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \genblk1[0].Q_reg[0][0][8]_i_1_n_0\
     );
 \genblk1[0].Q_reg[0][0][9]_i_1\: unisim.vcomponents.LUT6
@@ -15520,8 +19138,13 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(9),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       I3 => D_road0(9),
       I4 => D_road3(9),
       I5 => D_road1(9),
@@ -15532,7 +19155,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][0]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(0),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][10]\: unisim.vcomponents.FDRE
@@ -15540,7 +19167,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][10]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(10),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(10),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][11]\: unisim.vcomponents.FDRE
@@ -15548,7 +19179,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][11]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(11),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(11),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][12]\: unisim.vcomponents.FDRE
@@ -15556,7 +19191,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][12]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(12),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(12),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][13]\: unisim.vcomponents.FDRE
@@ -15564,7 +19203,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][13]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(13),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(13),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][14]\: unisim.vcomponents.FDRE
@@ -15572,7 +19215,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][14]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(14),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][15]\: unisim.vcomponents.FDRE
@@ -15580,7 +19227,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][15]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(15),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(15),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][1]\: unisim.vcomponents.FDRE
@@ -15588,7 +19239,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][1]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(1),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][2]\: unisim.vcomponents.FDRE
@@ -15596,7 +19251,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][2]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(2),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(2),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][3]\: unisim.vcomponents.FDRE
@@ -15604,7 +19263,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][3]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(3),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(3),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][4]\: unisim.vcomponents.FDRE
@@ -15612,7 +19275,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][4]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(4),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(4),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][5]\: unisim.vcomponents.FDRE
@@ -15620,7 +19287,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][5]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(5),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(5),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][6]\: unisim.vcomponents.FDRE
@@ -15628,7 +19299,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][6]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(6),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(6),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][7]\: unisim.vcomponents.FDRE
@@ -15636,7 +19311,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][7]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(7),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(7),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][8]\: unisim.vcomponents.FDRE
@@ -15644,7 +19323,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][8]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(8),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(8),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[0].Q_reg_reg[0][0][9]\: unisim.vcomponents.FDRE
@@ -15652,7 +19335,11 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       C => clk,
       CE => '1',
       D => \genblk1[0].Q_reg[0][0][9]_i_1_n_0\,
+<<<<<<< HEAD
+      Q => \^d\(9),
+=======
       Q => \genblk1[0].Q_reg_reg[0][0]_6\(9),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg[1][0][0]_i_1\: unisim.vcomponents.LUT6
@@ -15661,6 +19348,40 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(16),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(16),
+      I4 => D_road3(16),
+      I5 => D_road0(16),
+      O => \genblk1[1].Q_reg[1][0][0]_i_1_n_0\
+    );
+\genblk1[1].Q_reg[1][0][10]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BFBC8F8CB3B08380"
+    )
+        port map (
+      I0 => D_road0(26),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(26),
+      I4 => D_road2(26),
+      I5 => D_road3(26),
+      O => \genblk1[1].Q_reg[1][0][10]_i_1_n_0\
+    );
+\genblk1[1].Q_reg[1][0][11]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FE3ECE0EF232C202"
+    )
+        port map (
+      I0 => D_road1(27),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(27),
+      I4 => D_road2(27),
+      I5 => D_road3(27),
+      O => \genblk1[1].Q_reg[1][0][11]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(16),
@@ -15693,6 +19414,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I4 => D_road3(27),
       I5 => D_road0(27),
       O => \Q[1]_14\(11)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[1].Q_reg[1][0][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -15700,18 +19422,36 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road1(28),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(28),
+      I4 => D_road2(28),
+      I5 => D_road3(28),
+      O => \genblk1[1].Q_reg[1][0][12]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(28),
       I4 => D_road2(28),
       I5 => D_road3(28),
       O => \Q[1]_14\(12)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[1].Q_reg[1][0][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"EF2FE323EC2CE020"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road0(29),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(29),
+      I4 => D_road2(29),
+      I5 => D_road3(29),
+      O => \genblk1[1].Q_reg[1][0][13]_i_1_n_0\
+=======
       I0 => D_road2(29),
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
@@ -15719,6 +19459,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I4 => D_road3(29),
       I5 => D_road1(29),
       O => \Q[1]_14\(13)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[1].Q_reg[1][0][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -15726,12 +19467,21 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(30),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(30),
+      I4 => D_road3(30),
+      I5 => D_road0(30),
+      O => \genblk1[1].Q_reg[1][0][14]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(30),
       I4 => D_road3(30),
       I5 => D_road1(30),
       O => \Q[1]_14\(14)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[1].Q_reg[1][0][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -15739,12 +19489,21 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(31),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(31),
+      I4 => D_road3(31),
+      I5 => D_road1(31),
+      O => \genblk1[1].Q_reg[1][0][15]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(31),
       I4 => D_road3(31),
       I5 => D_road1(31),
       O => \Q[1]_14\(15)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[1].Q_reg[1][0][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -15752,6 +19511,66 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road1(17),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(17),
+      I4 => D_road2(17),
+      I5 => D_road3(17),
+      O => \genblk1[1].Q_reg[1][0][1]_i_1_n_0\
+    );
+\genblk1[1].Q_reg[1][0][2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EF2FE323EC2CE020"
+    )
+        port map (
+      I0 => D_road2(18),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(18),
+      I4 => D_road3(18),
+      I5 => D_road1(18),
+      O => \genblk1[1].Q_reg[1][0][2]_i_1_n_0\
+    );
+\genblk1[1].Q_reg[1][0][3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BFBC8F8CB3B08380"
+    )
+        port map (
+      I0 => D_road0(19),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(19),
+      I4 => D_road2(19),
+      I5 => D_road3(19),
+      O => \genblk1[1].Q_reg[1][0][3]_i_1_n_0\
+    );
+\genblk1[1].Q_reg[1][0][4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EF2FE323EC2CE020"
+    )
+        port map (
+      I0 => D_road2(20),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(20),
+      I4 => D_road3(20),
+      I5 => D_road1(20),
+      O => \genblk1[1].Q_reg[1][0][4]_i_1_n_0\
+    );
+\genblk1[1].Q_reg[1][0][5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BFBC8F8CB3B08380"
+    )
+        port map (
+      I0 => D_road0(21),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(21),
+      I4 => D_road2(21),
+      I5 => D_road3(21),
+      O => \genblk1[1].Q_reg[1][0][5]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(17),
@@ -15810,6 +19629,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I4 => D_road3(21),
       I5 => D_road1(21),
       O => \Q[1]_14\(5)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[1].Q_reg[1][0][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -15817,12 +19637,21 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(22),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(22),
+      I4 => D_road3(22),
+      I5 => D_road1(22),
+      O => \genblk1[1].Q_reg[1][0][6]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(22),
       I4 => D_road3(22),
       I5 => D_road1(22),
       O => \Q[1]_14\(6)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[1].Q_reg[1][0][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -15830,12 +19659,21 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road0(23),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(23),
+      I4 => D_road2(23),
+      I5 => D_road3(23),
+      O => \genblk1[1].Q_reg[1][0][7]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road1(23),
       I4 => D_road2(23),
       I5 => D_road3(23),
       O => \Q[1]_14\(7)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[1].Q_reg[1][0][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -15855,6 +19693,28 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       INIT => X"EF2FE323EC2CE020"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road2(24),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(24),
+      I4 => D_road3(24),
+      I5 => D_road1(24),
+      O => \genblk1[1].Q_reg[1][0][8]_i_1_n_0\
+    );
+\genblk1[1].Q_reg[1][0][9]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EF2FE323EC2CE020"
+    )
+        port map (
+      I0 => D_road2(25),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(25),
+      I4 => D_road3(25),
+      I5 => D_road1(25),
+      O => \genblk1[1].Q_reg[1][0][9]_i_1_n_0\
+=======
       I0 => D_road2(25),
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
@@ -15862,133 +19722,214 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I4 => D_road3(25),
       I5 => D_road1(25),
       O => \Q[1]_14\(9)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[1].Q_reg_reg[1][0][0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][0]_i_1_n_0\,
+      Q => \^d\(16),
+=======
       D => \Q[1]_14\(0),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][10]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][10]_i_1_n_0\,
+      Q => \^d\(26),
+=======
       D => \Q[1]_14\(10),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(10),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][11]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][11]_i_1_n_0\,
+      Q => \^d\(27),
+=======
       D => \Q[1]_14\(11),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(11),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][12]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][12]_i_1_n_0\,
+      Q => \^d\(28),
+=======
       D => \Q[1]_14\(12),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(12),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][13]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][13]_i_1_n_0\,
+      Q => \^d\(29),
+=======
       D => \Q[1]_14\(13),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(13),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][14]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][14]_i_1_n_0\,
+      Q => \^d\(30),
+=======
       D => \Q[1]_14\(14),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][15]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][15]_i_1_n_0\,
+      Q => \^d\(31),
+=======
       D => \Q[1]_14\(15),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(15),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][1]_i_1_n_0\,
+      Q => \^d\(17),
+=======
       D => \Q[1]_14\(1),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][2]_i_1_n_0\,
+      Q => \^d\(18),
+=======
       D => \Q[1]_14\(2),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(2),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][3]_i_1_n_0\,
+      Q => \^d\(19),
+=======
       D => \Q[1]_14\(3),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(3),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][4]_i_1_n_0\,
+      Q => \^d\(20),
+=======
       D => \Q[1]_14\(4),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(4),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][5]_i_1_n_0\,
+      Q => \^d\(21),
+=======
       D => \Q[1]_14\(5),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(5),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][6]_i_1_n_0\,
+      Q => \^d\(22),
+=======
       D => \Q[1]_14\(6),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(6),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][7]_i_1_n_0\,
+      Q => \^d\(23),
+=======
       D => \Q[1]_14\(7),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(7),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][8]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][8]_i_1_n_0\,
+      Q => \^d\(24),
+=======
       D => \Q[1]_14\(8),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(8),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[1].Q_reg_reg[1][0][9]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[1].Q_reg[1][0][9]_i_1_n_0\,
+      Q => \^d\(25),
+=======
       D => \Q[1]_14\(9),
       Q => \genblk1[1].Q_reg_reg[1][0]_5\(9),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg[2][0][0]_i_1\: unisim.vcomponents.LUT6
@@ -15997,12 +19938,21 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(32),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(32),
+      I4 => D_road3(32),
+      I5 => D_road1(32),
+      O => \genblk1[2].Q_reg[2][0][0]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(32),
       I4 => D_road3(32),
       I5 => D_road1(32),
       O => \Q[2]_15\(0)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[2].Q_reg[2][0][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16010,25 +19960,43 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(42),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(42),
+      I4 => D_road3(42),
+      I5 => D_road0(42),
+      O => \genblk1[2].Q_reg[2][0][10]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road1(42),
       I4 => D_road0(42),
       I5 => D_road3(42),
       O => \Q[2]_15\(10)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[2].Q_reg[2][0][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EF2FE323EC2CE020"
+      INIT => X"EFECE3E02F2C2320"
     )
         port map (
       I0 => D_road2(43),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(43),
+      I4 => D_road3(43),
+      I5 => D_road0(43),
+      O => \genblk1[2].Q_reg[2][0][11]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(43),
       I4 => D_road3(43),
       I5 => D_road1(43),
       O => \Q[2]_15\(11)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[2].Q_reg[2][0][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16036,12 +20004,21 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(44),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(44),
+      I4 => D_road3(44),
+      I5 => D_road1(44),
+      O => \genblk1[2].Q_reg[2][0][12]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(44),
       I4 => D_road3(44),
       I5 => D_road1(44),
       O => \Q[2]_15\(12)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[2].Q_reg[2][0][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16049,12 +20026,21 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(45),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(45),
+      I4 => D_road0(45),
+      I5 => D_road3(45),
+      O => \genblk1[2].Q_reg[2][0][13]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(45),
       I4 => D_road3(45),
       I5 => D_road1(45),
       O => \Q[2]_15\(13)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[2].Q_reg[2][0][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16062,12 +20048,21 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(46),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(46),
+      I4 => D_road3(46),
+      I5 => D_road1(46),
+      O => \genblk1[2].Q_reg[2][0][14]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(46),
       I4 => D_road3(46),
       I5 => D_road1(46),
       O => \Q[2]_15\(14)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[2].Q_reg[2][0][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16075,12 +20070,21 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(47),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(47),
+      I4 => D_road3(47),
+      I5 => D_road1(47),
+      O => \genblk1[2].Q_reg[2][0][15]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(47),
       I4 => D_road3(47),
       I5 => D_road1(47),
       O => \Q[2]_15\(15)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[2].Q_reg[2][0][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16088,6 +20092,27 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(33),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(33),
+      I4 => D_road3(33),
+      I5 => D_road1(33),
+      O => \genblk1[2].Q_reg[2][0][1]_i_1_n_0\
+    );
+\genblk1[2].Q_reg[2][0][2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EFECE3E02F2C2320"
+    )
+        port map (
+      I0 => D_road2(34),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(34),
+      I4 => D_road3(34),
+      I5 => D_road0(34),
+      O => \genblk1[2].Q_reg[2][0][2]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(33),
@@ -16107,6 +20132,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I4 => D_road2(34),
       I5 => D_road3(34),
       O => \Q[2]_15\(2)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[2].Q_reg[2][0][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16114,6 +20140,30 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(35),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(35),
+      I4 => D_road3(35),
+      I5 => D_road1(35),
+      O => \genblk1[2].Q_reg[2][0][3]_i_1_n_0\
+    );
+\genblk1[2].Q_reg[2][0][4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EFECE3E02F2C2320"
+    )
+        port map (
+      I0 => D_road2(36),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(36),
+      I4 => D_road3(36),
+      I5 => D_road0(36),
+      O => \genblk1[2].Q_reg[2][0][4]_i_1_n_0\
+    );
+\genblk1[2].Q_reg[2][0][5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(35),
@@ -16123,6 +20173,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     );
 \genblk1[2].Q_reg[2][0][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
+>>>>>>> parent of ae750207 (shfcuidtf7)
       INIT => X"EF2FE323EC2CE020"
     )
         port map (
@@ -16140,18 +20191,36 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(37),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(37),
+      I4 => D_road3(37),
+      I5 => D_road1(37),
+      O => \genblk1[2].Q_reg[2][0][5]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road1(37),
       I4 => D_road0(37),
       I5 => D_road3(37),
       O => \Q[2]_15\(5)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[2].Q_reg[2][0][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"EF2FE323EC2CE020"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road1(38),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(38),
+      I4 => D_road2(38),
+      I5 => D_road3(38),
+      O => \genblk1[2].Q_reg[2][0][6]_i_1_n_0\
+=======
       I0 => D_road2(38),
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
@@ -16159,12 +20228,22 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I4 => D_road3(38),
       I5 => D_road1(38),
       O => \Q[2]_15\(6)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[2].Q_reg[2][0][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FE3ECE0EF232C202"
+      INIT => X"EF2FE323EC2CE020"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road2(39),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(39),
+      I4 => D_road3(39),
+      I5 => D_road1(39),
+      O => \genblk1[2].Q_reg[2][0][7]_i_1_n_0\
+=======
       I0 => D_road1(39),
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
@@ -16172,6 +20251,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I4 => D_road2(39),
       I5 => D_road3(39),
       O => \Q[2]_15\(7)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[2].Q_reg[2][0][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16191,6 +20271,28 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       INIT => X"EF2FE323EC2CE020"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road2(40),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(40),
+      I4 => D_road3(40),
+      I5 => D_road1(40),
+      O => \genblk1[2].Q_reg[2][0][8]_i_1_n_0\
+    );
+\genblk1[2].Q_reg[2][0][9]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BFBC8F8CB3B08380"
+    )
+        port map (
+      I0 => D_road0(41),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(41),
+      I4 => D_road2(41),
+      I5 => D_road3(41),
+      O => \genblk1[2].Q_reg[2][0][9]_i_1_n_0\
+=======
       I0 => D_road2(41),
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
@@ -16198,133 +20300,214 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I4 => D_road3(41),
       I5 => D_road1(41),
       O => \Q[2]_15\(9)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[2].Q_reg_reg[2][0][0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][0]_i_1_n_0\,
+      Q => \^d\(32),
+=======
       D => \Q[2]_15\(0),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][10]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][10]_i_1_n_0\,
+      Q => \^d\(42),
+=======
       D => \Q[2]_15\(10),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(10),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][11]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][11]_i_1_n_0\,
+      Q => \^d\(43),
+=======
       D => \Q[2]_15\(11),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(11),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][12]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][12]_i_1_n_0\,
+      Q => \^d\(44),
+=======
       D => \Q[2]_15\(12),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(12),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][13]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][13]_i_1_n_0\,
+      Q => \^d\(45),
+=======
       D => \Q[2]_15\(13),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(13),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][14]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][14]_i_1_n_0\,
+      Q => \^d\(46),
+=======
       D => \Q[2]_15\(14),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][15]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][15]_i_1_n_0\,
+      Q => \^d\(47),
+=======
       D => \Q[2]_15\(15),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(15),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][1]_i_1_n_0\,
+      Q => \^d\(33),
+=======
       D => \Q[2]_15\(1),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][2]_i_1_n_0\,
+      Q => \^d\(34),
+=======
       D => \Q[2]_15\(2),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(2),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][3]_i_1_n_0\,
+      Q => \^d\(35),
+=======
       D => \Q[2]_15\(3),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(3),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][4]_i_1_n_0\,
+      Q => \^d\(36),
+=======
       D => \Q[2]_15\(4),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(4),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][5]_i_1_n_0\,
+      Q => \^d\(37),
+=======
       D => \Q[2]_15\(5),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(5),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][6]_i_1_n_0\,
+      Q => \^d\(38),
+=======
       D => \Q[2]_15\(6),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(6),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][7]_i_1_n_0\,
+      Q => \^d\(39),
+=======
       D => \Q[2]_15\(7),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(7),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][8]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][8]_i_1_n_0\,
+      Q => \^d\(40),
+=======
       D => \Q[2]_15\(8),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(8),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[2].Q_reg_reg[2][0][9]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[2].Q_reg[2][0][9]_i_1_n_0\,
+      Q => \^d\(41),
+=======
       D => \Q[2]_15\(9),
       Q => \genblk1[2].Q_reg_reg[2][0]_4\(9),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg[3][0][0]_i_1\: unisim.vcomponents.LUT6
@@ -16332,6 +20515,15 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       INIT => X"FE3ECE0EF232C202"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road2(48),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(48),
+      I4 => D_road3(48),
+      I5 => D_road1(48),
+      O => \genblk1[3].Q_reg[3][0][0]_i_1_n_0\
+=======
       I0 => D_road1(48),
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
@@ -16339,6 +20531,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I4 => D_road2(48),
       I5 => D_road3(48),
       O => \Q[3]_16\(0)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[3].Q_reg[3][0][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16346,6 +20539,27 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(58),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(58),
+      I4 => D_road3(58),
+      I5 => D_road1(58),
+      O => \genblk1[3].Q_reg[3][0][10]_i_1_n_0\
+    );
+\genblk1[3].Q_reg[3][0][11]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EF2FEC2CE323E020"
+    )
+        port map (
+      I0 => D_road2(59),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(59),
+      I4 => D_road1(59),
+      I5 => D_road3(59),
+      O => \genblk1[3].Q_reg[3][0][11]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(58),
@@ -16365,6 +20579,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I4 => D_road2(59),
       I5 => D_road3(59),
       O => \Q[3]_16\(11)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[3].Q_reg[3][0][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16372,6 +20587,30 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road1(60),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(60),
+      I4 => D_road2(60),
+      I5 => D_road3(60),
+      O => \genblk1[3].Q_reg[3][0][12]_i_1_n_0\
+    );
+\genblk1[3].Q_reg[3][0][13]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EF2FE323EC2CE020"
+    )
+        port map (
+      I0 => D_road2(61),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(61),
+      I4 => D_road3(61),
+      I5 => D_road1(61),
+      O => \genblk1[3].Q_reg[3][0][13]_i_1_n_0\
+    );
+\genblk1[3].Q_reg[3][0][14]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(60),
@@ -16381,6 +20620,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     );
 \genblk1[3].Q_reg[3][0][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
+>>>>>>> parent of ae750207 (shfcuidtf7)
       INIT => X"EF2FE323EC2CE020"
     )
         port map (
@@ -16398,18 +20638,36 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(62),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(62),
+      I4 => D_road3(62),
+      I5 => D_road1(62),
+      O => \genblk1[3].Q_reg[3][0][14]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road1(62),
       I4 => D_road0(62),
       I5 => D_road3(62),
       O => \Q[3]_16\(14)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[3].Q_reg[3][0][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"EF2FE323EC2CE020"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road0(63),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(63),
+      I4 => D_road2(63),
+      I5 => D_road3(63),
+      O => \genblk1[3].Q_reg[3][0][15]_i_1_n_0\
+=======
       I0 => D_road2(63),
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
@@ -16417,6 +20675,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I4 => D_road3(63),
       I5 => D_road1(63),
       O => \Q[3]_16\(15)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[3].Q_reg[3][0][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16424,18 +20683,36 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road1(49),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(49),
+      I4 => D_road2(49),
+      I5 => D_road3(49),
+      O => \genblk1[3].Q_reg[3][0][1]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(49),
       I4 => D_road2(49),
       I5 => D_road3(49),
       O => \Q[3]_16\(1)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[3].Q_reg[3][0][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FE3ECE0EF232C202"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road2(50),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(50),
+      I4 => D_road3(50),
+      I5 => D_road1(50),
+      O => \genblk1[3].Q_reg[3][0][2]_i_1_n_0\
+=======
       I0 => D_road1(50),
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
@@ -16443,6 +20720,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I4 => D_road2(50),
       I5 => D_road3(50),
       O => \Q[3]_16\(2)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[3].Q_reg[3][0][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16450,12 +20728,21 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(51),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(51),
+      I4 => D_road3(51),
+      I5 => D_road1(51),
+      O => \genblk1[3].Q_reg[3][0][3]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(51),
       I4 => D_road3(51),
       I5 => D_road1(51),
       O => \Q[3]_16\(3)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[3].Q_reg[3][0][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16463,12 +20750,21 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(52),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(52),
+      I4 => D_road3(52),
+      I5 => D_road1(52),
+      O => \genblk1[3].Q_reg[3][0][4]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(52),
       I4 => D_road3(52),
       I5 => D_road1(52),
       O => \Q[3]_16\(4)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[3].Q_reg[3][0][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16476,6 +20772,27 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(53),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(53),
+      I4 => D_road3(53),
+      I5 => D_road1(53),
+      O => \genblk1[3].Q_reg[3][0][5]_i_1_n_0\
+    );
+\genblk1[3].Q_reg[3][0][6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BFBC8F8CB3B08380"
+    )
+        port map (
+      I0 => D_road0(54),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(54),
+      I4 => D_road2(54),
+      I5 => D_road3(54),
+      O => \genblk1[3].Q_reg[3][0][6]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(53),
@@ -16495,12 +20812,22 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I4 => D_road3(54),
       I5 => D_road0(54),
       O => \Q[3]_16\(6)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[3].Q_reg[3][0][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"EFECE3E02F2C2320"
     )
         port map (
+<<<<<<< HEAD
+      I0 => D_road0(55),
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road1(55),
+      I4 => D_road2(55),
+      I5 => D_road3(55),
+      O => \genblk1[3].Q_reg[3][0][7]_i_1_n_0\
+=======
       I0 => D_road2(55),
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
@@ -16508,6 +20835,7 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
       I4 => D_road3(55),
       I5 => D_road0(55),
       O => \Q[3]_16\(7)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[3].Q_reg[3][0][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16515,12 +20843,21 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(56),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(56),
+      I4 => D_road3(56),
+      I5 => D_road1(56),
+      O => \genblk1[3].Q_reg[3][0][8]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(56),
       I4 => D_road3(56),
       I5 => D_road1(56),
       O => \Q[3]_16\(8)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[3].Q_reg[3][0][9]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -16528,139 +20865,228 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
     )
         port map (
       I0 => D_road2(57),
+<<<<<<< HEAD
+      I1 => \^a_road_reg[1]_0\(1),
+      I2 => \^a_road_reg[1]_0\(0),
+      I3 => D_road0(57),
+      I4 => D_road3(57),
+      I5 => D_road1(57),
+      O => \genblk1[3].Q_reg[3][0][9]_i_1_n_0\
+=======
       I1 => AGENT_0_A(1),
       I2 => \^r_lsfr_reg[1]\(0),
       I3 => D_road0(57),
       I4 => D_road3(57),
       I5 => D_road1(57),
       O => \Q[3]_16\(9)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \genblk1[3].Q_reg_reg[3][0][0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][0]_i_1_n_0\,
+      Q => \^d\(48),
+=======
       D => \Q[3]_16\(0),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][10]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][10]_i_1_n_0\,
+      Q => \^d\(58),
+=======
       D => \Q[3]_16\(10),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(10),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][11]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][11]_i_1_n_0\,
+      Q => \^d\(59),
+=======
       D => \Q[3]_16\(11),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(11),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][12]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][12]_i_1_n_0\,
+      Q => \^d\(60),
+=======
       D => \Q[3]_16\(12),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(12),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][13]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][13]_i_1_n_0\,
+      Q => \^d\(61),
+=======
       D => \Q[3]_16\(13),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(13),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][14]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][14]_i_1_n_0\,
+      Q => \^d\(62),
+=======
       D => \Q[3]_16\(14),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(14),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][15]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][15]_i_1_n_0\,
+      Q => \^d\(63),
+=======
       D => \Q[3]_16\(15),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(15),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][1]_i_1_n_0\,
+      Q => \^d\(49),
+=======
       D => \Q[3]_16\(1),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][2]_i_1_n_0\,
+      Q => \^d\(50),
+=======
       D => \Q[3]_16\(2),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(2),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][3]_i_1_n_0\,
+      Q => \^d\(51),
+=======
       D => \Q[3]_16\(3),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(3),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][4]_i_1_n_0\,
+      Q => \^d\(52),
+=======
       D => \Q[3]_16\(4),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(4),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][5]_i_1_n_0\,
+      Q => \^d\(53),
+=======
       D => \Q[3]_16\(5),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(5),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][6]_i_1_n_0\,
+      Q => \^d\(54),
+=======
       D => \Q[3]_16\(6),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(6),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][7]_i_1_n_0\,
+      Q => \^d\(55),
+=======
       D => \Q[3]_16\(7),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(7),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][8]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][8]_i_1_n_0\,
+      Q => \^d\(56),
+=======
       D => \Q[3]_16\(8),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(8),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \genblk1[3].Q_reg_reg[3][0][9]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
+<<<<<<< HEAD
+      D => \genblk1[3].Q_reg[3][0][9]_i_1_n_0\,
+      Q => \^d\(57),
+=======
       D => \Q[3]_16\(9),
       Q => \genblk1[3].Q_reg_reg[3][0]_7\(9),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       R => rst
     );
 \i__carry__0_i_1__1\: unisim.vcomponents.LUT2
@@ -16692,10 +21118,17 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
         port map (
       I0 => \genblk1[3].Q_reg_reg[3][0]_7\(11),
       I1 => \Q_max__0\(11),
+<<<<<<< HEAD
+      I2 => \^d\(58),
+      I3 => \Q_max__0\(10),
+      I4 => \Q_max__0\(9),
+      I5 => \^d\(57),
+=======
       I2 => \genblk1[3].Q_reg_reg[3][0]_7\(9),
       I3 => \Q_max__0\(9),
       I4 => \Q_max__0\(10),
       I5 => \genblk1[3].Q_reg_reg[3][0]_7\(10),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \i__carry_i_1__0_n_0\
     );
 \i__carry_i_2__0\: unisim.vcomponents.LUT6
@@ -16705,10 +21138,17 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
         port map (
       I0 => \genblk1[3].Q_reg_reg[3][0]_7\(8),
       I1 => \Q_max__0\(8),
+<<<<<<< HEAD
+      I2 => \^d\(54),
+      I3 => \Q_max__0\(6),
+      I4 => \Q_max__0\(7),
+      I5 => \^d\(55),
+=======
       I2 => \genblk1[3].Q_reg_reg[3][0]_7\(6),
       I3 => \Q_max__0\(6),
       I4 => \Q_max__0\(7),
       I5 => \genblk1[3].Q_reg_reg[3][0]_7\(7),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \i__carry_i_2__0_n_0\
     );
 \i__carry_i_3__0\: unisim.vcomponents.LUT6
@@ -16731,14 +21171,87 @@ QA_max0: entity work.top_level_Intellight_Accelerat_0_0_max4to1
         port map (
       I0 => \genblk1[3].Q_reg_reg[3][0]_7\(2),
       I1 => \Q_max__0\(2),
+<<<<<<< HEAD
+      I2 => \^d\(48),
+      I3 => \Q_max__0\(0),
+      I4 => \Q_max__0\(1),
+      I5 => \^d\(49),
+=======
       I2 => \genblk1[3].Q_reg_reg[3][0]_7\(0),
       I3 => \Q_max__0\(0),
       I4 => \Q_max__0\(1),
       I5 => \genblk1[3].Q_reg_reg[3][0]_7\(1),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       O => \i__carry_i_4__0_n_0\
     );
 rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
      port map (
+<<<<<<< HEAD
+      \A_reg_reg[0][2]\(0) => \A_dur_gred3_carry__0_n_2\,
+      \A_reg_reg[0][2]_0\(0) => \A_dur_gred2_carry__0_n_2\,
+      \A_reg_reg[0][2]_1\(0) => \A_dur_gred1_carry__0_n_2\,
+      \A_reg_reg[0][3]\ => \A_reg_reg[0][3]\,
+      CO(0) => p_0_in,
+      D(15 downto 0) => Q_act(15 downto 0),
+      DI(2 downto 0) => DI(2 downto 0),
+      \L_curr_reg[0][0]\ => \^slv_reg3_reg[4]\,
+      \L_curr_reg[0][1]\ => \^slv_reg3_reg[5]\,
+      \L_curr_reg[0][1]_0\ => \L_curr_reg[0][1]\,
+      \L_curr_reg[0][2]\ => SD_0_L0(2),
+      \L_curr_reg[0][2]_0\ => \L_curr_reg[0][2]\,
+      \L_curr_reg[0][2]_1\ => \^slv_reg3_reg[6]\,
+      \L_curr_reg[0][2]_2\ => \rd_addr[3]_INST_0_i_5_n_0\,
+      \L_curr_reg[0][2]_3\ => \rd_addr[4]_INST_0_i_7_n_0\,
+      \L_curr_reg[0][3]\(1 downto 0) => \L_curr_reg[0][3]\(1 downto 0),
+      \L_curr_reg[0][3]_0\ => SD_0_L0(3),
+      \L_curr_reg[0][3]_1\(2 downto 0) => \L_curr_reg[0][3]_0\(2 downto 0),
+      \L_curr_reg[0][3]_2\ => \L_curr_reg[0][3]_1\,
+      \L_curr_reg[0][3]_3\ => \L_curr_reg[0][3]_2\,
+      \L_curr_reg[0][3]_4\ => \rd_addr[4]_INST_0_i_5_n_0\,
+      \L_curr_reg[1][0]\ => \^slv_reg4_reg[4]\,
+      \L_curr_reg[1][1]\ => \^slv_reg4_reg[5]\,
+      \L_curr_reg[1][1]_0\ => \L_curr_reg[1][1]\,
+      \L_curr_reg[1][2]\ => SD_0_L1(2),
+      \L_curr_reg[1][2]_0\ => \L_curr_reg[1][2]\,
+      \L_curr_reg[1][2]_1\ => \^slv_reg4_reg[6]\,
+      \L_curr_reg[1][2]_2\ => \rd_addr[5]_INST_0_i_5_n_0\,
+      \L_curr_reg[1][2]_3\ => \rd_addr[6]_INST_0_i_7_n_0\,
+      \L_curr_reg[1][3]\ => SD_0_L1(3),
+      \L_curr_reg[1][3]_0\ => \L_curr_reg[1][3]\,
+      \L_curr_reg[1][3]_1\(3 downto 0) => \L_curr_reg[1][3]_0\(3 downto 0),
+      \L_curr_reg[1][3]_2\ => \rd_addr[6]_INST_0_i_5_n_0\,
+      \L_curr_reg[1][3]_3\ => \L_curr_reg[1][3]_1\,
+      \L_curr_reg[2][0]\ => \^slv_reg7_reg[4]\,
+      \L_curr_reg[2][0]_0\ => \^slv_reg5_reg[4]\,
+      \L_curr_reg[2][1]\ => \^slv_reg5_reg[5]\,
+      \L_curr_reg[2][1]_0\ => \L_curr_reg[2][1]\,
+      \L_curr_reg[2][1]_1\ => \^slv_reg7_reg[1]\,
+      \L_curr_reg[2][2]\ => SD_0_L2(2),
+      \L_curr_reg[2][2]_0\ => \^slv_reg7_reg[14]\,
+      \L_curr_reg[2][2]_1\ => \L_curr_reg[2][2]\,
+      \L_curr_reg[2][2]_2\ => \^slv_reg7_reg[7]\,
+      \L_curr_reg[2][2]_3\ => \rd_addr[8]_INST_0_i_7_n_0\,
+      \L_curr_reg[2][2]_4\ => \^slv_reg5_reg[6]\,
+      \L_curr_reg[2][2]_5\ => \rd_addr[7]_INST_0_i_5_n_0\,
+      \L_curr_reg[2][3]\ => SD_0_L2(3),
+      \L_curr_reg[2][3]_0\ => \L_curr_reg[2][3]\,
+      \L_curr_reg[2][3]_1\(3 downto 0) => \L_curr_reg[2][3]_0\(3 downto 0),
+      \L_curr_reg[2][3]_2\ => \rd_addr[8]_INST_0_i_5_n_0\,
+      \L_curr_reg[2][3]_3\ => \L_curr_reg[2][3]_1\,
+      \L_curr_reg[3][0]\ => \^slv_reg6_reg[4]\,
+      \L_curr_reg[3][1]\ => \L_curr[3][1]_i_2_n_0\,
+      \L_curr_reg[3][1]_0\ => \L_curr_reg[3][1]\,
+      \L_curr_reg[3][2]\ => SD_0_L3(2),
+      \L_curr_reg[3][2]_0\ => \L_curr_reg[3][2]\,
+      \L_curr_reg[3][2]_1\ => \rd_addr[10]_INST_0_i_9_n_0\,
+      \L_curr_reg[3][2]_2\ => \rd_addr[9]_INST_0_i_6_n_0\,
+      \L_curr_reg[3][2]_3\ => \rd_addr[10]_INST_0_i_7_n_0\,
+      \L_curr_reg[3][3]\ => SD_0_L3(3),
+      \L_curr_reg[3][3]_0\ => \L_curr_reg[3][3]\,
+      \L_curr_reg[3][3]_1\(3 downto 0) => \L_curr_reg[3][3]_0\(3 downto 0),
+      \L_curr_reg[3][3]_2\ => \rd_addr[10]_INST_0_i_5_n_0\,
+      \L_curr_reg[3][3]_3\ => \rd_addr[10]_INST_0_i_6_n_0\,
+=======
       \A_reg_reg[0][2]\(0) => p_0_in,
       \A_reg_reg[0][2]_0\(0) => \A_dur_gred1_carry__0_n_2\,
       \A_reg_reg[0][2]_1\(0) => \A_dur_gred2_carry__0_n_2\,
@@ -16803,6 +21316,7 @@ rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
       \L_curr_reg[3][3]_0\ => \rd_addr[9]_INST_0_i_4_n_0\,
       \L_curr_reg[3][3]_1\ => \rd_addr[9]_INST_0_i_5_n_0\,
       \L_curr_reg[3][3]_2\ => \L_curr_reg[3][3]_0\,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       Q(3 downto 0) => Q(3 downto 0),
       \Q_act_reg_reg[0][0]\ => QA_max0_n_39,
       \Q_act_reg_reg[0][0]_0\ => QA_max0_n_70,
@@ -16813,17 +21327,17 @@ rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
       \Q_act_reg_reg[0][10]_1\ => QA_max0_n_21,
       \Q_act_reg_reg[0][10]_2\ => QA_max0_n_51,
       \Q_act_reg_reg[0][11]\ => QA_0_n_20,
-      \Q_act_reg_reg[0][11]_0\ => QA_max0_n_49,
+      \Q_act_reg_reg[0][11]_0\ => QA_max0_n_48,
       \Q_act_reg_reg[0][11]_1\ => QA_max0_n_20,
-      \Q_act_reg_reg[0][11]_2\ => QA_max0_n_48,
+      \Q_act_reg_reg[0][11]_2\ => QA_max0_n_49,
       \Q_act_reg_reg[0][12]\ => QA_0_n_19,
       \Q_act_reg_reg[0][12]_0\ => QA_max0_n_47,
       \Q_act_reg_reg[0][12]_1\ => QA_max0_n_19,
       \Q_act_reg_reg[0][12]_2\ => QA_max0_n_46,
       \Q_act_reg_reg[0][13]\ => QA_0_n_18,
-      \Q_act_reg_reg[0][13]_0\ => QA_max0_n_45,
+      \Q_act_reg_reg[0][13]_0\ => QA_max0_n_44,
       \Q_act_reg_reg[0][13]_1\ => QA_max0_n_18,
-      \Q_act_reg_reg[0][13]_2\ => QA_max0_n_44,
+      \Q_act_reg_reg[0][13]_2\ => QA_max0_n_45,
       \Q_act_reg_reg[0][14]\ => QA_0_n_17,
       \Q_act_reg_reg[0][14]_0\ => QA_max0_n_42,
       \Q_act_reg_reg[0][14]_1\ => QA_max0_n_1,
@@ -16833,9 +21347,9 @@ rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
       \Q_act_reg_reg[0][15]_1\ => QA_max0_n_0,
       \Q_act_reg_reg[0][15]_2\ => QA_max0_n_40,
       \Q_act_reg_reg[0][1]\ => QA_max0_n_38,
-      \Q_act_reg_reg[0][1]_0\ => QA_max0_n_69,
+      \Q_act_reg_reg[0][1]_0\ => QA_max0_n_68,
       \Q_act_reg_reg[0][1]_1\ => QA_max0_n_36,
-      \Q_act_reg_reg[0][1]_2\ => QA_max0_n_68,
+      \Q_act_reg_reg[0][1]_2\ => QA_max0_n_69,
       \Q_act_reg_reg[0][2]\ => QA_max0_n_35,
       \Q_act_reg_reg[0][2]_0\ => QA_max0_n_66,
       \Q_act_reg_reg[0][2]_1\ => QA_max0_n_33,
@@ -16861,13 +21375,31 @@ rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
       \Q_act_reg_reg[0][7]_1\ => QA_max0_n_24,
       \Q_act_reg_reg[0][7]_2\ => QA_max0_n_56,
       \Q_act_reg_reg[0][8]\ => QA_0_n_23,
-      \Q_act_reg_reg[0][8]_0\ => QA_max0_n_55,
+      \Q_act_reg_reg[0][8]_0\ => QA_max0_n_54,
       \Q_act_reg_reg[0][8]_1\ => QA_max0_n_23,
-      \Q_act_reg_reg[0][8]_2\ => QA_max0_n_54,
+      \Q_act_reg_reg[0][8]_2\ => QA_max0_n_55,
       \Q_act_reg_reg[0][9]\ => QA_0_n_22,
       \Q_act_reg_reg[0][9]_0\ => QA_max0_n_52,
       \Q_act_reg_reg[0][9]_1\ => QA_max0_n_22,
       \Q_act_reg_reg[0][9]_2\ => QA_max0_n_53,
+<<<<<<< HEAD
+      \R0__2_carry__0_i_3_0\ => \R0__2_carry__0_i_15_n_0\,
+      \R0__2_carry__0_i_9_0\ => \R0__2_carry__0_i_9\,
+      S(2 downto 0) => S(2 downto 0),
+      SD_0_L0(1 downto 0) => SD_0_L0(1 downto 0),
+      SD_0_L1(1 downto 0) => SD_0_L1(1 downto 0),
+      SD_0_L2(1 downto 0) => SD_0_L2(1 downto 0),
+      SD_0_L3(1 downto 0) => SD_0_L3(1 downto 0),
+      clk => clk,
+      \r_lsfr_reg[1]_0\ => \r_lsfr_reg[1]\,
+      \r_lsfr_reg[2]_0\ => \r_lsfr_reg[2]\,
+      rd_addr(7 downto 0) => rd_addr(7 downto 0),
+      \rd_addr[10]\(7 downto 0) => \rd_addr[10]\(7 downto 0),
+      \rd_addr[4]\(0) => \x__0_carry__2\(0),
+      rst => rst
+    );
+\rd_addr[10]_INST_0_i_5\: unisim.vcomponents.LUT6
+=======
       \R[14]_i_17_0\ => \R[14]_i_21_n_0\,
       \R[14]_i_17_1\ => \^l_curr_reg[0][3]\,
       \R[14]_i_17_2\ => \R[14]_i_17\,
@@ -16909,10 +21441,98 @@ rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
       rst => rst
     );
 \rd_addr[3]_INST_0_i_5\: unisim.vcomponents.LUT6
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
       INIT => X"3300550F33FF550F"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \L_curr_reg[3][3]_1\(7),
+      I1 => \L_curr_reg[3][3]_1\(15),
+      I2 => \L_curr_reg[3][3]_1\(3),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[3][3]_1\(11),
+      O => \rd_addr[10]_INST_0_i_5_n_0\
+    );
+\rd_addr[10]_INST_0_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"51F70000FFFF51F7"
+    )
+        port map (
+      I0 => \L_curr[3][1]_i_2_n_0\,
+      I1 => \L_curr_reg[3][3]_0\(0),
+      I2 => \^slv_reg6_reg[4]\,
+      I3 => \L_curr_reg[3][3]_0\(1),
+      I4 => \rd_addr[10]_INST_0_i_9_n_0\,
+      I5 => \L_curr_reg[3][3]_0\(2),
+      O => \rd_addr[10]_INST_0_i_6_n_0\
+    );
+\rd_addr[10]_INST_0_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFD444D4440000"
+    )
+        port map (
+      I0 => \^slv_reg7_reg[1]\,
+      I1 => \L_curr_reg[3][3]_0\(1),
+      I2 => \^slv_reg7_reg[4]\,
+      I3 => \L_curr_reg[3][3]_0\(0),
+      I4 => \^slv_reg7_reg[14]\,
+      I5 => \L_curr_reg[3][3]_0\(2),
+      O => \rd_addr[10]_INST_0_i_7_n_0\
+    );
+\rd_addr[10]_INST_0_i_8\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3300550F33FF550F"
+    )
+        port map (
+      I0 => \rd_addr[4]_INST_0_i_3\(7),
+      I1 => \rd_addr[4]_INST_0_i_3\(15),
+      I2 => \rd_addr[4]_INST_0_i_3\(3),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \rd_addr[4]_INST_0_i_3\(11),
+      O => \^slv_reg7_reg[7]\
+    );
+\rd_addr[10]_INST_0_i_9\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3300550F33FF550F"
+    )
+        port map (
+      I0 => \L_curr_reg[3][3]_1\(6),
+      I1 => \L_curr_reg[3][3]_1\(14),
+      I2 => \L_curr_reg[3][3]_1\(2),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[3][3]_1\(10),
+      O => \rd_addr[10]_INST_0_i_9_n_0\
+    );
+\rd_addr[3]_INST_0_i_5\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"51F7"
+    )
+        port map (
+      I0 => \^slv_reg3_reg[5]\,
+      I1 => Q(0),
+      I2 => \^slv_reg3_reg[4]\,
+      I3 => Q(1),
+      O => \rd_addr[3]_INST_0_i_5_n_0\
+    );
+\rd_addr[4]_INST_0_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3300550F33FF550F"
+    )
+        port map (
+      I0 => \L_curr_reg[0][3]_3\(7),
+      I1 => \L_curr_reg[0][3]_3\(15),
+      I2 => \L_curr_reg[0][3]_3\(3),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[0][3]_3\(11),
+      O => \rd_addr[4]_INST_0_i_5_n_0\
+    );
+\rd_addr[4]_INST_0_i_7\: unisim.vcomponents.LUT6
+=======
       I0 => \L_curr_reg[0][3]_2\(7),
       I1 => \L_curr_reg[0][3]_2\(15),
       I2 => \L_curr_reg[0][3]_2\(3),
@@ -16932,10 +21552,22 @@ rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
       O => \rd_addr[3]_INST_0_i_6_n_0\
     );
 \rd_addr[3]_INST_0_i_7\: unisim.vcomponents.LUT6
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
-      INIT => X"EEE8E888E888E888"
+      INIT => X"EE8E8E888E888E88"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \^slv_reg7_reg[14]\,
+      I1 => Q(2),
+      I2 => \^slv_reg7_reg[1]\,
+      I3 => Q(1),
+      I4 => \^slv_reg7_reg[4]\,
+      I5 => Q(0),
+      O => \rd_addr[4]_INST_0_i_7_n_0\
+    );
+\rd_addr[4]_INST_0_i_8\: unisim.vcomponents.LUT6
+=======
       I0 => \^slv_reg7_reg[6]\,
       I1 => \L_curr_reg[0][3]_0\(2),
       I2 => \^slv_reg7_reg[13]\,
@@ -16956,10 +21588,31 @@ rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
       O => \rd_addr[3]_INST_0_i_8_n_0\
     );
 \rd_addr[3]_INST_0_i_9\: unisim.vcomponents.LUT6
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
       INIT => X"3300550F33FF550F"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \L_curr_reg[0][3]_3\(6),
+      I1 => \L_curr_reg[0][3]_3\(14),
+      I2 => \L_curr_reg[0][3]_3\(2),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[0][3]_3\(10),
+      O => \^slv_reg3_reg[6]\
+    );
+\rd_addr[5]_INST_0_i_5\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"51F7"
+    )
+        port map (
+      I0 => \^slv_reg4_reg[5]\,
+      I1 => \L_curr_reg[1][3]_0\(0),
+      I2 => \^slv_reg4_reg[4]\,
+      I3 => \L_curr_reg[1][3]_0\(1),
+      O => \rd_addr[5]_INST_0_i_5_n_0\
+=======
       I0 => \L_curr_reg[0][3]_2\(6),
       I1 => \L_curr_reg[0][3]_2\(14),
       I2 => \L_curr_reg[0][3]_2\(2),
@@ -16967,12 +21620,24 @@ rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
       I4 => AGENT_0_A(1),
       I5 => \L_curr_reg[0][3]_2\(10),
       O => \rd_addr[3]_INST_0_i_9_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \rd_addr[5]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"5533000F5533FF0F"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \L_curr_reg[1][3]_2\(7),
+      I1 => \L_curr_reg[1][3]_2\(15),
+      I2 => \L_curr_reg[1][3]_2\(3),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[1][3]_2\(11),
+      O => \rd_addr[6]_INST_0_i_5_n_0\
+    );
+\rd_addr[6]_INST_0_i_7\: unisim.vcomponents.LUT6
+=======
       I0 => \L_curr_reg[1][3]_2\(15),
       I1 => \L_curr_reg[1][3]_2\(11),
       I2 => \L_curr_reg[1][3]_2\(3),
@@ -17052,10 +21717,22 @@ rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
       O => \rd_addr[7]_INST_0_i_5_n_0\
     );
 \rd_addr[7]_INST_0_i_6\: unisim.vcomponents.LUT6
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
-      INIT => X"FFFFE888E8880000"
+      INIT => X"FFFFD444D4440000"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \^slv_reg7_reg[1]\,
+      I1 => \L_curr_reg[1][3]_0\(1),
+      I2 => \^slv_reg7_reg[4]\,
+      I3 => \L_curr_reg[1][3]_0\(0),
+      I4 => \^slv_reg7_reg[14]\,
+      I5 => \L_curr_reg[1][3]_0\(2),
+      O => \rd_addr[6]_INST_0_i_7_n_0\
+    );
+\rd_addr[6]_INST_0_i_8\: unisim.vcomponents.LUT6
+=======
       I0 => \^slv_reg7_reg[13]\,
       I1 => \L_curr_reg[2][3]_0\(1),
       I2 => \^slv_reg7_reg[12]\,
@@ -17065,10 +21742,22 @@ rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
       O => \^l_curr_reg[2][1]\
     );
 \rd_addr[7]_INST_0_i_7\: unisim.vcomponents.LUT4
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
-      INIT => X"8E88"
+      INIT => X"3300550F33FF550F"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \L_curr_reg[1][3]_2\(6),
+      I1 => \L_curr_reg[1][3]_2\(14),
+      I2 => \L_curr_reg[1][3]_2\(2),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[1][3]_2\(10),
+      O => \^slv_reg4_reg[6]\
+    );
+\rd_addr[7]_INST_0_i_5\: unisim.vcomponents.LUT4
+=======
       I0 => \L_curr[2][1]_i_4_n_0\,
       I1 => \L_curr_reg[2][3]_0\(1),
       I2 => \^slv_reg5_reg[0]\,
@@ -17115,10 +21804,18 @@ rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
       O => \rd_addr[9]_INST_0_i_10_n_0\
     );
 \rd_addr[9]_INST_0_i_4\: unisim.vcomponents.LUT6
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
-      INIT => X"33000F5533FF0F55"
+      INIT => X"51F7"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \^slv_reg5_reg[5]\,
+      I1 => \L_curr_reg[2][3]_0\(0),
+      I2 => \^slv_reg5_reg[4]\,
+      I3 => \L_curr_reg[2][3]_0\(1),
+      O => \rd_addr[7]_INST_0_i_5_n_0\
+=======
       I0 => \L_curr_reg[3][3]_1\(3),
       I1 => \L_curr_reg[3][3]_1\(15),
       I2 => \L_curr_reg[3][3]_1\(7),
@@ -17126,22 +21823,46 @@ rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
       I4 => AGENT_0_A(1),
       I5 => \L_curr_reg[3][3]_1\(11),
       O => \rd_addr[9]_INST_0_i_4_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \rd_addr[9]_INST_0_i_5\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"8E"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \L_curr_reg[2][3]_2\(15),
+      I1 => \L_curr_reg[2][3]_2\(11),
+      I2 => \L_curr_reg[2][3]_2\(3),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[2][3]_2\(7),
+      O => \rd_addr[8]_INST_0_i_5_n_0\
+    );
+\rd_addr[8]_INST_0_i_7\: unisim.vcomponents.LUT6
+=======
       I0 => \rd_addr[9]_INST_0_i_9_n_0\,
       I1 => Q(2),
       I2 => \rd_addr[9]_INST_0_i_10_n_0\,
       O => \rd_addr[9]_INST_0_i_5_n_0\
     );
 \rd_addr[9]_INST_0_i_7\: unisim.vcomponents.LUT6
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
-      INIT => X"FFFFE888E8880000"
+      INIT => X"FFFFD444D4440000"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \^slv_reg7_reg[1]\,
+      I1 => \L_curr_reg[2][3]_0\(1),
+      I2 => \^slv_reg7_reg[4]\,
+      I3 => \L_curr_reg[2][3]_0\(0),
+      I4 => \^slv_reg7_reg[14]\,
+      I5 => \L_curr_reg[2][3]_0\(2),
+      O => \rd_addr[8]_INST_0_i_7_n_0\
+    );
+\rd_addr[8]_INST_0_i_8\: unisim.vcomponents.LUT6
+=======
       I0 => \^slv_reg7_reg[13]\,
       I1 => Q(1),
       I2 => \^slv_reg7_reg[12]\,
@@ -17151,10 +21872,22 @@ rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
       O => \rd_addr[9]_INST_0_i_7_n_0\
     );
 \rd_addr[9]_INST_0_i_8\: unisim.vcomponents.LUT6
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
       INIT => X"3300550F33FF550F"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \L_curr_reg[2][3]_2\(6),
+      I1 => \L_curr_reg[2][3]_2\(14),
+      I2 => \L_curr_reg[2][3]_2\(2),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \L_curr_reg[2][3]_2\(10),
+      O => \^slv_reg5_reg[6]\
+    );
+\rd_addr[9]_INST_0_i_5\: unisim.vcomponents.LUT6
+=======
       I0 => \rd_addr[3]_INST_0_i_3\(7),
       I1 => \rd_addr[3]_INST_0_i_3\(15),
       I2 => \rd_addr[3]_INST_0_i_3\(3),
@@ -17164,15 +21897,50 @@ rand: entity work.top_level_Intellight_Accelerat_0_0_lfsr
       O => \^slv_reg7_reg[7]\
     );
 \rd_addr[9]_INST_0_i_9\: unisim.vcomponents.LUT4
+>>>>>>> parent of ae750207 (shfcuidtf7)
     generic map(
       INIT => X"8E88"
     )
         port map (
+<<<<<<< HEAD
+      I0 => \rd_addr[4]_INST_0_i_3\(14),
+      I1 => \rd_addr[4]_INST_0_i_3\(10),
+      I2 => \rd_addr[4]_INST_0_i_3\(2),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \rd_addr[4]_INST_0_i_3\(6),
+      O => \^slv_reg7_reg[14]\
+    );
+\rd_addr[9]_INST_0_i_6\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"51F7"
+    )
+        port map (
+      I0 => \L_curr[3][1]_i_2_n_0\,
+      I1 => \L_curr_reg[3][3]_0\(0),
+      I2 => \^slv_reg6_reg[4]\,
+      I3 => \L_curr_reg[3][3]_0\(1),
+      O => \rd_addr[9]_INST_0_i_6_n_0\
+    );
+\rd_addr[9]_INST_0_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F0CCFFAAF0CC00AA"
+    )
+        port map (
+      I0 => \rd_addr[4]_INST_0_i_3\(1),
+      I1 => \rd_addr[4]_INST_0_i_3\(9),
+      I2 => \rd_addr[4]_INST_0_i_3\(13),
+      I3 => \^a_road_reg[1]_0\(0),
+      I4 => \^a_road_reg[1]_0\(1),
+      I5 => \rd_addr[4]_INST_0_i_3\(5),
+      O => \^slv_reg7_reg[1]\
+=======
       I0 => \L_curr[3][1]_i_4_n_0\,
       I1 => Q(1),
       I2 => \^slv_reg6_reg[4]\,
       I3 => Q(0),
       O => \rd_addr[9]_INST_0_i_9_n_0\
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 \temp01_carry__0_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -17271,26 +22039,44 @@ entity top_level_Intellight_Accelerat_0_0_Accelerator is
   port (
     rd_addr : out STD_LOGIC_VECTOR ( 7 downto 0 );
     wr_addr : out STD_LOGIC_VECTOR ( 7 downto 0 );
+<<<<<<< HEAD
+    idle : out STD_LOGIC;
+    finish : out STD_LOGIC;
+    wen_bram3 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    wen_bram2 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    wen_bram0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    wen_bram1 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    D_new : out STD_LOGIC_VECTOR ( 63 downto 0 );
+=======
     D_new : out STD_LOGIC_VECTOR ( 63 downto 0 );
     \A_reg_reg[2][0]\ : out STD_LOGIC;
     finish : out STD_LOGIC;
     wen0 : out STD_LOGIC;
     wen1 : out STD_LOGIC;
     wen_bram : out STD_LOGIC_VECTOR ( 0 to 0 );
+>>>>>>> parent of ae750207 (shfcuidtf7)
     rst : in STD_LOGIC;
     clk : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \rd_addr[9]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \x__0_carry__2\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \L_curr_reg[0][3]\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
+<<<<<<< HEAD
+    \L_curr_reg[3][3]\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \L_curr_reg[1][3]\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \L_curr_reg[2][3]\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \rd_addr[4]_INST_0_i_3\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
+=======
     \L_curr_reg[1][3]\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     \L_curr_reg[2][3]\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     \L_curr_reg[3][3]\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     \rd_addr[3]_INST_0_i_3\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     D_road2 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+>>>>>>> parent of ae750207 (shfcuidtf7)
     D_road0 : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    D_road3 : in STD_LOGIC_VECTOR ( 63 downto 0 );
     D_road1 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    D_road2 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    D_road3 : in STD_LOGIC_VECTOR ( 63 downto 0 );
     \r_lsfr_reg[16]\ : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -17298,6 +22084,70 @@ entity top_level_Intellight_Accelerat_0_0_Accelerator is
 end top_level_Intellight_Accelerat_0_0_Accelerator;
 
 architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_Accelerator is
+<<<<<<< HEAD
+  signal AGENT_0_n_102 : STD_LOGIC;
+  signal AGENT_0_n_103 : STD_LOGIC;
+  signal AGENT_0_n_104 : STD_LOGIC;
+  signal AGENT_0_n_105 : STD_LOGIC;
+  signal AGENT_0_n_106 : STD_LOGIC;
+  signal AGENT_0_n_115 : STD_LOGIC;
+  signal AGENT_0_n_116 : STD_LOGIC;
+  signal AGENT_0_n_117 : STD_LOGIC;
+  signal AGENT_0_n_118 : STD_LOGIC;
+  signal AGENT_0_n_119 : STD_LOGIC;
+  signal AGENT_0_n_120 : STD_LOGIC;
+  signal AGENT_0_n_121 : STD_LOGIC;
+  signal AGENT_0_n_122 : STD_LOGIC;
+  signal AGENT_0_n_123 : STD_LOGIC;
+  signal AGENT_0_n_124 : STD_LOGIC;
+  signal AGENT_0_n_125 : STD_LOGIC;
+  signal AGENT_0_n_126 : STD_LOGIC;
+  signal AGENT_0_n_127 : STD_LOGIC;
+  signal AGENT_0_n_128 : STD_LOGIC;
+  signal AGENT_0_n_129 : STD_LOGIC;
+  signal AGENT_0_n_130 : STD_LOGIC;
+  signal AGENT_0_n_131 : STD_LOGIC;
+  signal AGENT_0_n_132 : STD_LOGIC;
+  signal AGENT_0_n_64 : STD_LOGIC;
+  signal AGENT_0_n_65 : STD_LOGIC;
+  signal AGENT_0_n_66 : STD_LOGIC;
+  signal AGENT_0_n_67 : STD_LOGIC;
+  signal AGENT_0_n_68 : STD_LOGIC;
+  signal AGENT_0_n_69 : STD_LOGIC;
+  signal AGENT_0_n_70 : STD_LOGIC;
+  signal AGENT_0_n_71 : STD_LOGIC;
+  signal AGENT_0_n_72 : STD_LOGIC;
+  signal AGENT_0_n_73 : STD_LOGIC;
+  signal AGENT_0_n_74 : STD_LOGIC;
+  signal AGENT_0_n_75 : STD_LOGIC;
+  signal AGENT_0_n_76 : STD_LOGIC;
+  signal AGENT_0_n_77 : STD_LOGIC;
+  signal AGENT_0_n_78 : STD_LOGIC;
+  signal AGENT_0_n_79 : STD_LOGIC;
+  signal AGENT_0_n_80 : STD_LOGIC;
+  signal AGENT_0_n_81 : STD_LOGIC;
+  signal AGENT_0_n_82 : STD_LOGIC;
+  signal AGENT_0_n_95 : STD_LOGIC;
+  signal AGENT_0_n_96 : STD_LOGIC;
+  signal AGENT_0_n_97 : STD_LOGIC;
+  signal A_road : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal CU_0_n_0 : STD_LOGIC;
+  signal CU_0_n_1 : STD_LOGIC;
+  signal CU_0_n_2 : STD_LOGIC;
+  signal CU_0_n_4 : STD_LOGIC;
+  signal CU_0_n_6 : STD_LOGIC;
+  signal ENV_0_R : STD_LOGIC_VECTOR ( 15 downto 10 );
+  signal ENV_0_n_0 : STD_LOGIC;
+  signal ENV_0_n_11 : STD_LOGIC;
+  signal ENV_0_n_16 : STD_LOGIC;
+  signal ENV_0_n_17 : STD_LOGIC;
+  signal ENV_0_n_18 : STD_LOGIC;
+  signal ENV_0_n_19 : STD_LOGIC;
+  signal ENV_0_n_20 : STD_LOGIC;
+  signal ENV_0_n_21 : STD_LOGIC;
+  signal ENV_0_n_22 : STD_LOGIC;
+  signal ENV_0_n_23 : STD_LOGIC;
+=======
   signal AGENT_0_A : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal AGENT_0_Q_new : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal AGENT_0_n_16 : STD_LOGIC;
@@ -17334,10 +22184,19 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_Accelerator is
   signal ENV_0_n_25 : STD_LOGIC;
   signal ENV_0_n_26 : STD_LOGIC;
   signal ENV_0_n_27 : STD_LOGIC;
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal ENV_0_n_28 : STD_LOGIC;
   signal ENV_0_n_29 : STD_LOGIC;
   signal ENV_0_n_30 : STD_LOGIC;
   signal ENV_0_n_31 : STD_LOGIC;
+<<<<<<< HEAD
+  signal ENV_0_n_5 : STD_LOGIC;
+  signal ENV_0_n_6 : STD_LOGIC;
+  signal \L_curr_reg[0]_8\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \L_curr_reg[1]_9\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \L_curr_reg[2]_10\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \L_curr_reg[3]_11\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+=======
   signal ENV_0_n_32 : STD_LOGIC;
   signal ENV_0_n_33 : STD_LOGIC;
   signal ENV_0_n_34 : STD_LOGIC;
@@ -17355,15 +22214,35 @@ architecture STRUCTURE of top_level_Intellight_Accelerat_0_0_Accelerator is
   signal \L_curr_reg[1]_11\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \L_curr_reg[2]_12\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \L_curr_reg[3]_13\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal SD_0_L0 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal SD_0_L1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal SD_0_L2 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal SD_0_L3 : STD_LOGIC_VECTOR ( 3 downto 0 );
+<<<<<<< HEAD
+  signal \genblk1[0].Q_reg_reg[0][0]_12\ : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal \genblk1[1].Q_reg_reg[1][0]_13\ : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal \genblk1[2].Q_reg_reg[2][0]_14\ : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal \genblk1[3].Q_reg_reg[3][0]_15\ : STD_LOGIC_VECTOR ( 15 downto 0 );
+=======
+>>>>>>> parent of ae750207 (shfcuidtf7)
   signal \^rd_addr\ : STD_LOGIC_VECTOR ( 7 downto 0 );
 begin
   rd_addr(7 downto 0) <= \^rd_addr\(7 downto 0);
 AGENT_0: entity work.top_level_Intellight_Accelerat_0_0_AGENT
      port map (
+<<<<<<< HEAD
+      \A_reg_reg[0][3]\ => CU_0_n_4,
+      \A_road_reg[1]_0\(1) => AGENT_0_n_119,
+      \A_road_reg[1]_0\(0) => AGENT_0_n_120,
+      D(63 downto 48) => \genblk1[3].Q_reg_reg[3][0]_15\(15 downto 0),
+      D(47 downto 32) => \genblk1[2].Q_reg_reg[2][0]_14\(15 downto 0),
+      D(31 downto 16) => \genblk1[1].Q_reg_reg[1][0]_13\(15 downto 0),
+      D(15 downto 0) => \genblk1[0].Q_reg_reg[0][0]_12\(15 downto 0),
+      DI(2) => AGENT_0_n_80,
+      DI(1) => AGENT_0_n_81,
+      DI(0) => AGENT_0_n_82,
+=======
       AGENT_0_Q_new(15 downto 0) => AGENT_0_Q_new(15 downto 0),
       \A_reg_reg[0][2]\ => CU_0_n_0,
       D(6) => AGENT_0_n_16,
@@ -17373,10 +22252,62 @@ AGENT_0: entity work.top_level_Intellight_Accelerat_0_0_AGENT
       D(2) => AGENT_0_n_20,
       D(1) => AGENT_0_n_21,
       D(0) => AGENT_0_n_22,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       D_road0(63 downto 0) => D_road0(63 downto 0),
       D_road1(63 downto 0) => D_road1(63 downto 0),
       D_road2(63 downto 0) => D_road2(63 downto 0),
       D_road3(63 downto 0) => D_road3(63 downto 0),
+<<<<<<< HEAD
+      \L_curr_reg[0][1]\ => ENV_0_n_5,
+      \L_curr_reg[0][2]\ => ENV_0_n_18,
+      \L_curr_reg[0][3]\(1) => AGENT_0_n_102,
+      \L_curr_reg[0][3]\(0) => AGENT_0_n_103,
+      \L_curr_reg[0][3]_0\(2) => AGENT_0_n_104,
+      \L_curr_reg[0][3]_0\(1) => AGENT_0_n_105,
+      \L_curr_reg[0][3]_0\(0) => AGENT_0_n_106,
+      \L_curr_reg[0][3]_1\ => ENV_0_n_17,
+      \L_curr_reg[0][3]_2\ => ENV_0_n_0,
+      \L_curr_reg[0][3]_3\(15 downto 0) => \L_curr_reg[0][3]\(15 downto 0),
+      \L_curr_reg[1][1]\ => ENV_0_n_16,
+      \L_curr_reg[1][2]\ => ENV_0_n_22,
+      \L_curr_reg[1][3]\ => ENV_0_n_21,
+      \L_curr_reg[1][3]_0\(3 downto 0) => \L_curr_reg[1]_9\(3 downto 0),
+      \L_curr_reg[1][3]_1\ => ENV_0_n_11,
+      \L_curr_reg[1][3]_2\(15 downto 0) => \L_curr_reg[1][3]\(15 downto 0),
+      \L_curr_reg[2][1]\ => ENV_0_n_31,
+      \L_curr_reg[2][2]\ => ENV_0_n_28,
+      \L_curr_reg[2][3]\ => ENV_0_n_23,
+      \L_curr_reg[2][3]_0\(3 downto 0) => \L_curr_reg[2]_10\(3 downto 0),
+      \L_curr_reg[2][3]_1\ => ENV_0_n_30,
+      \L_curr_reg[2][3]_2\(15 downto 0) => \L_curr_reg[2][3]\(15 downto 0),
+      \L_curr_reg[3][1]\ => ENV_0_n_6,
+      \L_curr_reg[3][2]\ => ENV_0_n_20,
+      \L_curr_reg[3][3]\ => ENV_0_n_19,
+      \L_curr_reg[3][3]_0\(3 downto 0) => \L_curr_reg[3]_11\(3 downto 0),
+      \L_curr_reg[3][3]_1\(15 downto 0) => \L_curr_reg[3][3]\(15 downto 0),
+      O(3) => AGENT_0_n_64,
+      O(2) => AGENT_0_n_65,
+      O(1) => AGENT_0_n_66,
+      O(0) => AGENT_0_n_67,
+      Q(3 downto 0) => \L_curr_reg[0]_8\(3 downto 0),
+      \Q_act_reg_reg[2][11]\(3) => AGENT_0_n_72,
+      \Q_act_reg_reg[2][11]\(2) => AGENT_0_n_73,
+      \Q_act_reg_reg[2][11]\(1) => AGENT_0_n_74,
+      \Q_act_reg_reg[2][11]\(0) => AGENT_0_n_75,
+      \Q_act_reg_reg[2][14]\(3) => AGENT_0_n_76,
+      \Q_act_reg_reg[2][14]\(2) => AGENT_0_n_77,
+      \Q_act_reg_reg[2][14]\(1) => AGENT_0_n_78,
+      \Q_act_reg_reg[2][14]\(0) => AGENT_0_n_79,
+      \Q_act_reg_reg[2][7]\(3) => AGENT_0_n_68,
+      \Q_act_reg_reg[2][7]\(2) => AGENT_0_n_69,
+      \Q_act_reg_reg[2][7]\(1) => AGENT_0_n_70,
+      \Q_act_reg_reg[2][7]\(0) => AGENT_0_n_71,
+      \R0__2_carry__0_i_9\ => ENV_0_n_29,
+      \R_reg0_reg[15]\(5 downto 0) => ENV_0_R(15 downto 10),
+      S(2) => AGENT_0_n_95,
+      S(1) => AGENT_0_n_96,
+      S(0) => AGENT_0_n_97,
+=======
       \L_curr_reg[0][1]\ => ENV_0_n_34,
       \L_curr_reg[0][2]\ => ENV_0_n_25,
       \L_curr_reg[0][3]\ => AGENT_0_n_58,
@@ -17419,11 +22350,34 @@ AGENT_0: entity work.top_level_Intellight_Accelerat_0_0_AGENT
       \R_reg0_reg[14]\(6) => ENV_0_R(14),
       \R_reg0_reg[14]\(5 downto 0) => ENV_0_R(5 downto 0),
       \R_reg[14]\ => ENV_0_n_5,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       SD_0_L0(3 downto 0) => SD_0_L0(3 downto 0),
       SD_0_L1(3 downto 0) => SD_0_L1(3 downto 0),
       SD_0_L2(3 downto 0) => SD_0_L2(3 downto 0),
       SD_0_L3(3 downto 0) => SD_0_L3(3 downto 0),
       clk => clk,
+<<<<<<< HEAD
+      \r_lsfr_reg[1]\ => AGENT_0_n_124,
+      \r_lsfr_reg[2]\ => AGENT_0_n_123,
+      rd_addr(7 downto 0) => \^rd_addr\(7 downto 0),
+      \rd_addr[10]\(7 downto 0) => \rd_addr[10]\(7 downto 0),
+      \rd_addr[4]_INST_0_i_3\(15 downto 0) => \rd_addr[4]_INST_0_i_3\(15 downto 0),
+      rst => rst,
+      \slv_reg3_reg[4]\ => AGENT_0_n_116,
+      \slv_reg3_reg[5]\ => AGENT_0_n_117,
+      \slv_reg3_reg[6]\ => AGENT_0_n_121,
+      \slv_reg4_reg[4]\ => AGENT_0_n_125,
+      \slv_reg4_reg[5]\ => AGENT_0_n_126,
+      \slv_reg4_reg[6]\ => AGENT_0_n_127,
+      \slv_reg5_reg[4]\ => AGENT_0_n_128,
+      \slv_reg5_reg[5]\ => AGENT_0_n_129,
+      \slv_reg5_reg[6]\ => AGENT_0_n_132,
+      \slv_reg6_reg[4]\ => AGENT_0_n_122,
+      \slv_reg7_reg[14]\ => AGENT_0_n_118,
+      \slv_reg7_reg[1]\ => AGENT_0_n_130,
+      \slv_reg7_reg[4]\ => AGENT_0_n_115,
+      \slv_reg7_reg[7]\ => AGENT_0_n_131,
+=======
       \r_lsfr_reg[1]\(1) => AGENT_0_A(2),
       \r_lsfr_reg[1]\(0) => AGENT_0_A(0),
       \r_lsfr_reg[2]\ => AGENT_0_n_31,
@@ -17439,25 +22393,91 @@ AGENT_0: entity work.top_level_Intellight_Accelerat_0_0_AGENT
       \slv_reg7_reg[13]\ => AGENT_0_n_59,
       \slv_reg7_reg[6]\ => AGENT_0_n_57,
       \slv_reg7_reg[7]\ => AGENT_0_n_35,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       \x__0_carry__2\(6 downto 1) => \x__0_carry__2\(7 downto 2),
       \x__0_carry__2\(0) => \x__0_carry__2\(0)
     );
 CU_0: entity work.top_level_Intellight_Accelerat_0_0_CU
      port map (
+<<<<<<< HEAD
+      \A_reg_reg[2][2]\ => CU_0_n_1,
+      \A_reg_reg[2][2]_0\ => CU_0_n_6,
+      \A_reg_reg[2][3]\ => CU_0_n_0,
+      \FSM_onehot_cs_reg[0]_0\(0) => idle,
+      \FSM_onehot_cs_reg[0]_1\(1 downto 0) => \x__0_carry__2\(1 downto 0),
+      \FSM_onehot_cs_reg[14]_0\ => CU_0_n_2,
+=======
       A_road => A_road,
       \FSM_onehot_cs_reg[0]_0\(1 downto 0) => \x__0_carry__2\(1 downto 0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       Q(31 downto 0) => Q(31 downto 0),
       clk => clk,
       finish => finish,
       \r_lsfr_reg[16]\(15 downto 0) => \r_lsfr_reg[16]\(15 downto 0),
       rst => rst,
+<<<<<<< HEAD
+      \slv_reg0_reg[0]\ => CU_0_n_4,
+      \wen_bram3[6]\(1 downto 0) => A_road(1 downto 0)
+=======
       \slv_reg0_reg[0]\ => CU_0_n_0,
       wen0 => wen0,
       wen1 => wen1
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 ENV_0: entity work.top_level_Intellight_Accelerat_0_0_ENV
      port map (
       D(3 downto 0) => SD_0_L0(3 downto 0),
+<<<<<<< HEAD
+      DI(2) => AGENT_0_n_80,
+      DI(1) => AGENT_0_n_81,
+      DI(0) => AGENT_0_n_82,
+      \L_curr_reg[0][0]\ => ENV_0_n_5,
+      \L_curr_reg[0][0]_0\ => ENV_0_n_18,
+      \L_curr_reg[0][0]_1\ => ENV_0_n_29,
+      \L_curr_reg[0][1]\ => AGENT_0_n_116,
+      \L_curr_reg[0][2]\ => ENV_0_n_0,
+      \L_curr_reg[0][3]\ => ENV_0_n_17,
+      \L_curr_reg[0][3]_0\ => AGENT_0_n_121,
+      \L_curr_reg[0][3]_1\ => AGENT_0_n_117,
+      \L_curr_reg[1][0]\ => ENV_0_n_16,
+      \L_curr_reg[1][0]_0\ => ENV_0_n_22,
+      \L_curr_reg[1][1]\ => AGENT_0_n_125,
+      \L_curr_reg[1][2]\ => ENV_0_n_11,
+      \L_curr_reg[1][3]\(3 downto 0) => \L_curr_reg[1]_9\(3 downto 0),
+      \L_curr_reg[1][3]_0\ => ENV_0_n_21,
+      \L_curr_reg[1][3]_1\ => AGENT_0_n_127,
+      \L_curr_reg[1][3]_2\ => AGENT_0_n_126,
+      \L_curr_reg[1][3]_3\(3 downto 0) => SD_0_L1(3 downto 0),
+      \L_curr_reg[2][0]\ => ENV_0_n_28,
+      \L_curr_reg[2][0]_0\ => ENV_0_n_31,
+      \L_curr_reg[2][1]\ => AGENT_0_n_128,
+      \L_curr_reg[2][2]\ => ENV_0_n_30,
+      \L_curr_reg[2][2]_0\ => AGENT_0_n_115,
+      \L_curr_reg[2][2]_1\ => AGENT_0_n_130,
+      \L_curr_reg[2][3]\ => ENV_0_n_23,
+      \L_curr_reg[2][3]_0\(3 downto 0) => \L_curr_reg[2]_10\(3 downto 0),
+      \L_curr_reg[2][3]_1\ => AGENT_0_n_131,
+      \L_curr_reg[2][3]_2\ => AGENT_0_n_118,
+      \L_curr_reg[2][3]_3\ => AGENT_0_n_132,
+      \L_curr_reg[2][3]_4\ => AGENT_0_n_129,
+      \L_curr_reg[2][3]_5\(3 downto 0) => SD_0_L2(3 downto 0),
+      \L_curr_reg[3][0]\ => ENV_0_n_6,
+      \L_curr_reg[3][0]_0\ => ENV_0_n_20,
+      \L_curr_reg[3][1]\ => AGENT_0_n_122,
+      \L_curr_reg[3][3]\(3 downto 0) => \L_curr_reg[3]_11\(3 downto 0),
+      \L_curr_reg[3][3]_0\ => ENV_0_n_19,
+      \L_curr_reg[3][3]_1\(3 downto 0) => SD_0_L3(3 downto 0),
+      Q(3 downto 0) => \L_curr_reg[0]_8\(3 downto 0),
+      \R_reg[15]\(5 downto 0) => ENV_0_R(15 downto 10),
+      \R_reg[15]_0\(1) => AGENT_0_n_102,
+      \R_reg[15]_0\(0) => AGENT_0_n_103,
+      \R_reg[15]_1\(2) => AGENT_0_n_104,
+      \R_reg[15]_1\(1) => AGENT_0_n_105,
+      \R_reg[15]_1\(0) => AGENT_0_n_106,
+      S(2) => AGENT_0_n_95,
+      S(1) => AGENT_0_n_96,
+      S(0) => AGENT_0_n_97,
+=======
       \L_curr_reg[0][0]\ => ENV_0_n_5,
       \L_curr_reg[0][0]_0\ => ENV_0_n_25,
       \L_curr_reg[0][0]_1\ => ENV_0_n_33,
@@ -17516,11 +22536,51 @@ ENV_0: entity work.top_level_Intellight_Accelerat_0_0_ENV
       \R_reg[14]_0\(2) => AGENT_0_n_20,
       \R_reg[14]_0\(1) => AGENT_0_n_21,
       \R_reg[14]_0\(0) => AGENT_0_n_22,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       clk => clk,
       rst => rst
     );
 MII_0: entity work.top_level_Intellight_Accelerat_0_0_MII
      port map (
+<<<<<<< HEAD
+      D(3) => AGENT_0_n_123,
+      D(2) => AGENT_0_n_124,
+      D(1) => AGENT_0_n_119,
+      D(0) => AGENT_0_n_120,
+      D_new(63 downto 0) => D_new(63 downto 0),
+      \D_new[55]\(3) => AGENT_0_n_68,
+      \D_new[55]\(2) => AGENT_0_n_69,
+      \D_new[55]\(1) => AGENT_0_n_70,
+      \D_new[55]\(0) => AGENT_0_n_71,
+      \D_new[59]\(3) => AGENT_0_n_72,
+      \D_new[59]\(2) => AGENT_0_n_73,
+      \D_new[59]\(1) => AGENT_0_n_74,
+      \D_new[59]\(0) => AGENT_0_n_75,
+      \D_new[63]\(3) => AGENT_0_n_76,
+      \D_new[63]\(2) => AGENT_0_n_77,
+      \D_new[63]\(1) => AGENT_0_n_78,
+      \D_new[63]\(0) => AGENT_0_n_79,
+      \D_reg_reg[1][63]_0\(63 downto 48) => \genblk1[3].Q_reg_reg[3][0]_15\(15 downto 0),
+      \D_reg_reg[1][63]_0\(47 downto 32) => \genblk1[2].Q_reg_reg[2][0]_14\(15 downto 0),
+      \D_reg_reg[1][63]_0\(31 downto 16) => \genblk1[1].Q_reg_reg[1][0]_13\(15 downto 0),
+      \D_reg_reg[1][63]_0\(15 downto 0) => \genblk1[0].Q_reg_reg[0][0]_12\(15 downto 0),
+      O(3) => AGENT_0_n_64,
+      O(2) => AGENT_0_n_65,
+      O(1) => AGENT_0_n_66,
+      O(0) => AGENT_0_n_67,
+      Q(1 downto 0) => A_road(1 downto 0),
+      clk => clk,
+      rd_addr(7 downto 0) => \^rd_addr\(7 downto 0),
+      rst => rst,
+      wen_bram0(3 downto 0) => wen_bram0(3 downto 0),
+      \wen_bram0[6]\ => CU_0_n_1,
+      wen_bram1(3 downto 0) => wen_bram1(3 downto 0),
+      \wen_bram1[6]\ => CU_0_n_2,
+      wen_bram2(3 downto 0) => wen_bram2(3 downto 0),
+      wen_bram2_0_sp_1 => CU_0_n_6,
+      wen_bram3(3 downto 0) => wen_bram3(3 downto 0),
+      \wen_bram3[6]\ => CU_0_n_0,
+=======
       AGENT_0_Q_new(15 downto 0) => AGENT_0_Q_new(15 downto 0),
       \A_reg_reg[0][2]_0\(1) => AGENT_0_A(2),
       \A_reg_reg[0][2]_0\(0) => AGENT_0_A(0),
@@ -17533,6 +22593,7 @@ MII_0: entity work.top_level_Intellight_Accelerat_0_0_MII
       rd_addr(7 downto 0) => \^rd_addr\(7 downto 0),
       rst => rst,
       wen_bram(0) => wen_bram(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       wr_addr(7 downto 0) => wr_addr(7 downto 0)
     );
 end STRUCTURE;
@@ -17552,11 +22613,21 @@ entity top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0_S00_AXI is
     aw_en_reg_0 : out STD_LOGIC;
     s00_axi_rvalid : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+<<<<<<< HEAD
+    Q : out STD_LOGIC_VECTOR ( 0 to 0 );
+    finish : out STD_LOGIC;
+    wen_bram3 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    wen_bram2 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    wen_bram0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    wen_bram1 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    D_new : out STD_LOGIC_VECTOR ( 63 downto 0 );
+=======
     \A_reg_reg[2][0]\ : out STD_LOGIC;
     finish : out STD_LOGIC;
     wen0 : out STD_LOGIC;
     wen1 : out STD_LOGIC;
     wen_bram : out STD_LOGIC_VECTOR ( 0 to 0 );
+>>>>>>> parent of ae750207 (shfcuidtf7)
     rst : in STD_LOGIC;
     clk : in STD_LOGIC;
     p_0_in : in STD_LOGIC;
@@ -18441,6 +23512,18 @@ accelerator_0: entity work.top_level_Intellight_Accelerat_0_0_Accelerator
       Q(0) => \slv_reg1_reg_n_0_[0]\,
       clk => clk,
       finish => finish,
+<<<<<<< HEAD
+      idle => Q(0),
+      \r_lsfr_reg[16]\(15 downto 0) => slv_reg2(15 downto 0),
+      rd_addr(7 downto 0) => rd_addr(7 downto 0),
+      \rd_addr[10]\(7 downto 0) => slv_reg8(7 downto 0),
+      \rd_addr[4]_INST_0_i_3\(15 downto 0) => slv_reg7(15 downto 0),
+      rst => rst,
+      wen_bram0(3 downto 0) => wen_bram0(3 downto 0),
+      wen_bram1(3 downto 0) => wen_bram1(3 downto 0),
+      wen_bram2(3 downto 0) => wen_bram2(3 downto 0),
+      wen_bram3(3 downto 0) => wen_bram3(3 downto 0),
+=======
       \r_lsfr_reg[16]\(15 downto 0) => slv_reg2(15 downto 0),
       rd_addr(7 downto 0) => rd_addr(7 downto 0),
       \rd_addr[3]_INST_0_i_3\(15 downto 0) => slv_reg7(15 downto 0),
@@ -18449,6 +23532,7 @@ accelerator_0: entity work.top_level_Intellight_Accelerat_0_0_Accelerator
       wen0 => wen0,
       wen1 => wen1,
       wen_bram(0) => wen_bram(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       wr_addr(7 downto 0) => wr_addr(7 downto 0),
       \x__0_carry__2\(7 downto 5) => gamma(2 downto 0),
       \x__0_carry__2\(4 downto 2) => alpha(2 downto 0),
@@ -36995,12 +42079,22 @@ entity top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0 is
   port (
     rd_addr : out STD_LOGIC_VECTOR ( 7 downto 0 );
     wr_addr : out STD_LOGIC_VECTOR ( 7 downto 0 );
+<<<<<<< HEAD
+    idle : out STD_LOGIC;
+    finish : out STD_LOGIC;
+    wen_bram3 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    wen_bram2 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    wen_bram0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    wen_bram1 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    D_new : out STD_LOGIC_VECTOR ( 63 downto 0 );
+=======
     D_new : out STD_LOGIC_VECTOR ( 63 downto 0 );
     \A_reg_reg[2][0]\ : out STD_LOGIC;
     finish : out STD_LOGIC;
     wen0 : out STD_LOGIC;
     wen1 : out STD_LOGIC;
     wen_bram : out STD_LOGIC_VECTOR ( 0 to 0 );
+>>>>>>> parent of ae750207 (shfcuidtf7)
     S_AXI_WREADY : out STD_LOGIC;
     S_AXI_AWREADY : out STD_LOGIC;
     S_AXI_ARREADY : out STD_LOGIC;
@@ -37010,10 +42104,10 @@ entity top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0 is
     rst : in STD_LOGIC;
     clk : in STD_LOGIC;
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    D_road2 : in STD_LOGIC_VECTOR ( 63 downto 0 );
     D_road0 : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    D_road3 : in STD_LOGIC_VECTOR ( 63 downto 0 );
     D_road1 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    D_road2 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    D_road3 : in STD_LOGIC_VECTOR ( 63 downto 0 );
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
     s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -37054,7 +42148,12 @@ Intellight_Accelerator_v1_0_S00_AXI_inst: entity work.top_level_Intellight_Accel
       D_road1(63 downto 0) => D_road1(63 downto 0),
       D_road2(63 downto 0) => D_road2(63 downto 0),
       D_road3(63 downto 0) => D_road3(63 downto 0),
+<<<<<<< HEAD
+      Q(0) => idle,
+      aw_en_reg_0 => Intellight_Accelerator_v1_0_S00_AXI_inst_n_20,
+=======
       aw_en_reg_0 => Intellight_Accelerator_v1_0_S00_AXI_inst_n_84,
+>>>>>>> parent of ae750207 (shfcuidtf7)
       aw_en_reg_1 => aw_en_i_1_n_0,
       axi_arready_reg_0 => \^s_axi_arready\,
       axi_awready_reg_0 => \^s_axi_awready\,
@@ -37077,9 +42176,16 @@ Intellight_Accelerator_v1_0_S00_AXI_inst: entity work.top_level_Intellight_Accel
       s00_axi_wdata(31 downto 0) => s00_axi_wdata(31 downto 0),
       s00_axi_wstrb(3 downto 0) => s00_axi_wstrb(3 downto 0),
       s00_axi_wvalid => s00_axi_wvalid,
+<<<<<<< HEAD
+      wen_bram0(3 downto 0) => wen_bram0(3 downto 0),
+      wen_bram1(3 downto 0) => wen_bram1(3 downto 0),
+      wen_bram2(3 downto 0) => wen_bram2(3 downto 0),
+      wen_bram3(3 downto 0) => wen_bram3(3 downto 0),
+=======
       wen0 => wen0,
       wen1 => wen1,
       wen_bram(0) => wen_bram(0),
+>>>>>>> parent of ae750207 (shfcuidtf7)
       wr_addr(7 downto 0) => wr_addr(7 downto 0)
     );
 aw_en_i_1: unisim.vcomponents.LUT6
@@ -37143,11 +42249,10 @@ entity top_level_Intellight_Accelerat_0_0 is
     D_new : out STD_LOGIC_VECTOR ( 63 downto 0 );
     rd_addr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     wr_addr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    wen_bram : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    wen0 : out STD_LOGIC;
-    wen1 : out STD_LOGIC;
-    wen2 : out STD_LOGIC;
-    wen3 : out STD_LOGIC;
+    wen_bram0 : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    wen_bram1 : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    wen_bram2 : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    wen_bram3 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     finish : out STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
@@ -37183,9 +42288,18 @@ end top_level_Intellight_Accelerat_0_0;
 
 architecture STRUCTURE of top_level_Intellight_Accelerat_0_0 is
   signal \<const0>\ : STD_LOGIC;
+<<<<<<< HEAD
+  signal \^rd_addr\ : STD_LOGIC_VECTOR ( 10 downto 3 );
+  signal \^wen_bram0\ : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal \^wen_bram1\ : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal \^wen_bram2\ : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal \^wen_bram3\ : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal \^wr_addr\ : STD_LOGIC_VECTOR ( 10 downto 3 );
+=======
   signal \^rd_addr\ : STD_LOGIC_VECTOR ( 9 downto 2 );
   signal \^wen_bram\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \^wr_addr\ : STD_LOGIC_VECTOR ( 9 downto 2 );
+>>>>>>> parent of ae750207 (shfcuidtf7)
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -37246,6 +42360,40 @@ begin
   s00_axi_bresp(0) <= \<const0>\;
   s00_axi_rresp(1) <= \<const0>\;
   s00_axi_rresp(0) <= \<const0>\;
+<<<<<<< HEAD
+  wen_bram0(7) <= \^wen_bram0\(6);
+  wen_bram0(6) <= \^wen_bram0\(6);
+  wen_bram0(5) <= \^wen_bram0\(4);
+  wen_bram0(4) <= \^wen_bram0\(4);
+  wen_bram0(3) <= \^wen_bram0\(2);
+  wen_bram0(2) <= \^wen_bram0\(2);
+  wen_bram0(1) <= \^wen_bram0\(0);
+  wen_bram0(0) <= \^wen_bram0\(0);
+  wen_bram1(7) <= \^wen_bram1\(6);
+  wen_bram1(6) <= \^wen_bram1\(6);
+  wen_bram1(5) <= \^wen_bram1\(4);
+  wen_bram1(4) <= \^wen_bram1\(4);
+  wen_bram1(3) <= \^wen_bram1\(2);
+  wen_bram1(2) <= \^wen_bram1\(2);
+  wen_bram1(1) <= \^wen_bram1\(0);
+  wen_bram1(0) <= \^wen_bram1\(0);
+  wen_bram2(7) <= \^wen_bram2\(6);
+  wen_bram2(6) <= \^wen_bram2\(6);
+  wen_bram2(5) <= \^wen_bram2\(4);
+  wen_bram2(4) <= \^wen_bram2\(4);
+  wen_bram2(3) <= \^wen_bram2\(2);
+  wen_bram2(2) <= \^wen_bram2\(2);
+  wen_bram2(1) <= \^wen_bram2\(0);
+  wen_bram2(0) <= \^wen_bram2\(0);
+  wen_bram3(7) <= \^wen_bram3\(6);
+  wen_bram3(6) <= \^wen_bram3\(6);
+  wen_bram3(5) <= \^wen_bram3\(4);
+  wen_bram3(4) <= \^wen_bram3\(4);
+  wen_bram3(3) <= \^wen_bram3\(2);
+  wen_bram3(2) <= \^wen_bram3\(2);
+  wen_bram3(1) <= \^wen_bram3\(0);
+  wen_bram3(0) <= \^wen_bram3\(0);
+=======
   wen2 <= \<const0>\;
   wen3 <= \<const0>\;
   wen_bram(7) <= \<const0>\;
@@ -37256,6 +42404,7 @@ begin
   wen_bram(2) <= \^wen_bram\(2);
   wen_bram(1) <= \^wen_bram\(0);
   wen_bram(0) <= \^wen_bram\(0);
+>>>>>>> parent of ae750207 (shfcuidtf7)
   wr_addr(31) <= \<const0>\;
   wr_addr(30) <= \<const0>\;
   wr_addr(29) <= \<const0>\;
@@ -37314,9 +42463,29 @@ inst: entity work.top_level_Intellight_Accelerat_0_0_Intellight_Accelerator_v1_0
       s00_axi_wdata(31 downto 0) => s00_axi_wdata(31 downto 0),
       s00_axi_wstrb(3 downto 0) => s00_axi_wstrb(3 downto 0),
       s00_axi_wvalid => s00_axi_wvalid,
+<<<<<<< HEAD
+      wen_bram0(3) => \^wen_bram0\(6),
+      wen_bram0(2) => \^wen_bram0\(4),
+      wen_bram0(1) => \^wen_bram0\(2),
+      wen_bram0(0) => \^wen_bram0\(0),
+      wen_bram1(3) => \^wen_bram1\(6),
+      wen_bram1(2) => \^wen_bram1\(4),
+      wen_bram1(1) => \^wen_bram1\(2),
+      wen_bram1(0) => \^wen_bram1\(0),
+      wen_bram2(3) => \^wen_bram2\(6),
+      wen_bram2(2) => \^wen_bram2\(4),
+      wen_bram2(1) => \^wen_bram2\(2),
+      wen_bram2(0) => \^wen_bram2\(0),
+      wen_bram3(3) => \^wen_bram3\(6),
+      wen_bram3(2) => \^wen_bram3\(4),
+      wen_bram3(1) => \^wen_bram3\(2),
+      wen_bram3(0) => \^wen_bram3\(0),
+      wr_addr(7 downto 0) => \^wr_addr\(10 downto 3)
+=======
       wen0 => wen0,
       wen1 => wen1,
       wen_bram(0) => \^wen_bram\(0),
       wr_addr(7 downto 0) => \^wr_addr\(9 downto 2)
+>>>>>>> parent of ae750207 (shfcuidtf7)
     );
 end STRUCTURE;

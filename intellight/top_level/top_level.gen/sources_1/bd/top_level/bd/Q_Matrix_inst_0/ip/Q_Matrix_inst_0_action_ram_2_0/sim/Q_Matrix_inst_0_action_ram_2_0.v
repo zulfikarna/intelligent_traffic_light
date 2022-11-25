@@ -56,7 +56,6 @@
 module Q_Matrix_inst_0_action_ram_2_0 (
   clka,
   rsta,
-  ena,
   wea,
   addra,
   dina,
@@ -76,8 +75,6 @@ module Q_Matrix_inst_0_action_ram_2_0 (
 input wire clka;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA RST" *)
 input wire rsta;
-(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA EN" *)
-input wire ena;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA WE" *)
 input wire [7 : 0] wea;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *)
@@ -130,15 +127,15 @@ output wire rstb_busy;
     .C_RST_PRIORITY_A("CE"),
     .C_RSTRAM_A(0),
     .C_INITA_VAL("0"),
-    .C_HAS_ENA(1),
+    .C_HAS_ENA(0),
     .C_HAS_REGCEA(0),
     .C_USE_BYTE_WEA(1),
     .C_WEA_WIDTH(8),
     .C_WRITE_MODE_A("READ_FIRST"),
     .C_WRITE_WIDTH_A(64),
     .C_READ_WIDTH_A(64),
-    .C_WRITE_DEPTH_A(256),
-    .C_READ_DEPTH_A(256),
+    .C_WRITE_DEPTH_A(2048),
+    .C_READ_DEPTH_A(2048),
     .C_ADDRA_WIDTH(32),
     .C_HAS_RSTB(1),
     .C_RST_PRIORITY_B("CE"),
@@ -151,8 +148,8 @@ output wire rstb_busy;
     .C_WRITE_MODE_B("READ_FIRST"),
     .C_WRITE_WIDTH_B(64),
     .C_READ_WIDTH_B(64),
-    .C_WRITE_DEPTH_B(256),
-    .C_READ_DEPTH_B(256),
+    .C_WRITE_DEPTH_B(2048),
+    .C_READ_DEPTH_B(2048),
     .C_ADDRB_WIDTH(32),
     .C_HAS_MEM_OUTPUT_REGS_A(0),
     .C_HAS_MEM_OUTPUT_REGS_B(0),
@@ -178,13 +175,13 @@ output wire rstb_busy;
     .C_EN_SHUTDOWN_PIN(0),
     .C_EN_SAFETY_CKT(1),
     .C_DISABLE_WARN_BHV_RANGE(0),
-    .C_COUNT_36K_BRAM("2"),
+    .C_COUNT_36K_BRAM("4"),
     .C_COUNT_18K_BRAM("0"),
-    .C_EST_POWER_SUMMARY("Estimated Power for IP     :     12.574801 mW")
+    .C_EST_POWER_SUMMARY("Estimated Power for IP     :     22.831998 mW")
   ) inst (
     .clka(clka),
     .rsta(rsta),
-    .ena(ena),
+    .ena(1'D0),
     .regcea(1'D0),
     .wea(wea),
     .addra(addra),
