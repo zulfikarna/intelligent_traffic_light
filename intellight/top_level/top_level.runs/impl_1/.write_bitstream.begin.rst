@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-<<<<<<< HEAD
-    <Process Command=".planAhead." Owner="USER" Host="DESKTOP-FRUK6JR" Pid="14888">
-=======
-    <Process Command=".planAhead." Owner="USER" Host="DESKTOP-FRUK6JR" Pid="1924">
->>>>>>> parent of ae750207 (shfcuidtf7)
-    </Process>
-</ProcessHandle>

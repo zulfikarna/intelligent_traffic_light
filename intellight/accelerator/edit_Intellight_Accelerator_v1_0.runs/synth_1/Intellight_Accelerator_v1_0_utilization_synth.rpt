@@ -1,36 +1,14 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-<<<<<<< HEAD
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Wed Nov 23 16:17:07 2022
-=======
-<<<<<<<< HEAD:intellight/prototype/prototype.runs/Intellight_action_ram_0_0_synth_1/Intellight_action_ram_0_0_utilization_synth.rpt
----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Wed Nov 23 11:28:27 2022
-| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
-| Command      : report_utilization -file Intellight_action_ram_0_0_utilization_synth.rpt -pb Intellight_action_ram_0_0_utilization_synth.pb
-| Design       : Intellight_action_ram_0_0
-| Device       : xc7z020clg400-1
-| Speed File   : -1
-| Design State : Synthesized
----------------------------------------------------------------------------------------------------------------------------------------------
-========
--------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Mon Nov 21 17:54:01 2022
->>>>>>> parent of ae750207 (shfcuidtf7)
-| Host         : DESKTOP-FRUK6JR running 64-bit major release  (build 9200)
+| Date         : Wed Nov 30 17:33:45 2022
+| Host         : DESKTOP-IH2NQ0H running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Intellight_Accelerator_v1_0_utilization_synth.rpt -pb Intellight_Accelerator_v1_0_utilization_synth.pb
 | Design       : Intellight_Accelerator_v1_0
 | Device       : xc7z020clg400-1
 | Speed File   : -1
 | Design State : Synthesized
 -------------------------------------------------------------------------------------------------------------------------------------------------
-<<<<<<< HEAD
-=======
->>>>>>>> parent of ae750207 (shfcuidtf7):intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1/Intellight_Accelerator_v1_0_utilization_synth.rpt
->>>>>>> parent of ae750207 (shfcuidtf7)
 
 Utilization Design Information
 
@@ -53,29 +31,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-<<<<<<< HEAD
-| Slice LUTs*                | 1044 |     0 |          0 |     53200 |  1.96 |
-|   LUT as Logic             | 1036 |     0 |          0 |     53200 |  1.95 |
-|   LUT as Memory            |    8 |     0 |          0 |     17400 |  0.05 |
-|     LUT as Distributed RAM |    0 |     0 |            |           |       |
-|     LUT as Shift Register  |    8 |     0 |            |           |       |
-| Slice Registers            | 1813 |     0 |          0 |    106400 |  1.70 |
-|   Register as Flip Flop    | 1813 |     0 |          0 |    106400 |  1.70 |
-=======
-<<<<<<<< HEAD:intellight/prototype/prototype.runs/Intellight_action_ram_0_0_synth_1/Intellight_action_ram_0_0_utilization_synth.rpt
-| Slice LUTs*                |    8 |     0 |          0 |     53200 |  0.02 |
-|   LUT as Logic             |    7 |     0 |          0 |     53200 |  0.01 |
-|   LUT as Memory            |    1 |     0 |          0 |     17400 | <0.01 |
-========
-| Slice LUTs*                | 1205 |     0 |          0 |     53200 |  2.27 |
-|   LUT as Logic             | 1133 |     0 |          0 |     53200 |  2.13 |
+| Slice LUTs*                | 1148 |     0 |          0 |     53200 |  2.16 |
+|   LUT as Logic             | 1076 |     0 |          0 |     53200 |  2.02 |
 |   LUT as Memory            |   72 |     0 |          0 |     17400 |  0.41 |
->>>>>>>> parent of ae750207 (shfcuidtf7):intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1/Intellight_Accelerator_v1_0_utilization_synth.rpt
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |   72 |     0 |            |           |       |
-| Slice Registers            | 1745 |     0 |          0 |    106400 |  1.64 |
-|   Register as Flip Flop    | 1745 |     0 |          0 |    106400 |  1.64 |
->>>>>>> parent of ae750207 (shfcuidtf7)
+| Slice Registers            | 1743 |     0 |          0 |    106400 |  1.64 |
+|   Register as Flip Flop    | 1743 |     0 |          0 |    106400 |  1.64 |
 |   Register as Latch        |    0 |     0 |          0 |    106400 |  0.00 |
 | F7 Muxes                   |  160 |     0 |          0 |     26600 |  0.60 |
 | F8 Muxes                   |   64 |     0 |          0 |     13300 |  0.48 |
@@ -98,11 +60,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 18    |          Yes |         Set |            - |
-<<<<<<< HEAD
-| 1795  |          Yes |       Reset |            - |
-=======
-| 1727  |          Yes |       Reset |            - |
->>>>>>> parent of ae750207 (shfcuidtf7)
+| 1725  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -135,11 +93,7 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+--------+
 |          Site Type          | Used | Fixed | Prohibited | Available |  Util% |
 +-----------------------------+------+-------+------------+-----------+--------+
-<<<<<<< HEAD
 | Bonded IOB                  |  516 |     0 |          0 |       125 | 412.80 |
-=======
-| Bonded IOB                  |  495 |     0 |          0 |       125 | 396.00 |
->>>>>>> parent of ae750207 (shfcuidtf7)
 | Bonded IPADs                |    0 |     0 |          0 |         2 |   0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |   0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |   0.00 |
@@ -195,47 +149,21 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-<<<<<<< HEAD
-| FDRE     | 1795 |        Flop & Latch |
+| FDRE     | 1725 |        Flop & Latch |
 | LUT6     |  765 |                 LUT |
 | IBUF     |  313 |                  IO |
-| LUT4     |  211 |                 LUT |
 | OBUF     |  203 |                  IO |
+| LUT2     |  163 |                 LUT |
+| LUT3     |  161 |                 LUT |
 | MUXF7    |  160 |               MuxFx |
-| LUT2     |   99 |                 LUT |
-| LUT3     |   81 |                 LUT |
+| LUT4     |  147 |                 LUT |
+| SRL16E   |   72 |  Distributed Memory |
 | MUXF8    |   64 |               MuxFx |
 | CARRY4   |   54 |          CarryLogic |
 | LUT5     |   45 |                 LUT |
 | FDSE     |   18 |        Flop & Latch |
-| SRL16E   |    8 |  Distributed Memory |
 | LUT1     |    4 |                 LUT |
 | BUFG     |    2 |               Clock |
-=======
-<<<<<<<< HEAD:intellight/prototype/prototype.runs/Intellight_action_ram_0_0_synth_1/Intellight_action_ram_0_0_utilization_synth.rpt
-| FDRE     |    9 |        Flop & Latch |
-| LUT2     |    5 |                 LUT |
-| RAMB36E1 |    2 |        Block Memory |
-| LUT4     |    2 |                 LUT |
-| SRL16E   |    1 |  Distributed Memory |
-========
-| FDRE     | 1727 |        Flop & Latch |
-| LUT6     |  800 |                 LUT |
-| IBUF     |  313 |                  IO |
-| OBUF     |  182 |                  IO |
-| LUT3     |  181 |                 LUT |
-| MUXF7    |  160 |               MuxFx |
-| LUT2     |  159 |                 LUT |
-| LUT4     |  152 |                 LUT |
-| SRL16E   |   72 |  Distributed Memory |
-| MUXF8    |   64 |               MuxFx |
-| CARRY4   |   52 |          CarryLogic |
-| LUT5     |   42 |                 LUT |
-| FDSE     |   18 |        Flop & Latch |
-| LUT1     |    5 |                 LUT |
-| BUFG     |    2 |               Clock |
->>>>>>>> parent of ae750207 (shfcuidtf7):intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1/Intellight_Accelerator_v1_0_utilization_synth.rpt
->>>>>>> parent of ae750207 (shfcuidtf7)
 +----------+------+---------------------+
 
 

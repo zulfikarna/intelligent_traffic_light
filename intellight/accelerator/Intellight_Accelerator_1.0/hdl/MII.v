@@ -24,17 +24,8 @@ module MII
     input wire wen,
     output wire [ADDR_WIDTH-1:0] rd_addr,
     output wire [ADDR_WIDTH-1:0] wr_addr,
-<<<<<<< HEAD
     output wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0] wen_bram0, wen_bram1, wen_bram2, wen_bram3,
-    output wire[Q_WIDTH*(2**(L_WIDTH/2))-1:0] D_new    
-=======
-    output wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0] wen_bram,
-    output wire[Q_WIDTH*(2**(L_WIDTH/2))-1:0] D_new,
-    output wire wen0, wen1, wen2, wen3
-//    output wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0] D,
->>>>>>> parent of ae750207 (shfcuidtf7)
-//    output wire [1:0] A_road, 
-//    output wire [L_WIDTH/2-1:0] A_dur
+    output wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0] D_new
     );
     localparam  N_LEVEL         = 2**(L_WIDTH/2),
                 S_WIDTH         = 2*L_WIDTH,
@@ -102,12 +93,10 @@ module MII
     assign wen1     = (A_road == 2'd1)&(wen);
     assign wen2     = (A_road == 2'd2)&(wen);
     assign wen3     = (A_road == 2'd3)&(wen);
-<<<<<<< HEAD
     assign wen_bram0 = wen0? wen_bram : {WEN_WIDTH{1'b0}};
     assign wen_bram1 = wen1? wen_bram : {WEN_WIDTH{1'b0}};
     assign wen_bram2 = wen2? wen_bram : {WEN_WIDTH{1'b0}};
     assign wen_bram3 = wen3? wen_bram : {WEN_WIDTH{1'b0}};
-=======
     
     mux4to1 #(.DATA_WIDTH(D_WIDTH)
     ) mux_D(
@@ -118,7 +107,6 @@ module MII
         .sel(A_road),
         .out0(D)
         );
->>>>>>> parent of ae750207 (shfcuidtf7)
         
     genvar i;
     generate 

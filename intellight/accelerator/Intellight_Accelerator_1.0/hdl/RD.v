@@ -30,7 +30,6 @@ module RD // verified
     genvar i;
     generate 
         for (i = 0 ; i < N_ROAD; i = i + 1) begin 
-<<<<<<< HEAD
             if (R_WIDTH == 16) begin 
                 assign R_temp[i] = (L[i][L_WIDTH-1:L_WIDTH/2] == 2'd0)? (16'd25600):    //100
                                    (L[i][L_WIDTH-1:L_WIDTH/2] == 2'd1)? (16'd0):        //0
@@ -44,10 +43,6 @@ module RD // verified
                                    (L[i][L_WIDTH-1:L_WIDTH/2] == 2'd3)? (-32'd13107200)://-200
                                                                         {R_WIDTH{1'bx}};
             end
-=======
-            assign R_temp[i] = (L[i][L_WIDTH-1:0] == {L_WIDTH/2{1'b0}})? ('d10):
-                               (L[i][L_WIDTH-1:0] == {L_WIDTH/2{1'b1}})? (-'d10): (-'d1);
->>>>>>> parent of ae750207 (shfcuidtf7)
         end
     endgenerate
     

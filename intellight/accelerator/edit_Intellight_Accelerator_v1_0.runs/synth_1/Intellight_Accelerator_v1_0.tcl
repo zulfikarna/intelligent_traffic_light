@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1/Intellight_Accelerator_v1_0.tcl"
+  variable script "d:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1/Intellight_Accelerator_v1_0.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,18 +70,14 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-<<<<<<< HEAD
-=======
-set_msg_config -id {HDL-1065} -limit 10000
->>>>>>> parent of ae750207 (shfcuidtf7)
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.cache/wt [current_project]
-set_property parent.project_path D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.xpr [current_project]
+set_property webtalk.parent_dir d:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.cache/wt [current_project]
+set_property parent.project_path d:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part www.digilentinc.com:pynq-z1:part0:1.0 [current_project]
@@ -92,11 +88,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-<<<<<<< HEAD
   D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/AGENT.v
-=======
-  D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/sources_1/imports/hdl/AGENT.v
->>>>>>> parent of ae750207 (shfcuidtf7)
   D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v
   D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/CU.v
   D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/ENV.v
@@ -109,8 +101,8 @@ read_verilog -library xil_defaultlib {
   D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v
 }
 read_verilog -library "" {
-  D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v
-  D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0.v
+  d:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v
+  d:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -123,7 +115,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/utils_1/imports/synth_1/Intellight_Accelerator_v1_0.dcp
+read_checkpoint -auto_incremental -incremental d:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/utils_1/imports/synth_1/Intellight_Accelerator_v1_0.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

@@ -48,7 +48,7 @@ module r_shift
 endmodule
 
 module lfsr
-#(  parameter DATA_WIDTH = 16)
+#(  parameter integer DATA_WIDTH = 16)
 (
     input wire clk, rst,
     input wire  [DATA_WIDTH-1:0] seed,
@@ -84,33 +84,4 @@ module lfsr
     assign out0 = r_lsfr[DATA_WIDTH:1];
 endmodule
 
-//module encoder(
-//    input wire en,
-//    input  wire [6:0] in0,
-//    output reg [2:0] out0
-//    );
-//    always@(in0) begin
-//        if(en)begin
-//            if (in0[6]) begin
-//                out0 = 3'b111;
-//            end else if (in0[5]) begin
-//                out0 = 3'b110;
-//            end else if (in0[4]) begin
-//                out0 = 3'b101;
-//            end else if (in0[3]) begin
-//                out0 = 3'b100;
-//            end else if (in0[2]) begin
-//                out0 = 3'b011;
-//            end else if (in0[1]) begin
-//                out0 = 3'b010;
-//            end else if (in0[0]) begin
-//                out0 = 3'b001;
-//            end else begin
-//                out0 = 3'b000;
-//            end
-//         end else begin 
-//            out0 = 3'b000;
-//         end
-//    end
-//endmodule 
     

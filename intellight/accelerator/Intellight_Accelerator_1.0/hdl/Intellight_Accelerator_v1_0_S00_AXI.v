@@ -11,6 +11,7 @@
         parameter integer ADDR_WIDTH    = 32,
 		// User parameters ends
 		// Do not modify the parameters beyond this line
+
 		// Width of S_AXI data bus
 		parameter integer C_S_AXI_DATA_WIDTH	= 32,
 		// Width of S_AXI address bus
@@ -22,17 +23,11 @@
 		input     wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0]     D_road0, D_road1, D_road2, D_road3, 
 		output    wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0]     D_new,
 		output    wire [ADDR_WIDTH-1:0]                   rd_addr, wr_addr,
-<<<<<<< HEAD
 		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram0,
 		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram1,
 		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram2,
 		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram3,
 		output    wire                                    finish, idle,
-=======
-		output    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0]   wen_bram,
-		output    wire                                    wen0, wen1, wen2, wen3,
-		output    wire                                    finish,
->>>>>>> parent of ae750207 (shfcuidtf7)
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -97,14 +92,13 @@
     		// accept the read data and response information.
 		input wire  S_AXI_RREADY
 	);
-	
     localparam  N_ROAD          = 4,
-                N_LEVEL         = 2**(L_WIDTH/2),
-                A_ROAD_WIDTH    = 2,
-                A_DUR_WIDTH     = L_WIDTH/2,
-                A_WIDTH         = A_ROAD_WIDTH + A_DUR_WIDTH,
-                S_WIDTH         = 2*L_WIDTH,
-                D_WIDTH         = Q_WIDTH*N_LEVEL; 
+                    N_LEVEL         = 2**(L_WIDTH/2),
+                    A_ROAD_WIDTH    = 2,
+                    A_DUR_WIDTH     = L_WIDTH/2,
+                    A_WIDTH         = A_ROAD_WIDTH + A_DUR_WIDTH,
+                    S_WIDTH         = 2*L_WIDTH,
+                    D_WIDTH         = Q_WIDTH*N_LEVEL; 
 
     wire INPUT_0_mode, INPUT_0_run;
 	wire [2:0] INPUT_0_alpha, INPUT_0_gamma;
@@ -128,7 +122,7 @@
 //    wire                                    ACCELERATOR_0_wen3;
     wire                                    ACCELERATOR_0_finish;
     wire                                    ACCELERATOR_0_idle;
-	
+    
 	// AXI4LITE signals
 	reg [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
 	reg  	axi_awready;
@@ -323,8 +317,8 @@
 	// Slave register write enable is asserted when valid address and data are available
 	// and the slave is ready to accept the write address and write data.
 	assign slv_reg_wren = axi_wready && S_AXI_WVALID && axi_awready && S_AXI_AWVALID;
-	
-    generate 
+
+generate 
        if (L_WIDTH == 2) begin 
             always @( posedge S_AXI_ACLK )
             begin
@@ -1133,7 +1127,7 @@
 	        endcase
 	      end
 	  end
-	end    
+	end   
 
 	// Implement write response logic generation
 	// The write response and response valid signals are asserted by the slave 
@@ -1325,7 +1319,6 @@
 	end    
 
 	// Add user logic here
-<<<<<<< HEAD
 //	wire [15:0] DEBUG_0_o_lsfr;
 //	lfsr #(.DATA_WIDTH(16)) rand(.clk(clk), .rst(rst), .seed(INPUT_0_seed), .out0(DEBUG_0_o_lsfr));
      
@@ -1359,7 +1352,7 @@
     assign wen_bram3= ACCELERATOR_0_wen_bram3;
     assign finish   = ACCELERATOR_0_finish;
     assign idle     = ACCELERATOR_0_idle;
-=======
+
 	wire mode, run;
 	wire [2:0] alpha, gamma;
 	wire [CTR_WIDTH-1:0] max_step, max_episode, seed;
@@ -1378,7 +1371,7 @@
 	assign L_inc_d     = slv_reg6;
 	assign L_dec       = slv_reg7;
 	assign S_sim       = slv_reg8;
->>>>>>> parent of ae750207 (shfcuidtf7)
+
 	// Add user logic here
 	Accelerator #(
 	   .L_WIDTH(L_WIDTH),
@@ -1389,7 +1382,6 @@
 	) accelerator_0 (
         .clk(clk),
         .rst(rst),
-<<<<<<< HEAD
         .mode(INPUT_0_mode),
         .run(INPUT_0_run),
         .alpha(INPUT_0_alpha),
@@ -1415,38 +1407,8 @@
         .wen_bram2(ACCELERATOR_0_wen_bram2),
         .wen_bram3(ACCELERATOR_0_wen_bram3),
         .finish(ACCELERATOR_0_finish),
-        .idle(ACCELERATOR_0_idle) 
-=======
-        .D_road0(D_road0),
-        .D_road1(D_road1),
-        .D_road2(D_road2),
-        .D_road3(D_road3),
-        .D_new(D_new),
-        .rd_addr(rd_addr),
-        .wr_addr(wr_addr),
-        .wen_bram(wen_bram),
-        .wen0(wen0),
-        .wen1(wen1),
-        .wen2(wen2),
-        .wen3(wen3),
-        .mode(mode),
-        .run(run),
-        .alpha(alpha),
-        .gamma(gamma),
-        .max_step(max_step),
-        .max_episode(max_episode),
-        .seed(seed),
-        .S_sim(S_sim),
-        .L_inc_a(L_inc_a),
-        .L_inc_b(L_inc_b),
-        .L_inc_c(L_inc_c),
-        .L_inc_d(L_inc_d),
-        .L_dec(L_dec),
-        .finish(finish),
-        .idle(idle) 
->>>>>>> parent of ae750207 (shfcuidtf7)
+        .idle(ACCELERATOR_0_idle)
       );
-
 	// User logic ends
 
 	endmodule

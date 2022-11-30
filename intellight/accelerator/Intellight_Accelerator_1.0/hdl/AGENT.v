@@ -2,7 +2,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module AGENT
 #(  parameter integer L_WIDTH = 4,
     parameter integer Q_WIDTH = 16,
@@ -10,8 +9,12 @@ module AGENT
     )(
     input wire clk, rst,
     input wire A_sel, mode,
+    input wire [2:0] alpha, gamma,
     input wire [Q_WIDTH*(2**(L_WIDTH/2))-1:0] D_road0, D_road1, D_road2, D_road3,
-    input wire signed [R_WIDTH-1:0] R);
+    input wire signed [R_WIDTH-1:0] R,
+    output wire [Q_WIDTH*(2**(L_WIDTH/2))-1 :0] D,
+    output wire [2 + L_WIDTH/2 - 1 :0] A,
+    output wire [Q_WIDTH-1:0] Q_new);
     
     localparam  N_ROAD          = 4,
                 N_LEVEL         = 2**(L_WIDTH/2),
@@ -28,7 +31,7 @@ module AGENT
     wire [A_ROAD_WIDTH-1:0] D_sel;
     wire [A_DUR_WIDTH-1:0] A_dur_gred;
     wire [A_DUR_WIDTH-1:0] A_dur_rand;
-    wire [D_WIDTH-1:0] D;
+    wire [A_DUR_WIDTH-1:0]A_dur;
     
     lfsr #(.DATA_WIDTH(A_DUR_WIDTH)) rand(.clk(clk), .rst(rst), .seed({A_DUR_WIDTH{1'b0}}), .out0(A_dur_rand));
     
@@ -78,14 +81,14 @@ module AGENT
     generate 
         if (N_LEVEL == 2) begin 
             max2to1 #(.DATA_WIDTH(Q_WIDTH)) QA_max0 ( .in0(Q[0]),   .in1(Q[1]),
-                                                      .out0(Qmax_temp));
+                                                      .out0(Q_max_temp));
         end else if (N_LEVEL == 4) begin 
             max4to1 #(.DATA_WIDTH(Q_WIDTH)) QA_max0( .in0(Q[0]),   .in1(Q[1]),   .in2(Q[2]),   .in3(Q[3]),
-                                                     .out0(Qmax_temp));
+                                                     .out0(Q_max_temp));
         end else begin // N_LEVEL == 8
             max8to1 #(.DATA_WIDTH(Q_WIDTH)) QA_max0( .in0(Q[0]),   .in1(Q[1]),   .in2(Q[2]),   .in3(Q[3]), 
                                                      .in4(Q[4]),   .in5(Q[5]),   .in6(Q[6]),   .in7(Q[7]),
-                                                     .out0(Qmax_temp));
+                                                     .out0(Q_max_temp));
         end
     endgenerate
     
@@ -127,9 +130,8 @@ module AGENT
     endgenerate
    
     // Final Action Generator
-    assign A_gred = {A_dur_gred, A_road};
-    assign A_rand = {A_dur_rand, A_road};
-    assign A = ((!A_sel)&(!mode))? A_rand  : A_gred;
+    assign A_dur = ((!A_sel)&(!mode))? A_dur_rand  : A_dur_gred;
+    assign A = {A_dur, A_road};
 
   QA #( .L_WIDTH(L_WIDTH),
         .Q_WIDTH(Q_WIDTH),
@@ -143,6 +145,6 @@ module AGENT
         .Q_act(Q_act),
         .R(R),
         // Output
-        .Q_new(QA_0_Q_new)
+        .Q_new(Q_new)
         );   
 endmodule

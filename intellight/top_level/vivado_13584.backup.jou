@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Nov 30 14:53:32 2022
+# Process ID: 13584
+# Current directory: D:/intelligent_traffic_light/intellight/top_level
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1052 D:\intelligent_traffic_light\intellight\top_level\top_level.xpr
+# Log file: D:/intelligent_traffic_light/intellight/top_level/vivado.log
+# Journal file: D:/intelligent_traffic_light/intellight/top_level\vivado.jou
+# Running On: DESKTOP-IH2NQ0H, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 8424 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/intelligent_traffic_light/intellight/top_level/top_level.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/backup_intelligent_traffic_light/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd}
+open_bd_design {D:/backup_intelligent_traffic_light/top_level/top_level.srcs/sources_1/bd/intellight_v2/intellight_v2.bd}
+open_bd_design {D:/backup_intelligent_traffic_light/top_level/top_level.srcs/sources_1/bd/action_ram/action_ram.bd}
+current_bd_design [get_bd_designs intellight_v2]
+current_bd_design [get_bd_designs action_ram]
+close_bd_design [get_bd_designs action_ram]

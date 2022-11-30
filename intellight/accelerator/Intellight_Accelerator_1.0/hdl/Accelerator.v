@@ -82,6 +82,7 @@ module Accelerator
   wire [L_WIDTH*2-1:0]ENV_0_S;
   wire [Q_WIDTH-1:0] AGENT_0_Q_new;
   wire [A_WIDTH-1:0] AGENT_0_A;
+  wire [D_WIDTH-1:0] AGENT_0_D;
   assign INPUT_0_clk     = clk;
   assign INPUT_0_rst     = rst;
   assign INPUT_0_mode    = mode;
@@ -110,14 +111,10 @@ module Accelerator
   assign wen_bram3  = MII_0_wen_bram3;
   assign rd_addr    = MII_0_RD_ADDR;
   assign wr_addr    = MII_0_WR_ADDR;
-<<<<<<< HEAD
   assign DEBUG_0_S = ENV_0_S;
   assign DEBUG_0_A = AGENT_0_A;
   assign DEBUG_0_D = AGENT_0_D;
   assign DEBUG_0_Q_new = AGENT_0_Q_new;
-=======
-
->>>>>>> parent of ae750207 (shfcuidtf7)
   
   AGENT #(  .L_WIDTH(L_WIDTH),
             .Q_WIDTH(Q_WIDTH),
@@ -135,6 +132,7 @@ module Accelerator
         .A_sel(CU_0_A_sel),
         .R(ENV_0_R),
         // Output
+        .D(AGENT_0_D),
         .A(AGENT_0_A),
         .Q_new(AGENT_0_Q_new));
   
