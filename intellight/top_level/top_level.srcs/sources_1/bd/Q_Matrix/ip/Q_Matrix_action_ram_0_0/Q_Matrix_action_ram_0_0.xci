@@ -114,11 +114,11 @@
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_EN_SAFETY_CKT">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_EN_SHUTDOWN_PIN">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_EN_SLEEP_PIN">0</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_EST_POWER_SUMMARY">Estimated Power for IP     :     11.859801 mW</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_EST_POWER_SUMMARY">Estimated Power for IP     :     12.574801 mW</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_FAMILY">zynq</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_AXI_ID">0</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_ENA">1</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_ENB">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_ENA">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_ENB">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_INJECTERR">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_MEM_OUTPUT_REGS_A">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_MEM_OUTPUT_REGS_B">0</spirit:configurableElementValue>
@@ -161,8 +161,8 @@
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_WEB_WIDTH">8</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_WRITE_DEPTH_A">256</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_WRITE_DEPTH_B">256</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_WRITE_MODE_A">WRITE_FIRST</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_WRITE_MODE_B">WRITE_FIRST</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_WRITE_MODE_A">READ_FIRST</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_WRITE_MODE_B">READ_FIRST</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_WRITE_WIDTH_A">64</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_WRITE_WIDTH_B">64</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_XDEVICEFAMILY">zynq</spirit:configurableElementValue>
@@ -186,16 +186,16 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.EN_SHUTDOWN_PIN">false</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.EN_SLEEP_PIN">false</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Enable_32bit_Address">true</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Enable_A">Use_ENA_Pin</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Enable_B">Use_ENB_Pin</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Enable_A">Always_Enabled</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Enable_B">Always_Enabled</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Error_Injection_Type">Single_Bit_Error_Injection</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Fill_Remaining_Memory_Locations">false</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Interface_Type">Native</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Load_Init_File">false</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.MEM_FILE">NONE</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Memory_Type">True_Dual_Port_RAM</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Operating_Mode_A">WRITE_FIRST</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Operating_Mode_B">WRITE_FIRST</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Operating_Mode_A">READ_FIRST</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Operating_Mode_B">READ_FIRST</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Output_Reset_Value_A">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Output_Reset_Value_B">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PRIM_type_to_Implement">BRAM</spirit:configurableElementValue>
@@ -279,6 +279,7 @@
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Byte_Size" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.EN_SAFETY_CKT" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Enable_32bit_Address" xilinx:valueSource="user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Enable_A" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Enable_B" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.MEM_FILE" xilinx:valueSource="ip_propagated"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Memory_Type" xilinx:valueSource="user"/>
@@ -306,14 +307,12 @@
                 &quot;ports&quot;: {
                   &quot;clka&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;rsta&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
-                  &quot;ena&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;wea&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;7&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;addra&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;31&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;dina&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;63&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;douta&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;63&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;clkb&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;rstb&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
-                  &quot;enb&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;web&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;7&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;addrb&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;31&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;dinb&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;63&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
@@ -363,7 +362,6 @@
                       &quot;CLK&quot;: [ { &quot;physical_name&quot;: &quot;clka&quot; } ],
                       &quot;DIN&quot;: [ { &quot;physical_name&quot;: &quot;dina&quot; } ],
                       &quot;DOUT&quot;: [ { &quot;physical_name&quot;: &quot;douta&quot; } ],
-                      &quot;EN&quot;: [ { &quot;physical_name&quot;: &quot;ena&quot; } ],
                       &quot;RST&quot;: [ { &quot;physical_name&quot;: &quot;rsta&quot; } ],
                       &quot;WE&quot;: [ { &quot;physical_name&quot;: &quot;wea&quot; } ]
                     }
@@ -385,7 +383,6 @@
                       &quot;CLK&quot;: [ { &quot;physical_name&quot;: &quot;clkb&quot; } ],
                       &quot;DIN&quot;: [ { &quot;physical_name&quot;: &quot;dinb&quot; } ],
                       &quot;DOUT&quot;: [ { &quot;physical_name&quot;: &quot;doutb&quot; } ],
-                      &quot;EN&quot;: [ { &quot;physical_name&quot;: &quot;enb&quot; } ],
                       &quot;RST&quot;: [ { &quot;physical_name&quot;: &quot;rstb&quot; } ],
                       &quot;WE&quot;: [ { &quot;physical_name&quot;: &quot;web&quot; } ]
                     }

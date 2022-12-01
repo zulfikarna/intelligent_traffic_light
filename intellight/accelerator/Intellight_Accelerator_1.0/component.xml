@@ -199,7 +199,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_74b5137e">ACTIVE_LOW</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -298,7 +298,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e4877292</spirit:value>
+            <spirit:value>f310be07</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -314,7 +314,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e4877292</spirit:value>
+            <spirit:value>f310be07</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -957,7 +957,7 @@
       <spirit:enumeration>32</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_74b5137e</spirit:name>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
       <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
       <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
     </spirit:choice>
@@ -1219,15 +1219,15 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>Intellight_Accelerator_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-11-30T10:34:54Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-11-30T13:14:36Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f7fd2d30"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="862e1b9c"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4c7533d1"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="b62ad320"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b65ee59e"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="d6dcade4"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="39ece660"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="fa213743"/>
     </xilinx:packagingInfo>

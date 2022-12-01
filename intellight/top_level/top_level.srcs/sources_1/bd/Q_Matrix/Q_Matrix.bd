@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xC36DE6534B921DEB",
+      "boundary_crc": "0x4E2DE3C65A1DD73F",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../top_level.gen/sources_1/bd/Q_Matrix",
       "name": "Q_Matrix",
@@ -15,8 +15,7 @@
       "action_ram_1": "",
       "action_ram_2": "",
       "action_ram_3": "",
-      "const_0_8bit": "",
-      "const_1_1bit": ""
+      "const_0_8bit": ""
     },
     "ports": {
       "D_new": {
@@ -89,26 +88,29 @@
           }
         }
       },
-      "wen": {
+      "wr_addr": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "wea0": {
         "direction": "I",
         "left": "7",
         "right": "0"
       },
-      "wen0": {
-        "direction": "I"
-      },
-      "wen1": {
-        "direction": "I"
-      },
-      "wen2": {
-        "direction": "I"
-      },
-      "wen3": {
-        "direction": "I"
-      },
-      "wr_addr": {
+      "wea1": {
         "direction": "I",
-        "left": "31",
+        "left": "7",
+        "right": "0"
+      },
+      "wea2": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "wea3": {
+        "direction": "I",
+        "left": "7",
         "right": "0"
       }
     },
@@ -128,17 +130,20 @@
           "Enable_32bit_Address": {
             "value": "true"
           },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
           "Enable_B": {
-            "value": "Use_ENB_Pin"
+            "value": "Always_Enabled"
           },
           "Memory_Type": {
             "value": "True_Dual_Port_RAM"
           },
           "Operating_Mode_A": {
-            "value": "WRITE_FIRST"
+            "value": "READ_FIRST"
           },
           "Operating_Mode_B": {
-            "value": "WRITE_FIRST"
+            "value": "READ_FIRST"
           },
           "Port_B_Clock": {
             "value": "100"
@@ -196,8 +201,11 @@
           "Enable_32bit_Address": {
             "value": "true"
           },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
           "Enable_B": {
-            "value": "Use_ENB_Pin"
+            "value": "Always_Enabled"
           },
           "Memory_Type": {
             "value": "True_Dual_Port_RAM"
@@ -264,8 +272,11 @@
           "Enable_32bit_Address": {
             "value": "true"
           },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
           "Enable_B": {
-            "value": "Use_ENB_Pin"
+            "value": "Always_Enabled"
           },
           "Memory_Type": {
             "value": "True_Dual_Port_RAM"
@@ -332,8 +343,11 @@
           "Enable_32bit_Address": {
             "value": "true"
           },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
           "Enable_B": {
-            "value": "Use_ENB_Pin"
+            "value": "Always_Enabled"
           },
           "Memory_Type": {
             "value": "True_Dual_Port_RAM"
@@ -398,12 +412,6 @@
             "value": "8"
           }
         }
-      },
-      "const_1_1bit": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "Q_Matrix_const_1_1bit_0",
-        "xci_path": "ip\\Q_Matrix_const_1_1bit_0\\Q_Matrix_const_1_1bit_0.xci",
-        "inst_hier_path": "const_1_1bit"
       }
     },
     "nets": {
@@ -493,46 +501,28 @@
           "action_ram_0/rsta"
         ]
       },
-      "wea_0_1": {
+      "wea0_1": {
         "ports": [
-          "wen",
-          "action_ram_0/wea",
-          "action_ram_1/wea",
-          "action_ram_2/wea",
+          "wea0",
+          "action_ram_0/wea"
+        ]
+      },
+      "wea1_1": {
+        "ports": [
+          "wea1",
+          "action_ram_1/wea"
+        ]
+      },
+      "wea2_1": {
+        "ports": [
+          "wea2",
+          "action_ram_2/wea"
+        ]
+      },
+      "wea3_1": {
+        "ports": [
+          "wea3",
           "action_ram_3/wea"
-        ]
-      },
-      "wen0_1": {
-        "ports": [
-          "wen0",
-          "action_ram_0/ena"
-        ]
-      },
-      "wen1_1": {
-        "ports": [
-          "wen1",
-          "action_ram_1/ena"
-        ]
-      },
-      "wen2_1": {
-        "ports": [
-          "wen2",
-          "action_ram_2/ena"
-        ]
-      },
-      "wen3_1": {
-        "ports": [
-          "wen3",
-          "action_ram_3/ena"
-        ]
-      },
-      "xlconstant_0_dout": {
-        "ports": [
-          "const_1_1bit/dout",
-          "action_ram_0/enb",
-          "action_ram_1/enb",
-          "action_ram_2/enb",
-          "action_ram_3/enb"
         ]
       }
     }

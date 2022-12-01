@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/sim/top_level_rst_ps7_0_100M_0.vhd" \
+"../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_axi_intc_0_0/sim/top_level_axi_intc_0_0.vhd" \
+
+nosort

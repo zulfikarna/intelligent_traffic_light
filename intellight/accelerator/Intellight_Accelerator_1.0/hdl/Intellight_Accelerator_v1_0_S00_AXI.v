@@ -1358,19 +1358,19 @@ generate
 	wire [CTR_WIDTH-1:0] max_step, max_episode, seed;
 	wire [L_WIDTH*4-1:0] L_inc_a, L_inc_b, L_inc_c, L_inc_d, L_dec;
 	wire [L_WIDTH*2-1:0] S_sim;
-    assign mode        = slv_reg0[0];
-	assign run         = slv_reg0[1];
+	assign run         = slv_reg0[0];
+    assign mode        = slv_reg0[1];
 	assign alpha       = slv_reg0[6:4];
 	assign gamma       = slv_reg0[9:7];
+	assign seed        = slv_reg0[31:16];
 	assign max_step    = slv_reg1[15:0];
 	assign max_episode = slv_reg1[31:16];
-	assign seed        = slv_reg2[15:0];
+	assign L_dec       = slv_reg2;
 	assign L_inc_a     = slv_reg3;
 	assign L_inc_b     = slv_reg4;
 	assign L_inc_c     = slv_reg5;
 	assign L_inc_d     = slv_reg6;
-	assign L_dec       = slv_reg7;
-	assign S_sim       = slv_reg8;
+	assign S_sim       = slv_reg7;
 
 	// Add user logic here
 	Accelerator #(
