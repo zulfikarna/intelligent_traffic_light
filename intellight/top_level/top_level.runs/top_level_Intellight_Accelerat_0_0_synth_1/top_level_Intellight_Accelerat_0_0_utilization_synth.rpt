@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Wed Nov 30 20:37:19 2022
+| Date         : Wed Dec  7 23:38:58 2022
 | Host         : DESKTOP-IH2NQ0H running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_level_Intellight_Accelerat_0_0_utilization_synth.rpt -pb top_level_Intellight_Accelerat_0_0_utilization_synth.pb
 | Design       : top_level_Intellight_Accelerat_0_0
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 1148 |     0 |          0 |     53200 |  2.16 |
-|   LUT as Logic             | 1076 |     0 |          0 |     53200 |  2.02 |
+| Slice LUTs*                | 1146 |     0 |          0 |     53200 |  2.15 |
+|   LUT as Logic             | 1074 |     0 |          0 |     53200 |  2.02 |
 |   LUT as Memory            |   72 |     0 |          0 |     17400 |  0.41 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |   72 |     0 |            |           |       |
@@ -150,17 +150,17 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     | 1725 |        Flop & Latch |
-| LUT6     |  765 |                 LUT |
+| LUT6     |  766 |                 LUT |
 | LUT2     |  163 |                 LUT |
-| LUT3     |  161 |                 LUT |
+| LUT3     |  162 |                 LUT |
 | MUXF7    |  160 |               MuxFx |
-| LUT4     |  147 |                 LUT |
+| LUT4     |  148 |                 LUT |
 | SRL16E   |   72 |  Distributed Memory |
 | MUXF8    |   64 |               MuxFx |
 | CARRY4   |   55 |          CarryLogic |
-| LUT5     |   45 |                 LUT |
+| LUT5     |   39 |                 LUT |
 | FDSE     |   18 |        Flop & Latch |
-| LUT1     |    4 |                 LUT |
+| LUT1     |    3 |                 LUT |
 +----------+------+---------------------+
 
 

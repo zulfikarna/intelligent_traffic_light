@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Intellight_Accelerator_1.0/hdl/CU.v" \
+"../../../../Intellight_Accelerator_1.0/hdl/file_arith.v" \
+"../../../../Intellight_Accelerator_1.0/sim/CU_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -89,7 +90,7 @@ set_property ip_output_repo d:/intelligent_traffic_light/intellight/top_level/to
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/hdl/top_level_wrapper.v
+read_verilog -library xil_defaultlib D:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/hdl/top_level_wrapper.v
 add_files D:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_inst_0/Q_Matrix_inst_0.bd
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_inst_0/ip/Q_Matrix_inst_0_action_ram_0_0/Q_Matrix_inst_0_action_ram_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_inst_0/ip/Q_Matrix_inst_0_action_ram_1_0/Q_Matrix_inst_0_action_ram_1_0_ooc.xdc]
@@ -99,10 +100,10 @@ set_property used_in_implementation false [get_files -all D:/intelligent_traffic
 
 add_files D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_processing_system7_0_0/top_level_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_xbar_0/top_level_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/top_level_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/top_level_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/top_level_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_xbar_0/top_level_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_axi_intc_0_0/top_level_axi_intc_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_axi_intc_0_0/top_level_axi_intc_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_axi_intc_0_0/top_level_axi_intc_0_0_ooc.xdc]
@@ -118,9 +119,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc D:/intelligent_traffic_light/intellight/PYNQ-Z1_C.xdc
+set_property used_in_implementation false [get_files D:/intelligent_traffic_light/intellight/PYNQ-Z1_C.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/utils_1/imports/synth_1/top_level_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

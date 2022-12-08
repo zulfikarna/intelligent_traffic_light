@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "top_level_Intellight_Accelerat_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
@@ -90,7 +91,7 @@ set_property ip_output_repo d:/intelligent_traffic_light/intellight/top_level/to
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/ip/top_level_Intellight_Accelerat_0_0/top_level_Intellight_Accelerat_0_0.xci
+read_ip -quiet D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/ip/top_level_Intellight_Accelerat_0_0/top_level_Intellight_Accelerat_0_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

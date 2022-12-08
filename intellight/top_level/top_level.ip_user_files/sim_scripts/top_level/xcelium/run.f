@@ -16,6 +16,9 @@
 -makelib xcelium_lib/xpm \
   "C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../../top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_inst_0/sim/Q_Matrix_inst_0.v" \
+-endlib
 -makelib xcelium_lib/blk_mem_gen_v8_4_5 \
   "../../../../top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_inst_0/ipshared/25a8/simulation/blk_mem_gen_v8_4.v" \
 -endlib
@@ -30,21 +33,6 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../../top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_inst_0/ip/Q_Matrix_inst_0_const_0_8bit_0/sim/Q_Matrix_inst_0_const_0_8bit_0.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/bd/Q_Matrix_inst_0/sim/Q_Matrix_inst_0.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/bb51/hdl/AGENT.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/bb51/hdl/Accelerator.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/bb51/hdl/CU.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/bb51/hdl/ENV.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/bb51/hdl/Intellight_Accelerator_v1_0_S00_AXI.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/bb51/hdl/MII.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/bb51/hdl/QA.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/bb51/hdl/RD.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/bb51/hdl/SD.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/bb51/hdl/file_arith.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/bb51/hdl/file_max.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/bb51/hdl/file_mux.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/bb51/hdl/Intellight_Accelerator_v1_0.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_Intellight_Accelerat_0_0/sim/top_level_Intellight_Accelerat_0_0.v" \
 -endlib
 -makelib xcelium_lib/axi_infrastructure_v1_1_0 \
   "../../../../top_level.gen/sources_1/bd/top_level/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
@@ -57,15 +45,6 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_processing_system7_0_0/sim/top_level_processing_system7_0_0.v" \
--endlib
--makelib xcelium_lib/lib_cdc_v1_0_2 \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
--endlib
--makelib xcelium_lib/proc_sys_reset_v5_0_13 \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/sim/top_level_rst_ps7_0_100M_0.vhd" \
 -endlib
 -makelib xcelium_lib/generic_baseblocks_v2_1_0 \
   "../../../../top_level.gen/sources_1/bd/top_level/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -91,6 +70,15 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_xbar_0/sim/top_level_xbar_0.v" \
 -endlib
+-makelib xcelium_lib/lib_cdc_v1_0_2 \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/proc_sys_reset_v5_0_13 \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/sim/top_level_rst_ps7_0_100M_0.vhd" \
+-endlib
 -makelib xcelium_lib/axi_lite_ipif_v3_0_4 \
   "../../../../top_level.gen/sources_1/bd/top_level/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
 -endlib
@@ -100,12 +88,28 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_axi_intc_0_0/sim/top_level_axi_intc_0_0.vhd" \
 -endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/798c/hdl/AGENT.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/798c/hdl/Accelerator.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/798c/hdl/CU.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/798c/hdl/ENV.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/798c/hdl/Intellight_Accelerator_v1_0_S00_AXI.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/798c/hdl/MII.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/798c/hdl/QA.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/798c/hdl/RD.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/798c/hdl/SD.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/798c/hdl/file_arith.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/798c/hdl/file_max.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/798c/hdl/file_mux.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/798c/hdl/Intellight_Accelerator_v1_0.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_Intellight_Accelerat_0_0/sim/top_level_Intellight_Accelerat_0_0.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/sim/top_level.v" \
+-endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_26 \
   "../../../../top_level.gen/sources_1/bd/top_level/ipshared/90c8/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_auto_pc_0/sim/top_level_auto_pc_0.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/sim/top_level.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

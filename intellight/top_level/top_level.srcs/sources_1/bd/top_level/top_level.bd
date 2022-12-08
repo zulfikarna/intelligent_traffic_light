@@ -11,7 +11,6 @@
       "validated": "true"
     },
     "design_tree": {
-      "Intellight_Accelerat_0": "",
       "processing_system7_0": "",
       "Q_Matrix_0": "",
       "ps7_0_axi_periph": {
@@ -23,7 +22,8 @@
         "m01_couplers": {}
       },
       "rst_ps7_0_100M": "",
-      "axi_intc_0": ""
+      "axi_intc_0": "",
+      "Intellight_Accelerat_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -94,12 +94,6 @@
       }
     },
     "components": {
-      "Intellight_Accelerat_0": {
-        "vlnv": "xilinx.com:user:Intellight_Accelerator:1.0",
-        "xci_name": "top_level_Intellight_Accelerat_0_0",
-        "xci_path": "ip\\top_level_Intellight_Accelerat_0_0\\top_level_Intellight_Accelerat_0_0.xci",
-        "inst_hier_path": "Intellight_Accelerat_0"
-      },
       "processing_system7_0": {
         "vlnv": "xilinx.com:ip:processing_system7:5.5",
         "xci_name": "top_level_processing_system7_0_0",
@@ -128,7 +122,7 @@
             "value": "10.000000"
           },
           "PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "100.000000"
+            "value": "111.111115"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -212,7 +206,7 @@
             "value": "0"
           },
           "PCW_CLK0_FREQ": {
-            "value": "100000000"
+            "value": "111111115"
           },
           "PCW_CLK1_FREQ": {
             "value": "10000000"
@@ -524,7 +518,7 @@
             "value": "TRUE"
           },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "100"
+            "value": "115"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "50"
@@ -1223,7 +1217,7 @@
             "value": "200"
           },
           "PCW_PERIPHERAL_BOARD_PRESET": {
-            "value": "None"
+            "value": "part0"
           },
           "PCW_PLL_BYPASSMODE_ENABLE": {
             "value": "0"
@@ -1347,6 +1341,18 @@
           },
           "PCW_SPI_PERIPHERAL_VALID": {
             "value": "0"
+          },
+          "PCW_S_AXI_HP0_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP1_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP2_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP3_DATA_WIDTH": {
+            "value": "64"
           },
           "PCW_TPIU_PERIPHERAL_CLKSRC": {
             "value": "External"
@@ -1905,7 +1911,7 @@
                 "value_src": "default_prop"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "111111115",
                 "value_src": "user_prop"
               },
               "FREQ_TOLERANCE_HZ": {
@@ -2394,6 +2400,17 @@
             "value": "1"
           }
         }
+      },
+      "Intellight_Accelerat_0": {
+        "vlnv": "xilinx.com:user:Intellight_Accelerator:1.0",
+        "xci_name": "top_level_Intellight_Accelerat_0_0",
+        "xci_path": "ip\\top_level_Intellight_Accelerat_0_0\\top_level_Intellight_Accelerat_0_0.xci",
+        "inst_hier_path": "Intellight_Accelerat_0",
+        "parameters": {
+          "L_WIDTH": {
+            "value": "4"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -2486,16 +2503,16 @@
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
-          "Intellight_Accelerat_0/clk",
           "processing_system7_0/M_AXI_GP0_ACLK",
           "ps7_0_axi_periph/S00_ACLK",
           "rst_ps7_0_100M/slowest_sync_clk",
-          "Intellight_Accelerat_0/s00_axi_aclk",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
           "Q_Matrix_0/clk",
           "axi_intc_0/s_axi_aclk",
-          "ps7_0_axi_periph/M01_ACLK"
+          "ps7_0_axi_periph/M01_ACLK",
+          "Intellight_Accelerat_0/clk",
+          "Intellight_Accelerat_0/s00_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -2507,19 +2524,19 @@
       "rst_1": {
         "ports": [
           "rst_ps7_0_100M/peripheral_reset",
-          "Intellight_Accelerat_0/rst",
-          "Q_Matrix_0/rst"
+          "Q_Matrix_0/rst",
+          "Intellight_Accelerat_0/rst"
         ]
       },
       "rst_ps7_0_100M_peripheral_aresetn": {
         "ports": [
           "rst_ps7_0_100M/peripheral_aresetn",
           "ps7_0_axi_periph/S00_ARESETN",
-          "Intellight_Accelerat_0/s00_axi_aresetn",
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
           "axi_intc_0/s_axi_aresetn",
-          "ps7_0_axi_periph/M01_ARESETN"
+          "ps7_0_axi_periph/M01_ARESETN",
+          "Intellight_Accelerat_0/s00_axi_aresetn"
         ]
       },
       "wea0_1": {

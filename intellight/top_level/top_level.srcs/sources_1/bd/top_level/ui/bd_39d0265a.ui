@@ -1,42 +1,42 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.818889",
-   "Default View_TopLeft":"-40,0",
+   "Default View_ScaleFactor":"0.80989",
+   "Default View_TopLeft":"0,493",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 4 -x 1210 -y 650 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 4 -x 1210 -y 680 -defaultsOSRD
-preplace inst Intellight_Accelerat_0 -pg 1 -lvl 3 -x 990 -y 240 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 190 -y 710 -defaultsOSRD
-preplace inst Q_Matrix_0 -pg 1 -lvl 2 -x 630 -y 160 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 630 -y 540 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 190 -y 520 -defaultsOSRD
-preplace inst axi_intc_0 -pg 1 -lvl 3 -x 990 -y 470 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 -10 410 410 310 820
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 0 420 380
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 390 400 830J
-preplace netloc Q_Matrix_0_D_road0 1 2 1 830 130n
-preplace netloc Q_Matrix_0_D_road1 1 2 1 810 150n
-preplace netloc Q_Matrix_0_D_road2 1 2 1 800 170n
-preplace netloc Q_Matrix_0_D_road3 1 2 1 790 190n
-preplace netloc Intellight_Accelerat_0_rd_addr 1 1 3 450 -30 NJ -30 1160
-preplace netloc Intellight_Accelerat_0_wr_addr 1 1 3 470 0 NJ 0 1130
-preplace netloc Intellight_Accelerat_0_D_new 1 1 3 440 -40 NJ -40 1170
-preplace netloc wea0_1 1 1 3 480 20 NJ 20 1120
-preplace netloc rst_1 1 1 2 400 300 780J
-preplace netloc wea1_1 1 1 3 460 10 NJ 10 1140
-preplace netloc wea2_1 1 1 3 420 -20 NJ -20 1190
-preplace netloc wea3_1 1 1 3 430 -10 NJ -10 1180
-preplace netloc Intellight_Accelerat_0_finish 1 2 2 840 100 1150
-preplace netloc axi_intc_0_irq 1 0 4 -20 380 NJ 380 NJ 380 1120
-preplace netloc processing_system7_0_DDR 1 1 3 440J 680 790J 650 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 400J 690 830J 680 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 460 460n
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 770 160n
-preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 800 440n
-levelinfo -pg 1 -40 190 630 990 1210
-pagesize -pg 1 -db -bbox -sgen -40 -60 1320 820
+preplace port DDR -pg 1 -lvl 4 -x 1180 -y 740 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 1180 -y 770 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 230 -y 800 -defaultsOSRD
+preplace inst Q_Matrix_0 -pg 1 -lvl 2 -x 640 -y 190 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 640 -y 540 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 230 -y 580 -defaultsOSRD
+preplace inst axi_intc_0 -pg 1 -lvl 3 -x 980 -y 580 -defaultsOSRD
+preplace inst Intellight_Accelerat_0 -pg 1 -lvl 3 -x 980 -y 190 -defaultsOSRD
+preplace netloc Intellight_Accelerat_0_D_new 1 1 3 440 380 NJ 380 1160
+preplace netloc Intellight_Accelerat_0_finish 1 2 2 830 410 1130
+preplace netloc Intellight_Accelerat_0_rd_addr 1 1 3 450 10 NJ 10 1150
+preplace netloc Intellight_Accelerat_0_wr_addr 1 1 3 470 340 780J 390 1150
+preplace netloc Q_Matrix_0_D_road0 1 2 1 820 160n
+preplace netloc Q_Matrix_0_D_road1 1 2 1 800 180n
+preplace netloc Q_Matrix_0_D_road2 1 2 1 800 200n
+preplace netloc Q_Matrix_0_D_road3 1 2 1 780 220n
+preplace netloc axi_intc_0_irq 1 0 4 30 690 NJ 690 NJ 690 1110
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 480 430 350 810
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 680 420
+preplace netloc rst_1 1 1 2 420 50 820J
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 470 680 820
+preplace netloc wea0_1 1 1 3 460 20 NJ 20 1110
+preplace netloc wea1_1 1 1 3 460 370 NJ 370 1120
+preplace netloc wea2_1 1 1 3 450 400 NJ 400 1140
+preplace netloc wea3_1 1 1 3 480 360 NJ 360 1110
+preplace netloc processing_system7_0_DDR 1 1 3 470J 740 NJ 740 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 770 NJ 770 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 450 460n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 790 110n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 N 550
+levelinfo -pg 1 0 230 640 980 1180
+pagesize -pg 1 -db -bbox -sgen 0 0 1290 910
 "
 }
 {

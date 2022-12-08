@@ -1,0 +1,96 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Dec  2 19:49:28 2022
+# Process ID: 5332
+# Current directory: D:/intelligent_traffic_light/intellight/top_level
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8604 D:\intelligent_traffic_light\intellight\top_level\top_level.xpr
+# Log file: D:/intelligent_traffic_light/intellight/top_level/vivado.log
+# Journal file: D:/intelligent_traffic_light/intellight/top_level\vivado.jou
+# Running On: DESKTOP-IH2NQ0H, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 8424 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/intelligent_traffic_light/intellight/top_level/top_level.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd}
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:Intellight_Accelerator:1.0 [get_ips  top_level_Intellight_Accelerat_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips top_level_Intellight_Accelerat_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd]
+catch { config_ip_cache -export [get_ips -all top_level_Intellight_Accelerat_0_0] }
+catch { config_ip_cache -export [get_ips -all top_level_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd]
+launch_runs top_level_Intellight_Accelerat_0_0_synth_1 -jobs 8
+wait_on_run top_level_Intellight_Accelerat_0_0_synth_1
+export_simulation -of_objects [get_files D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd] -directory D:/intelligent_traffic_light/intellight/top_level/top_level.ip_user_files/sim_scripts -ip_user_files_dir D:/intelligent_traffic_light/intellight/top_level/top_level.ip_user_files -ipstatic_source_dir D:/intelligent_traffic_light/intellight/top_level/top_level.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/modelsim} {questa=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/questa} {riviera=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/riviera} {activehdl=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:Intellight_Accelerator:1.0 Intellight_Accelerat_1
+endgroup
+delete_bd_objs [get_bd_cells Intellight_Accelerat_1]
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:Intellight_Accelerator:1.0 [get_ips  top_level_Intellight_Accelerat_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips top_level_Intellight_Accelerat_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd]
+catch { config_ip_cache -export [get_ips -all top_level_Intellight_Accelerat_0_0] }
+catch { config_ip_cache -export [get_ips -all top_level_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd]
+launch_runs top_level_Intellight_Accelerat_0_0_synth_1 -jobs 8
+wait_on_run top_level_Intellight_Accelerat_0_0_synth_1
+export_simulation -of_objects [get_files D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd] -directory D:/intelligent_traffic_light/intellight/top_level/top_level.ip_user_files/sim_scripts -ip_user_files_dir D:/intelligent_traffic_light/intellight/top_level/top_level.ip_user_files -ipstatic_source_dir D:/intelligent_traffic_light/intellight/top_level/top_level.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/modelsim} {questa=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/questa} {riviera=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/riviera} {activehdl=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+startgroup
+set_property -dict [list CONFIG.L_WIDTH {2}] [get_bd_cells Intellight_Accelerat_0]
+endgroup
+open_bd_design {D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/Q_Matrix/Q_Matrix.bd}
+current_bd_design [get_bd_designs top_level]
+open_bd_design {D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/Q_Matrix/Q_Matrix.bd}
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.Write_Width_A {32} CONFIG.Read_Width_A {32} CONFIG.Operating_Mode_A {READ_FIRST} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Operating_Mode_B {WRITE_FIRST} CONFIG.Enable_B {Use_ENB_Pin}] [get_bd_cells action_ram_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Write_Width_A {32} CONFIG.Read_Width_A {32} CONFIG.Operating_Mode_A {READ_FIRST} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Operating_Mode_B {READ_FIRST} CONFIG.Enable_B {Use_ENB_Pin}] [get_bd_cells action_ram_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Write_Width_A {32} CONFIG.Read_Width_A {32} CONFIG.Operating_Mode_A {READ_FIRST} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Operating_Mode_B {READ_FIRST} CONFIG.Enable_B {Use_ENB_Pin}] [get_bd_cells action_ram_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Write_Width_A {32} CONFIG.Read_Width_A {32} CONFIG.Operating_Mode_A {READ_FIRST} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Operating_Mode_B {READ_FIRST} CONFIG.Enable_B {Use_ENB_Pin}] [get_bd_cells action_ram_3]
+endgroup
+open_bd_design {D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd}
+regenerate_bd_layout
+regenerate_bd_layout
+current_bd_design [get_bd_designs Q_Matrix]
+save_bd_design
+upgrade_bd_cells [get_bd_cells Q_Matrix_0]
+report_ip_status -name ip_status 
+regenerate_bd_layout
+reset_run top_level_Intellight_Accelerat_0_0_synth_1
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:Intellight_Accelerator:1.0 [get_ips  top_level_Intellight_Accelerat_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips top_level_Intellight_Accelerat_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd]
+catch { config_ip_cache -export [get_ips -all top_level_Intellight_Accelerat_0_0] }
+catch { config_ip_cache -export [get_ips -all top_level_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd]
+launch_runs top_level_Intellight_Accelerat_0_0_synth_1 -jobs 8
+wait_on_run top_level_Intellight_Accelerat_0_0_synth_1
+export_simulation -of_objects [get_files D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd] -directory D:/intelligent_traffic_light/intellight/top_level/top_level.ip_user_files/sim_scripts -ip_user_files_dir D:/intelligent_traffic_light/intellight/top_level/top_level.ip_user_files -ipstatic_source_dir D:/intelligent_traffic_light/intellight/top_level/top_level.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/modelsim} {questa=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/questa} {riviera=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/riviera} {activehdl=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+generate_target all [get_files  D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd]
+export_ip_user_files -of_objects [get_files D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd]
+export_simulation -of_objects [get_files D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd] -directory D:/intelligent_traffic_light/intellight/top_level/top_level.ip_user_files/sim_scripts -ip_user_files_dir D:/intelligent_traffic_light/intellight/top_level/top_level.ip_user_files -ipstatic_source_dir D:/intelligent_traffic_light/intellight/top_level/top_level.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/modelsim} {questa=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/questa} {riviera=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/riviera} {activehdl=D:/intelligent_traffic_light/intellight/top_level/top_level.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1

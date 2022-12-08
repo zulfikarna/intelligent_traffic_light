@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x4E2DE3C6E418775B",
+      "boundary_crc": "0x4E2DE3C60CE3D85A",
       "design_src": "D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/Q_Matrix/Q_Matrix.bd",
       "device": "xc7z020clg400-1",
       "name": "Q_Matrix_inst_0",
@@ -53,7 +53,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "111111115",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {
