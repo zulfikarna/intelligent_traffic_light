@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Wed Dec  7 23:50:37 2022
+-- Date        : Thu Dec 22 09:28:15 2022
 -- Host        : DESKTOP-IH2NQ0H running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               d:/intelligent_traffic_light/intellight/top_level/top_level.gen/sources_1/bd/top_level/ip/top_level_processing_system7_0_0/top_level_processing_system7_0_0_stub.vhdl

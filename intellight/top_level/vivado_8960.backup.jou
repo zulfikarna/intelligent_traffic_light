@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Dec 26 20:31:33 2022
+# Process ID: 8960
+# Current directory: D:/intelligent_traffic_light/intellight/top_level
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7892 D:\intelligent_traffic_light\intellight\top_level\top_level.xpr
+# Log file: D:/intelligent_traffic_light/intellight/top_level/vivado.log
+# Journal file: D:/intelligent_traffic_light/intellight/top_level\vivado.jou
+# Running On: DESKTOP-IH2NQ0H, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 8424 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/intelligent_traffic_light/intellight/top_level/top_level.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd}
+startgroup
+set_property -dict [list CONFIG.R_WIDTH {16} CONFIG.Q_WIDTH {16}] [get_bd_cells Intellight_Accelerat_0]
+endgroup
+save_bd_design
+open_bd_design {D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/Q_Matrix/Q_Matrix.bd}
+startgroup
+set_property -dict [list CONFIG.Write_Width_A {64} CONFIG.Read_Width_A {64} CONFIG.Operating_Mode_A {READ_FIRST} CONFIG.Write_Width_B {64} CONFIG.Read_Width_B {64} CONFIG.Operating_Mode_B {READ_FIRST} CONFIG.Enable_B {Always_Enabled}] [get_bd_cells action_ram_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Write_Width_A {64} CONFIG.Read_Width_A {64} CONFIG.Operating_Mode_A {READ_FIRST} CONFIG.Write_Width_B {64} CONFIG.Read_Width_B {64} CONFIG.Operating_Mode_B {READ_FIRST} CONFIG.Enable_B {Always_Enabled}] [get_bd_cells action_ram_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Write_Width_A {64} CONFIG.Read_Width_A {64} CONFIG.Operating_Mode_A {READ_FIRST} CONFIG.Write_Width_B {64} CONFIG.Read_Width_B {64} CONFIG.Operating_Mode_B {READ_FIRST} CONFIG.Enable_B {Always_Enabled}] [get_bd_cells action_ram_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Write_Width_A {64} CONFIG.Read_Width_A {64} CONFIG.Operating_Mode_A {READ_FIRST} CONFIG.Write_Width_B {64} CONFIG.Read_Width_B {64} CONFIG.Operating_Mode_B {READ_FIRST} CONFIG.Enable_B {Always_Enabled}] [get_bd_cells action_ram_3]
+endgroup
+save_bd_design
+startgroup
+set_property -dict [list CONFIG.CONST_WIDTH {8}] [get_bd_cells const_0_8bit]
+endgroup
+save_bd_design
+upgrade_bd_cells [get_bd_cells Q_Matrix_0]
+save_bd_design
+reset_run top_level_Intellight_Accelerat_0_0_synth_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_bd_design {D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/top_level/top_level.bd}

@@ -9,6 +9,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level |
 # IP: bd/top_level/ip/top_level_processing_system7_0_0/top_level_processing_system7_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_processing_system7_0_0 || ORIG_REF_NAME==top_level_processing_system7_0_0} -quiet] -quiet
 
+# IP: bd/top_level/ip/top_level_axi_intc_0_0/top_level_axi_intc_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_axi_intc_0_0 || ORIG_REF_NAME==top_level_axi_intc_0_0} -quiet] -quiet
+
 # IP: bd/top_level/ip/top_level_xbar_0/top_level_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_xbar_0 || ORIG_REF_NAME==top_level_xbar_0} -quiet] -quiet
 
@@ -17,9 +20,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_p
 
 # IP: bd/top_level/ip/top_level_rst_ps7_0_100M_0/top_level_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_rst_ps7_0_100M_0 || ORIG_REF_NAME==top_level_rst_ps7_0_100M_0} -quiet] -quiet
-
-# IP: bd/top_level/ip/top_level_axi_intc_0_0/top_level_axi_intc_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_axi_intc_0_0 || ORIG_REF_NAME==top_level_axi_intc_0_0} -quiet] -quiet
 
 # IP: bd/top_level/ip/top_level_Intellight_Accelerat_0_0/top_level_Intellight_Accelerat_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_Intellight_Accelerat_0_0 || ORIG_REF_NAME==top_level_Intellight_Accelerat_0_0} -quiet] -quiet

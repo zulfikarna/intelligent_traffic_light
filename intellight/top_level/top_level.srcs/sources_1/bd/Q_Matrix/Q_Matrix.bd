@@ -491,14 +491,14 @@
       "rsta_0_1": {
         "ports": [
           "rst",
+          "action_ram_0/rsta",
+          "action_ram_0/rstb",
           "action_ram_1/rsta",
           "action_ram_1/rstb",
           "action_ram_2/rsta",
           "action_ram_2/rstb",
           "action_ram_3/rsta",
-          "action_ram_3/rstb",
-          "action_ram_0/rstb",
-          "action_ram_0/rsta"
+          "action_ram_3/rstb"
         ]
       },
       "wea0_1": {

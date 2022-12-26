@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x4E2DE3C60CE3D85A",
+      "boundary_crc": "0x4E2DE3C6F5E75A98",
       "design_src": "D:/intelligent_traffic_light/intellight/top_level/top_level.srcs/sources_1/bd/Q_Matrix/Q_Matrix.bd",
       "device": "xc7z020clg400-1",
       "name": "Q_Matrix_inst_0",
@@ -53,7 +53,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "111111115",
+            "value": "90909088",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -492,14 +492,14 @@
       "rsta_0_1": {
         "ports": [
           "rst",
+          "action_ram_0/rsta",
+          "action_ram_0/rstb",
           "action_ram_1/rsta",
           "action_ram_1/rstb",
           "action_ram_2/rsta",
           "action_ram_2/rstb",
           "action_ram_3/rsta",
-          "action_ram_3/rstb",
-          "action_ram_0/rstb",
-          "action_ram_0/rsta"
+          "action_ram_3/rstb"
         ]
       },
       "wea0_1": {

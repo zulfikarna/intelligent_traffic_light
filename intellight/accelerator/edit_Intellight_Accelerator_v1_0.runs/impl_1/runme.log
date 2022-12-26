@@ -1,0 +1,5 @@
+
+*** Running vivado
+    with args -log Intellight_Accelerator_v1_0.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Intellight_Accelerator_v1_0.tcl -notrace
+
+
