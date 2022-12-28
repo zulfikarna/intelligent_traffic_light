@@ -2,10 +2,10 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Wed Dec 21 21:57:21 2022
-# Process ID: 2540
+# Start of session at: Wed Dec 28 16:47:47 2022
+# Process ID: 12208
 # Current directory: D:/intelligent_traffic_light/intellight/accelerator
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4776 D:\intelligent_traffic_light\intellight\accelerator\edit_Intellight_Accelerator_v1_0.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9032 D:\intelligent_traffic_light\intellight\accelerator\edit_Intellight_Accelerator_v1_0.xpr
 # Log file: D:/intelligent_traffic_light/intellight/accelerator/vivado.log
 # Journal file: D:/intelligent_traffic_light/intellight/accelerator\vivado.jou
 # Running On: DESKTOP-IH2NQ0H, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 8424 MB
@@ -57,7 +57,770 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
-open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:08 . Memory (MB): peak = 1598.199 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:01:14 . Memory (MB): peak = 1633.652 ; gain = 0.000
 update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/utils_1/imports/synth_1/Intellight_Accelerator_v1_0.dcp with file D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1/Intellight_Accelerator_v1_0.dcp
+launch_runs synth_1 -jobs 8
+[Wed Dec 28 16:59:38 2022] Launched synth_1...
+Run output will be captured here: D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1/runme.log
+ipx::open_ipxact_file {D:\intelligent_traffic_light\intellight\accelerator\Intellight_Accelerator_1.0\component.xml}
+WARNING: [IP_Flow 19-5226] Project source file 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/AGENT.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/CU.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/ENV.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/QA.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/RD.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/SD.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_max.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/AGENT.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/CU.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/ENV.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/QA.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/RD.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/SD.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_max.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_testbench (Test Bench)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/CU_tb.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 12 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path d:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0'
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'CU_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'CU_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CU_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiply
+INFO: [VRFC 10-311] analyzing module r_shift
+INFO: [VRFC 10-311] analyzing module lfsr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/CU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CU_tb_behav xil_defaultlib.CU_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CU_tb_behav xil_defaultlib.CU_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.lfsr_default
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.CU_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CU_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CU_tb_behav -key {Behavioral:sim_1:Functional:CU_tb} -tclbatch {CU_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source CU_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CU_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1633.652 ; gain = 0.000
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/utils_1/imports/synth_1/Intellight_Accelerator_v1_0.dcp with file D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1/Intellight_Accelerator_v1_0.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Wed Dec 28 17:25:39 2022] Launched synth_1...
+Run output will be captured here: D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1/runme.log
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/component.xml' ignored by IP packager.
+set_property core_revision 13 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path d:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0'
+ipx::unload_core d:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/component.xml
+set_property top MII_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'MII_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MII_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2to1
+INFO: [VRFC 10-311] analyzing module mux4to1
+INFO: [VRFC 10-311] analyzing module mux8to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'A_reg5' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:44]
+ERROR: [VRFC 10-3180] cannot find port 'A_reg4' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:43]
+ERROR: [VRFC 10-3180] cannot find port 'A_reg3' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:42]
+ERROR: [VRFC 10-3180] cannot find port 'A_reg2' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:41]
+ERROR: [VRFC 10-3180] cannot find port 'A_reg1' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:40]
+ERROR: [VRFC 10-3180] cannot find port 'A_reg0' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:39]
+ERROR: [VRFC 10-3180] cannot find port 'en3' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:38]
+ERROR: [VRFC 10-3180] cannot find port 'en2' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:37]
+ERROR: [VRFC 10-3180] cannot find port 'en1' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:36]
+ERROR: [VRFC 10-3180] cannot find port 'en0' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:35]
+ERROR: [VRFC 10-3180] cannot find port 'wen_bram' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:34]
+ERROR: [VRFC 10-3180] cannot find port 'Dnew' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:33]
+ERROR: [VRFC 10-3180] cannot find port 'WR_ADDR' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:32]
+ERROR: [VRFC 10-3180] cannot find port 'RD_ADDR' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:31]
+ERROR: [VRFC 10-3180] cannot find port 'wen_cu' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:29]
+ERROR: [VRFC 10-3180] cannot find port 'Qnew' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:28]
+ERROR: [VRFC 10-3180] cannot find port 'in0' on this module [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:52]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'MII_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MII_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2to1
+INFO: [VRFC 10-311] analyzing module mux4to1
+INFO: [VRFC 10-311] analyzing module mux8to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'wen_bram0' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:47]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'wen_bram1' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:48]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'wen_bram2' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:49]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'wen_bram3' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:50]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'D_new' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v:51]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'sel' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v:107]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux4to1(DATA_WIDTH=64)
+Compiling module xil_defaultlib.MII_default
+Compiling module xil_defaultlib.MII_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MII_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "MII_tb_behav -key {Behavioral:sim_1:Functional:MII_tb} -tclbatch {MII_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source MII_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'MII_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1633.652 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'MII_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MII_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2to1
+INFO: [VRFC 10-311] analyzing module mux4to1
+INFO: [VRFC 10-311] analyzing module mux8to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'sel' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v:107]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux4to1(DATA_WIDTH=64)
+Compiling module xil_defaultlib.MII_default
+Compiling module xil_defaultlib.MII_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MII_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "MII_tb_behav -key {Behavioral:sim_1:Functional:MII_tb} -tclbatch {MII_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source MII_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'MII_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1633.652 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'MII_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MII_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2to1
+INFO: [VRFC 10-311] analyzing module mux4to1
+INFO: [VRFC 10-311] analyzing module mux8to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'sel' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v:107]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux4to1(DATA_WIDTH=64)
+Compiling module xil_defaultlib.MII_default
+Compiling module xil_defaultlib.MII_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MII_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1633.652 ; gain = 0.000
+run 10 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'MII_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MII_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2to1
+INFO: [VRFC 10-311] analyzing module mux4to1
+INFO: [VRFC 10-311] analyzing module mux8to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'sel' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v:108]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux4to1(DATA_WIDTH=64)
+Compiling module xil_defaultlib.MII_default
+Compiling module xil_defaultlib.MII_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MII_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "MII_tb_behav -key {Behavioral:sim_1:Functional:MII_tb} -tclbatch {MII_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source MII_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'MII_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1633.652 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'MII_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MII_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2to1
+INFO: [VRFC 10-311] analyzing module mux4to1
+INFO: [VRFC 10-311] analyzing module mux8to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'sel' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v:108]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux4to1(DATA_WIDTH=64)
+Compiling module xil_defaultlib.MII_default
+Compiling module xil_defaultlib.MII_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MII_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "MII_tb_behav -key {Behavioral:sim_1:Functional:MII_tb} -tclbatch {MII_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source MII_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'MII_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1633.652 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MII_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2to1
+INFO: [VRFC 10-311] analyzing module mux4to1
+INFO: [VRFC 10-311] analyzing module mux8to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'sel' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v:108]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux4to1(DATA_WIDTH=64)
+Compiling module xil_defaultlib.MII_default
+Compiling module xil_defaultlib.MII_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MII_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1633.652 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MII_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'sel' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v:108]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1633.652 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'MII_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MII_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2to1
+INFO: [VRFC 10-311] analyzing module mux4to1
+INFO: [VRFC 10-311] analyzing module mux8to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'sel' [D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v:109]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux4to1(DATA_WIDTH=64)
+Compiling module xil_defaultlib.MII_default
+Compiling module xil_defaultlib.MII_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MII_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "MII_tb_behav -key {Behavioral:sim_1:Functional:MII_tb} -tclbatch {MII_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source MII_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'MII_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1633.652 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MII_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2to1
+INFO: [VRFC 10-311] analyzing module mux4to1
+INFO: [VRFC 10-311] analyzing module mux8to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'MII_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MII_tb_behav xil_defaultlib.MII_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux4to1(DATA_WIDTH=64)
+Compiling module xil_defaultlib.MII_default
+Compiling module xil_defaultlib.MII_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MII_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1633.652 ; gain = 0.000
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.srcs/utils_1/imports/synth_1/Intellight_Accelerator_v1_0.dcp with file D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1/Intellight_Accelerator_v1_0.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Wed Dec 28 19:06:31 2022] Launched synth_1...
+Run output will be captured here: D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.runs/synth_1/runme.log
+ipx::open_ipxact_file {D:\intelligent_traffic_light\intellight\accelerator\Intellight_Accelerator_1.0\component.xml}
+WARNING: [IP_Flow 19-5226] Project source file 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/AGENT.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/CU.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/ENV.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/QA.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/RD.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/SD.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_max.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/AGENT.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Accelerator.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/CU.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/ENV.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/QA.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/RD.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/SD.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_max.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/Intellight_Accelerator_v1_0.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_testbench (Test Bench)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/CU_tb.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-4308] Project file 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v' is not found in the component files. It will be added automatically when merging sources and repackaging. Please remove the file from the source project if this is not desired.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/component.xml' ignored by IP packager.
+INFO: [Ipptcl 7-560]  
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_testbench (Test Bench)': File 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/CU_tb.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 14 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path d:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0'
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 21 21:58:30 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 28 19:41:37 2022...

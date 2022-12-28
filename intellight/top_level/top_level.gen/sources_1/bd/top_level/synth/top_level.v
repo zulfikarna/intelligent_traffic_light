@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Mon Dec 26 21:05:54 2022
+//Date        : Wed Dec 28 19:09:56 2022
 //Host        : DESKTOP-IH2NQ0H running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -615,6 +615,7 @@ module top_level
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    finish,
     idle,
     learning,
     mode,
@@ -640,6 +641,7 @@ module top_level
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
+  output finish;
   output idle;
   output learning;
   output mode;
@@ -762,6 +764,7 @@ module top_level
   wire [7:0]wea2_1;
   wire [7:0]wea3_1;
 
+  assign finish = Intellight_Accelerat_0_finish;
   assign idle = Intellight_Accelerat_0_idle;
   assign learning = Intellight_Accelerat_0_learning;
   assign mode = Intellight_Accelerat_0_mode;

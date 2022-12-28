@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Mon Dec 26 21:15:23 2022
+| Date         : Wed Dec 28 19:14:30 2022
 | Host         : DESKTOP-IH2NQ0H running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_level_wrapper_methodology_drc_routed.rpt -pb top_level_wrapper_methodology_drc_routed.pb -rpx top_level_wrapper_methodology_drc_routed.rpx
 | Design       : top_level_wrapper
@@ -23,31 +23,36 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 4
+             Violations found: 5
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 4          |
+| TIMING-18 | Warning  | Missing input or output delay | 5          |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 TIMING-18#1 Warning
 Missing input or output delay  
-An output delay is missing on idle relative to clock(s) clk_fpga_0
+An output delay is missing on finish relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An output delay is missing on learning relative to clock(s) clk_fpga_0
+An output delay is missing on idle relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An output delay is missing on mode relative to clock(s) clk_fpga_0
+An output delay is missing on learning relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on mode relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#5 Warning
 Missing input or output delay  
 An output delay is missing on run relative to clock(s) clk_fpga_0
 Related violations: <none>

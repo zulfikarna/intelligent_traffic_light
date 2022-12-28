@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec 26 21:06:01 2022" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 28 19:09:57 2022" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="www.digilentinc.com:pynq-z1:part0:1.0" DEVICE="7z020" NAME="top_level" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -22,6 +22,11 @@
     <PORT DIR="O" NAME="learning" SIGIS="undef" SIGNAME="Intellight_Accelerat_0_learning">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="learning"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="finish" SIGIS="undef" SIGNAME="Intellight_Accelerat_0_finish">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Intellight_Accelerat_0" PORT="finish"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
@@ -179,7 +184,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="11" FULLNAME="/Intellight_Accelerat_0" HWVERSION="1.0" INSTANCE="Intellight_Accelerat_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Intellight_Accelerator" VLNV="xilinx.com:user:Intellight_Accelerator:1.0">
+    <MODULE COREREVISION="14" FULLNAME="/Intellight_Accelerat_0" HWVERSION="1.0" INSTANCE="Intellight_Accelerat_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Intellight_Accelerator" VLNV="xilinx.com:user:Intellight_Accelerator:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -266,6 +271,7 @@
         <PORT DIR="O" NAME="finish" SIGIS="undef" SIGNAME="Intellight_Accelerat_0_finish">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_intc_0" PORT="intr"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="finish"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="idle" SIGIS="undef" SIGNAME="Intellight_Accelerat_0_idle">

@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Intellight_Accelerator_1.0/hdl/MII.v" \
+"../../../../Intellight_Accelerator_1.0/hdl/file_mux.v" \
+"../../../../Intellight_Accelerator_1.0/sim/MII_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

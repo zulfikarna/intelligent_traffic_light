@@ -1,8 +1,8 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/CU.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module CU
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_arith.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiply
-INFO: [VRFC 10-311] analyzing module r_shift
-INFO: [VRFC 10-311] analyzing module lfsr
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/CU_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module CU_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/MII.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/hdl/file_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2to1
+INFO: [VRFC 10-311] analyzing module mux4to1
+INFO: [VRFC 10-311] analyzing module mux8to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/intelligent_traffic_light/intellight/accelerator/Intellight_Accelerator_1.0/sim/MII_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MII_tb

@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Mon Dec 26 21:05:55 2022
+//Date        : Wed Dec 28 19:09:56 2022
 //Host        : DESKTOP-IH2NQ0H running 64-bit major release  (build 9200)
 //Command     : generate_target top_level_wrapper.bd
 //Design      : top_level_wrapper
@@ -31,6 +31,7 @@ module top_level_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    finish,
     idle,
     learning,
     mode,
@@ -56,6 +57,7 @@ module top_level_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  output finish;
   output idle;
   output learning;
   output mode;
@@ -82,6 +84,7 @@ module top_level_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire finish;
   wire idle;
   wire learning;
   wire mode;
@@ -109,6 +112,7 @@ module top_level_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .finish(finish),
         .idle(idle),
         .learning(learning),
         .mode(mode),

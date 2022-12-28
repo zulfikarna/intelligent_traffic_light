@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Dec 28 13:20:25 2022
+# Process ID: 9756
+# Current directory: D:/intelligent_traffic_light/intellight/top_level
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16916 D:\intelligent_traffic_light\intellight\top_level\top_level.xpr
+# Log file: D:/intelligent_traffic_light/intellight/top_level/vivado.log
+# Journal file: D:/intelligent_traffic_light/intellight/top_level\vivado.jou
+# Running On: DESKTOP-IH2NQ0H, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 8424 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/intelligent_traffic_light/intellight/top_level/top_level.xpr
+update_compile_order -fileset sources_1

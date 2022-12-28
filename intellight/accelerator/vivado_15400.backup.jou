@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Dec 27 16:58:32 2022
+# Process ID: 15400
+# Current directory: D:/intelligent_traffic_light/intellight/accelerator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3344 D:\intelligent_traffic_light\intellight\accelerator\edit_Intellight_Accelerator_v1_0.xpr
+# Log file: D:/intelligent_traffic_light/intellight/accelerator/vivado.log
+# Journal file: D:/intelligent_traffic_light/intellight/accelerator\vivado.jou
+# Running On: DESKTOP-IH2NQ0H, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 8424 MB
+#-----------------------------------------------------------
+start_guioopen_project D:/intelligent_traffic_light/intellight/accelerator/edit_Intellight_Accelerator_v1_0.xpruupdate_compile_order -fileset sources_1launch_runs synth_1 -jobs 8
+wait_on_run synth_1

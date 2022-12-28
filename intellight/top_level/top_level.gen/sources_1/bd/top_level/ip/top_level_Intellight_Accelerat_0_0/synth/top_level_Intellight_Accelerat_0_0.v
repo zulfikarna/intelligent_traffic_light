@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:Intellight_Accelerator:1.0
-// IP Revision: 11
+// IP Revision: 14
 
 (* X_CORE_INFO = "Intellight_Accelerator_v1_0,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "top_level_Intellight_Accelerat_0_0,Intellight_Accelerator_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "top_level_Intellight_Accelerat_0_0,Intellight_Accelerator_v1_0,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Intellight_Accelerator,x_ipVersion=1.0,x_ipCoreRevision=11,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,L_WIDTH=4,R_WIDTH=16,Q_WIDTH=16,CTR_WIDTH=16,ADDR_WIDTH=32,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=8}" *)
+(* CORE_GENERATION_INFO = "top_level_Intellight_Accelerat_0_0,Intellight_Accelerator_v1_0,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Intellight_Accelerator,x_ipVersion=1.0,x_ipCoreRevision=14,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,L_WIDTH=4,R_WIDTH=16,Q_WIDTH=16,CTR_WIDTH=16,ADDR_WIDTH=32,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=8}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_level_Intellight_Accelerat_0_0 (
   clk,

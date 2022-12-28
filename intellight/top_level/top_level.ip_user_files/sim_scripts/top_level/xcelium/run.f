@@ -87,19 +87,19 @@
   "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_0/sim/top_level_rst_ps7_0_100M_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/af20/hdl/AGENT.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/af20/hdl/Accelerator.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/af20/hdl/CU.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/af20/hdl/ENV.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/af20/hdl/Intellight_Accelerator_v1_0_S00_AXI.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/af20/hdl/MII.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/af20/hdl/QA.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/af20/hdl/RD.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/af20/hdl/SD.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/af20/hdl/file_arith.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/af20/hdl/file_max.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/af20/hdl/file_mux.v" \
-  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/af20/hdl/Intellight_Accelerator_v1_0.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/d1a0/hdl/AGENT.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/d1a0/hdl/Accelerator.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/d1a0/hdl/CU.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/d1a0/hdl/ENV.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/d1a0/hdl/Intellight_Accelerator_v1_0_S00_AXI.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/d1a0/hdl/MII.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/d1a0/hdl/QA.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/d1a0/hdl/RD.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/d1a0/hdl/SD.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/d1a0/hdl/file_arith.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/d1a0/hdl/file_max.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/d1a0/hdl/file_mux.v" \
+  "../../../../top_level.gen/sources_1/bd/top_level/ipshared/d1a0/hdl/Intellight_Accelerator_v1_0.v" \
   "../../../../top_level.gen/sources_1/bd/top_level/ip/top_level_Intellight_Accelerat_0_0/sim/top_level_Intellight_Accelerat_0_0.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_26 \

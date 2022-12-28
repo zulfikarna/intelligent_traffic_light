@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x55A99ECBEE8E5917",
+      "boundary_crc": "0x2886A4F302E595D7",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../top_level.gen/sources_1/bd/top_level",
       "name": "top_level",
@@ -105,6 +105,15 @@
       },
       "learning": {
         "direction": "O"
+      },
+      "finish": {
+        "direction": "O",
+        "parameters": {
+          "PortWidth": {
+            "value": "1",
+            "value_src": "default_prop"
+          }
+        }
       }
     },
     "components": {
@@ -2472,7 +2481,8 @@
       "Intellight_Accelerat_0_finish": {
         "ports": [
           "Intellight_Accelerat_0/finish",
-          "axi_intc_0/intr"
+          "axi_intc_0/intr",
+          "finish"
         ]
       },
       "Intellight_Accelerat_0_idle": {

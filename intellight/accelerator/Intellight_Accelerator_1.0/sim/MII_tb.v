@@ -4,73 +4,76 @@
 
 
 module MII_tb
-#(  parameter ADDR_WIDTH = 32,
-    parameter WEN_WIDTH = 8,
-    parameter Q_WIDTH = 16,
-    parameter S_WIDTH = 12,
-    parameter A_WIDTH = 4)
+#(  parameter integer L_WIDTH = 4,
+    parameter integer Q_WIDTH = 16,
+    parameter integer R_WIDTH = 16,
+    parameter integer ADDR_WIDTH = 32
+    )
 ();
+    localparam  N_LEVEL         = 2**(L_WIDTH/2),
+                S_WIDTH         = 2*L_WIDTH,
+                D_WIDTH         = Q_WIDTH*N_LEVEL,
+                WEN_WIDTH       = D_WIDTH/8,
+                EN_WIDTH        = WEN_WIDTH/N_LEVEL,
+                A_ROAD_WIDTH    = 2,
+                A_DUR_WIDTH     = L_WIDTH/2,
+                A_WIDTH         = A_ROAD_WIDTH + A_DUR_WIDTH;
+                
     reg clk, rst;
-    reg [S_WIDTH-1:0] S;
-    reg [Q_WIDTH-1:0] Qnew;
-    reg wen_cu;
     reg [A_WIDTH-1:0] A;
-    wire[ADDR_WIDTH-1:0] RD_ADDR;
-    wire [ADDR_WIDTH-1:0] WR_ADDR;
-    wire[Q_WIDTH*4-1:0] Dnew;
-    wire [WEN_WIDTH-1:0] wen_bram;
-    wire en0, en1, en2, en3;
-    wire [A_WIDTH-1:0] A_reg0, A_reg1, A_reg2, A_reg3, A_reg4, A_reg5;
+    reg [S_WIDTH-1:0] S;
+    reg [Q_WIDTH-1:0] Q_new;
+    reg [D_WIDTH-1:0] D_road0, D_road1, D_road2, D_road3;
+    wire [D_WIDTH-1:0] DEBUG_D;
+    wire [1:0] DEBUG_Ar;
+    reg wen;
+    wire[ADDR_WIDTH-1:0] rd_addr;
+    wire [ADDR_WIDTH-1:0] wr_addr;
+    wire[Q_WIDTH*4-1:0] D_new;
+    wire [Q_WIDTH*(2**(L_WIDTH/2))/8-1:0] wen_bram0, wen_bram1, wen_bram2, wen_bram3;
+
     MII dut(
         .clk(clk),
         .rst(rst),
-        .S(S),
-        .Qnew(Qnew),
-        .wen_cu(wen_cu),
         .A(A),
-        .RD_ADDR(RD_ADDR),
-        .WR_ADDR(WR_ADDR),
-        .Dnew(Dnew),
-        .wen_bram(wen_bram),
-        .en0(en0),
-        .en1(en1),
-        .en2(en2),
-        .en3(en3),
-        .A_reg0(A_reg0),
-        .A_reg1(A_reg1),
-        .A_reg2(A_reg2),
-        .A_reg3(A_reg3),
-        .A_reg4(A_reg4),
-        .A_reg5(A_reg5)
+        .S(S),
+        .Q_new(Q_new),
+        .D_road0(D_road0),
+        .D_road1(D_road1),
+        .D_road2(D_road2),
+        .D_road3(D_road3),
+        .DEBUG_D(DEBUG_D),
+        .DEBUG_Ar(DEBUG_Ar),
+        .wen(wen),
+        .rd_addr(rd_addr),
+        .wr_addr(wr_addr),
+        .wen_bram0(wen_bram0),
+        .wen_bram1(wen_bram1),
+        .wen_bram2(wen_bram2),
+        .wen_bram3(wen_bram3),
+        .D_new(D_new)
         );
     
-    
-    // Random generator porting
-    localparam RAND_WIDTH = 16;
-    reg  [RAND_WIDTH-1:0] i_lsfr;
-    wire signed [RAND_WIDTH-1:0] o_lsfr;
-    lfsr #(.DATA_WIDTH(16)) rand(.in0(i_lsfr), .out0(o_lsfr));
-    
     // Clock setting
-    always begin
-        clk = 1'b1;
-        #10;
-        clk = 1'b0;
-        #10;
-    end
+    always #10 clk = ~clk;
     
     // Reset setting
     initial begin
-        rst <= 1'b1;
+        clk = 1'b0;
+        rst = 1'b1;
         #100;
-        rst <= 1'b0;
+        rst = 1'b0;
     end
     
     always @(posedge clk) begin 
         #1;
-        Qnew <= o_lsfr;
-        S <= o_lsfr[11:0];
-        A <= o_lsfr[3:0];
-        wen_cu <= o_lsfr[0];
+        A = $random;
+        S = $random;
+        Q_new = $random;
+        D_road0 = $random;
+        D_road1 = $random;
+        D_road2 = $random;
+        D_road3 = $random;
+        wen = $random;
     end
 endmodule
